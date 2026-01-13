@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ベースカラー */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* コンポーネントカラー */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* アクセントカラー */
+    --primary: 221.2 83.2% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* ユーティリティカラー */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* ボーダー＆コントロール */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    /* チャート用カラー */
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* その他 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* ベースカラー（最も暗い - サイドバーなど） */
+    --background: 220 85% 2.5%;
+    --foreground: 220 40% 98%;
+
+    /* コンポーネントカラー */
+    --card: 220 85% 5%;
+    --card-foreground: 220 40% 98%;
+    --popover: 220 85% 8%;
+    --popover-foreground: 220 40% 98%;
+
+    /* アクセントカラー */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 40% 98%;
+    --secondary: 220 32.6% 30%;
+    --secondary-foreground: 220 40% 98%;
+
+    /* ユーティリティカラー */
+    --muted: 220 32.6% 25%;
+    --muted-foreground: 220 15% 90%;
+    --accent: 220 32.6% 28%;
+    --accent-foreground: 220 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 220 40% 98%;
+
+    /* ボーダー＆コントロール */
+    --border: 220 30% 22%;
+    --input: 220 32.6% 22%;
+    --ring: 220 76.3% 48%;
+
+    /* チャート用カラー */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
