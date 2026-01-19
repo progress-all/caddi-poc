@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { DigiKeyApiClient } from "@/app/_lib/vendor/digikey/client";
+import type {
+  KeywordSearchInput,
+  DigiKeySortOptions,
+  DigiKeyFilterOptionsRequest,
+} from "@/app/_lib/vendor/digikey/types";
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,8 +21,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const { keywords, limit, offset } = body;
+    const body: KeywordSearchInput = await request.json();
+    const {
+      keywords,
+      limit,
+      offset,
+      sortField,
+      sortOrder,
+      manufacturerIds,
+      categoryIds,
+      statusIds,
+      minimumQuantityAvailable,
+    } = body;
 
     if (!keywords || typeof keywords !== "string") {
       return NextResponse.json(
@@ -26,11 +41,63 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // SortOptionsを構築（空文字列は除外）
+    const sortOptions: DigiKeySortOptions | undefined =
+      (sortField && sortField !== "") || (sortOrder && sortOrder !== "")
+        ? {
+            Field: sortField && sortField !== "" ? sortField : undefined,
+            SortOrder: sortOrder && sortOrder !== "" ? sortOrder : undefined,
+          }
+        : undefined;
+
+    // FilterOptionsRequestを構築
+    const manufacturerFilter = manufacturerIds
+      ? manufacturerIds
+          .split(",")
+          .map((id) => id.trim())
+          .filter((id) => id.length > 0)
+          .map((id) => ({ Id: id }))
+      : undefined;
+
+    const categoryFilter = categoryIds
+      ? categoryIds
+          .split(",")
+          .map((id) => id.trim())
+          .filter((id) => id.length > 0)
+          .map((id) => ({ Id: id }))
+      : undefined;
+
+    const statusFilter = statusIds
+      ? statusIds
+          .split(",")
+          .map((id) => id.trim())
+          .filter((id) => id.length > 0)
+          .map((id) => ({ Id: id }))
+      : undefined;
+
+    const filterOptionsRequest: DigiKeyFilterOptionsRequest | undefined =
+      manufacturerFilter ||
+      categoryFilter ||
+      statusFilter ||
+      minimumQuantityAvailable !== undefined
+        ? {
+            ManufacturerFilter: manufacturerFilter,
+            CategoryFilter: categoryFilter,
+            StatusFilter: statusFilter,
+            MinimumQuantityAvailable:
+              minimumQuantityAvailable !== undefined
+                ? minimumQuantityAvailable
+                : undefined,
+          }
+        : undefined;
+
     const client = new DigiKeyApiClient(clientId, clientSecret);
     const result = await client.keywordSearch({
       keywords,
       limit,
       offset,
+      sortOptions,
+      filterOptionsRequest,
     });
 
     return NextResponse.json(result);

@@ -2,11 +2,46 @@
  * DigiKey API 型定義
  */
 
+// SortOptions
+export type DigiKeySortField =
+  | "None"
+  | "DigiKeyProductNumber"
+  | "ManufacturerProductNumber"
+  | "Manufacturer"
+  | "MinimumQuantity"
+  | "QuantityAvailable"
+  | "Price"
+  | "Packaging"
+  | "ProductStatus"
+  | "Supplier"
+  | "PriceManufacturerStandardPackage";
+
+export type DigiKeySortOrder = "Ascending" | "Descending";
+
+export interface DigiKeySortOptions {
+  Field?: DigiKeySortField;
+  SortOrder?: DigiKeySortOrder;
+}
+
+// FilterOptionsRequest
+export interface DigiKeyFilterOptionsRequest {
+  ManufacturerFilter?: Array<{ Id: string }>;
+  CategoryFilter?: Array<{ Id: string }>;
+  StatusFilter?: Array<{ Id: string }>;
+  MinimumQuantityAvailable?: number;
+}
+
 // 入力型
 export interface KeywordSearchInput {
   keywords: string;
   limit?: number;
   offset?: number;
+  sortField?: DigiKeySortField;
+  sortOrder?: DigiKeySortOrder;
+  manufacturerIds?: string; // カンマ区切りテキスト
+  categoryIds?: string;
+  statusIds?: string;
+  minimumQuantityAvailable?: number;
 }
 
 // レスポンス型

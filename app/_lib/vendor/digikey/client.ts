@@ -4,6 +4,11 @@
  * OAuth 2.0 client_credentials flowを使用
  */
 
+import type {
+  DigiKeySortOptions,
+  DigiKeyFilterOptionsRequest,
+} from "./types";
+
 const DIGIKEY_API_BASE_URL = "https://api.digikey.com";
 const DIGIKEY_TOKEN_URL = `${DIGIKEY_API_BASE_URL}/v1/oauth2/token`;
 
@@ -11,6 +16,8 @@ export interface DigiKeyKeywordSearchRequest {
   keywords: string;
   limit?: number;
   offset?: number;
+  sortOptions?: DigiKeySortOptions;
+  filterOptionsRequest?: DigiKeyFilterOptionsRequest;
 }
 
 interface TokenResponse {
@@ -82,6 +89,21 @@ export class DigiKeyApiClient {
   ): Promise<unknown> {
     const token = await this.getAccessToken();
 
+    // リクエストボディを構築（オプションパラメータが指定されている場合のみ含める）
+    const requestBody: Record<string, unknown> = {
+      Keywords: request.keywords,
+      Limit: request.limit ?? 25,
+      Offset: request.offset ?? 0,
+    };
+
+    if (request.sortOptions) {
+      requestBody.SortOptions = request.sortOptions;
+    }
+
+    if (request.filterOptionsRequest) {
+      requestBody.FilterOptionsRequest = request.filterOptionsRequest;
+    }
+
     const response = await fetch(
       `${DIGIKEY_API_BASE_URL}/products/v4/search/keyword`,
       {
@@ -91,11 +113,7 @@ export class DigiKeyApiClient {
           "X-DIGIKEY-Client-Id": this.clientId,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          Keywords: request.keywords,
-          Limit: request.limit ?? 25,
-          Offset: request.offset ?? 0,
-        }),
+        body: JSON.stringify(requestBody),
       }
     );
 
