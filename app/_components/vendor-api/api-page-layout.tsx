@@ -16,7 +16,7 @@ export function ApiPageLayout({
   error,
 }: ApiPageLayoutProps) {
   return (
-    <div className="h-[calc(100vh-4rem)] flex flex-col">
+    <div className="h-[calc(100vh-5rem)] flex flex-col">
       <Card className="flex flex-col flex-1 min-h-0">
         <CardContent className="p-4 flex flex-col flex-1 min-h-0 gap-3">
           {/* コンパクトなフォーム領域 */}

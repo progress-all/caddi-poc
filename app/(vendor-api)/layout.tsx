@@ -1,4 +1,4 @@
-import { Sidebar } from "@/app/_components/vendor-api/sidebar";
+import { HeaderNav } from "@/app/_components/vendor-api/header-nav";
 
 export default function VendorApiLayout({
   children,
@@ -6,8 +6,8 @@ export default function VendorApiLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen">
-      <Sidebar />
+    <div className="h-screen flex flex-col">
+      <HeaderNav />
       <main className="flex-1 overflow-auto p-4">{children}</main>
     </div>
   );
