@@ -18,7 +18,6 @@ const sidebarItems: SidebarItem[] = [
   {
     href: "/vendor/digikey",
     label: "Digi-Key",
-    disabled: true,
   },
 ];
 

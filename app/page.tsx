@@ -32,17 +32,20 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="opacity-50">
+          <Card>
             <CardHeader>
               <CardTitle>Digi-Key API</CardTitle>
               <CardDescription>
-                今後実装予定のDigi-Key API検索機能
+                DigiKey Product Information v4 APIのKeywordSearchエンドポイントを実行して結果を確認できます
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <Button className="w-full" disabled>
-                準備中
-              </Button>
+            <CardContent className="space-y-4">
+              <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                <li>Keyword Search - キーワードで部品を検索</li>
+              </ul>
+              <Link href="/vendor/digikey">
+                <Button className="w-full">Digi-Key API を開く</Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
@@ -60,10 +63,17 @@ export default function Home() {
             </ol>
             <div className="mt-4 p-4 bg-muted rounded-md">
               <p className="text-sm font-medium mb-2">注意事項</p>
-              <p className="text-sm text-muted-foreground">
-                APIキーは環境変数 <code className="px-1 py-0.5 bg-background rounded">MOUSER_API_KEY</code> に設定してください。
-                <code className="px-1 py-0.5 bg-background rounded">.env.local</code> ファイルを作成して設定します。
-              </p>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                <li>
+                  Mouser API: 環境変数 <code className="px-1 py-0.5 bg-background rounded">MOUSER_API_KEY</code> に設定してください。
+                </li>
+                <li>
+                  DigiKey API: 環境変数 <code className="px-1 py-0.5 bg-background rounded">DIGIKEY_CLIENT_ID</code> と <code className="px-1 py-0.5 bg-background rounded">DIGIKEY_CLIENT_SECRET</code> に設定してください。
+                </li>
+                <li>
+                  <code className="px-1 py-0.5 bg-background rounded">.env.local</code> ファイルを作成して設定します。
+                </li>
+              </ul>
             </div>
           </CardContent>
         </Card>
