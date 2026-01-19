@@ -36,8 +36,8 @@ export interface KeywordSearchInput {
   keywords: string;
   limit?: number;
   offset?: number;
-  sortField?: DigiKeySortField;
-  sortOrder?: DigiKeySortOrder;
+  sortField?: DigiKeySortField | ""; // フォームからの空文字列を許容
+  sortOrder?: DigiKeySortOrder | ""; // フォームからの空文字列を許容
   manufacturerIds?: string; // カンマ区切りテキスト
   categoryIds?: string;
   statusIds?: string;

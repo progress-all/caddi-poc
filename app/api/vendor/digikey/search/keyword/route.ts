@@ -4,7 +4,27 @@ import type {
   KeywordSearchInput,
   DigiKeySortOptions,
   DigiKeyFilterOptionsRequest,
+  DigiKeySortField,
+  DigiKeySortOrder,
 } from "@/app/_lib/vendor/digikey/types";
+
+// 有効なソートフィールド値
+const validSortFields: DigiKeySortField[] = [
+  "None",
+  "DigiKeyProductNumber",
+  "ManufacturerProductNumber",
+  "Manufacturer",
+  "MinimumQuantity",
+  "QuantityAvailable",
+  "Price",
+  "Packaging",
+  "ProductStatus",
+  "Supplier",
+  "PriceManufacturerStandardPackage",
+];
+
+// 有効なソート順序値
+const validSortOrders: DigiKeySortOrder[] = ["Ascending", "Descending"];
 
 export async function POST(request: NextRequest) {
   try {
@@ -41,12 +61,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // SortOptionsを構築（空文字列は除外）
+    // SortOptionsを構築（空文字列や無効な値は除外）
+    const validatedSortField = validSortFields.includes(
+      sortField as DigiKeySortField
+    )
+      ? (sortField as DigiKeySortField)
+      : undefined;
+    const validatedSortOrder = validSortOrders.includes(
+      sortOrder as DigiKeySortOrder
+    )
+      ? (sortOrder as DigiKeySortOrder)
+      : undefined;
     const sortOptions: DigiKeySortOptions | undefined =
-      (sortField && sortField !== "") || (sortOrder && sortOrder !== "")
+      validatedSortField || validatedSortOrder
         ? {
-            Field: sortField && sortField !== "" ? sortField : undefined,
-            SortOrder: sortOrder && sortOrder !== "" ? sortOrder : undefined,
+            Field: validatedSortField,
+            SortOrder: validatedSortOrder,
           }
         : undefined;
 
