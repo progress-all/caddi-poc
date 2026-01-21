@@ -45,17 +45,20 @@ export function ResultViewer({
   return (
     <div className={cn("flex flex-col h-full", className)}>
       <Tabs defaultValue={defaultTab} className="w-full flex flex-col flex-1 min-h-0">
-        <TabsList className="flex-shrink-0">
+        <TabsList className="flex-shrink-0 justify-start">
           {customView ? (
-            <TabsTrigger value="custom" aria-label="カスタムビュー">
+            <TabsTrigger value="custom" aria-label="一覧" className="gap-1.5">
               <Table2 className="h-4 w-4" />
+              一覧
             </TabsTrigger>
           ) : null}
-          <TabsTrigger value="visualJson" aria-label="ビジュアルJSON">
+          <TabsTrigger value="visualJson" aria-label="構造" className="gap-1.5">
             <ListTree className="h-4 w-4" />
+            構造
           </TabsTrigger>
-          <TabsTrigger value="json" aria-label="JSON">
+          <TabsTrigger value="json" aria-label="JSON" className="gap-1.5">
             <Braces className="h-4 w-4" />
+            JSON
           </TabsTrigger>
         </TabsList>
         {customView ? (
