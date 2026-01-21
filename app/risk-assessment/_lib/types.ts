@@ -63,3 +63,48 @@ export interface AssessmentResult {
   alternatives: AlternativeCandidate[];
   searchedAt: string; // ISO 8601
 }
+
+// 仕様一致スコアの詳細
+export interface SpecMatchDetail {
+  packageMatch: {
+    target: string | null;
+    candidate: string | null;
+    matched: boolean;
+    score: number;
+  };
+  voltageRangeOverlap: {
+    target: [number | null, number | null];
+    candidate: [number | null, number | null];
+    overlapPercent: number;
+    score: number;
+  };
+  mountingTypeMatch: {
+    target: string | null;
+    candidate: string | null;
+    matched: boolean;
+    score: number;
+  };
+  total: number;
+}
+
+// 規制安全スコアの詳細
+export interface ComplianceSafetyDetail {
+  rohs: { status: ComplianceStatus; score: number };
+  reach: { status: ComplianceStatus; score: number };
+  riskLevel: RiskLevel;
+  total: number;
+}
+
+// 入手性スコアの詳細
+export interface AvailabilityDetail {
+  quantityAvailable: number;
+  hasStock: boolean;
+  total: number;
+}
+
+// 拡張されたスコア内訳
+export interface ScoreBreakdownDetail {
+  specMatch: SpecMatchDetail;
+  complianceSafety: ComplianceSafetyDetail;
+  availability: AvailabilityDetail;
+}

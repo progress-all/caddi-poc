@@ -4,18 +4,16 @@ import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import useSWRMutation from "swr/mutation";
 import { searchByKeyword } from "@/app/_lib/vendor/digikey/api";
 import type { KeywordSearchInput } from "@/app/_lib/vendor/digikey/types";
 import type { DigiKeyProduct } from "@/app/_lib/vendor/digikey/types";
-import type { NormalizedCompliance, RiskLevel } from "../_lib/types";
-import { cn } from "@/app/_lib/utils";
+import { getComplianceFromProduct, getRiskLevel } from "../_lib/compliance-utils";
+import { PartCard } from "./part-card";
 
 interface PartSearchProps {
-  onPartSelect: (product: DigiKeyProduct) => void;
-  selectedPart: DigiKeyProduct | null;
+  onPartSelect?: (product: DigiKeyProduct) => void;
+  selectedPart?: DigiKeyProduct | null;
 }
 
 export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
@@ -49,82 +47,33 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
 
   const handlePartClick = useCallback(
     (product: DigiKeyProduct) => {
-      onPartSelect(product);
+      onPartSelect?.(product);
     },
     [onPartSelect]
   );
 
+  // 類似品検索ページを新しいタブで開く
+  const handleSimilarSearch = useCallback(
+    (product: DigiKeyProduct, e: React.MouseEvent) => {
+      e.stopPropagation(); // カード選択を防ぐ
+      const compliance = getComplianceFromProduct(product);
+      const riskLevel = getRiskLevel(compliance);
+
+      const params = new URLSearchParams({
+        mpn: product.ManufacturerProductNumber || "",
+        manufacturer: product.Manufacturer?.Name || "",
+        category: product.Category?.Name || "",
+        rohs: compliance.rohs,
+        reach: compliance.reach,
+        riskLevel: riskLevel,
+      });
+
+      window.open(`/risk-assessment/similar-search?${params.toString()}`, "_blank");
+    },
+    []
+  );
+
   const products = searchResults?.Products ?? [];
-
-  // 規制ステータス正規化（page.tsxと同じロジック）
-  const getComplianceFromProduct = (
-    product: DigiKeyProduct
-  ): NormalizedCompliance => {
-    const rohsStatus = product.Classifications?.RohsStatus || "";
-    const reachStatus = product.Classifications?.ReachStatus || "";
-
-    const rohs: NormalizedCompliance["rohs"] = rohsStatus.includes("Compliant")
-      ? "Compliant"
-      : rohsStatus.includes("Non-Compliant") ||
-        rohsStatus.includes("NonCompliant")
-      ? "NonCompliant"
-      : "Unknown";
-
-    const reach: NormalizedCompliance["reach"] =
-      reachStatus.includes("Unaffected") || reachStatus.includes("Compliant")
-        ? "Compliant"
-        : reachStatus.includes("Affected")
-        ? "NonCompliant"
-        : "Unknown";
-
-    return { rohs, reach };
-  };
-
-  // リスクレベル評価（page.tsxと同じロジック）
-  const getRiskLevel = (compliance: NormalizedCompliance): RiskLevel => {
-    if (
-      compliance.rohs === "NonCompliant" ||
-      compliance.reach === "NonCompliant"
-    ) {
-      return "High";
-    }
-    if (compliance.rohs === "Compliant" && compliance.reach === "Compliant") {
-      return "Low";
-    }
-    return "Medium";
-  };
-
-  // リスクレベル設定
-  const riskLevelConfig: Record<
-    RiskLevel,
-    { label: string; className: string; icon: string }
-  > = {
-    Low: {
-      label: "Low",
-      className: "bg-green-500 text-white border-green-600",
-      icon: "✅",
-    },
-    Medium: {
-      label: "Medium",
-      className: "bg-yellow-500 text-white border-yellow-600",
-      icon: "⚠️",
-    },
-    High: {
-      label: "High",
-      className: "bg-red-500 text-white border-red-600",
-      icon: "❌",
-    },
-  };
-
-  // 規制ステータス設定
-  const complianceStatusConfig: Record<
-    NormalizedCompliance["rohs"] | NormalizedCompliance["reach"],
-    { label: string; icon: string }
-  > = {
-    Compliant: { label: "Compliant", icon: "✅" },
-    NonCompliant: { label: "Non-Compliant", icon: "❌" },
-    Unknown: { label: "Unknown", icon: "⚠️" },
-  };
 
   return (
     <div className="space-y-4">
@@ -169,95 +118,18 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
                 product.ManufacturerProductNumber;
               const compliance = getComplianceFromProduct(product);
               const riskLevel = getRiskLevel(compliance);
-              const riskConfig = riskLevelConfig[riskLevel];
-              const rohsConfig = complianceStatusConfig[compliance.rohs];
-              const reachConfig = complianceStatusConfig[compliance.reach];
 
               return (
-                <Card
+                <PartCard
                   key={index}
-                  className={cn(
-                    "cursor-pointer transition-colors flex flex-col",
-                    isSelected
-                      ? "border-primary bg-primary/5"
-                      : "hover:bg-muted/50"
-                  )}
-                  onClick={() => handlePartClick(product)}
-                >
-                  <CardContent className="p-3 flex flex-col flex-1 space-y-2">
-                    {/* ヘッダー: 画像 + MPN + メーカー */}
-                    <div className="flex items-start gap-2">
-                      {product.PhotoUrl && (
-                        <img
-                          src={product.PhotoUrl}
-                          alt={product.ManufacturerProductNumber}
-                          className="w-12 h-12 object-contain border rounded flex-shrink-0"
-                        />
-                      )}
-                      <div className="flex-1 min-w-0">
-                        <div className="font-medium text-sm truncate">
-                          {product.ManufacturerProductNumber}
-                        </div>
-                        <div className="text-xs text-muted-foreground truncate">
-                          {product.Manufacturer?.Name}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* カテゴリ */}
-                    {product.Category?.Name && (
-                      <div className="text-xs text-muted-foreground">
-                        カテゴリ: {product.Category.Name}
-                      </div>
-                    )}
-
-                    {/* 説明 */}
-                    <div className="text-xs text-muted-foreground line-clamp-2 flex-1">
-                      {product.Description?.ProductDescription}
-                    </div>
-
-                    {/* 規制情報 */}
-                    <div className="space-y-1.5 pt-2 border-t">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-muted-foreground">RoHS:</span>
-                        <div className="flex items-center gap-1">
-                          <span>{rohsConfig.icon}</span>
-                          <span>{rohsConfig.label}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-muted-foreground">REACH:</span>
-                        <div className="flex items-center gap-1">
-                          <span>{reachConfig.icon}</span>
-                          <span>{reachConfig.label}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between text-xs pt-1">
-                        <span className="text-muted-foreground">リスク:</span>
-                        <Badge
-                          className={cn("text-xs h-5", riskConfig.className)}
-                        >
-                          {riskConfig.icon} {riskConfig.label}
-                        </Badge>
-                      </div>
-                    </div>
-
-                    {/* ステータスと在庫 */}
-                    <div className="flex items-center justify-between text-xs pt-1 border-t">
-                      {product.ProductStatus?.Status && (
-                        <span className="text-muted-foreground">
-                          ステータス: {product.ProductStatus.Status}
-                        </span>
-                      )}
-                      {product.QuantityAvailable != null &&
-                        product.QuantityAvailable > 0 && (
-                          <span className="text-muted-foreground">
-                            在庫: {product.QuantityAvailable.toLocaleString()}個
-                          </span>
-                        )}
-                    </div>
-                  </CardContent>
-                </Card>
+                  product={product}
+                  compliance={compliance}
+                  riskLevel={riskLevel}
+                  isSelected={isSelected}
+                  onSelect={handlePartClick}
+                  showSimilarSearchButton={true}
+                  onSimilarSearch={handleSimilarSearch}
+                />
               );
             })}
           </div>
