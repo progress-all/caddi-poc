@@ -30,6 +30,14 @@ export const vendors: Vendor[] = [
         href: "/vendor/digikey/keyword",
         label: "Keyword Search",
       },
+      {
+        href: "/vendor/digikey/recommended",
+        label: "Recommended Products",
+      },
+      {
+        href: "/vendor/digikey/substitutions",
+        label: "Substitutions",
+      },
     ],
   },
 ];

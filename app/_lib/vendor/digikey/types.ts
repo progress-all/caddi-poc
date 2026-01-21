@@ -27,6 +27,13 @@ export type DigiKeyDescription = components["schemas"]["Description"];
 export type DigiKeyProductStatus = components["schemas"]["ProductStatusV4"];
 export type DigiKeyProblemDetails = components["schemas"]["DKProblemDetails"];
 
+// RecommendedProducts / Substitutions 用の型
+export type DigiKeyRecommendedProductsResponse = components["schemas"]["RecommendedProductsResponse"];
+export type DigiKeyProductSubstitutesResponse = components["schemas"]["ProductSubstitutesResponse"];
+export type DigiKeyRecommendedProduct = components["schemas"]["RecommendedProduct"];
+export type DigiKeyProductSubstitute = components["schemas"]["ProductSubstitute"];
+export type DigiKeyRecommendation = components["schemas"]["Recommendation"];
+
 // SortOptionsのField型
 export type DigiKeySortField = NonNullable<DigiKeySortOptions>["Field"];
 export type DigiKeySortOrder = NonNullable<DigiKeySortOptions>["SortOrder"];
@@ -46,3 +53,16 @@ export interface KeywordSearchInput {
 
 // 後方互換性のためのエイリアス
 export type DigiKeyKeywordSearchResults = DigiKeyKeywordResponse;
+
+// RecommendedProducts / Substitutions 用の入力型
+export interface RecommendedProductsInput {
+  productNumber: string;
+  limit?: number;
+  searchOptionList?: string;
+  excludeMarketPlaceProducts?: boolean;
+}
+
+export interface SubstitutionsInput {
+  productNumber: string;
+  includes?: string;
+}

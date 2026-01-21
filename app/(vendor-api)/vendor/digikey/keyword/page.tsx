@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import useSWRMutation from "swr/mutation";
 import { ApiForm } from "@/app/_components/vendor-api/api-form";
 import { ResultViewer } from "@/app/_components/vendor-api/json-viewer";
-import { DigiKeyCustomView } from "@/app/_components/vendor-api/digikey-custom-view";
+import { DigiKeyKeywordView } from "@/app/_components/vendor-api/digikey-keyword-view";
 import { ApiPageLayout } from "@/app/_components/vendor-api/api-page-layout";
 import { searchByKeyword } from "@/app/_lib/vendor/digikey/api";
 import type { KeywordSearchInput } from "@/app/_lib/vendor/digikey/types";
@@ -114,7 +114,7 @@ export default function DigiKeyKeywordPage() {
     keywordResult != null ? (
       <ResultViewer
         data={keywordResult}
-        customView={<DigiKeyCustomView data={keywordResult} />}
+        customView={<DigiKeyKeywordView data={keywordResult} />}
         className="h-full"
       />
     ) : null;

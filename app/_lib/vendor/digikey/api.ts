@@ -31,3 +31,21 @@ export async function searchByKeyword(
     input
   );
 }
+
+export async function getRecommendedProducts(
+  input: RecommendedProductsInput
+): Promise<DigiKeyRecommendedProductsResponse> {
+  return postJson<DigiKeyRecommendedProductsResponse>(
+    "/api/vendor/digikey/search/recommended",
+    input
+  );
+}
+
+export async function getSubstitutions(
+  input: SubstitutionsInput
+): Promise<DigiKeyProductSubstitutesResponse> {
+  return postJson<DigiKeyProductSubstitutesResponse>(
+    "/api/vendor/digikey/search/substitutions",
+    input
+  );
+}

@@ -5,6 +5,12 @@
  */
 
 import type { components } from "./types.generated";
+import type {
+  RecommendedProductsInput,
+  SubstitutionsInput,
+  DigiKeyRecommendedProductsResponse,
+  DigiKeyProductSubstitutesResponse,
+} from "./types";
 
 // 生成された型のエイリアス
 export type DigiKeyKeywordRequest = components["schemas"]["KeywordRequest"];
@@ -122,6 +128,99 @@ export class DigiKeyApiClient {
         body: JSON.stringify(requestBody),
       }
     );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      let errorData;
+      try {
+        errorData = JSON.parse(errorText);
+      } catch {
+        errorData = { message: errorText };
+      }
+      throw new Error(
+        `DigiKey API error: ${response.status} ${response.statusText}`,
+        { cause: errorData }
+      );
+    }
+
+    return response.json();
+  }
+
+  /**
+   * Recommended Productsを取得
+   */
+  async getRecommendedProducts(
+    request: RecommendedProductsInput
+  ): Promise<DigiKeyRecommendedProductsResponse> {
+    const token = await this.getAccessToken();
+
+    // クエリパラメータを構築
+    const queryParams = new URLSearchParams();
+    if (request.limit !== undefined) {
+      queryParams.append("limit", request.limit.toString());
+    }
+    if (request.searchOptionList) {
+      queryParams.append("searchOptionList", request.searchOptionList);
+    }
+    if (request.excludeMarketPlaceProducts !== undefined) {
+      queryParams.append(
+        "excludeMarketPlaceProducts",
+        request.excludeMarketPlaceProducts.toString()
+      );
+    }
+
+    const queryString = queryParams.toString();
+    const url = `${DIGIKEY_API_BASE_URL}/products/v4/search/${encodeURIComponent(request.productNumber)}/recommendedproducts${queryString ? `?${queryString}` : ""}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "X-DIGIKEY-Client-Id": this.clientId,
+      },
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      let errorData;
+      try {
+        errorData = JSON.parse(errorText);
+      } catch {
+        errorData = { message: errorText };
+      }
+      throw new Error(
+        `DigiKey API error: ${response.status} ${response.statusText}`,
+        { cause: errorData }
+      );
+    }
+
+    return response.json();
+  }
+
+  /**
+   * Substitutionsを取得
+   */
+  async getSubstitutions(
+    request: SubstitutionsInput
+  ): Promise<DigiKeyProductSubstitutesResponse> {
+    const token = await this.getAccessToken();
+
+    // クエリパラメータを構築
+    const queryParams = new URLSearchParams();
+    if (request.includes) {
+      queryParams.append("includes", request.includes);
+    }
+
+    const queryString = queryParams.toString();
+    const url = `${DIGIKEY_API_BASE_URL}/products/v4/search/${encodeURIComponent(request.productNumber)}/substitutions${queryString ? `?${queryString}` : ""}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "X-DIGIKEY-Client-Id": this.clientId,
+      },
+    });
 
     if (!response.ok) {
       const errorText = await response.text();

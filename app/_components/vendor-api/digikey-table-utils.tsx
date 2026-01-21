@@ -1,24 +1,27 @@
 "use client";
 
+import React from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { Badge } from "@/components/ui/badge";
-import { DataTable } from "@/components/ui/data-table";
 import { DataTableColumnHeader } from "@/components/ui/data-table-column-header";
-import {
-  DigiKeyKeywordSearchResults,
-  DigiKeyProduct,
-} from "@/app/_lib/vendor/digikey/types";
 
-interface DigiKeyCustomViewProps {
-  data: unknown;
+// 空状態コンポーネント
+export function EmptyState() {
+  return (
+    <div className="py-8 text-center text-muted-foreground">
+      <p>検索結果が見つかりませんでした。</p>
+    </div>
+  );
 }
 
+// キー値タグのプロパティ
 interface KeyValueTagsProps {
   items: unknown[];
   formatFn?: (item: unknown) => string;
 }
 
-function KeyValueTags({ items, formatFn }: KeyValueTagsProps) {
+// 配列値をバッジで表示するコンポーネント
+export function KeyValueTags({ items, formatFn }: KeyValueTagsProps) {
   if (!Array.isArray(items) || items.length === 0) {
     return <span className="text-muted-foreground text-xs">-</span>;
   }
@@ -107,7 +110,8 @@ function KeyValueTags({ items, formatFn }: KeyValueTagsProps) {
   );
 }
 
-function formatProductVariation(item: unknown): string {
+// ProductVariationのフォーマッター
+export function formatProductVariation(item: unknown): string {
   if (typeof item === "object" && item !== null) {
     const pv = item as {
       DigiKeyProductNumber?: string;
@@ -126,7 +130,8 @@ function formatProductVariation(item: unknown): string {
   return JSON.stringify(item);
 }
 
-function formatParameter(item: unknown): string {
+// Parameterのフォーマッター
+export function formatParameter(item: unknown): string {
   if (typeof item === "object" && item !== null) {
     const param = item as {
       ParameterText?: string;
@@ -139,7 +144,8 @@ function formatParameter(item: unknown): string {
   return JSON.stringify(item);
 }
 
-function renderCellValue(
+// セル値のレンダリング関数
+export function renderCellValue(
   value: unknown,
   fieldName: string
 ): React.ReactNode {
@@ -162,6 +168,9 @@ function renderCellValue(
     }
     if (fieldName === "Parameters") {
       return <KeyValueTags items={value} formatFn={formatParameter} />;
+    }
+    if (fieldName === "OtherNames") {
+      return <KeyValueTags items={value} />;
     }
     return <KeyValueTags items={value} />;
   }
@@ -201,45 +210,25 @@ function renderCellValue(
 }
 
 // ラベルを生成（キャメルケースをスペース区切りに変換）
-function formatLabel(key: string): string {
+export function formatLabel(key: string): string {
   return key
     .replace(/([A-Z])/g, " $1")
     .replace(/^./, (str) => str.toUpperCase())
     .trim();
 }
 
-export function DigiKeyCustomView({ data }: DigiKeyCustomViewProps) {
-  // データの型チェックとProducts配列の抽出
-  const searchResults = data as DigiKeyKeywordSearchResults;
-  const products = searchResults?.Products;
-
-  if (!products || products.length === 0) {
-    return (
-      <div className="py-8 text-center text-muted-foreground">
-        <p>検索結果が見つかりませんでした。</p>
-      </div>
-    );
-  }
-
-  // すべてのProductからすべてのキーを収集
+// 動的カラム定義を生成する関数
+export function createDynamicColumns<T extends Record<string, unknown>>(
+  items: T[],
+  priorityKeys: string[]
+): ColumnDef<T>[] {
+  // すべてのアイテムからすべてのキーを収集
   const allKeys = new Set<string>();
-  products.forEach((product) => {
-    Object.keys(product).forEach((key) => allKeys.add(key));
+  items.forEach((item) => {
+    Object.keys(item).forEach((key) => allKeys.add(key));
   });
 
-  // キーを配列に変換してソート（一部の重要なキーを先頭に配置）
-  const priorityKeys = [
-    "ManufacturerProductNumber",
-    "Description",
-    "Manufacturer",
-    "QuantityAvailable",
-    "UnitPrice",
-    "ProductStatus",
-    "ProductVariations",
-    "Parameters",
-    "Category",
-  ];
-
+  // キーを配列に変換してソート（優先キーを先頭に配置）
   const sortedKeys = Array.from(allKeys).sort((a, b) => {
     const aPriority = priorityKeys.indexOf(a);
     const bPriority = priorityKeys.indexOf(b);
@@ -257,7 +246,7 @@ export function DigiKeyCustomView({ data }: DigiKeyCustomViewProps) {
   });
 
   // 列定義を作成
-  const columns: ColumnDef<DigiKeyProduct>[] = sortedKeys.map((key) => ({
+  return sortedKeys.map((key) => ({
     accessorKey: key,
     header: ({ column }) => (
       <DataTableColumnHeader
@@ -276,19 +265,4 @@ export function DigiKeyCustomView({ data }: DigiKeyCustomViewProps) {
     enableSorting: true,
     enableHiding: true,
   }));
-
-  return (
-    <div className="h-full min-h-[500px] flex flex-col">
-      <DataTable
-        columns={columns}
-        data={products}
-        searchKey="ManufacturerProductNumber"
-        enableSorting={true}
-        enableFiltering={true}
-        enablePagination={true}
-        enableColumnVisibility={true}
-        pageSize={100}
-      />
-    </div>
-  );
 }
