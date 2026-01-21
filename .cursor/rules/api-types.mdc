@@ -1,0 +1,65 @@
+# API型自動生成ルール
+
+## 概要
+
+Mouser/DigiKey APIのTypeScript型はOpenAPI仕様から自動生成されています。
+
+## ファイル構成
+
+```
+docs/
+├── mouser-openapi-v1-spec.json          # Mouser API仕様（Swagger 2.0）
+├── mouser-openapi-v3-spec.json          # 変換後（OpenAPI 3.0）
+├── digikey-openapi-v4-ProductSearch-spec.json  # DigiKey API仕様（Swagger 2.0）
+└── digikey-openapi-v3-spec.json         # 変換後（OpenAPI 3.0）
+
+app/_lib/vendor/
+├── mouser/
+│   ├── types.generated.ts   # 自動生成（編集禁止）
+│   ├── types.ts             # エイリアス・カスタム型
+│   ├── client.ts            # APIクライアント
+│   └── api.ts               # フロントエンド用関数
+└── digikey/
+    ├── types.generated.ts   # 自動生成（編集禁止）
+    ├── types.ts             # エイリアス・カスタム型
+    ├── client.ts            # APIクライアント
+    └── api.ts               # フロントエンド用関数
+```
+
+## ルール
+
+### やってはいけないこと
+
+- `types.generated.ts` を直接編集しない
+- 手動でAPI型を定義しない（既存の手動型は非推奨）
+
+### やるべきこと
+
+- API仕様が更新されたら型を再生成する
+- カスタム型は `types.ts` に追加する
+- 生成された型は `components["schemas"]["TypeName"]` でアクセスする
+
+## コマンド
+
+```bash
+# Swagger 2.0 → OpenAPI 3.0 変換（仕様ファイル更新時）
+npm run convert:swagger
+
+# TypeScript型を再生成
+npm run generate:api-types
+```
+
+## 型の使い方
+
+```typescript
+// types.generated.ts から直接インポート
+import type { components } from "./types.generated";
+type MouserPart = components["schemas"]["MouserPart"];
+
+// または types.ts のエイリアスを使用
+import type { MouserPart, MouserSearchResponseRoot } from "./types";
+```
+
+## 詳細
+
+詳細は [docs/api-type-generation.md](../../docs/api-type-generation.md) を参照。

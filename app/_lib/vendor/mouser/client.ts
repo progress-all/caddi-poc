@@ -3,26 +3,29 @@
  * Mouser APIへのリクエストを処理するクライアント
  */
 
+import type { components } from "./types.generated";
+
+// 生成された型のエイリアス
+export type MouserSearchResponseRoot = components["schemas"]["SearchResponseRoot"];
+export type MouserPart = components["schemas"]["MouserPart"];
+export type MouserSearchByKeywordRequest = components["schemas"]["SearchByKeywordRequest"];
+export type MouserSearchByPartRequest = components["schemas"]["SearchByPartRequest"];
+export type MouserErrorEntity = components["schemas"]["ErrorEntity"];
+
 // APIバージョンは環境変数で上書き可能、デフォルトはv2
 const MOUSER_API_VERSION = process.env.MOUSER_API_VERSION || "2";
 const MOUSER_API_BASE_URL = `https://api.mouser.com/api/v${MOUSER_API_VERSION}`;
 
-export interface MouserSearchByKeywordRequest {
+// リクエスト用の簡略化された入力型（既存のコードとの互換性のため）
+export interface MouserKeywordSearchInput {
   keyword: string;
   records?: number;
   startingRecord?: number;
 }
 
-export interface MouserSearchByPartNumberRequest {
+export interface MouserPartNumberSearchInput {
   partNumber: string;
   partSearchOptions?: string;
-}
-
-export interface MouserApiError {
-  Errors?: Array<{
-    ErrorCode?: string;
-    ErrorMessage?: string;
-  }>;
 }
 
 export class MouserApiClient {
@@ -36,8 +39,8 @@ export class MouserApiClient {
    * Keyword検索を実行
    */
   async searchByKeyword(
-    request: MouserSearchByKeywordRequest
-  ): Promise<unknown> {
+    request: MouserKeywordSearchInput
+  ): Promise<MouserSearchResponseRoot> {
     // APIキーをクエリパラメータとして追加
     const url = new URL(`${MOUSER_API_BASE_URL}/search/keyword`);
     url.searchParams.append("apiKey", this.apiKey);
@@ -77,8 +80,8 @@ export class MouserApiClient {
    * Part Number検索を実行
    */
   async searchByPartNumber(
-    request: MouserSearchByPartNumberRequest
-  ): Promise<unknown> {
+    request: MouserPartNumberSearchInput
+  ): Promise<MouserSearchResponseRoot> {
     // APIキーをクエリパラメータとして追加
     const url = new URL(`${MOUSER_API_BASE_URL}/search/partnumber`);
     url.searchParams.append("apiKey", this.apiKey);

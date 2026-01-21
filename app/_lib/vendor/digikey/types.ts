@@ -1,37 +1,37 @@
 /**
  * DigiKey API 型定義
+ * 自動生成された型を再エクスポートし、カスタム入力型を定義
  */
 
-// SortOptions
-export type DigiKeySortField =
-  | "None"
-  | "DigiKeyProductNumber"
-  | "ManufacturerProductNumber"
-  | "Manufacturer"
-  | "MinimumQuantity"
-  | "QuantityAvailable"
-  | "Price"
-  | "Packaging"
-  | "ProductStatus"
-  | "Supplier"
-  | "PriceManufacturerStandardPackage";
+// 自動生成された型を再エクスポート
+export type {
+  components,
+  paths,
+  operations,
+} from "./types.generated";
 
-export type DigiKeySortOrder = "Ascending" | "Descending";
+// 便利なエイリアス
+import type { components } from "./types.generated";
 
-export interface DigiKeySortOptions {
-  Field?: DigiKeySortField;
-  SortOrder?: DigiKeySortOrder;
-}
+export type DigiKeyProduct = components["schemas"]["Product"];
+export type DigiKeyKeywordResponse = components["schemas"]["KeywordResponse"];
+export type DigiKeyKeywordRequest = components["schemas"]["KeywordRequest"];
+export type DigiKeySortOptions = components["schemas"]["SortOptions"];
+export type DigiKeyFilterOptionsRequest = components["schemas"]["FilterOptionsRequest"];
+export type DigiKeyManufacturer = components["schemas"]["Manufacturer"];
+export type DigiKeyCategory = components["schemas"]["Category"];
+export type DigiKeyCategoryNode = components["schemas"]["CategoryNode"];
+export type DigiKeyParameter = components["schemas"]["Parameter"];
+export type DigiKeyProductVariation = components["schemas"]["ProductVariation"];
+export type DigiKeyDescription = components["schemas"]["Description"];
+export type DigiKeyProductStatus = components["schemas"]["ProductStatusV4"];
+export type DigiKeyProblemDetails = components["schemas"]["DKProblemDetails"];
 
-// FilterOptionsRequest
-export interface DigiKeyFilterOptionsRequest {
-  ManufacturerFilter?: Array<{ Id: string }>;
-  CategoryFilter?: Array<{ Id: string }>;
-  StatusFilter?: Array<{ Id: string }>;
-  MinimumQuantityAvailable?: number;
-}
+// SortOptionsのField型
+export type DigiKeySortField = NonNullable<DigiKeySortOptions>["Field"];
+export type DigiKeySortOrder = NonNullable<DigiKeySortOptions>["SortOrder"];
 
-// 入力型
+// フロントエンド用の入力型（UIからAPIへの変換用）
 export interface KeywordSearchInput {
   keywords: string;
   limit?: number;
@@ -44,104 +44,5 @@ export interface KeywordSearchInput {
   minimumQuantityAvailable?: number;
 }
 
-// レスポンス型
-export interface DigiKeyDescription {
-  ProductDescription?: string;
-  DetailedDescription?: string;
-}
-
-export interface DigiKeyManufacturer {
-  Id?: number;
-  Name?: string;
-}
-
-export interface DigiKeyProductStatus {
-  Id?: number;
-  Status?: string;
-}
-
-export interface DigiKeyPackageType {
-  Id?: number;
-  Name?: string;
-}
-
-export interface DigiKeyProductVariation {
-  DigiKeyProductNumber?: string;
-  PackageType?: DigiKeyPackageType;
-  BreakQuantity?: number;
-  UnitPrice?: number;
-  TotalPrice?: number;
-  QuantityAvailableforPackageType?: number;
-  MaxQuantityForDistribution?: number;
-  MinimumOrderQuantity?: number;
-  DigiReelFee?: number;
-}
-
-export interface DigiKeyParameter {
-  ParameterId?: number;
-  ParameterText?: string;
-  ParameterType?: string;
-  ValueId?: string;
-  ValueText?: string;
-}
-
-export interface DigiKeyCategory {
-  CategoryId?: number;
-  ParentId?: number;
-  Name?: string;
-  ProductCount?: number;
-  NewProductCount?: number;
-  ImageUrl?: string;
-  SeoDescription?: string;
-  ChildCategories?: DigiKeyCategory[];
-}
-
-export interface DigiKeyProduct {
-  Description?: DigiKeyDescription;
-  Manufacturer?: DigiKeyManufacturer;
-  ManufacturerProductNumber?: string;
-  UnitPrice?: number;
-  ProductUrl?: string;
-  DatasheetUrl?: string;
-  PhotoUrl?: string;
-  ProductVariations?: DigiKeyProductVariation[];
-  QuantityAvailable?: number;
-  ProductStatus?: DigiKeyProductStatus;
-  BackOrderNotAllowed?: boolean | null;
-  NormallyStocking?: boolean;
-  Discontinued?: boolean;
-  EndOfLife?: boolean | null;
-  Ncnr?: boolean;
-  PrimaryVideoUrl?: string | null;
-  Parameters?: DigiKeyParameter[];
-  BaseProductNumber?: string | null;
-  Category?: DigiKeyCategory;
-  DateLastBuyChance?: string;
-  ManufacturerLeadWeeks?: string;
-  ManufacturerPublicQuantity?: number;
-  Series?: {
-    Id?: number;
-    Name?: string;
-  };
-  ShippingInfo?: unknown;
-  Classifications?: {
-    ExportControlClassNumber?: string;
-    HTSUSCode?: string;
-  };
-  [key: string]: unknown;
-}
-
-export interface DigiKeyKeywordSearchResults {
-  Products?: DigiKeyProduct[];
-  ProductsCount?: number;
-  ExactMatches?: DigiKeyProduct[];
-  FilterOptions?: {
-    Manufacturers?: Array<{
-      Id?: number;
-      Name?: string;
-      ProductCount?: number;
-    }>;
-    Categories?: unknown[];
-    Series?: unknown[];
-  };
-}
+// 後方互換性のためのエイリアス
+export type DigiKeyKeywordSearchResults = DigiKeyKeywordResponse;

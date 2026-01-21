@@ -4,15 +4,21 @@
  * OAuth 2.0 client_credentials flowを使用
  */
 
-import type {
-  DigiKeySortOptions,
-  DigiKeyFilterOptionsRequest,
-} from "./types";
+import type { components } from "./types.generated";
+
+// 生成された型のエイリアス
+export type DigiKeyKeywordRequest = components["schemas"]["KeywordRequest"];
+export type DigiKeyKeywordResponse = components["schemas"]["KeywordResponse"];
+export type DigiKeyProduct = components["schemas"]["Product"];
+export type DigiKeySortOptions = components["schemas"]["SortOptions"];
+export type DigiKeyFilterOptionsRequest = components["schemas"]["FilterOptionsRequest"];
+export type DigiKeyProblemDetails = components["schemas"]["DKProblemDetails"];
 
 const DIGIKEY_API_BASE_URL = "https://api.digikey.com";
 const DIGIKEY_TOKEN_URL = `${DIGIKEY_API_BASE_URL}/v1/oauth2/token`;
 
-export interface DigiKeyKeywordSearchRequest {
+// リクエスト用の簡略化された入力型（既存のコードとの互換性のため）
+export interface DigiKeyKeywordSearchInput {
   keywords: string;
   limit?: number;
   offset?: number;
@@ -85,8 +91,8 @@ export class DigiKeyApiClient {
    * Keyword検索を実行
    */
   async keywordSearch(
-    request: DigiKeyKeywordSearchRequest
-  ): Promise<unknown> {
+    request: DigiKeyKeywordSearchInput
+  ): Promise<DigiKeyKeywordResponse> {
     const token = await this.getAccessToken();
 
     // リクエストボディを構築（オプションパラメータが指定されている場合のみ含める）

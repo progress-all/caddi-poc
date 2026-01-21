@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:api-types": "npm run generate:mouser-types && npm run generate:digikey-types",
+    "generate:mouser-types": "openapi-typescript docs/mouser-openapi-v3-spec.json -o app/_lib/vendor/mouser/types.generated.ts",
+    "generate:digikey-types": "openapi-typescript docs/digikey-openapi-v3-spec.json -o app/_lib/vendor/digikey/types.generated.ts",
+    "convert:swagger": "swagger2openapi docs/mouser-openapi-v1-spec.json -o docs/mouser-openapi-v3-spec.json && swagger2openapi docs/digikey-openapi-v4-ProductSearch-spec.json -o docs/digikey-openapi-v3-spec.json"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.1",
@@ -32,7 +36,9 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.6",
+    "openapi-typescript": "^7.10.1",
     "postcss": "^8.4.49",
+    "swagger2openapi": "^7.0.8",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.7.2"
