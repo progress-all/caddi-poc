@@ -6,8 +6,6 @@
 import type {
   KeywordSearchInput,
   DigiKeyKeywordSearchResults,
-  RecommendedProductsInput,
-  DigiKeyRecommendedProductsResponse,
   SubstitutionsInput,
   DigiKeyProductSubstitutesResponse,
 } from "./types";
@@ -32,15 +30,6 @@ export async function searchByKeyword(
 ): Promise<DigiKeyKeywordSearchResults> {
   return postJson<DigiKeyKeywordSearchResults>(
     "/api/vendor/digikey/search/keyword",
-    input
-  );
-}
-
-export async function getRecommendedProducts(
-  input: RecommendedProductsInput
-): Promise<DigiKeyRecommendedProductsResponse> {
-  return postJson<DigiKeyRecommendedProductsResponse>(
-    "/api/vendor/digikey/search/recommended",
     input
   );
 }

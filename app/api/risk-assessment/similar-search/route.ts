@@ -8,16 +8,14 @@ import type {
 } from "@/app/risk-assessment/_lib/types";
 import type {
   DigiKeyProductSubstitute,
-  DigiKeyRecommendedProduct,
 } from "@/app/_lib/vendor/digikey/types";
 
 /**
  * 類似品検索API
  *
- * 並列で以下の3つのソースから候補を収集:
+ * 並列で以下の2つのソースから候補を収集:
  * 1. カスタムロジック（TODO: 将来実装）
  * 2. DigiKey Substitutions API
- * 3. DigiKey Recommended Products API
  *
  * 各ソースの結果をマージし、重複を排除してラベル付きで返却
  */
@@ -51,15 +49,13 @@ export async function POST(request: NextRequest) {
 
     const client = new DigiKeyApiClient(clientId, clientSecret);
 
-    // ===== 並列で3つのソースから候補を取得 =====
-    const [customResult, substitutionsResult, recommendedResult] =
+    // ===== 並列で2つのソースから候補を取得 =====
+    const [customResult, substitutionsResult] =
       await Promise.allSettled([
         // 1. カスタムロジック（TODO: 将来実装）
         searchByCustomLogic(productNumber),
         // 2. Substitutions API
         client.getSubstitutions({ productNumber }),
-        // 3. Recommended Products API
-        client.getRecommendedProducts({ productNumber, limit: 10 }),
       ]);
 
     // ===== 結果を処理 =====
@@ -67,7 +63,6 @@ export async function POST(request: NextRequest) {
     const sourceSummary: SimilarSearchResponse["sourceSummary"] = {
       custom: { count: 0 },
       substitutions: { count: 0 },
-      recommended: { count: 0 },
     };
 
     // カスタムロジック結果の処理
@@ -92,26 +87,6 @@ export async function POST(request: NextRequest) {
     } else {
       sourceSummary.substitutions.error =
         substitutionsResult.reason?.message || "Unknown error";
-    }
-
-    // Recommended結果の処理
-    if (recommendedResult.status === "fulfilled") {
-      const recommendations = recommendedResult.value.Recommendations || [];
-      // Recommendations配列の各要素からRecommendedProductsを取得
-      const allRecommended: DigiKeyRecommendedProduct[] = [];
-      for (const rec of recommendations) {
-        if (rec.RecommendedProducts) {
-          allRecommended.push(...rec.RecommendedProducts);
-        }
-      }
-      sourceSummary.recommended.count = allRecommended.length;
-      for (const rec of allRecommended) {
-        const candidate = convertRecommendedToCandidate(rec);
-        mergeCandidateToMap(candidateMap, candidate, "recommended");
-      }
-    } else {
-      sourceSummary.recommended.error =
-        recommendedResult.reason?.message || "Unknown error";
     }
 
     // Mapから配列に変換
@@ -169,25 +144,6 @@ function convertSubstituteToCandidate(
     unitPrice: sub.UnitPrice,
     sources: [],
     substituteType: sub.SubstituteType,
-  };
-}
-
-/**
- * RecommendedProduct → CandidateInfo への変換
- */
-function convertRecommendedToCandidate(
-  rec: DigiKeyRecommendedProduct
-): CandidateInfo {
-  return {
-    digiKeyProductNumber: rec.DigiKeyProductNumber || "",
-    manufacturerProductNumber: rec.ManufacturerProductNumber || "",
-    manufacturerName: rec.ManufacturerName || "",
-    description: rec.ProductDescription || "",
-    quantityAvailable: Number(rec.QuantityAvailable) || 0,
-    productUrl: rec.ProductUrl,
-    photoUrl: rec.PrimaryPhoto,
-    unitPrice: rec.UnitPrice != null ? String(rec.UnitPrice) : undefined,
-    sources: [],
   };
 }
 

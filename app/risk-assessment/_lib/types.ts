@@ -118,7 +118,6 @@ export interface ScoreBreakdownDetail {
  */
 export type CandidateSource =
   | "substitutions" // DigiKey Substitutions API
-  | "recommended" // DigiKey Recommended Products API
   | "custom"; // カスタムロジック（将来実装）
 
 /**
@@ -162,7 +161,6 @@ export interface SimilarSearchResponse {
   /** 各ソースの取得結果サマリ */
   sourceSummary: {
     substitutions: { count: number; error?: string };
-    recommended: { count: number; error?: string };
     custom: { count: number; error?: string };
   };
 }

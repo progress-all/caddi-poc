@@ -31,10 +31,6 @@ export const vendors: Vendor[] = [
         label: "Keyword Search",
       },
       {
-        href: "/vendor/digikey/recommended",
-        label: "Recommended Products",
-      },
-      {
         href: "/vendor/digikey/substitutions",
         label: "Substitutions",
       },

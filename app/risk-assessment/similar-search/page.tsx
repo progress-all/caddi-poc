@@ -20,7 +20,6 @@ import { searchSimilarProducts } from "../_lib/api";
  */
 const sourceLabels: Record<CandidateSource, { label: string; variant: "default" | "secondary" | "outline" }> = {
   substitutions: { label: "代替品", variant: "default" },
-  recommended: { label: "推奨品", variant: "secondary" },
   custom: { label: "カスタム検索", variant: "outline" },
 };
 
@@ -109,10 +108,6 @@ function SourceSummary({ summary }: { summary: SimilarSearchResponse["sourceSumm
       <div className="flex items-center gap-2">
         <Badge variant="default" className="text-xs">代替品</Badge>
         <span>{summary.substitutions.count}件</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <Badge variant="secondary" className="text-xs">推奨品</Badge>
-        <span>{summary.recommended.count}件</span>
       </div>
     </div>
   );
