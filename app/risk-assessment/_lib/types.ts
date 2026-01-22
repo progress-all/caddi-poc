@@ -121,6 +121,59 @@ export type CandidateSource =
   | "custom"; // カスタムロジック（将来実装）
 
 /**
+ * DigiKey Substitutions API の代替品種別（SubstitutionType）
+ * 
+ * APIレスポンスで返される4種類の値:
+ * - ManufacturerRecommended: メーカー推奨品（PCN/EOLで公式に推奨）
+ * - DirectReplacement: 直接代替品（形状・機能・互換性が高い）
+ * - ParametricEquivalent: パラメトリック同等品（仕様パラメータが理論的に一致）
+ * - Similar: 類似品（基本機能は同等だが差異あり、要確認）
+ */
+export type SubstituteType =
+  | "ManufacturerRecommended"
+  | "DirectReplacement"
+  | "ParametricEquivalent"
+  | "Similar";
+
+/**
+ * 代替品種別のラベル定義（日本語・説明・色分け）
+ */
+export const substituteTypeLabels: Record<
+  SubstituteType,
+  {
+    label: string;
+    description: string;
+    variant: "default" | "secondary" | "outline" | "destructive";
+    priority: number; // グルーピング時の表示順（互換性の高い順）
+  }
+> = {
+  ManufacturerRecommended: {
+    label: "メーカー推奨",
+    description: "メーカーがPCN/EOLで公式に推奨する代替品",
+    variant: "outline",
+    priority: 1,
+  },
+  DirectReplacement: {
+    label: "直接代替",
+    description: "形状・機能・互換性が高い代替品",
+    variant: "outline",
+    priority: 2,
+  },
+  ParametricEquivalent: {
+    label: "パラメトリック同等品",
+    description: "仕様パラメータが理論的に一致する製品",
+    variant: "outline",
+    priority: 3,
+  },
+  Similar: {
+    label: "類似品",
+    description: "基本機能は同等だが差異あり（要確認）",
+    variant: "outline",
+    priority: 4,
+  },
+};
+
+/**
  * 検索候補の基本情報（各APIの共通部分）
  */
 export interface CandidateInfo {
@@ -135,7 +188,7 @@ export interface CandidateInfo {
   /** どのAPIから取得されたか（複数の場合は配列） */
   sources: CandidateSource[];
   /** Substitutions APIの場合のタイプ */
-  substituteType?: string;
+  substituteType?: SubstituteType | string; // string は後方互換性のため
 }
 
 /**

@@ -102,6 +102,10 @@ export function PartCard({
   const rohsConfig = complianceStatusConfig[compliance.rohs];
   const reachConfig = complianceStatusConfig[compliance.reach];
 
+  // DigiKey Product Number を取得（最初のバリエーションから）
+  const digiKeyProductNumber =
+    product.ProductVariations?.[0]?.DigiKeyProductNumber;
+
   return (
     <Card
       className={cn(
@@ -130,7 +134,7 @@ export function PartCard({
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <div className="font-medium text-sm truncate">
-                {product.ManufacturerProductNumber}
+                MPN: {product.ManufacturerProductNumber}
               </div>
               {/* 類似度スコアバッジ（類似品の場合のみ） */}
               {similarityScore !== undefined && (
@@ -171,6 +175,11 @@ export function PartCard({
             <div className="text-xs text-muted-foreground truncate">
               {product.Manufacturer?.Name}
             </div>
+            {digiKeyProductNumber && (
+              <div className="text-xs text-muted-foreground truncate">
+                DigiKey P/N: {digiKeyProductNumber}
+              </div>
+            )}
           </div>
         </div>
 

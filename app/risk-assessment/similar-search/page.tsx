@@ -5,14 +5,26 @@ import { Suspense } from "react";
 import useSWR from "swr";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { HelpCircle } from "lucide-react";
 import { RiskIndicator } from "../_components/risk-indicator";
+import { SubstituteTypeBadge, DigiKeyBadge } from "../_components/substitute-type-badge";
 import type {
   NormalizedCompliance,
   RiskLevel,
   CandidateInfo,
   CandidateSource,
   SimilarSearchResponse,
+  SubstituteType,
 } from "../_lib/types";
+import { substituteTypeLabels } from "../_lib/types";
 import { searchSimilarProducts } from "../_lib/api";
 
 /**
@@ -47,15 +59,8 @@ function CandidateCard({ candidate }: { candidate: CandidateInfo }) {
           )}
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap gap-1 mb-1">
-              {candidate.sources.map((source) => (
-                <Badge key={source} variant={sourceLabels[source].variant} className="text-xs">
-                  {sourceLabels[source].label}
-                </Badge>
-              ))}
               {candidate.substituteType && (
-                <Badge variant="outline" className="text-xs text-muted-foreground">
-                  {candidate.substituteType}
-                </Badge>
+                <SubstituteTypeBadge type={candidate.substituteType} showDescription className="text-xs" />
               )}
             </div>
             <div className="font-medium text-sm truncate">
@@ -100,14 +105,89 @@ function CandidateCard({ candidate }: { candidate: CandidateInfo }) {
 
 /**
  * ソースサマリの表示（日本語、エラー表示なし）
+ * DigiKey 代替品の4種別ごとの件数と説明を表示
  */
-function SourceSummary({ summary }: { summary: SimilarSearchResponse["sourceSummary"] }) {
-  // カスタムは未実装なので非表示
+function SourceSummary({ 
+  summary, 
+  candidates 
+}: { 
+  summary: SimilarSearchResponse["sourceSummary"];
+  candidates: CandidateInfo[];
+}) {
+  // 種別ごとに件数を集計
+  const typeCounts = new Map<SubstituteType | "unknown", number>();
+  
+  // 4種類のタイプを初期化（0件も表示するため）
+  const allTypes: (SubstituteType | "unknown")[] = [
+    "ManufacturerRecommended",
+    "DirectReplacement",
+    "ParametricEquivalent",
+    "Similar",
+    "unknown",
+  ];
+  
+  for (const type of allTypes) {
+    typeCounts.set(type, 0);
+  }
+  
+  for (const candidate of candidates) {
+    const type = candidate.substituteType as SubstituteType | undefined;
+    const key = type && type in substituteTypeLabels ? type : "unknown";
+    typeCounts.set(key, (typeCounts.get(key) || 0) + 1);
+  }
+
+  const totalCount = summary.substitutions.count;
+
   return (
-    <div className="flex flex-wrap gap-4 text-sm">
-      <div className="flex items-center gap-2">
-        <Badge variant="default" className="text-xs">代替品</Badge>
-        <span>{summary.substitutions.count}件</span>
+    <div className="space-y-3">
+      {/* 大分類: DigiKey 代替品 */}
+      <div className="flex items-center gap-3 text-sm">
+        <DigiKeyBadge className="text-xs px-3 py-1" />
+        <span className="font-medium">合計 {totalCount}件</span>
+      </div>
+      
+      {/* 小分類: 4種別 */}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 pl-4 border-l-2 border-muted ml-2 text-xs">
+        {allTypes.map((type) => {
+          const count = typeCounts.get(type) || 0;
+          
+          return (
+            <div key={type} className="flex items-center gap-2">
+              <SubstituteTypeBadge type={type} showDescription className="text-xs flex-shrink-0" />
+              <span className="text-right flex-shrink-0 tabular-nums">{count}件</span>
+            </div>
+          );
+        })}
+        
+        {/* ヘルプアイコン + モーダル */}
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="icon" className="h-5 w-5 rounded-full">
+              <HelpCircle className="h-4 w-4 text-muted-foreground" />
+              <span className="sr-only">代替品種別の説明</span>
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>代替品種別の説明</DialogTitle>
+            </DialogHeader>
+            <div className="space-y-3 text-sm">
+              {allTypes.map((type) => {
+                const typeConfig =
+                  type === "unknown"
+                    ? { label: "その他", description: "種別情報なしの候補" }
+                    : substituteTypeLabels[type as SubstituteType];
+                
+                return (
+                  <div key={type} className="flex items-start gap-3">
+                    <SubstituteTypeBadge type={type} className="text-xs flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">{typeConfig.description}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );
@@ -215,24 +295,68 @@ function SimilarSearchContent() {
                 {/* ソースサマリ */}
                 <div className="bg-muted/50 rounded-lg p-4">
                   <p className="text-sm font-medium mb-2">検索ソース別件数</p>
-                  <SourceSummary summary={searchResult.sourceSummary} />
+                  <SourceSummary summary={searchResult.sourceSummary} candidates={searchResult.candidates} />
                   <p className="text-xs text-muted-foreground mt-2">
                     検索実行: {new Date(searchResult.searchedAt).toLocaleString("ja-JP")}
                   </p>
                 </div>
 
-                {/* 候補リスト */}
+                {/* 候補リスト（種別ごとにグルーピング） */}
                 {searchResult.candidates.length > 0 ? (
-                  <div className="space-y-2">
-                    <h3 className="text-sm font-medium text-muted-foreground">
-                      候補リスト（{searchResult.candidates.length}件）
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                      {searchResult.candidates.map((candidate, index) => (
-                        <CandidateCard key={candidate.digiKeyProductNumber || index} candidate={candidate} />
-                      ))}
-                    </div>
-                  </div>
+                  (() => {
+                    // 種別ごとにグルーピング
+                    const grouped = new Map<SubstituteType | "unknown", CandidateInfo[]>();
+                    
+                    for (const candidate of searchResult.candidates) {
+                      const type = candidate.substituteType as SubstituteType | undefined;
+                      const key = type && type in substituteTypeLabels ? type : "unknown";
+                      if (!grouped.has(key)) {
+                        grouped.set(key, []);
+                      }
+                      grouped.get(key)!.push(candidate);
+                    }
+
+                    // 優先順位でソート
+                    const sortedTypes = Array.from(grouped.keys()).sort((a, b) => {
+                      if (a === "unknown") return 999;
+                      if (b === "unknown") return -999;
+                      const priorityA = substituteTypeLabels[a as SubstituteType]?.priority ?? 999;
+                      const priorityB = substituteTypeLabels[b as SubstituteType]?.priority ?? 999;
+                      return priorityA - priorityB;
+                    });
+
+                    return (
+                      <div className="space-y-6">
+                        {sortedTypes.map((type) => {
+                          const candidates = grouped.get(type)!;
+                          const typeConfig: {
+                            label: string;
+                            description: string;
+                            variant: "default" | "secondary" | "outline" | "destructive";
+                            priority: number;
+                          } = type === "unknown" 
+                            ? { label: "その他", description: "種別情報なしの候補", variant: "outline", priority: 999 }
+                            : substituteTypeLabels[type as SubstituteType];
+
+                          return (
+                            <div key={type} className="space-y-3">
+                              <div className="flex items-center gap-2 pb-2 border-b">
+                                <SubstituteTypeBadge type={type} className="text-xs" />
+                              </div>
+                              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                                {candidates.map((candidate, index) => (
+                                  <CandidateCard
+                                    key={candidate.digiKeyProductNumber || `${type}-${index}`}
+                                    candidate={candidate}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })()
                 ) : (
                   <div className="text-center py-8 text-muted-foreground">
                     <p>候補が見つかりませんでした</p>

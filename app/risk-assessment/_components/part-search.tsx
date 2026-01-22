@@ -17,7 +17,7 @@ interface PartSearchProps {
 }
 
 export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
-  const [keyword, setKeyword] = useState("LM358");
+  const [keyword, setKeyword] = useState("296-1395-5-ND");
 
   const {
     data: searchResults,
@@ -78,22 +78,22 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
   return (
     <div className="space-y-4">
       {/* 検索フォーム */}
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <div className="flex-1">
+      <form onSubmit={handleSubmit} className="flex gap-2 max-w-2xl">
+        <div className="flex-1 min-w-0">
           <Label htmlFor="keyword" className="sr-only">
             キーワード検索
           </Label>
           <Input
             id="keyword"
             type="text"
-            placeholder="例: LM358"
+            placeholder="例: 296-1395-5-ND, LM358P, オペアンプ"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
             disabled={isSearching}
             className="h-9"
           />
         </div>
-        <Button type="submit" disabled={isSearching || !keyword.trim()}>
+        <Button type="submit" disabled={isSearching || !keyword.trim()} className="flex-shrink-0">
           {isSearching ? "検索中..." : "検索"}
         </Button>
       </form>
