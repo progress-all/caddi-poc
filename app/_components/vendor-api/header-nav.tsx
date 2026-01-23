@@ -38,8 +38,22 @@ export function HeaderNav() {
   return (
     <header className="border-b bg-card flex-shrink-0">
       <div className="flex items-center gap-4 px-4 h-12">
-        {/* 左側: ベンダードロップダウンメニュー */}
+        {/* 左側: メニュー（リスク評価 → Mouser → DigiKey の順） */}
         <nav className="flex items-center gap-2">
+          {/* リスク評価へのリンク */}
+          <Button
+            variant={isRiskAssessment ? "secondary" : "ghost"}
+            asChild
+            className={cn(
+              "h-9 px-3",
+              isRiskAssessment &&
+                "bg-primary/10 text-foreground font-medium"
+            )}
+          >
+            <Link href={RISK_ASSESSMENT_PATH}>リスク評価</Link>
+          </Button>
+
+          {/* ベンダードロップダウンメニュー */}
           {vendors.map((vendor) => {
             const hasActiveEndpoint = vendor.endpoints.some(
               (endpoint) => pathname === endpoint.href
@@ -89,19 +103,6 @@ export function HeaderNav() {
               </DropdownMenu>
             );
           })}
-
-          {/* リスク評価へのリンク */}
-          <Button
-            variant={isRiskAssessment ? "secondary" : "ghost"}
-            asChild
-            className={cn(
-              "h-9 px-3",
-              isRiskAssessment &&
-                "bg-primary/10 text-foreground font-medium"
-            )}
-          >
-            <Link href={RISK_ASSESSMENT_PATH}>リスク評価</Link>
-          </Button>
         </nav>
 
         {/* API選択の右横: 現在のAPI表示（ページタイトル） */}
