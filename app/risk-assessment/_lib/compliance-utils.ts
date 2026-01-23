@@ -28,17 +28,55 @@ export function getComplianceFromProduct(
 }
 
 /**
- * 正規化された規制情報からリスクレベルを評価
+ * 正規化された規制情報とステータスからリスクレベルを評価
  */
-export function getRiskLevel(compliance: NormalizedCompliance): RiskLevel {
+export function getRiskLevel(
+  compliance: NormalizedCompliance,
+  productStatus?: string
+): RiskLevel {
+  // High リスク: RoHS/REACH が NonCompliant、または ステータスが Obsolete/Discontinued
   if (
     compliance.rohs === "NonCompliant" ||
     compliance.reach === "NonCompliant"
   ) {
     return "High";
   }
-  if (compliance.rohs === "Compliant" && compliance.reach === "Compliant") {
-    return "Low";
+  if (
+    productStatus &&
+    (productStatus.includes("Obsolete") ||
+      productStatus.includes("Discontinued"))
+  ) {
+    return "High";
   }
+
+  // Medium リスク: RoHS/REACH が Unknown、または ステータスが Last Time Buy/Not For New Designs
+  if (
+    compliance.rohs === "Unknown" ||
+    compliance.reach === "Unknown"
+  ) {
+    return "Medium";
+  }
+  if (
+    productStatus &&
+    (productStatus.includes("Last Time Buy") ||
+      productStatus.includes("Not For New Designs"))
+  ) {
+    return "Medium";
+  }
+
+  // Low リスク: RoHS/REACH が両方 Compliant、かつ ステータスが Active
+  if (
+    compliance.rohs === "Compliant" &&
+    compliance.reach === "Compliant"
+  ) {
+    if (!productStatus || productStatus === "Active") {
+      return "Low";
+    }
+    // Active以外のステータスの場合は、上記のHigh/Mediumチェックで既に処理されている
+    // ここに来る場合は、CompliantだがActive以外のステータスなのでMediumとする
+    return "Medium";
+  }
+
+  // デフォルトはMedium
   return "Medium";
 }

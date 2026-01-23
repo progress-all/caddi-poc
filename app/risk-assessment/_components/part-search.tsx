@@ -57,7 +57,10 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
     (product: DigiKeyProduct, e: React.MouseEvent) => {
       e.stopPropagation(); // カード選択を防ぐ
       const compliance = getComplianceFromProduct(product);
-      const riskLevel = getRiskLevel(compliance);
+      const riskLevel = getRiskLevel(
+        compliance,
+        product.ProductStatus?.Status
+      );
 
       const params = new URLSearchParams({
         mpn: product.ManufacturerProductNumber || "",
@@ -117,7 +120,10 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
                 selectedPart?.ManufacturerProductNumber ===
                 product.ManufacturerProductNumber;
               const compliance = getComplianceFromProduct(product);
-              const riskLevel = getRiskLevel(compliance);
+              const riskLevel = getRiskLevel(
+                compliance,
+                product.ProductStatus?.Status
+              );
 
               return (
                 <PartCard
