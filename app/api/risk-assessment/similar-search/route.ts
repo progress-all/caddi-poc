@@ -46,7 +46,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 検索に使用する製品番号（DigiKey PNがあれば優先）
+    // 検索に使用する製品番号（DigiKey PNがあれば優先的に使用）
+    // DigiKey Product Numberは一意の識別子のため、MPNの重複によるエラーを回避できる
     const productNumber = digiKeyProductNumber || mpn;
 
     const client = new DigiKeyApiClient(clientId, clientSecret);
@@ -56,7 +57,7 @@ export async function POST(request: NextRequest) {
       await Promise.allSettled([
         // 1. カスタムロジック（TODO: 将来実装）
         searchByCustomLogic(productNumber),
-        // 2. Substitutions API
+        // 2. Substitutions API（productNumberにはDKPNが優先的に使用される）
         client.getSubstitutions({ productNumber }),
       ]);
 

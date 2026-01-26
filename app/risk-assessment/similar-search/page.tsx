@@ -13,6 +13,7 @@ import { searchSimilarProducts } from "../_lib/api";
 function SimilarSearchContent() {
   const searchParams = useSearchParams();
   const mpn = searchParams.get("mpn");
+  const digiKeyProductNumber = searchParams.get("digiKeyProductNumber");
 
   // 自動検索: mpnが存在すれば検索を実行
   const {
@@ -20,8 +21,12 @@ function SimilarSearchContent() {
     error: searchError,
     isLoading,
   } = useSWR(
-    mpn ? ["similar-search", mpn] : null,
-    () => searchSimilarProducts({ mpn: mpn! }),
+    mpn ? ["similar-search", mpn, digiKeyProductNumber] : null,
+    () =>
+      searchSimilarProducts({
+        mpn: mpn!,
+        digiKeyProductNumber: digiKeyProductNumber || undefined,
+      }),
     {
       revalidateOnFocus: false,
       revalidateOnReconnect: false,

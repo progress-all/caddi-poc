@@ -62,8 +62,13 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
         product.ProductStatus?.Status
       );
 
+      // DigiKey Product Number を取得（最初のバリエーションから）
+      const digiKeyProductNumber =
+        product.ProductVariations?.[0]?.DigiKeyProductNumber;
+
       const params = new URLSearchParams({
         mpn: product.ManufacturerProductNumber || "",
+        digiKeyProductNumber: digiKeyProductNumber || "",
         manufacturer: product.Manufacturer?.Name || "",
         category: product.Category?.Name || "",
         rohs: compliance.rohs,
