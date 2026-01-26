@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/app/_lib/utils";
-import { vendors, type Vendor, RISK_ASSESSMENT_PATH } from "./vendors";
+import { vendors, type Vendor, RISK_ASSESSMENT_PATH, BOM_PATH } from "./vendors";
 
 function getCurrentApiInfo(pathname: string): {
   vendor: Vendor | null;
@@ -30,10 +30,15 @@ function isRiskAssessmentPage(pathname: string): boolean {
   return pathname.startsWith(RISK_ASSESSMENT_PATH);
 }
 
+function isBOMPage(pathname: string): boolean {
+  return pathname.startsWith(BOM_PATH);
+}
+
 export function HeaderNav() {
   const pathname = usePathname();
   const currentApi = getCurrentApiInfo(pathname);
   const isRiskAssessment = isRiskAssessmentPage(pathname);
+  const isBOM = isBOMPage(pathname);
 
   return (
     <header className="border-b bg-card flex-shrink-0">
@@ -47,10 +52,19 @@ export function HeaderNav() {
             className={cn(
               "h-9 px-3",
               isRiskAssessment &&
-                "bg-primary/10 text-foreground font-medium"
+              "bg-primary/10 text-foreground font-medium"
             )}
           >
             <Link href={RISK_ASSESSMENT_PATH}>リスク評価</Link>
+          </Button>
+
+          {/* BOM一覧へのリンク */}
+          <Button
+            variant={isBOM ? "secondary" : "ghost"}
+            asChild
+            className={cn("h-9 px-3", isBOM && "bg-primary/10 text-foreground font-medium")}
+          >
+            <Link href={BOM_PATH}>BOM一覧</Link>
           </Button>
 
           {/* ベンダードロップダウンメニュー */}
@@ -67,7 +81,7 @@ export function HeaderNav() {
                     className={cn(
                       "h-9 px-3",
                       hasActiveEndpoint &&
-                        "bg-primary/10 text-foreground font-medium"
+                      "bg-primary/10 text-foreground font-medium"
                     )}
                   >
                     {vendor.label}
@@ -116,6 +130,11 @@ export function HeaderNav() {
         {isRiskAssessment && (
           <h1 className="text-lg font-semibold text-foreground">
             規制リスク評価・代替品提案
+          </h1>
+        )}
+        {isBOM && (
+          <h1 className="text-lg font-semibold text-foreground">
+            BOM一覧
           </h1>
         )}
       </div>
