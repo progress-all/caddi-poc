@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import useSWR from "swr";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,8 @@ import type {
 import { cn } from "@/app/_lib/utils";
 import { DifficultyBadge } from "./difficulty-badge";
 import { ScoreDetailSection } from "./score-detail-section";
+import { getSubstitutions } from "@/app/_lib/vendor/digikey/api";
+import { getRiskLevel } from "../_lib/compliance-utils";
 
 interface PartCardProps {
   product: DigiKeyProduct;
@@ -128,14 +131,56 @@ export function PartCard({
     [onSimilarSearch, product]
   );
 
-  const riskConfig = riskLevelConfig[riskLevel];
-  const rohsConfig = complianceStatusConfig[compliance.rohs];
-  const reachConfig = complianceStatusConfig[compliance.reach];
-  const statusConfig = getProductStatusConfig(product.ProductStatus?.Status);
-
   // DigiKey Product Number を取得（最初のバリエーションから）
   const digiKeyProductNumber =
     product.ProductVariations?.[0]?.DigiKeyProductNumber;
+
+  // 代替候補の件数を取得（DigiKey PNがあれば優先、なければMPNを使用）
+  const productNumberForSubstitutions = digiKeyProductNumber || product.ManufacturerProductNumber;
+  const {
+    data: substitutionsData,
+    error: substitutionsError,
+    isLoading: isSubstitutionsLoading,
+  } = useSWR(
+    productNumberForSubstitutions
+      ? ["substitutions-count", productNumberForSubstitutions]
+      : null,
+    async () => {
+      if (!productNumberForSubstitutions) return null;
+      try {
+        const result = await getSubstitutions({
+          productNumber: productNumberForSubstitutions,
+        });
+        return result;
+      } catch (error) {
+        // エラーをthrowせず、エラー状態として扱う
+        console.error("Failed to get substitutions count:", error);
+        throw error;
+      }
+    },
+    {
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+      dedupingInterval: 60000, // 60秒間は同一キーで再取得しない
+    }
+  );
+
+  // 代替候補の件数を計算
+  const substitutionsCount =
+    substitutionsData?.ProductSubstitutes?.length ?? 0;
+
+  // リスクレベルを計算（代替候補件数を考慮）
+  // エラー時や未取得時はnullを渡して既存判定を据え置く
+  const computedRiskLevel = getRiskLevel(
+    compliance,
+    product.ProductStatus?.Status,
+    substitutionsError ? null : substitutionsCount
+  );
+
+  const riskConfig = riskLevelConfig[computedRiskLevel];
+  const rohsConfig = complianceStatusConfig[compliance.rohs];
+  const reachConfig = complianceStatusConfig[compliance.reach];
+  const statusConfig = getProductStatusConfig(product.ProductStatus?.Status);
 
   return (
     <Card
@@ -301,6 +346,21 @@ export function PartCard({
               </div>
             </div>
           )}
+          {/* 代替・類似候補の有無 */}
+          <div className="flex items-center justify-between text-xs">
+            <span className="text-muted-foreground">代替・類似候補:</span>
+            <div className="flex items-center gap-1">
+              {isSubstitutionsLoading ? (
+                <span className="text-muted-foreground">判定中…</span>
+              ) : substitutionsError ? (
+                <span className="text-destructive">取得失敗</span>
+              ) : substitutionsCount > 0 ? (
+                <span className="text-foreground">あり（{substitutionsCount}件）</span>
+              ) : (
+                <span className="text-muted-foreground">なし</span>
+              )}
+            </div>
+          </div>
           {/* 代替難易度バッジ（類似品の場合のみ） */}
           {difficultyLevel && (
             <div className="flex items-center justify-between text-xs pt-1">

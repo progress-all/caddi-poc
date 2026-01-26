@@ -29,54 +29,80 @@ export function getComplianceFromProduct(
 
 /**
  * 正規化された規制情報とステータスからリスクレベルを評価
+ * @param compliance 規制情報（RoHS/REACH）
+ * @param productStatus 製品ステータス（Active/Obsolete等）
+ * @param substitutionCount 代替・類似候補の件数（オプション）
+ *   - 0: リスクを1段階引き上げる（Low→Medium, Medium→High, High→High）
+ *   - 1以上: 既存判定を変更しない
+ *   - null/undefined: 既存判定を据え置く（取得失敗/未取得時）
+ * @returns 評価されたリスクレベル
  */
 export function getRiskLevel(
   compliance: NormalizedCompliance,
-  productStatus?: string
+  productStatus?: string,
+  substitutionCount?: number | null
 ): RiskLevel {
+  // 既存のリスク判定を実行
+  let baseRiskLevel: RiskLevel;
+
   // High リスク: RoHS/REACH が NonCompliant、または ステータスが Obsolete/Discontinued
   if (
     compliance.rohs === "NonCompliant" ||
     compliance.reach === "NonCompliant"
   ) {
-    return "High";
-  }
-  if (
+    baseRiskLevel = "High";
+  } else if (
     productStatus &&
     (productStatus.includes("Obsolete") ||
       productStatus.includes("Discontinued"))
   ) {
-    return "High";
+    baseRiskLevel = "High";
   }
-
   // Medium リスク: RoHS/REACH が Unknown、または ステータスが Last Time Buy/Not For New Designs
-  if (
+  else if (
     compliance.rohs === "Unknown" ||
     compliance.reach === "Unknown"
   ) {
-    return "Medium";
-  }
-  if (
+    baseRiskLevel = "Medium";
+  } else if (
     productStatus &&
     (productStatus.includes("Last Time Buy") ||
       productStatus.includes("Not For New Designs"))
   ) {
-    return "Medium";
+    baseRiskLevel = "Medium";
   }
-
   // Low リスク: RoHS/REACH が両方 Compliant、かつ ステータスが Active
-  if (
+  else if (
     compliance.rohs === "Compliant" &&
     compliance.reach === "Compliant"
   ) {
     if (!productStatus || productStatus === "Active") {
-      return "Low";
+      baseRiskLevel = "Low";
+    } else {
+      // Active以外のステータスの場合は、上記のHigh/Mediumチェックで既に処理されている
+      // ここに来る場合は、CompliantだがActive以外のステータスなのでMediumとする
+      baseRiskLevel = "Medium";
     }
-    // Active以外のステータスの場合は、上記のHigh/Mediumチェックで既に処理されている
-    // ここに来る場合は、CompliantだがActive以外のステータスなのでMediumとする
-    return "Medium";
+  } else {
+    // デフォルトはMedium
+    baseRiskLevel = "Medium";
+  }
+  
+  if (substitutionCount === null || substitutionCount === undefined) {
+    return baseRiskLevel;
   }
 
-  // デフォルトはMedium
-  return "Medium";
+  // 候補件数が0の場合、リスクを1段階引き上げる
+  if (substitutionCount === 0) {
+    if (baseRiskLevel === "Low") {
+      return "Medium";
+    } else if (baseRiskLevel === "Medium") {
+      return "High";
+    }
+    // Highの場合は据え置き
+    return "High";
+  }
+
+  // 候補件数が1以上の場合は既存判定を変更しない
+  return baseRiskLevel;
 }
