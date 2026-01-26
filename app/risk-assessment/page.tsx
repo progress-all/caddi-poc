@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PartSearch } from "./_components/part-search";
 
@@ -20,7 +21,15 @@ export default function RiskAssessmentPage() {
             <CardTitle className="text-base">部品検索</CardTitle>
           </CardHeader>
           <CardContent className="flex-1 min-h-0 overflow-hidden">
-            <PartSearch />
+            <Suspense
+              fallback={
+                <div className="text-sm text-muted-foreground py-4">
+                  読み込み中...
+                </div>
+              }
+            >
+              <PartSearch />
+            </Suspense>
           </CardContent>
         </Card>
       </div>
