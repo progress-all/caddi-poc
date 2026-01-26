@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,7 +18,16 @@ interface PartSearchProps {
 }
 
 export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
-  const [keyword, setKeyword] = useState("296-1395-5-ND");
+  const searchParams = useSearchParams();
+  const keywordParam = searchParams.get("keyword");
+  const [keyword, setKeyword] = useState(keywordParam || "296-1395-5-ND");
+
+  // クエリパラメータが変更されたときにkeywordを更新
+  useEffect(() => {
+    if (keywordParam) {
+      setKeyword(keywordParam);
+    }
+  }, [keywordParam]);
 
   const {
     data: searchResults,

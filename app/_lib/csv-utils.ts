@@ -97,3 +97,71 @@ export function generateCSVFilename(prefix: string = "data"): string {
 
   return `${prefix}-${year}-${month}-${day}.csv`;
 }
+
+/**
+ * CSV文字列をパースしてオブジェクトの配列に変換
+ * @param csvText CSV文字列
+ * @returns オブジェクトの配列（ヘッダー行をキーとして使用）
+ */
+export function parseCSV<T extends Record<string, string>>(
+  csvText: string
+): T[] {
+  const lines = csvText.split(/\r?\n/).filter((line) => line.trim());
+  if (lines.length === 0) return [];
+
+  // ヘッダー行を取得
+  const headers = parseCSVLine(lines[0]);
+
+  // データ行をパース
+  const rows: T[] = [];
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length === 0) continue;
+
+    const row = {} as T;
+    headers.forEach((header, index) => {
+      row[header as keyof T] = (values[index] || "") as T[keyof T];
+    });
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+/**
+ * CSV行をパース（ダブルクォートで囲まれた値を考慮）
+ * @param line CSV行
+ * @returns 値の配列
+ */
+function parseCSVLine(line: string): string[] {
+  const values: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    const nextChar = line[i + 1];
+
+    if (char === '"') {
+      if (inQuotes && nextChar === '"') {
+        // エスケープされたダブルクォート
+        current += '"';
+        i++; // 次の文字をスキップ
+      } else {
+        // クォートの開始/終了
+        inQuotes = !inQuotes;
+      }
+    } else if (char === "," && !inQuotes) {
+      // カンマ（クォート外）
+      values.push(current.trim());
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  // 最後の値を追加
+  values.push(current.trim());
+
+  return values;
+}
