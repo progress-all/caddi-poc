@@ -12,6 +12,45 @@ import { getRiskLevel, getComplianceFromProduct } from "@/app/risk-assessment/_l
 import { searchByKeyword, getSubstitutions } from "@/app/_lib/vendor/digikey/api";
 import { cn } from "@/app/_lib/utils";
 
+// ライフサイクルステータスを正規化
+function normalizeLifecycleStatus(
+  productStatus?: string
+): BOMRowWithRisk["lifecycleStatus"] {
+  if (!productStatus) {
+    return "Unknown";
+  }
+
+  const statusLower = productStatus.toLowerCase();
+
+  if (statusLower === "active") {
+    return "Active";
+  }
+
+  if (
+    statusLower.includes("not for new designs") ||
+    statusLower.includes("nrnd")
+  ) {
+    return "NRND";
+  }
+
+  if (
+    statusLower.includes("obsolete") ||
+    statusLower.includes("discontinued")
+  ) {
+    return "Obsolete";
+  }
+
+  if (
+    statusLower.includes("last time buy") ||
+    statusLower.includes("eol") ||
+    statusLower.includes("end of life")
+  ) {
+    return "EOL";
+  }
+
+  return "Unknown";
+}
+
 // リスクレベルの表示設定
 const riskLevelConfig: Record<
   BOMRowWithRisk["リスク"],
@@ -36,6 +75,60 @@ const riskLevelConfig: Record<
   取得失敗: {
     label: "取得失敗",
     className: "bg-gray-600 text-white border-gray-700",
+  },
+};
+
+// ライフサイクルステータスの表示設定
+const lifecycleStatusConfig: Record<
+  BOMRowWithRisk["lifecycleStatus"],
+  { label: string; className: string }
+> = {
+  Active: {
+    label: "Active",
+    className: "bg-green-500 text-white border-green-600",
+  },
+  NRND: {
+    label: "NRND",
+    className: "bg-yellow-500 text-white border-yellow-600",
+  },
+  Obsolete: {
+    label: "Obsolete",
+    className: "bg-red-500 text-white border-red-600",
+  },
+  EOL: {
+    label: "EOL",
+    className: "bg-red-500 text-white border-red-600",
+  },
+  Unknown: {
+    label: "Unknown",
+    className: "bg-gray-500 text-white border-gray-600",
+  },
+  "N/A": {
+    label: "N/A",
+    className: "bg-gray-500 text-white border-gray-600",
+  },
+};
+
+// 規制ステータスの表示設定
+const complianceStatusConfig: Record<
+  BOMRowWithRisk["rohsStatus"] | BOMRowWithRisk["reachStatus"],
+  { label: string; className: string }
+> = {
+  Compliant: {
+    label: "Compliant",
+    className: "bg-green-500 text-white border-green-600",
+  },
+  NonCompliant: {
+    label: "Non-Compliant",
+    className: "bg-red-500 text-white border-red-600",
+  },
+  Unknown: {
+    label: "Unknown",
+    className: "bg-gray-500 text-white border-gray-600",
+  },
+  "N/A": {
+    label: "N/A",
+    className: "bg-gray-500 text-white border-gray-600",
   },
 };
 
@@ -66,6 +159,9 @@ export default function BOMPage() {
           ...row,
           リスク: "取得中" as const,
           代替候補有無: "判定中" as const,
+          rohsStatus: "N/A" as const,
+          reachStatus: "N/A" as const,
+          lifecycleStatus: "N/A" as const,
         }));
 
         setBomData(rowsWithRisk);
@@ -83,6 +179,11 @@ export default function BOMPage() {
             if (searchResult.Products && searchResult.Products.length > 0) {
               const product = searchResult.Products[0];
               const compliance = getComplianceFromProduct(product);
+
+              // ライフサイクルステータスを正規化
+              const lifecycleStatus = normalizeLifecycleStatus(
+                product.ProductStatus?.Status
+              );
 
               // 代替候補の件数を取得
               const digiKeyProductNumber =
@@ -107,7 +208,7 @@ export default function BOMPage() {
                 }
               }
 
-              // リスクを算出
+              // リスクを算出（総合評価）
               const riskLevel = getRiskLevel(
                 compliance,
                 product.ProductStatus?.Status,
@@ -127,6 +228,9 @@ export default function BOMPage() {
                       ? "あり"
                       : "なし",
                   代替候補件数: substitutionCount ?? undefined,
+                  rohsStatus: compliance.rohs,
+                  reachStatus: compliance.reach,
+                  lifecycleStatus: lifecycleStatus,
                 };
                 return updated;
               });
@@ -138,6 +242,9 @@ export default function BOMPage() {
                   ...updated[i],
                   リスク: "取得失敗" as const,
                   代替候補有無: "取得失敗" as const,
+                  rohsStatus: "N/A" as const,
+                  reachStatus: "N/A" as const,
+                  lifecycleStatus: "N/A" as const,
                 };
                 return updated;
               });
@@ -150,6 +257,9 @@ export default function BOMPage() {
                 ...updated[i],
                 リスク: "取得失敗" as const,
                 代替候補有無: "取得失敗" as const,
+                rohsStatus: "N/A" as const,
+                reachStatus: "N/A" as const,
+                lifecycleStatus: "N/A" as const,
               };
               return updated;
             });
@@ -223,6 +333,45 @@ export default function BOMPage() {
       cell: ({ row }) => (
         <div className="text-sm">{row.original.サブシステム}</div>
       ),
+    },
+    {
+      accessorKey: "rohsStatus",
+      header: "RoHS",
+      cell: ({ row }) => {
+        const status = row.original.rohsStatus;
+        const config = complianceStatusConfig[status];
+        return (
+          <Badge className={cn("text-xs px-2 py-0.5", config.className)}>
+            {config.label}
+          </Badge>
+        );
+      },
+    },
+    {
+      accessorKey: "reachStatus",
+      header: "REACH",
+      cell: ({ row }) => {
+        const status = row.original.reachStatus;
+        const config = complianceStatusConfig[status];
+        return (
+          <Badge className={cn("text-xs px-2 py-0.5", config.className)}>
+            {config.label}
+          </Badge>
+        );
+      },
+    },
+    {
+      accessorKey: "lifecycleStatus",
+      header: "ライフサイクル",
+      cell: ({ row }) => {
+        const status = row.original.lifecycleStatus;
+        const config = lifecycleStatusConfig[status];
+        return (
+          <Badge className={cn("text-xs px-2 py-0.5", config.className)}>
+            {config.label}
+          </Badge>
+        );
+      },
     },
     {
       accessorKey: "リスク",

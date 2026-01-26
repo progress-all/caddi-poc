@@ -1,11 +1,11 @@
 サブシステム,カテゴリ,部品型番,メーカー,製品概要,製品ページURL
 Pin Electronics,PE ASSP,ADATE334,Analog Devices,Dual Channel Driver/Comparator/Load,https://www.analog.com/jp/products/adate334.html
-Pin Electronics,Sensor,NCP15XH103F03,Murata,NTC Thermistor,https://pim.murata.com/ja-jp/pim/details/?partNum=NCP15XH103F03RC
-Pin Electronics,Protection,V5.5MLA0603,Littelfuse,Multilayer Varistor,https://www.littelfuse.com/ja-jp/products/overvoltage-protection/varistors/multilayer-varistors/mla/v5-5mla0603
-Digital Control,Memory,MT40A512M16LY-075:E,Micron,DDR4 SDRAM,https://jp.micron.com/products/memory/dram-components/ddr4-sdram/part-catalog/part-detail/mt40a512m16ly-075-e
+Pin Electronics,Sensor,NCP15XH103F03,Murata,NTC Thermistor (NRND),https://pim.murata.com/ja-jp/pim/details/?partNum=NCP15XH103F03RC
+Pin Electronics,Protection,V5.5MLA0603,Littelfuse,Multilayer Varistor (生産中止品),https://www.littelfuse.com/ja-jp/products/overvoltage-protection/varistors/multilayer-varistors/mla/v5-5mla0603
+Digital Control,Memory,MT40A512M16LY-075:E,Micron,DDR4 SDRAM (生産中止品),https://jp.micron.com/products/memory/dram-components/ddr4-sdram/part-catalog/part-detail/mt40a512m16ly-075-e
 Digital Control,Clock,LMK04828,Texas Instruments,Clock Jitter Cleaner,https://www.ti.com/product/ja-jp/LMK04828?utm_source=google&utm_medium=cpc&utm_campaign=epd-dlp-null-44700045336317809_prodfolderdynamic-cpc-pf-google-jp_jp_int&utm_content=prodfolddynamic&ds_k=DYNAMIC+SEARCH+ADS&DCM=yes&gclsrc=aw.ds&gad_source=1&gad_campaignid=11664825988&gbraid=0AAAAAC068F0sJm7BlDuEQi02jWfe5oTjz&gclid=Cj0KCQiAyP3KBhD9ARIsAAJLnnb6y2CWoG09Z1c1AMNJqVivbKwiVzRPlIzqqKM85Ntk0YNo_2vxBtkaAgjeEALw_wcB
-Digital Control,Capacitor,10THB220M,Panasonic,Tantalum Capacitors,https://industrial.panasonic.com/jp/products/pt/poscap/models/10THB220M
-General,Capacitor,GRM188R60J105KA01,Murata,Multilayer Ceramic Capacitor,https://pim.murata.com/ja-jp/pim/details/?partNum=GRM188R60J105KA01%23
+Digital Control,Capacitor,10THB220M,Panasonic,Tantalum Capacitors (NRND),https://industrial.panasonic.com/jp/products/pt/poscap/models/10THB220M
+General,Capacitor,GRM188R60J105KA01,Murata,Multilayer Ceramic Capacitor (NRND),https://pim.murata.com/ja-jp/pim/details/?partNum=GRM188R60J105KA01%23
 General,Diode,BAT54S,Nexperia,Schottky Barrier Diode Array,https://www.nexperia.com/products/diodes/schottky-diodes-and-rectifiers/BAT54S.html
 General,Reference,ADR4525,Analog Devices,Ultralow Noise Voltage Reference,https://www.analog.com/en/products/adr4525.html
 General,Switch,ADG706,Analog Devices,CMOS Analog Multiplexer,https://www.analog.com/en/products/adg706.html

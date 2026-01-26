@@ -189,8 +189,8 @@ export function PartCard({
         isSelected
           ? "border-primary bg-primary/5 cursor-pointer"
           : onSelect
-          ? "cursor-pointer hover:bg-muted/50"
-          : ""
+            ? "cursor-pointer hover:bg-muted/50"
+            : ""
       )}
       onClick={onSelect ? handleClick : undefined}
       onMouseEnter={() => setIsHovered(true)}
@@ -222,8 +222,8 @@ export function PartCard({
                       similarityScore >= 80
                         ? "border-green-500 text-green-600"
                         : similarityScore >= 60
-                        ? "border-yellow-500 text-yellow-600"
-                        : "border-red-500 text-red-600"
+                          ? "border-yellow-500 text-yellow-600"
+                          : "border-red-500 text-red-600"
                     )}
                   >
                     スコア: {similarityScore}
@@ -282,26 +282,33 @@ export function PartCard({
                         High
                       </Badge>
                       <span>
-                        RoHS/REACHがNonCompliant、またはステータスがObsolete/Discontinued
+                        RoHS/REACHがNon-Compliant、またはObsolete/Discontinued。
+                        代替なしの場合はリスクを引き上げ。
                       </span>
                     </div>
+
                     <div className="flex items-start gap-2">
                       <Badge className="bg-yellow-500 text-white flex-shrink-0">
                         Medium
                       </Badge>
                       <span>
-                        RoHS/REACHがUnknown、またはステータスがLast Time Buy/Not For New
-                        Designs
+                        RoHS/REACHがUnknown、またはNRND/Last Time Buyなど。
+                        代替なしの場合はLowから引き上げ。
                       </span>
                     </div>
+
                     <div className="flex items-start gap-2">
                       <Badge className="bg-green-500 text-white flex-shrink-0">
                         Low
                       </Badge>
                       <span>
-                        RoHS/REACHが両方Compliant、かつステータスがActive
+                        RoHS/REACHがCompliant、かつActive。
                       </span>
                     </div>
+                  </div>
+
+                  <div className="pt-2 border-t text-xs text-muted-foreground">
+                    <p>※ 代替数が不明な場合は判定を据え置き</p>
                   </div>
                 </div>
               </PopoverContent>

@@ -15,4 +15,9 @@ export interface BOMRowWithRisk extends BOMRow {
   リスク: "High" | "Medium" | "Low" | "取得中" | "取得失敗";
   代替候補有無: "あり" | "なし" | "判定中" | "取得失敗";
   代替候補件数?: number;
+  // 規制情報
+  rohsStatus: "Compliant" | "NonCompliant" | "Unknown" | "N/A";
+  reachStatus: "Compliant" | "NonCompliant" | "Unknown" | "N/A";
+  // ライフサイクルステータス
+  lifecycleStatus: "Active" | "NRND" | "Obsolete" | "EOL" | "Unknown" | "N/A";
 }
