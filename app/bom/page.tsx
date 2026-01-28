@@ -6,50 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DataTable } from "@/components/ui/data-table";
 import type { ColumnDef } from "@tanstack/react-table";
-import { parseCSV } from "@/app/_lib/csv-utils";
-import type { BOMRowWithRisk, BOMRow } from "./_lib/types";
-import { getRiskLevel, getComplianceFromProduct } from "@/app/risk-assessment/_lib/compliance-utils";
-import { searchByKeyword, getSubstitutions } from "@/app/_lib/vendor/digikey/api";
+import type { BOMRowWithRisk } from "./_lib/types";
 import { cn } from "@/app/_lib/utils";
-
-// ライフサイクルステータスを正規化
-function normalizeLifecycleStatus(
-  productStatus?: string
-): BOMRowWithRisk["lifecycleStatus"] {
-  if (!productStatus) {
-    return "Unknown";
-  }
-
-  const statusLower = productStatus.toLowerCase();
-
-  if (statusLower === "active") {
-    return "Active";
-  }
-
-  if (
-    statusLower.includes("not for new designs") ||
-    statusLower.includes("nrnd")
-  ) {
-    return "NRND";
-  }
-
-  if (
-    statusLower.includes("obsolete") ||
-    statusLower.includes("discontinued")
-  ) {
-    return "Obsolete";
-  }
-
-  if (
-    statusLower.includes("last time buy") ||
-    statusLower.includes("eol") ||
-    statusLower.includes("end of life")
-  ) {
-    return "EOL";
-  }
-
-  return "Unknown";
-}
 
 // リスクレベルの表示設定
 const riskLevelConfig: Record<
@@ -137,137 +95,24 @@ export default function BOMPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // CSVを読み込んでリスクを算出
+  // BOMデータを内部APIから取得
   useEffect(() => {
     const loadBOMData = async () => {
       try {
         setIsLoading(true);
         setError(null);
 
-        // CSVファイルを取得
-        const response = await fetch("/data/bom.csv");
+        // 内部APIからBOMデータを取得（デフォルトはbom）
+        const response = await fetch("/api/bom?id=bom");
         if (!response.ok) {
-          throw new Error(`CSVファイルの読み込みに失敗しました: ${response.status}`);
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(
+            errorData.error || `BOMデータの取得に失敗しました: ${response.status}`
+          );
         }
 
-        const csvText = await response.text();
-        const parsedRows = parseCSV<Record<string, string>>(csvText);
-        const rows = parsedRows as unknown as BOMRow[];
-
-        // 初期状態でリスクを「取得中」に設定
-        const rowsWithRisk: BOMRowWithRisk[] = rows.map((row) => ({
-          ...row,
-          リスク: "取得中" as const,
-          代替候補有無: "判定中" as const,
-          rohsStatus: "N/A" as const,
-          reachStatus: "N/A" as const,
-          lifecycleStatus: "N/A" as const,
-        }));
-
-        setBomData(rowsWithRisk);
-
-        // 各部品のリスクを非同期で取得
-        for (let i = 0; i < rows.length; i++) {
-          const row = rows[i];
-          try {
-            // 部品型番でDigiKey APIを検索
-            const searchResult = await searchByKeyword({
-              keywords: row.部品型番,
-              limit: 1,
-            });
-
-            if (searchResult.Products && searchResult.Products.length > 0) {
-              const product = searchResult.Products[0];
-              const compliance = getComplianceFromProduct(product);
-
-              // ライフサイクルステータスを正規化
-              const lifecycleStatus = normalizeLifecycleStatus(
-                product.ProductStatus?.Status
-              );
-
-              // 代替候補の件数を取得
-              const digiKeyProductNumber =
-                product.ProductVariations?.[0]?.DigiKeyProductNumber;
-              const productNumberForSubstitutions =
-                digiKeyProductNumber || product.ManufacturerProductNumber || "";
-
-              let substitutionCount: number | null = null;
-              if (productNumberForSubstitutions) {
-                try {
-                  const substitutionsResult = await getSubstitutions({
-                    productNumber: productNumberForSubstitutions,
-                  });
-                  substitutionCount =
-                    substitutionsResult.ProductSubstitutes?.length ?? 0;
-                } catch (subError) {
-                  console.error(
-                    `代替候補取得エラー (${row.部品型番}):`,
-                    subError
-                  );
-                  // エラー時はnullのまま（既存判定を据え置く）
-                }
-              }
-
-              // リスクを算出（総合評価）
-              const riskLevel = getRiskLevel(
-                compliance,
-                product.ProductStatus?.Status,
-                substitutionCount
-              );
-
-              // 状態を更新
-              setBomData((prev) => {
-                const updated = [...prev];
-                updated[i] = {
-                  ...updated[i],
-                  リスク: riskLevel,
-                  代替候補有無:
-                    substitutionCount === null
-                      ? "取得失敗"
-                      : substitutionCount > 0
-                      ? "あり"
-                      : "なし",
-                  代替候補件数: substitutionCount ?? undefined,
-                  rohsStatus: compliance.rohs,
-                  reachStatus: compliance.reach,
-                  lifecycleStatus: lifecycleStatus,
-                };
-                return updated;
-              });
-            } else {
-              // 検索結果が見つからない場合
-              setBomData((prev) => {
-                const updated = [...prev];
-                updated[i] = {
-                  ...updated[i],
-                  リスク: "取得失敗" as const,
-                  代替候補有無: "取得失敗" as const,
-                  rohsStatus: "N/A" as const,
-                  reachStatus: "N/A" as const,
-                  lifecycleStatus: "N/A" as const,
-                };
-                return updated;
-              });
-            }
-          } catch (err) {
-            console.error(`リスク取得エラー (${row.部品型番}):`, err);
-            setBomData((prev) => {
-              const updated = [...prev];
-              updated[i] = {
-                ...updated[i],
-                リスク: "取得失敗" as const,
-                代替候補有無: "取得失敗" as const,
-                rohsStatus: "N/A" as const,
-                reachStatus: "N/A" as const,
-                lifecycleStatus: "N/A" as const,
-              };
-              return updated;
-            });
-          }
-
-          // APIレートリミット対策: 200ms待機
-          await new Promise((resolve) => setTimeout(resolve, 200));
-        }
+        const data: BOMRowWithRisk[] = await response.json();
+        setBomData(data);
       } catch (err) {
         console.error("BOMデータ読み込みエラー:", err);
         setError(
@@ -420,7 +265,11 @@ export default function BOMPage() {
           </CardTitle>
         </CardHeader>
         <CardContent className="flex-1 min-h-0 overflow-hidden">
-          {error ? (
+          {isLoading ? (
+            <div className="flex items-center justify-center h-full min-h-[500px]">
+              <p className="text-sm text-muted-foreground">読み込み中...</p>
+            </div>
+          ) : error ? (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700">
               <p className="font-medium">エラー</p>
               <p>{error}</p>
