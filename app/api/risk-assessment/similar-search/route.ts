@@ -11,6 +11,7 @@ import type {
   DigiKeyProductSubstitute,
   DigiKeyProduct,
 } from "@/app/_lib/vendor/digikey/types";
+import { withCache, buildCacheKey } from "@/app/_lib/cache";
 
 /**
  * 類似品検索API
@@ -50,91 +51,110 @@ export async function POST(request: NextRequest) {
     // DigiKey Product Numberは一意の識別子のため、MPNの重複によるエラーを回避できる
     const productNumber = digiKeyProductNumber || mpn;
 
-    const client = new DigiKeyApiClient(clientId, clientSecret);
+    // キャッシュキーの生成
+    const cacheKey = buildCacheKey({
+      mpn,
+      dkpn: digiKeyProductNumber,
+    });
 
-    // ===== 並列で2つのソースから候補を取得 =====
-    const [customResult, substitutionsResult] =
-      await Promise.allSettled([
-        // 1. カスタムロジック（TODO: 将来実装）
-        searchByCustomLogic(productNumber),
-        // 2. Substitutions API（productNumberにはDKPNが優先的に使用される）
-        client.getSubstitutions({ productNumber }),
-      ]);
+    // キャッシュを使用して類似品検索を実行
+    const { data: response, fromCache } = await withCache(
+      {
+        namespace: "similar-search",
+        key: cacheKey,
+      },
+      async () => {
+        const client = new DigiKeyApiClient(clientId, clientSecret);
 
-    // ===== 結果を処理 =====
-    const candidateMap = new Map<string, CandidateInfo>();
-    const sourceSummary: SimilarSearchResponse["sourceSummary"] = {
-      custom: { count: 0 },
-      substitutions: { count: 0 },
-    };
+        // ===== 並列で2つのソースから候補を取得 =====
+        const [customResult, substitutionsResult] =
+          await Promise.allSettled([
+            // 1. カスタムロジック（TODO: 将来実装）
+            searchByCustomLogic(productNumber),
+            // 2. Substitutions API（productNumberにはDKPNが優先的に使用される）
+            client.getSubstitutions({ productNumber }),
+          ]);
 
-    // カスタムロジック結果の処理
-    if (customResult.status === "fulfilled") {
-      const customCandidates = customResult.value;
-      sourceSummary.custom.count = customCandidates.length;
-      for (const candidate of customCandidates) {
-        mergeCandidateToMap(candidateMap, candidate, "custom");
-      }
-    } else {
-      sourceSummary.custom.error = customResult.reason?.message || "Unknown error";
-    }
-
-    // Substitutions結果の処理
-    if (substitutionsResult.status === "fulfilled") {
-      const substitutes = substitutionsResult.value.ProductSubstitutes || [];
-      sourceSummary.substitutions.count = substitutes.length;
-      for (const sub of substitutes) {
-        const candidate = convertSubstituteToCandidate(sub);
-        mergeCandidateToMap(candidateMap, candidate, "substitutions");
-      }
-    } else {
-      sourceSummary.substitutions.error =
-        substitutionsResult.reason?.message || "Unknown error";
-    }
-
-    // Mapから配列に変換
-    const candidates = Array.from(candidateMap.values());
-
-    // ===== 対象部品の詳細情報を取得 =====
-    let targetProduct: CandidateDetailedInfo | undefined;
-    try {
-      const targetProductDetails = await client.getProductDetails(productNumber);
-      if (targetProductDetails.Product) {
-        // 基本情報を作成
-        const baseCandidate: CandidateInfo = {
-          digiKeyProductNumber: targetProductDetails.Product.ProductVariations?.[0]?.DigiKeyProductNumber || "",
-          manufacturerProductNumber: targetProductDetails.Product.ManufacturerProductNumber || mpn,
-          manufacturerName: targetProductDetails.Product.Manufacturer?.Name || "",
-          description: targetProductDetails.Product.Description?.ProductDescription || "",
-          quantityAvailable: targetProductDetails.Product.QuantityAvailable || 0,
-          productUrl: targetProductDetails.Product.ProductUrl,
-          photoUrl: targetProductDetails.Product.PhotoUrl,
-          unitPrice: targetProductDetails.Product.UnitPrice?.toString(),
-          sources: [],
+        // ===== 結果を処理 =====
+        const candidateMap = new Map<string, CandidateInfo>();
+        const sourceSummary: SimilarSearchResponse["sourceSummary"] = {
+          custom: { count: 0 },
+          substitutions: { count: 0 },
         };
-        // 詳細情報に変換
-        targetProduct = convertProductToDetailedCandidate(baseCandidate, targetProductDetails.Product);
-      }
-    } catch (error) {
-      console.error("Failed to get target product details:", error);
-      // エラーが発生しても処理は続行（targetProductはundefinedのまま）
-    }
 
-    // ===== 各候補の詳細情報を取得 =====
-    const detailedCandidates = await enrichCandidatesWithDetails(
-      client,
-      candidates
+        // カスタムロジック結果の処理
+        if (customResult.status === "fulfilled") {
+          const customCandidates = customResult.value;
+          sourceSummary.custom.count = customCandidates.length;
+          for (const candidate of customCandidates) {
+            mergeCandidateToMap(candidateMap, candidate, "custom");
+          }
+        } else {
+          sourceSummary.custom.error = customResult.reason?.message || "Unknown error";
+        }
+
+        // Substitutions結果の処理
+        if (substitutionsResult.status === "fulfilled") {
+          const substitutes = substitutionsResult.value.ProductSubstitutes || [];
+          sourceSummary.substitutions.count = substitutes.length;
+          for (const sub of substitutes) {
+            const candidate = convertSubstituteToCandidate(sub);
+            mergeCandidateToMap(candidateMap, candidate, "substitutions");
+          }
+        } else {
+          sourceSummary.substitutions.error =
+            substitutionsResult.reason?.message || "Unknown error";
+        }
+
+        // Mapから配列に変換
+        const candidates = Array.from(candidateMap.values());
+
+        // ===== 対象部品の詳細情報を取得 =====
+        let targetProduct: CandidateDetailedInfo | undefined;
+        try {
+          const targetProductDetails = await client.getProductDetails(productNumber);
+          if (targetProductDetails.Product) {
+            // 基本情報を作成
+            const baseCandidate: CandidateInfo = {
+              digiKeyProductNumber: targetProductDetails.Product.ProductVariations?.[0]?.DigiKeyProductNumber || "",
+              manufacturerProductNumber: targetProductDetails.Product.ManufacturerProductNumber || mpn,
+              manufacturerName: targetProductDetails.Product.Manufacturer?.Name || "",
+              description: targetProductDetails.Product.Description?.ProductDescription || "",
+              quantityAvailable: targetProductDetails.Product.QuantityAvailable || 0,
+              productUrl: targetProductDetails.Product.ProductUrl,
+              photoUrl: targetProductDetails.Product.PhotoUrl,
+              unitPrice: targetProductDetails.Product.UnitPrice?.toString(),
+              sources: [],
+            };
+            // 詳細情報に変換
+            targetProduct = convertProductToDetailedCandidate(baseCandidate, targetProductDetails.Product);
+          }
+        } catch (error) {
+          console.error("Failed to get target product details:", error);
+          // エラーが発生しても処理は続行（targetProductはundefinedのまま）
+        }
+
+        // ===== 各候補の詳細情報を取得 =====
+        const detailedCandidates = await enrichCandidatesWithDetails(
+          client,
+          candidates
+        );
+
+        return {
+          targetMpn: mpn,
+          targetProduct,
+          candidates: detailedCandidates,
+          searchedAt: new Date().toISOString(),
+          sourceSummary,
+        } as SimilarSearchResponse;
+      }
     );
 
-    const response: SimilarSearchResponse = {
-      targetMpn: mpn,
-      targetProduct,
-      candidates: detailedCandidates,
-      searchedAt: new Date().toISOString(),
-      sourceSummary,
-    };
-
-    return NextResponse.json(response);
+    return NextResponse.json(response, {
+      headers: {
+        "X-Cache": fromCache ? "HIT" : "MISS",
+      },
+    });
   } catch (error) {
     console.error("Similar search API error:", error);
     const errorMessage = error instanceof Error ? error.message : String(error);

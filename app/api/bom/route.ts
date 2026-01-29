@@ -6,6 +6,7 @@ import type { BOMRow, BOMRowWithRisk } from "@/app/bom/_lib/types";
 import { getRiskLevel, getComplianceFromProduct } from "@/app/risk-assessment/_lib/compliance-utils";
 import { DigiKeyApiClient } from "@/app/_lib/vendor/digikey/client";
 import type { DigiKeyProduct } from "@/app/_lib/vendor/digikey/types";
+import { withCache, buildCacheKey } from "@/app/_lib/cache";
 
 // ライフサイクルステータスを正規化
 function normalizeLifecycleStatus(
@@ -46,12 +47,6 @@ function normalizeLifecycleStatus(
   return "Unknown";
 }
 
-interface BOMCacheData {
-  generatedAt: string;
-  bomId: string;
-  data: BOMRowWithRisk[];
-}
-
 /**
  * BOMデータ取得API
  * GET /api/bom?id={bom-id}
@@ -79,169 +74,141 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const publicDir = path.join(process.cwd(), "public");
-    const csvPath = path.join(publicDir, "data", `${bomId}.csv`);
-    const cacheDir = path.join(publicDir, "data", "_cache");
-    const cachePath = path.join(cacheDir, `${bomId}.json`);
+    // キャッシュキーの生成
+    const cacheKey = buildCacheKey({ id: bomId });
 
-    // キャッシュファイルの存在確認
-    try {
-      const cacheContent = await fs.readFile(cachePath, "utf-8");
-      const cacheData: BOMCacheData = JSON.parse(cacheContent);
-      
-      // キャッシュが有効な場合（bomIdが一致する場合）
-      if (cacheData.bomId === bomId) {
-        return NextResponse.json(cacheData.data, {
-          headers: {
-            "X-Cache": "HIT",
-          },
-        });
-      }
-    } catch (cacheError) {
-      // キャッシュファイルが存在しない場合は続行
-    }
+    // キャッシュを使用してBOMデータを取得
+    const { data: rowsWithRisk, fromCache } = await withCache(
+      {
+        namespace: "bom",
+        key: cacheKey,
+      },
+      async () => {
+        const publicDir = path.join(process.cwd(), "public");
+        const csvPath = path.join(publicDir, "data", `${bomId}.csv`);
 
-    // CSVファイルを読み込み
-    let csvText: string;
-    try {
-      csvText = await fs.readFile(csvPath, "utf-8");
-    } catch (csvError) {
-      return NextResponse.json(
-        { error: `BOM file not found: ${bomId}.csv` },
-        { status: 404 }
-      );
-    }
+        // CSVファイルを読み込み
+        let csvText: string;
+        try {
+          csvText = await fs.readFile(csvPath, "utf-8");
+        } catch (csvError) {
+          throw new Error(`BOM file not found: ${bomId}.csv`);
+        }
 
-    // CSVをパース
-    const parsedRows = parseCSV<Record<string, string>>(csvText);
-    const rows = parsedRows as unknown as BOMRow[];
+        // CSVをパース
+        const parsedRows = parseCSV<Record<string, string>>(csvText);
+        const rows = parsedRows as unknown as BOMRow[];
 
-    // DigiKey APIクライアントの初期化
-    const clientId = process.env.DIGIKEY_CLIENT_ID;
-    const clientSecret = process.env.DIGIKEY_CLIENT_SECRET;
+        // DigiKey APIクライアントの初期化
+        const clientId = process.env.DIGIKEY_CLIENT_ID;
+        const clientSecret = process.env.DIGIKEY_CLIENT_SECRET;
 
-    if (!clientId || !clientSecret) {
-      return NextResponse.json(
-        {
-          error:
-            "DIGIKEY_CLIENT_ID and DIGIKEY_CLIENT_SECRET environment variables are not set",
-        },
-        { status: 500 }
-      );
-    }
-
-    const client = new DigiKeyApiClient(clientId, clientSecret);
-
-    // 各部品のリスクを取得
-    const rowsWithRisk: BOMRowWithRisk[] = [];
-
-    for (const row of rows) {
-      try {
-        // 部品型番でDigiKey APIを検索
-        const searchResult = await client.keywordSearch({
-          keywords: row.部品型番,
-          limit: 1,
-        });
-
-        if (searchResult.Products && searchResult.Products.length > 0) {
-          const product = searchResult.Products[0];
-          const compliance = getComplianceFromProduct(product);
-
-          // ライフサイクルステータスを正規化
-          const lifecycleStatus = normalizeLifecycleStatus(
-            product.ProductStatus?.Status
+        if (!clientId || !clientSecret) {
+          throw new Error(
+            "DIGIKEY_CLIENT_ID and DIGIKEY_CLIENT_SECRET environment variables are not set"
           );
+        }
 
-          // 代替候補の件数を取得
-          const digiKeyProductNumber =
-            product.ProductVariations?.[0]?.DigiKeyProductNumber;
-          const productNumberForSubstitutions =
-            digiKeyProductNumber || product.ManufacturerProductNumber || "";
+        const client = new DigiKeyApiClient(clientId, clientSecret);
 
-          let substitutionCount: number | null = null;
-          if (productNumberForSubstitutions) {
-            try {
-              const substitutionsResult = await client.getSubstitutions({
-                productNumber: productNumberForSubstitutions,
-              });
-              substitutionCount =
-                substitutionsResult.ProductSubstitutes?.length ?? 0;
-            } catch (subError) {
-              console.error(
-                `代替候補取得エラー (${row.部品型番}):`,
-                subError
+        // 各部品のリスクを取得
+        const rowsWithRisk: BOMRowWithRisk[] = [];
+
+        for (const row of rows) {
+          try {
+            // 部品型番でDigiKey APIを検索
+            const searchResult = await client.keywordSearch({
+              keywords: row.部品型番,
+              limit: 1,
+            });
+
+            if (searchResult.Products && searchResult.Products.length > 0) {
+              const product = searchResult.Products[0];
+              const compliance = getComplianceFromProduct(product);
+
+              // ライフサイクルステータスを正規化
+              const lifecycleStatus = normalizeLifecycleStatus(
+                product.ProductStatus?.Status
               );
-              // エラー時はnullのまま（既存判定を据え置く）
+
+              // 代替候補の件数を取得
+              const digiKeyProductNumber =
+                product.ProductVariations?.[0]?.DigiKeyProductNumber;
+              const productNumberForSubstitutions =
+                digiKeyProductNumber || product.ManufacturerProductNumber || "";
+
+              let substitutionCount: number | null = null;
+              if (productNumberForSubstitutions) {
+                try {
+                  const substitutionsResult = await client.getSubstitutions({
+                    productNumber: productNumberForSubstitutions,
+                  });
+                  substitutionCount =
+                    substitutionsResult.ProductSubstitutes?.length ?? 0;
+                } catch (subError) {
+                  console.error(
+                    `代替候補取得エラー (${row.部品型番}):`,
+                    subError
+                  );
+                  // エラー時はnullのまま（既存判定を据え置く）
+                }
+              }
+
+              // リスクを算出（総合評価）
+              const riskLevel = getRiskLevel(
+                compliance,
+                product.ProductStatus?.Status,
+                substitutionCount
+              );
+
+              rowsWithRisk.push({
+                ...row,
+                リスク: riskLevel,
+                代替候補有無:
+                  substitutionCount === null
+                    ? "取得失敗"
+                    : substitutionCount > 0
+                    ? "あり"
+                    : "なし",
+                代替候補件数: substitutionCount ?? undefined,
+                rohsStatus: compliance.rohs,
+                reachStatus: compliance.reach,
+                lifecycleStatus: lifecycleStatus,
+              });
+            } else {
+              // 検索結果が見つからない場合
+              rowsWithRisk.push({
+                ...row,
+                リスク: "取得失敗" as const,
+                代替候補有無: "取得失敗" as const,
+                rohsStatus: "N/A" as const,
+                reachStatus: "N/A" as const,
+                lifecycleStatus: "N/A" as const,
+              });
             }
+          } catch (err) {
+            console.error(`リスク取得エラー (${row.部品型番}):`, err);
+            rowsWithRisk.push({
+              ...row,
+              リスク: "取得失敗" as const,
+              代替候補有無: "取得失敗" as const,
+              rohsStatus: "N/A" as const,
+              reachStatus: "N/A" as const,
+              lifecycleStatus: "N/A" as const,
+            });
           }
 
-          // リスクを算出（総合評価）
-          const riskLevel = getRiskLevel(
-            compliance,
-            product.ProductStatus?.Status,
-            substitutionCount
-          );
-
-          rowsWithRisk.push({
-            ...row,
-            リスク: riskLevel,
-            代替候補有無:
-              substitutionCount === null
-                ? "取得失敗"
-                : substitutionCount > 0
-                ? "あり"
-                : "なし",
-            代替候補件数: substitutionCount ?? undefined,
-            rohsStatus: compliance.rohs,
-            reachStatus: compliance.reach,
-            lifecycleStatus: lifecycleStatus,
-          });
-        } else {
-          // 検索結果が見つからない場合
-          rowsWithRisk.push({
-            ...row,
-            リスク: "取得失敗" as const,
-            代替候補有無: "取得失敗" as const,
-            rohsStatus: "N/A" as const,
-            reachStatus: "N/A" as const,
-            lifecycleStatus: "N/A" as const,
-          });
+          // APIレートリミット対策: 200ms待機
+          await new Promise((resolve) => setTimeout(resolve, 200));
         }
-      } catch (err) {
-        console.error(`リスク取得エラー (${row.部品型番}):`, err);
-        rowsWithRisk.push({
-          ...row,
-          リスク: "取得失敗" as const,
-          代替候補有無: "取得失敗" as const,
-          rohsStatus: "N/A" as const,
-          reachStatus: "N/A" as const,
-          lifecycleStatus: "N/A" as const,
-        });
+
+        return rowsWithRisk;
       }
-
-      // APIレートリミット対策: 200ms待機
-      await new Promise((resolve) => setTimeout(resolve, 200));
-    }
-
-    // キャッシュを保存
-    const cacheData: BOMCacheData = {
-      generatedAt: new Date().toISOString(),
-      bomId,
-      data: rowsWithRisk,
-    };
-
-    try {
-      // キャッシュディレクトリが存在しない場合は作成
-      await fs.mkdir(cacheDir, { recursive: true });
-      await fs.writeFile(cachePath, JSON.stringify(cacheData, null, 2), "utf-8");
-    } catch (writeError) {
-      console.error("キャッシュ保存エラー:", writeError);
-      // キャッシュ保存に失敗してもレスポンスは返す
-    }
+    );
 
     return NextResponse.json(rowsWithRisk, {
       headers: {
-        "X-Cache": "MISS",
+        "X-Cache": fromCache ? "HIT" : "MISS",
       },
     });
   } catch (error) {

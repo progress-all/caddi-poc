@@ -37,3 +37,12 @@ next-env.d.ts
 
 # datasheet work files (PDF, txt, csv)
 docs/datasheet/work/
+
+# cache files (but keep directory structure)
+data/cache/*
+!data/cache/
+!data/cache/.keep
+!data/cache/bom/
+!data/cache/bom/.keep
+!data/cache/similar-search/
+!data/cache/similar-search/.keep
