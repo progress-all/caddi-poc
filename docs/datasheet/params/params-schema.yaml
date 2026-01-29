@@ -64,6 +64,11 @@ parameters:
     category: rated_values
     extraction_hint: "Page 1 - Rated value セクションの静電容量許容差を抽出"
     
+  - id: OperatingTempRange_Spec
+    description: 動作温度範囲（Operating Temp. Range）
+    category: test_specs
+    extraction_hint: "Rated value 表の 'Specifications and Test Methods (Operating Temp. Range)' 列から抽出。単位は °C、範囲は 'to' 表記。補足があれば括弧で残す。"
+    
   - id: Packaging_180mmReel
     description: 梱包 (180mmリール)
     category: packaging

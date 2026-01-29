@@ -16,7 +16,7 @@ export type DatasheetParameterCategory =
 
 /**
  * パラメーターID（リテラル型でオートコンプリート対応）
- * params-schema.yaml の全63パラメーターに対応
+ * params-schema.yaml の全64パラメーターに対応
  */
 export type DatasheetParameterId =
   | "L_Dimensions"
@@ -33,6 +33,7 @@ export type DatasheetParameterId =
   | "Packaging_180mmReel"
   | "Packaging_330mmReel"
   | "RatedVoltage_Spec"
+  | "OperatingTempRange_Spec"
   | "Appearance_Spec"
   | "Dimension_Spec"
   | "VoltageProof_Spec"

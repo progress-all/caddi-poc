@@ -46,6 +46,10 @@
       "description": "静電容量許容差",
       "value": "± 10 %"
     },
+    "OperatingTempRange_Spec": {
+      "description": "動作温度範囲（Operating Temp. Range）",
+      "value": "-55 to 85 °C"
+    },
     "Packaging_180mmReel": {
       "description": "梱包 (180mmリール)",
       "value": "PAPER W8P4 / 4000 pcs./Reel"

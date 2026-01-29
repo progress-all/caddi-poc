@@ -44,25 +44,29 @@ function SimilarSearchContent() {
       return;
     }
 
-    // 全候補からdatasheet_idを抽出
+    // 全候補からdatasheet_idを抽出（URLのファイル名 + MPNの両方でローカルJSONを参照）
     const datasheetIds: string[] = [];
-    
-    // 対象部品のdatasheet_id
-    if (searchResult.targetProduct?.datasheetUrl) {
-      const id = extractDatasheetId(searchResult.targetProduct.datasheetUrl);
-      if (id) {
+
+    const addId = (id: string | null | undefined) => {
+      if (id && id.length > 0 && !datasheetIds.includes(id)) {
         datasheetIds.push(id);
       }
+    };
+
+    // 対象部品のdatasheet_id（URL由来 + MPN）
+    if (searchResult.targetProduct) {
+      if (searchResult.targetProduct.datasheetUrl) {
+        addId(extractDatasheetId(searchResult.targetProduct.datasheetUrl));
+      }
+      addId(searchResult.targetProduct.manufacturerProductNumber);
     }
 
-    // 候補のdatasheet_id
+    // 候補のdatasheet_id（URL由来 + MPN）
     for (const candidate of searchResult.candidates) {
       if (candidate.datasheetUrl) {
-        const id = extractDatasheetId(candidate.datasheetUrl);
-        if (id && !datasheetIds.includes(id)) {
-          datasheetIds.push(id);
-        }
+        addId(extractDatasheetId(candidate.datasheetUrl));
       }
+      addId(candidate.manufacturerProductNumber);
     }
 
     if (datasheetIds.length === 0) {
@@ -94,12 +98,16 @@ function SimilarSearchContent() {
     return searchResult.candidates.map((candidate) => {
       const enriched: CandidateDetailedInfo = { ...candidate };
       
-      // datasheet_idを抽出してデータをマージ
-      if (candidate.datasheetUrl) {
-        const datasheetId = extractDatasheetId(candidate.datasheetUrl);
-        if (datasheetId && datasheetData[datasheetId]) {
-          enriched.datasheetParameters = datasheetData[datasheetId].parameters;
-        }
+      // datasheet_idを抽出してデータをマージ（URL由来を優先、なければMPNでローカルJSONを参照）
+      const idFromUrl = candidate.datasheetUrl
+        ? extractDatasheetId(candidate.datasheetUrl)
+        : null;
+      const idFromMpn = candidate.manufacturerProductNumber || null;
+      const datasheetId =
+        (idFromUrl && datasheetData[idFromUrl] ? idFromUrl : null) ??
+        (idFromMpn && datasheetData[idFromMpn] ? idFromMpn : null);
+      if (datasheetId && datasheetData[datasheetId]) {
+        enriched.datasheetParameters = datasheetData[datasheetId].parameters;
       }
 
       // 類似度スコアを計算（対象部品が存在する場合）
@@ -121,15 +129,20 @@ function SimilarSearchContent() {
 
     const enriched: CandidateDetailedInfo = { ...searchResult.targetProduct };
     
-    if (searchResult.targetProduct.datasheetUrl) {
-      const datasheetId = extractDatasheetId(searchResult.targetProduct.datasheetUrl);
-      if (datasheetId && datasheetData[datasheetId]) {
-        enriched.datasheetParameters = datasheetData[datasheetId].parameters;
-      }
+    const target = searchResult.targetProduct;
+    const idFromUrl = target.datasheetUrl
+      ? extractDatasheetId(target.datasheetUrl)
+      : null;
+    const idFromMpn = target.manufacturerProductNumber || null;
+    const datasheetId =
+      (idFromUrl && datasheetData[idFromUrl] ? idFromUrl : null) ??
+      (idFromMpn && datasheetData[idFromMpn] ? idFromMpn : null);
+    if (datasheetId && datasheetData[datasheetId]) {
+      enriched.datasheetParameters = datasheetData[datasheetId].parameters;
     }
 
     return enriched;
-  }, [searchResult?.targetProduct, datasheetData]);
+  }, [searchResult, datasheetData]);
 
   if (!mpn) {
     return (
