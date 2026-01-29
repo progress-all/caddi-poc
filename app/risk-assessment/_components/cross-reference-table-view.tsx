@@ -160,7 +160,7 @@ export function CrossReferenceTableView({
   }, [tableData, targetProduct]);
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full min-h-0 flex flex-col">
       <DataTable
         columns={columns}
         data={tableData}
