@@ -6,9 +6,9 @@ export default function RiskAssessmentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <HeaderNav />
-      <main className="flex-1 overflow-auto p-4">{children}</main>
+      <main className="p-4">{children}</main>
     </div>
   );
 }

@@ -140,49 +140,45 @@ function SimilarSearchContent() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {/* 検索結果 */}
       <Card>
         <CardHeader>
           <CardTitle className="text-base">類似品検索結果</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            {/* ローディング状態 */}
-            {isLoading && (
-              <div className="flex items-center justify-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-                <span className="ml-3 text-muted-foreground">検索中...</span>
-              </div>
-            )}
+          {/* ローディング状態 */}
+          {isLoading && (
+            <div className="flex items-center justify-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+              <span className="ml-3 text-muted-foreground">検索中...</span>
+            </div>
+          )}
 
-            {/* エラー状態 */}
-            {searchError && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700">
-                <p className="font-medium">検索エラー</p>
-                <p>{searchError.message}</p>
-              </div>
-            )}
+          {/* エラー状態 */}
+          {searchError && (
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700">
+              <p className="font-medium">検索エラー</p>
+              <p>{searchError.message}</p>
+            </div>
+          )}
 
-            {/* 検索結果 */}
-            {searchResult && !isLoading && (
-              <>
-                {searchResult.candidates.length > 0 ? (
-                  <div className="h-[600px]">
-                    <CrossReferenceTableView
-                      candidates={enrichedCandidates}
-                      targetProduct={enrichedTargetProduct}
-                      isLoadingDatasheet={isLoadingDatasheet}
-                    />
-                  </div>
-                ) : (
-                  <div className="text-center py-8 text-muted-foreground">
-                    <p>候補が見つかりませんでした</p>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
+          {/* 検索結果 */}
+          {searchResult && !isLoading && (
+            <>
+              {searchResult.candidates.length > 0 ? (
+                <CrossReferenceTableView
+                  candidates={enrichedCandidates}
+                  targetProduct={enrichedTargetProduct}
+                  isLoadingDatasheet={isLoadingDatasheet}
+                />
+              ) : (
+                <div className="text-center py-8 text-muted-foreground">
+                  <p>候補が見つかりませんでした</p>
+                </div>
+              )}
+            </>
+          )}
         </CardContent>
       </Card>
     </div>
@@ -191,7 +187,7 @@ function SimilarSearchContent() {
 
 export default function SimilarSearchPage() {
   return (
-    <div className="h-full flex flex-col">
+    <div>
       <div className="mb-4">
         <h1 className="text-2xl font-bold mb-2">類似品検索</h1>
         <p className="text-sm text-muted-foreground">
@@ -199,17 +195,15 @@ export default function SimilarSearchPage() {
         </p>
       </div>
 
-      <div className="flex-1 min-h-0">
-        <Suspense
-          fallback={
-            <div className="flex items-center justify-center h-64">
-              <p className="text-muted-foreground">読み込み中...</p>
-            </div>
-          }
-        >
-          <SimilarSearchContent />
-        </Suspense>
-      </div>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center h-64">
+            <p className="text-muted-foreground">読み込み中...</p>
+          </div>
+        }
+      >
+        <SimilarSearchContent />
+      </Suspense>
     </div>
   );
 }

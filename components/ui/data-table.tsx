@@ -25,6 +25,7 @@ import {
 import { DataTablePagination } from "./data-table-pagination"
 import { DataTableToolbar } from "./data-table-toolbar"
 import { DataTableViewOptions } from "./data-table-view-options"
+import { cn } from "@/app/_lib/utils"
 
 /**
  * CSVカラム設定
@@ -53,6 +54,10 @@ interface DataTableProps<TData, TValue> {
   csvFilenamePrefix?: string
   /** CSVカラム設定（省略時は表示カラムから自動生成） */
   csvColumnAccessors?: CsvColumnConfig<TData>[]
+  /** ヘッダー行をスクロール時に固定表示する（デフォルト: false） */
+  enableStickyHeader?: boolean
+  /** テーブルの最大高さ（例: "calc(100vh - 300px)"）。指定時は縦スクロールが有効になる */
+  maxHeight?: string
 }
 
 export function DataTable<TData, TValue>({
@@ -69,6 +74,8 @@ export function DataTable<TData, TValue>({
   enableCsvExport = false,
   csvFilenamePrefix = "data",
   csvColumnAccessors,
+  enableStickyHeader = false,
+  maxHeight,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -112,9 +119,9 @@ export function DataTable<TData, TValue>({
   })
 
   return (
-    <div className="flex flex-col h-full min-h-0 space-y-2">
+    <div className="space-y-2">
       {(enableFiltering || enableColumnVisibility || enableCsvExport) && (
-        <div className="flex items-center justify-between py-1 flex-shrink-0">
+        <div className="flex items-center justify-between py-1">
           {enableFiltering && searchKey && (
             <DataTableToolbar
               table={table}
@@ -137,14 +144,28 @@ export function DataTable<TData, TValue>({
           {enableColumnVisibility && <DataTableViewOptions table={table} />}
         </div>
       )}
-      <div className="rounded-md border overflow-auto flex-1 min-h-0">
+      <div 
+        className={cn(
+          "rounded-md border overflow-x-auto",
+          maxHeight && "overflow-y-auto"
+        )}
+        style={maxHeight ? { maxHeight } : undefined}
+      >
         <Table>
-          <TableHeader className="sticky top-0 bg-background z-10">
+          <TableHeader className={cn(
+            enableStickyHeader && "sticky top-0 bg-background z-10 border-b"
+          )}>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id} className="whitespace-nowrap">
+                    <TableHead 
+                      key={header.id} 
+                      className={cn(
+                        "whitespace-nowrap",
+                        enableStickyHeader && "bg-background"
+                      )}
+                    >
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -169,14 +190,16 @@ export function DataTable<TData, TValue>({
                     data-state={row.getIsSelected() && "selected"}
                     className={rowClassName}
                   >
-                    {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id}>
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </TableCell>
-                    ))}
+                    {row.getVisibleCells().map((cell) => {
+                      return (
+                        <TableCell key={cell.id}>
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </TableCell>
+                      );
+                    })}
                   </TableRow>
                 );
               })
@@ -194,7 +217,7 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       {enablePagination && (
-        <div className="flex-shrink-0">
+        <div>
           <DataTablePagination table={table} />
         </div>
       )}

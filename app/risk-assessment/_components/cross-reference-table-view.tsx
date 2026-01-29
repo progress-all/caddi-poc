@@ -233,6 +233,8 @@ export function CrossReferenceTableView({
         enableCsvExport={true}
         csvFilenamePrefix="similar-search"
         csvColumnAccessors={csvColumnAccessors}
+        enableStickyHeader={true}
+        maxHeight="calc(100vh - 300px)"
       />
       {/* スコア内訳モーダル */}
       {targetProduct && selectedCandidate && (
@@ -569,24 +571,19 @@ function generateColumns(
           return param?.value || null;
         },
         header: ({ column }) => (
-          <DataTableColumnHeader
-            column={column}
-            title={`[DS] ${paramId}`}
-          />
+          <div className="space-y-0.5">
+            <DataTableColumnHeader
+              column={column}
+              title={paramId}
+            />
+            <div className="text-xs text-muted-foreground font-normal leading-tight">
+              {paramDescription}
+            </div>
+          </div>
         ),
         cell: ({ row }) => {
           const param = row.original.datasheetParameters?.[paramId];
-          if (!param) return "-";
-          return (
-            <div className="space-y-0.5">
-              <div className="text-sm">{param.value || "-"}</div>
-              {param.description && (
-                <div className="text-xs text-muted-foreground">
-                  {param.description}
-                </div>
-              )}
-            </div>
-          );
+          return <div className="text-sm">{param?.value || "-"}</div>;
         },
       };
     });

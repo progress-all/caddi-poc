@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="h-full" suppressHydrationWarning>
       <body
-        className={`${inter.className} flex flex-col min-h-screen bg-background text-foreground`}
+        className={`${inter.className} min-h-screen bg-background text-foreground`}
       >
         <Providers>{children}</Providers>
       </body>
