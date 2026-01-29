@@ -172,20 +172,9 @@ export function CrossReferenceTableView({
       },
     ];
 
-    // 動的パラメータを追加（DigiKey）
-    const parameterNames = new Set<string>();
-    for (const candidate of tableData) {
-      if (candidate.parameters) {
-        for (const param of candidate.parameters) {
-          if (param.name) {
-            parameterNames.add(param.name);
-          }
-        }
-      }
-    }
-
-    const sortedParameterNames = Array.from(parameterNames).sort();
-    for (const paramName of sortedParameterNames) {
+    // 動的パラメータを追加（DigiKey・JSON出現順）
+    const orderedParameterNames = getOrderedParameterNames(tableData);
+    for (const paramName of orderedParameterNames) {
       configs.push({
         header: paramName,
         accessor: (row) => {
@@ -195,18 +184,9 @@ export function CrossReferenceTableView({
       });
     }
 
-    // データシートパラメーターを追加
-    const datasheetParameterIds = new Set<string>();
-    for (const candidate of tableData) {
-      if (candidate.datasheetParameters) {
-        for (const paramId of Object.keys(candidate.datasheetParameters)) {
-          datasheetParameterIds.add(paramId);
-        }
-      }
-    }
-
-    const sortedDatasheetParameterIds = Array.from(datasheetParameterIds).sort();
-    for (const paramId of sortedDatasheetParameterIds) {
+    // データシートパラメーターを追加（JSON出現順）
+    const orderedDatasheetParameterIds = getOrderedDatasheetParameterIds(tableData);
+    for (const paramId of orderedDatasheetParameterIds) {
       configs.push({
         header: `[DS] ${paramId}`,
         accessor: (row) => {
@@ -250,6 +230,70 @@ export function CrossReferenceTableView({
 }
 
 /**
+ * パラメータ名をJSON出現順で返す。
+ * 基準行（先頭＝Target）の parameters 配列の順序を採用し、
+ * 他行にのみ存在するパラメータは初出順で末尾に追加する。
+ */
+function getOrderedParameterNames(candidates: CandidateDetailedInfo[]): string[] {
+  const ordered: string[] = [];
+  const seen = new Set<string>();
+
+  const add = (name: string) => {
+    if (name && !seen.has(name)) {
+      seen.add(name);
+      ordered.push(name);
+    }
+  };
+
+  const base = candidates[0];
+  if (base?.parameters) {
+    for (const param of base.parameters) {
+      if (param.name) add(param.name);
+    }
+  }
+  for (const candidate of candidates) {
+    if (candidate.parameters) {
+      for (const param of candidate.parameters) {
+        if (param.name) add(param.name);
+      }
+    }
+  }
+  return ordered;
+}
+
+/**
+ * データシートパラメーターIDをJSON出現順で返す。
+ * 基準行の datasheetParameters キー順を採用し、
+ * 他行にのみ存在するIDは初出順で末尾に追加する。
+ */
+function getOrderedDatasheetParameterIds(candidates: CandidateDetailedInfo[]): string[] {
+  const ordered: string[] = [];
+  const seen = new Set<string>();
+
+  const add = (id: string) => {
+    if (id && !seen.has(id)) {
+      seen.add(id);
+      ordered.push(id);
+    }
+  };
+
+  const base = candidates[0];
+  if (base?.datasheetParameters) {
+    for (const id of Object.keys(base.datasheetParameters)) {
+      add(id);
+    }
+  }
+  for (const candidate of candidates) {
+    if (candidate.datasheetParameters) {
+      for (const id of Object.keys(candidate.datasheetParameters)) {
+        add(id);
+      }
+    }
+  }
+  return ordered;
+}
+
+/**
  * 候補データから動的カラムを生成
  */
 function generateColumns(
@@ -258,33 +302,11 @@ function generateColumns(
   isLoadingDatasheet: boolean,
   onScoreClick?: (candidate: CandidateDetailedInfo) => void
 ): ColumnDef<CandidateDetailedInfo>[] {
-  // 全候補からユニークなパラメータ名を収集（DigiKey）
-  const parameterNames = new Set<string>();
-  for (const candidate of candidates) {
-    if (candidate.parameters) {
-      for (const param of candidate.parameters) {
-        if (param.name) {
-          parameterNames.add(param.name);
-        }
-      }
-    }
-  }
+  // パラメータ列の順序: 基準行（先頭＝Target）のJSON出現順を保持し、他行のみのパラメータは初出順で末尾に追加
+  const orderedParameterNames = getOrderedParameterNames(candidates);
 
-  // パラメータ名でソート（アルファベット順）
-  const sortedParameterNames = Array.from(parameterNames).sort();
-
-  // 全候補からユニークなデータシートパラメーターIDを収集
-  const datasheetParameterIds = new Set<string>();
-  for (const candidate of candidates) {
-    if (candidate.datasheetParameters) {
-      for (const paramId of Object.keys(candidate.datasheetParameters)) {
-        datasheetParameterIds.add(paramId);
-      }
-    }
-  }
-
-  // データシートパラメーターIDでソート（アルファベット順）
-  const sortedDatasheetParameterIds = Array.from(datasheetParameterIds).sort();
+  // データシートパラメーター列の順序: 基準行のキー出現順を保持し、他行のみのIDは初出順で末尾に追加
+  const orderedDatasheetParameterIds = getOrderedDatasheetParameterIds(candidates);
 
   // 固定カラム
   const fixedColumns: ColumnDef<CandidateDetailedInfo>[] = [
@@ -534,9 +556,9 @@ function generateColumns(
     },
   ];
 
-  // 動的パラメータカラムを生成（DigiKey）
+  // 動的パラメータカラムを生成（DigiKey・JSON出現順）
   const parameterColumns: ColumnDef<CandidateDetailedInfo>[] =
-    sortedParameterNames.map((paramName) => ({
+    orderedParameterNames.map((paramName) => ({
       id: `param_${paramName}`,
       accessorFn: (row: CandidateDetailedInfo) => {
         const param = row.parameters?.find((p) => p.name === paramName);
@@ -553,9 +575,9 @@ function generateColumns(
       },
     }));
 
-  // データシートパラメーターカラムを生成
+  // データシートパラメーターカラムを生成（JSON出現順）
   const datasheetParameterColumns: ColumnDef<CandidateDetailedInfo>[] =
-    sortedDatasheetParameterIds.map((paramId) => {
+    orderedDatasheetParameterIds.map((paramId) => {
       // パラメーターの説明を取得（最初に見つかった候補から）
       const firstCandidateWithParam = candidates.find(
         (c) => c.datasheetParameters?.[paramId]
@@ -589,7 +611,7 @@ function generateColumns(
     });
 
   // データシート読み込み中の場合、プレースホルダーカラムを追加
-  if (isLoadingDatasheet && sortedDatasheetParameterIds.length === 0) {
+  if (isLoadingDatasheet && orderedDatasheetParameterIds.length === 0) {
     const loadingColumn: ColumnDef<CandidateDetailedInfo> = {
       id: "datasheet_loading",
       header: () => (
