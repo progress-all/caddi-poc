@@ -146,14 +146,15 @@ export function DataTable<TData, TValue>({
       )}
       <div 
         className={cn(
-          "rounded-md border overflow-x-auto",
+          "rounded-md border overflow-auto flex-1 min-h-0",
           maxHeight && "overflow-y-auto"
         )}
         style={maxHeight ? { maxHeight } : undefined}
       >
-        <Table>
+        <Table className="min-w-max">
           <TableHeader className={cn(
-            enableStickyHeader && "sticky top-0 bg-background z-10 border-b"
+            "sticky top-0 bg-background z-10",
+            enableStickyHeader && "border-b"
           )}>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
