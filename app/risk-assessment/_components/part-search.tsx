@@ -21,6 +21,7 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
   const searchParams = useSearchParams();
   const keywordParam = searchParams.get("keyword");
   const [keyword, setKeyword] = useState(keywordParam || "296-1395-5-ND");
+  const [manufacturer, setManufacturer] = useState("");
 
   // クエリパラメータが変更されたときにkeywordを更新
   useEffect(() => {
@@ -45,14 +46,18 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
       e.preventDefault();
       if (!keyword.trim()) return;
 
+      const keywords = manufacturer.trim()
+        ? `${keyword.trim()} ${manufacturer.trim()}`
+        : keyword.trim();
+
       resetSearch();
       await executeSearch({
-        keywords: keyword.trim(),
+        keywords,
         limit: 25,
         offset: 0,
       });
     },
-    [keyword, executeSearch, resetSearch]
+    [keyword, manufacturer, executeSearch, resetSearch]
   );
 
   const handlePartClick = useCallback(
@@ -96,25 +101,44 @@ export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
   return (
     <div className="space-y-4">
       {/* 検索フォーム */}
-      <form onSubmit={handleSubmit} className="flex gap-2 max-w-2xl">
-        <div className="flex-1 min-w-0">
-          <Label htmlFor="keyword" className="sr-only">
-            キーワード検索
-          </Label>
-          <Input
-            id="keyword"
-            type="text"
-            placeholder="例: 296-1395-5-ND, LM358P, オペアンプ"
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            disabled={isSearching}
-            className="h-9"
-          />
-        </div>
-        <Button type="submit" disabled={isSearching || !keyword.trim()} className="flex-shrink-0">
-          {isSearching ? "検索中..." : "検索"}
-        </Button>
-      </form>
+      <div className="max-w-2xl space-y-1.5">
+        <form onSubmit={handleSubmit} className="flex gap-4 flex-wrap items-end">
+          <div className="flex-1 min-w-[200px] space-y-1.5">
+            <Label htmlFor="keyword">
+              キーワード
+            </Label>
+            <Input
+              id="keyword"
+              type="text"
+              placeholder="例: 296-1395-5-ND, LM358P, Capacitors"
+              value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
+              disabled={isSearching}
+              className="h-9"
+            />
+          </div>
+          <div className="flex-1 min-w-[200px] space-y-1.5">
+            <Label htmlFor="manufacturer">
+              メーカー名（任意）
+            </Label>
+            <Input
+              id="manufacturer"
+              type="text"
+              placeholder="例: Texas Instruments"
+              value={manufacturer}
+              onChange={(e) => setManufacturer(e.target.value)}
+              disabled={isSearching}
+              className="h-9"
+            />
+          </div>
+          <Button type="submit" disabled={isSearching || !keyword.trim()} className="flex-shrink-0 h-9">
+            {isSearching ? "検索中..." : "検索"}
+          </Button>
+        </form>
+        <p className="text-xs text-muted-foreground">
+          キーワードは部品番号・型番・説明文・カテゴリ名で検索できます
+        </p>
+      </div>
 
       {/* エラー表示 */}
       {searchError && (
