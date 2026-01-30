@@ -1,5 +1,5 @@
 import type { DigiKeyProduct } from "@/app/_lib/vendor/digikey/types";
-import type { NormalizedCompliance, RiskLevel } from "./types";
+import type { NormalizedCompliance, RiskLevel, PartRiskClassification } from "./types";
 
 /**
  * DigiKeyProductから規制ステータスを正規化
@@ -105,4 +105,91 @@ export function getRiskLevel(
 
   // 候補件数が1以上の場合は既存判定を変更しない
   return baseRiskLevel;
+}
+
+/**
+ * 部品リスクを「顕在リスク」「将来リスク」に分類する（可視化用・PoC）
+ * - 顕在: Lifecycle Obsolete/Discontinued、RoHS/REACH Non-compliant
+ * - 将来: Lifecycle NRND/Last Time Buy、代替品・類似品が0件
+ */
+export function getPartRiskClassification(
+  compliance: NormalizedCompliance,
+  productStatus?: string | null,
+  substitutionCount?: number | null
+): PartRiskClassification {
+  const status = (productStatus ?? "").toLowerCase();
+
+  const current =
+    compliance.rohs === "NonCompliant" ||
+    compliance.reach === "NonCompliant" ||
+    status.includes("obsolete") ||
+    status.includes("discontinued");
+
+  const future =
+    status.includes("not for new designs") ||
+    status.includes("nrnd") ||
+    status.includes("last time buy") ||
+    (substitutionCount !== undefined && substitutionCount !== null && substitutionCount === 0);
+
+  return { current, future };
+}
+
+/**
+ * リスク判定に「寄与した原因」だけを文章で返す（判断根拠の表示用）
+ * RoHS/REACH/ステータスは問題ないが代替0件で将来リスク、などが分かるようにする
+ */
+export function getContributingReasons(
+  compliance: NormalizedCompliance,
+  productStatus: string | null | undefined,
+  substitutionCount: number | null | undefined,
+  classification: PartRiskClassification
+): { currentReasons: string[]; futureReasons: string[] } {
+  const status = (productStatus ?? "").trim();
+  const statusLower = status.toLowerCase();
+  const currentReasons: string[] = [];
+  const futureReasons: string[] = [];
+
+  if (classification.current) {
+    if (compliance.rohs === "NonCompliant") {
+      currentReasons.push("RoHSが規制非適合のため、顕在リスクに該当しています。");
+    }
+    if (compliance.reach === "NonCompliant") {
+      currentReasons.push("REACHが規制非適合のため、顕在リスクに該当しています。");
+    }
+    if (statusLower.includes("obsolete")) {
+      currentReasons.push(`Lifecycleが${status || "Obsolete"}（廃番）のため、顕在リスクに該当しています。`);
+    } else if (statusLower.includes("discontinued")) {
+      currentReasons.push(`Lifecycleが${status || "Discontinued"}のため、顕在リスクに該当しています。`);
+    }
+  }
+
+  if (classification.future) {
+    if (statusLower.includes("not for new designs") || statusLower.includes("nrnd")) {
+      futureReasons.push(`Lifecycleが${status || "NRND"}（新規設計非推奨）のため、将来リスクに該当しています。`);
+    } else if (statusLower.includes("last time buy")) {
+      futureReasons.push(`Lifecycleが${status || "Last Time Buy"}のため、将来リスクに該当しています。`);
+    }
+    if (
+      substitutionCount !== undefined &&
+      substitutionCount !== null &&
+      substitutionCount === 0
+    ) {
+      futureReasons.push("代替・類似候補が0件のため、将来リスクに該当しています。");
+    }
+  }
+
+  return { currentReasons, futureReasons };
+}
+
+/**
+ * CandidateDetailedInfo の classifications / partStatus から NormalizedCompliance を簡易取得
+ */
+export function getComplianceFromClassifications(rohs?: string, reach?: string): NormalizedCompliance {
+  const rohsNorm = rohs?.includes("Compliant") ? "Compliant" as const
+    : rohs?.includes("Non-Compliant") || rohs?.includes("NonCompliant") ? "NonCompliant" as const
+    : "Unknown" as const;
+  const reachNorm = reach?.includes("Unaffected") || reach?.includes("Compliant") ? "Compliant" as const
+    : reach?.includes("Affected") ? "NonCompliant" as const
+    : "Unknown" as const;
+  return { rohs: rohsNorm, reach: reachNorm };
 }

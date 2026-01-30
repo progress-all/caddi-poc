@@ -8,8 +8,10 @@ import { DataTableColumnHeader } from "@/components/ui/data-table-column-header"
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { CandidateDetailedInfo } from "../_lib/types";
+import { getPartRiskClassification, getComplianceFromClassifications, getRiskLevel } from "../_lib/compliance-utils";
 import { SubstituteTypeBadge } from "./substitute-type-badge";
 import { SimilarityScoreModal } from "./similarity-score-modal";
+import { OverallRiskAssessment } from "./overall-risk-assessment";
 
 interface CrossReferenceTableViewProps {
   candidates: CandidateDetailedInfo[];
@@ -49,15 +51,19 @@ export function CrossReferenceTableView({
     return allData;
   }, [candidates, targetProduct]);
 
+  // 対象部品の代替件数（将来リスク判定用: 0件なら将来リスク）
+  const targetSubstitutionCount = targetProduct ? candidates.length : undefined;
+
   // 動的カラムを生成（対象部品も含めてパラメータを収集）
   const columns = useMemo(() => {
     return generateColumns(
       tableData,
       !!targetProduct,
       isLoadingDatasheet,
-      handleScoreClick
+      handleScoreClick,
+      targetSubstitutionCount
     );
-  }, [tableData, targetProduct, isLoadingDatasheet]);
+  }, [tableData, targetProduct, isLoadingDatasheet, targetSubstitutionCount]);
 
   // 対象部品の行かどうかを判定する関数
   const getRowClassName = (row: CandidateDetailedInfo) => {
@@ -67,7 +73,7 @@ export function CrossReferenceTableView({
       (targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
         (targetProduct.digiKeyProductNumber === "" &&
           targetProduct.manufacturerProductNumber ===
-            row.manufacturerProductNumber))
+          row.manufacturerProductNumber))
     ) {
       return "bg-primary/10 dark:bg-primary/20 border-l-4 border-l-primary font-semibold";
     }
@@ -98,7 +104,7 @@ export function CrossReferenceTableView({
             (targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
               (targetProduct.digiKeyProductNumber === "" &&
                 targetProduct.manufacturerProductNumber ===
-                  row.manufacturerProductNumber))
+                row.manufacturerProductNumber))
           ) {
             return "Target";
           }
@@ -114,7 +120,7 @@ export function CrossReferenceTableView({
             (targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
               (targetProduct.digiKeyProductNumber === "" &&
                 targetProduct.manufacturerProductNumber ===
-                  row.manufacturerProductNumber))
+                row.manufacturerProductNumber))
           ) {
             return "";
           }
@@ -142,6 +148,30 @@ export function CrossReferenceTableView({
       {
         header: "Part Status",
         accessor: (row) => row.partStatus || "",
+      },
+      {
+        header: "総合リスク評価",
+        accessor: (row) => {
+          const compliance = getComplianceFromClassifications(
+            row.classifications?.rohs,
+            row.classifications?.reach
+          );
+          const isTarget = targetProduct && (
+            row.digiKeyProductNumber === targetProduct.digiKeyProductNumber ||
+            (targetProduct.digiKeyProductNumber === "" &&
+              row.manufacturerProductNumber === targetProduct.manufacturerProductNumber)
+          );
+          const subCount = isTarget ? targetSubstitutionCount : undefined;
+          const level = getRiskLevel(compliance, row.partStatus ?? undefined, subCount);
+          const levelLabelMap: Record<string, string> = { Low: "低", Medium: "中", High: "高" };
+          const levelLabel = levelLabelMap[level] ?? "高";
+          const c = getPartRiskClassification(compliance, row.partStatus ?? undefined, subCount);
+          const parts: string[] = [];
+          if (c.current) parts.push("顕在リスク");
+          if (c.future) parts.push("将来リスク");
+          const detail = parts.length > 0 ? `（${parts.join("、")}）` : "";
+          return `総合リスク：${levelLabel}${detail}`;
+        },
       },
       {
         header: "Series",
@@ -197,7 +227,7 @@ export function CrossReferenceTableView({
     }
 
     return configs;
-  }, [tableData, targetProduct]);
+  }, [tableData, targetProduct, targetSubstitutionCount]);
 
   return (
     <div className="w-full h-full min-h-0 flex flex-col">
@@ -295,12 +325,14 @@ function getOrderedDatasheetParameterIds(candidates: CandidateDetailedInfo[]): s
 
 /**
  * 候補データから動的カラムを生成
+ * @param targetSubstitutionCount 対象部品行の代替件数（0なら将来リスク。対象行以外は未使用）
  */
 function generateColumns(
   candidates: CandidateDetailedInfo[],
   hasTargetProduct: boolean,
   isLoadingDatasheet: boolean,
-  onScoreClick?: (candidate: CandidateDetailedInfo) => void
+  onScoreClick?: (candidate: CandidateDetailedInfo) => void,
+  targetSubstitutionCount?: number
 ): ColumnDef<CandidateDetailedInfo>[] {
   // パラメータ列の順序: 基準行（先頭＝Target）のJSON出現順を保持し、他行のみのパラメータは初出順で末尾に追加
   const orderedParameterNames = getOrderedParameterNames(candidates);
@@ -412,13 +444,12 @@ function generateColumns(
             </span>
             <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
               <div
-                className={`h-full transition-all ${
-                  score >= 80
+                className={`h-full transition-all ${score >= 80
                     ? "bg-green-500"
                     : score >= 60
-                    ? "bg-yellow-500"
-                    : "bg-red-500"
-                }`}
+                      ? "bg-yellow-500"
+                      : "bg-red-500"
+                  }`}
                 style={{ width: `${score}%` }}
               />
             </div>
@@ -483,10 +514,41 @@ function generateColumns(
           status === "Active"
             ? "default"
             : status === "Obsolete"
-            ? "destructive"
-            : "secondary";
+              ? "destructive"
+              : "secondary";
         return <Badge variant={variant}>{status}</Badge>;
       },
+    },
+    {
+      id: "overallRiskAssessment",
+      header: () => <div className="text-xs">総合リスク評価</div>,
+      cell: ({ row, table }) => {
+        const candidate = row.original;
+        const isTargetRow = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
+        const compliance = getComplianceFromClassifications(
+          candidate.classifications?.rohs,
+          candidate.classifications?.reach
+        );
+        const substitutionCount = isTargetRow ? targetSubstitutionCount : undefined;
+        const riskLevel = getRiskLevel(
+          compliance,
+          candidate.partStatus ?? undefined,
+          substitutionCount
+        );
+        const classification = getPartRiskClassification(
+          compliance,
+          candidate.partStatus ?? undefined,
+          substitutionCount
+        );
+        return (
+          <OverallRiskAssessment
+            riskLevel={riskLevel}
+            classification={classification}
+            compact
+          />
+        );
+      },
+      enableSorting: false,
     },
     {
       accessorKey: "series",

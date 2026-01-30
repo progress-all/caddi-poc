@@ -4,6 +4,51 @@ export type ComplianceStatus = "Compliant" | "NonCompliant" | "Unknown";
 // リスクレベル
 export type RiskLevel = "Low" | "Medium" | "High";
 
+/**
+ * 部品リスク分類（可視化用・PoC）
+ * - current: 顕在リスク（Lifecycle Obsolete/Discontinued、RoHS/REACH Non-compliant）
+ * - future: 将来リスク（Lifecycle NRND/Last Time Buy、代替品・類似品0件）
+ */
+export type PartRiskClassificationKind = "current" | "future";
+
+export interface PartRiskClassification {
+  /** 顕在リスクに該当するか */
+  current: boolean;
+  /** 将来リスクに該当するか */
+  future: boolean;
+}
+
+/**
+ * リスク判断根拠（Issue #19）
+ * DigiKey API 由来を必須、PDF 由来は任意（ある場合のみ表示）
+ */
+export interface RiskEvidenceDigiKey {
+  /** Lifecycle（Active / NRND / Obsolete / Discontinued 等） */
+  lifecycle?: string;
+  /** RoHS（Compliant / NonCompliant / Unknown 等・APIの生値） */
+  rohs?: string;
+  /** REACH（Compliant / NonCompliant / Unknown 等・APIの生値） */
+  reach?: string;
+  /** 取得元: Product URL */
+  productUrl?: string;
+  /** 取得元: Datasheet URL */
+  datasheetUrl?: string;
+}
+
+/** PDFから抽出した根拠（文字列＋ページ番号） */
+export interface RiskEvidencePdfItem {
+  /** 抽出できた文字列 */
+  text: string;
+  /** 該当ページ番号（あれば） */
+  page?: number;
+}
+
+export interface RiskEvidence {
+  digiKey: RiskEvidenceDigiKey;
+  /** PDF由来の根拠（無い場合は省略・空配列は出さない） */
+  pdf?: { items: RiskEvidencePdfItem[] };
+}
+
 // 代替難易度
 export type DifficultyLevel = "Low" | "Medium" | "High";
 
