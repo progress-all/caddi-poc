@@ -20,7 +20,7 @@ interface PartSearchProps {
 export function PartSearch({ onPartSelect, selectedPart }: PartSearchProps) {
   const searchParams = useSearchParams();
   const keywordParam = searchParams.get("keyword");
-  const [keyword, setKeyword] = useState(keywordParam || "296-1395-5-ND");
+  const [keyword, setKeyword] = useState(keywordParam || "GRM188R60J105KA01");
   const [manufacturer, setManufacturer] = useState("");
 
   // クエリパラメータが変更されたときにkeywordを更新
