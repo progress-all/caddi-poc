@@ -213,6 +213,9 @@ export interface CandidateDetailedInfo extends CandidateInfo {
   /** 類似度スコア (0-100) */
   similarityScore?: number;
   
+  /** 類似度サマリー（LLM生成の要約文） */
+  similaritySummary?: string;
+  
   /** スコア内訳（デバッグ・将来の詳細表示用） */
   similarityBreakdown?: {
     parameterId: string;
@@ -221,8 +224,7 @@ export interface CandidateDetailedInfo extends CandidateInfo {
     matched: boolean;
     targetValue: string | null;
     candidateValue: string | null;
-    status: "compared" | "target_only" | "candidate_only" | "both_missing" | "excluded";
-    excludeReason?: string;
+    reason?: string; // LLMによる判定理由
   }[];
 }
 

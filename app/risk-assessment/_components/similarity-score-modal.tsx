@@ -32,18 +32,12 @@ export function SimilarityScoreModal({
 
   // 件数サマリーを計算
   const summary = useMemo(() => {
-    const compared = breakdown.filter((item) => item.status === "compared").length;
-    const notComparable = breakdown.filter(
-      (item) => item.status === "target_only" || item.status === "candidate_only"
-    ).length;
-    const bothMissing = breakdown.filter(
-      (item) => item.status === "both_missing"
-    ).length;
-    const excluded = breakdown.filter(
-      (item) => item.status === "excluded"
-    ).length;
+    const total = breakdown.length;
+    const highScore = breakdown.filter((item) => item.score >= 80).length;
+    const mediumScore = breakdown.filter((item) => item.score >= 50 && item.score < 80).length;
+    const lowScore = breakdown.filter((item) => item.score < 50).length;
 
-    return { compared, notComparable, bothMissing, excluded };
+    return { total, highScore, mediumScore, lowScore };
   }, [breakdown]);
 
   // スコアに応じた色を決定
@@ -59,37 +53,7 @@ export function SimilarityScoreModal({
     return "bg-red-500";
   };
 
-  const getResultBadge = (
-    status: string,
-    matched: boolean,
-    score: number,
-    excludeReason?: string
-  ) => {
-    if (status === "excluded") {
-      return {
-        variant: "outline" as const,
-        text: excludeReason ? `対象外（${excludeReason}）` : "対象外",
-      };
-    }
-    if (status === "both_missing") {
-      return {
-        variant: "outline" as const,
-        text: "データなし",
-      };
-    }
-    if (status === "target_only") {
-      return {
-        variant: "secondary" as const,
-        text: "比較不可 (候補に値なし)",
-      };
-    }
-    if (status === "candidate_only") {
-      return {
-        variant: "secondary" as const,
-        text: "比較不可 (Targetに値なし)",
-      };
-    }
-    // status === "compared"
+  const getResultBadge = (matched: boolean, score: number) => {
     if (matched) {
       return { variant: "default" as const, text: "OK" };
     }
@@ -155,16 +119,16 @@ export function SimilarityScoreModal({
             {/* 件数サマリー */}
             <div className="flex items-center gap-4 text-xs text-muted-foreground">
               <span>
-                比較済み: <span className="font-medium">{summary.compared}</span>
+                総数: <span className="font-medium">{summary.total}</span>
               </span>
               <span>
-                比較不可: <span className="font-medium">{summary.notComparable}</span>
+                高スコア(80以上): <span className="font-medium">{summary.highScore}</span>
               </span>
               <span>
-                データなし: <span className="font-medium">{summary.bothMissing}</span>
+                中スコア(50-79): <span className="font-medium">{summary.mediumScore}</span>
               </span>
               <span>
-                対象外: <span className="font-medium">{summary.excluded}</span>
+                低スコア(50未満): <span className="font-medium">{summary.lowScore}</span>
               </span>
             </div>
           </div>
@@ -195,6 +159,9 @@ export function SimilarityScoreModal({
                     <th className="px-4 py-2 text-center font-medium w-24 bg-muted/50">
                       Score
                     </th>
+                    <th className="px-4 py-2 text-left font-medium bg-muted/50">
+                      Reason
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -203,12 +170,7 @@ export function SimilarityScoreModal({
                     const paramId = item.parameterId.includes(":")
                       ? item.parameterId.split(":")[1]
                       : item.parameterId;
-                    const resultBadge = getResultBadge(
-                      item.status,
-                      item.matched,
-                      item.score,
-                      item.excludeReason
-                    );
+                    const resultBadge = getResultBadge(item.matched, item.score);
                     return (
                       <tr
                         key={item.parameterId}
@@ -239,17 +201,16 @@ export function SimilarityScoreModal({
                           </Badge>
                         </td>
                         <td className="px-4 py-2 text-center">
-                          {item.status === "compared" ? (
-                            <span
-                              className={`font-medium ${getScoreColor(
-                                item.score
-                              )}`}
-                            >
-                              {item.score}
-                            </span>
-                          ) : (
-                            <span className="text-muted-foreground">-</span>
-                          )}
+                          <span
+                            className={`font-medium ${getScoreColor(
+                              item.score
+                            )}`}
+                          >
+                            {item.score}
+                          </span>
+                        </td>
+                        <td className="px-4 py-2 text-xs text-muted-foreground">
+                          {item.reason ?? "-"}
                         </td>
                       </tr>
                     );

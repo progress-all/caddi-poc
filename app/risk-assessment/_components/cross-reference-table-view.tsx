@@ -427,6 +427,25 @@ function generateColumns(
       },
     },
     {
+      accessorKey: "similaritySummary",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Summary" />
+      ),
+      cell: ({ row, table }) => {
+        // 対象部品の場合は表示しない
+        const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
+        if (isTargetProduct) {
+          return <span className="text-muted-foreground">-</span>;
+        }
+        const summary = row.original.similaritySummary;
+        return summary ? (
+          <span className="text-xs text-muted-foreground line-clamp-2">{summary}</span>
+        ) : (
+          <span className="text-muted-foreground">-</span>
+        );
+      },
+    },
+    {
       accessorKey: "unitPrice",
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Unit Price" />

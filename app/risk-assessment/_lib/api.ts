@@ -4,6 +4,7 @@
 
 import type { SimilarSearchRequest, SimilarSearchResponse } from "./types";
 import type { DatasheetData } from "@/app/_lib/datasheet/types";
+import type { SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
 
 async function postJson<T>(url: string, body: unknown): Promise<T> {
   const response = await fetch(url, {
@@ -100,4 +101,30 @@ export async function fetchDatasheetParameters(
   }
 
   return results;
+}
+
+/**
+ * 類似度結果取得API呼び出し
+ * @param targetId Target部品のdatasheet_id
+ * @returns candidateIdをキーとしたSimilarityResultのレコード
+ */
+export async function fetchSimilarityResults(
+  targetId: string
+): Promise<Record<string, SimilarityResult>> {
+  try {
+    const response = await fetch(
+      `/api/similarity-results?targetId=${encodeURIComponent(targetId)}`
+    );
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error(`Failed to fetch similarity results:`, errorData);
+      return {};
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error(`Error fetching similarity results:`, error);
+    return {};
+  }
 }

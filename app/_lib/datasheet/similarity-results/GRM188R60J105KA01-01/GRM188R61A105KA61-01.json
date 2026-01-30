@@ -1,0 +1,520 @@
+{
+  "targetId": "GRM188R60J105KA01-01",
+  "candidateId": "GRM188R61A105KA61-01",
+  "evaluatedAt": "2026-01-30T07:55:30.184Z",
+  "summary": "一部パラメータで表記・条件の差あり。要確認。",
+  "parameters": [
+    {
+      "parameterId": "L_Dimensions",
+      "description": "長さ (L寸法)",
+      "targetValue": "1.6 ± 0.1 mm",
+      "candidateValue": "1.6 ± 0.1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "W_Dimensions",
+      "description": "幅 (W寸法)",
+      "targetValue": "0.8 ± 0.1 mm",
+      "candidateValue": "0.8 ± 0.1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "T_Dimensions",
+      "description": "厚さ (T寸法)",
+      "targetValue": "0.8 ± 0.1 mm",
+      "candidateValue": "0.8 ± 0.1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "e_Dimensions",
+      "description": "電極寸法 (e)",
+      "targetValue": "0.2 to 0.5 mm",
+      "candidateValue": "0.5 mm min.",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "g_Dimensions",
+      "description": "電極間隔 (g)",
+      "targetValue": "0.5 mm min.",
+      "candidateValue": "0.2 to 0.5 mm",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_PublicSTD",
+      "description": "温度特性 (公的規格コード)",
+      "targetValue": "X5R (EIA)",
+      "candidateValue": "X5R (EIA)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_CapChange",
+      "description": "温度特性 (容量変化率)",
+      "targetValue": "-15 to 15 %",
+      "candidateValue": "-15 to 15 %",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_TempRange",
+      "description": "温度特性 (温度範囲)",
+      "targetValue": "-55 to 85 °C",
+      "candidateValue": "-55 to 85 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "RatedVoltage",
+      "description": "定格電圧",
+      "targetValue": "DC 6.3 V",
+      "candidateValue": "DC 10 V",
+      "score": 95,
+      "reason": "上位互換で問題なし"
+    },
+    {
+      "parameterId": "NominalCapacitance",
+      "description": "公称静電容量",
+      "targetValue": "1 uF",
+      "candidateValue": "1 uF",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "CapacitanceTolerance",
+      "description": "静電容量許容差",
+      "targetValue": "± 10 %",
+      "candidateValue": "± 10 %",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "OperatingTempRange_Spec",
+      "description": "動作温度範囲（Operating Temp. Range）",
+      "targetValue": "-55 to 85 °C",
+      "candidateValue": "-55 to 85 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Packaging_180mmReel",
+      "description": "梱包 (180mmリール)",
+      "targetValue": "PAPER W8P4 / 4000 pcs./Reel",
+      "candidateValue": "PAPER W8P4 / 4000 pcs./Reel",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Packaging_330mmReel",
+      "description": "梱包 (330mmリール)",
+      "targetValue": "PAPER W8P4 / 10000 pcs./Reel",
+      "candidateValue": "PAPER W8P4 / 10000 pcs./Reel",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "RatedVoltage_Spec",
+      "description": "定格電圧 規格",
+      "targetValue": "Shown in Rated value. (Maximum voltage which may be applied continuously)",
+      "candidateValue": "Shown in Rated value. (Maximum voltage which may be applied continuously)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Appearance_Spec",
+      "description": "外観 規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Dimension_Spec",
+      "description": "寸法 規格",
+      "targetValue": "Within the specified dimensions.",
+      "candidateValue": "Within the specified dimensions.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VoltageProof_Spec",
+      "description": "耐電圧 規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VoltageProof_TestVoltage",
+      "description": "耐電圧 試験電圧",
+      "targetValue": "250% of the rated voltage (High dielectric constant type)",
+      "candidateValue": "250% of the rated voltage (High dielectric constant type)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VoltageProof_AppliedTime",
+      "description": "耐電圧 印加時間",
+      "targetValue": "1 to 5 s",
+      "candidateValue": "1 to 5 s",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "InsulationResistance_Spec",
+      "description": "絶縁抵抗 規格",
+      "targetValue": "C > 0.047 µF: More than 500 Ω·F",
+      "candidateValue": "C > 0.047 µF: More than 500 Ω·F",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "InsulationResistance_ChargingTime",
+      "description": "絶縁抵抗 充電時間",
+      "targetValue": "2 min",
+      "candidateValue": "2 min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Capacitance_Frequency",
+      "description": "静電容量 測定周波数",
+      "targetValue": "1.0 ± 0.1 kHz (C ≦ 10 μF)",
+      "candidateValue": "1.0 ± 0.1 kHz (C ≦ 10 μF)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Capacitance_Voltage",
+      "description": "静電容量 測定電圧",
+      "targetValue": "1.0 ± 0.2 Vrms (C ≦ 10 μF)",
+      "candidateValue": "1.0 ± 0.2 Vrms (C ≦ 10 μF)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "DissipationFactor_Spec",
+      "description": "誘電正接 規格",
+      "targetValue": "0.05 max. (C < 3.3 µF) / 0.1 max. (C ≧ 3.3 µF) for W.V. 6.3/4Vdc",
+      "candidateValue": "0.035 max. (W.V. 16/10Vdc)",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_CapChange_Spec",
+      "description": "温度特性 容量変化率 判定規格",
+      "targetValue": "R6: Within ± 15% (-55 °C to +85 °C)",
+      "candidateValue": "R6: Within ± 15% (-55 °C to +85 °C)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "AdhesiveStrength_AppliedForce",
+      "description": "終端固着強度 加圧力",
+      "targetValue": "5 N (GRM15/GRM18)",
+      "candidateValue": "5 N (GRM15/GRM18)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "AdhesiveStrength_HoldingTime",
+      "description": "終端固着強度 保持時間",
+      "targetValue": "10 ± 1 s",
+      "candidateValue": "10 ± 1 s",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Vibration_Appearance_Spec",
+      "description": "耐振動性 外観規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Vibration_Capacitance_Spec",
+      "description": "耐振動性 静電容量規格",
+      "targetValue": "Within the specified initial value.",
+      "candidateValue": "Within the specified initial value.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Vibration_DF_Spec",
+      "description": "耐振動性 誘電正接規格",
+      "targetValue": "Within the specified initial value.",
+      "candidateValue": "Within the specified initial value.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Vibration_TotalAmplitude",
+      "description": "耐振動性 全振幅",
+      "targetValue": "1.5 mm",
+      "candidateValue": "1.5 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Vibration_Time",
+      "description": "耐振動性 試験時間",
+      "targetValue": "2 h in each 3 directions (total 6 h)",
+      "candidateValue": "2 h in each 3 directions (total 6 h)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "SubstrateBendingTest_Appearance_Spec",
+      "description": "基板曲げテスト 外観規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "SubstrateBendingTest_CapChange_Spec",
+      "description": "基板曲げテスト 容量変化率規格",
+      "targetValue": "Within ± 10%",
+      "candidateValue": "Within ± 10%",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "SubstrateBendingTest_Flexure",
+      "description": "基板曲げテスト たわみ量",
+      "targetValue": "1 mm",
+      "candidateValue": "1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "SubstrateBendingTest_HoldingTime",
+      "description": "基板曲げテスト 保持時間",
+      "targetValue": "5 ± 1 s",
+      "candidateValue": "5 ± 1 s",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Solderability_Spec",
+      "description": "はんだ付け性 判定規格",
+      "targetValue": "95% of the terminations is to be soldered evenly and continuously.",
+      "candidateValue": "95% of the terminations is to be soldered evenly and continuously.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Solderability_SolderTemp",
+      "description": "はんだ付け性 はんだ温度",
+      "targetValue": "245 ± 5 °C",
+      "candidateValue": "245 ± 5 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Solderability_ImmersionTime",
+      "description": "はんだ付け性 浸漬時間",
+      "targetValue": "2 ± 0.5 s",
+      "candidateValue": "2 ± 0.5 s",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_Appearance_Spec",
+      "description": "はんだ耐熱 外観規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_CapChange_Spec",
+      "description": "はんだ耐熱 容量変化率規格",
+      "targetValue": "Within ± 7.5%",
+      "candidateValue": "Within ± 7.5%",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_DF_Spec",
+      "description": "はんだ耐熱 誘電正接規格",
+      "targetValue": "Within the specified initial value.",
+      "candidateValue": "Within the specified initial value.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_IR_Spec",
+      "description": "はんだ耐熱 絶縁抵抗規格",
+      "targetValue": "Within the specified initial value.",
+      "candidateValue": "Within the specified initial value.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_VoltageProof_Spec",
+      "description": "はんだ耐熱 耐電圧規格",
+      "targetValue": "No defects.",
+      "candidateValue": "No defects.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_SolderTemp",
+      "description": "はんだ耐熱 はんだ温度",
+      "targetValue": "270 ± 5 °C",
+      "candidateValue": "270 ± 5 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ResistanceToSolderingHeat_ImmersionTime",
+      "description": "はんだ耐熱 浸漬時間",
+      "targetValue": "10 ± 0.5 s",
+      "candidateValue": "10 ± 0.5 s",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "TemperatureSuddenChange_Appearance_Spec",
+      "description": "温度急変 外観規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "TemperatureSuddenChange_CapChange_Spec",
+      "description": "温度急変 容量変化率規格",
+      "targetValue": "Within ± 7.5% (R6)",
+      "candidateValue": "Within ± 7.5%",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "TemperatureSuddenChange_Cycle",
+      "description": "温度急変 サイクル数",
+      "targetValue": "5 cycles",
+      "candidateValue": "5 cycles",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_Appearance_Spec",
+      "description": "高温高湿(定常) 外観規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_CapChange_Spec",
+      "description": "高温高湿(定常) 容量変化率規格",
+      "targetValue": "Within ± 12.5%",
+      "candidateValue": "Within ± 12.5%",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_DF_Spec",
+      "description": "高温高湿(定常) 誘電正接規格",
+      "targetValue": "0.2 max.",
+      "candidateValue": "W.V. 16/10Vdc: 0.05 max.",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_IR_Spec",
+      "description": "高温高湿(定常) 絶縁抵抗規格",
+      "targetValue": "More than 12.5 Ω·F",
+      "candidateValue": "More than 500 MΩ or 25 Ω·F (Whichever is smaller)",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_TestTemp",
+      "description": "高温高湿(定常) 試験温度",
+      "targetValue": "40 ± 2 °C",
+      "candidateValue": "40 ± 2 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_TestHumidity",
+      "description": "高温高湿(定常) 試験湿度",
+      "targetValue": "90%RH to 95%RH",
+      "candidateValue": "90%RH to 95%RH",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "HighTemperatureHighHumidity_TestTime",
+      "description": "高温高湿(定常) 試験時間",
+      "targetValue": "500 ± 12 h",
+      "candidateValue": "500 ± 12 h",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Durability_Appearance_Spec",
+      "description": "耐久性 外観規格",
+      "targetValue": "No defects or abnormalities.",
+      "candidateValue": "No defects or abnormalities.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Durability_CapChange_Spec",
+      "description": "耐久性 容量変化率規格",
+      "targetValue": "Within ± 12.5%",
+      "candidateValue": "Within ± 12.5%",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Durability_DF_Spec",
+      "description": "耐久性 誘電正接規格",
+      "targetValue": "0.2 max.",
+      "candidateValue": "W.V. 16/10Vdc: 0.05 max.",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "Durability_IR_Spec",
+      "description": "耐久性 絶縁抵抗規格",
+      "targetValue": "More than 25 Ω·F",
+      "candidateValue": "More than 1,000 MΩ or 50 Ω·F (Whichever is smaller)",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "Durability_TestTemperature",
+      "description": "耐久性 試験温度",
+      "targetValue": "Max. Operating Temp. ± 3 °C",
+      "candidateValue": "Max. Operating Temp. ± 3 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Durability_AppliedVoltage",
+      "description": "耐久性 印加電圧",
+      "targetValue": "150% of the rated voltage",
+      "candidateValue": "200% of the rated voltage",
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
+    },
+    {
+      "parameterId": "Durability_TestTime",
+      "description": "耐久性 試験時間",
+      "targetValue": "1000 ± 12 h",
+      "candidateValue": "1000 ± 12 h",
+      "score": 100,
+      "reason": "同一"
+    }
+  ]
+}
