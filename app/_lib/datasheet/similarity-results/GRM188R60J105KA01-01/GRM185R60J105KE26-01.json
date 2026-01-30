@@ -1,8 +1,8 @@
 {
   "targetId": "GRM188R60J105KA01-01",
   "candidateId": "GRM185R60J105KE26-01",
-  "evaluatedAt": "2026-01-30T07:44:00.722Z",
-  "summary": "厚さ(T寸法)が0.8mmと0.5mmで異なり実装高さが変わる。絶縁抵抗・誘電正接規格も相違あり要確認。",
+  "evaluatedAt": "2026-01-30T08:19:53.976Z",
+  "summary": "一部パラメータで表記・条件の差あり。要確認。",
   "parameters": [
     {
       "parameterId": "L_Dimensions",
@@ -153,8 +153,8 @@
       "description": "耐電圧 試験電圧",
       "targetValue": "250% of the rated voltage (High dielectric constant type)",
       "candidateValue": "250% of the rated voltage",
-      "score": 95,
-      "reason": "表記差のみ実質同一"
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
     },
     {
       "parameterId": "VoltageProof_AppliedTime",
@@ -169,32 +169,32 @@
       "description": "絶縁抵抗 規格",
       "targetValue": "C > 0.047 µF: More than 500 Ω·F",
       "candidateValue": "More than 50 Ω·F",
-      "score": 55,
-      "reason": "絶縁抵抗規格500と50で異なる"
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
     },
     {
       "parameterId": "InsulationResistance_ChargingTime",
       "description": "絶縁抵抗 充電時間",
       "targetValue": "2 min",
       "candidateValue": "1 min",
-      "score": 85,
-      "reason": "試験条件の差(2分と1分)"
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
     },
     {
       "parameterId": "Capacitance_Frequency",
       "description": "静電容量 測定周波数",
       "targetValue": "1.0 ± 0.1 kHz (C ≦ 10 μF)",
       "candidateValue": "1.0 ± 0.1 kHz",
-      "score": 98,
-      "reason": "実質同一"
+      "score": 85,
+      "reason": "条件同程度"
     },
     {
       "parameterId": "Capacitance_Voltage",
       "description": "静電容量 測定電圧",
       "targetValue": "1.0 ± 0.2 Vrms (C ≦ 10 μF)",
       "candidateValue": "0.5 ± 0.1 Vrms (C ≦ 10 μF / 6.3V max.)",
-      "score": 80,
-      "reason": "測定電圧条件が異なる"
+      "score": 70,
+      "reason": "表記・条件の差あり要確認"
     },
     {
       "parameterId": "DissipationFactor_Spec",
@@ -202,7 +202,7 @@
       "targetValue": "0.05 max. (C < 3.3 µF) / 0.1 max. (C ≧ 3.3 µF) for W.V. 6.3/4Vdc",
       "candidateValue": "0.1 max. (R6)",
       "score": 70,
-      "reason": "1µF品でtanδが0.05と0.1で異なる"
+      "reason": "表記・条件の差あり要確認"
     },
     {
       "parameterId": "TemperatureCharacteristics_CapChange_Spec",

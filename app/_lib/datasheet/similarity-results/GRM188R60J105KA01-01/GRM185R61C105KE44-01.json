@@ -1,7 +1,7 @@
 {
   "targetId": "GRM188R60J105KA01-01",
   "candidateId": "GRM185R61C105KE44-01",
-  "evaluatedAt": "2026-01-30T07:55:28.663Z",
+  "evaluatedAt": "2026-01-30T08:19:55.235Z",
   "summary": "e_Dimensions(値欠損のため比較不能)。要確認。",
   "parameters": [
     {
@@ -81,8 +81,8 @@
       "description": "公称静電容量",
       "targetValue": "1 uF",
       "candidateValue": "1 µF",
-      "score": 70,
-      "reason": "表記・条件の差あり要確認"
+      "score": 100,
+      "reason": "表記揺れで同一値"
     },
     {
       "parameterId": "CapacitanceTolerance",
