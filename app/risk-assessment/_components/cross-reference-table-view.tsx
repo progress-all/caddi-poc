@@ -6,11 +6,10 @@ import { ExternalLink, FileText, Loader2 } from "lucide-react";
 import { DataTable, type CsvColumnConfig } from "@/components/ui/data-table";
 import { DataTableColumnHeader } from "@/components/ui/data-table-column-header";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import type { CandidateDetailedInfo } from "../_lib/types";
 import { getPartRiskClassification, getComplianceFromClassifications, getRiskLevel } from "../_lib/compliance-utils";
 import { SubstituteTypeBadge } from "./substitute-type-badge";
-import { SimilarityScoreModal } from "./similarity-score-modal";
+import { SimilarityScoreModal, type SimilarityModalVariant } from "./similarity-score-modal";
 import { OverallRiskAssessment } from "./overall-risk-assessment";
 
 interface CrossReferenceTableViewProps {
@@ -32,12 +31,14 @@ export function CrossReferenceTableView({
   // モーダルの状態管理
   const [selectedCandidate, setSelectedCandidate] =
     useState<CandidateDetailedInfo | null>(null);
+  const [modalVariant, setModalVariant] = useState<SimilarityModalVariant | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // スコアクリックハンドラ
-  const handleScoreClick = (candidate: CandidateDetailedInfo) => {
+  // スコアクリックハンドラ（類似度セルからのみ呼ばれる）
+  const handleScoreClick = (candidate: CandidateDetailedInfo, variant: SimilarityModalVariant) => {
     if (!targetProduct) return;
     setSelectedCandidate(candidate);
+    setModalVariant(variant);
     setIsModalOpen(true);
   };
 
@@ -60,7 +61,8 @@ export function CrossReferenceTableView({
       tableData,
       !!targetProduct,
       isLoadingDatasheet,
-      targetSubstitutionCount
+      targetSubstitutionCount,
+      handleScoreClick
     );
   }, [tableData, targetProduct, isLoadingDatasheet, targetSubstitutionCount]);
 
@@ -111,9 +113,25 @@ export function CrossReferenceTableView({
         },
       },
       {
-        header: "Similarity",
+        header: "Similarity (DigiKey API)",
         accessor: (row) => {
-          // 対象部品の場合は空文字
+          if (
+            targetProduct &&
+            (targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
+              (targetProduct.digiKeyProductNumber === "" &&
+                targetProduct.manufacturerProductNumber ===
+                row.manufacturerProductNumber))
+          ) {
+            return "";
+          }
+          return row.similarityScoreDigiKey !== undefined && row.similarityScoreDigiKey !== null
+            ? row.similarityScoreDigiKey.toString()
+            : "";
+        },
+      },
+      {
+        header: "Similarity (Datasheet)",
+        accessor: (row) => {
           if (
             targetProduct &&
             (targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
@@ -126,6 +144,21 @@ export function CrossReferenceTableView({
           return row.similarityScore !== undefined && row.similarityScore !== null
             ? row.similarityScore.toString()
             : "";
+        },
+      },
+      {
+        header: "Summary (Datasheet)",
+        accessor: (row) => {
+          if (
+            targetProduct &&
+            (targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
+              (targetProduct.digiKeyProductNumber === "" &&
+                targetProduct.manufacturerProductNumber ===
+                row.manufacturerProductNumber))
+          ) {
+            return "";
+          }
+          return row.similaritySummary || "";
         },
       },
       {
@@ -228,15 +261,6 @@ export function CrossReferenceTableView({
     return configs;
   }, [tableData, targetProduct, targetSubstitutionCount]);
 
-  // 行クリックハンドラ（対象部品行以外でモーダルを表示）
-  const handleRowClick = (row: CandidateDetailedInfo, index: number) => {
-    // 対象部品が存在する場合、最初の行（index === 0）はTarget行なのでスキップ
-    if (targetProduct && index === 0) {
-      return;
-    }
-    handleScoreClick(row);
-  };
-
   return (
     <div className="w-full h-full min-h-0 flex flex-col">
       <DataTable
@@ -253,15 +277,15 @@ export function CrossReferenceTableView({
         csvColumnAccessors={csvColumnAccessors}
         enableStickyHeader={true}
         maxHeight="calc(100vh - 300px)"
-        onRowClick={handleRowClick}
       />
       {/* スコア内訳モーダル */}
-      {targetProduct && selectedCandidate && (
+      {targetProduct && selectedCandidate && modalVariant && (
         <SimilarityScoreModal
           open={isModalOpen}
           onOpenChange={setIsModalOpen}
           targetProduct={targetProduct}
           candidate={selectedCandidate}
+          variant={modalVariant}
         />
       )}
     </div>
@@ -335,12 +359,14 @@ function getOrderedDatasheetParameterIds(candidates: CandidateDetailedInfo[]): s
 /**
  * 候補データから動的カラムを生成
  * @param targetSubstitutionCount 対象部品行の代替件数（0なら将来リスク。対象行以外は未使用）
+ * @param onScoreClick 類似度セルクリック時のハンドラ（候補、variant）
  */
 function generateColumns(
   candidates: CandidateDetailedInfo[],
   hasTargetProduct: boolean,
   isLoadingDatasheet: boolean,
-  targetSubstitutionCount?: number
+  targetSubstitutionCount?: number,
+  onScoreClick?: (candidate: CandidateDetailedInfo, variant: SimilarityModalVariant) => void
 ): ColumnDef<CandidateDetailedInfo>[] {
   // パラメータ列の順序: 基準行（先頭＝Target）のJSON出現順を保持し、他行のみのパラメータは初出順で末尾に追加
   const orderedParameterNames = getOrderedParameterNames(candidates);
@@ -418,53 +444,91 @@ function generateColumns(
       },
     },
     {
-      accessorKey: "similarityScore",
+      accessorKey: "similarityScoreDigiKey",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Similarity" />
+        <DataTableColumnHeader column={column} title="Similarity (DigiKey API)" />
       ),
       cell: ({ row, table }) => {
-        // 対象部品の場合は表示しない
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
         if (isTargetProduct) {
           return <span className="text-muted-foreground">-</span>;
         }
-
-        const score = row.original.similarityScore;
+        const score = row.original.similarityScoreDigiKey;
         if (score === undefined || score === null) {
           return <span className="text-muted-foreground">-</span>;
         }
-
-        // スコアに応じた色を決定
         const getScoreColor = (s: number) => {
           if (s >= 80) return "text-green-600 dark:text-green-400";
           if (s >= 60) return "text-yellow-600 dark:text-yellow-400";
           return "text-red-600 dark:text-red-400";
         };
-
         return (
-          <div className="flex items-center gap-2 min-w-[100px] w-full">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onScoreClick?.(row.original, "digikey");
+            }}
+            className="flex items-center gap-2 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
+          >
             <span className={`text-sm font-medium ${getScoreColor(score)}`}>
               {score}
             </span>
             <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
               <div
-                className={`h-full transition-all ${score >= 80
-                    ? "bg-green-500"
-                    : score >= 60
-                      ? "bg-yellow-500"
-                      : "bg-red-500"
-                  }`}
+                className={`h-full transition-all ${score >= 80 ? "bg-green-500" : score >= 60 ? "bg-yellow-500" : "bg-red-500"}`}
                 style={{ width: `${score}%` }}
               />
             </div>
-          </div>
+          </button>
+        );
+      },
+    },
+    {
+      accessorKey: "similarityScore",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Similarity (Datasheet)" />
+      ),
+      cell: ({ row, table }) => {
+        const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
+        if (isTargetProduct) {
+          return <span className="text-muted-foreground">-</span>;
+        }
+        const score = row.original.similarityScore;
+        if (score === undefined || score === null) {
+          return <span className="text-muted-foreground">-</span>;
+        }
+        const getScoreColor = (s: number) => {
+          if (s >= 80) return "text-green-600 dark:text-green-400";
+          if (s >= 60) return "text-yellow-600 dark:text-yellow-400";
+          return "text-red-600 dark:text-red-400";
+        };
+        return (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onScoreClick?.(row.original, "datasheet");
+            }}
+            className="flex items-center gap-2 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
+          >
+            <span className={`text-sm font-medium ${getScoreColor(score)}`}>
+              {score}
+            </span>
+            <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
+              <div
+                className={`h-full transition-all ${score >= 80 ? "bg-green-500" : score >= 60 ? "bg-yellow-500" : "bg-red-500"}`}
+                style={{ width: `${score}%` }}
+              />
+            </div>
+          </button>
         );
       },
     },
     {
       accessorKey: "similaritySummary",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Summary" />
+        <DataTableColumnHeader column={column} title="Summary (Datasheet)" />
       ),
       cell: ({ row, table }) => {
         // 対象部品の場合は表示しない

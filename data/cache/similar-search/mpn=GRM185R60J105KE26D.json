@@ -1,0 +1,2432 @@
+{
+  "generatedAt": "2026-02-02T01:49:55.332Z",
+  "key": "mpn=GRM185R60J105KE26D",
+  "data": {
+    "targetMpn": "GRM185R60J105KE26D",
+    "targetProduct": {
+      "digiKeyProductNumber": "490-7765-2-ND",
+      "manufacturerProductNumber": "GRM185R60J105KE26D",
+      "manufacturerName": "Murata Electronics",
+      "description": "CAP CER 1UF 6.3V X5R 0603",
+      "quantityAvailable": 12219,
+      "productUrl": "https://www.digikey.com/en/products/detail/murata-electronics/GRM185R60J105KE26D/4358121",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5447/490-Ceramic-Capacitor-Tan-Field.jpg",
+      "unitPrice": "0.21",
+      "sources": [],
+      "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+      "datasheetUrl": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM185R60J105KE26-01.pdf",
+      "partStatus": "Not For New Designs",
+      "backOrderNotAllowed": false,
+      "normallyStocking": true,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Capacitors",
+        "categoryId": 3
+      },
+      "series": "GRM",
+      "manufacturerLeadWeeks": "12",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "490-7765-2-ND",
+          "packageType": "Tape & Reel (TR)",
+          "quantityAvailable": 12000,
+          "pricing": [
+            {
+              "breakQuantity": 4000,
+              "unitPrice": 0.03755
+            },
+            {
+              "breakQuantity": 8000,
+              "unitPrice": 0.0351
+            },
+            {
+              "breakQuantity": 12000,
+              "unitPrice": 0.0344
+            },
+            {
+              "breakQuantity": 20000,
+              "unitPrice": 0.0342
+            },
+            {
+              "breakQuantity": 28000,
+              "unitPrice": 0.03356
+            },
+            {
+              "breakQuantity": 40000,
+              "unitPrice": 0.03344
+            },
+            {
+              "breakQuantity": 48000,
+              "unitPrice": 0.03338
+            },
+            {
+              "breakQuantity": 96000,
+              "unitPrice": 0.03319
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "490-7765-1-ND",
+          "packageType": "Cut Tape (CT)",
+          "quantityAvailable": 12219,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.21
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.119
+            },
+            {
+              "breakQuantity": 50,
+              "unitPrice": 0.0852
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 0.0747
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 0.05722
+            },
+            {
+              "breakQuantity": 1000,
+              "unitPrice": 0.05182
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "490-7765-6-ND",
+          "packageType": "Digi-Reel®",
+          "quantityAvailable": 12219,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.21
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.119
+            },
+            {
+              "breakQuantity": 50,
+              "unitPrice": 0.0852
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 0.0747
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 0.05722
+            },
+            {
+              "breakQuantity": 1000,
+              "unitPrice": 0.05182
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Capacitance",
+          "value": "1 µF",
+          "parameterId": 2049
+        },
+        {
+          "name": "Tolerance",
+          "value": "±10%",
+          "parameterId": 3
+        },
+        {
+          "name": "Voltage - Rated",
+          "value": "6.3V",
+          "parameterId": 14
+        },
+        {
+          "name": "Temperature Coefficient",
+          "value": "X5R",
+          "parameterId": 17
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-55°C ~ 85°C",
+          "parameterId": 252
+        },
+        {
+          "name": "Features",
+          "value": "-",
+          "parameterId": 5
+        },
+        {
+          "name": "Ratings",
+          "value": "-",
+          "parameterId": 707
+        },
+        {
+          "name": "Applications",
+          "value": "General Purpose",
+          "parameterId": 405
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount, MLCC",
+          "parameterId": 69
+        },
+        {
+          "name": "Package / Case",
+          "value": "0603 (1608 Metric)",
+          "parameterId": 16
+        },
+        {
+          "name": "Size / Dimension",
+          "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+          "parameterId": 46
+        },
+        {
+          "name": "Height - Seated (Max)",
+          "value": "-",
+          "parameterId": 1500
+        },
+        {
+          "name": "Thickness (Max)",
+          "value": "0.020\" (0.50mm)",
+          "parameterId": 1501
+        },
+        {
+          "name": "Lead Spacing",
+          "value": "-",
+          "parameterId": 508
+        },
+        {
+          "name": "Lead Style",
+          "value": "-",
+          "parameterId": 4
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "490-GRM185R61A105KE36DTR-ND",
+        "manufacturerProductNumber": "GRM185R61A105KE36D",
+        "manufacturerName": "Murata Electronics",
+        "description": "CAP CER 1UF 10V X5R 0603",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/murata-electronics/GRM185R61A105KE36D/965907",
+        "unitPrice": "0",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Upgrade",
+        "detailedDescription": "1 µF ±10% 10V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/703/GRM185R61A105KE36.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5447/490-Ceramic-Capacitor-Tan-Field.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": true,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "GRM",
+        "manufacturerLeadWeeks": "14",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "490-GRM185R61A105KE36DTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "10V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.020\" (0.50mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "490-3894-1-ND",
+        "manufacturerProductNumber": "GRM185R61C105KE44D",
+        "manufacturerName": "Murata Electronics",
+        "description": "CAP CER 1UF 16V X5R 0603",
+        "quantityAvailable": 86995,
+        "productUrl": "https://www.digikey.com/en/products/detail/murata-electronics/GRM185R61C105KE44D/965908",
+        "unitPrice": "0.15",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Upgrade",
+        "detailedDescription": "1 µF ±10% 16V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM185R61C105KE44-01.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5447/490-Ceramic-Capacitor-Tan-Field.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "GRM",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "490-3894-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 84000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.02696
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.02247
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.02182
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.02168
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.0216
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.02152
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.02096
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.02082
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.02082
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-3894-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 86995,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.15
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.087
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0614
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0534
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.0402
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03613
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-3894-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 86995,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.15
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.087
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0614
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0534
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.0402
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03613
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "16V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.020\" (0.50mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "490-6372-1-ND",
+        "manufacturerProductNumber": "GRM185R61C105KE44J",
+        "manufacturerName": "Murata Electronics",
+        "description": "CAP CER 1UF 16V X5R 0603",
+        "quantityAvailable": 64155,
+        "productUrl": "https://www.digikey.com/en/products/detail/murata-electronics/GRM185R61C105KE44J/2611003",
+        "unitPrice": "0.19",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Upgrade",
+        "detailedDescription": "1 µF ±10% 16V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM185R61C105KE44-01.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5447/490-Ceramic-Capacitor-Tan-Field.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "GRM",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "490-6372-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 40000,
+            "pricing": [
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.02556
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.0245
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-6372-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 64155,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.19
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.108
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0661
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03306
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-6372-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 64155,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.19
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.108
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0661
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03306
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "16V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.020\" (0.50mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "490-1550-1-ND",
+        "manufacturerProductNumber": "GRM188R60J105KA01D",
+        "manufacturerName": "Murata Electronics",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 1141256,
+        "productUrl": "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J105KA01D/587044",
+        "unitPrice": "0.14",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R60J105KA01-01.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5447/490-Ceramic-Capacitor-Tan-Field.jpg",
+        "partStatus": "Not For New Designs",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "GRM",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "490-1550-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 1140000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.02267
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.02091
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.02004
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.01906
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.0185
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.01795
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.01769
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.01682
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.01677
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-1550-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 1141256,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.079
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0552
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0481
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.03596
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03223
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-1550-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 1141256,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.079
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0552
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0481
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.03596
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03223
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.035\" (0.90mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "490-6404-1-ND",
+        "manufacturerProductNumber": "GRM188R60J105KA01J",
+        "manufacturerName": "Murata Electronics",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 117708,
+        "productUrl": "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J105KA01J/2612409",
+        "unitPrice": "0.14",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R60J105KA01-01.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5447/490-Ceramic-Capacitor-Tan-Field.jpg",
+        "partStatus": "Not For New Designs",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "GRM",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "490-6404-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 100000,
+            "pricing": [
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.01819
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.01697
+              },
+              {
+                "breakQuantity": 30000,
+                "unitPrice": 0.01689
+              },
+              {
+                "breakQuantity": 50000,
+                "unitPrice": 0.0168
+              },
+              {
+                "breakQuantity": 70000,
+                "unitPrice": 0.01674
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.01669
+              },
+              {
+                "breakQuantity": 120000,
+                "unitPrice": 0.01666
+              },
+              {
+                "breakQuantity": 240000,
+                "unitPrice": 0.01657
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-6404-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 117708,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.079
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0552
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0481
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.02962
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.02626
+              },
+              {
+                "breakQuantity": 2500,
+                "unitPrice": 0.02397
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "490-6404-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 117708,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.079
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0552
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0481
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.02962
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.02626
+              },
+              {
+                "breakQuantity": 2500,
+                "unitPrice": 0.02397
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.035\" (0.90mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "587-1992-1-ND",
+        "manufacturerProductNumber": "LMK107BJ105KK-T",
+        "manufacturerName": "Taiyo Yuden",
+        "description": "CAP CER 1UF 10V X5R 0603",
+        "quantityAvailable": 5382,
+        "productUrl": "https://www.digikey.com/en/products/detail/taiyo-yuden/LMK107BJ105KK-T/1171611",
+        "unitPrice": "0.16",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Upgrade",
+        "detailedDescription": "1 µF ±10% 10V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/4334/LMK107BJ105KK-T_SS.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/331/Taiyo-Yuden-0603-%281608-Metric%29.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "M",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "587-1992-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 4000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.02484
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.02353
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.02287
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.02273
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.02212
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.02204
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.022
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.02186
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.02185
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "587-1992-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 5382,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.16
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.089
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0628
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0548
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.0413
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03714
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "587-1992-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 5382,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.16
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.089
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0628
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0548
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.0413
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03714
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "10V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "SMPS Filtering",
+            "parameterId": 405
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.020\" (0.50mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "478-KGM15BR50J105KTCT-ND",
+        "manufacturerProductNumber": "06036D105KAT2A",
+        "manufacturerName": "KYOCERA AVX",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 45177,
+        "productUrl": "https://www.digikey.com/en/products/detail/kyocera-avx/06036D105KAT2A/717509",
+        "unitPrice": "0.14",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://datasheets.kyocera-avx.com/cx5r-KGM.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7204/MFG_478_KGM-X5R_series_0603%281608Metric%29.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "KGM - X5R",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "478-KGM15BR50J105KTTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 44000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.0259
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.02247
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.02182
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.02168
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.02108
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.021
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.02096
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.02082
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "478-KGM15BR50J105KTCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 45177,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.082
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0572
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0498
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.0373
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03347
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "478-KGM15BR50J105KTDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 45177,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.082
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0572
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0498
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.0373
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.03347
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.037\" (0.95mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "399-C0603C105K9PACTUCT-ND",
+        "manufacturerProductNumber": "C0603C105K9PACTU",
+        "manufacturerName": "KEMET",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 102291,
+        "productUrl": "https://www.digikey.com/en/products/detail/kemet/C0603C105K9PACTU/2199791",
+        "unitPrice": "0.1",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://yageogroup.com/content/datasheet/asset/file/KEM_C1006_X5R_SMD",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5352/0603-%281608-Metric%29-Ceramic-Capacitor.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "SMD Comm X5R",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "399-C0603C105K9PACTUTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 100000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.01203
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.01136
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.01128
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.0112
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.01063
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.01058
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.01043
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.0098
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.00977
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "399-C0603C105K9PACTUCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 102291,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.046
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0314
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.027
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.01964
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.01737
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "399-C0603C105K9PACTUDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 102291,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.046
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0314
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.027
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.01964
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.01737
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "Bypass, Decoupling",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.035\" (0.90mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "311-1447-1-ND",
+        "manufacturerProductNumber": "CC0603KRX5R5BB105",
+        "manufacturerName": "YAGEO",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 13980,
+        "productUrl": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX5R5BB105/2833612",
+        "unitPrice": "0.1",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X5R_4V-TO-50V",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2488/0603%289mmthickness%29.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "CC",
+        "manufacturerLeadWeeks": "16",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "311-1447-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 12000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.01632
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.01401
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.0134
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.0133
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.01272
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.01267
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.01264
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.01246
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.01242
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "311-1447-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 13980,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.055
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0382
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0329
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.02412
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.02108
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "311-1447-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 13980,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.055
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0382
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0329
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.02412
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.02108
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.035\" (0.90mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1276-1036-1-ND",
+        "manufacturerProductNumber": "CL10A105KQ8NNNC",
+        "manufacturerName": "Samsung Electro-Mechanics",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 255374,
+        "productUrl": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KQ8NNNC/3886694",
+        "unitPrice": "0.1",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/1150/CL10A105KQ8NNNC_Spec.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2537/Ceramic-Capacitor-CL-Series.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "CL",
+        "manufacturerLeadWeeks": "31",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1276-1036-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 252000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.00449
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.0044
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.00437
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.00433
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.00431
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.00428
+              },
+              {
+                "breakQuantity": 48000,
+                "unitPrice": 0.00427
+              },
+              {
+                "breakQuantity": 96000,
+                "unitPrice": 0.00423
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.00423
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1276-1036-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 255374,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.026
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0176
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.015
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.01058
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.00924
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1276-1036-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 255374,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.026
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 0.0176
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.015
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.01058
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.00924
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.035\" (0.90mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "CL10A105KQ8NNNL-ND",
+        "manufacturerProductNumber": "CL10A105KQ8NNNL",
+        "manufacturerName": "Samsung Electro-Mechanics",
+        "description": "CAP CER 1UF 6.3V X5R 0603",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KQ8NNNL/3894248",
+        "unitPrice": "0",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "1 µF ±10% 6.3V Ceramic Capacitor X5R 0603 (1608 Metric)",
+        "datasheetUrl": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05Y105KP6VPN",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2537/Ceramic-Capacitor-CL-Series.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": true,
+        "category": {
+          "name": "Capacitors",
+          "categoryId": 3
+        },
+        "series": "CL",
+        "manufacturerLeadWeeks": "31",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "CL10A105KQ8NNNL-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Capacitance",
+            "value": "1 µF",
+            "parameterId": 2049
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%",
+            "parameterId": 3
+          },
+          {
+            "name": "Voltage - Rated",
+            "value": "6.3V",
+            "parameterId": 14
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "X5R",
+            "parameterId": 17
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Ratings",
+            "value": "-",
+            "parameterId": 707
+          },
+          {
+            "name": "Applications",
+            "value": "General Purpose",
+            "parameterId": 405
+          },
+          {
+            "name": "Failure Rate",
+            "value": "-",
+            "parameterId": 1531
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount, MLCC",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+            "parameterId": 46
+          },
+          {
+            "name": "Height - Seated (Max)",
+            "value": "-",
+            "parameterId": 1500
+          },
+          {
+            "name": "Thickness (Max)",
+            "value": "0.035\" (0.90mm)",
+            "parameterId": 1501
+          },
+          {
+            "name": "Lead Spacing",
+            "value": "-",
+            "parameterId": 508
+          },
+          {
+            "name": "Lead Style",
+            "value": "-",
+            "parameterId": 4
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-02T01:49:55.331Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 11
+      }
+    }
+  }
+}

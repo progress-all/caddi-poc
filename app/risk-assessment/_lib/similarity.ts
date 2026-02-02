@@ -6,6 +6,7 @@
 
 import {
   getAllComparisonParameters,
+  getComparisonParametersBySource,
   getComparisonParameter,
   DEFAULT_CONFIG,
   type ComparisonParameter,
@@ -43,6 +44,8 @@ export interface ParameterScore {
   status: "compared" | "target_only" | "candidate_only" | "both_missing" | "excluded";
   /** 対象外とする理由（status === "excluded" の場合） */
   excludeReason?: string;
+  /** 判定理由（evaluate-similarity の良い例に準拠） */
+  reason?: string;
 }
 
 /**
@@ -256,29 +259,87 @@ export function createRangeMatcher(): ValueMatcher {
   };
 }
 
+type SimilarityInput = {
+  parameters?: Array<{ name: string; value: string }>;
+  datasheetParameters?: Record<string, { value: string | null }>;
+};
+
 /**
- * 類似度を計算
- * 
- * @param target 対象部品
- * @param candidate 候補部品
- * @returns 類似度計算結果
+ * "-" や "N/A" 等を「値なし」として扱う（DigiKey APIで未適用パラメータに使われる）
  */
-export function calculateSimilarity(
-  target: {
-    parameters?: Array<{ name: string; value: string }>;
-    datasheetParameters?: Record<string, { value: string | null }>;
-  },
-  candidate: {
-    parameters?: Array<{ name: string; value: string }>;
-    datasheetParameters?: Record<string, { value: string | null }>;
+function isEmptyOrDash(v: string | null | undefined): boolean {
+  if (v == null || v === "") return true;
+  const s = String(v).trim();
+  return s === "-" || s === "–" || s === "—" || s === "N/A" || s === "n/a" || s === "—";
+}
+
+/**
+ * ルールベース評価の reason を生成（evaluate-similarity の良い例に準拠）
+ */
+function formatReason(
+  displayName: string,
+  targetValue: string | null,
+  candidateValue: string | null,
+  score: number,
+  matched: boolean
+): string {
+  if (score >= 100) return "同一";
+  if (score >= 80 && matched) return "上位互換";
+  if (score >= 80) return "許容範囲内";
+
+  const extractMm = (s: string | null) => {
+    if (!s) return null;
+    const m = String(s).match(/\((\d+\.?\d*)\s*mm\)/i);
+    return m ? parseFloat(m[1]) : null;
+  };
+  const extractNums = (s: string | null) =>
+    s ? String(s).match(/-?\d+\.?\d*/g)?.map(Number) || [] : [];
+
+  const tMm = extractMm(targetValue);
+  const cMm = extractMm(candidateValue);
+  if (tMm != null && cMm != null && (displayName.includes("厚") || displayName.includes("寸法")))
+    return `${displayName}${tMm}mmと${cMm}mmで異なる`;
+
+  const tNums = extractNums(targetValue);
+  const cNums = extractNums(candidateValue);
+  if (tNums.length >= 2 && cNums.length >= 2 && displayName.includes("動作温度"))
+    return `動作温度${tNums[0]}〜${tNums[1]}℃と${cNums[0]}〜${cNums[1]}℃で異なる`;
+  if (tNums.length >= 1 && cNums.length >= 1 && displayName.includes("定格電圧"))
+    return `定格電圧${tNums[0]}Vと${cNums[0]}Vで異なる`;
+  if (tNums.length >= 1 && cNums.length >= 1 && displayName.includes("静電容量"))
+    return `静電容量${tNums[0]}µFと${cNums[0]}µFで異なる`;
+
+  // 許容差: ±10% 形式
+  if (displayName.includes("許容差")) {
+    const tPct = targetValue?.match(/±\s*(\d+)\s*%?/);
+    const cPct = candidateValue?.match(/±\s*(\d+)\s*%?/);
+    if (tPct && cPct) return `許容差±${tPct[1]}%と±${cPct[1]}%で異なる`;
   }
+
+  // サイズ: mm 値を抽出（例: 1.60mm x 0.80mm）
+  if (displayName.includes("サイズ")) {
+    const tMm = extractNums(targetValue).filter((n) => n > 0 && n < 20);
+    const cMm = extractNums(candidateValue).filter((n) => n > 0 && n < 20);
+    if (tMm.length >= 2 && cMm.length >= 2)
+      return `サイズ${tMm[0]}×${tMm[1]}mmと${cMm[0]}×${cMm[1]}mmで異なる`;
+  }
+
+  // フォールバック: 実際の値を含めて具体的に記載（悪い例「〇〇の値が異なる」を避ける）
+  const tv = targetValue ?? "";
+  const cv = candidateValue ?? "";
+  return `${displayName}が${tv}と${cv}で異なる`;
+}
+
+/**
+ * 指定した比較パラメータリストで類似度を計算（内部共通ロジック）
+ */
+function calculateSimilarityWithParams(
+  target: SimilarityInput,
+  candidate: SimilarityInput,
+  comparisonParams: ComparisonParameter[]
 ): SimilarityResult {
   const breakdown: ParameterScore[] = [];
 
-  // 比較対象パラメータの定義を取得
-  const comparisonParams = getAllComparisonParameters();
-
-  // TargetとCandidateのパラメータをMapに変換
   const targetDigiKeyMap = new Map<string, string>();
   if (target.parameters) {
     for (const param of target.parameters) {
@@ -307,12 +368,10 @@ export function calculateSimilarity(
     }
   }
 
-  // 定義されたすべてのパラメータを処理
   for (const paramConfig of comparisonParams) {
     let targetValue: string | null = null;
     let candidateValue: string | null = null;
 
-    // 値を取得
     if (paramConfig.source === "digikey") {
       targetValue = targetDigiKeyMap.get(paramConfig.id) ?? null;
       candidateValue = candidateDigiKeyMap.get(paramConfig.id) ?? null;
@@ -321,7 +380,6 @@ export function calculateSimilarity(
       candidateValue = candidateDatasheetMap.get(paramConfig.id) ?? null;
     }
 
-    // 対象外パラメータの場合
     if (paramConfig.excluded) {
       breakdown.push({
         parameterId: `${paramConfig.source}:${paramConfig.id}`,
@@ -332,34 +390,48 @@ export function calculateSimilarity(
         candidateValue,
         status: "excluded",
         excludeReason: paramConfig.excludeReason,
+        reason: paramConfig.excludeReason,
       });
-      continue; // スコア計算には含めない
+      continue;
     }
 
-    // 値の有無を判定
-    const hasTargetValue = targetValue !== null && targetValue !== undefined && targetValue !== "";
-    const hasCandidateValue = candidateValue !== null && candidateValue !== undefined && candidateValue !== "";
+    const hasTargetValue =
+      targetValue != null && targetValue !== "" && !isEmptyOrDash(targetValue);
+    const hasCandidateValue =
+      candidateValue != null && candidateValue !== "" && !isEmptyOrDash(candidateValue);
 
     let status: ParameterScore["status"];
     let score = 0;
     let matched = false;
+    let reason: string | undefined;
 
     if (hasTargetValue && hasCandidateValue) {
-      // 両方に値がある場合: 比較可能
       status = "compared";
       const matcher = createMatcher(paramConfig);
       const result = matcher.match(targetValue, candidateValue);
       score = result.score;
-      matched = result.matched;
+      matched = score >= 80; // evaluate-similarity 基準: 80以上でOK
+      reason = formatReason(
+        paramConfig.displayName,
+        targetValue,
+        candidateValue,
+        score,
+        matched
+      );
+    } else if (isEmptyOrDash(targetValue) && isEmptyOrDash(candidateValue)) {
+      status = "compared";
+      score = 100;
+      matched = true;
+      reason = "同一";
     } else if (hasTargetValue && !hasCandidateValue) {
-      // Targetのみに値がある場合
       status = "target_only";
+      reason = "候補に値なし";
     } else if (!hasTargetValue && hasCandidateValue) {
-      // Candidateのみに値がある場合
       status = "candidate_only";
+      reason = "Targetに値なし";
     } else {
-      // 両方に値がない場合
       status = "both_missing";
+      reason = "データなし";
     }
 
     breakdown.push({
@@ -370,12 +442,12 @@ export function calculateSimilarity(
       targetValue,
       candidateValue,
       status,
+      reason,
     });
   }
 
-  // 総合スコアを計算（重み付き平均、比較可能なパラメータのみ）
   const comparedItems = breakdown.filter((item) => item.status === "compared");
-  
+
   if (comparedItems.length === 0) {
     return {
       totalScore: 0,
@@ -403,6 +475,34 @@ export function calculateSimilarity(
     totalScore: Math.round(totalScore),
     breakdown,
   };
+}
+
+/**
+ * 類似度を計算（データシート基準：DigiKey + データシートパラメータ）
+ *
+ * @param target 対象部品
+ * @param candidate 候補部品
+ * @returns 類似度計算結果
+ */
+export function calculateSimilarity(
+  target: SimilarityInput,
+  candidate: SimilarityInput
+): SimilarityResult {
+  return calculateSimilarityWithParams(target, candidate, getAllComparisonParameters());
+}
+
+/**
+ * DigiKeyパラメータのみで類似度を計算
+ *
+ * @param target 対象部品
+ * @param candidate 候補部品
+ * @returns 類似度計算結果
+ */
+export function calculateSimilarityDigiKeyOnly(
+  target: SimilarityInput,
+  candidate: SimilarityInput
+): SimilarityResult {
+  return calculateSimilarityWithParams(target, candidate, getComparisonParametersBySource("digikey"));
 }
 
 /**
@@ -439,21 +539,24 @@ function extractNumber(str: string): number | null {
 
 /**
  * 範囲文字列をパース
- * 例: "-55 to 85 °C" → [-55, 85], "0.2 to 0.5 mm" → [0.2, 0.5]
+ * 例: "-55 to 85 °C" → [-55, 85], "-55°C ~ 85°C" → [-55, 85], "0.2 - 0.5 mm" → [0.2, 0.5]
+ * 対応フォーマット: "X to Y", "X - Y", "X ~ Y"（DigiKey APIの Operating Temperature 等）
  */
 function parseRange(str: string): [number, number] | null {
-  // "X to Y" または "X - Y" パターンを検出
-  const patterns = [
+  // 負の数に対応。対応フォーマット: "X to Y", "X ~ Y", "X - Y", "-55°C ~ 85°C"（DigiKey API形式）
+  const patterns: RegExp[] = [
     /(-?\d+\.?\d*)\s+to\s+(-?\d+\.?\d*)/i,
+    // "X ~ Y" または "X°C ~ Y°C" 形式（単位等を挟む）
+    /(-?\d+\.?\d*)[^\d]*~[^\d]*(-?\d+\.?\d*)/,
     /(-?\d+\.?\d*)\s*-\s*(-?\d+\.?\d*)/,
   ];
 
   for (const pattern of patterns) {
     const match = str.match(pattern);
     if (match) {
-      const min = parseFloat(match[1]);
-      const max = parseFloat(match[2]);
-      if (!isNaN(min) && !isNaN(max)) {
+      const min = parseFloat(match[1].replace(/\u2212/g, "-")); // Unicode minus → ASCII
+      const max = parseFloat(match[2].replace(/\u2212/g, "-"));
+      if (!isNaN(min) && !isNaN(max) && min <= max) {
         return [min, max];
       }
     }

@@ -104,7 +104,7 @@ export async function fetchDatasheetParameters(
 }
 
 /**
- * 類似度結果取得API呼び出し
+ * 類似度結果取得API呼び出し（データシート基準）
  * @param targetId Target部品のdatasheet_id
  * @returns candidateIdをキーとしたSimilarityResultのレコード
  */
@@ -125,6 +125,32 @@ export async function fetchSimilarityResults(
     return response.json();
   } catch (error) {
     console.error(`Error fetching similarity results:`, error);
+    return {};
+  }
+}
+
+/**
+ * DigiKey基準 類似度結果取得API呼び出し
+ * @param targetId Target部品のID（digiKeyProductNumber または manufacturerProductNumber）
+ * @returns candidateIdをキーとしたSimilarityResultのレコード
+ */
+export async function fetchSimilarityResultsDigiKey(
+  targetId: string
+): Promise<Record<string, SimilarityResult>> {
+  try {
+    const response = await fetch(
+      `/api/similarity-results-api?targetId=${encodeURIComponent(targetId)}`
+    );
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error(`Failed to fetch DigiKey similarity results:`, errorData);
+      return {};
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error(`Error fetching DigiKey similarity results:`, error);
     return {};
   }
 }

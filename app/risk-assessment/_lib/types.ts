@@ -271,6 +271,21 @@ export interface CandidateDetailedInfo extends CandidateInfo {
     candidateValue: string | null;
     reason?: string; // LLMによる判定理由
   }[];
+
+  /** DigiKeyパラメータのみの類似度スコア (0-100) */
+  similarityScoreDigiKey?: number;
+
+  /** DigiKeyパラメータのみのスコア内訳 */
+  similarityBreakdownDigiKey?: {
+    parameterId: string;
+    displayName: string;
+    score: number;
+    matched: boolean;
+    targetValue: string | null;
+    candidateValue: string | null;
+    status: "compared" | "target_only" | "candidate_only" | "both_missing" | "excluded";
+    excludeReason?: string;
+  }[];
 }
 
 /**

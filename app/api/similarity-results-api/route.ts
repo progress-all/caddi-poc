@@ -3,7 +3,7 @@ import { readdir, readFile } from "fs/promises";
 import { join } from "path";
 import { SimilarityResultSchema, type SimilarityResult, type ParameterEvaluation } from "@/app/_lib/datasheet/similarity-schema";
 
-const SIMILARITY_RESULTS_DIR = join(process.cwd(), "app/_lib/datasheet/similarity-results");
+const SIMILARITY_RESULTS_API_DIR = join(process.cwd(), "app/_lib/datasheet/similarity-results-api");
 
 /**
  * 総合スコアを算出する
@@ -25,11 +25,12 @@ interface SimilarityResultWithScore extends SimilarityResult {
 }
 
 /**
- * データシート基準 類似度結果取得API
- * GET /api/similarity-results?targetId=GRM185R60J105KE26-01
+ * DigiKey API基準 類似度結果取得API
+ * GET /api/similarity-results-api?targetId=XXX
  *
  * 指定されたTargetIDのディレクトリ配下にある全Candidate結果を返却
  * レスポンス: Record<string, SimilarityResult> (candidateId -> result)
+ * targetId/candidateId は digiKeyProductNumber または manufacturerProductNumber
  */
 export async function GET(request: NextRequest) {
   try {
@@ -43,22 +44,16 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // TargetIDのディレクトリパス
-    const targetDir = join(SIMILARITY_RESULTS_DIR, targetId);
+    const targetDir = join(SIMILARITY_RESULTS_API_DIR, targetId);
 
-    // ディレクトリが存在しない場合は空オブジェクトを返却
     let candidateFiles: string[] = [];
     try {
       candidateFiles = await readdir(targetDir);
-    } catch (error) {
-      // ディレクトリが存在しない場合は空オブジェクトを返却
+    } catch {
       return NextResponse.json({});
     }
 
-    // JSONファイルのみをフィルタリング
     const jsonFiles = candidateFiles.filter((file) => file.endsWith(".json"));
-
-    // 各JSONファイルを読み込んでバリデーション
     const results: Record<string, SimilarityResultWithScore> = {};
 
     await Promise.all(
@@ -68,20 +63,14 @@ export async function GET(request: NextRequest) {
           const fileContent = await readFile(filePath, "utf-8");
           const jsonData = JSON.parse(fileContent);
 
-          // Zodスキーマでバリデーション
           const validatedData = SimilarityResultSchema.parse(jsonData);
-
-          // totalScoreを算出
           const totalScore = calculateTotalScore(validatedData.parameters);
 
-          // candidateIdをキーとして格納（totalScoreを含む）
           results[validatedData.candidateId] = {
             ...validatedData,
             totalScore,
           };
         } catch (error) {
-          // ファイルが存在しない、パースエラー、バリデーションエラーの場合は無視
-          // 存在するデータのみを返却する
           console.warn(`Failed to load similarity result file ${file}:`, error);
         }
       })
