@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readdir, readFile } from "fs/promises";
-import { join } from "path";
+import { readdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { SimilarityResultSchema, type SimilarityResult, type ParameterEvaluation } from "@/app/_lib/datasheet/similarity-schema";
 
 const SIMILARITY_RESULTS_DIR = join(process.cwd(), "app/_lib/datasheet/similarity-results");
@@ -24,12 +24,34 @@ interface SimilarityResultWithScore extends SimilarityResult {
   totalScore: number;
 }
 
+/** DigiKey品番（末尾D）を datasheet_id（-01）に変換 */
+function toDatasheetTargetId(targetId: string): string {
+  if (targetId.endsWith("D")) {
+    return targetId.slice(0, -1) + "-01";
+  }
+  return targetId;
+}
+
+/**
+ * ファイル名の candidateId に対応するレスポンス用キーを全て返す。
+ * - -01 の候補: 同一データシートで DigiKey が D/J を付けるため [base+D, base+J] を返す。
+ * - それ以外: DigiKey が D/J を付けた候補にもマッチするよう [id, id+D, id+J] を返す。
+ */
+function toResponseCandidateKeys(candidateId: string): string[] {
+  if (candidateId.endsWith("-01")) {
+    const base = candidateId.replace(/-01$/, "");
+    return [base + "D", base + "J"];
+  }
+  return [candidateId, candidateId + "D", candidateId + "J"];
+}
+
 /**
  * データシート基準 類似度結果取得API
- * GET /api/similarity-results?targetId=GRM185R60J105KE26-01
+ * GET /api/similarity-results?targetId=GRM188R60J105KA01D または targetId=GRM188R60J105KA01-01
  *
- * 指定されたTargetIDのディレクトリ配下にある全Candidate結果を返却
- * レスポンス: Record<string, SimilarityResult> (candidateId -> result)
+ * targetId が DigiKey 品番（末尾 D）の場合は -01 のディレクトリを試す。
+ * 返却キーは DigiKey 品番スタイル（-01 → D）に正規化し、クライアントの candidateId と一致させる。
+ * レスポンスの parameters[].parameterId に datasheet: プレフィックスを付与する。
  */
 export async function GET(request: NextRequest) {
   try {
@@ -43,22 +65,29 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // TargetIDのディレクトリパス
-    const targetDir = join(SIMILARITY_RESULTS_DIR, targetId);
+    const targetDirCandidates = [targetId, toDatasheetTargetId(targetId)].filter(
+      (v, i, a) => a.indexOf(v) === i
+    );
 
-    // ディレクトリが存在しない場合は空オブジェクトを返却
+    let targetDir: string = "";
     let candidateFiles: string[] = [];
-    try {
-      candidateFiles = await readdir(targetDir);
-    } catch (error) {
-      // ディレクトリが存在しない場合は空オブジェクトを返却
+
+    for (const dirId of targetDirCandidates) {
+      const candidateDir = join(SIMILARITY_RESULTS_DIR, dirId);
+      try {
+        candidateFiles = await readdir(candidateDir);
+        targetDir = candidateDir;
+        break;
+      } catch {
+        continue;
+      }
+    }
+
+    if (!targetDir || candidateFiles.length === 0) {
       return NextResponse.json({});
     }
 
-    // JSONファイルのみをフィルタリング
     const jsonFiles = candidateFiles.filter((file) => file.endsWith(".json"));
-
-    // 各JSONファイルを読み込んでバリデーション
     const results: Record<string, SimilarityResultWithScore> = {};
 
     await Promise.all(
@@ -68,20 +97,29 @@ export async function GET(request: NextRequest) {
           const fileContent = await readFile(filePath, "utf-8");
           const jsonData = JSON.parse(fileContent);
 
-          // Zodスキーマでバリデーション
           const validatedData = SimilarityResultSchema.parse(jsonData);
 
-          // totalScoreを算出
           const totalScore = calculateTotalScore(validatedData.parameters);
 
-          // candidateIdをキーとして格納（totalScoreを含む）
-          results[validatedData.candidateId] = {
+          const candidateIdFromFile = file.replace(/\.json$/, "");
+          const responseKeys = toResponseCandidateKeys(candidateIdFromFile);
+
+          const parametersWithPrefix = validatedData.parameters.map((p) => ({
+            ...p,
+            parameterId: p.parameterId.startsWith("datasheet:")
+              ? p.parameterId
+              : `datasheet:${p.parameterId}`,
+          }));
+
+          const resultEntry = {
             ...validatedData,
+            parameters: parametersWithPrefix,
             totalScore,
           };
+          for (const key of responseKeys) {
+            results[key] = resultEntry;
+          }
         } catch (error) {
-          // ファイルが存在しない、パースエラー、バリデーションエラーの場合は無視
-          // 存在するデータのみを返却する
           console.warn(`Failed to load similarity result file ${file}:`, error);
         }
       })

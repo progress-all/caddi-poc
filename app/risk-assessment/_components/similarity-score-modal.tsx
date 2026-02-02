@@ -22,15 +22,15 @@ type BreakdownItem = {
   reason?: string;
 };
 
-export type SimilarityModalVariant = "digikey" | "datasheet";
+export type SimilarityScoreModalVariant = "digikey" | "digikey-datasheet";
 
 interface SimilarityScoreModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   targetProduct: CandidateDetailedInfo;
   candidate: CandidateDetailedInfo;
-  /** 表示する内訳: DigiKey基準 または データシート基準 */
-  variant: SimilarityModalVariant;
+  /** 表示するモーダル: DigiKeyのみ または DigiKey+Datasheet */
+  variant: SimilarityScoreModalVariant;
 }
 
 function getScoreColor(score: number) {
@@ -90,8 +90,8 @@ function BreakdownTable({
   }
   const hasReason = showReason || breakdown.some((item) => item.reason);
   return (
-    <div className="flex-1 overflow-auto border rounded-lg min-h-0">
-      <div className="text-sm font-medium px-4 py-2 border-b bg-muted/30">
+    <div className="border rounded-lg">
+      <div className="text-sm font-medium px-4 py-2 border-b bg-muted/30 sticky top-0 z-10 bg-muted/30">
         {sectionTitle}
       </div>
       <div className="overflow-x-auto">
@@ -167,7 +167,7 @@ function BreakdownTable({
 
 /**
  * 類似度スコア内訳モーダル
- * variant に応じて DigiKey基準 または データシート基準 のスコアと内訳のみを表示
+ * variant に応じて「DigiKeyのみ」または「DigiKey+Datasheet」のいずれか1つを表示
  */
 export function SimilarityScoreModal({
   open,
@@ -177,89 +177,84 @@ export function SimilarityScoreModal({
   variant,
 }: SimilarityScoreModalProps) {
   const breakdownDigiKey = (candidate.similarityBreakdownDigiKey || []) as BreakdownItem[];
-  const breakdownDatasheet = (candidate.similarityBreakdown || []) as BreakdownItem[];
+  const breakdownCombined = (candidate.similarityBreakdown || []) as BreakdownItem[];
+  const breakdownMerged: BreakdownItem[] = [
+    ...breakdownDigiKey,
+    ...breakdownCombined.filter((p) => p.parameterId.startsWith("datasheet:")),
+  ];
   const scoreDigiKey = candidate.similarityScoreDigiKey ?? 0;
-  const scoreDatasheet = candidate.similarityScore ?? 0;
+  const scoreCombined = candidate.similarityScore ?? 0;
 
-  const isDigiKey = variant === "digikey";
-  const score = isDigiKey ? scoreDigiKey : scoreDatasheet;
-  const breakdown = isDigiKey ? breakdownDigiKey : breakdownDatasheet;
-  const title = isDigiKey ? "類似度スコア内訳（DigiKey基準）" : "類似度スコア内訳（データシート基準）";
-  const sectionTitle = isDigiKey ? "DigiKey基準 パラメータ比較" : "データシート基準 パラメータ比較";
+  const isDigiKeyOnly = variant === "digikey";
+  const title =
+    variant === "digikey"
+      ? "類似度スコア内訳（DigiKeyのみ）"
+      : "類似度スコア内訳（DigiKey+Datasheet）";
+  const breakdown = isDigiKeyOnly ? breakdownDigiKey : breakdownMerged;
+  const score = isDigiKeyOnly ? scoreDigiKey : scoreCombined;
+  const sourceLabel =
+    variant === "digikey"
+      ? "使用した情報ソース: DigiKeyのみ"
+      : "使用した情報ソース: DigiKey+Datasheet";
+  const sectionTitle =
+    variant === "digikey"
+      ? "DigiKeyのみ パラメータ比較"
+      : "DigiKey+Datasheet パラメータ比較";
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-7xl w-[95vw] max-h-[90vh] overflow-hidden flex flex-col">
+      <DialogContent className="max-w-[90vw] w-full max-h-[90vh] overflow-hidden flex flex-col">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-4 flex-shrink-0 pb-4">
-          <div className="space-y-2">
-            <div className="flex items-center gap-4">
-              <div className="flex-1">
-                <div className="text-sm font-medium text-muted-foreground">Target</div>
-                <div className="text-base font-semibold">
-                  {targetProduct.manufacturerProductNumber}
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  {targetProduct.manufacturerName}
-                </div>
+        <div className="space-y-2 flex-shrink-0 pb-2">
+          <div className="flex items-center gap-4">
+            <div className="flex-1">
+              <div className="text-sm font-medium text-muted-foreground">Target</div>
+              <div className="text-base font-semibold">
+                {targetProduct.manufacturerProductNumber}
               </div>
-              <div className="flex-1">
-                <div className="text-sm font-medium text-muted-foreground">Candidate</div>
-                <div className="text-base font-semibold">
-                  {candidate.manufacturerProductNumber}
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  {candidate.manufacturerName}
-                </div>
+              <div className="text-xs text-muted-foreground">
+                {targetProduct.manufacturerName}
               </div>
             </div>
-          </div>
-
-          {/* スコア */}
-          <div className="space-y-2">
-            <div className="flex items-center justify-between gap-4">
-              <span className="text-sm font-medium shrink-0">
-                {isDigiKey ? "DigiKey基準" : "データシート基準"}
-              </span>
-              <span className={`text-lg font-bold shrink-0 ${getScoreColor(score)}`}>
-                {score} / 100
-              </span>
-              <div className="flex-1 h-3 bg-muted rounded-full overflow-hidden min-w-0">
-                <div
-                  className={`h-full transition-all ${getScoreBgColor(score)}`}
-                  style={{ width: `${score}%` }}
-                />
+            <div className="flex-1">
+              <div className="text-sm font-medium text-muted-foreground">Candidate</div>
+              <div className="text-base font-semibold">
+                {candidate.manufacturerProductNumber}
+              </div>
+              <div className="text-xs text-muted-foreground">
+                {candidate.manufacturerName}
               </div>
             </div>
-            {/* 件数サマリー */}
-            {breakdown.length > 0 && (
-              <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <span>
-                  総数: <span className="font-medium">{breakdown.length}</span>
-                </span>
-                <span>
-                  高スコア(80以上): <span className="font-medium">{breakdown.filter((item) => item.score >= 80).length}</span>
-                </span>
-                <span>
-                  中スコア(50-79): <span className="font-medium">{breakdown.filter((item) => item.score >= 50 && item.score < 80).length}</span>
-                </span>
-                <span>
-                  低スコア(50未満): <span className="font-medium">{breakdown.filter((item) => item.score < 50).length}</span>
-                </span>
-              </div>
-            )}
           </div>
         </div>
 
-        {/* スクロール領域: テーブル（mainブランチと同じ構造） */}
-        <BreakdownTable
-          breakdown={breakdown}
-          sectionTitle={sectionTitle}
-          showReason={true}
-        />
+        <div className="flex flex-col flex-1 min-h-0 min-w-0 border rounded-lg p-3 bg-muted/20">
+          <div className="text-xs font-medium text-muted-foreground mb-1 shrink-0">
+            {sourceLabel}
+          </div>
+          <div className="flex items-center justify-between gap-2 mb-2 shrink-0">
+            <span className="text-sm font-medium shrink-0">スコア</span>
+            <span className={`text-lg font-bold shrink-0 ${getScoreColor(score)}`}>
+              {score} / 100
+            </span>
+            <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
+              <div
+                className={`h-full transition-all ${getScoreBgColor(score)}`}
+                style={{ width: `${score}%` }}
+              />
+            </div>
+          </div>
+          <div className="flex-1 min-h-0 min-w-0 overflow-auto">
+            <BreakdownTable
+              breakdown={breakdown}
+              sectionTitle={sectionTitle}
+              showReason={true}
+            />
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
   );

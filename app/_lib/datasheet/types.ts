@@ -122,3 +122,16 @@ export interface DatasheetSchema {
   version: string;
   parameters: DatasheetParameterSchema[];
 }
+
+/**
+ * 統合 product JSON（DigiKey + Datasheet をマージしたローカル保存用）
+ * 格納先: app/_lib/datasheet/products/{partId}.json
+ */
+export interface UnifiedProduct {
+  partId: string;
+  digiKeyParameters: Array<{ name: string; value: string }>;
+  datasheetParameters: Record<string, { description: string; value: string | null }>;
+  manufacturerProductNumber?: string;
+  digiKeyProductNumber?: string;
+  updatedAt?: string;
+}

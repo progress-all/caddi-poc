@@ -1,0 +1,112 @@
+{
+  "targetId": "GRM188R60J105KA01D",
+  "candidateId": "C1608X5R1C105K080AA",
+  "evaluatedAt": "2026-02-02T07:17:58.618Z",
+  "summary": "特徴が異なる",
+  "parameters": [
+    {
+      "parameterId": "digikey:Capacitance",
+      "description": "静電容量",
+      "targetValue": "1 µF",
+      "candidateValue": "1 µF",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Tolerance",
+      "description": "許容差",
+      "targetValue": "±10%",
+      "candidateValue": "±10%",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Voltage - Rated",
+      "description": "定格電圧",
+      "targetValue": "6.3V",
+      "candidateValue": "16V",
+      "score": 95,
+      "reason": "上位互換"
+    },
+    {
+      "parameterId": "digikey:Temperature Coefficient",
+      "description": "温度特性",
+      "targetValue": "X5R",
+      "candidateValue": "X5R",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Operating Temperature",
+      "description": "動作温度",
+      "targetValue": "-55°C ~ 85°C",
+      "candidateValue": "-55°C ~ 85°C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Package / Case",
+      "description": "パッケージ",
+      "targetValue": "0603 (1608 Metric)",
+      "candidateValue": "0603 (1608 Metric)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Mounting Type",
+      "description": "実装タイプ",
+      "targetValue": "Surface Mount, MLCC",
+      "candidateValue": "Surface Mount, MLCC",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Size / Dimension",
+      "description": "サイズ",
+      "targetValue": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+      "candidateValue": "0.063\" L x 0.031\" W (1.60mm x 0.80mm)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Thickness (Max)",
+      "description": "厚さ",
+      "targetValue": "0.035\" (0.90mm)",
+      "candidateValue": "0.035\" (0.90mm)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Height - Seated (Max)",
+      "description": "高さ",
+      "targetValue": "-",
+      "candidateValue": "-",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Applications",
+      "description": "用途",
+      "targetValue": "General Purpose",
+      "candidateValue": "General Purpose",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "digikey:Features",
+      "description": "特徴",
+      "targetValue": "-",
+      "candidateValue": "Low ESL",
+      "score": 0,
+      "reason": "片方情報なしのため比較不可"
+    },
+    {
+      "parameterId": "digikey:Ratings",
+      "description": "定格",
+      "targetValue": "-",
+      "candidateValue": "-",
+      "score": 100,
+      "reason": "同一"
+    }
+  ]
+}

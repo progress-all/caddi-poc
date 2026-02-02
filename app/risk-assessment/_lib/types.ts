@@ -255,13 +255,13 @@ export interface CandidateDetailedInfo extends CandidateInfo {
   // データシートパラメーター（PDFから抽出した詳細パラメーター）
   datasheetParameters?: Record<string, { description: string; value: string | null }>;
   
-  /** 類似度スコア (0-100) */
+  /** 類似度スコア (0-100) — DigiKey+Datasheet 評価結果 */
   similarityScore?: number;
   
-  /** 類似度サマリー（LLM生成の要約文） */
+  /** 類似度サマリー（LLM生成の要約文）— DigiKey+Datasheet 評価結果 */
   similaritySummary?: string;
   
-  /** スコア内訳（デバッグ・将来の詳細表示用） */
+  /** スコア内訳（DigiKey+Datasheet 評価のパラメータ別結果） */
   similarityBreakdown?: {
     parameterId: string;
     displayName: string;

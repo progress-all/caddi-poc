@@ -54,7 +54,10 @@ DigiKey Product Details API の `parameters` は `Array<{name: string, value: st
 
 ### Step 1: 入力データの準備
 
-TargetとCandidateの `parameters` 配列を用意する。DigiKeyパラメータID（`name`）で両者を突き合わせ、共通して存在するパラメータの比較リストを作成する。
+TargetとCandidateの DigiKey `parameters` 配列を用意する。
+
+- **統合 product JSON がある場合**: `products/{partId}.json` を読み、`digiKeyParameters` を Target/Candidate の parameters として使う。DigiKeyパラメータID（`name`）で両者を突き合わせ、共通して存在するパラメータの比較リストを作成する。
+- **統合 product が無い場合**: 類似品検索APIのレスポンスの `targetProduct.parameters` と `candidates[].parameters` を用いる。DigiKeyパラメータID（`name`）で両者を突き合わせ、共通して存在するパラメータの比較リストを作成する。
 
 ### Step 2: LLM入力用JSONの構築
 

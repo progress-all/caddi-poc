@@ -1,0 +1,120 @@
+{
+  "targetId": "GRM188R60J105KA01-01",
+  "candidateId": "GRM185R61A105KE36",
+  "evaluatedAt": "2026-02-02T00:00:00.000Z",
+  "summary": "厚さが異なる(0.8mm→0.5mm)。定格電圧はCandidateが上位(6.3V→10V)。その他主要特性は同等。",
+  "parameters": [
+    {
+      "parameterId": "L_Dimensions",
+      "description": "長さ (L寸法)",
+      "targetValue": "1.6 ± 0.1 mm",
+      "candidateValue": "1.6 ± 0.1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "W_Dimensions",
+      "description": "幅 (W寸法)",
+      "targetValue": "0.8 ± 0.1 mm",
+      "candidateValue": "0.8 ± 0.1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "T_Dimensions",
+      "description": "厚さ (T寸法)",
+      "targetValue": "0.8 ± 0.1 mm",
+      "candidateValue": "0.5 +0/-0.1 mm",
+      "score": 55,
+      "reason": "厚さ0.8mmと0.5mmで異なる"
+    },
+    {
+      "parameterId": "e_Dimensions",
+      "description": "電極寸法 (e)",
+      "targetValue": "0.2 to 0.5 mm",
+      "candidateValue": "0.2 to 0.5 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "g_Dimensions",
+      "description": "電極間隔 (g)",
+      "targetValue": "0.5 mm min.",
+      "candidateValue": "0.5 mm min.",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_PublicSTD",
+      "description": "温度特性 (公的規格コード)",
+      "targetValue": "X5R (EIA)",
+      "candidateValue": "X5R(EIA)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_CapChange",
+      "description": "温度特性 (容量変化率)",
+      "targetValue": "-15 to 15 %",
+      "candidateValue": "±15.0%",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "TemperatureCharacteristics_TempRange",
+      "description": "温度特性 (温度範囲)",
+      "targetValue": "-55 to 85 °C",
+      "candidateValue": "-55 to 85 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "RatedVoltage",
+      "description": "定格電圧",
+      "targetValue": "DC 6.3 V",
+      "candidateValue": "10 Vdc",
+      "score": 95,
+      "reason": "上位互換で問題なし"
+    },
+    {
+      "parameterId": "NominalCapacitance",
+      "description": "公称静電容量",
+      "targetValue": "1 uF",
+      "candidateValue": "1.0 µF",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "CapacitanceTolerance",
+      "description": "静電容量許容差",
+      "targetValue": "± 10 %",
+      "candidateValue": "±10%",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "OperatingTempRange_Spec",
+      "description": "動作温度範囲（Operating Temp. Range）",
+      "targetValue": "-55 to 85 °C",
+      "candidateValue": "-55 to 85 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Packaging_180mmReel",
+      "description": "梱包 (180mmリール)",
+      "targetValue": "PAPER W8P4 / 4000 pcs./Reel",
+      "candidateValue": "φ180mm Paper taping 4000",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Packaging_330mmReel",
+      "description": "梱包 (330mmリール)",
+      "targetValue": "PAPER W8P4 / 10000 pcs./Reel",
+      "candidateValue": "φ330mm Paper taping 10000",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    }
+  ]
+}

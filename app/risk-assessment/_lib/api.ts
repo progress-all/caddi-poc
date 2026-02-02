@@ -3,7 +3,7 @@
  */
 
 import type { SimilarSearchRequest, SimilarSearchResponse } from "./types";
-import type { DatasheetData } from "@/app/_lib/datasheet/types";
+import type { DatasheetData, UnifiedProduct } from "@/app/_lib/datasheet/types";
 import type { SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
 
 async function postJson<T>(url: string, body: unknown): Promise<T> {
@@ -153,4 +153,56 @@ export async function fetchSimilarityResultsDigiKey(
     console.error(`Error fetching DigiKey similarity results:`, error);
     return {};
   }
+}
+
+/**
+ * 統合 product 取得API呼び出し
+ * @param partIds partIdの配列（MPN または digiKeyProductNumber）
+ * @returns partIdをキーとしたUnifiedProductのレコード（存在するもののみ）
+ */
+export async function fetchUnifiedProducts(
+  partIds: string[]
+): Promise<Record<string, UnifiedProduct>> {
+  if (partIds.length === 0) return {};
+  try {
+    const idsParam = [...new Set(partIds)].filter(Boolean).join(",");
+    if (!idsParam) return {};
+    const response = await fetch(
+      `/api/products/unified?ids=${encodeURIComponent(idsParam)}`
+    );
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error(`Failed to fetch unified products:`, errorData);
+      return {};
+    }
+    return response.json();
+  } catch (error) {
+    console.error(`Error fetching unified products:`, error);
+    return {};
+  }
+}
+
+/**
+ * 統合 product 保存API呼び出し（1件）
+ * @param payload partId, digiKeyParameters, datasheetParameters 等
+ */
+export async function saveUnifiedProduct(
+  payload: {
+    partId: string;
+    digiKeyParameters: Array<{ name: string; value: string }>;
+    datasheetParameters: Record<string, { description: string; value: string | null }>;
+    manufacturerProductNumber?: string;
+    digiKeyProductNumber?: string;
+  }
+): Promise<{ ok: boolean; partId: string }> {
+  const response = await fetch("/api/products/unified", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.error || "Failed to save unified product");
+  }
+  return response.json();
 }

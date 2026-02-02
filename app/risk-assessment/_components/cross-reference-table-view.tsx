@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import type { CandidateDetailedInfo } from "../_lib/types";
 import { getPartRiskClassification, getComplianceFromClassifications, getRiskLevel } from "../_lib/compliance-utils";
 import { SubstituteTypeBadge } from "./substitute-type-badge";
-import { SimilarityScoreModal, type SimilarityModalVariant } from "./similarity-score-modal";
+import { SimilarityScoreModal, type SimilarityScoreModalVariant } from "./similarity-score-modal";
 import { OverallRiskAssessment } from "./overall-risk-assessment";
 
 interface CrossReferenceTableViewProps {
@@ -28,18 +28,26 @@ export function CrossReferenceTableView({
   targetProduct,
   isLoadingDatasheet = false,
 }: CrossReferenceTableViewProps) {
-  // モーダルの状態管理
+  // モーダルの状態管理（DigiKeyのみ / DigiKey+Datasheet のどちらを表示するか）
   const [selectedCandidate, setSelectedCandidate] =
     useState<CandidateDetailedInfo | null>(null);
-  const [modalVariant, setModalVariant] = useState<SimilarityModalVariant | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalVariant, setModalVariant] =
+    useState<SimilarityScoreModalVariant | null>(null);
 
-  // スコアクリックハンドラ（類似度セルからのみ呼ばれる）
-  const handleScoreClick = (candidate: CandidateDetailedInfo, variant: SimilarityModalVariant) => {
+  const isModalOpen = modalVariant !== null;
+
+  // スコアクリックハンドラ（類似度セルから呼ばれ、該当するモーダルを開く）
+  const handleScoreClick = (
+    candidate: CandidateDetailedInfo,
+    variant: SimilarityScoreModalVariant
+  ) => {
     if (!targetProduct) return;
     setSelectedCandidate(candidate);
     setModalVariant(variant);
-    setIsModalOpen(true);
+  };
+
+  const handleModalOpenChange = (open: boolean) => {
+    if (!open) setModalVariant(null);
   };
 
   // 対象部品と候補を結合（対象部品を先頭に）
@@ -62,7 +70,7 @@ export function CrossReferenceTableView({
       !!targetProduct,
       isLoadingDatasheet,
       targetSubstitutionCount,
-      handleScoreClick
+      (candidate, variant) => handleScoreClick(candidate, variant)
     );
   }, [tableData, targetProduct, isLoadingDatasheet, targetSubstitutionCount]);
 
@@ -113,7 +121,7 @@ export function CrossReferenceTableView({
         },
       },
       {
-        header: "Similarity (DigiKey API)",
+        header: "DigiKeyのみ",
         accessor: (row) => {
           if (
             targetProduct &&
@@ -130,7 +138,7 @@ export function CrossReferenceTableView({
         },
       },
       {
-        header: "Similarity (Datasheet)",
+        header: "DigiKey+Datasheet",
         accessor: (row) => {
           if (
             targetProduct &&
@@ -143,11 +151,11 @@ export function CrossReferenceTableView({
           }
           return row.similarityScore !== undefined && row.similarityScore !== null
             ? row.similarityScore.toString()
-            : "";
+            : "-";
         },
       },
       {
-        header: "Summary (Datasheet)",
+        header: "要約（DigiKey+Datasheet）",
         accessor: (row) => {
           if (
             targetProduct &&
@@ -158,7 +166,7 @@ export function CrossReferenceTableView({
           ) {
             return "";
           }
-          return row.similaritySummary || "";
+          return row.similaritySummary ? String(row.similaritySummary) : "-";
         },
       },
       {
@@ -278,11 +286,11 @@ export function CrossReferenceTableView({
         enableStickyHeader={true}
         maxHeight="calc(100vh - 300px)"
       />
-      {/* スコア内訳モーダル */}
+      {/* スコア内訳モーダル（DigiKeyのみ / DigiKey+Datasheet のどちらか1つを表示） */}
       {targetProduct && selectedCandidate && modalVariant && (
         <SimilarityScoreModal
           open={isModalOpen}
-          onOpenChange={setIsModalOpen}
+          onOpenChange={handleModalOpenChange}
           targetProduct={targetProduct}
           candidate={selectedCandidate}
           variant={modalVariant}
@@ -359,14 +367,14 @@ function getOrderedDatasheetParameterIds(candidates: CandidateDetailedInfo[]): s
 /**
  * 候補データから動的カラムを生成
  * @param targetSubstitutionCount 対象部品行の代替件数（0なら将来リスク。対象行以外は未使用）
- * @param onScoreClick 類似度セルクリック時のハンドラ（候補、variant）
+ * @param onScoreClick 類似度セルクリック時のハンドラ（候補と表示するモーダル種別を渡す）
  */
 function generateColumns(
   candidates: CandidateDetailedInfo[],
   hasTargetProduct: boolean,
   isLoadingDatasheet: boolean,
   targetSubstitutionCount?: number,
-  onScoreClick?: (candidate: CandidateDetailedInfo, variant: SimilarityModalVariant) => void
+  onScoreClick?: (candidate: CandidateDetailedInfo, variant: SimilarityScoreModalVariant) => void
 ): ColumnDef<CandidateDetailedInfo>[] {
   // パラメータ列の順序: 基準行（先頭＝Target）のJSON出現順を保持し、他行のみのパラメータは初出順で末尾に追加
   const orderedParameterNames = getOrderedParameterNames(candidates);
@@ -446,7 +454,7 @@ function generateColumns(
     {
       accessorKey: "similarityScoreDigiKey",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Similarity (DigiKey API)" />
+        <DataTableColumnHeader column={column} title="類似度（DigiKeyのみ）" />
       ),
       cell: ({ row, table }) => {
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
@@ -487,7 +495,7 @@ function generateColumns(
     {
       accessorKey: "similarityScore",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Similarity (Datasheet)" />
+        <DataTableColumnHeader column={column} title="類似度（DigiKey+Datasheet）" />
       ),
       cell: ({ row, table }) => {
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
@@ -508,7 +516,7 @@ function generateColumns(
             type="button"
             onClick={(e) => {
               e.stopPropagation();
-              onScoreClick?.(row.original, "datasheet");
+              onScoreClick?.(row.original, "digikey-datasheet");
             }}
             className="flex items-center gap-2 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
@@ -528,7 +536,7 @@ function generateColumns(
     {
       accessorKey: "similaritySummary",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Summary (Datasheet)" />
+        <DataTableColumnHeader column={column} title="要約（DigiKey+Datasheet）" />
       ),
       cell: ({ row, table }) => {
         // 対象部品の場合は表示しない

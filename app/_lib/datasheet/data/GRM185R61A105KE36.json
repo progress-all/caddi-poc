@@ -1,0 +1,62 @@
+{
+  "datasheet_id": "GRM185R61A105KE36",
+  "version": "1.0",
+  "parameters": {
+    "L_Dimensions": {
+      "description": "長さ (L寸法)",
+      "value": "1.6 ± 0.1 mm"
+    },
+    "W_Dimensions": {
+      "description": "幅 (W寸法)",
+      "value": "0.8 ± 0.1 mm"
+    },
+    "T_Dimensions": {
+      "description": "厚さ (T寸法)",
+      "value": "0.5 +0/-0.1 mm"
+    },
+    "e_Dimensions": {
+      "description": "電極寸法 (e)",
+      "value": "0.2 to 0.5 mm"
+    },
+    "g_Dimensions": {
+      "description": "電極間隔 (g)",
+      "value": "0.5 mm min."
+    },
+    "TemperatureCharacteristics_PublicSTD": {
+      "description": "温度特性 (公的規格コード)",
+      "value": "X5R(EIA)"
+    },
+    "TemperatureCharacteristics_CapChange": {
+      "description": "温度特性 (容量変化率)",
+      "value": "±15.0%"
+    },
+    "TemperatureCharacteristics_TempRange": {
+      "description": "温度特性 (温度範囲)",
+      "value": "-55 to 85 °C"
+    },
+    "RatedVoltage": {
+      "description": "定格電圧",
+      "value": "10 Vdc"
+    },
+    "NominalCapacitance": {
+      "description": "公称静電容量",
+      "value": "1.0 µF"
+    },
+    "CapacitanceTolerance": {
+      "description": "静電容量許容差",
+      "value": "±10%"
+    },
+    "OperatingTempRange_Spec": {
+      "description": "動作温度範囲（Operating Temp. Range）",
+      "value": "-55 to 85 °C"
+    },
+    "Packaging_180mmReel": {
+      "description": "梱包 (180mmリール)",
+      "value": "φ180mm Paper taping 4000"
+    },
+    "Packaging_330mmReel": {
+      "description": "梱包 (330mmリール)",
+      "value": "φ330mm Paper taping 10000"
+    }
+  }
+}
