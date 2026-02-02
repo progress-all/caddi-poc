@@ -454,7 +454,7 @@ function generateColumns(
     {
       accessorKey: "similarityScoreDigiKey",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="類似度（DigiKeyのみ）" />
+        <DataTableColumnHeader column={column} title="Similarity (DigiKey)" />
       ),
       cell: ({ row, table }) => {
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
@@ -495,7 +495,7 @@ function generateColumns(
     {
       accessorKey: "similarityScore",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="類似度（DigiKey+Datasheet）" />
+        <DataTableColumnHeader column={column} title="Similarity (DigiKey+Datasheet)" />
       ),
       cell: ({ row, table }) => {
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
@@ -536,7 +536,7 @@ function generateColumns(
     {
       accessorKey: "similaritySummary",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="要約（DigiKey+Datasheet）" />
+        <DataTableColumnHeader column={column} title="Summary (DigiKey+Datasheet)" />
       ),
       cell: ({ row, table }) => {
         // 対象部品の場合は表示しない
