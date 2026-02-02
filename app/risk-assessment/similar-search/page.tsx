@@ -8,9 +8,10 @@ import { CrossReferenceTableView } from "../_components/cross-reference-table-vi
 import type {
   CandidateDetailedInfo,
 } from "../_lib/types";
-import { searchSimilarProducts, extractDatasheetId, fetchDatasheetParameters, fetchSimilarityResults } from "../_lib/api";
+import { searchSimilarProducts, extractDatasheetId, fetchDatasheetParameters, fetchSimilarityResults, fetchSimilarityResultsDigiKey } from "../_lib/api";
 import type { DatasheetData } from "@/app/_lib/datasheet/types";
 import type { SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
+import { calculateSimilarityDigiKeyOnly } from "../_lib/similarity";
 
 function SimilarSearchContent() {
   const searchParams = useSearchParams();
@@ -39,8 +40,10 @@ function SimilarSearchContent() {
   const [datasheetData, setDatasheetData] = useState<Record<string, DatasheetData>>({});
   const [isLoadingDatasheet, setIsLoadingDatasheet] = useState(false);
   
-  // 類似度結果の取得
+  // 類似度結果の取得（データシート基準）
   const [similarityResults, setSimilarityResults] = useState<Record<string, SimilarityResult>>({});
+  // 類似度結果の取得（DigiKey基準）
+  const [similarityResultsDigiKey, setSimilarityResultsDigiKey] = useState<Record<string, SimilarityResult>>({});
 
   useEffect(() => {
     if (!searchResult) {
@@ -141,6 +144,28 @@ function SimilarSearchContent() {
       });
   }, [enrichedTargetProduct, datasheetData]);
 
+  // DigiKey基準 類似度結果の取得
+  useEffect(() => {
+    if (!enrichedTargetProduct) {
+      return;
+    }
+    const targetIdDigiKey =
+      enrichedTargetProduct.manufacturerProductNumber ||
+      enrichedTargetProduct.digiKeyProductNumber ||
+      "";
+    if (!targetIdDigiKey) {
+      return;
+    }
+
+    fetchSimilarityResultsDigiKey(targetIdDigiKey)
+      .then((results) => {
+        setSimilarityResultsDigiKey(results);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch DigiKey similarity results:", error);
+      });
+  }, [enrichedTargetProduct]);
+
   // データシートパラメーターをマージした候補データ
   const enrichedCandidates = useMemo(() => {
     if (!searchResult) {
@@ -162,36 +187,63 @@ function SimilarSearchContent() {
         enriched.datasheetParameters = datasheetData[datasheetId].parameters;
       }
 
-      // 類似度スコアをAPIから取得（対象部品が存在し、候補のdatasheetIdが確定している場合）
-      if (enrichedTargetProduct && datasheetId) {
-        const similarityResult = similarityResults[datasheetId];
-        if (similarityResult) {
-          // スキーマに totalScore はないため parameters の平均から算出
-          const totalScore =
-            similarityResult.parameters.length > 0
-              ? Math.round(
-                  similarityResult.parameters.reduce((s, p) => s + p.score, 0) /
-                    similarityResult.parameters.length
-                )
-              : 0;
-          enriched.similarityScore = totalScore;
-          enriched.similaritySummary = similarityResult.summary;
-          // 新スキーマから既存の型に変換
-          enriched.similarityBreakdown = similarityResult.parameters.map((param) => ({
+      // 類似度スコア（対象部品が存在する場合）
+      if (enrichedTargetProduct) {
+        // データシート基準: LLM結果（similarity-results）がある場合のみ表示。なければ "-"
+        if (datasheetId) {
+          const llmResult = similarityResults[datasheetId];
+          if (llmResult && llmResult.parameters.length > 0) {
+            const totalScore = Math.round(
+              llmResult.parameters.reduce((s, p) => s + p.score, 0) /
+                llmResult.parameters.length
+            );
+            enriched.similarityScore = totalScore;
+            enriched.similaritySummary = llmResult.summary;
+            enriched.similarityBreakdown = llmResult.parameters.map((param) => ({
+              parameterId: param.parameterId,
+              displayName: param.description,
+              score: param.score,
+              matched: param.score >= 80,
+              targetValue: param.targetValue,
+              candidateValue: param.candidateValue,
+              status: "compared" as const,
+              reason: param.reason,
+            }));
+          }
+        }
+        // DigiKey基準: LLM結果があれば使用、なければルールベースで計算
+        const candidateIdDigiKey =
+          candidate.manufacturerProductNumber || candidate.digiKeyProductNumber || "";
+        const llmResultDigiKey = candidateIdDigiKey
+          ? similarityResultsDigiKey[candidateIdDigiKey]
+          : undefined;
+        if (llmResultDigiKey && llmResultDigiKey.parameters.length > 0) {
+          const totalScoreDigiKey = Math.round(
+            llmResultDigiKey.parameters.reduce((s, p) => s + p.score, 0) /
+              llmResultDigiKey.parameters.length
+          );
+          enriched.similarityScoreDigiKey = totalScoreDigiKey;
+          enriched.similarityBreakdownDigiKey = llmResultDigiKey.parameters.map((param) => ({
             parameterId: param.parameterId,
             displayName: param.description,
             score: param.score,
-            matched: param.score >= 80, // 80以上をmatchedとする
+            matched: param.score >= 80,
             targetValue: param.targetValue,
             candidateValue: param.candidateValue,
-            reason: param.reason, // LLMによる判定理由
+            status: "compared" as const,
+            excludeReason: undefined,
+            reason: param.reason,
           }));
+        } else {
+          const digiKeyResult = calculateSimilarityDigiKeyOnly(enrichedTargetProduct, enriched);
+          enriched.similarityScoreDigiKey = digiKeyResult.totalScore;
+          enriched.similarityBreakdownDigiKey = digiKeyResult.breakdown;
         }
       }
 
       return enriched;
     });
-  }, [searchResult, datasheetData, enrichedTargetProduct, similarityResults]);
+  }, [searchResult, datasheetData, enrichedTargetProduct, similarityResults, similarityResultsDigiKey]);
 
   if (!mpn) {
     return (

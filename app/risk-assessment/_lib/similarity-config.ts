@@ -657,6 +657,16 @@ export function getAllComparisonParameters(): ComparisonParameter[] {
 }
 
 /**
+ * ソースでフィルタした比較対象パラメータを取得
+ * @param source "digikey" または "datasheet"
+ */
+export function getComparisonParametersBySource(
+  source: "digikey" | "datasheet"
+): ComparisonParameter[] {
+  return COMPARISON_PARAMETERS.filter((p) => p.source === source);
+}
+
+/**
  * デフォルト設定（設定が見つからない場合に使用）
  */
 export const DEFAULT_CONFIG: ComparisonParameter = {

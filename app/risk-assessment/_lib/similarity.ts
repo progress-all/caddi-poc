@@ -6,6 +6,7 @@
 
 import {
   getAllComparisonParameters,
+  getComparisonParametersBySource,
   getComparisonParameter,
   DEFAULT_CONFIG,
   type ComparisonParameter,
@@ -256,29 +257,21 @@ export function createRangeMatcher(): ValueMatcher {
   };
 }
 
+type SimilarityInput = {
+  parameters?: Array<{ name: string; value: string }>;
+  datasheetParameters?: Record<string, { value: string | null }>;
+};
+
 /**
- * 類似度を計算
- * 
- * @param target 対象部品
- * @param candidate 候補部品
- * @returns 類似度計算結果
+ * 指定した比較パラメータリストで類似度を計算（内部共通ロジック）
  */
-export function calculateSimilarity(
-  target: {
-    parameters?: Array<{ name: string; value: string }>;
-    datasheetParameters?: Record<string, { value: string | null }>;
-  },
-  candidate: {
-    parameters?: Array<{ name: string; value: string }>;
-    datasheetParameters?: Record<string, { value: string | null }>;
-  }
+function calculateSimilarityWithParams(
+  target: SimilarityInput,
+  candidate: SimilarityInput,
+  comparisonParams: ComparisonParameter[]
 ): SimilarityResult {
   const breakdown: ParameterScore[] = [];
 
-  // 比較対象パラメータの定義を取得
-  const comparisonParams = getAllComparisonParameters();
-
-  // TargetとCandidateのパラメータをMapに変換
   const targetDigiKeyMap = new Map<string, string>();
   if (target.parameters) {
     for (const param of target.parameters) {
@@ -307,12 +300,10 @@ export function calculateSimilarity(
     }
   }
 
-  // 定義されたすべてのパラメータを処理
   for (const paramConfig of comparisonParams) {
     let targetValue: string | null = null;
     let candidateValue: string | null = null;
 
-    // 値を取得
     if (paramConfig.source === "digikey") {
       targetValue = targetDigiKeyMap.get(paramConfig.id) ?? null;
       candidateValue = candidateDigiKeyMap.get(paramConfig.id) ?? null;
@@ -321,7 +312,6 @@ export function calculateSimilarity(
       candidateValue = candidateDatasheetMap.get(paramConfig.id) ?? null;
     }
 
-    // 対象外パラメータの場合
     if (paramConfig.excluded) {
       breakdown.push({
         parameterId: `${paramConfig.source}:${paramConfig.id}`,
@@ -333,10 +323,9 @@ export function calculateSimilarity(
         status: "excluded",
         excludeReason: paramConfig.excludeReason,
       });
-      continue; // スコア計算には含めない
+      continue;
     }
 
-    // 値の有無を判定
     const hasTargetValue = targetValue !== null && targetValue !== undefined && targetValue !== "";
     const hasCandidateValue = candidateValue !== null && candidateValue !== undefined && candidateValue !== "";
 
@@ -345,20 +334,16 @@ export function calculateSimilarity(
     let matched = false;
 
     if (hasTargetValue && hasCandidateValue) {
-      // 両方に値がある場合: 比較可能
       status = "compared";
       const matcher = createMatcher(paramConfig);
       const result = matcher.match(targetValue, candidateValue);
       score = result.score;
       matched = result.matched;
     } else if (hasTargetValue && !hasCandidateValue) {
-      // Targetのみに値がある場合
       status = "target_only";
     } else if (!hasTargetValue && hasCandidateValue) {
-      // Candidateのみに値がある場合
       status = "candidate_only";
     } else {
-      // 両方に値がない場合
       status = "both_missing";
     }
 
@@ -373,9 +358,8 @@ export function calculateSimilarity(
     });
   }
 
-  // 総合スコアを計算（重み付き平均、比較可能なパラメータのみ）
   const comparedItems = breakdown.filter((item) => item.status === "compared");
-  
+
   if (comparedItems.length === 0) {
     return {
       totalScore: 0,
@@ -403,6 +387,34 @@ export function calculateSimilarity(
     totalScore: Math.round(totalScore),
     breakdown,
   };
+}
+
+/**
+ * 類似度を計算（PDF含む：DigiKey + データシートパラメータ）
+ *
+ * @param target 対象部品
+ * @param candidate 候補部品
+ * @returns 類似度計算結果
+ */
+export function calculateSimilarity(
+  target: SimilarityInput,
+  candidate: SimilarityInput
+): SimilarityResult {
+  return calculateSimilarityWithParams(target, candidate, getAllComparisonParameters());
+}
+
+/**
+ * DigiKeyパラメータのみで類似度を計算
+ *
+ * @param target 対象部品
+ * @param candidate 候補部品
+ * @returns 類似度計算結果
+ */
+export function calculateSimilarityDigiKeyOnly(
+  target: SimilarityInput,
+  candidate: SimilarityInput
+): SimilarityResult {
+  return calculateSimilarityWithParams(target, candidate, getComparisonParametersBySource("digikey"));
 }
 
 /**
