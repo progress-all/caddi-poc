@@ -12,8 +12,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import type { ColumnDef } from "@tanstack/react-table";
-import type { BOMRowWithRisk } from "./_lib/types";
-import { RiskCell } from "./_components/risk-cell";
+import type { BOMRowWithRisk, BOMRiskDisplayCategory } from "./_lib/types";
+import {
+  RiskCell,
+  riskToDisplayCategory,
+  complianceIconConfig,
+  lifecycleIconConfig,
+} from "./_components/risk-cell";
 
 
 // 代替候補有無の表示ラベル
@@ -32,7 +37,7 @@ export default function BOMPage() {
     "all" | "あり" | "なし" | "判定中" | "取得失敗"
   >("all");
   const [riskFilter, setRiskFilter] = useState<
-    "all" | BOMRowWithRisk["リスク"]
+    "all" | BOMRiskDisplayCategory
   >("all");
 
   // BOMデータを内部APIから取得
@@ -66,20 +71,19 @@ export default function BOMPage() {
     loadBOMData();
   }, []);
 
-  // リスクの高い順にソート（High → Medium → Low → 取得中 → 取得失敗）
+  // 表示区分の優先順位でソート（顕在 → 将来 → 要確認 → リスクなし）
+  const displayCategoryOrder: Record<BOMRiskDisplayCategory, number> = {
+    顕在リスク: 0,
+    将来リスク: 1,
+    要確認: 2,
+    リスクなし: 3,
+  };
   const sortedData = useMemo(() => {
-    const riskOrder: Record<BOMRowWithRisk["リスク"], number> = {
-      High: 0,
-      Medium: 1,
-      Low: 2,
-      取得中: 3,
-      取得失敗: 4,
-    };
-
     return [...bomData].sort((a, b) => {
-      const orderDiff = riskOrder[a.リスク] - riskOrder[b.リスク];
+      const catA = riskToDisplayCategory(a.リスク);
+      const catB = riskToDisplayCategory(b.リスク);
+      const orderDiff = displayCategoryOrder[catA] - displayCategoryOrder[catB];
       if (orderDiff !== 0) return orderDiff;
-      // 同一リスク内では部品型番順
       return a.部品型番.localeCompare(b.部品型番);
     });
   }, [bomData]);
@@ -102,19 +106,12 @@ export default function BOMPage() {
   }, [sortedData]);
 
   const availableRiskOptions = useMemo(() => {
-    const riskOrder: Record<BOMRowWithRisk["リスク"], number> = {
-      High: 0,
-      Medium: 1,
-      Low: 2,
-      取得中: 3,
-      取得失敗: 4,
-    };
-    const values = [...new Set(sortedData.map((r) => r.リスク))].sort(
-      (a, b) => riskOrder[a] - riskOrder[b]
-    );
+    const categories = [
+      ...new Set(sortedData.map((r) => riskToDisplayCategory(r.リスク))),
+    ].sort((a, b) => displayCategoryOrder[a] - displayCategoryOrder[b]);
     return [
       { value: "all" as const, label: "すべて" },
-      ...values.map((v) => ({ value: v, label: v })),
+      ...categories.map((c) => ({ value: c, label: c })),
     ];
   }, [sortedData]);
 
@@ -124,18 +121,22 @@ export default function BOMPage() {
     if (!subExists) setSubstituteFilter("all");
   }, [availableSubstituteOptions, substituteFilter]);
   useEffect(() => {
-    const riskExists = availableRiskOptions.some((o) => o.value === riskFilter);
-    if (!riskExists) setRiskFilter("all");
+    const riskExists = availableRiskOptions.some(
+      (o) => o.value === riskFilter && o.value !== "all"
+    );
+    if (riskFilter !== "all" && !riskExists) setRiskFilter("all");
   }, [availableRiskOptions, riskFilter]);
 
-  // 代替候補有無・リスクでフィルタ（Excel風）
+  // 代替候補有無・リスク区分でフィルタ
   const filteredData = useMemo(() => {
     let result = sortedData;
     if (substituteFilter !== "all") {
       result = result.filter((row) => row.代替候補有無 === substituteFilter);
     }
     if (riskFilter !== "all") {
-      result = result.filter((row) => row.リスク === riskFilter);
+      result = result.filter(
+        (row) => riskToDisplayCategory(row.リスク) === riskFilter
+      );
     }
     return result;
   }, [sortedData, substituteFilter, riskFilter]);
@@ -144,7 +145,7 @@ export default function BOMPage() {
   const columns: ColumnDef<BOMRowWithRisk>[] = [
     {
       accessorKey: "リスク",
-      header: "リスク",
+      header: "総合リスク",
       cell: ({ row }) => <RiskCell row={row.original} />,
     },
     {
@@ -185,23 +186,41 @@ export default function BOMPage() {
     {
       accessorKey: "rohsStatus",
       header: "RoHS",
-      cell: ({ row }) => (
-        <div className="text-sm">{row.original.rohsStatus}</div>
-      ),
+      cell: ({ row }) => {
+        const c = complianceIconConfig[row.original.rohsStatus];
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={c.label}>{c.icon}</span>
+            <span>{row.original.rohsStatus}</span>
+          </div>
+        );
+      },
     },
     {
       accessorKey: "reachStatus",
       header: "REACH",
-      cell: ({ row }) => (
-        <div className="text-sm">{row.original.reachStatus}</div>
-      ),
+      cell: ({ row }) => {
+        const c = complianceIconConfig[row.original.reachStatus];
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={c.label}>{c.icon}</span>
+            <span>{row.original.reachStatus}</span>
+          </div>
+        );
+      },
     },
     {
       accessorKey: "lifecycleStatus",
       header: "ライフサイクル",
-      cell: ({ row }) => (
-        <div className="text-sm">{row.original.lifecycleStatus}</div>
-      ),
+      cell: ({ row }) => {
+        const c = lifecycleIconConfig[row.original.lifecycleStatus];
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={c.label}>{c.icon}</span>
+            <span>{row.original.lifecycleStatus}</span>
+          </div>
+        );
+      },
     },
     {
       accessorKey: "代替候補有無",
@@ -268,10 +287,10 @@ export default function BOMPage() {
                 <Select
                   value={riskFilter}
                   onValueChange={(v) =>
-                    setRiskFilter(v as "all" | BOMRowWithRisk["リスク"])
+                    setRiskFilter(v as "all" | BOMRiskDisplayCategory)
                   }
                 >
-                  <SelectTrigger className="w-[110px] h-8 text-xs">
+                  <SelectTrigger className="w-[130px] h-8 text-xs">
                     <SelectValue placeholder="すべて" />
                   </SelectTrigger>
                   <SelectContent>

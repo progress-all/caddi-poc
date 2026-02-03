@@ -5,45 +5,89 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import type { BOMRowWithRisk } from "../_lib/types";
+import { Badge } from "@/components/ui/badge";
+import type { BOMRowWithRisk, BOMRiskDisplayCategory } from "../_lib/types";
 
-const riskLevelConfig: Record<
-  BOMRowWithRisk["リスク"],
-  { label: string; className: string }
+/** リスク値 → 表示区分（優先順位: 顕在 > 将来 > 要確認 > リスクなし） */
+export function riskToDisplayCategory(
+  risk: BOMRowWithRisk["リスク"]
+): BOMRiskDisplayCategory {
+  switch (risk) {
+    case "High":
+      return "顕在リスク";
+    case "Medium":
+      return "将来リスク";
+    case "取得中":
+    case "取得失敗":
+      return "要確認";
+    case "Low":
+      return "リスクなし";
+  }
+}
+
+/** 表示区分ごとのバッジ設定（部品画面の NonCompliant/Unknown/Compliant と同様のアイコン） */
+const riskCategoryConfig: Record<
+  BOMRiskDisplayCategory,
+  { label: string; className: string; icon: string }
 > = {
-  High: {
-    label: "High",
+  顕在リスク: {
+    label: "顕在リスク",
     className: "bg-red-500 text-white border-red-600",
+    icon: "❌",
   },
-  Medium: {
-    label: "Medium",
+  将来リスク: {
+    label: "将来リスク",
     className: "bg-amber-500 text-white border-amber-600",
+    icon: "⚠️",
   },
-  Low: {
-    label: "Low",
+  要確認: {
+    label: "要確認",
+    className: "bg-slate-500 text-white border-slate-600",
+    icon: "⚠️",
+  },
+  リスクなし: {
+    label: "リスクなし",
     className: "bg-green-500 text-white border-green-600",
-  },
-  取得中: {
-    label: "取得中",
-    className: "bg-slate-400 text-white border-slate-500",
-  },
-  取得失敗: {
-    label: "取得失敗",
-    className: "bg-slate-600 text-white border-slate-700",
+    icon: "✅",
   },
 };
 
+/** RoHS/REACH ステータス → アイコン（部品詳細・検索結果と同一）。列表示用に export */
+export const complianceIconConfig: Record<
+  BOMRowWithRisk["rohsStatus"],
+  { icon: string; label: string }
+> = {
+  Compliant: { icon: "✅", label: "Compliant" },
+  NonCompliant: { icon: "❌", label: "Non-Compliant" },
+  Unknown: { icon: "⚠️", label: "Unknown" },
+  "N/A": { icon: "⚠️", label: "N/A" },
+};
+
+/** Part Status（ライフサイクル）→ アイコン（部品詳細・検索結果と同一）。列表示用に export */
+export const lifecycleIconConfig: Record<
+  BOMRowWithRisk["lifecycleStatus"],
+  { icon: string; label: string }
+> = {
+  Active: { icon: "✅", label: "Active" },
+  NRND: { icon: "⚠️", label: "NRND" },
+  Obsolete: { icon: "❌", label: "Obsolete" },
+  EOL: { icon: "⚠️", label: "EOL" },
+  Unknown: { icon: "⚠️", label: "Unknown" },
+  "N/A": { icon: "⚠️", label: "N/A" },
+};
+
 interface RiskCellProps {
-  row: BOMRowWithRisk;
+  readonly row: BOMRowWithRisk;
 }
 
 /**
- * リスクセル：High/Medium/Low+色で表示し、
- * クリックで判断根拠（RoHS/REACH/ライフサイクル/代替候補）を表示
+ * リスクセル：リスク区分バッジ + RoHS/REACH/Status 内訳アイコンを表示。
+ * クリックで判断根拠（RoHS/REACH/ライフサイクル/代替候補）を表示。
  */
 export function RiskCell({ row }: RiskCellProps) {
   const risk = row.リスク;
-  const config = riskLevelConfig[risk];
+  const displayCategory = riskToDisplayCategory(risk);
+  const categoryConfig = riskCategoryConfig[displayCategory];
 
   const substituteText =
     row.代替候補有無 === "あり" && row.代替候補件数 != null
@@ -56,10 +100,15 @@ export function RiskCell({ row }: RiskCellProps) {
         <button
           type="button"
           title="クリックでリスクの理由を表示"
-          className={`inline-flex cursor-pointer rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 ${config.className}`}
+          className="inline-flex cursor-pointer focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 rounded"
           onClick={(e) => e.stopPropagation()}
         >
-          {config.label}
+          <Badge
+            variant="outline"
+            className={`text-xs font-semibold border ${categoryConfig.className}`}
+          >
+            {categoryConfig.icon} {categoryConfig.label}
+          </Badge>
         </button>
       </PopoverTrigger>
       <PopoverContent

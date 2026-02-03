@@ -11,6 +11,13 @@ export interface BOMRow {
   製品ページURL: string;
 }
 
+/** BOM一覧で表示するリスク区分（UI用） */
+export type BOMRiskDisplayCategory =
+  | "顕在リスク"
+  | "将来リスク"
+  | "要確認"
+  | "リスクなし";
+
 export interface BOMRowWithRisk extends BOMRow {
   リスク: "High" | "Medium" | "Low" | "取得中" | "取得失敗";
   代替候補有無: "あり" | "なし" | "判定中" | "取得失敗";
