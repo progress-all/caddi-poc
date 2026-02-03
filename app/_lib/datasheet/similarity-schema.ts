@@ -10,6 +10,8 @@ export const ParameterEvaluationSchema = z.object({
   candidateValue: z.string().nullable(),
   score: z.number().int().min(0).max(100),
   reason: z.string(),
+  /** 比較成立フラグ。true の項目のみ類似度スコア算出に用いる。未指定時は値から算出する */
+  is_comparable: z.boolean().optional(),
 });
 
 /**

@@ -255,9 +255,16 @@ export interface CandidateDetailedInfo extends CandidateInfo {
   // データシートパラメーター（PDFから抽出した詳細パラメーター）
   datasheetParameters?: Record<string, { description: string; value: string | null }>;
   
-  /** 類似度スコア (0-100) — DigiKey+Datasheet 評価結果 */
+  /** 類似度スコア (0-100) — DigiKey+Datasheet 評価結果。比較成立 0 件の場合は未設定 */
   similarityScore?: number;
   
+  /** 信頼度（比較成立数/全パラメータ数）— DigiKey+Datasheet */
+  similarityConfidence?: {
+    comparableParams: number;
+    totalParams: number;
+    confidenceRatioPercent: number;
+  };
+
   /** 類似度サマリー（LLM生成の要約文）— DigiKey+Datasheet 評価結果 */
   similaritySummary?: string;
   
@@ -270,10 +277,18 @@ export interface CandidateDetailedInfo extends CandidateInfo {
     targetValue: string | null;
     candidateValue: string | null;
     reason?: string; // LLMによる判定理由
+    isComparable?: boolean; // 比較成立フラグ
   }[];
 
-  /** DigiKeyパラメータのみの類似度スコア (0-100) */
+  /** DigiKeyパラメータのみの類似度スコア (0-100)。比較成立 0 件の場合は未設定 */
   similarityScoreDigiKey?: number;
+
+  /** DigiKeyパラメータのみの信頼度 */
+  similarityConfidenceDigiKey?: {
+    comparableParams: number;
+    totalParams: number;
+    confidenceRatioPercent: number;
+  };
 
   /** DigiKeyパラメータのみのスコア内訳 */
   similarityBreakdownDigiKey?: {
@@ -285,6 +300,8 @@ export interface CandidateDetailedInfo extends CandidateInfo {
     candidateValue: string | null;
     status: "compared" | "target_only" | "candidate_only" | "both_missing" | "excluded";
     excludeReason?: string;
+    reason?: string;
+    isComparable?: boolean;
   }[];
 }
 

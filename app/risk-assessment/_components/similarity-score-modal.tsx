@@ -20,6 +20,8 @@ type BreakdownItem = {
   excludeReason?: string;
   /** LLMによる判定理由 */
   reason?: string;
+  /** 比較成立フラグ（false の場合は比較不能として表示） */
+  isComparable?: boolean;
 };
 
 export type SimilarityScoreModalVariant = "digikey" | "digikey-datasheet";
@@ -114,6 +116,7 @@ function BreakdownTable({
                 ? item.parameterId.split(":")[1]
                 : item.parameterId;
               const status = item.status ?? "compared";
+              const isExcluded = status === "excluded" || item.isComparable === false;
               const resultBadge = getResultBadge(
                 status,
                 item.matched,
@@ -121,6 +124,7 @@ function BreakdownTable({
                 item.excludeReason
               );
               const showScore = status === "compared";
+              const reasonDisplay = isExcluded ? "-" : (item.reason ?? "-");
               return (
                 <tr
                   key={item.parameterId}
@@ -152,7 +156,7 @@ function BreakdownTable({
                   </td>
                   {hasReason && (
                     <td className="px-4 py-2 text-xs text-muted-foreground max-w-[300px]">
-                      {item.reason ?? "-"}
+                      {reasonDisplay}
                     </td>
                   )}
                 </tr>
@@ -182,8 +186,10 @@ export function SimilarityScoreModal({
     ...breakdownDigiKey,
     ...breakdownCombined.filter((p) => p.parameterId.startsWith("datasheet:")),
   ];
-  const scoreDigiKey = candidate.similarityScoreDigiKey ?? 0;
-  const scoreCombined = candidate.similarityScore ?? 0;
+  const scoreDigiKey = candidate.similarityScoreDigiKey;
+  const scoreCombined = candidate.similarityScore;
+  const confidenceDigiKey = candidate.similarityConfidenceDigiKey;
+  const confidenceCombined = candidate.similarityConfidence;
 
   const isDigiKeyOnly = variant === "digikey";
   const title =
@@ -192,6 +198,8 @@ export function SimilarityScoreModal({
       : "類似度スコア内訳（DigiKey+Datasheet）";
   const breakdown = isDigiKeyOnly ? breakdownDigiKey : breakdownMerged;
   const score = isDigiKeyOnly ? scoreDigiKey : scoreCombined;
+  const confidence = isDigiKeyOnly ? confidenceDigiKey : confidenceCombined;
+  const hasScore = score !== undefined && score !== null;
   const sourceLabel =
     variant === "digikey"
       ? "使用した情報ソース: DigiKeyのみ"
@@ -237,16 +245,21 @@ export function SimilarityScoreModal({
           </div>
           <div className="flex items-center justify-between gap-2 mb-2 shrink-0">
             <span className="text-sm font-medium shrink-0">スコア</span>
-            <span className={`text-lg font-bold shrink-0 ${getScoreColor(score)}`}>
-              {score} / 100
+            <span className={`text-lg font-bold shrink-0 ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
+              {hasScore ? `${score} / 100` : "-"}
             </span>
             <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
               <div
-                className={`h-full transition-all ${getScoreBgColor(score)}`}
-                style={{ width: `${score}%` }}
+                className={`h-full transition-all ${hasScore ? getScoreBgColor(score!) : "bg-transparent"}`}
+                style={{ width: hasScore ? `${score}%` : "0%" }}
               />
             </div>
           </div>
+          {confidence && (
+            <div className="text-xs text-muted-foreground mb-2 shrink-0">
+              信頼度: {confidence.comparableParams} / {confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
+            </div>
+          )}
           <div className="flex-1 min-h-0 min-w-0 overflow-auto">
             <BreakdownTable
               breakdown={breakdown}

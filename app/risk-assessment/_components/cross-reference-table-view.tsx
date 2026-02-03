@@ -462,9 +462,8 @@ function generateColumns(
           return <span className="text-muted-foreground">-</span>;
         }
         const score = row.original.similarityScoreDigiKey;
-        if (score === undefined || score === null) {
-          return <span className="text-muted-foreground">-</span>;
-        }
+        const confidence = row.original.similarityConfidenceDigiKey;
+        const hasScore = score !== undefined && score !== null;
         const getScoreColor = (s: number) => {
           if (s >= 80) return "text-green-600 dark:text-green-400";
           if (s >= 60) return "text-yellow-600 dark:text-yellow-400";
@@ -477,17 +476,24 @@ function generateColumns(
               e.stopPropagation();
               onScoreClick?.(row.original, "digikey");
             }}
-            className="flex items-center gap-2 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
+            className="flex flex-col gap-0.5 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
-            <span className={`text-sm font-medium ${getScoreColor(score)}`}>
-              {score}
-            </span>
-            <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
-              <div
-                className={`h-full transition-all ${score >= 80 ? "bg-green-500" : score >= 60 ? "bg-yellow-500" : "bg-red-500"}`}
-                style={{ width: `${score}%` }}
-              />
+            <div className="flex items-center gap-2">
+              <span className={`text-sm font-medium ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
+                {hasScore ? score : "-"}
+              </span>
+              <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
+                <div
+                  className={`h-full transition-all ${hasScore && score! >= 80 ? "bg-green-500" : hasScore && score! >= 60 ? "bg-yellow-500" : hasScore ? "bg-red-500" : "bg-transparent"}`}
+                  style={{ width: hasScore ? `${score}%` : "0%" }}
+                />
+              </div>
             </div>
+            {confidence && (
+              <span className="text-[10px] text-muted-foreground">
+                信頼度: {confidence.comparableParams}/{confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
+              </span>
+            )}
           </button>
         );
       },
@@ -503,9 +509,8 @@ function generateColumns(
           return <span className="text-muted-foreground">-</span>;
         }
         const score = row.original.similarityScore;
-        if (score === undefined || score === null) {
-          return <span className="text-muted-foreground">-</span>;
-        }
+        const confidence = row.original.similarityConfidence;
+        const hasScore = score !== undefined && score !== null;
         const getScoreColor = (s: number) => {
           if (s >= 80) return "text-green-600 dark:text-green-400";
           if (s >= 60) return "text-yellow-600 dark:text-yellow-400";
@@ -518,17 +523,24 @@ function generateColumns(
               e.stopPropagation();
               onScoreClick?.(row.original, "digikey-datasheet");
             }}
-            className="flex items-center gap-2 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
+            className="flex flex-col gap-0.5 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
-            <span className={`text-sm font-medium ${getScoreColor(score)}`}>
-              {score}
-            </span>
-            <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
-              <div
-                className={`h-full transition-all ${score >= 80 ? "bg-green-500" : score >= 60 ? "bg-yellow-500" : "bg-red-500"}`}
-                style={{ width: `${score}%` }}
-              />
+            <div className="flex items-center gap-2">
+              <span className={`text-sm font-medium ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
+                {hasScore ? score : "-"}
+              </span>
+              <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
+                <div
+                  className={`h-full transition-all ${hasScore && score! >= 80 ? "bg-green-500" : hasScore && score! >= 60 ? "bg-yellow-500" : hasScore ? "bg-red-500" : "bg-transparent"}`}
+                  style={{ width: hasScore ? `${score}%` : "0%" }}
+                />
+              </div>
             </div>
+            {confidence && (
+              <span className="text-[10px] text-muted-foreground">
+                信頼度: {confidence.comparableParams}/{confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
+              </span>
+            )}
           </button>
         );
       },

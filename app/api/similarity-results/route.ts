@@ -1,27 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { SimilarityResultSchema, type SimilarityResult, type ParameterEvaluation } from "@/app/_lib/datasheet/similarity-schema";
+import { SimilarityResultSchema, type SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
+import { computeAverageScore, computeConfidence } from "@/app/_lib/datasheet/similarity-score";
 
 const SIMILARITY_RESULTS_DIR = join(process.cwd(), "app/_lib/datasheet/similarity-results");
 
 /**
- * 総合スコアを算出する
- * 全パラメータのスコアの単純平均を計算
- */
-function calculateTotalScore(parameters: ParameterEvaluation[]): number {
-  if (parameters.length === 0) {
-    return 0;
-  }
-  const sum = parameters.reduce((acc, p) => acc + p.score, 0);
-  return Math.round(sum / parameters.length);
-}
-
-/**
- * APIレスポンス用の型（totalScoreを含む）
+ * APIレスポンス用の型（totalScore・confidenceを含む）
+ * 類似度スコアは比較成立したパラメータのみで算出。比較成立 0 件の場合は totalScore: null。
  */
 interface SimilarityResultWithScore extends SimilarityResult {
-  totalScore: number;
+  totalScore: number | null;
+  confidence: {
+    comparableParams: number;
+    totalParams: number;
+    confidenceRatioPercent: number;
+  };
 }
 
 /** DigiKey品番（末尾D）を datasheet_id（-01）に変換 */
@@ -99,7 +94,8 @@ export async function GET(request: NextRequest) {
 
           const validatedData = SimilarityResultSchema.parse(jsonData);
 
-          const totalScore = calculateTotalScore(validatedData.parameters);
+          const totalScore = computeAverageScore(validatedData.parameters);
+          const confidence = computeConfidence(validatedData.parameters);
 
           const candidateIdFromFile = file.replace(/\.json$/, "");
           const responseKeys = toResponseCandidateKeys(candidateIdFromFile);
@@ -111,10 +107,15 @@ export async function GET(request: NextRequest) {
               : `datasheet:${p.parameterId}`,
           }));
 
-          const resultEntry = {
+          const resultEntry: SimilarityResultWithScore = {
             ...validatedData,
             parameters: parametersWithPrefix,
             totalScore,
+            confidence: {
+              comparableParams: confidence.comparableParams,
+              totalParams: confidence.totalParams,
+              confidenceRatioPercent: confidence.confidenceRatioPercent,
+            },
           };
           for (const key of responseKeys) {
             results[key] = resultEntry;
