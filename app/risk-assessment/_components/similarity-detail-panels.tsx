@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { SimilarityScoreBreakdown } from "@/app/_components/similarity-score-breakdown";
 import type { CandidateDetailedInfo } from "../_lib/types";
 import { getScoreDisplay } from "@/app/_lib/similarity-score-color";
 
@@ -278,13 +279,7 @@ export function DigiKeySimilarityPanel({
         </div>
       </div>
       <div className="text-xs text-muted-foreground shrink-0 space-y-2">
-        <div>
-          総数: {scoreBreakdown.total}
-          高スコア(80以上): {scoreBreakdown.high}
-          中スコア(50-79): {scoreBreakdown.mid}
-          低スコア(50未満): {scoreBreakdown.low}
-          対象外: {scoreBreakdown.excluded}
-        </div>
+        <SimilarityScoreBreakdown scoreBreakdown={scoreBreakdown} />
         {confidence && (
           <div>
             信頼度: {confidence.comparableParams} / {confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
@@ -364,13 +359,7 @@ export function DatasheetSimilarityPanel({
         </div>
       </div>
       <div className="text-xs text-muted-foreground shrink-0 space-y-2">
-        <div>
-          総数: {scoreBreakdown.total}
-          高スコア(80以上): {scoreBreakdown.high}
-          中スコア(50-79): {scoreBreakdown.mid}
-          低スコア(50未満): {scoreBreakdown.low}
-          対象外: {scoreBreakdown.excluded}
-        </div>
+        <SimilarityScoreBreakdown scoreBreakdown={scoreBreakdown} />
         {confidence && (
           <div>
             信頼度: {confidence.comparableParams} / {confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
