@@ -10,6 +10,7 @@ import type {
 } from "../_lib/types";
 import { searchSimilarProducts, extractDatasheetId, fetchDatasheetParameters, fetchSimilarityResultsDigiKey, fetchSimilarityResults, fetchUnifiedProducts } from "../_lib/api";
 import { formatSimilaritySummaryDiff } from "../_lib/format-similarity-summary";
+import { computeAverageScore, computeConfidence, isComparableParameter } from "@/app/_lib/datasheet/similarity-score";
 import type { DatasheetData, UnifiedProduct } from "@/app/_lib/datasheet/types";
 import type { SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
 
@@ -227,11 +228,14 @@ function SimilarSearchContent() {
           ? similarityResultsDigiKey[candidateId]
           : undefined;
         if (llmResultDigiKey && llmResultDigiKey.parameters.length > 0) {
-          const totalScoreDigiKey = Math.round(
-            llmResultDigiKey.parameters.reduce((s, p) => s + p.score, 0) /
-              llmResultDigiKey.parameters.length
-          );
-          enriched.similarityScoreDigiKey = totalScoreDigiKey;
+          const totalScoreDigiKey = computeAverageScore(llmResultDigiKey.parameters);
+          const confidenceDigiKey = computeConfidence(llmResultDigiKey.parameters);
+          enriched.similarityScoreDigiKey = totalScoreDigiKey ?? undefined;
+          enriched.similarityConfidenceDigiKey = {
+            comparableParams: confidenceDigiKey.comparableParams,
+            totalParams: confidenceDigiKey.totalParams,
+            confidenceRatioPercent: confidenceDigiKey.confidenceRatioPercent,
+          };
           enriched.similarityBreakdownDigiKey = llmResultDigiKey.parameters.map((param) => ({
             parameterId: param.parameterId,
             displayName: param.description,
@@ -239,9 +243,10 @@ function SimilarSearchContent() {
             matched: param.score >= 80,
             targetValue: param.targetValue,
             candidateValue: param.candidateValue,
-            status: "compared" as const,
-            excludeReason: undefined,
+            status: isComparableParameter(param) ? ("compared" as const) : ("excluded" as const),
+            excludeReason: isComparableParameter(param) ? undefined : "比較不能",
             reason: param.reason,
+            isComparable: isComparableParameter(param),
           }));
         }
         // データシート類似度: similarity-results（API で -01⇔D マッピング済み、parameterId は datasheet: 付与済み）
@@ -249,16 +254,19 @@ function SimilarSearchContent() {
           ? similarityResultsCombined[candidateId]
           : undefined;
         if (llmResultCombined && llmResultCombined.parameters.length > 0) {
-          const totalScore = Math.round(
-            llmResultCombined.parameters.reduce((s, p) => s + p.score, 0) /
-              llmResultCombined.parameters.length
-          );
-          enriched.similarityScore = totalScore;
-          // サマリは DigiKey + データシートの parameters をマージして生成（厚さなど DigiKey のみの差分も含める）
+          const totalScore = computeAverageScore(llmResultCombined.parameters);
+          // 信頼度は「Similarity (DigiKey+Datasheet)」の表示内容（DigiKey + データシートのマージ）で算出
           const paramsForSummary =
             llmResultDigiKey && llmResultDigiKey.parameters.length > 0
               ? [...llmResultDigiKey.parameters, ...llmResultCombined.parameters]
               : llmResultCombined.parameters;
+          const confidenceCombined = computeConfidence(paramsForSummary);
+          enriched.similarityScore = totalScore ?? undefined;
+          enriched.similarityConfidence = {
+            comparableParams: confidenceCombined.comparableParams,
+            totalParams: confidenceCombined.totalParams,
+            confidenceRatioPercent: confidenceCombined.confidenceRatioPercent,
+          };
           enriched.similaritySummary = formatSimilaritySummaryDiff(paramsForSummary);
           enriched.similarityBreakdown = llmResultCombined.parameters.map((param) => ({
             parameterId: param.parameterId,
@@ -267,8 +275,9 @@ function SimilarSearchContent() {
             matched: param.score >= 80,
             targetValue: param.targetValue,
             candidateValue: param.candidateValue,
-            status: "compared" as const,
+            status: isComparableParameter(param) ? ("compared" as const) : ("excluded" as const),
             reason: param.reason,
+            isComparable: isComparableParameter(param),
           }));
         }
       }

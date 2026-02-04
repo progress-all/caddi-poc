@@ -20,6 +20,8 @@ type BreakdownItem = {
   excludeReason?: string;
   /** LLMによる判定理由 */
   reason?: string;
+  /** 比較成立フラグ（false の場合は比較不能として表示） */
+  isComparable?: boolean;
 };
 
 export type SimilarityScoreModalVariant = "digikey" | "digikey-datasheet";
@@ -90,30 +92,45 @@ function BreakdownTable({
   }
   const hasReason = showReason || breakdown.some((item) => item.reason);
   return (
-    <div className="border rounded-lg">
-      <div className="text-sm font-medium px-4 py-2 border-b bg-muted/30 sticky top-0 z-10 bg-muted/30">
-        {sectionTitle}
+    <div className="border rounded-lg overflow-hidden">
+      <div className="sticky top-0 z-20 shrink-0 bg-muted">
+        <div className="text-sm font-medium px-4 py-2 border-b bg-muted">
+          {sectionTitle}
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead className="bg-muted">
+              <tr>
+                <th className="px-4 py-2 text-left font-medium bg-muted">Parameter</th>
+                <th className="px-4 py-2 text-left font-medium bg-muted">Target</th>
+                <th className="px-4 py-2 text-left font-medium bg-muted">Candidate</th>
+                <th className="px-4 py-2 text-center font-medium w-48 bg-muted">Result</th>
+                <th className="px-4 py-2 text-center font-medium w-24 bg-muted">Score</th>
+                {hasReason && (
+                  <th className="px-4 py-2 text-left font-medium bg-muted">Reason (LLM)</th>
+                )}
+              </tr>
+            </thead>
+          </table>
+        </div>
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-auto max-h-[50vh]">
         <table className="w-full text-sm">
-          <thead className="bg-muted/50 sticky top-0 z-10">
-            <tr>
-              <th className="px-4 py-2 text-left font-medium bg-muted/50">Parameter</th>
-              <th className="px-4 py-2 text-left font-medium bg-muted/50">Target</th>
-              <th className="px-4 py-2 text-left font-medium bg-muted/50">Candidate</th>
-              <th className="px-4 py-2 text-center font-medium w-48 bg-muted/50">Result</th>
-              <th className="px-4 py-2 text-center font-medium w-24 bg-muted/50">Score</th>
-              {hasReason && (
-                <th className="px-4 py-2 text-left font-medium bg-muted/50">Reason (LLM)</th>
-              )}
-            </tr>
-          </thead>
+          <colgroup>
+            <col />
+            <col />
+            <col />
+            <col className="w-48" />
+            <col className="w-24" />
+            {hasReason && <col className="max-w-[300px]" />}
+          </colgroup>
           <tbody>
             {breakdown.map((item, index) => {
               const paramId = item.parameterId.includes(":")
                 ? item.parameterId.split(":")[1]
                 : item.parameterId;
               const status = item.status ?? "compared";
+              const isExcluded = status === "excluded" || item.isComparable === false;
               const resultBadge = getResultBadge(
                 status,
                 item.matched,
@@ -121,6 +138,7 @@ function BreakdownTable({
                 item.excludeReason
               );
               const showScore = status === "compared";
+              const reasonDisplay = isExcluded ? "-" : (item.reason ?? "-");
               return (
                 <tr
                   key={item.parameterId}
@@ -152,7 +170,7 @@ function BreakdownTable({
                   </td>
                   {hasReason && (
                     <td className="px-4 py-2 text-xs text-muted-foreground max-w-[300px]">
-                      {item.reason ?? "-"}
+                      {reasonDisplay}
                     </td>
                   )}
                 </tr>
@@ -182,8 +200,10 @@ export function SimilarityScoreModal({
     ...breakdownDigiKey,
     ...breakdownCombined.filter((p) => p.parameterId.startsWith("datasheet:")),
   ];
-  const scoreDigiKey = candidate.similarityScoreDigiKey ?? 0;
-  const scoreCombined = candidate.similarityScore ?? 0;
+  const scoreDigiKey = candidate.similarityScoreDigiKey;
+  const scoreCombined = candidate.similarityScore;
+  const confidenceDigiKey = candidate.similarityConfidenceDigiKey;
+  const confidenceCombined = candidate.similarityConfidence;
 
   const isDigiKeyOnly = variant === "digikey";
   const title =
@@ -192,6 +212,21 @@ export function SimilarityScoreModal({
       : "類似度スコア内訳（DigiKey+Datasheet）";
   const breakdown = isDigiKeyOnly ? breakdownDigiKey : breakdownMerged;
   const score = isDigiKeyOnly ? scoreDigiKey : scoreCombined;
+  const confidence = isDigiKeyOnly ? confidenceDigiKey : confidenceCombined;
+  const hasScore = score !== undefined && score !== null;
+  const comparableItems = breakdown.filter(
+    (item) => item.status === "compared" || item.isComparable !== false
+  );
+  const excludedItems = breakdown.filter(
+    (item) => item.status === "excluded" || item.isComparable === false
+  );
+  const scoreBreakdown = {
+    total: comparableItems.length,
+    high: comparableItems.filter((item) => item.score >= 80).length,
+    mid: comparableItems.filter((item) => item.score >= 50 && item.score < 80).length,
+    low: comparableItems.filter((item) => item.score < 50).length,
+    excluded: excludedItems.length,
+  };
   const sourceLabel =
     variant === "digikey"
       ? "使用した情報ソース: DigiKeyのみ"
@@ -237,17 +272,31 @@ export function SimilarityScoreModal({
           </div>
           <div className="flex items-center justify-between gap-2 mb-2 shrink-0">
             <span className="text-sm font-medium shrink-0">スコア</span>
-            <span className={`text-lg font-bold shrink-0 ${getScoreColor(score)}`}>
-              {score} / 100
+            <span className={`text-lg font-bold shrink-0 ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
+              {hasScore ? `${score} / 100` : "-"}
             </span>
             <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
               <div
-                className={`h-full transition-all ${getScoreBgColor(score)}`}
-                style={{ width: `${score}%` }}
+                className={`h-full transition-all ${hasScore ? getScoreBgColor(score!) : "bg-transparent"}`}
+                style={{ width: hasScore ? `${score}%` : "0%" }}
               />
             </div>
           </div>
-          <div className="flex-1 min-h-0 min-w-0 overflow-auto">
+          <div className="text-xs text-muted-foreground mb-2 shrink-0 space-y-2">
+            <div>
+              総数: {scoreBreakdown.total}　
+              高スコア(80以上): {scoreBreakdown.high}　
+              中スコア(50-79): {scoreBreakdown.mid}　
+              低スコア(50未満): {scoreBreakdown.low}　
+              対象外: {scoreBreakdown.excluded}
+            </div>
+            {confidence && (
+              <div>
+                信頼度: {confidence.comparableParams} / {confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
+              </div>
+            )}
+          </div>
+          <div className="flex-1 min-h-0 min-w-0 overflow-hidden">
             <BreakdownTable
               breakdown={breakdown}
               sectionTitle={sectionTitle}
