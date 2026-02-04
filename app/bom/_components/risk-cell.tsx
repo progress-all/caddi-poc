@@ -52,29 +52,11 @@ const riskCategoryConfig: Record<
   },
 };
 
-/** RoHS/REACH ステータス → アイコン（部品詳細・検索結果と同一）。列表示用に export */
-export const complianceIconConfig: Record<
-  BOMRowWithRisk["rohsStatus"],
-  { icon: string; label: string }
-> = {
-  Compliant: { icon: "✅", label: "Compliant" },
-  NonCompliant: { icon: "❌", label: "Non-Compliant" },
-  Unknown: { icon: "⚠️", label: "Unknown" },
-  "N/A": { icon: "⚠️", label: "N/A" },
-};
-
-/** Part Status（ライフサイクル）→ アイコン（部品詳細・検索結果と同一）。列表示用に export */
-export const lifecycleIconConfig: Record<
-  BOMRowWithRisk["lifecycleStatus"],
-  { icon: string; label: string }
-> = {
-  Active: { icon: "✅", label: "Active" },
-  NRND: { icon: "⚠️", label: "NRND" },
-  Obsolete: { icon: "❌", label: "Obsolete" },
-  EOL: { icon: "⚠️", label: "EOL" },
-  Unknown: { icon: "⚠️", label: "Unknown" },
-  "N/A": { icon: "⚠️", label: "N/A" },
-};
+/** RoHS/REACH ステータス → アイコン（共通設定を re-export、BOM列表示用） */
+export {
+  complianceIconConfig,
+  lifecycleIconConfig,
+} from "@/app/_lib/risk-icon-config";
 
 interface RiskCellProps {
   readonly row: BOMRowWithRisk;

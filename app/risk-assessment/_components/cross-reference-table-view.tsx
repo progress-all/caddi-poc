@@ -11,6 +11,12 @@ import { getPartRiskClassification, getComplianceFromClassifications, getRiskLev
 import { SubstituteTypeBadge } from "./substitute-type-badge";
 import { SimilarityScoreModal, type SimilarityScoreModalVariant } from "./similarity-score-modal";
 import { OverallRiskAssessment } from "./overall-risk-assessment";
+import {
+  complianceIconConfig,
+  lifecycleIconConfig,
+  normalizeComplianceStatus,
+  normalizeLifecycleStatus,
+} from "@/app/_lib/risk-icon-config";
 
 interface CrossReferenceTableViewProps {
   candidates: CandidateDetailedInfo[];
@@ -565,68 +571,6 @@ function generateColumns(
       },
     },
     {
-      accessorKey: "unitPrice",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Unit Price" />
-      ),
-      cell: ({ row }) => {
-        const unitPrice = row.original.unitPrice;
-        return unitPrice ? `$${unitPrice}` : "-";
-      },
-    },
-    {
-      accessorKey: "quantityAvailable",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Quantity Available" />
-      ),
-      cell: ({ row }) => {
-        const qty = row.original.quantityAvailable;
-        return qty.toLocaleString();
-      },
-    },
-    {
-      accessorKey: "digiKeyProductNumber",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="DigiKey Part Number" />
-      ),
-      cell: ({ row }) => {
-        const dkPn = row.original.digiKeyProductNumber;
-        const productUrl = row.original.productUrl;
-        return (
-          <div className="flex items-center gap-2">
-            <span className="text-sm">{dkPn}</span>
-            {productUrl && (
-              <a
-                href={productUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            )}
-          </div>
-        );
-      },
-    },
-    {
-      accessorKey: "partStatus",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Part Status" />
-      ),
-      cell: ({ row }) => {
-        const status = row.original.partStatus;
-        if (!status) return "-";
-        const variant =
-          status === "Active"
-            ? "default"
-            : status === "Obsolete"
-              ? "destructive"
-              : "secondary";
-        return <Badge variant={variant}>{status}</Badge>;
-      },
-    },
-    {
       id: "overallRiskAssessment",
       header: () => <div className="text-xs">総合リスク評価</div>,
       cell: ({ row, table }) => {
@@ -658,21 +602,80 @@ function generateColumns(
       enableSorting: false,
     },
     {
-      accessorKey: "series",
+      accessorKey: "classifications.rohs",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Series" />
+        <DataTableColumnHeader column={column} title="RoHS" />
       ),
       cell: ({ row }) => {
-        return row.original.series || "-";
+        const rohsStatus = normalizeComplianceStatus(row.original.classifications?.rohs);
+        const c = complianceIconConfig[rohsStatus];
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={`RoHS: ${c.label}`}>{c.icon}</span>
+            <span>{c.label}</span>
+          </div>
+        );
+      },
+      enableSorting: false,
+    },
+    {
+      accessorKey: "classifications.reach",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="REACH" />
+      ),
+      cell: ({ row }) => {
+        const reachStatus = normalizeComplianceStatus(row.original.classifications?.reach);
+        const c = complianceIconConfig[reachStatus];
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={`REACH: ${c.label}`}>{c.icon}</span>
+            <span>{c.label}</span>
+          </div>
+        );
+      },
+      enableSorting: false,
+    },
+    {
+      accessorKey: "partStatus",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Part Status" />
+      ),
+      cell: ({ row }) => {
+        const status = row.original.partStatus;
+        const lifecycleStatus = normalizeLifecycleStatus(status);
+        const c = lifecycleIconConfig[lifecycleStatus];
+        const label = status?.trim() ? status : c.label;
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={c.label}>{c.icon}</span>
+            <span>{label}</span>
+          </div>
+        );
       },
     },
     {
-      accessorKey: "category",
+      accessorKey: "digiKeyProductNumber",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Category" />
+        <DataTableColumnHeader column={column} title="DigiKey Part Number" />
       ),
       cell: ({ row }) => {
-        return row.original.category?.name || "-";
+        const dkPn = row.original.digiKeyProductNumber;
+        const productUrl = row.original.productUrl;
+        return (
+          <div className="flex items-center gap-2">
+            <span className="text-sm">{dkPn}</span>
+            {productUrl && (
+              <a
+                href={productUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            )}
+          </div>
+        );
       },
     },
     {
@@ -695,6 +698,26 @@ function generateColumns(
       enableSorting: false,
     },
     {
+      accessorKey: "unitPrice",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Unit Price" />
+      ),
+      cell: ({ row }) => {
+        const unitPrice = row.original.unitPrice;
+        return unitPrice ? `$${unitPrice}` : "-";
+      },
+    },
+    {
+      accessorKey: "quantityAvailable",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Quantity Available" />
+      ),
+      cell: ({ row }) => {
+        const qty = row.original.quantityAvailable;
+        return qty.toLocaleString();
+      },
+    },
+    {
       accessorKey: "manufacturerLeadWeeks",
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Lead Time" />
@@ -705,23 +728,22 @@ function generateColumns(
       },
     },
     {
-      accessorKey: "classifications",
-      header: () => <div className="text-xs">RoHS / REACH</div>,
+      accessorKey: "series",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Series" />
+      ),
       cell: ({ row }) => {
-        const classifications = row.original.classifications;
-        if (!classifications) return "-";
-        return (
-          <div className="space-y-1 text-xs">
-            {classifications.rohs && (
-              <div>RoHS: {classifications.rohs}</div>
-            )}
-            {classifications.reach && (
-              <div>REACH: {classifications.reach}</div>
-            )}
-          </div>
-        );
+        return row.original.series || "-";
       },
-      enableSorting: false,
+    },
+    {
+      accessorKey: "category",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Category" />
+      ),
+      cell: ({ row }) => {
+        return row.original.category?.name || "-";
+      },
     },
   ];
 
