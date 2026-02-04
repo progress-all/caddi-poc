@@ -17,6 +17,7 @@ import {
   normalizeComplianceStatus,
   normalizeLifecycleStatus,
 } from "@/app/_lib/risk-icon-config";
+import { getScoreDisplay } from "@/app/_lib/similarity-score-color";
 
 interface CrossReferenceTableViewProps {
   candidates: CandidateDetailedInfo[];
@@ -460,94 +461,92 @@ function generateColumns(
     {
       accessorKey: "similarityScoreDigiKey",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Similarity (DigiKey)" />
+        <div className="w-[180px] min-w-[180px] shrink-0">
+          <DataTableColumnHeader column={column} title="Similarity (DigiKey)" />
+        </div>
       ),
       cell: ({ row, table }) => {
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
         if (isTargetProduct) {
-          return <span className="text-muted-foreground">-</span>;
+          return <div className="w-[180px] min-w-[180px] shrink-0"><span className="text-muted-foreground">-</span></div>;
         }
         const score = row.original.similarityScoreDigiKey;
         const confidence = row.original.similarityConfidenceDigiKey;
-        const hasScore = score !== undefined && score !== null;
-        const getScoreColor = (s: number) => {
-          if (s >= 80) return "text-green-600 dark:text-green-400";
-          if (s >= 60) return "text-yellow-600 dark:text-yellow-400";
-          return "text-red-600 dark:text-red-400";
-        };
+        const display = getScoreDisplay(score);
         return (
+          <div className="w-[180px] min-w-[180px] shrink-0">
           <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
               onScoreClick?.(row.original, "digikey");
             }}
-            className="flex flex-col gap-0.5 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
+            className="flex flex-col gap-0.5 min-w-0 w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
             <div className="flex items-center gap-2">
-              <span className={`text-sm font-medium ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
-                {hasScore ? score : "-"}
+              <span className={`text-sm font-medium ${display.textClassName}`}>
+                {display.label}
               </span>
               <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
                 <div
-                  className={`h-full transition-all ${hasScore && score! >= 80 ? "bg-green-500" : hasScore && score! >= 60 ? "bg-yellow-500" : hasScore ? "bg-red-500" : "bg-transparent"}`}
-                  style={{ width: hasScore ? `${score}%` : "0%" }}
+                  className={`h-full transition-all ${display.barClassName}`}
+                  style={{ width: display.hasScore ? `${display.label}%` : "0%" }}
                 />
               </div>
             </div>
             {confidence && (
-              <span className="text-[10px] text-muted-foreground">
+              <span className="text-xs text-muted-foreground">
                 信頼度: {confidence.comparableParams}/{confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
               </span>
             )}
           </button>
+          </div>
         );
       },
     },
     {
       accessorKey: "similarityScore",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Similarity (DigiKey+Datasheet)" />
+        <div className="w-[180px] min-w-[180px] shrink-0">
+          <DataTableColumnHeader column={column} title="Similarity (DigiKey+Datasheet)" />
+        </div>
       ),
       cell: ({ row, table }) => {
         const isTargetProduct = hasTargetProduct && table.getRowModel().rows[0]?.id === row.id;
         if (isTargetProduct) {
-          return <span className="text-muted-foreground">-</span>;
+          return <div className="w-[180px] min-w-[180px] shrink-0"><span className="text-muted-foreground">-</span></div>;
         }
         const score = row.original.similarityScore;
         const confidence = row.original.similarityConfidence;
-        const hasScore = score !== undefined && score !== null;
-        const getScoreColor = (s: number) => {
-          if (s >= 80) return "text-green-600 dark:text-green-400";
-          if (s >= 60) return "text-yellow-600 dark:text-yellow-400";
-          return "text-red-600 dark:text-red-400";
-        };
+        const display = getScoreDisplay(score);
         return (
+          <div className="w-[180px] min-w-[180px] shrink-0">
           <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
               onScoreClick?.(row.original, "digikey-datasheet");
             }}
-            className="flex flex-col gap-0.5 min-w-[80px] w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
+            className="flex flex-col gap-0.5 min-w-0 w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
             <div className="flex items-center gap-2">
-              <span className={`text-sm font-medium ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
-                {hasScore ? score : "-"}
+              <span className={`text-sm font-medium ${display.textClassName}`}>
+                {display.label}
               </span>
               <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
                 <div
-                  className={`h-full transition-all ${hasScore && score! >= 80 ? "bg-green-500" : hasScore && score! >= 60 ? "bg-yellow-500" : hasScore ? "bg-red-500" : "bg-transparent"}`}
-                  style={{ width: hasScore ? `${score}%` : "0%" }}
+                  className={`h-full transition-all ${display.barClassName}`}
+                  style={{ width: display.hasScore ? `${display.label}%` : "0%" }}
                 />
               </div>
             </div>
             {confidence && (
-              <span className="text-[10px] text-muted-foreground">
+              <span className="text-xs text-muted-foreground">
                 信頼度: {confidence.comparableParams}/{confidence.totalParams} ({Math.round(confidence.confidenceRatioPercent)}%)
               </span>
             )}
           </button>
+          </div>
         );
       },
     },

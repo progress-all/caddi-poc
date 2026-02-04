@@ -20,6 +20,7 @@ import type {
   RiskEvidence,
 } from "../_lib/types";
 import { cn } from "@/app/_lib/utils";
+import { SimilarityScoreDisplay } from "@/app/_components/similarity-score-display";
 import { DifficultyBadge } from "./difficulty-badge";
 import { ScoreDetailSection } from "./score-detail-section";
 import { getSubstitutions } from "@/app/_lib/vendor/digikey/api";
@@ -249,19 +250,11 @@ export function PartCard({
               {/* 類似度スコアバッジ（類似品の場合のみ） */}
               {similarityScore !== undefined && (
                 <>
-                  <Badge
-                    variant="outline"
-                    className={cn(
-                      "text-xs flex-shrink-0",
-                      similarityScore >= 80
-                        ? "border-green-500 text-green-600"
-                        : similarityScore >= 60
-                          ? "border-yellow-500 text-yellow-600"
-                          : "border-red-500 text-red-600"
-                    )}
-                  >
-                    スコア: {similarityScore}
-                  </Badge>
+                  <SimilarityScoreDisplay
+                    score={similarityScore}
+                    variant="badge"
+                    badgePrefix="スコア: "
+                  />
                   {/* スコア内訳（控えめに表示） */}
                   {(scoreBreakdown || scoreBreakdownDetail) && (
                     <span className="text-[10px] text-muted-foreground flex-shrink-0">

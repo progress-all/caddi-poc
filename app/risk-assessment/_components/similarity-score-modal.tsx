@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import type { CandidateDetailedInfo } from "../_lib/types";
+import { getScoreDisplay } from "@/app/_lib/similarity-score-color";
 
 type BreakdownItem = {
   parameterId: string;
@@ -33,18 +34,6 @@ interface SimilarityScoreModalProps {
   candidate: CandidateDetailedInfo;
   /** 表示するモーダル: DigiKeyのみ または DigiKey+Datasheet */
   variant: SimilarityScoreModalVariant;
-}
-
-function getScoreColor(score: number) {
-  if (score >= 80) return "text-green-600 dark:text-green-400";
-  if (score >= 60) return "text-yellow-600 dark:text-yellow-400";
-  return "text-red-600 dark:text-red-400";
-}
-
-function getScoreBgColor(score: number) {
-  if (score >= 80) return "bg-green-500";
-  if (score >= 60) return "bg-yellow-500";
-  return "bg-red-500";
 }
 
 function getResultBadge(
@@ -161,9 +150,14 @@ function BreakdownTable({
                   </td>
                   <td className="px-4 py-2 text-center">
                     {showScore ? (
-                      <span className={`font-medium ${getScoreColor(item.score)}`}>
-                        {item.score}
-                      </span>
+                      (() => {
+                        const d = getScoreDisplay(item.score);
+                        return (
+                          <span className={`font-medium ${d.textClassName}`}>
+                            {d.label}
+                          </span>
+                        );
+                      })()
                     ) : (
                       <span className="text-muted-foreground">-</span>
                     )}
@@ -213,7 +207,7 @@ export function SimilarityScoreModal({
   const breakdown = isDigiKeyOnly ? breakdownDigiKey : breakdownMerged;
   const score = isDigiKeyOnly ? scoreDigiKey : scoreCombined;
   const confidence = isDigiKeyOnly ? confidenceDigiKey : confidenceCombined;
-  const hasScore = score !== undefined && score !== null;
+  const scoreDisplay = getScoreDisplay(score);
   const comparableItems = breakdown.filter(
     (item) => item.status === "compared" || item.isComparable !== false
   );
@@ -272,13 +266,13 @@ export function SimilarityScoreModal({
           </div>
           <div className="flex items-center justify-between gap-2 mb-2 shrink-0">
             <span className="text-sm font-medium shrink-0">スコア</span>
-            <span className={`text-lg font-bold shrink-0 ${hasScore ? getScoreColor(score!) : "text-muted-foreground"}`}>
-              {hasScore ? `${score} / 100` : "-"}
+            <span className={`text-lg font-bold shrink-0 ${scoreDisplay.textClassName}`}>
+              {scoreDisplay.hasScore ? `${scoreDisplay.label} / 100` : scoreDisplay.label}
             </span>
             <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden min-w-0">
               <div
-                className={`h-full transition-all ${hasScore ? getScoreBgColor(score!) : "bg-transparent"}`}
-                style={{ width: hasScore ? `${score}%` : "0%" }}
+                className={`h-full transition-all ${scoreDisplay.barClassName}`}
+                style={{ width: scoreDisplay.hasScore ? `${scoreDisplay.label}%` : "0%" }}
               />
             </div>
           </div>
