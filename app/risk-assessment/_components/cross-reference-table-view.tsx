@@ -9,7 +9,10 @@ import { Badge } from "@/components/ui/badge";
 import type { CandidateDetailedInfo } from "../_lib/types";
 import { getPartRiskClassification, getComplianceFromClassifications, getRiskLevel } from "../_lib/compliance-utils";
 import { SubstituteTypeBadge } from "./substitute-type-badge";
-import { SimilarityScoreModal, type SimilarityScoreModalVariant } from "./similarity-score-modal";
+import {
+  SimilarityDetailModal,
+  type SimilarityDetailTab,
+} from "./similarity-detail-modal";
 import { OverallRiskAssessment } from "./overall-risk-assessment";
 import {
   complianceIconConfig,
@@ -35,26 +38,43 @@ export function CrossReferenceTableView({
   targetProduct,
   isLoadingDatasheet = false,
 }: CrossReferenceTableViewProps) {
-  // モーダルの状態管理（DigiKeyのみ / DigiKey+Datasheet のどちらを表示するか）
+  // 統合モーダル用: 選択中Candidate・初期タブ・開閉・タブ制御
   const [selectedCandidate, setSelectedCandidate] =
     useState<CandidateDetailedInfo | null>(null);
-  const [modalVariant, setModalVariant] =
-    useState<SimilarityScoreModalVariant | null>(null);
+  const [initialTab, setInitialTab] = useState<SimilarityDetailTab>("digikey");
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<SimilarityDetailTab | undefined>(
+    undefined
+  );
 
-  const isModalOpen = modalVariant !== null;
-
-  // スコアクリックハンドラ（類似度セルから呼ばれ、該当するモーダルを開く）
-  const handleScoreClick = (
+  // 統合モーダルを開く（Candidate行クリック or スコアクリック時）。Target行では呼ばない。
+  const handleOpenModal = (
     candidate: CandidateDetailedInfo,
-    variant: SimilarityScoreModalVariant
+    tab: SimilarityDetailTab
   ) => {
     if (!targetProduct) return;
     setSelectedCandidate(candidate);
-    setModalVariant(variant);
+    setInitialTab(tab);
+    setActiveTab(undefined);
+    setModalOpen(true);
   };
 
   const handleModalOpenChange = (open: boolean) => {
-    if (!open) setModalVariant(null);
+    if (!open) {
+      setModalOpen(false);
+      setSelectedCandidate(null);
+    }
+  };
+
+  // Candidate行クリックで統合モーダルを開く（初期タブは DigiKey）。Target行は無視。
+  const handleRowClick = (row: CandidateDetailedInfo) => {
+    if (!targetProduct) return;
+    const isTargetRow =
+      targetProduct.digiKeyProductNumber === row.digiKeyProductNumber ||
+      (targetProduct.digiKeyProductNumber === "" &&
+        targetProduct.manufacturerProductNumber === row.manufacturerProductNumber);
+    if (isTargetRow) return;
+    handleOpenModal(row, "digikey");
   };
 
   // 対象部品と候補を結合（対象部品を先頭に）
@@ -77,7 +97,7 @@ export function CrossReferenceTableView({
       !!targetProduct,
       isLoadingDatasheet,
       targetSubstitutionCount,
-      (candidate, variant) => handleScoreClick(candidate, variant)
+      (candidate, tab) => handleOpenModal(candidate, tab)
     );
   }, [tableData, targetProduct, isLoadingDatasheet, targetSubstitutionCount]);
 
@@ -292,15 +312,24 @@ export function CrossReferenceTableView({
         csvColumnAccessors={csvColumnAccessors}
         enableStickyHeader={true}
         maxHeight="calc(100vh - 300px)"
+        onRowClick={handleRowClick}
       />
-      {/* スコア内訳モーダル（DigiKeyのみ / DigiKey+Datasheet のどちらか1つを表示） */}
-      {targetProduct && selectedCandidate && modalVariant && (
-        <SimilarityScoreModal
+      {/* 統合モーダル: Candidate行/スコアクリックで開き、DigiKey/Datasheetタブ切替 */}
+      {targetProduct && selectedCandidate && (
+        <SimilarityDetailModal
           open={isModalOpen}
           onOpenChange={handleModalOpenChange}
-          targetProduct={targetProduct}
-          candidate={selectedCandidate}
-          variant={modalVariant}
+          context={{
+            targetProduct,
+            candidate: selectedCandidate,
+            selectedRowType: "candidate",
+            preferredTab: initialTab,
+          }}
+          defaultTab="digikey"
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+          candidates={candidates}
+          onSelectCandidate={setSelectedCandidate}
         />
       )}
     </div>
@@ -374,14 +403,14 @@ function getOrderedDatasheetParameterIds(candidates: CandidateDetailedInfo[]): s
 /**
  * 候補データから動的カラムを生成
  * @param targetSubstitutionCount 対象部品行の代替件数（0なら将来リスク。対象行以外は未使用）
- * @param onScoreClick 類似度セルクリック時のハンドラ（候補と表示するモーダル種別を渡す）
+ * @param onScoreClick 類似度セルクリック時のハンドラ（候補と初期タブを渡す）。stopPropagation は呼び出し元で実施。
  */
 function generateColumns(
   candidates: CandidateDetailedInfo[],
   hasTargetProduct: boolean,
   isLoadingDatasheet: boolean,
   targetSubstitutionCount?: number,
-  onScoreClick?: (candidate: CandidateDetailedInfo, variant: SimilarityScoreModalVariant) => void
+  onScoreClick?: (candidate: CandidateDetailedInfo, tab: SimilarityDetailTab) => void
 ): ColumnDef<CandidateDetailedInfo>[] {
   // パラメータ列の順序: 基準行（先頭＝Target）のJSON出現順を保持し、他行のみのパラメータは初出順で末尾に追加
   const orderedParameterNames = getOrderedParameterNames(candidates);
@@ -481,6 +510,7 @@ function generateColumns(
               e.stopPropagation();
               onScoreClick?.(row.original, "digikey");
             }}
+            aria-label="DigiKey類似度の詳細を表示"
             className="flex flex-col gap-0.5 min-w-0 w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
             <div className="flex items-center gap-2">
@@ -525,8 +555,9 @@ function generateColumns(
             type="button"
             onClick={(e) => {
               e.stopPropagation();
-              onScoreClick?.(row.original, "digikey-datasheet");
+              onScoreClick?.(row.original, "datasheet");
             }}
+            aria-label="Datasheet類似度の詳細を表示"
             className="flex flex-col gap-0.5 min-w-0 w-full cursor-pointer hover:bg-muted/50 rounded px-1 py-0.5 transition-colors text-left"
           >
             <div className="flex items-center gap-2">
