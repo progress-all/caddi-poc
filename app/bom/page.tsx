@@ -29,6 +29,17 @@ const substituteLabelMap: Record<BOMRowWithRisk["代替候補有無"], string> =
   取得失敗: "取得失敗",
 };
 
+// 代替・類似候補の表示用アイコン（リスク評価の視認性向上）
+const substituteIconConfig: Record<
+  BOMRowWithRisk["代替候補有無"],
+  { icon: string; label: string }
+> = {
+  あり: { icon: "✅", label: "代替候補あり" },
+  なし: { icon: "❌", label: "代替候補なし（リスク要因）" },
+  判定中: { icon: "⏳", label: "判定中" },
+  取得失敗: { icon: "⚠️", label: "取得失敗" },
+};
+
 export default function BOMPage() {
   const [bomData, setBomData] = useState<BOMRowWithRisk[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -228,14 +239,17 @@ export default function BOMPage() {
       cell: ({ row }) => {
         const hasSubs = row.original.代替候補有無;
         const count = row.original.代替候補件数;
-        if (hasSubs === "あり" && count !== undefined) {
-          return (
-            <div className="text-sm">
-              {hasSubs}（{count}件）
-            </div>
-          );
-        }
-        return <div className="text-sm">{hasSubs}</div>;
+        const config = substituteIconConfig[hasSubs];
+        const text =
+          hasSubs === "あり" && count !== undefined
+            ? `${hasSubs}（${count}件）`
+            : hasSubs;
+        return (
+          <div className="text-sm flex items-center gap-1.5">
+            <span title={config.label}>{config.icon}</span>
+            <span>{text}</span>
+          </div>
+        );
       },
     },
   ];

@@ -372,18 +372,30 @@ export function PartCard({
               </div>
             </div>
           )}
-          {/* 代替・類似候補の有無 */}
+          {/* 代替・類似候補の有無（BOM一覧と同様のアイコンでリスク評価を視覚化） */}
           <div className="flex items-center justify-between text-xs">
             <span className="text-muted-foreground">代替・類似候補:</span>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1.5">
               {isSubstitutionsLoading ? (
-                <span className="text-muted-foreground">判定中…</span>
+                <>
+                  <span title="判定中">⏳</span>
+                  <span className="text-muted-foreground">判定中…</span>
+                </>
               ) : substitutionsError ? (
-                <span className="text-destructive">取得失敗</span>
+                <>
+                  <span title="取得失敗">⚠️</span>
+                  <span className="text-destructive">取得失敗</span>
+                </>
               ) : substitutionsCount > 0 ? (
-                <span className="text-foreground">あり（{substitutionsCount}件）</span>
+                <>
+                  <span title="代替候補あり">✅</span>
+                  <span className="text-foreground">あり（{substitutionsCount}件）</span>
+                </>
               ) : (
-                <span className="text-muted-foreground">なし</span>
+                <>
+                  <span title="代替候補なし（リスク要因）">❌</span>
+                  <span className="text-muted-foreground">なし</span>
+                </>
               )}
             </div>
           </div>
