@@ -242,15 +242,12 @@ export default function BOMPage() {
 
   return (
     <div className="h-full flex flex-col">
-      <div className="mb-4">
-        <h1 className="text-2xl font-bold mb-2">BOM一覧</h1>
-        <p className="text-sm text-muted-foreground">
-          部品のリスク評価と代替候補の有無を表示します（リスクの高い順）
-        </p>
-      </div>
+      <p className="text-sm text-muted-foreground mb-3">
+        部品のリスク評価と代替候補の有無を表示します（リスクの高い順）
+      </p>
 
       <Card className="flex-1 min-h-0 flex flex-col">
-        <CardHeader className="flex-shrink-0">
+        <CardHeader className="flex-shrink-0 p-4 pb-2">
           <div className="flex items-center justify-between">
             <CardTitle className="text-base">
               BOM一覧 ({filteredData.length}件)
@@ -305,7 +302,7 @@ export default function BOMPage() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="flex-1 min-h-0 overflow-hidden">
+        <CardContent className="flex-1 min-h-0 overflow-hidden p-4 pt-0">
           {isLoading ? (
             <div className="flex items-center justify-center h-full min-h-[500px]">
               <p className="text-sm text-muted-foreground">読み込み中...</p>

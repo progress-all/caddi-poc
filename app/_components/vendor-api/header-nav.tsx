@@ -40,48 +40,62 @@ export function HeaderNav() {
   const isRiskAssessment = isRiskAssessmentPage(pathname);
   const isBOM = isBOMPage(pathname);
 
+  // ページ別タイトル（区切り線の下に表示）
+  let pageTitle: string | null = null;
+  if (isRiskAssessment) {
+    pageTitle = "リスク評価（部品検索）";
+  } else if (isBOM) {
+    pageTitle = "BOM一覧";
+  } else if (currentApi.vendor && currentApi.endpoint) {
+    pageTitle = `${currentApi.vendor.label} / ${currentApi.endpoint.label}`;
+  }
+
   return (
-    <header className="border-b bg-card flex-shrink-0">
-      <div className="flex items-center gap-4 px-4 h-12">
-        {/* 左側: メニュー（リスク評価 → Mouser → DigiKey の順） */}
-        <nav className="flex items-center gap-2">
-          {/* リスク評価へのリンク */}
+    <header className="bg-card flex-shrink-0">
+      {/* 1行目: プロダクト名（固定） */}
+      <div className="px-5 pt-4 pb-3 border-b border-border">
+        <h1 className="text-xl font-semibold text-foreground tracking-tight">
+          供給リスク対応AIソリューション
+        </h1>
+      </div>
+      {/* 2行目: タブ [ リスク評価 | BOM一覧 ] */}
+      <div className="px-4 py-2 bg-muted/40 border-b border-border">
+        <nav className="flex items-center gap-0.5">
           <Button
             variant={isRiskAssessment ? "secondary" : "ghost"}
             asChild
+            size="sm"
             className={cn(
-              "h-9 px-3",
-              isRiskAssessment &&
-              "bg-primary/10 text-foreground font-medium"
+              "h-8 px-4 rounded-md",
+              isRiskAssessment && "bg-background shadow-sm font-medium"
             )}
           >
             <Link href={RISK_ASSESSMENT_PATH}>リスク評価</Link>
           </Button>
-
-          {/* BOM一覧へのリンク */}
           <Button
             variant={isBOM ? "secondary" : "ghost"}
             asChild
-            className={cn("h-9 px-3", isBOM && "bg-primary/10 text-foreground font-medium")}
+            size="sm"
+            className={cn(
+              "h-8 px-4 rounded-md",
+              isBOM && "bg-background shadow-sm font-medium"
+            )}
           >
             <Link href={BOM_PATH}>BOM一覧</Link>
           </Button>
-
-          {/* ベンダードロップダウンメニュー */}
           {vendors.map((vendor) => {
             const hasActiveEndpoint = vendor.endpoints.some(
               (endpoint) => pathname === endpoint.href
             );
-
             return (
               <DropdownMenu key={vendor.label}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant={hasActiveEndpoint ? "secondary" : "ghost"}
+                    size="sm"
                     className={cn(
-                      "h-9 px-3",
-                      hasActiveEndpoint &&
-                      "bg-primary/10 text-foreground font-medium"
+                      "h-8 px-4 rounded-md",
+                      hasActiveEndpoint && "bg-background shadow-sm font-medium"
                     )}
                   >
                     {vendor.label}
@@ -118,24 +132,13 @@ export function HeaderNav() {
             );
           })}
         </nav>
-
-        {/* API選択の右横: 現在のAPI表示（ページタイトル） */}
-        {currentApi.vendor && currentApi.endpoint && (
-          <h1 className="text-lg font-semibold text-foreground flex items-center gap-2">
-            <span>{currentApi.vendor.label}</span>
-            <span className="text-muted-foreground">/</span>
-            <span>{currentApi.endpoint.label}</span>
-          </h1>
-        )}
-        {isRiskAssessment && (
-          <h1 className="text-lg font-semibold text-foreground">
-            規制リスク評価・代替品提案
-          </h1>
-        )}
-        {isBOM && (
-          <h1 className="text-lg font-semibold text-foreground">
-            BOM一覧
-          </h1>
+      </div>
+      {/* 3行目: ページタイトル（サブヘッダー） */}
+      <div className="px-5 pt-4 pb-2">
+        {pageTitle && (
+          <h2 className="text-base font-semibold text-foreground">
+            {pageTitle}
+          </h2>
         )}
       </div>
     </header>
