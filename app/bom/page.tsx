@@ -20,7 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Upload } from "lucide-react";
+import { Upload, FileText } from "lucide-react";
 import type { ColumnDef } from "@tanstack/react-table";
 import type { BOMRowWithRisk, BOMRiskDisplayCategory } from "./_lib/types";
 import {
@@ -55,6 +55,8 @@ const DEFAULT_BOM_ID = "bom";
 export default function BOMPage() {
   const [bomId, setBomId] = useState(DEFAULT_BOM_ID);
   const [bomData, setBomData] = useState<BOMRowWithRisk[]>([]);
+  /** アップロードでその場処理した結果（キャッシュ保存なし・デプロイ環境用） */
+  const [uploadedData, setUploadedData] = useState<BOMRowWithRisk[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [substituteFilter, setSubstituteFilter] = useState<
@@ -101,15 +103,16 @@ export default function BOMPage() {
     要確認: 2,
     リスクなし: 3,
   };
+  const displayData = uploadedData ?? bomData;
   const sortedData = useMemo(() => {
-    return [...bomData].sort((a, b) => {
+    return [...displayData].sort((a, b) => {
       const catA = getDisplayCategoryForRow(a);
       const catB = getDisplayCategoryForRow(b);
       const orderDiff = displayCategoryOrder[catA] - displayCategoryOrder[catB];
       if (orderDiff !== 0) return orderDiff;
       return a.部品型番.localeCompare(b.部品型番);
     });
-  }, [bomData]);
+  }, [displayData]);
 
   // BOMに存在する値だけをフィルタオプションに表示
   const availableSubstituteOptions = useMemo(() => {
@@ -272,16 +275,31 @@ export default function BOMPage() {
         <p className="text-sm text-muted-foreground">
           部品のリスク評価と代替候補の有無を表示します（リスクの高い順）
         </p>
-        <Button
-          type="button"
-          variant="default"
-          size="sm"
-          className="shrink-0 gap-2"
-          onClick={() => setUploadModalOpen(true)}
-        >
-          <Upload className="h-4 w-4" />
-          BOMをアップロード
-        </Button>
+        <div className="flex items-center gap-2 shrink-0">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="gap-2"
+            onClick={() => {
+              setUploadedData(null);
+              setBomId(DEFAULT_BOM_ID);
+            }}
+          >
+            <FileText className="h-4 w-4" />
+            サンプルデータを表示
+          </Button>
+          <Button
+            type="button"
+            variant="default"
+            size="sm"
+            className="gap-2"
+            onClick={() => setUploadModalOpen(true)}
+          >
+            <Upload className="h-4 w-4" />
+            BOMをアップロード
+          </Button>
+        </div>
       </div>
 
       <Dialog
@@ -321,9 +339,8 @@ export default function BOMPage() {
                     setUploadError(data.error || `アップロードに失敗しました: ${res.status}`);
                     return;
                   }
-                  const id = data.id as string;
-                  if (id) {
-                    setBomId(id);
+                  if (Array.isArray(data)) {
+                    setUploadedData(data);
                     setUploadModalOpen(false);
                   } else {
                     setUploadError("アップロード応答が不正です。");
@@ -342,7 +359,9 @@ export default function BOMPage() {
               <p className="text-sm text-destructive">{uploadError}</p>
             )}
             {uploading && (
-              <p className="text-sm text-muted-foreground">アップロード中...</p>
+              <p className="text-sm text-muted-foreground">
+                現在処理中です。読み込みにお時間がかかる場合がございますが、このままお待ちください。
+              </p>
             )}
           </div>
           <DialogFooter>

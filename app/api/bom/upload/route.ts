@@ -1,25 +1,12 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
 import * as XLSX from "xlsx";
+
+export const runtime = "nodejs";
+
 import type { BOMRow } from "@/app/bom/_lib/types";
-import { parseCSV, generateCSV } from "@/app/_lib/csv-utils";
-
-const BOM_HEADERS: (keyof BOMRow)[] = [
-  "サブシステム",
-  "カテゴリ",
-  "部品型番",
-  "メーカー",
-  "製品概要",
-  "製品ページURL",
-];
-
-function bomRowsToCSVString(rows: BOMRow[]): string {
-  return generateCSV(
-    BOM_HEADERS as unknown as string[],
-    rows.map((r) => BOM_HEADERS.map((k) => r[k] ?? ""))
-  );
-}
+import { parseCSV } from "@/app/_lib/csv-utils";
+import { DigiKeyApiClient } from "@/app/_lib/vendor/digikey/client";
+import { enrichBomRows } from "../enrich-bom";
 
 const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024; // 5MB
 const MAX_ROWS = 500;
@@ -52,10 +39,8 @@ function parseXLSXToBOMRows(buffer: ArrayBuffer): BOMRow[] {
   for (let r = 1; r < raw.length; r++) {
     const row = raw[r];
     if (!row || row.length === 0) continue;
-
     const 部品型番 = getCol(row, "部品型番");
     if (!部品型番) continue;
-
     rows.push({
       サブシステム: getCol(row, "サブシステム"),
       カテゴリ: getCol(row, "カテゴリ"),
@@ -68,6 +53,10 @@ function parseXLSXToBOMRows(buffer: ArrayBuffer): BOMRow[] {
   return rows;
 }
 
+/**
+ * BOMアップロードAPI（PoC）
+ * CSV/Excelをその場でパース・リスク付与し、結果をレスポンスで返す（ファイル・キャッシュ保存なし）
+ */
 export async function POST(request: Request) {
   try {
     const formData = await request.formData();
@@ -106,7 +95,9 @@ export async function POST(request: Request) {
           製品ページURL: String(r["製品ページURL"] ?? "").trim(),
         })) as BOMRow[];
     } else if (name.endsWith(".xlsx") || name.endsWith(".xls")) {
-      rows = parseXLSXToBOMRows(buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength));
+      rows = parseXLSXToBOMRows(
+        buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength)
+      );
     } else {
       return NextResponse.json(
         { error: "CSVまたはExcel（.xlsx, .xls）ファイルを指定してください。" },
@@ -128,14 +119,18 @@ export async function POST(request: Request) {
       );
     }
 
-    const id = `upload-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-    const uploadsDir = path.join(process.cwd(), "data", "bom-uploads");
-    await fs.mkdir(uploadsDir, { recursive: true });
-    const csvPath = path.join(uploadsDir, `${id}.csv`);
-    const csvContent = bomRowsToCSVString(rows);
-    await fs.writeFile(csvPath, csvContent, "utf-8");
+    const clientId = process.env.DIGIKEY_CLIENT_ID;
+    const clientSecret = process.env.DIGIKEY_CLIENT_SECRET;
+    if (!clientId || !clientSecret) {
+      return NextResponse.json(
+        { error: "DigiKey APIの設定がありません。" },
+        { status: 500 }
+      );
+    }
 
-    return NextResponse.json({ id });
+    const client = new DigiKeyApiClient(clientId, clientSecret);
+    const rowsWithRisk = await enrichBomRows(rows, client);
+    return NextResponse.json(rowsWithRisk);
   } catch (error) {
     console.error("BOM upload error:", error);
     const message = error instanceof Error ? error.message : String(error);
