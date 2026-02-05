@@ -3,6 +3,15 @@
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { DataTable } from "@/components/ui/data-table";
 import {
   Select,
@@ -11,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Upload } from "lucide-react";
 import type { ColumnDef } from "@tanstack/react-table";
 import type { BOMRowWithRisk, BOMRiskDisplayCategory } from "./_lib/types";
 import {
@@ -50,6 +60,7 @@ export default function BOMPage() {
   const [riskFilter, setRiskFilter] = useState<
     "all" | BOMRiskDisplayCategory
   >("all");
+  const [uploadModalOpen, setUploadModalOpen] = useState(false);
 
   // BOMデータを内部APIから取得
   useEffect(() => {
@@ -256,9 +267,41 @@ export default function BOMPage() {
 
   return (
     <div className="h-full flex flex-col">
-      <p className="text-sm text-muted-foreground mb-3">
-        部品のリスク評価と代替候補の有無を表示します（リスクの高い順）
-      </p>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+        <p className="text-sm text-muted-foreground">
+          部品のリスク評価と代替候補の有無を表示します（リスクの高い順）
+        </p>
+        <Button
+          type="button"
+          variant="default"
+          size="sm"
+          className="shrink-0 gap-2"
+          onClick={() => setUploadModalOpen(true)}
+        >
+          <Upload className="h-4 w-4" />
+          BOMをアップロード
+        </Button>
+      </div>
+
+      <Dialog open={uploadModalOpen} onOpenChange={setUploadModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>BOMをアップロード</DialogTitle>
+            <DialogDescription>
+              この機能は現在準備中です。
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button
+              type="button"
+              variant="secondary"
+              onClick={() => setUploadModalOpen(false)}
+            >
+              閉じる
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <Card className="flex-1 min-h-0 flex flex-col">
         <CardHeader className="flex-shrink-0 p-4 pb-2">
@@ -282,13 +325,13 @@ export default function BOMPage() {
                   <SelectTrigger className="w-[130px] h-8 text-xs">
                     <SelectValue placeholder="すべて" />
                   </SelectTrigger>
-                <SelectContent>
-                  {availableSubstituteOptions.map((opt) => (
-                    <SelectItem key={opt.value} value={opt.value} className="text-xs">
-                      {opt.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
+                  <SelectContent>
+                    {availableSubstituteOptions.map((opt) => (
+                      <SelectItem key={opt.value} value={opt.value} className="text-xs">
+                        {opt.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </div>
               <div className="flex items-center gap-1.5">
