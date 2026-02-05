@@ -332,10 +332,10 @@ function SimilarSearchContent() {
     <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
       {/* 検索結果 */}
       <Card className="flex-1 min-h-0 flex flex-col overflow-hidden">
-        <CardHeader className="shrink-0">
+        <CardHeader className="shrink-0 py-2 px-4">
           <CardTitle className="text-base">類似品検索結果</CardTitle>
         </CardHeader>
-        <CardContent className="flex-1 flex flex-col min-h-0 overflow-hidden pt-0">
+        <CardContent className="flex-1 flex flex-col min-h-0 overflow-hidden pt-0 px-4 pb-4">
           {/* ローディング状態 */}
           {isLoading && (
             <div className="flex items-center justify-center py-8 shrink-0">

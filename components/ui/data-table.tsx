@@ -60,6 +60,8 @@ interface DataTableProps<TData, TValue> {
   maxHeight?: string
   /** 行クリック時のコールバック。行データとインデックスを受け取る */
   onRowClick?: (row: TData, index: number) => void
+  /** 行の余白を詰める（類似品検索などで使用） */
+  denseRows?: boolean
 }
 
 export function DataTable<TData, TValue>({
@@ -79,6 +81,7 @@ export function DataTable<TData, TValue>({
   enableStickyHeader = false,
   maxHeight,
   onRowClick,
+  denseRows = false,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -205,7 +208,10 @@ export function DataTable<TData, TValue>({
                   >
                     {row.getVisibleCells().map((cell) => {
                       return (
-                        <TableCell key={cell.id}>
+                        <TableCell
+                          key={cell.id}
+                          className={denseRows ? "py-0.5 max-h-none" : undefined}
+                        >
                           {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

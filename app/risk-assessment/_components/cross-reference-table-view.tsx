@@ -7,13 +7,14 @@ import { DataTable, type CsvColumnConfig } from "@/components/ui/data-table";
 import { DataTableColumnHeader } from "@/components/ui/data-table-column-header";
 import { Badge } from "@/components/ui/badge";
 import type { CandidateDetailedInfo } from "../_lib/types";
-import { getPartRiskClassification, getComplianceFromClassifications, getRiskLevel } from "../_lib/compliance-utils";
+import { getPartRiskClassification, getComplianceFromClassifications } from "../_lib/compliance-utils";
 import { SubstituteTypeBadge } from "./substitute-type-badge";
 import {
   SimilarityDetailModal,
   type SimilarityDetailTab,
 } from "./similarity-detail-modal";
-import { OverallRiskAssessment } from "./overall-risk-assessment";
+import { classificationToDisplayCategory } from "../_lib/risk-display-config";
+import { riskCategoryConfig } from "@/app/bom/_components/risk-cell";
 import {
   complianceIconConfig,
   lifecycleIconConfig,
@@ -229,15 +230,9 @@ export function CrossReferenceTableView({
               row.manufacturerProductNumber === targetProduct.manufacturerProductNumber)
           );
           const subCount = isTarget ? targetSubstitutionCount : undefined;
-          const level = getRiskLevel(compliance, row.partStatus ?? undefined, subCount);
-          const levelLabelMap: Record<string, string> = { Low: "低", Medium: "中", High: "高" };
-          const levelLabel = levelLabelMap[level] ?? "高";
           const c = getPartRiskClassification(compliance, row.partStatus ?? undefined, subCount);
-          const parts: string[] = [];
-          if (c.current) parts.push("顕在リスク");
-          if (c.future) parts.push("将来リスク");
-          const detail = parts.length > 0 ? `（${parts.join("、")}）` : "";
-          return `総合リスク：${levelLabel}${detail}`;
+          const category = classificationToDisplayCategory(c);
+          return riskCategoryConfig[category].label;
         },
       },
       {
@@ -313,6 +308,7 @@ export function CrossReferenceTableView({
         csvColumnAccessors={csvColumnAccessors}
         enableStickyHeader={true}
         onRowClick={handleRowClick}
+        denseRows
       />
       </div>
       {/* 統合モーダル: Candidate行/スコアクリックで開き、DigiKey/Datasheetタブ切替 */}
@@ -612,22 +608,20 @@ function generateColumns(
           candidate.classifications?.reach
         );
         const substitutionCount = isTargetRow ? targetSubstitutionCount : undefined;
-        const riskLevel = getRiskLevel(
-          compliance,
-          candidate.partStatus ?? undefined,
-          substitutionCount
-        );
         const classification = getPartRiskClassification(
           compliance,
           candidate.partStatus ?? undefined,
           substitutionCount
         );
+        const category = classificationToDisplayCategory(classification);
+        const config = riskCategoryConfig[category];
         return (
-          <OverallRiskAssessment
-            riskLevel={riskLevel}
-            classification={classification}
-            compact
-          />
+          <Badge
+            variant="outline"
+            className={`text-xs font-semibold border ${config.className}`}
+          >
+            {config.icon} {config.label}
+          </Badge>
         );
       },
       enableSorting: false,

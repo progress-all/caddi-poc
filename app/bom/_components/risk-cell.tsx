@@ -25,8 +25,8 @@ export function riskToDisplayCategory(
   }
 }
 
-/** 表示区分ごとのバッジ設定（部品画面の NonCompliant/Unknown/Compliant と同様のアイコン） */
-const riskCategoryConfig: Record<
+/** 表示区分ごとのバッジ設定（部品画面の NonCompliant/Unknown/Compliant と同様のアイコン）。類似品検索の総合リスク表示でも共用。 */
+export const riskCategoryConfig: Record<
   BOMRiskDisplayCategory,
   { label: string; className: string; icon: string }
 > = {
