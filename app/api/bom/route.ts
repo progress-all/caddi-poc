@@ -155,11 +155,15 @@ export async function GET(request: NextRequest) {
               }
 
               // リスクを算出（総合評価）
-              const riskLevel = getRiskLevel(
+              let riskLevel = getRiskLevel(
                 compliance,
                 product.ProductStatus?.Status,
                 substitutionCount
               );
+              // 表示上のライフサイクルがEOLの場合は顕在リスク（High）とする
+              if (lifecycleStatus === "EOL" && riskLevel !== "High") {
+                riskLevel = "High";
+              }
 
               rowsWithRisk.push({
                 ...row,

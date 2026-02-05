@@ -15,7 +15,7 @@ import type { ColumnDef } from "@tanstack/react-table";
 import type { BOMRowWithRisk, BOMRiskDisplayCategory } from "./_lib/types";
 import {
   RiskCell,
-  riskToDisplayCategory,
+  getDisplayCategoryForRow,
   complianceIconConfig,
   lifecycleIconConfig,
 } from "./_components/risk-cell";
@@ -80,8 +80,8 @@ export default function BOMPage() {
   };
   const sortedData = useMemo(() => {
     return [...bomData].sort((a, b) => {
-      const catA = riskToDisplayCategory(a.リスク);
-      const catB = riskToDisplayCategory(b.リスク);
+      const catA = getDisplayCategoryForRow(a);
+      const catB = getDisplayCategoryForRow(b);
       const orderDiff = displayCategoryOrder[catA] - displayCategoryOrder[catB];
       if (orderDiff !== 0) return orderDiff;
       return a.部品型番.localeCompare(b.部品型番);
@@ -107,7 +107,7 @@ export default function BOMPage() {
 
   const availableRiskOptions = useMemo(() => {
     const categories = [
-      ...new Set(sortedData.map((r) => riskToDisplayCategory(r.リスク))),
+      ...new Set(sortedData.map((r) => getDisplayCategoryForRow(r))),
     ].sort((a, b) => displayCategoryOrder[a] - displayCategoryOrder[b]);
     return [
       { value: "all" as const, label: "すべて" },
@@ -135,7 +135,7 @@ export default function BOMPage() {
     }
     if (riskFilter !== "all") {
       result = result.filter(
-        (row) => riskToDisplayCategory(row.リスク) === riskFilter
+        (row) => getDisplayCategoryForRow(row) === riskFilter
       );
     }
     return result;

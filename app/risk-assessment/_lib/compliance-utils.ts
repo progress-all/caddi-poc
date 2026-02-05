@@ -45,7 +45,7 @@ export function getRiskLevel(
   // 既存のリスク判定を実行
   let baseRiskLevel: RiskLevel;
 
-  // High リスク: RoHS/REACH が NonCompliant、または ステータスが Obsolete/Discontinued
+  // High リスク: RoHS/REACH が NonCompliant、または ステータスが Obsolete/Discontinued/EOL
   if (
     compliance.rohs === "NonCompliant" ||
     compliance.reach === "NonCompliant"
@@ -54,7 +54,9 @@ export function getRiskLevel(
   } else if (
     productStatus &&
     (productStatus.includes("Obsolete") ||
-      productStatus.includes("Discontinued"))
+      productStatus.includes("Discontinued") ||
+      productStatus.toLowerCase().includes("eol") ||
+      productStatus.toLowerCase().includes("end of life"))
   ) {
     baseRiskLevel = "High";
   }
@@ -109,7 +111,7 @@ export function getRiskLevel(
 
 /**
  * 部品リスクを「顕在リスク」「将来リスク」に分類する（可視化用・PoC）
- * - 顕在: Lifecycle Obsolete/Discontinued、RoHS/REACH Non-compliant
+ * - 顕在: Lifecycle Obsolete/Discontinued/EOL、RoHS/REACH Non-compliant
  * - 将来: Lifecycle NRND/Last Time Buy、代替品・類似品が0件
  */
 export function getPartRiskClassification(
@@ -123,7 +125,9 @@ export function getPartRiskClassification(
     compliance.rohs === "NonCompliant" ||
     compliance.reach === "NonCompliant" ||
     status.includes("obsolete") ||
-    status.includes("discontinued");
+    status.includes("discontinued") ||
+    status.includes("eol") ||
+    status.includes("end of life");
 
   const future =
     status.includes("not for new designs") ||
@@ -160,6 +164,8 @@ export function getContributingReasons(
       currentReasons.push(`Lifecycleが${status || "Obsolete"}（廃番）のため、顕在リスクに該当しています。`);
     } else if (statusLower.includes("discontinued")) {
       currentReasons.push(`Lifecycleが${status || "Discontinued"}のため、顕在リスクに該当しています。`);
+    } else if (statusLower.includes("eol") || statusLower.includes("end of life")) {
+      currentReasons.push(`Lifecycleが${status || "EOL"}（End of Life）のため、顕在リスクに該当しています。`);
     }
   }
 

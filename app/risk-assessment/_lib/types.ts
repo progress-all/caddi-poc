@@ -6,7 +6,7 @@ export type RiskLevel = "Low" | "Medium" | "High";
 
 /**
  * 部品リスク分類（可視化用・PoC）
- * - current: 顕在リスク（Lifecycle Obsolete/Discontinued、RoHS/REACH Non-compliant）
+ * - current: 顕在リスク（Lifecycle Obsolete/Discontinued/EOL、RoHS/REACH Non-compliant）
  * - future: 将来リスク（Lifecycle NRND/Last Time Buy、代替品・類似品0件）
  */
 export type PartRiskClassificationKind = "current" | "future";

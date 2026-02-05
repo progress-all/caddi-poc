@@ -25,6 +25,18 @@ export function riskToDisplayCategory(
   }
 }
 
+/**
+ * BOM行の表示区分を取得（ライフサイクルがEOLの場合は顕在リスクとする）。
+ * APIのリスク値のみだとキャッシュでMediumのままになる場合があるため、
+ * 表示上のライフサイクル（EOL）を優先して顕在リスクに統一する。
+ */
+export function getDisplayCategoryForRow(
+  row: BOMRowWithRisk
+): BOMRiskDisplayCategory {
+  if (row.lifecycleStatus === "EOL") return "顕在リスク";
+  return riskToDisplayCategory(row.リスク);
+}
+
 /** 表示区分ごとのバッジ設定（部品画面の NonCompliant/Unknown/Compliant と同様のアイコン）。類似品検索の総合リスク表示でも共用。 */
 export const riskCategoryConfig: Record<
   BOMRiskDisplayCategory,
@@ -67,8 +79,7 @@ interface RiskCellProps {
  * クリックで判断根拠（RoHS/REACH/ライフサイクル/代替候補）を表示。
  */
 export function RiskCell({ row }: RiskCellProps) {
-  const risk = row.リスク;
-  const displayCategory = riskToDisplayCategory(risk);
+  const displayCategory = getDisplayCategoryForRow(row);
   const categoryConfig = riskCategoryConfig[displayCategory];
 
   const substituteText =

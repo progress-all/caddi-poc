@@ -37,7 +37,7 @@ export const lifecycleIconConfig: Record<LifecycleStatus, IconConfig> = {
   Active: { icon: "✅", label: "Active" },
   NRND: { icon: "⚠️", label: "NRND" },
   Obsolete: { icon: "❌", label: "Obsolete" },
-  EOL: { icon: "⚠️", label: "EOL" },
+  EOL: { icon: "❌", label: "EOL" },
   Unknown: { icon: "⚠️", label: "Unknown" },
   "N/A": { icon: "⚠️", label: "N/A" },
 };
