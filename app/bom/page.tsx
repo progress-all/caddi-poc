@@ -50,7 +50,10 @@ const substituteIconConfig: Record<
   取得失敗: { icon: "⚠️", label: "取得失敗" },
 };
 
+const DEFAULT_BOM_ID = "bom";
+
 export default function BOMPage() {
+  const [bomId, setBomId] = useState(DEFAULT_BOM_ID);
   const [bomData, setBomData] = useState<BOMRowWithRisk[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -61,23 +64,22 @@ export default function BOMPage() {
     "all" | BOMRiskDisplayCategory
   >("all");
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
-  // BOMデータを内部APIから取得
+  // BOMデータを内部APIから取得（bomId 変更時に再取得）
   useEffect(() => {
     const loadBOMData = async () => {
       try {
         setIsLoading(true);
         setError(null);
-
-        // 内部APIからBOMデータを取得（デフォルトはbom）
-        const response = await fetch("/api/bom?id=bom");
+        const response = await fetch(`/api/bom?id=${encodeURIComponent(bomId)}`);
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
           throw new Error(
             errorData.error || `BOMデータの取得に失敗しました: ${response.status}`
           );
         }
-
         const data: BOMRowWithRisk[] = await response.json();
         setBomData(data);
       } catch (err) {
@@ -89,9 +91,8 @@ export default function BOMPage() {
         setIsLoading(false);
       }
     };
-
     loadBOMData();
-  }, []);
+  }, [bomId]);
 
   // 表示区分の優先順位でソート（顕在 → 将来 → 要確認 → リスクなし）
   const displayCategoryOrder: Record<BOMRiskDisplayCategory, number> = {
@@ -283,19 +284,73 @@ export default function BOMPage() {
         </Button>
       </div>
 
-      <Dialog open={uploadModalOpen} onOpenChange={setUploadModalOpen}>
+      <Dialog
+        open={uploadModalOpen}
+        onOpenChange={(open) => {
+          setUploadModalOpen(open);
+          if (!open) setUploadError(null);
+        }}
+      >
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>BOMをアップロード</DialogTitle>
             <DialogDescription>
-              この機能は現在準備中です。
+              CSVまたはExcel（.xlsx）ファイルを選択してください。部品型番が必須です。
             </DialogDescription>
           </DialogHeader>
+          <div className="space-y-3 py-2">
+            <input
+              type="file"
+              accept=".csv,.xlsx"
+              className="block w-full text-sm text-muted-foreground file:mr-3 file:rounded file:border-0 file:bg-primary file:px-4 file:py-2 file:text-sm file:font-medium file:text-primary-foreground file:cursor-pointer hover:file:bg-primary/90"
+              disabled={uploading}
+              onChange={async (e) => {
+                const file = e.target.files?.[0];
+                if (!file) return;
+                setUploadError(null);
+                setUploading(true);
+                try {
+                  const formData = new FormData();
+                  formData.append("file", file);
+                  const res = await fetch("/api/bom/upload", {
+                    method: "POST",
+                    body: formData,
+                  });
+                  const data = await res.json().catch(() => ({}));
+                  if (!res.ok) {
+                    setUploadError(data.error || `アップロードに失敗しました: ${res.status}`);
+                    return;
+                  }
+                  const id = data.id as string;
+                  if (id) {
+                    setBomId(id);
+                    setUploadModalOpen(false);
+                  } else {
+                    setUploadError("アップロード応答が不正です。");
+                  }
+                } catch (err) {
+                  setUploadError(
+                    err instanceof Error ? err.message : "アップロードに失敗しました"
+                  );
+                } finally {
+                  setUploading(false);
+                  e.target.value = "";
+                }
+              }}
+            />
+            {uploadError && (
+              <p className="text-sm text-destructive">{uploadError}</p>
+            )}
+            {uploading && (
+              <p className="text-sm text-muted-foreground">アップロード中...</p>
+            )}
+          </div>
           <DialogFooter>
             <Button
               type="button"
               variant="secondary"
               onClick={() => setUploadModalOpen(false)}
+              disabled={uploading}
             >
               閉じる
             </Button>
@@ -361,8 +416,11 @@ export default function BOMPage() {
         </CardHeader>
         <CardContent className="flex-1 min-h-0 overflow-hidden p-4 pt-0">
           {isLoading ? (
-            <div className="flex items-center justify-center h-full min-h-[500px]">
-              <p className="text-sm text-muted-foreground">読み込み中...</p>
+            <div className="flex flex-col items-center justify-center gap-2 h-full min-h-[500px]">
+              <p className="text-sm text-muted-foreground">現在処理中です。</p>
+              <p className="text-xs text-muted-foreground">
+                読み込みにお時間がかかる場合がございますが、このままお待ちください。
+              </p>
             </div>
           ) : error ? (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700">

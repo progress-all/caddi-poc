@@ -46,3 +46,6 @@ data/cache/*
 !data/cache/bom/.keep
 !data/cache/similar-search/
 !data/cache/similar-search/.keep
+
+# BOM uploads (user-uploaded CSV/Excel)
+data/bom-uploads/

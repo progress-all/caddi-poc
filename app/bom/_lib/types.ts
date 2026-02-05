@@ -28,3 +28,12 @@ export interface BOMRowWithRisk extends BOMRow {
   // ライフサイクルステータス
   lifecycleStatus: "Active" | "NRND" | "Obsolete" | "EOL" | "Unknown" | "N/A";
 }
+
+/** 部品単位キャッシュの値（同一MPNでAPIをスキップするため） */
+export interface PartCacheValue {
+  riskLevel: BOMRowWithRisk["リスク"];
+  substitutionCount: number | null;
+  rohsStatus: BOMRowWithRisk["rohsStatus"];
+  reachStatus: BOMRowWithRisk["reachStatus"];
+  lifecycleStatus: BOMRowWithRisk["lifecycleStatus"];
+}

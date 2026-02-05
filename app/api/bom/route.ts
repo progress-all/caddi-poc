@@ -2,11 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
 import { parseCSV } from "@/app/_lib/csv-utils";
-import type { BOMRow, BOMRowWithRisk } from "@/app/bom/_lib/types";
+import type { BOMRow, BOMRowWithRisk, PartCacheValue } from "@/app/bom/_lib/types";
 import { getRiskLevel, getComplianceFromProduct } from "@/app/risk-assessment/_lib/compliance-utils";
 import { DigiKeyApiClient } from "@/app/_lib/vendor/digikey/client";
-import type { DigiKeyProduct } from "@/app/_lib/vendor/digikey/types";
-import { withCache, buildCacheKey } from "@/app/_lib/cache";
+import { withCache, buildCacheKey, getCache, setCache } from "@/app/_lib/cache";
 
 // ライフサイクルステータスを正規化
 function normalizeLifecycleStatus(
@@ -84,15 +83,18 @@ export async function GET(request: NextRequest) {
         key: cacheKey,
       },
       async () => {
-        const publicDir = path.join(process.cwd(), "public");
-        const csvPath = path.join(publicDir, "data", `${bomId}.csv`);
-
-        // CSVファイルを読み込み
+        // CSV読み込み: アップロード用 → public の順
+        const uploadsPath = path.join(process.cwd(), "data", "bom-uploads", `${bomId}.csv`);
+        const publicPath = path.join(process.cwd(), "public", "data", `${bomId}.csv`);
         let csvText: string;
         try {
-          csvText = await fs.readFile(csvPath, "utf-8");
-        } catch (csvError) {
-          throw new Error(`BOM file not found: ${bomId}.csv`);
+          csvText = await fs.readFile(uploadsPath, "utf-8");
+        } catch {
+          try {
+            csvText = await fs.readFile(publicPath, "utf-8");
+          } catch {
+            throw new Error(`BOM file not found: ${bomId}.csv`);
+          }
         }
 
         // CSVをパース
@@ -111,12 +113,38 @@ export async function GET(request: NextRequest) {
 
         const client = new DigiKeyApiClient(clientId, clientSecret);
 
-        // 各部品のリスクを取得
+        // 各部品のリスクを取得（部品キャッシュがあればAPIをスキップ）
         const rowsWithRisk: BOMRowWithRisk[] = [];
+        const partCacheNamespace = "bom-part";
 
         for (const row of rows) {
+          const mpn = row.部品型番.trim();
+          const partKey = buildCacheKey({ mpn });
+
+          const cachedPart = await getCache<PartCacheValue>({
+            namespace: partCacheNamespace,
+            key: partKey,
+          });
+
+          if (cachedPart) {
+            rowsWithRisk.push({
+              ...row,
+              リスク: cachedPart.riskLevel,
+              代替候補有無:
+                cachedPart.substitutionCount === null
+                  ? "取得失敗"
+                  : cachedPart.substitutionCount > 0
+                  ? "あり"
+                  : "なし",
+              代替候補件数: cachedPart.substitutionCount ?? undefined,
+              rohsStatus: cachedPart.rohsStatus,
+              reachStatus: cachedPart.reachStatus,
+              lifecycleStatus: cachedPart.lifecycleStatus,
+            });
+            continue;
+          }
+
           try {
-            // 部品型番でDigiKey APIを検索
             const searchResult = await client.keywordSearch({
               keywords: row.部品型番,
               limit: 1,
@@ -125,13 +153,10 @@ export async function GET(request: NextRequest) {
             if (searchResult.Products && searchResult.Products.length > 0) {
               const product = searchResult.Products[0];
               const compliance = getComplianceFromProduct(product);
-
-              // ライフサイクルステータスを正規化
               const lifecycleStatus = normalizeLifecycleStatus(
                 product.ProductStatus?.Status
               );
 
-              // 代替候補の件数を取得
               const digiKeyProductNumber =
                 product.ProductVariations?.[0]?.DigiKeyProductNumber;
               const productNumberForSubstitutions =
@@ -150,22 +175,19 @@ export async function GET(request: NextRequest) {
                     `代替候補取得エラー (${row.部品型番}):`,
                     subError
                   );
-                  // エラー時はnullのまま（既存判定を据え置く）
                 }
               }
 
-              // リスクを算出（総合評価）
               let riskLevel = getRiskLevel(
                 compliance,
                 product.ProductStatus?.Status,
                 substitutionCount
               );
-              // 表示上のライフサイクルがEOLの場合は顕在リスク（High）とする
               if (lifecycleStatus === "EOL" && riskLevel !== "High") {
                 riskLevel = "High";
               }
 
-              rowsWithRisk.push({
+              const riskRow: BOMRowWithRisk = {
                 ...row,
                 リスク: riskLevel,
                 代替候補有無:
@@ -178,31 +200,63 @@ export async function GET(request: NextRequest) {
                 rohsStatus: compliance.rohs,
                 reachStatus: compliance.reach,
                 lifecycleStatus: lifecycleStatus,
-              });
+              };
+              rowsWithRisk.push(riskRow);
+
+              await setCache(
+                { namespace: partCacheNamespace, key: partKey },
+                {
+                  riskLevel,
+                  substitutionCount,
+                  rohsStatus: compliance.rohs,
+                  reachStatus: compliance.reach,
+                  lifecycleStatus,
+                }
+              );
             } else {
-              // 検索結果が見つからない場合
-              rowsWithRisk.push({
+              const failRow: BOMRowWithRisk = {
                 ...row,
                 リスク: "取得失敗" as const,
                 代替候補有無: "取得失敗" as const,
                 rohsStatus: "N/A" as const,
                 reachStatus: "N/A" as const,
                 lifecycleStatus: "N/A" as const,
-              });
+              };
+              rowsWithRisk.push(failRow);
+              await setCache(
+                { namespace: partCacheNamespace, key: partKey },
+                {
+                  riskLevel: "取得失敗" as const,
+                  substitutionCount: null,
+                  rohsStatus: "N/A" as const,
+                  reachStatus: "N/A" as const,
+                  lifecycleStatus: "N/A" as const,
+                }
+              );
             }
           } catch (err) {
             console.error(`リスク取得エラー (${row.部品型番}):`, err);
-            rowsWithRisk.push({
+            const failRow: BOMRowWithRisk = {
               ...row,
               リスク: "取得失敗" as const,
               代替候補有無: "取得失敗" as const,
               rohsStatus: "N/A" as const,
               reachStatus: "N/A" as const,
               lifecycleStatus: "N/A" as const,
-            });
+            };
+            rowsWithRisk.push(failRow);
+            await setCache(
+              { namespace: partCacheNamespace, key: partKey },
+              {
+                riskLevel: "取得失敗" as const,
+                substitutionCount: null,
+                rohsStatus: "N/A" as const,
+                reachStatus: "N/A" as const,
+                lifecycleStatus: "N/A" as const,
+              }
+            );
           }
 
-          // APIレートリミット対策: 200ms待機
           await new Promise((resolve) => setTimeout(resolve, 200));
         }
 
