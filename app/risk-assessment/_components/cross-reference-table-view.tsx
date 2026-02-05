@@ -397,6 +397,18 @@ function getOrderedDatasheetParameterIds(candidates: CandidateDetailedInfo[]): s
   return ordered;
 }
 
+/** 仕様値の比較用に正規化（空・null は "-"） */
+function normSpecValue(v: unknown): string {
+  if (v == null) return "-";
+  if (typeof v === "string") return v.trim() || "-";
+  if (typeof v === "object") return "-";
+  if (typeof v === "number" || typeof v === "boolean") return String(v);
+  return "-";
+}
+
+/** 元部品と異なる仕様セル用のハイライト（Series 以右・薄い黄色） */
+const SPEC_DIFF_HIGHLIGHT = "bg-yellow-200/90 dark:bg-yellow-500/25 border border-yellow-400/80 dark:border-yellow-500/50";
+
 /**
  * 候補データから動的カラムを生成
  * @param targetSubstitutionCount 対象部品行の代替件数（0なら将来リスク。対象行以外は未使用）
@@ -409,6 +421,8 @@ function generateColumns(
   targetSubstitutionCount?: number,
   onScoreClick?: (candidate: CandidateDetailedInfo, tab: SimilarityDetailTab) => void
 ): ColumnDef<CandidateDetailedInfo>[] {
+  const targetRow = hasTargetProduct && candidates.length > 0 ? candidates[0] : null;
+
   // パラメータ列の順序: 基準行（先頭＝Target）のJSON出現順を保持し、他行のみのパラメータは初出順で末尾に追加
   const orderedParameterNames = getOrderedParameterNames(candidates);
 
@@ -758,7 +772,14 @@ function generateColumns(
         <DataTableColumnHeader column={column} title="Series" />
       ),
       cell: ({ row }) => {
-        return row.original.series || "-";
+        const display = row.original.series || "-";
+        const targetDisplay = normSpecValue(targetRow?.series);
+        const isDiff = targetRow && row.original !== targetRow && normSpecValue(display) !== targetDisplay;
+        return isDiff ? (
+          <div className={`rounded px-1 -mx-1 ${SPEC_DIFF_HIGHLIGHT}`}>{display}</div>
+        ) : (
+          <>{display}</>
+        );
       },
     },
     {
@@ -767,12 +788,19 @@ function generateColumns(
         <DataTableColumnHeader column={column} title="Category" />
       ),
       cell: ({ row }) => {
-        return row.original.category?.name || "-";
+        const display = row.original.category?.name || "-";
+        const targetDisplay = normSpecValue(targetRow?.category?.name);
+        const isDiff = targetRow && row.original !== targetRow && normSpecValue(display) !== targetDisplay;
+        return isDiff ? (
+          <div className={`rounded px-1 -mx-1 ${SPEC_DIFF_HIGHLIGHT}`}>{display}</div>
+        ) : (
+          <>{display}</>
+        );
       },
     },
   ];
 
-  // 動的パラメータカラムを生成（DigiKey・JSON出現順）
+  // 動的パラメータカラムを生成（DigiKey・JSON出現順）。元部品と異なる値は黄色ハイライト
   const parameterColumns: ColumnDef<CandidateDetailedInfo>[] =
     orderedParameterNames.map((paramName) => ({
       id: `param_${paramName}`,
@@ -787,7 +815,15 @@ function generateColumns(
         const param = row.original.parameters?.find(
           (p) => p.name === paramName
         );
-        return param?.value || "-";
+        const currentValue = param?.value ?? null;
+        const targetValue = targetRow?.parameters?.find((p) => p.name === paramName)?.value ?? null;
+        const isDiff = targetRow && row.original !== targetRow && normSpecValue(currentValue) !== normSpecValue(targetValue);
+        const content = param?.value || "-";
+        return isDiff ? (
+          <div className={`rounded px-1 -mx-1 ${SPEC_DIFF_HIGHLIGHT}`}>{content}</div>
+        ) : (
+          <>{content}</>
+        );
       },
     }));
 
@@ -821,7 +857,15 @@ function generateColumns(
         ),
         cell: ({ row }) => {
           const param = row.original.datasheetParameters?.[paramId];
-          return <div className="text-sm">{param?.value || "-"}</div>;
+          const currentValue = param?.value ?? null;
+          const targetValue = targetRow?.datasheetParameters?.[paramId]?.value ?? null;
+          const isDiff = targetRow && row.original !== targetRow && normSpecValue(currentValue) !== normSpecValue(targetValue);
+          const content = <div className="text-sm">{param?.value || "-"}</div>;
+          return isDiff ? (
+            <div className={`rounded px-1 -mx-1 ${SPEC_DIFF_HIGHLIGHT}`}>{content}</div>
+          ) : (
+            content
+          );
         },
       };
     });
