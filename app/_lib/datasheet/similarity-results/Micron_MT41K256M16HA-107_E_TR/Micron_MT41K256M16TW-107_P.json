@@ -1,0 +1,673 @@
+{
+  "targetId": "Micron_MT41K256M16HA-107_E_TR",
+  "candidateId": "Micron_MT41K256M16TW-107_P",
+  "evaluatedAt": "2026-02-09T15:45:00.000Z",
+  "summary": "・型名：MT41K256M16HA-107:E TR → MT41K256M16TW-107:P\n・ダイリビジョン：Rev. E → Rev. P\n・パッケージ：96-ball FBGA (HA) → 96-ball FBGA (TW)\n・パッケージ幅：9mm → 8mm\n・ボール径：Ø0.45mm → Ø0.47mm\n・熱抵抗θJA(低伝導)：50.4 → 54.3 °C/W\n・熱抵抗θJA(高伝導)：31.3 → 34.8 °C/W\n・熱抵抗θJC(低伝導)：3.9 → 4.6 °C/W",
+  "parameters": [
+    {
+      "parameterId": "Part_Number",
+      "description": "型名",
+      "targetValue": "MT41K256M16HA-107:E TR",
+      "candidateValue": "MT41K256M16TW-107:P",
+      "score": 50,
+      "reason": "同一ファミリだがパッケージ/ダイ異なる"
+    },
+    {
+      "parameterId": "Product_Type",
+      "description": "製品種別",
+      "targetValue": "4Gb DDR3L SDRAM (1.35V)",
+      "candidateValue": "4Gb DDR3L SDRAM (1.35V)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Configuration",
+      "description": "構成",
+      "targetValue": "32 Meg x 16 x 8 banks",
+      "candidateValue": "32 Meg x 16 x 8 banks",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Density",
+      "description": "容量",
+      "targetValue": "4Gb",
+      "candidateValue": "4Gb",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Data_Width",
+      "description": "データ幅",
+      "targetValue": "x16",
+      "candidateValue": "x16",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Speed_Grade",
+      "description": "スピードグレード",
+      "targetValue": "DDR3L-1866 (-107)",
+      "candidateValue": "DDR3L-1866 (-107)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Data_Rate",
+      "description": "データレート",
+      "targetValue": "1866 MT/s",
+      "candidateValue": "1866 MT/s",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Die_Revision",
+      "description": "ダイリビジョン",
+      "targetValue": "Rev. E",
+      "candidateValue": "Rev. P",
+      "score": 50,
+      "reason": "Rev.EとRev.Pでダイ異なる"
+    },
+    {
+      "parameterId": "Package",
+      "description": "パッケージ",
+      "targetValue": "96-ball FBGA (HA), Pb-free",
+      "candidateValue": "96-ball FBGA (TW), Pb-free",
+      "score": 60,
+      "reason": "HA(9mm幅)とTW(8mm幅)で異なる"
+    },
+    {
+      "parameterId": "Package_Body_Size",
+      "description": "パッケージ外形寸法",
+      "targetValue": "9 ±0.1 mm x 14 ±0.1 mm",
+      "candidateValue": "8 ±0.1 mm x 14 ±0.1 mm",
+      "score": 60,
+      "reason": "幅9mmと8mmで1mm異なる"
+    },
+    {
+      "parameterId": "Package_Height",
+      "description": "パッケージ高さ",
+      "targetValue": "1.1 ±0.1 mm",
+      "candidateValue": "1.1 ±0.1 mm",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Ball_Pitch",
+      "description": "ボールピッチ",
+      "targetValue": "0.8 mm TYP",
+      "candidateValue": "0.8 mm TYP",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Ball_Count",
+      "description": "ボール数",
+      "targetValue": "96",
+      "candidateValue": "96",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Ball_Diameter",
+      "description": "ボール径",
+      "targetValue": "Ø0.45 mm",
+      "candidateValue": "Ø0.47 mm",
+      "score": 75,
+      "reason": "Ø0.45とØ0.47mmで異なる"
+    },
+    {
+      "parameterId": "Solder_Ball_Material",
+      "description": "はんだボール材質",
+      "targetValue": "SAC305 (96.5% Sn, 3% Ag, 0.5% Cu)",
+      "candidateValue": "SAC302 (96.8% Sn, 3% Ag, 0.2% Cu)",
+      "score": 90,
+      "reason": "SAC305とSAC302で組成微差"
+    },
+    {
+      "parameterId": "Ball_Standoff",
+      "description": "ボールスタンドオフ",
+      "targetValue": null,
+      "candidateValue": "0.34 ±0.05 mm",
+      "score": 0,
+      "reason": "Target側に記載なし"
+    },
+    {
+      "parameterId": "Row_Address",
+      "description": "行アドレス",
+      "targetValue": "32K (A[14:0])",
+      "candidateValue": "32K (A[14:0])",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Bank_Address",
+      "description": "バンクアドレス",
+      "targetValue": "8 (BA[2:0])",
+      "candidateValue": "8 (BA[2:0])",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Column_Address",
+      "description": "列アドレス",
+      "targetValue": "1K (A[9:0])",
+      "candidateValue": "1K (A[9:0])",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Page_Size",
+      "description": "ページサイズ",
+      "targetValue": "2KB",
+      "candidateValue": "2KB",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Refresh_Count",
+      "description": "リフレッシュカウント",
+      "targetValue": "8K",
+      "candidateValue": "8K",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Prefetch_Architecture",
+      "description": "プリフェッチアーキテクチャ",
+      "targetValue": "8n-bit",
+      "candidateValue": "8n-bit",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Internal_Banks",
+      "description": "内部バンク数",
+      "targetValue": "8",
+      "candidateValue": "8",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Burst_Length",
+      "description": "バースト長",
+      "targetValue": "BL8 (fixed), BC4 (burst chop)",
+      "candidateValue": "BL8 (fixed), BC4 (burst chop)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VDD_Supply",
+      "description": "電源電圧 VDD",
+      "targetValue": "1.283 to 1.45 V (nom 1.35 V)",
+      "candidateValue": "1.283 to 1.45 V (nom 1.35 V)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VDDQ_IO_Supply",
+      "description": "I/O電源電圧 VDDQ",
+      "targetValue": "1.283 to 1.45 V (nom 1.35 V)",
+      "candidateValue": "1.283 to 1.45 V (nom 1.35 V)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VDD_Abs_Max",
+      "description": "絶対最大定格 VDD",
+      "targetValue": "-0.4 to 1.975 V",
+      "candidateValue": "-0.4 to 1.975 V",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VDDQ_Abs_Max",
+      "description": "絶対最大定格 VDDQ",
+      "targetValue": "-0.4 to 1.975 V",
+      "candidateValue": "-0.4 to 1.975 V",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VIN_Abs_Max",
+      "description": "絶対最大定格 VIN/VOUT",
+      "targetValue": "-0.4 to 1.975 V",
+      "candidateValue": "-0.4 to 1.975 V",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Input_Leakage_Current",
+      "description": "入力リーク電流",
+      "targetValue": "±2 μA",
+      "candidateValue": "±2 μA",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VREF_Leakage_Current",
+      "description": "VREF リーク電流",
+      "targetValue": "±1 μA",
+      "candidateValue": "±1 μA",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Operating_Temp_Commercial",
+      "description": "動作温度 (Commercial)",
+      "targetValue": "0 to 85 °C",
+      "candidateValue": "0 to 85 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Operating_Temp_Industrial",
+      "description": "動作温度 (Industrial)",
+      "targetValue": "-40 to 95 °C",
+      "candidateValue": "-40 to 95 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Operating_Temp_Automotive",
+      "description": "動作温度 (Automotive)",
+      "targetValue": "-40 to 105 °C",
+      "candidateValue": "-40 to 105 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Operating_Temp_Commercial_Abs_Max",
+      "description": "絶対最大動作温度 (Commercial)",
+      "targetValue": "0 to 95 °C",
+      "candidateValue": "0 to 95 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Operating_Temp_Industrial_Abs_Max",
+      "description": "絶対最大動作温度 (Industrial)",
+      "targetValue": "-40 to 95 °C",
+      "candidateValue": "-40 to 95 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Operating_Temp_Automotive_Abs_Max",
+      "description": "絶対最大動作温度 (Automotive)",
+      "targetValue": "-40 to 105 °C",
+      "candidateValue": "-40 to 105 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Storage_Temp",
+      "description": "保存温度",
+      "targetValue": "-55 to 150 °C",
+      "candidateValue": "-55 to 150 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tCK_AVG",
+      "description": "クロック周期 (CL=13, CWL=9)",
+      "targetValue": "1.07 to <1.25 ns",
+      "candidateValue": "1.07 to <1.25 ns",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tAA",
+      "description": "内部READコマンドから最初のデータまで",
+      "targetValue": "13.91 to 20 ns",
+      "candidateValue": "13.91 to 20 ns",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRCD",
+      "description": "ACTIVATE-to-READ/WRITEディレイ",
+      "targetValue": "13.91 ns min",
+      "candidateValue": "13.91 ns min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRP",
+      "description": "PRECHARGEコマンド期間",
+      "targetValue": "13.91 ns min",
+      "candidateValue": "13.91 ns min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRC",
+      "description": "ACTIVATE-to-ACTIVATE/REFRESHコマンド期間",
+      "targetValue": "47.91 ns min",
+      "candidateValue": "47.91 ns min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRAS",
+      "description": "ACTIVATE-to-PRECHARGEコマンド期間",
+      "targetValue": "34 ns min to 9×tREFI max",
+      "candidateValue": "34 ns min to 9×tREFI max",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "CAS_Latency",
+      "description": "CASレイテンシ (CL)",
+      "targetValue": "13 CK",
+      "candidateValue": "13 CK",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "CAS_Write_Latency",
+      "description": "CASライトレイテンシ (CWL)",
+      "targetValue": "9 CK",
+      "candidateValue": "9 CK",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Supported_CL",
+      "description": "サポートCL設定",
+      "targetValue": "5, 6, 7, 8, 9, 10, 11, 13",
+      "candidateValue": "5, 6, 7, 8, 9, 10, 11, 13",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Supported_CWL",
+      "description": "サポートCWL設定",
+      "targetValue": "5, 6, 7, 8, 9",
+      "candidateValue": "5, 6, 7, 8, 9",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRRD_x16",
+      "description": "ACTIVATE-to-ACTIVATE最小 (x16, 2KB page)",
+      "targetValue": "greater of 4CK or 7.5 ns",
+      "candidateValue": "greater of 4CK or 7.5 ns",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tFAW_x16",
+      "description": "Four ACTIVATEウィンドウ (x16, 2KB page, DDR3L-1600)",
+      "targetValue": "40 ns min",
+      "candidateValue": "40 ns min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tWR",
+      "description": "ライトリカバリ時間",
+      "targetValue": "15 ns min",
+      "candidateValue": "15 ns min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tWTR",
+      "description": "内部WRITEからREADコマンドディレイ",
+      "targetValue": "greater of 4CK or 7.5 ns",
+      "candidateValue": "greater of 4CK or 7.5 ns",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRTP",
+      "description": "READ-to-PRECHARGE時間",
+      "targetValue": "greater of 4CK or 7.5 ns",
+      "candidateValue": "greater of 4CK or 7.5 ns",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tRFC_4Gb",
+      "description": "REFRESH-to-ACTIVATE期間 (4Gb)",
+      "targetValue": "260 ns min",
+      "candidateValue": "260 ns min",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tREFI_85C",
+      "description": "最大平均リフレッシュ間隔 (TC≤85°C)",
+      "targetValue": "7.8 μs (64ms/8192)",
+      "candidateValue": "7.8 μs (64ms/8192)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tREFI_95C",
+      "description": "最大平均リフレッシュ間隔 (85°C<TC≤95°C)",
+      "targetValue": "3.9 μs (32ms/8192)",
+      "candidateValue": "3.9 μs (32ms/8192)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "tREFI_105C",
+      "description": "最大平均リフレッシュ間隔 (95°C<TC≤105°C)",
+      "targetValue": "1.95 μs (16ms/8192)",
+      "candidateValue": "1.95 μs (16ms/8192)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IDD0_x16",
+      "description": "動作電流0 ACTIVATE-PRECHARGE (x16, DDR3L-1866)",
+      "targetValue": "73 mA max",
+      "candidateValue": "32 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD1_x16",
+      "description": "動作電流1 ACT-READ-PRE (x16, DDR3L-1866)",
+      "targetValue": "91 mA max",
+      "candidateValue": "46 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD2P0",
+      "description": "プリチャージパワーダウン電流 Slow exit (DDR3L-1866)",
+      "targetValue": "18 mA max",
+      "candidateValue": "12 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD2P1",
+      "description": "プリチャージパワーダウン電流 Fast exit (DDR3L-1866)",
+      "targetValue": "37 mA max",
+      "candidateValue": "12 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD2Q",
+      "description": "プリチャージ静止スタンバイ電流 (DDR3L-1866)",
+      "targetValue": "35 mA max",
+      "candidateValue": "15 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD2N",
+      "description": "プリチャージスタンバイ電流 (DDR3L-1866)",
+      "targetValue": "35 mA max",
+      "candidateValue": "17 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD2NT_x16",
+      "description": "プリチャージスタンバイODT電流 (x16, DDR3L-1866)",
+      "targetValue": "45 mA max",
+      "candidateValue": "23 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD3P",
+      "description": "アクティブパワーダウン電流 (DDR3L-1866)",
+      "targetValue": "41 mA max",
+      "candidateValue": "17 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD3N_x16",
+      "description": "アクティブスタンバイ電流 (x16, DDR3L-1866)",
+      "targetValue": "49 mA max",
+      "candidateValue": "23 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD4R_x16",
+      "description": "バーストリード動作電流 (x16, DDR3L-1866)",
+      "targetValue": "252 mA max",
+      "candidateValue": "120 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD4W_x16",
+      "description": "バーストライト動作電流 (x16, DDR3L-1866)",
+      "targetValue": "190 mA max",
+      "candidateValue": "130 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD5B",
+      "description": "バーストリフレッシュ電流 (DDR3L-1866)",
+      "targetValue": "242 mA max",
+      "candidateValue": "156 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD6",
+      "description": "セルフリフレッシュ電流 (室温)",
+      "targetValue": "20 mA max",
+      "candidateValue": "15 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "IDD6ET",
+      "description": "セルフリフレッシュ電流 (拡張温度)",
+      "targetValue": "25 mA max",
+      "candidateValue": "23 mA max",
+      "score": 95,
+      "reason": "25mAと23mAで微差"
+    },
+    {
+      "parameterId": "IDD7_x16",
+      "description": "全バンクインターリーブリード電流 (x16, DDR3L-1866)",
+      "targetValue": "274 mA max",
+      "candidateValue": "147 mA max",
+      "score": 90,
+      "reason": "候補が低消費電力で上位互換"
+    },
+    {
+      "parameterId": "CIO_DQ_DM",
+      "description": "I/O静電容量 DQ/DM (DDR3L-1866)",
+      "targetValue": "1.4 to 2.1 pF",
+      "candidateValue": "1.4 to 2.1 pF",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "CCK",
+      "description": "クロック入力静電容量 CK/CK# (DDR3L-1866)",
+      "targetValue": "0.8 to 1.3 pF",
+      "candidateValue": "0.8 to 1.3 pF",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Theta_JA_96ball_LowCond",
+      "description": "熱抵抗 θJA 96-ball 低伝導基板 (0m/s)",
+      "targetValue": "50.4 °C/W",
+      "candidateValue": "54.3 °C/W",
+      "score": 80,
+      "reason": "50.4と54.3で候補がやや高い"
+    },
+    {
+      "parameterId": "Theta_JA_96ball_HighCond",
+      "description": "熱抵抗 θJA 96-ball 高伝導基板 (0m/s)",
+      "targetValue": "31.3 °C/W",
+      "candidateValue": "34.8 °C/W",
+      "score": 75,
+      "reason": "31.3と34.8で候補がやや高い"
+    },
+    {
+      "parameterId": "Theta_JC_96ball_LowCond",
+      "description": "熱抵抗 θJC 96-ball 低伝導基板",
+      "targetValue": "3.9 °C/W",
+      "candidateValue": "4.6 °C/W",
+      "score": 75,
+      "reason": "3.9と4.6で候補がやや高い"
+    },
+    {
+      "parameterId": "On_Die_Termination",
+      "description": "オンダイ終端 (ODT)",
+      "targetValue": "Nominal and dynamic ODT for data, strobe, and mask",
+      "candidateValue": "Nominal and dynamic ODT for data, strobe, and mask",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Self_Refresh",
+      "description": "セルフリフレッシュ",
+      "targetValue": "Supported (ASR and SRT)",
+      "candidateValue": "Supported (ASR and SRT)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Write_Leveling",
+      "description": "ライトレベリング",
+      "targetValue": "Supported",
+      "candidateValue": "Supported",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Output_Driver_Impedance",
+      "description": "出力ドライバインピーダンス",
+      "targetValue": "34 Ω / 40 Ω selectable",
+      "candidateValue": "34 Ω / 40 Ω selectable",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "DDR3_Backward_Compatible",
+      "description": "DDR3 1.5V後方互換性",
+      "targetValue": "Yes (VDD=VDDQ=1.5V ±0.075V)",
+      "candidateValue": "Yes (VDD=VDDQ=1.5V ±0.075V)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Datasheet_Revision",
+      "description": "データシートリビジョン",
+      "targetValue": null,
+      "candidateValue": "Rev. R 09/18",
+      "score": 0,
+      "reason": "Target側に記載なし",
+      "is_comparable": false
+    }
+  ]
+}

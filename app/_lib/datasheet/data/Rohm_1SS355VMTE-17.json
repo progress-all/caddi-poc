@@ -1,0 +1,107 @@
+{
+  "datasheet_id": "Rohm_1SS355VMTE-17",
+  "version": "1.0",
+  "source": "Rohm_1SS355VMTE-17.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "1SS355VM"
+    },
+    "Ordering_Part_Number": {
+      "description": "注文型名",
+      "value": "1SS355VMTE-17"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "Switching Diode (High speed switching)"
+    },
+    "Manufacturer": {
+      "description": "メーカー",
+      "value": "ROHM Co. Ltd."
+    },
+    "Structure": {
+      "description": "構造",
+      "value": "Epitaxial planar"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "SOD-323FL (SC-90A / UMD2)"
+    },
+    "Marking": {
+      "description": "マーキング",
+      "value": "A"
+    },
+    "Packing": {
+      "description": "梱包",
+      "value": "Embossed Tape"
+    },
+    "Reel_Size": {
+      "description": "リールサイズ",
+      "value": "180 mm"
+    },
+    "Taping_Width": {
+      "description": "テーピング幅",
+      "value": "8 mm"
+    },
+    "Basic_Ordering_Unit": {
+      "description": "基本発注単位",
+      "value": "3000 pcs"
+    },
+    "Taping_Code": {
+      "description": "テーピングコード",
+      "value": "TE-17"
+    },
+    "VR": {
+      "description": "逆電圧",
+      "value": "80 V"
+    },
+    "VRM": {
+      "description": "繰り返しピーク逆電圧",
+      "value": "90 V"
+    },
+    "Io": {
+      "description": "平均整流順方向電流",
+      "value": "100 mA"
+    },
+    "IFM": {
+      "description": "順方向電流",
+      "value": "225 mA"
+    },
+    "IFSM": {
+      "description": "ピーク順方向サージ電流 (t=1s)",
+      "value": "500 mA"
+    },
+    "Tj": {
+      "description": "接合温度",
+      "value": "150 °C"
+    },
+    "Tstg": {
+      "description": "保存温度",
+      "value": "-55 to 150 °C"
+    },
+    "VF": {
+      "description": "順方向電圧 (IF=100mA)",
+      "value": "1.2 V max"
+    },
+    "IR": {
+      "description": "逆電流 (VR=80V)",
+      "value": "100 nA max"
+    },
+    "Ct": {
+      "description": "端子間容量 (VR=0.5V, f=1.0MHz)",
+      "value": "3.0 pF max"
+    },
+    "trr": {
+      "description": "逆回復時間 (VR=6.0V, IF=10mA, RL=100Ω)",
+      "value": "4.0 ns max"
+    },
+    "Diode_Type": {
+      "description": "ダイオードタイプ",
+      "value": "Switching (High speed)"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Surface Mount"
+    }
+  }
+}

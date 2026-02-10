@@ -1,0 +1,223 @@
+{
+  "datasheet_id": "Vishay_IRLZ44SPBF",
+  "version": "1.0",
+  "source": "Vishay_IRLZ44SPBF.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "IRLZ44S / IRLZ44SPbF (Lead-free), SiHLZ44S-GE3 (Halogen-free)"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "N-Channel Logic Level Power MOSFET (Third Generation)"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "D2PAK (TO-263)"
+    },
+    "Configuration": {
+      "description": "構成",
+      "value": "Single"
+    },
+    "VDSS": {
+      "description": "ドレイン-ソース間耐圧",
+      "value": "60 V"
+    },
+    "VGS_Max": {
+      "description": "ゲート-ソース間最大電圧",
+      "value": "±10 V"
+    },
+    "ID_TC25": {
+      "description": "連続ドレイン電流 (TC=25°C, VGS=5.0V)",
+      "value": "50 A"
+    },
+    "ID_TC100": {
+      "description": "連続ドレイン電流 (TC=100°C)",
+      "value": "36 A"
+    },
+    "IDM": {
+      "description": "パルスドレイン電流",
+      "value": "200 A"
+    },
+    "PD_TC25": {
+      "description": "最大消費電力 (TC=25°C)",
+      "value": "150 W"
+    },
+    "PD_TA25_PCB": {
+      "description": "最大消費電力 PCBマウント (TA=25°C)",
+      "value": "3.7 W"
+    },
+    "Linear_Derating_Factor": {
+      "description": "リニアディレーティングファクタ",
+      "value": "1.0 W/°C"
+    },
+    "Linear_Derating_Factor_PCB": {
+      "description": "リニアディレーティングファクタ (PCBマウント)",
+      "value": "0.025 W/°C"
+    },
+    "EAS": {
+      "description": "単パルスアバランシェエネルギー",
+      "value": "400 mJ"
+    },
+    "dVdt": {
+      "description": "ピークダイオードリカバリ dV/dt",
+      "value": "4.5 V/ns"
+    },
+    "TJ_TSTG_Range": {
+      "description": "接合温度・保存温度範囲",
+      "value": "-55 to +175 °C"
+    },
+    "Soldering_Temp": {
+      "description": "はんだ付け推奨温度 (ピーク, 10s)",
+      "value": "300 °C"
+    },
+    "Thermal_Resistance_JA": {
+      "description": "熱抵抗 RθJA (ジャンクション-周囲間)",
+      "value": "62 °C/W max"
+    },
+    "Thermal_Resistance_JA_PCB": {
+      "description": "熱抵抗 RθJA PCBマウント (1\" sq PCB)",
+      "value": "40 °C/W max"
+    },
+    "Thermal_Resistance_JC": {
+      "description": "熱抵抗 RθJC (ジャンクション-ケース間, ドレイン)",
+      "value": "1.0 °C/W max"
+    },
+    "BVDSS": {
+      "description": "ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)",
+      "value": "60 V min"
+    },
+    "BVDSS_TempCoeff": {
+      "description": "ドレイン-ソース間降伏電圧温度係数 (ID=1mA)",
+      "value": "0.070 V/°C typ"
+    },
+    "VGS_th": {
+      "description": "ゲートしきい値電圧 (VDS=VGS, ID=250µA)",
+      "value": "1.0 V min / 2.0 V max"
+    },
+    "IGSS": {
+      "description": "ゲート-ソース間漏れ電流 (VGS=±10V)",
+      "value": "±100 nA max"
+    },
+    "IDSS_25C": {
+      "description": "ゼロゲート電圧ドレイン電流 (VDS=60V, VGS=0V, TJ=25°C)",
+      "value": "25 µA max"
+    },
+    "IDSS_150C": {
+      "description": "ゼロゲート電圧ドレイン電流 (VDS=48V, VGS=0V, TJ=150°C)",
+      "value": "250 µA max"
+    },
+    "RDS_on_VGS5V": {
+      "description": "オン抵抗 (VGS=5.0V, ID=31A)",
+      "value": "0.028 Ω max"
+    },
+    "RDS_on_VGS4V": {
+      "description": "オン抵抗 (VGS=4.0V, ID=25A)",
+      "value": "0.039 Ω max"
+    },
+    "gfs": {
+      "description": "順方向相互コンダクタンス (VDS=25V, ID=31A)",
+      "value": "23 S min"
+    },
+    "Ciss": {
+      "description": "入力容量 (VGS=0V, VDS=25V, f=1MHz)",
+      "value": "3300 pF typ"
+    },
+    "Coss": {
+      "description": "出力容量 (VGS=0V, VDS=25V, f=1MHz)",
+      "value": "1200 pF typ"
+    },
+    "Crss": {
+      "description": "帰還容量 (VGS=0V, VDS=25V, f=1MHz)",
+      "value": "200 pF typ"
+    },
+    "QG_Total": {
+      "description": "総ゲート電荷量 (VGS=5.0V, ID=51A, VDS=48V)",
+      "value": "66 nC max"
+    },
+    "QGS": {
+      "description": "ゲート-ソース間電荷量",
+      "value": "12 nC max"
+    },
+    "QGD": {
+      "description": "ゲート-ドレイン間電荷量",
+      "value": "43 nC max"
+    },
+    "td_on": {
+      "description": "ターンオン遅延時間 (VDD=30V, ID=51A, Rg=4.6Ω, RD=0.56Ω)",
+      "value": "17 ns typ"
+    },
+    "tr": {
+      "description": "立ち上がり時間",
+      "value": "230 ns typ"
+    },
+    "td_off": {
+      "description": "ターンオフ遅延時間",
+      "value": "42 ns typ"
+    },
+    "tf": {
+      "description": "立ち下がり時間",
+      "value": "110 ns typ"
+    },
+    "LD": {
+      "description": "内部ドレインインダクタンス (パッケージ中心から6mm)",
+      "value": "4.5 nH typ"
+    },
+    "LS": {
+      "description": "内部ソースインダクタンス",
+      "value": "7.5 nH typ"
+    },
+    "IS_Continuous": {
+      "description": "連続ソース-ドレインダイオード電流",
+      "value": "50 A max"
+    },
+    "ISM_Pulsed": {
+      "description": "パルスダイオード順方向電流",
+      "value": "200 A max"
+    },
+    "VSD": {
+      "description": "ボディダイオード順方向電圧 (IS=51A, VGS=0V, TJ=25°C)",
+      "value": "2.5 V max"
+    },
+    "trr": {
+      "description": "逆回復時間 (IF=51A, dI/dt=100A/µs, TJ=25°C)",
+      "value": "130 ns typ / 180 ns max"
+    },
+    "Qrr": {
+      "description": "逆回復電荷量 (IF=51A, dI/dt=100A/µs, TJ=25°C)",
+      "value": "0.84 µC typ / 1.3 µC max"
+    },
+    "Dim_A": {
+      "description": "パッケージ寸法 A (高さ)",
+      "value": "4.06 min / 4.83 max mm"
+    },
+    "Dim_D": {
+      "description": "パッケージ寸法 D (本体長さ)",
+      "value": "8.38 min / 9.65 max mm"
+    },
+    "Dim_E": {
+      "description": "パッケージ寸法 E (本体幅)",
+      "value": "9.65 min / 10.67 max mm"
+    },
+    "Dim_e": {
+      "description": "パッケージ寸法 e (リードピッチ)",
+      "value": "2.54 BSC mm"
+    },
+    "Dim_H": {
+      "description": "パッケージ寸法 H (全高)",
+      "value": "14.61 min / 15.88 max mm"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Surface Mount"
+    },
+    "FET_Type": {
+      "description": "FETタイプ",
+      "value": "N-Channel"
+    },
+    "Technology": {
+      "description": "技術",
+      "value": "MOSFET (Metal Oxide)"
+    }
+  }
+}

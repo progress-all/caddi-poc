@@ -1,0 +1,88 @@
+param_id,description,value
+Part_Number,型名,LPC1768FET100Z
+Product_Type,製品種別,32-bit ARM Cortex-M3 Microcontroller
+Package,パッケージ,TFBGA100 (SOT926-1)
+Package_Dimensions,パッケージ寸法,"9 x 9 x 0.7 mm (100 balls, pitch 0.8 mm)"
+Core,CPUコア,ARM Cortex-M3
+Max_CPU_Frequency,最大CPU動作周波数,100 MHz
+Flash_Memory,フラッシュメモリ,512 kB
+SRAM_Total,SRAM合計,64 kB
+SRAM_CPU,SRAM (CPUローカル),32 kB
+SRAM_AHB0,SRAM (AHB SRAM0),16 kB
+SRAM_AHB1,SRAM (AHB SRAM1),16 kB
+GPIO_Count,GPIO数,70
+Ethernet,Ethernet,yes
+USB,USB,Device/Host/OTG
+CAN_Channels,CANチャネル数,2
+I2S,I2S,yes
+DAC,DAC,yes
+ADC_Resolution,ADC分解能,12-bit
+ADC_Channels,ADCチャネル数,8
+ADC_Conversion_Rate,ADC変換レート (12-bit),200 kHz max
+DAC_Resolution,DAC分解能,10-bit
+UART_Count,UART数,4
+SPI_Count,SPI数,1
+SSP_Count,SSP数,2
+I2C_Count,I2Cインターフェース数,3
+Timer_Count,汎用タイマー数,4
+VDD_3V3_Min,電源電圧 VDD(3V3) 最小,2.4 V
+VDD_3V3_Typ,電源電圧 VDD(3V3) 標準,3.3 V
+VDD_3V3_Max,電源電圧 VDD(3V3) 最大,3.6 V
+VDD_3V3_Abs_Max,電源電圧 VDD(3V3) 絶対最大定格,+4.6 V
+VDDA_Min,アナログ電源電圧 VDDA 最小,2.5 V
+VDDA_Max,アナログ電源電圧 VDDA 最大,3.6 V
+VBAT_Min,バッテリー電圧 Vi(VBAT) 最小,2.1 V
+VBAT_Max,バッテリー電圧 Vi(VBAT) 最大,3.6 V
+IDD_REG_Active_12MHz,レギュレータ供給電流 (Active 12MHz PLL無効),7 mA typ
+IDD_REG_Active_100MHz,レギュレータ供給電流 (Active 100MHz PLL有効),42 mA typ
+IDD_REG_Sleep,レギュレータ供給電流 (Sleep),2 mA typ
+IDD_REG_DeepSleep,レギュレータ供給電流 (Deep-sleep),240 µA typ
+IDD_REG_PowerDown,レギュレータ供給電流 (Power-down),31 µA typ
+IDD_REG_DeepPowerDown,レギュレータ供給電流 (Deep power-down RTC動作),630 nA typ
+VI_5V_Tolerant_Max,5Vトレラント I/Oピン入力電圧最大,5.5 V
+VIH,HIGH入力電圧,0.7 x VDD(3V3)
+VIL,LOW入力電圧,0.3 x VDD(3V3)
+Vhys,ヒステリシス電圧,0.4 V min
+VOH,HIGH出力電圧 (IOH=4mA),VDD(3V3) − 0.4 V min
+VOL,LOW出力電圧 (IOL=4mA),0.4 V max
+IOH,HIGH出力電流,4 mA
+IOL,LOW出力電流,4 mA
+Ipu,プルアップ電流 (VI=0V),"15 to 85 µA (typ 50 µA)"
+Ipd,プルダウン電流 (VI=5V),"10 to 150 µA (typ 50 µA)"
+Operating_Temp_Range,動作温度範囲,-40 to +85 °C
+Storage_Temp_Range,保存温度範囲,-65 to +150 °C
+Tj_Max,最大接合温度,150 °C
+Ptot_Pack,最大パッケージ消費電力,1.5 W
+IDD_Supply_Max,供給電流最大 (ピンあたり),100 mA
+ISS_Ground_Max,GND電流最大 (ピンあたり),100 mA
+Ilatch,ラッチアップ電流,100 mA
+Rth_JA_TFBGA_JEDEC,熱抵抗 θJA TFBGA100 (JEDEC),55.2 °C/W
+Rth_JA_TFBGA_SingleLayer,熱抵抗 θJA TFBGA100 (Single-layer),45.6 °C/W
+Rth_JC_TFBGA,熱抵抗 θJC TFBGA100,9.5 °C/W
+VESD_HBM,ESD耐圧 (人体モデル),±4000 V
+Flash_Endurance,フラッシュ書き換え耐久性,"10000 to 100000 cycles"
+Flash_Retention_Powered,フラッシュデータ保持 (通電時),10 years min
+Flash_Retention_Unpowered,フラッシュデータ保持 (非通電時),20 years min
+Flash_Erase_Time,フラッシュ消去時間,100 ms typ
+Flash_Program_Time,フラッシュプログラム時間 (256 bytes),1 ms typ
+Ext_Osc_Freq_Range,外部オシレータ周波数範囲,1 to 25 MHz
+IRC_Frequency,内部RCオシレータ周波数,4 MHz (±1%)
+RTC_Input_Freq,RTC入力周波数,32.768 kHz
+IO_Rise_Time,I/Oピン立ち上がり時間,3.0 to 5.0 ns
+IO_Fall_Time,I/Oピン立ち下がり時間,2.5 to 5.0 ns
+I2C_FastModePlus,I2C Fast-mode Plus最大速度,1 MHz
+ADC_Clock_Freq_12bit,ADCクロック周波数 (12-bit),13 MHz max
+ADC_DNL_12bit,ADC DNL (12-bit),1 LSB max
+ADC_INL_12bit,ADC INL (12-bit),3 LSB max
+ADC_Offset_Error,ADCオフセットエラー,2 LSB max
+ADC_Gain_Error,ADCゲインエラー,0.5% max
+ADC_Absolute_Error,ADC絶対誤差,4 LSB max
+DAC_DNL,DAC DNL,1 LSB typ
+DAC_INL,DAC INL,1.5 LSB typ
+DAC_Offset_Error,DACオフセットエラー,0.6% typ
+DAC_Gain_Error,DACゲインエラー,0.6% typ
+SSP_Max_Speed_Master,SSPマスターモード最大速度,33 Mbit/s
+SSP_Max_Speed_Slave,SSPスレーブモード最大速度,8 Mbit/s
+Debug_Interface,デバッグインターフェース,"JTAG, Serial Wire Debug, Serial Wire Trace"
+Power_Modes,電力モード,"Sleep, Deep-sleep, Power-down, Deep power-down"
+Mounting_Type,実装タイプ,Surface Mount (BGA)

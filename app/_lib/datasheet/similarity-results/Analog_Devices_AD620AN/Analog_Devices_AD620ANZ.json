@@ -1,0 +1,728 @@
+{
+  "targetId": "Analog_Devices_AD620AN",
+  "candidateId": "Analog_Devices_AD620ANZ",
+  "evaluatedAt": "2026-02-09T14:00:00.000Z",
+  "summary": "・入力バイアス電流：0.5 typ / 1.0 max nA → 0.5 typ / 2.0 max nA（参照グレードB→A）\n・入力オフセット電流：0.3 typ / 0.5 max nA → 0.3 typ / 1.0 max nA（参照グレードB→A）\n・同相除去比(G=100)：120 to 130 dB → 110 min / 130 typ dB（参照グレードB→A）",
+  "parameters": [
+    {
+      "parameterId": "Part_Number",
+      "description": "型名",
+      "targetValue": "AD620 (AD620AN: 8-Lead PDIP, -40°C to +85°C)",
+      "candidateValue": "AD620ANZ (8-Lead PDIP, -40°C to +85°C, RoHS Compliant)",
+      "score": 90,
+      "reason": "ANZはANのRoHS対応品",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Package",
+      "description": "パッケージ",
+      "targetValue": "8-Lead PDIP (N-8), CERDIP (Q-8), SOIC (R-8)",
+      "candidateValue": "8-Lead PDIP (N-8)",
+      "score": 100,
+      "reason": "同一パッケージN-8",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Body_Size_PDIP",
+      "description": "外形寸法 (PDIP)",
+      "targetValue": "0.400 in × 0.210 in (10.16 mm × 5.33 mm)",
+      "candidateValue": "0.400 in × 0.210 in (10.16 mm × 5.33 mm)",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Product_Type",
+      "description": "製品種別",
+      "targetValue": "Low Cost Low Power Instrumentation Amplifier",
+      "candidateValue": "Low Cost Low Power Instrumentation Amplifier",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Gain_Equation",
+      "description": "利得式",
+      "targetValue": "G = 1 + (49.4 kΩ/RG)",
+      "candidateValue": "G = 1 + (49.4 kΩ/RG)",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Gain_Range",
+      "description": "利得範囲",
+      "targetValue": "1 to 10,000",
+      "candidateValue": "1 to 10,000",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Supply_Voltage",
+      "description": "電源電圧",
+      "targetValue": "±2.3 V to ±18 V",
+      "candidateValue": "±2.3 V to ±18 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Bias_Current",
+      "description": "入力バイアス電流",
+      "targetValue": "0.5 typ / 1.0 max nA",
+      "candidateValue": "0.5 typ / 2.0 max nA",
+      "score": 75,
+      "reason": "max 1.0→2.0nA(グレード差)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Offset_Current",
+      "description": "入力オフセット電流",
+      "targetValue": "0.3 typ / 0.5 max nA",
+      "candidateValue": "0.3 typ / 1.0 max nA",
+      "score": 75,
+      "reason": "max 0.5→1.0nA(グレード差)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Impedance_Differential",
+      "description": "差動入力インピーダンス",
+      "targetValue": "10 GΩ || 2 pF",
+      "candidateValue": "10 GΩ || 2 pF",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Impedance_CommonMode",
+      "description": "同相入力インピーダンス",
+      "targetValue": "10 GΩ || 2 pF",
+      "candidateValue": "10 GΩ || 2 pF",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "CMRR_G10",
+      "description": "同相除去比 (G=10, DC to 60Hz)",
+      "targetValue": "100 to 110 dB (AD620B)",
+      "candidateValue": "93 min / 110 typ dB",
+      "score": 85,
+      "reason": "min 100→93dB(グレード差)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "CMRR_G100",
+      "description": "同相除去比 (G=100)",
+      "targetValue": "120 to 130 dB (AD620B)",
+      "candidateValue": "110 min / 130 typ dB",
+      "score": 80,
+      "reason": "min 120→110dB(グレード差)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "PSR_G10",
+      "description": "電源除去比 (G=10)",
+      "targetValue": "100 to 120 dB (AD620B)",
+      "candidateValue": "95 min / 120 typ dB",
+      "score": 90,
+      "reason": "min 100→95dB(グレード差)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Short_Circuit_Current",
+      "description": "短絡電流",
+      "targetValue": "±18 mA",
+      "candidateValue": "±18 mA",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Bandwidth_G1",
+      "description": "小信号 -3dB 帯域幅 (G=1)",
+      "targetValue": "1000 kHz",
+      "candidateValue": "1000 kHz",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Bandwidth_G10",
+      "description": "小信号 -3dB 帯域幅 (G=10)",
+      "targetValue": "800 kHz",
+      "candidateValue": "800 kHz",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Bandwidth_G100",
+      "description": "小信号 -3dB 帯域幅 (G=100)",
+      "targetValue": "120 kHz",
+      "candidateValue": "120 kHz",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Bandwidth_G1000",
+      "description": "小信号 -3dB 帯域幅 (G=1000)",
+      "targetValue": "12 kHz",
+      "candidateValue": "12 kHz",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Slew_Rate",
+      "description": "スルー・レート",
+      "targetValue": "0.75 min / 1.2 typ V/μs",
+      "candidateValue": "0.75 min / 1.2 typ V/μs",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Settling_Time_G1_100",
+      "description": "セトリング時間 0.01% (G=1–100, 10V Step)",
+      "targetValue": "15 μs",
+      "candidateValue": "15 μs",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Settling_Time_G1000",
+      "description": "セトリング時間 0.01% (G=1000)",
+      "targetValue": "150 μs",
+      "candidateValue": "150 μs",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Current_Noise_1kHz",
+      "description": "電流ノイズ @ 1 kHz",
+      "targetValue": "100 fA/√Hz",
+      "candidateValue": "100 fA/√Hz",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Quiescent_Current",
+      "description": "消費電流 (無負荷)",
+      "targetValue": "0.9 typ / 1.3 max mA",
+      "candidateValue": "0.9 typ / 1.3 max mA",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Reference_Input_RIN",
+      "description": "参照入力抵抗",
+      "targetValue": "20 kΩ",
+      "candidateValue": "20 kΩ",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Reference_Voltage_Range",
+      "description": "参照端子電圧範囲",
+      "targetValue": "−VS + 1.6 V to +VS − 1.6 V",
+      "candidateValue": "−VS + 1.6 V to +VS − 1.6 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Differential_Input_Voltage_Max",
+      "description": "差動入力電圧 最大",
+      "targetValue": "25 V",
+      "candidateValue": "25 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Power_Dissipation_Max",
+      "description": "最大消費電力",
+      "targetValue": "650 mW",
+      "candidateValue": "650 mW",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Thermal_Resistance_PDIP",
+      "description": "熱抵抗 θJA (8-Lead PDIP)",
+      "targetValue": "95 °C/W",
+      "candidateValue": "95 °C/W",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Operating_Temperature_A_B",
+      "description": "動作温度範囲 (A, B grade)",
+      "targetValue": "-40 to +85 °C",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Operating_Temperature_S",
+      "description": "動作温度範囲 (S grade)",
+      "targetValue": "-55 to +125 °C",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Storage_Temperature_N_R",
+      "description": "保存温度範囲 (N, R)",
+      "targetValue": "-65 to +125 °C",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Storage_Temperature_Q",
+      "description": "保存温度範囲 (Q)",
+      "targetValue": "-65 to +150 °C",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_AD620B",
+      "description": "入力オフセット電圧 (AD620B, VS=±5V to ±15V)",
+      "targetValue": "15 μV typ / 50 μV max",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_Overtemp_AD620B",
+      "description": "入力オフセット電圧 全温度 (AD620B)",
+      "targetValue": "85 μV max",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_TC_AD620B",
+      "description": "入力オフセット電圧 TC (AD620B)",
+      "targetValue": "0.1 typ / 0.6 max μV/°C",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Offset_Voltage",
+      "description": "出力オフセット電圧 (VS=±15V)",
+      "targetValue": "200 typ / 500 max μV (AD620B)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Voltage_Range",
+      "description": "入力電圧範囲 (VS=±2.3V to ±5V, G=1)",
+      "targetValue": "−VS + 1.9 V to +VS − 1.2 V",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Swing",
+      "description": "出力スイング (RL=10kΩ, VS=±5V to ±18V)",
+      "targetValue": "−VS + 1.2 V to +VS − 1.4 V",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Voltage_Noise_1kHz",
+      "description": "電圧ノイズ @ 1 kHz",
+      "targetValue": "9 typ / 13 max nV/√Hz",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "RTI_Noise_0.1_10Hz",
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=100–1000)",
+      "targetValue": "0.28 typ / 0.4 max μV p-p",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Nonlinearity",
+      "description": "非線形性 (G=1–1000, RL=10kΩ)",
+      "targetValue": "10 typ / 40 max ppm",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Thermal_Resistance_SOIC",
+      "description": "熱抵抗 RθJA (8-Lead SOIC)",
+      "targetValue": "155 °C/W",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Gain_Error_G1",
+      "description": "利得誤差 (G=1, VOUT=±10V)",
+      "targetValue": null,
+      "candidateValue": "0.03 typ / 0.10 max %",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Gain_Error_G10",
+      "description": "利得誤差 (G=10, VOUT=±10V)",
+      "targetValue": null,
+      "candidateValue": "0.15 typ / 0.30 max %",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Gain_Error_G100",
+      "description": "利得誤差 (G=100, VOUT=±10V)",
+      "targetValue": null,
+      "candidateValue": "0.15 typ / 0.30 max %",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Gain_Error_G1000",
+      "description": "利得誤差 (G=1000, VOUT=±10V)",
+      "targetValue": null,
+      "candidateValue": "0.40 typ / 0.70 max %",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Operating_Temperature",
+      "description": "動作温度範囲 (A grade)",
+      "targetValue": null,
+      "candidateValue": "-40 to +85 °C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Storage_Temperature",
+      "description": "保存温度範囲 (N package)",
+      "targetValue": null,
+      "candidateValue": "-65 to +125 °C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage",
+      "description": "入力オフセット電圧 (AD620A, VS=±5V to ±15V)",
+      "targetValue": null,
+      "candidateValue": "30 μV typ / 125 μV max",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_Overtemp",
+      "description": "入力オフセット電圧 全温度 (AD620A)",
+      "targetValue": null,
+      "candidateValue": "185 μV max",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_TC",
+      "description": "入力オフセット電圧 TC (AD620A)",
+      "targetValue": null,
+      "candidateValue": "0.3 typ / 1.0 max μV/°C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Offset_Voltage_15V",
+      "description": "出力オフセット電圧 (VS=±15V)",
+      "targetValue": null,
+      "candidateValue": "400 typ / 1000 max μV",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Offset_Voltage_5V",
+      "description": "出力オフセット電圧 (VS=±5V)",
+      "targetValue": null,
+      "candidateValue": "1500 max μV",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Offset_Voltage_TC",
+      "description": "出力オフセット電圧 TC (AD620A)",
+      "targetValue": null,
+      "candidateValue": "5.0 typ / 15 max μV/°C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Bias_Current_Overtemp",
+      "description": "入力バイアス電流 全温度 (AD620A)",
+      "targetValue": null,
+      "candidateValue": "2.5 max nA",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Current_Overtemp",
+      "description": "入力オフセット電流 全温度 (AD620A)",
+      "targetValue": null,
+      "candidateValue": "1.5 max nA",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Voltage_Range_LowVS",
+      "description": "入力電圧範囲 (VS=±2.3V to ±5V, G=1)",
+      "targetValue": null,
+      "candidateValue": "−VS + 1.9 V to +VS − 1.2 V",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Voltage_Range_HighVS",
+      "description": "入力電圧範囲 (VS=±5V to ±18V)",
+      "targetValue": null,
+      "candidateValue": "−VS + 1.9 V to +VS − 1.4 V",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "CMRR_G1",
+      "description": "同相除去比 (G=1, DC to 60Hz)",
+      "targetValue": null,
+      "candidateValue": "73 min / 90 typ dB",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "CMRR_G1000",
+      "description": "同相除去比 (G=1000, DC to 60Hz)",
+      "targetValue": null,
+      "candidateValue": "110 min / 130 typ dB",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "PSR_G1",
+      "description": "電源除去比 (G=1)",
+      "targetValue": null,
+      "candidateValue": "80 min / 100 typ dB",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "PSR_G100",
+      "description": "電源除去比 (G=100)",
+      "targetValue": null,
+      "candidateValue": "110 min / 140 typ dB",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "PSR_G1000",
+      "description": "電源除去比 (G=1000)",
+      "targetValue": null,
+      "candidateValue": "110 min / 140 typ dB",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Swing_LowVS",
+      "description": "出力スイング (RL=10kΩ, VS=±2.3V to ±5V)",
+      "targetValue": null,
+      "candidateValue": "−VS + 1.1 V to +VS − 1.2 V",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Swing_HighVS",
+      "description": "出力スイング (RL=10kΩ, VS=±5V to ±18V)",
+      "targetValue": null,
+      "candidateValue": "−VS + 1.2 V to +VS − 1.4 V",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Voltage_Noise_Input_1kHz",
+      "description": "入力電圧ノイズ eni @ 1 kHz",
+      "targetValue": null,
+      "candidateValue": "9 typ / 13 max nV/√Hz",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Voltage_Noise_Output_1kHz",
+      "description": "出力電圧ノイズ eno @ 1 kHz",
+      "targetValue": null,
+      "candidateValue": "72 typ / 100 max nV/√Hz",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "RTI_Noise_G1_0.1_10Hz",
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=1)",
+      "targetValue": null,
+      "candidateValue": "3.0 typ μV p-p",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "RTI_Noise_G10_0.1_10Hz",
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=10)",
+      "targetValue": null,
+      "candidateValue": "0.55 typ μV p-p",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "RTI_Noise_G100_1000_0.1_10Hz",
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=100–1000)",
+      "targetValue": null,
+      "candidateValue": "0.28 typ μV p-p",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Current_Noise_0.1_10Hz",
+      "description": "電流ノイズ 0.1 Hz to 10 Hz",
+      "targetValue": null,
+      "candidateValue": "10 pA p-p",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Reference_Input_IIN",
+      "description": "参照入力電流",
+      "targetValue": null,
+      "candidateValue": "50 typ / 60 max μA",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Reference_Gain_to_Output",
+      "description": "参照端子利得",
+      "targetValue": null,
+      "candidateValue": "1 ± 0.0001",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Nonlinearity_10k",
+      "description": "非線形性 (G=1–1000, RL=10kΩ)",
+      "targetValue": null,
+      "candidateValue": "10 typ / 40 max ppm",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Nonlinearity_2k",
+      "description": "非線形性 (G=1–100, RL=2kΩ)",
+      "targetValue": null,
+      "candidateValue": "10 typ / 95 max ppm",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Gain_vs_Temperature_G1",
+      "description": "利得 対 温度特性 (G=1)",
+      "targetValue": null,
+      "candidateValue": "10 ppm/°C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Gain_vs_Temperature_G_gt_1",
+      "description": "利得 対 温度特性 (G>1)",
+      "targetValue": null,
+      "candidateValue": "-50 ppm/°C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Lead_Temperature_Soldering",
+      "description": "リード温度 (はんだ付け10秒)",
+      "targetValue": null,
+      "candidateValue": "300 °C",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "RoHS_Compliant",
+      "description": "RoHS対応",
+      "targetValue": null,
+      "candidateValue": "Yes (Z suffix)",
+      "score": 0,
+      "reason": "Target側にIDなし",
+      "is_comparable": false
+    }
+  ]
+}

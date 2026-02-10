@@ -1,0 +1,1100 @@
+# PDF Text Extraction
+# Source: Infineon_IRLZ44NSTRR.pdf
+# Pages: 12
+
+
+============================================================
+PAGE 1
+============================================================
+
+	
+
+	
+
+
+ 	
+
+ 
+
+  !
+"
+ 
+ #$%&'(!
+")!
+
+
+ *""
+ *
+
+	
+
+
+θ
+		
+
+
+
+θ
+		
+	
+
+
+	
+
+
+ 
+!"
+
+
+
+#$%&'( 
+
+)*
+**+$+
+,
+#$%& 
+
+)*
+**+$+
+--
+
+#
+.)*
+**
+/
+$%&'( 
+0* )1
+-2
+"
+$%&'( 
+0* )1
+
+"
+3*)*45*
+,
+"! 
++
+6		7* +.4
+8/
++
+9
+74..:.;9*4
+'
+
+#	
+:.; 
+**
+'(
+
+9	
+1::.;9*4
+
+
+:!
+<):*:!
+(
++!
+%
+=1*4
+	((>,(
+%
+
+7*4%1**4
+7.*4%1**?*
+-/?*
+ 
+
+	
+ 	
+	  
+ 	
+		 
+ 	 
+	 	  
+
+    	!
+	 
+ 	 
+"  
+#	$ #	      	  	
+
+	% 
+&'(
+
+ )	 	
+$
+	
+ 	
+
+		
+#
+	 
+
+	"
+*%)
+	 
+)#
+	!+"
+
+  
+ # 	    # 	!
+
+				
+	)"
+*%)#
+
+
+		#
+ 	
+				
+			
+,"-.	
+		"
+
+!
+	/01++203#
+ !
+
+	"
+
+
+
+Ω
+
+2 
+   D   Pak
+   
+TO-262
+S
+D
+G
+!'!
+ " +,
+"
+  *
+
+
+
+============================================================
+PAGE 2
+============================================================
+
+	
+
+
+	
+ 
+ 
+ 	
+		
++	
+)*		7* *<0 +.4
+((
+
+
++
++&+#&'(@
+∆∆ *<0+.4%1
+??
+
+, 
++! 
+?*'( 
+#&
+
+ ''
++&+#&'(
+
+ '(
+Ω
++&(+#&'(
+
+ -(
++&+#&'
++
+6%;*;.+.4
+
+
+'
++
++&+#&'(@
+4
+5*0* %*
+'
+
+
+7
++&'(+#&'(
+
+
+'(
++&((++&+
+
+
+'(
++&++&+%&( 
+6		7* 5*0* 3<4
+
+
+
+
++&/+
+6		7* :* 3<4
+
+
+	
++&	/+
+A
+%.6
+;*4
+
+
+2
+#&'(
+A
+6		7* 
+;*4
+
+
+2/
+
++&+
+A
+6		)*B..*B
+;*4
+
+
+'(
++&(+754/-
+
+%*	=).%
+
+
+
++&'2+
+
+%
+
+2
+
+#&'(
+
+%*	=??).%
+
+'/
+
+&-Ω, +&(+
+
+5..%
+
+(
+
+&Ω, 754
+0 .
+
+
+*?
+
+
+#1
+1
+
+,
+
++&+
+
+
+=1
+1
+
+
+
+15
++&'(+
+
+
+:* %*?* 
+1
+
+(
+
+C&DE754(
+
+
+
+
+ 
+
+!"#
+D
+#
+
+7 )*		7* =	
+3
+#*.7*#
+,(
+
+#
+)*		7*3<4
+**
+@
+ 
+	
+ 
+ 
+ 	
+		
+#
+
+7*
+**
+=759%.
+)
+
+
+;04  ;
+
+.7*
+**
+4*. *:*
+)
+
+
+1	F
++
+) 5*0* +.4
+
+
+-
++
+%&'( 
+#&'(+&+
+
+:*:*%
+
+2
+'
+
+%&'( 
+#&'(
+A
+:* :* 
+;*4
+
+'
+-'
+
+!&!@
+
+5*0*%*	=%
+#**	4.4.*	3>3
+$%	
+"
+
+S
+D
+G
+
+,
+/
+ .0;≤ -@G. ≤'H
+
+ Uses IRLZ44N data and test conditions
+";BI*
+5	*6	*.
+5**?1*.*4;I*?*11.JK	LL
+ ISD ≤'(!≤',!@+≤+	
+%≤,( 
+ +&'(+*4%&'( 
+3&,@D
+&'(Ω#&'(754*'
+1:*4G1.0;.
+MF1**7?4
+
+
+============================================================
+PAGE 3
+============================================================
+
+	
+
+	
+
+	
+	
+
+ !	
+		
+
+1
+10
+100
+1000
+0.1
+1
+10
+100
+I   , Drain-to-Source Current (A)
+D
+V     , Drain-to-Source Voltage (V)
+DS
+A
+ 20µs PULSE WIDTH
+ T   = 25°C
+J
+                   VGS
+ TOP           15V
+                   12V
+                   10V
+                   8.0V
+                   6.0V
+                   4.0V
+                   3.0V
+ BOTTOM   2.5V
+2.5V
+1
+10
+100
+1000
+0.1
+1
+10
+100
+I   , Drain-to-Source Current (A)
+D
+V     , Drain-to-Source Voltage (V)
+DS
+A
+ 20µs PULSE WIDTH
+ T   = 175°C
+                   VGS
+ TOP           15V
+                   12V
+                   10V
+                   8.0V
+                   6.0V
+                   4.0V
+                   3.0V
+ BOTTOM   2.5V
+2.5V
+J
+1
+10
+100
+1000
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+9.0
+T  = 25°C
+J
+GS
+V     , Gate-to-Source Voltage (V)
+D
+I   , Drain-to-Source Current (A)
+T  = 175°C
+J
+A
+ V     = 25V
+ 20µs PULSE WIDTH
+DS
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+-60
+-40
+-20
+0
+20
+40
+60
+80
+100 120 140 160 180
+J
+T   , Junction Temperature (°C)
+R           ,  Drain-to-Source On Resistance
+DS(on)
+(Normalized)
+ V      = 10V
+GS
+A
+I    = 41A
+D
+
+
+============================================================
+PAGE 4
+============================================================
+
+	
+
+
+	
+"
+#$ %
+	
+ !
+" %
+&'"%(
+	
+)% !
+)" %
+0
+400
+800
+1200
+1600
+2000
+2400
+2800
+1
+10
+100
+C, Capacitance (pF)
+DS
+V     , Drain-to-Source Voltage (V)
+A
+V      = 0V,         f = 1MHz
+C      = C     + C     ,   C     SHORTED
+C      = C
+C      = C     + C
+GS
+iss         gs         gd         ds
+rss         gd
+oss        ds         gd
+Ciss
+Coss
+Crss
+0
+3
+6
+9
+12
+15
+0
+10
+20
+30
+40
+50
+60
+70
+Q   , Total Gate Charge (nC)
+G
+V     , Gate-to-Source Voltage (V)
+GS
+A
+ FOR TEST CIRCUIT 
+    SEE FIGURE 13
+V      = 44V
+V      = 28V
+I    = 25A
+DS
+DS
+D
+10
+100
+1000
+0.4
+0.8
+1.2
+1.6
+2.0
+2.4
+T  = 25°C
+J
+V      = 0V
+GS
+V     , Source-to-Drain Voltage (V)
+I     , Reverse Drain Current (A)
+SD
+SD
+A
+T  = 175°C
+J
+1
+10
+100
+1000
+1
+10
+100
+V     , Drain-to-Source Voltage (V)
+DS
+I   , Drain Current (A)
+ OPERATION IN THIS AREA LIMITED
+                       BY R
+D
+DS(on)
+10µs
+100µs
+1ms
+10ms
+A
+T     = 25°C
+T     = 175°C
+ Single Pulse
+C
+J
+
+
+============================================================
+PAGE 5
+============================================================
+
+	
+
+&' !
+	
+"$%		
+VDS
+90%
+10%
+VGS
+td(on)
+tr
+td(off)
+tf
+"$%	*+
+&',+		-./
++
+≤ 1 
+ !≤ 0.1 %
+
++
+
+)N%
+(+
++
+-+
+0.01
+0.1
+ 1
+ 10
+0.00001
+0.0001
+0.001
+0.01
+0.1
+Notes:
+1. Duty factor D = t   / t
+2. Peak T =P
+x  Z
++ T
+1
+2
+J
+DM
+thJC
+C
+P
+t
+t
+DM
+1
+2
+t  , Rectangular Pulse Duration (sec)
+Thermal Response (Z        )
+1
+thJC
+0.01
+0.02
+0.05
+0.10
+0.20
+D = 0.50
+SINGLE PULSE
+(THERMAL RESPONSE)
+25
+50
+75
+100
+125
+150
+175
+0
+10
+20
+30
+40
+50
+T   , Case Temperature
+(  C)
+I   , Drain Current (A)
+°
+C
+D
+
+
+============================================================
+PAGE 6
+============================================================
+
+	
+
+	0-+	
+	0-+*+
+VDS
+L
+D.U.T.
+VDD
+IAS
+tp
+0.01Ω
+RG
++
+-
+tp
+VDS
+IAS
+VDD
+V(BR)DSS
+"#$%
+QG
+QGS
+QGD
+VG
+Charge
+1)%*+
+D.U.T.
+VDS
+ID
+IG
+3mA
+VGS
+.3µF
+50KΩ
+.2µF
+12V
+Current Regulator
+Same Type as D.U.T.
+Current Sampling Resistors
++
+-
+	&'(+,%
+ !
+)%	
+!2 
+0
+100
+200
+300
+400
+500
+25
+50
+75
+100
+125
+150
+175
+J
+E     ,   Single Pulse Avalanche Energy (mJ)
+AS
+A
+Starting T  , Junction Temperature (°C)
+                    I
+TOP            10A
+                   17A
+BOTTOM    25A
+ V      = 25V
+D
+DD
+
+
+============================================================
+PAGE 7
+============================================================
+
+	
+
+	
+		
+P.W.
+Period
+di/dt
+Diode Recovery
+dv/dt
+Ripple ≤5%
+Body Diode 
+Forward Drop
+Re-Applied
+Voltage
+Reverse
+Recovery
+Current
+Body Diode Forward
+Current
+VGS=10V
+VDD
+ISD
+Driver Gate Drive
+D.U.T. ISD Waveform
+D.U.T. VDS Waveform
+Inductor Curent
+D = 
+P.W.
+Period
++
+-
++
++
++
+-
+-
+-
+#3,4#,	"
+5+&(+?*343:.):
+
+
+
+
++
+•  :!*..
+•  )*:*1)N%
+•  #*..)5*B)B
+•  )N%	):N*%
+
+
+
+
+*3
+*
+   • 307*#
+ •  6*.
+ •  303<4#
+
+**%*?**
+
+5
+
+
+============================================================
+PAGE 8
+============================================================
+
+	
+
+N ote: "P " in as s embly line
+pos ition indicates  "L ead-F ree"
+F 53 0 S
+T H IS  IS  AN  IR F 5 30 S  W IT H
+L OT  COD E  8 02 4
+AS S E M B L E D  O N  W W  0 2, 2 00 0
+IN  T H E  AS S E M B L Y L IN E  "L "
+AS S E M B L Y
+L OT  COD E
+IN T E R N AT ION AL
+R E CT IF IE R
+L OGO
+P AR T  N U M B E R
+D AT E  CO D E
+Y E AR  0 =  2 00 0
+W E E K  02
+L IN E  L
+
+F 530S
+A =  AS S E MB L Y  S IT E  CO D E
+W E E K  02
+P  =  D E S IGN AT E S  L E AD -F R E E
+P R O D U CT  (O P T ION AL )
+R E CT IF IE R
+IN T E R N AT ION AL
+L OGO
+L OT  COD E
+AS S E MB L Y
+Y E AR  0 =  2000
+D AT E  CO D E
+P AR T  N U MB E R
+	
+
+	
+
+	
+
+Dimensions are shown in millimeters (inches)
+
+
+============================================================
+PAGE 9
+============================================================
+
+	
+
+ASSEMBLY
+LOT CODE
+RECTIFIER
+INTERNATIONAL
+ASSEMBLED ON WW 19, 1997
+Note: "P" in assembly line
+position indicates "Lead-Free"
+IN THE ASSEMBLY LINE "C"
+LOGO
+THIS IS AN IRL3103L
+LOT CODE 1789
+EXAMPLE:
+LINE C
+DATE CODE
+WEEK 19
+YEAR 7 =  1997
+PART NUMBER
+PART NUMBER
+LOGO
+LOT CODE
+ASSEMBLY
+INTERNATIONAL
+RECTIFIER
+PRODUCT (OPTIONAL)
+P =  DESIGNATES LEAD-FREE
+A =  ASSEMBLY SITE CODE
+WEEK 19
+YEAR 7 =  1997
+DATE CODE
+OR
+TO-262 Part Marking Information
+TO-262 Package Outline
+IGBT
+1- GATE
+2- COLLECTOR
+3- EMITTER
+
+
+============================================================
+PAGE 10
+============================================================
+
+	
+
+3
+4
+4
+TRR
+FEED DIRECTION
+1.85 (.073)
+1.65 (.065)
+1.60 (.063)
+1.50 (.059)
+4.10 (.161)
+3.90 (.153)
+TRL
+FEED DIRECTION
+10.90 (.429)
+10.70 (.421)
+16.10 (.634)
+15.90 (.626)
+1.75 (.069)
+1.25 (.049)
+11.60 (.457)
+11.40 (.449)
+15.42 (.609)
+15.22 (.601)
+4.72 (.136)
+4.52 (.178)
+24.30 (.957)
+23.90 (.941)
+0.368 (.0145)
+0.342 (.0135)
+1.60 (.063)
+1.50 (.059)
+13.50 (.532)
+12.80 (.504)
+330.00
+(14.173)
+  MAX.
+27.40 (1.079)
+23.90 (.941)
+60.00 (2.362)
+      MIN.
+30.40 (1.197)
+      MAX.
+26.40 (1.039)
+24.40 (.961)
+NOTES :
+1.   COMFORMS TO EIA-418.
+2.   CONTROLLING DIMENSION: MILLIMETER.
+3.   DIMENSION MEASURED @ HUB.
+4.   INCLUDES FLANGE DISTORTION @ OUTER EDGE.
+D2Pak Tape & Reel Infomation
+Dimensions are shown in millimeters (inches)
+Data and specifications subject to change without notice.
+IR WORLD HEADQUARTERS: 233 Kansas St., El Segundo, California 90245, USA Tel: (310) 252-7105
+TAC Fax: (310) 252-7903
+Visit us at www.irf.com for sales contact information.04/04
+
+
+============================================================
+PAGE 11
+============================================================
+
+Note:  For the most current drawings please refer to the IR website at: 
+http://www.irf.com/package/ 
+ 
+ 
+
+
+============================================================
+PAGE 12
+============================================================
+
+IMPORTANT NOTICE
+The information given in this document shall in no 
+event be regarded as a guarantee of conditions or 
+characteristics (“Beschaffenheitsgarantie”) . 
+With respect to any examples, hints or any typical 
+values stated herein and/or any information 
+regarding the application of the product, Infineon 
+Technologies 
+hereby 
+disclaims 
+any 
+and 
+all 
+warranties and liabilities of any kind, including 
+without limitation warranties of non-infringement 
+of intellectual property rights of any third party. 
+In addition, any information given in this document 
+is subject to customer’s compliance with its 
+obligations stated in this document and any 
+applicable 
+legal 
+requirements, 
+norms 
+and 
+standards concerning customer’s products and any 
+use of the product of Infineon Technologies in 
+customer’s applications. 
+The data contained in this document is exclusively 
+intended for technically trained staff. It is the 
+responsibility of customer’s technical departments 
+to evaluate the suitability of the product for the 
+intended application and the completeness of the 
+product information given in this document with 
+respect to such application. 
+For further information on the product, technology, 
+delivery terms and conditions and prices please 
+contact your nearest Infineon Technologies office 
+(www.infineon.com).
+WARNINGS
+Due to technical requirements products may 
+contain dangerous substances. For information on 
+the types in question please contact your nearest 
+Infineon Technologies office.
+Except as otherwise explicitly approved by Infineon 
+Technologies in a written document signed by 
+authorized 
+representatives 
+of 
+Infineon 
+Technologies, Infineon Technologies’ products may 
+not be used in any applications where a failure of 
+the product or any consequences of the use thereof 
+can reasonably be expected to result in personal 
+injury.

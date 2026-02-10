@@ -1,0 +1,347 @@
+{
+  "datasheet_id": "Micron_MT41K256M16TW-107_P",
+  "version": "1.0",
+  "source": "Micron_MT41K256M16TW-107_P.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "MT41K256M16TW-107:P"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "4Gb DDR3L SDRAM (1.35V)"
+    },
+    "Configuration": {
+      "description": "構成",
+      "value": "32 Meg x 16 x 8 banks"
+    },
+    "Density": {
+      "description": "容量",
+      "value": "4Gb"
+    },
+    "Data_Width": {
+      "description": "データ幅",
+      "value": "x16"
+    },
+    "Speed_Grade": {
+      "description": "スピードグレード",
+      "value": "DDR3L-1866 (-107)"
+    },
+    "Data_Rate": {
+      "description": "データレート",
+      "value": "1866 MT/s"
+    },
+    "Die_Revision": {
+      "description": "ダイリビジョン",
+      "value": "Rev. P"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "96-ball FBGA (TW), Pb-free"
+    },
+    "Package_Body_Size": {
+      "description": "パッケージ外形寸法",
+      "value": "8 ±0.1 mm x 14 ±0.1 mm"
+    },
+    "Package_Height": {
+      "description": "パッケージ高さ",
+      "value": "1.1 ±0.1 mm"
+    },
+    "Ball_Pitch": {
+      "description": "ボールピッチ",
+      "value": "0.8 mm TYP"
+    },
+    "Ball_Count": {
+      "description": "ボール数",
+      "value": "96"
+    },
+    "Ball_Diameter": {
+      "description": "ボール径",
+      "value": "Ø0.47 mm"
+    },
+    "Ball_Standoff": {
+      "description": "ボールスタンドオフ",
+      "value": "0.34 ±0.05 mm"
+    },
+    "Solder_Ball_Material": {
+      "description": "はんだボール材質",
+      "value": "SAC302 (96.8% Sn, 3% Ag, 0.2% Cu)"
+    },
+    "Row_Address": {
+      "description": "行アドレス",
+      "value": "32K (A[14:0])"
+    },
+    "Bank_Address": {
+      "description": "バンクアドレス",
+      "value": "8 (BA[2:0])"
+    },
+    "Column_Address": {
+      "description": "列アドレス",
+      "value": "1K (A[9:0])"
+    },
+    "Page_Size": {
+      "description": "ページサイズ",
+      "value": "2KB"
+    },
+    "Refresh_Count": {
+      "description": "リフレッシュカウント",
+      "value": "8K"
+    },
+    "Prefetch_Architecture": {
+      "description": "プリフェッチアーキテクチャ",
+      "value": "8n-bit"
+    },
+    "Internal_Banks": {
+      "description": "内部バンク数",
+      "value": "8"
+    },
+    "Burst_Length": {
+      "description": "バースト長",
+      "value": "BL8 (fixed), BC4 (burst chop)"
+    },
+    "VDD_Supply": {
+      "description": "電源電圧 VDD",
+      "value": "1.283 to 1.45 V (nom 1.35 V)"
+    },
+    "VDDQ_IO_Supply": {
+      "description": "I/O電源電圧 VDDQ",
+      "value": "1.283 to 1.45 V (nom 1.35 V)"
+    },
+    "VDD_Abs_Max": {
+      "description": "絶対最大定格 VDD",
+      "value": "-0.4 to 1.975 V"
+    },
+    "VDDQ_Abs_Max": {
+      "description": "絶対最大定格 VDDQ",
+      "value": "-0.4 to 1.975 V"
+    },
+    "VIN_Abs_Max": {
+      "description": "絶対最大定格 VIN/VOUT",
+      "value": "-0.4 to 1.975 V"
+    },
+    "Input_Leakage_Current": {
+      "description": "入力リーク電流",
+      "value": "±2 μA"
+    },
+    "VREF_Leakage_Current": {
+      "description": "VREF リーク電流",
+      "value": "±1 μA"
+    },
+    "Operating_Temp_Commercial": {
+      "description": "動作温度 (Commercial)",
+      "value": "0 to 85 °C"
+    },
+    "Operating_Temp_Industrial": {
+      "description": "動作温度 (Industrial)",
+      "value": "-40 to 95 °C"
+    },
+    "Operating_Temp_Automotive": {
+      "description": "動作温度 (Automotive)",
+      "value": "-40 to 105 °C"
+    },
+    "Operating_Temp_Commercial_Abs_Max": {
+      "description": "絶対最大動作温度 (Commercial)",
+      "value": "0 to 95 °C"
+    },
+    "Operating_Temp_Industrial_Abs_Max": {
+      "description": "絶対最大動作温度 (Industrial)",
+      "value": "-40 to 95 °C"
+    },
+    "Operating_Temp_Automotive_Abs_Max": {
+      "description": "絶対最大動作温度 (Automotive)",
+      "value": "-40 to 105 °C"
+    },
+    "Storage_Temp": {
+      "description": "保存温度",
+      "value": "-55 to 150 °C"
+    },
+    "tCK_AVG": {
+      "description": "クロック周期 (CL=13, CWL=9)",
+      "value": "1.07 to <1.25 ns"
+    },
+    "tAA": {
+      "description": "内部READコマンドから最初のデータまで",
+      "value": "13.91 to 20 ns"
+    },
+    "tRCD": {
+      "description": "ACTIVATE-to-READ/WRITEディレイ",
+      "value": "13.91 ns min"
+    },
+    "tRP": {
+      "description": "PRECHARGEコマンド期間",
+      "value": "13.91 ns min"
+    },
+    "tRC": {
+      "description": "ACTIVATE-to-ACTIVATE/REFRESHコマンド期間",
+      "value": "47.91 ns min"
+    },
+    "tRAS": {
+      "description": "ACTIVATE-to-PRECHARGEコマンド期間",
+      "value": "34 ns min to 9×tREFI max"
+    },
+    "CAS_Latency": {
+      "description": "CASレイテンシ (CL)",
+      "value": "13 CK"
+    },
+    "CAS_Write_Latency": {
+      "description": "CASライトレイテンシ (CWL)",
+      "value": "9 CK"
+    },
+    "Supported_CL": {
+      "description": "サポートCL設定",
+      "value": "5, 6, 7, 8, 9, 10, 11, 13"
+    },
+    "Supported_CWL": {
+      "description": "サポートCWL設定",
+      "value": "5, 6, 7, 8, 9"
+    },
+    "tRRD_x16": {
+      "description": "ACTIVATE-to-ACTIVATE最小 (x16, 2KB page)",
+      "value": "greater of 4CK or 7.5 ns"
+    },
+    "tFAW_x16": {
+      "description": "Four ACTIVATEウィンドウ (x16, 2KB page, DDR3L-1600)",
+      "value": "40 ns min"
+    },
+    "tWR": {
+      "description": "ライトリカバリ時間",
+      "value": "15 ns min"
+    },
+    "tWTR": {
+      "description": "内部WRITEからREADコマンドディレイ",
+      "value": "greater of 4CK or 7.5 ns"
+    },
+    "tRTP": {
+      "description": "READ-to-PRECHARGE時間",
+      "value": "greater of 4CK or 7.5 ns"
+    },
+    "tRFC_4Gb": {
+      "description": "REFRESH-to-ACTIVATE期間 (4Gb)",
+      "value": "260 ns min"
+    },
+    "tREFI_85C": {
+      "description": "最大平均リフレッシュ間隔 (TC≤85°C)",
+      "value": "7.8 μs (64ms/8192)"
+    },
+    "tREFI_95C": {
+      "description": "最大平均リフレッシュ間隔 (85°C<TC≤95°C)",
+      "value": "3.9 μs (32ms/8192)"
+    },
+    "tREFI_105C": {
+      "description": "最大平均リフレッシュ間隔 (95°C<TC≤105°C)",
+      "value": "1.95 μs (16ms/8192)"
+    },
+    "IDD0_x16": {
+      "description": "動作電流0 ACTIVATE-PRECHARGE (x16, DDR3L-1866)",
+      "value": "32 mA max"
+    },
+    "IDD1_x16": {
+      "description": "動作電流1 ACT-READ-PRE (x16, DDR3L-1866)",
+      "value": "46 mA max"
+    },
+    "IDD2P0_x16": {
+      "description": "プリチャージパワーダウン電流 Slow exit (x16, DDR3L-1866)",
+      "value": "12 mA max"
+    },
+    "IDD2P1_x16": {
+      "description": "プリチャージパワーダウン電流 Fast exit (x16, DDR3L-1866)",
+      "value": "12 mA max"
+    },
+    "IDD2Q": {
+      "description": "プリチャージ静止スタンバイ電流 (DDR3L-1866)",
+      "value": "15 mA max"
+    },
+    "IDD2N_x16": {
+      "description": "プリチャージスタンバイ電流 (x16, DDR3L-1866)",
+      "value": "17 mA max"
+    },
+    "IDD2NT_x16": {
+      "description": "プリチャージスタンバイODT電流 (x16, DDR3L-1866)",
+      "value": "23 mA max"
+    },
+    "IDD3P_x16": {
+      "description": "アクティブパワーダウン電流 (x16, DDR3L-1866)",
+      "value": "17 mA max"
+    },
+    "IDD3N_x16": {
+      "description": "アクティブスタンバイ電流 (x16, DDR3L-1866)",
+      "value": "23 mA max"
+    },
+    "IDD4R_x16": {
+      "description": "バーストリード動作電流 (x16, DDR3L-1866)",
+      "value": "120 mA max"
+    },
+    "IDD4W_x16": {
+      "description": "バーストライト動作電流 (x16, DDR3L-1866)",
+      "value": "130 mA max"
+    },
+    "IDD5B_x16": {
+      "description": "バーストリフレッシュ電流 (x16, DDR3L-1866)",
+      "value": "156 mA max"
+    },
+    "IDD6": {
+      "description": "セルフリフレッシュ電流 (室温)",
+      "value": "15 mA max"
+    },
+    "IDD6ET": {
+      "description": "セルフリフレッシュ電流 (拡張温度)",
+      "value": "23 mA max"
+    },
+    "IDD7_x16": {
+      "description": "全バンクインターリーブリード電流 (x16, DDR3L-1866)",
+      "value": "147 mA max"
+    },
+    "CIO_DQ_DM": {
+      "description": "I/O静電容量 DQ/DM (DDR3L-1866)",
+      "value": "1.4 to 2.1 pF"
+    },
+    "CCK": {
+      "description": "クロック入力静電容量 CK/CK# (DDR3L-1866)",
+      "value": "0.8 to 1.3 pF"
+    },
+    "Theta_JA_96ball_LowCond": {
+      "description": "熱抵抗 θJA 96-ball 低伝導基板 (Rev.P, 0m/s)",
+      "value": "54.3 °C/W"
+    },
+    "Theta_JA_96ball_HighCond": {
+      "description": "熱抵抗 θJA 96-ball 高伝導基板 (Rev.P, 0m/s)",
+      "value": "34.8 °C/W"
+    },
+    "Theta_JC_96ball_LowCond": {
+      "description": "熱抵抗 θJC 96-ball 低伝導基板 (Rev.P)",
+      "value": "4.6 °C/W"
+    },
+    "On_Die_Termination": {
+      "description": "オンダイ終端 (ODT)",
+      "value": "Nominal and dynamic ODT for data, strobe, and mask"
+    },
+    "Self_Refresh": {
+      "description": "セルフリフレッシュ",
+      "value": "Supported (ASR and SRT)"
+    },
+    "Write_Leveling": {
+      "description": "ライトレベリング",
+      "value": "Supported"
+    },
+    "Output_Driver_Impedance": {
+      "description": "出力ドライバインピーダンス",
+      "value": "34 Ω / 40 Ω selectable"
+    },
+    "DDR3_Backward_Compatible": {
+      "description": "DDR3 1.5V後方互換性",
+      "value": "Yes (VDD=VDDQ=1.5V ±0.075V)"
+    },
+    "Datasheet_Revision": {
+      "description": "データシートリビジョン",
+      "value": "Rev. R 09/18"
+    }
+  },
+  "notes": [
+    "IDD値はDie Rev. P, TC=85°C, ASR無効の条件。ASR有効時は最大+2mA追加される場合あり。",
+    "Die Rev. PのIDD Table (Table 22) はDDR3L-1600/-1866/-2133のみ定義（-1066/-1333は非対応）。",
+    "-107スピードグレードはDDR3L-1600 (CL=11, -125) へ後方互換。",
+    "Thermal特性テーブルのOperating Temp (Commercial) 0-85°Cは通常動作範囲。TC>85°Cでは2xリフレッシュ要、TC>95°Cでは4xリフレッシュ要。",
+    "Die Rev. Pは同一ファミリのDie Rev. E (HAパッケージ) と比べ大幅に低消費電力（例: IDD4R x16: 120mA vs 252mA）。",
+    "TWパッケージ (8×14mm) はHAパッケージ (9×14mm) より幅が1mm小さい。ボール径はØ0.47mm (HA: Ø0.45mm)。"
+  ]
+}

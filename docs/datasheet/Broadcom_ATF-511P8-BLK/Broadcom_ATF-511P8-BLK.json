@@ -1,0 +1,195 @@
+{
+  "datasheet_id": "Broadcom_ATF-511P8-BLK",
+  "version": "1.0",
+  "source": "Broadcom_ATF-511P8-BLK.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "ATF-511P8-BLK"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "High Linearity Enhancement Mode Pseudomorphic HEMT (E-pHEMT)"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "8-Lead LPCC (JEDEC DFP-N, MO229 DRP-N)"
+    },
+    "Package_Size": {
+      "description": "パッケージ寸法",
+      "value": "2.0 x 2.0 x 0.75 mm"
+    },
+    "Ordering_Quantity": {
+      "description": "梱包数量",
+      "value": "100 (antistatic bag)"
+    },
+    "Operating_Frequency_Range": {
+      "description": "動作周波数範囲",
+      "value": "50 MHz to 6 GHz"
+    },
+    "MTTF": {
+      "description": "平均故障時間 (Point MTTF)",
+      "value": "> 300 years (at +85 °C mounting temperature)"
+    },
+    "MSL_Rating": {
+      "description": "湿度感度レベル",
+      "value": "MSL-1, lead-free"
+    },
+    "VDS_Max": {
+      "description": "最大ドレイン-ソース間電圧",
+      "value": "7 V"
+    },
+    "VGS_Max": {
+      "description": "最大ゲート-ソース間電圧",
+      "value": "-5 to 1 V"
+    },
+    "VGD_Max": {
+      "description": "最大ゲート-ドレイン間電圧",
+      "value": "-5 to 1 V"
+    },
+    "IDS_Max": {
+      "description": "最大ドレイン電流",
+      "value": "1 A"
+    },
+    "IGS_Max": {
+      "description": "最大ゲート電流",
+      "value": "46 mA"
+    },
+    "Pdiss_Max": {
+      "description": "最大消費電力 (TB=25°C)",
+      "value": "3 W (derate 30 mW/°C for TB > 50 °C)"
+    },
+    "Pin_Max_RF": {
+      "description": "最大RF入力電力",
+      "value": "+30 dBm"
+    },
+    "Channel_Temperature_Max": {
+      "description": "最大チャネル温度",
+      "value": "150 °C"
+    },
+    "Storage_Temperature": {
+      "description": "保存温度範囲",
+      "value": "-65 to 150 °C"
+    },
+    "Thermal_Resistance_ch_b": {
+      "description": "熱抵抗 (チャネル-ボード間)",
+      "value": "33 °C/W"
+    },
+    "Vgs_Operational": {
+      "description": "動作ゲート電圧 (VDS=4.5V, IDS=200mA)",
+      "value": "0.25 min / 0.51 typ / 0.8 max V"
+    },
+    "Vth": {
+      "description": "しきい値電圧 (VDS=4.5V, IDS=32mA)",
+      "value": "0.28 typ V"
+    },
+    "Idss": {
+      "description": "飽和ドレイン電流 (VDS=4.5V, VGS=0V)",
+      "value": "16.4 typ μA"
+    },
+    "Gm": {
+      "description": "相互コンダクタンス (VDS=4.5V)",
+      "value": "2178 typ mmho"
+    },
+    "Igss": {
+      "description": "ゲートリーク電流 (VDS=0V, VGS=-4.5V)",
+      "value": "-27 min / -2 typ μA"
+    },
+    "NF_2GHz": {
+      "description": "雑音指数 @ 2 GHz (VDS=4.5V, IDS=200mA)",
+      "value": "1.4 typ dB"
+    },
+    "NF_900MHz": {
+      "description": "雑音指数 @ 900 MHz (VDS=4.5V, IDS=200mA)",
+      "value": "1.2 typ dB"
+    },
+    "Gain_2GHz": {
+      "description": "利得 @ 2 GHz (VDS=4.5V, IDS=200mA)",
+      "value": "13.5 min / 14.8 typ / 16.5 max dB"
+    },
+    "Gain_900MHz": {
+      "description": "利得 @ 900 MHz (VDS=4.5V, IDS=200mA)",
+      "value": "17.8 typ dB"
+    },
+    "OIP3_2GHz": {
+      "description": "出力3次インターセプトポイント @ 2 GHz (VDS=4.5V, IDS=200mA)",
+      "value": "38.5 min / 41.7 typ dBm"
+    },
+    "OIP3_900MHz": {
+      "description": "出力3次インターセプトポイント @ 900 MHz (VDS=4.5V, IDS=200mA)",
+      "value": "43 typ dBm"
+    },
+    "P1dB_2GHz": {
+      "description": "1dB利得圧縮点出力 @ 2 GHz (VDS=4.5V, IDS=200mA)",
+      "value": "28.5 min / 30 typ dBm"
+    },
+    "P1dB_900MHz": {
+      "description": "1dB利得圧縮点出力 @ 900 MHz (VDS=4.5V, IDS=200mA)",
+      "value": "29.6 typ dBm"
+    },
+    "PAE_2GHz": {
+      "description": "電力付加効率 @ 2 GHz (VDS=4.5V, IDS=200mA)",
+      "value": "52 min / 68.9 typ %"
+    },
+    "PAE_900MHz": {
+      "description": "電力付加効率 @ 900 MHz (VDS=4.5V, IDS=200mA)",
+      "value": "68.6 typ %"
+    },
+    "ACLR_5MHz": {
+      "description": "隣接チャネル漏洩電力比 (5 MHz offset)",
+      "value": "-58.9 typ dBc"
+    },
+    "ACLR_10MHz": {
+      "description": "隣接チャネル漏洩電力比 (10 MHz offset)",
+      "value": "-62.7 typ dBc"
+    },
+    "LFOM_2GHz": {
+      "description": "リニアリティFOM @ 2 GHz (OIP3/DC power)",
+      "value": "12.1 dB"
+    },
+    "Dim_A": {
+      "description": "パッケージ寸法 A (高さ)",
+      "value": "0.70 min / 0.75 nom / 0.80 max mm"
+    },
+    "Dim_A1": {
+      "description": "パッケージ寸法 A1 (スタンドオフ)",
+      "value": "0 min / 0.02 nom / 0.05 max mm"
+    },
+    "Dim_A2": {
+      "description": "パッケージ寸法 A2",
+      "value": "0.203 REF mm"
+    },
+    "Dim_b": {
+      "description": "パッケージ寸法 b (端子幅)",
+      "value": "0.225 min / 0.25 nom / 0.275 max mm"
+    },
+    "Dim_D": {
+      "description": "パッケージ寸法 D (本体長さ)",
+      "value": "1.9 min / 2.0 nom / 2.1 max mm"
+    },
+    "Dim_D1": {
+      "description": "パッケージ寸法 D1 (露出パッド長さ)",
+      "value": "0.65 min / 0.80 nom / 0.95 max mm"
+    },
+    "Dim_E": {
+      "description": "パッケージ寸法 E (本体幅)",
+      "value": "1.9 min / 2.0 nom / 2.1 max mm"
+    },
+    "Dim_E1": {
+      "description": "パッケージ寸法 E1 (露出パッド幅)",
+      "value": "1.45 min / 1.6 nom / 1.75 max mm"
+    },
+    "Dim_e": {
+      "description": "パッケージ寸法 e (端子ピッチ)",
+      "value": "0.50 BSC mm"
+    },
+    "Dim_P": {
+      "description": "パッケージ寸法 P (端子長さ)",
+      "value": "0.20 min / 0.25 nom / 0.30 max mm"
+    },
+    "Dim_L": {
+      "description": "パッケージ寸法 L (端子幅方向)",
+      "value": "0.35 min / 0.40 nom / 0.45 max mm"
+    }
+  }
+}

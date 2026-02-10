@@ -1,0 +1,335 @@
+{
+  "datasheet_id": "Renesas_R5F100LEGFB_30",
+  "version": "1.0",
+  "source": "Renesas_R5F100LEGFB_30.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "R5F100LEGFB#30"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "RL78/G13 16-bit Microcontroller"
+    },
+    "Product_Family": {
+      "description": "製品ファミリー",
+      "value": "RL78/G13"
+    },
+    "CPU_Core": {
+      "description": "CPUコア",
+      "value": "RL78 (CISC architecture, 3-stage pipeline)"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "64-pin LFQFP (10 x 10 mm, 0.5-mm pitch)"
+    },
+    "Package_Code": {
+      "description": "パッケージコード",
+      "value": "P-LFQFP64-10x10-0.50 (PLQP0064KF-A)"
+    },
+    "Package_Mass": {
+      "description": "パッケージ質量",
+      "value": "0.35 g typ"
+    },
+    "Package_Body_D": {
+      "description": "パッケージ寸法 D (本体)",
+      "value": "10.00 ± 0.20 mm"
+    },
+    "Package_Body_E": {
+      "description": "パッケージ寸法 E (本体)",
+      "value": "10.00 ± 0.20 mm"
+    },
+    "Package_Height_A": {
+      "description": "パッケージ高さ A",
+      "value": "1.60 mm max"
+    },
+    "Package_Lead_Pitch": {
+      "description": "リードピッチ",
+      "value": "0.50 mm"
+    },
+    "Application_Grade": {
+      "description": "アプリケーショングレード",
+      "value": "G: Industrial applications (TA = -40 to +105°C)"
+    },
+    "Flash_Memory": {
+      "description": "コードフラッシュメモリ",
+      "value": "64 KB"
+    },
+    "Flash_Block_Size": {
+      "description": "フラッシュブロックサイズ",
+      "value": "1 KB"
+    },
+    "Data_Flash": {
+      "description": "データフラッシュメモリ",
+      "value": "4 KB"
+    },
+    "Data_Flash_Rewrites": {
+      "description": "データフラッシュ書き換え回数",
+      "value": "1,000,000 times typ"
+    },
+    "Data_Flash_Rewrite_Voltage": {
+      "description": "データフラッシュ書き換え電圧",
+      "value": "VDD = 1.8 to 5.5 V"
+    },
+    "RAM": {
+      "description": "RAM",
+      "value": "4 KB"
+    },
+    "Address_Space": {
+      "description": "アドレス空間",
+      "value": "1 MB"
+    },
+    "General_Purpose_Registers": {
+      "description": "汎用レジスタ",
+      "value": "(8-bit register x 8) x 4 banks"
+    },
+    "Max_CPU_Frequency": {
+      "description": "最大CPU動作周波数",
+      "value": "32 MHz (HS mode)"
+    },
+    "Min_Instruction_Execution_Time": {
+      "description": "最小命令実行時間",
+      "value": "0.03125 µs (fIH = 32 MHz)"
+    },
+    "DMIPS": {
+      "description": "DMIPS",
+      "value": "41 DMIPS @ 32 MHz"
+    },
+    "VDD_Min": {
+      "description": "電源電圧 VDD 最小 (G品種)",
+      "value": "2.4 V"
+    },
+    "VDD_Max": {
+      "description": "電源電圧 VDD 最大",
+      "value": "5.5 V"
+    },
+    "VDD_Abs_Max": {
+      "description": "電源電圧 VDD 絶対最大定格",
+      "value": "-0.5 to +6.5 V"
+    },
+    "Operating_Temp_Range": {
+      "description": "動作温度範囲",
+      "value": "-40 to +105 °C"
+    },
+    "Storage_Temp_Range": {
+      "description": "保存温度範囲",
+      "value": "-65 to +150 °C"
+    },
+    "HS_Mode_Voltage_Range": {
+      "description": "HS (高速メイン) モード動作電圧",
+      "value": "2.7 V to 5.5 V @ 1 to 32 MHz, 2.4 V to 5.5 V @ 1 to 16 MHz"
+    },
+    "High_Speed_OnChip_Osc_Freq": {
+      "description": "高速オンチップオシレータ周波数",
+      "value": "1 to 32 MHz (選択: 32/24/16/12/8/6/4/3/2/1 MHz)"
+    },
+    "High_Speed_OnChip_Osc_Accuracy_Normal": {
+      "description": "高速オンチップオシレータ精度 (-20 to +85°C)",
+      "value": "± 1.0% (VDD = 2.4 to 5.5 V)"
+    },
+    "High_Speed_OnChip_Osc_Accuracy_Cold": {
+      "description": "高速オンチップオシレータ精度 (-40 to -20°C)",
+      "value": "± 1.5% (VDD = 2.4 to 5.5 V)"
+    },
+    "High_Speed_OnChip_Osc_Accuracy_Hot": {
+      "description": "高速オンチップオシレータ精度 (+85 to +105°C)",
+      "value": "± 2.0% (VDD = 2.4 to 5.5 V)"
+    },
+    "X1_Osc_Freq_Range": {
+      "description": "X1発振周波数範囲",
+      "value": "1.0 to 20.0 MHz (VDD = 2.7 to 5.5 V), 1.0 to 16.0 MHz (VDD = 2.4 to 2.7 V)"
+    },
+    "XT1_Osc_Freq": {
+      "description": "XT1発振周波数",
+      "value": "32.768 kHz"
+    },
+    "Low_Speed_OnChip_Osc_Freq": {
+      "description": "低速オンチップオシレータ周波数",
+      "value": "15 kHz typ (± 15%)"
+    },
+    "IDD_Active_HS_32MHz_5V": {
+      "description": "供給電流 Active HS 32MHz VDD=5.0V",
+      "value": "4.6 mA typ, 7.0 mA max"
+    },
+    "IDD_Active_HS_32MHz_3V": {
+      "description": "供給電流 Active HS 32MHz VDD=3.0V",
+      "value": "4.6 mA typ, 7.0 mA max"
+    },
+    "IDD_Active_HS_24MHz": {
+      "description": "供給電流 Active HS 24MHz",
+      "value": "3.7 mA typ, 5.5 mA max"
+    },
+    "IDD_Active_HS_16MHz": {
+      "description": "供給電流 Active HS 16MHz",
+      "value": "2.7 mA typ, 4.0 mA max"
+    },
+    "IDD_HALT_HS_32MHz": {
+      "description": "供給電流 HALT HS 32MHz",
+      "value": "0.54 mA typ, 1.63 mA max"
+    },
+    "IDD_HALT_HS_16MHz": {
+      "description": "供給電流 HALT HS 16MHz",
+      "value": "0.40 mA typ, 1.00 mA max"
+    },
+    "IDD_Subsystem_Clock_25C": {
+      "description": "供給電流 サブシステムクロック動作 (25°C)",
+      "value": "4.1 µA typ, 4.9 µA max"
+    },
+    "IDD_HALT_Subsystem_25C": {
+      "description": "供給電流 HALT サブシステムクロック (25°C)",
+      "value": "0.30 µA typ, 0.57 µA max"
+    },
+    "IDD_STOP_25C": {
+      "description": "供給電流 STOPモード (25°C)",
+      "value": "0.23 µA typ, 0.50 µA max"
+    },
+    "Power_Consumption_Per_MHz": {
+      "description": "消費電力/MHz",
+      "value": "66 µA/MHz"
+    },
+    "Power_Consumption_RTC_LVD": {
+      "description": "RTC+LVD動作時消費電力",
+      "value": "0.57 µA"
+    },
+    "IO_Port_Total": {
+      "description": "I/Oポート合計",
+      "value": "58"
+    },
+    "IO_CMOS_IO": {
+      "description": "CMOS I/O",
+      "value": "48 (N-ch O.D. I/O [VDD withstand]: 15)"
+    },
+    "IO_CMOS_Input": {
+      "description": "CMOSインプット",
+      "value": "5"
+    },
+    "IO_CMOS_Output": {
+      "description": "CMOS出力",
+      "value": "1"
+    },
+    "IO_Nch_OD_6V": {
+      "description": "N-ch O.D. I/O (耐圧6V)",
+      "value": "4"
+    },
+    "IOH_Per_Pin": {
+      "description": "出力電流 High (ピンあたり)",
+      "value": "-10.0 mA max"
+    },
+    "IOL_Per_Pin": {
+      "description": "出力電流 Low (ピンあたり)",
+      "value": "20.0 mA max"
+    },
+    "IOH_Total_All": {
+      "description": "出力電流 High 全ピン合計",
+      "value": "-100.0 mA (G品種)"
+    },
+    "IOL_Total_All": {
+      "description": "出力電流 Low 全ピン合計",
+      "value": "150.0 mA"
+    },
+    "VIH_Normal": {
+      "description": "HIGH入力電圧 (通常入力バッファ)",
+      "value": "0.8 x EVDD0"
+    },
+    "VIL_Normal": {
+      "description": "LOW入力電圧 (通常入力バッファ)",
+      "value": "0.2 x EVDD0"
+    },
+    "VOH": {
+      "description": "HIGH出力電圧 (EVDD0=4.0-5.5V, IOH=-10mA)",
+      "value": "EVDD0 - 1.5 V min"
+    },
+    "VOL": {
+      "description": "LOW出力電圧 (EVDD0=4.0-5.5V, IOL=20mA)",
+      "value": "1.3 V max"
+    },
+    "ADC_Resolution": {
+      "description": "A/D変換器分解能",
+      "value": "8/10-bit"
+    },
+    "ADC_Channels": {
+      "description": "A/Dコンバータチャネル数",
+      "value": "12"
+    },
+    "ADC_Internal_Ref": {
+      "description": "内部参照電圧",
+      "value": "1.45 V"
+    },
+    "Timer_16bit": {
+      "description": "16ビットタイマー",
+      "value": "8 channels"
+    },
+    "Timer_12bit_Interval": {
+      "description": "12ビットインターバルタイマー",
+      "value": "1 channel"
+    },
+    "Watchdog_Timer": {
+      "description": "ウォッチドッグタイマー",
+      "value": "1 channel"
+    },
+    "RTC": {
+      "description": "リアルタイムクロック",
+      "value": "1 channel (calendar 99 years, alarm, clock correction)"
+    },
+    "DMA_Channels": {
+      "description": "DMAチャネル数",
+      "value": "2"
+    },
+    "Serial_CSI": {
+      "description": "簡易SPI (CSI)",
+      "value": "4 channels"
+    },
+    "Serial_UART": {
+      "description": "UART (LIN-bus対応含む)",
+      "value": "2 channels"
+    },
+    "Serial_I2C": {
+      "description": "I2C / 簡易I2C",
+      "value": "6 channels"
+    },
+    "Serial_IICA": {
+      "description": "IICA",
+      "value": "Normal mode, Fast mode"
+    },
+    "Multiplier": {
+      "description": "乗除算器",
+      "value": "16x16=32bit, 32÷32=32bit, 16x16+32=32bit"
+    },
+    "Clock_Output": {
+      "description": "クロック出力/ブザー出力",
+      "value": "2 channels"
+    },
+    "Key_Interrupt": {
+      "description": "キー割り込み",
+      "value": "on-chip"
+    },
+    "On_Chip_Debug": {
+      "description": "オンチップデバッグ",
+      "value": "yes"
+    },
+    "Self_Programming": {
+      "description": "セルフプログラミング",
+      "value": "yes (boot swap, flash shield window)"
+    },
+    "POR": {
+      "description": "パワーオンリセット",
+      "value": "on-chip"
+    },
+    "LVD": {
+      "description": "電圧検出器",
+      "value": "Rise: 2.61 to 4.06 V (8 levels), Fall: 2.55 to 3.98 V (8 levels) (G品種)"
+    },
+    "Power_Modes": {
+      "description": "電力モード",
+      "value": "HALT, STOP, SNOOZE"
+    },
+    "Different_Potential_Interface": {
+      "description": "異電位インターフェース",
+      "value": "1.8/2.5/3 V device connectable"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Surface Mount"
+    }
+  }
+}

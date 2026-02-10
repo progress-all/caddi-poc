@@ -1,0 +1,44 @@
+param_id,description,value
+Part_Number,型名,"AD620 (AD620AN: 8-Lead PDIP, -40°C to +85°C)"
+Package,パッケージ,"8-Lead PDIP (N-8), CERDIP (Q-8), SOIC (R-8)"
+Body_Size_PDIP,外形寸法 (PDIP),"0.400 in × 0.210 in (10.16 mm × 5.33 mm)"
+Product_Type,製品種別,Low Cost Low Power Instrumentation Amplifier
+Gain_Equation,利得式,G = 1 + (49.4 kΩ/RG)
+Gain_Range,利得範囲,"1 to 10,000"
+Supply_Voltage,電源電圧,"±2.3 V to ±18 V"
+Operating_Temperature_A_B,動作温度範囲 (A B grade),"-40 to +85 °C"
+Operating_Temperature_S,動作温度範囲 (S grade),"-55 to +125 °C"
+Storage_Temperature_N_R,保存温度範囲 (N R),"-65 to +125 °C"
+Storage_Temperature_Q,保存温度範囲 (Q),"-65 to +150 °C"
+Input_Offset_Voltage_AD620B,入力オフセット電圧 (AD620B VS=±5V to ±15V),"15 μV typ / 50 μV max"
+Input_Offset_Voltage_Overtemp_AD620B,入力オフセット電圧 全温度 (AD620B),85 μV max
+Input_Offset_Voltage_TC_AD620B,入力オフセット電圧 TC (AD620B),"0.1 typ / 0.6 max μV/°C"
+Output_Offset_Voltage,出力オフセット電圧 (VS=±15V),"200 typ / 500 max μV (AD620B)"
+Input_Bias_Current,入力バイアス電流 (AD620B),"0.5 typ / 1.0 max nA"
+Input_Offset_Current,入力オフセット電流 (AD620B),"0.3 typ / 0.5 max nA"
+Input_Impedance_Differential,差動入力インピーダンス,"10 GΩ || 2 pF"
+Input_Impedance_CommonMode,同相入力インピーダンス,"10 GΩ || 2 pF"
+Input_Voltage_Range,入力電圧範囲 (VS=±2.3V to ±5V G=1),"−VS + 1.9 V to +VS − 1.2 V"
+CMRR_G10,同相除去比 (G=10 DC to 60Hz),"100 to 110 dB (AD620B)"
+CMRR_G100,同相除去比 (G=100),"120 to 130 dB (AD620B)"
+PSR_G10,電源除去比 (G=10),"100 to 120 dB (AD620B)"
+Output_Swing,出力スイング (RL=10kΩ VS=±5V to ±18V),"−VS + 1.2 V to +VS − 1.4 V"
+Short_Circuit_Current,短絡電流,"±18 mA"
+Bandwidth_G1,小信号 -3dB 帯域幅 (G=1),1000 kHz
+Bandwidth_G10,小信号 -3dB 帯域幅 (G=10),800 kHz
+Bandwidth_G100,小信号 -3dB 帯域幅 (G=100),120 kHz
+Bandwidth_G1000,小信号 -3dB 帯域幅 (G=1000),12 kHz
+Slew_Rate,スルー・レート,"0.75 min / 1.2 typ V/μs"
+Settling_Time_G1_100,セトリング時間 0.01% (G=1–100 10V Step),15 μs
+Settling_Time_G1000,セトリング時間 0.01% (G=1000),150 μs
+Voltage_Noise_1kHz,電圧ノイズ @ 1 kHz,"9 typ / 13 max nV/√Hz"
+RTI_Noise_0.1_10Hz,RTI ノイズ 0.1 Hz to 10 Hz (G=100–1000),"0.28 typ / 0.4 max μV p-p"
+Current_Noise_1kHz,電流ノイズ @ 1 kHz,100 fA/√Hz
+Quiescent_Current,消費電流 (無負荷),"0.9 typ / 1.3 max mA"
+Reference_Input_RIN,参照入力抵抗,20 kΩ
+Reference_Voltage_Range,参照端子電圧範囲,"−VS + 1.6 V to +VS − 1.6 V"
+Nonlinearity,非線形性 (G=1–1000 RL=10kΩ),"10 typ / 40 max ppm"
+Differential_Input_Voltage_Max,差動入力電圧 最大,25 V
+Power_Dissipation_Max,最大消費電力,650 mW
+Thermal_Resistance_PDIP,熱抵抗 RθJA (8-Lead PDIP),"95 °C/W"
+Thermal_Resistance_SOIC,熱抵抗 RθJA (8-Lead SOIC),"155 °C/W"

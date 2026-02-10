@@ -1,0 +1,274 @@
+{
+  "generatedAt": "2026-02-06T04:40:18.655Z",
+  "key": "dkpn=516-2691-ND_mpn=ATF-511P8-BLK",
+  "data": {
+    "targetMpn": "ATF-511P8-BLK",
+    "targetProduct": {
+      "digiKeyProductNumber": "516-2691-ND",
+      "manufacturerProductNumber": "ATF-511P8-BLK",
+      "manufacturerName": "Broadcom Limited",
+      "description": "RF MOSFET E-PHEMT 4.5V 8LPCC",
+      "quantityAvailable": 0,
+      "productUrl": "https://www.digikey.com/en/products/detail/broadcom-limited/ATF-511P8-BLK/1233281",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/535/8-LPCC.jpg",
+      "unitPrice": "0",
+      "sources": [],
+      "detailedDescription": "RF Mosfet 4.5 V 200 mA 2GHz 14.8dB 30dBm 8-LPCC (2x2)",
+      "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/1030/ATF-511P8.pdf",
+      "partStatus": "Obsolete",
+      "backOrderNotAllowed": false,
+      "normallyStocking": false,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": true,
+      "category": {
+        "name": "Discrete Semiconductor Products",
+        "categoryId": 19
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "16",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "Unknown",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "516-2691-ND",
+          "packageType": "Bulk",
+          "quantityAvailable": 0,
+          "pricing": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Technology",
+          "value": "E-pHEMT",
+          "parameterId": 570
+        },
+        {
+          "name": "Frequency",
+          "value": "2GHz",
+          "parameterId": 139
+        },
+        {
+          "name": "Gain",
+          "value": "14.8dB",
+          "parameterId": 445
+        },
+        {
+          "name": "Voltage - Test",
+          "value": "4.5 V",
+          "parameterId": 2140
+        },
+        {
+          "name": "Current Rating (Amps)",
+          "value": "1A",
+          "parameterId": 66
+        },
+        {
+          "name": "Noise Figure",
+          "value": "1.4dB",
+          "parameterId": 1108
+        },
+        {
+          "name": "Current - Test",
+          "value": "200 mA",
+          "parameterId": 2159
+        },
+        {
+          "name": "Power - Output",
+          "value": "30dBm",
+          "parameterId": 306
+        },
+        {
+          "name": "Voltage - Rated",
+          "value": "7 V",
+          "parameterId": 2079
+        },
+        {
+          "name": "Package / Case",
+          "value": "8-WFDFN Exposed Pad",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "8-LPCC (2x2)",
+          "parameterId": 1291
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "1465-1789-1-ND",
+        "manufacturerProductNumber": "MAAP-011232-TR0500",
+        "manufacturerName": "MACOM Technology Solutions",
+        "description": "IC RF AMP 100MHZ-3GHZ 16QFN",
+        "quantityAvailable": 588,
+        "productUrl": "https://www.digikey.com/en/products/detail/macom-technology-solutions/MAAP-011232-TR0500/6419365",
+        "unitPrice": "23.33",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "RF Amplifier IC 100MHz ~ 3GHz 16-PQFN (3x3)",
+        "datasheetUrl": "https://cdn.macom.com/datasheets/MAAP-011232.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6343/1465%7E16PQFN-1-3X3%7E%7E16.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "RF and Wireless",
+          "categoryId": 37
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "18",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unknown",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1465-1789-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 500,
+            "pricing": [
+              {
+                "breakQuantity": 500,
+                "unitPrice": 16.44796
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1465-1789-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 588,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 23.33
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 20.345
+              },
+              {
+                "breakQuantity": 25,
+                "unitPrice": 19.3112
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 17.8938
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 17.04588
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1465-1789-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 588,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 23.33
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 20.345
+              },
+              {
+                "breakQuantity": 25,
+                "unitPrice": 19.3112
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 17.8938
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 17.04588
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Frequency",
+            "value": "100MHz ~ 3GHz",
+            "parameterId": 139
+          },
+          {
+            "name": "P1dB",
+            "value": "29dBm",
+            "parameterId": 1109
+          },
+          {
+            "name": "Gain",
+            "value": "23dB",
+            "parameterId": 445
+          },
+          {
+            "name": "Noise Figure",
+            "value": "-",
+            "parameterId": 1108
+          },
+          {
+            "name": "RF Type",
+            "value": "-",
+            "parameterId": 236
+          },
+          {
+            "name": "Voltage - Supply",
+            "value": "9V",
+            "parameterId": 276
+          },
+          {
+            "name": "Current - Supply",
+            "value": "-",
+            "parameterId": 449
+          },
+          {
+            "name": "Test Frequency",
+            "value": "-",
+            "parameterId": 1110
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "16-VFQFN Exposed Pad",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "16-PQFN (3x3)",
+            "parameterId": 1291
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-06T04:40:18.654Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 1
+      }
+    }
+  }
+}

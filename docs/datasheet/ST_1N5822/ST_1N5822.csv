@@ -1,0 +1,30 @@
+param_id,description,value
+Part_Number,型名,1N5822 (1N582x series)
+Product_Type,製品種別,Low Drop Power Schottky Rectifier
+Package,パッケージ,DO-201AD
+VRRM,繰り返しピーク逆電圧,40 V
+IF_RMS,RMS順方向電流,10 A
+IF_AV_TL100,平均順方向電流 (TL=100°C δ=0.5),3 A
+IF_AV_TL110,平均順方向電流 (TL=110°C δ=0.5),3 A
+IFSM,サージ非繰り返し順方向電流 (tp=10ms 正弦波),80 A
+PARM,繰り返しピークアバランシェ電力 (tp=1µs Tj=25°C),1700 W
+Tstg_Range,保存温度範囲,-65 to +150 °C
+Tj_Max,最大接合温度,150 °C
+dVdt,逆電圧臨界上昇率,10000 V/µs
+IR_25C,逆漏れ電流 (Tj=25°C VR=VRRM),2 mA
+IR_100C,逆漏れ電流 (Tj=100°C),20 mA
+VF_3A,順方向電圧降下 (Tj=25°C IF=3A),0.525 V
+VF_9_4A,順方向電圧降下 (Tj=25°C IF=9.4A),0.95 V
+Conduction_Loss_Formula,導通損失の計算式,P = 0.33 x IF(AV) + 0.060 x IF²(RMS)
+Rth_JA,熱抵抗 (ジャンクション-周囲間 リード長10mm),80 °C/W
+Rth_JL,熱抵抗 (ジャンクション-リード間 リード長10mm),25 °C/W
+Dim_A,パッケージ寸法 A (本体長さ),9.50 mm min
+Dim_B,パッケージ寸法 B (リード長さ),25.40 mm min
+Dim_C,パッケージ寸法 ΦC (本体直径),5.30 mm min
+Dim_D,パッケージ寸法 ΦD (リード直径),1.30 mm min
+Dim_E,パッケージ寸法 E,1.25 mm min
+Weight,重量,1.12 g
+Ordering_Standard,梱包 (標準),"Ammopack, 600 pcs"
+Ordering_TapeReel,梱包 (テープ&リール),"1N5822RL, Tape & reel, 1900 pcs"
+Mounting_Type,実装タイプ,Through Hole
+Diode_Type,ダイオードタイプ,Schottky

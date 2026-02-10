@@ -1,0 +1,619 @@
+{
+  "generatedAt": "2026-02-09T08:23:32.870Z",
+  "key": "dkpn=R5F100LEGFB%2330-ND_mpn=R5F100LEGFB%2330",
+  "data": {
+    "targetMpn": "R5F100LEGFB#30",
+    "targetProduct": {
+      "digiKeyProductNumber": "R5F100LEGFB#30-ND",
+      "manufacturerProductNumber": "R5F100LEGFB#30",
+      "manufacturerName": "Renesas Electronics Corporation",
+      "description": "IC MCU 16BIT 64KB FLASH 64LFQFP",
+      "quantityAvailable": 940,
+      "productUrl": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/R5F100LEGFB-30/9471806",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5489/559%7EPLQP0064KF-A%7EFB%7E64.jpg",
+      "unitPrice": "2.75",
+      "sources": [],
+      "detailedDescription": "RL78 RL78/G13 Microcontroller IC 16-Bit 32MHz 64KB (64K x 8) FLASH 64-LFQFP (10x10)",
+      "datasheetUrl": "https://www.renesas.com/en/document/dst/rl78g13-data-sheet",
+      "partStatus": "Obsolete",
+      "backOrderNotAllowed": false,
+      "normallyStocking": false,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Integrated Circuits (ICs)",
+        "categoryId": 32
+      },
+      "series": "RL78/G13",
+      "manufacturerLeadWeeks": "12",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "3  (168 Hours)",
+        "exportControl": "3A991A2"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "R5F100LEGFB#30-ND",
+          "packageType": "Tray",
+          "quantityAvailable": 940,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 2.75
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 2.051
+            },
+            {
+              "breakQuantity": 25,
+              "unitPrice": 1.876
+            },
+            {
+              "breakQuantity": 160,
+              "unitPrice": 1.63431
+            },
+            {
+              "breakQuantity": 320,
+              "unitPrice": 1.57178
+            },
+            {
+              "breakQuantity": 640,
+              "unitPrice": 1.52028
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "DigiKey Programmable",
+          "value": "Not Verified",
+          "parameterId": 2697
+        },
+        {
+          "name": "Core Processor",
+          "value": "RL78",
+          "parameterId": 506
+        },
+        {
+          "name": "Core Size",
+          "value": "16-Bit",
+          "parameterId": 689
+        },
+        {
+          "name": "Speed",
+          "value": "32MHz",
+          "parameterId": 143
+        },
+        {
+          "name": "Connectivity",
+          "value": "CSI, I2C, LINbus, UART/USART",
+          "parameterId": 1113
+        },
+        {
+          "name": "Peripherals",
+          "value": "DMA, LVD, POR, PWM, WDT",
+          "parameterId": 1114
+        },
+        {
+          "name": "Number of I/O",
+          "value": "48",
+          "parameterId": 2208
+        },
+        {
+          "name": "Program Memory Size",
+          "value": "64KB (64K x 8)",
+          "parameterId": 155
+        },
+        {
+          "name": "Program Memory Type",
+          "value": "FLASH",
+          "parameterId": 290
+        },
+        {
+          "name": "EEPROM Size",
+          "value": "4K x 8",
+          "parameterId": 291
+        },
+        {
+          "name": "RAM Size",
+          "value": "4K x 8",
+          "parameterId": 156
+        },
+        {
+          "name": "Voltage - Supply (Vcc/Vdd)",
+          "value": "2.4V ~ 5.5V",
+          "parameterId": 1112
+        },
+        {
+          "name": "Data Converters",
+          "value": "A/D 12x8/10b",
+          "parameterId": 519
+        },
+        {
+          "name": "Oscillator Type",
+          "value": "Internal",
+          "parameterId": 283
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-40°C ~ 105°C (TA)",
+          "parameterId": 252
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount",
+          "parameterId": 69
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "64-LFQFP (10x10)",
+          "parameterId": 1291
+        },
+        {
+          "name": "Package / Case",
+          "value": "64-LQFP",
+          "parameterId": 16
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "559-R5F100LEGFA#10-ND",
+        "manufacturerProductNumber": "R5F100LEGFA#10",
+        "manufacturerName": "Renesas Electronics Corporation",
+        "description": "IC MCU 16BIT 64KB FLASH 64LQFP",
+        "quantityAvailable": 952,
+        "productUrl": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/R5F100LEGFA-10/13162031",
+        "unitPrice": "3.6",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Parametric Equivalent",
+        "detailedDescription": "RL78 RL78/G13 Microcontroller IC 16-Bit 32MHz 64KB (64K x 8) FLASH 64-LQFP (12x12)",
+        "datasheetUrl": "https://www.renesas.com/en/document/dst/rl78g13-data-sheet",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5864/559%7EPLQP0064JA-A%7EFA%7E64.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "RL78/G13",
+        "manufacturerLeadWeeks": "14",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "3A991A2"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "559-R5F100LEGFA#10-ND",
+            "packageType": "Tray",
+            "quantityAvailable": 952,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 3.6
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 2.712
+              },
+              {
+                "breakQuantity": 25,
+                "unitPrice": 2.4896
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 2.2455
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 2.12896
+              },
+              {
+                "breakQuantity": 952,
+                "unitPrice": 2.00472
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Core Processor",
+            "value": "RL78",
+            "parameterId": 506
+          },
+          {
+            "name": "Core Size",
+            "value": "16-Bit",
+            "parameterId": 689
+          },
+          {
+            "name": "Speed",
+            "value": "32MHz",
+            "parameterId": 143
+          },
+          {
+            "name": "Connectivity",
+            "value": "CSI, I2C, LINbus, UART/USART",
+            "parameterId": 1113
+          },
+          {
+            "name": "Peripherals",
+            "value": "DMA, LVD, POR, PWM, WDT",
+            "parameterId": 1114
+          },
+          {
+            "name": "Number of I/O",
+            "value": "48",
+            "parameterId": 2208
+          },
+          {
+            "name": "Program Memory Size",
+            "value": "64KB (64K x 8)",
+            "parameterId": 155
+          },
+          {
+            "name": "Program Memory Type",
+            "value": "FLASH",
+            "parameterId": 290
+          },
+          {
+            "name": "EEPROM Size",
+            "value": "4K x 8",
+            "parameterId": 291
+          },
+          {
+            "name": "RAM Size",
+            "value": "4K x 8",
+            "parameterId": 156
+          },
+          {
+            "name": "Voltage - Supply (Vcc/Vdd)",
+            "value": "2.4V ~ 5.5V",
+            "parameterId": 1112
+          },
+          {
+            "name": "Data Converters",
+            "value": "A/D 12x8/10b",
+            "parameterId": 519
+          },
+          {
+            "name": "Oscillator Type",
+            "value": "Internal",
+            "parameterId": 283
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 105°C (TA)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "64-LQFP (12x12)",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "64-LQFP",
+            "parameterId": 16
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "559-R5F100LEGFA#30-ND",
+        "manufacturerProductNumber": "R5F100LEGFA#30",
+        "manufacturerName": "Renesas Electronics Corporation",
+        "description": "IC MCU 16BIT 64KB FLASH 64LQFP",
+        "quantityAvailable": 14,
+        "productUrl": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/R5F100LEGFA-30/12750486",
+        "unitPrice": "3.12",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Parametric Equivalent",
+        "detailedDescription": "RL78 RL78/G13 Microcontroller IC 16-Bit 32MHz 64KB (64K x 8) FLASH 64-LQFP (12x12)",
+        "datasheetUrl": "https://www.renesas.com/en/document/dst/rl78g13-data-sheet",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5864/559%7EPLQP0064JA-A%7EFA%7E64.jpg",
+        "partStatus": "Obsolete",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "RL78/G13",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "3A991A2"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "559-R5F100LEGFA#30-ND",
+            "packageType": "Tray",
+            "quantityAvailable": 14,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 3.12
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 2.338
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Core Processor",
+            "value": "RL78",
+            "parameterId": 506
+          },
+          {
+            "name": "Core Size",
+            "value": "16-Bit",
+            "parameterId": 689
+          },
+          {
+            "name": "Speed",
+            "value": "32MHz",
+            "parameterId": 143
+          },
+          {
+            "name": "Connectivity",
+            "value": "CSI, I2C, LINbus, UART/USART",
+            "parameterId": 1113
+          },
+          {
+            "name": "Peripherals",
+            "value": "DMA, LVD, POR, PWM, WDT",
+            "parameterId": 1114
+          },
+          {
+            "name": "Number of I/O",
+            "value": "48",
+            "parameterId": 2208
+          },
+          {
+            "name": "Program Memory Size",
+            "value": "64KB (64K x 8)",
+            "parameterId": 155
+          },
+          {
+            "name": "Program Memory Type",
+            "value": "FLASH",
+            "parameterId": 290
+          },
+          {
+            "name": "EEPROM Size",
+            "value": "4K x 8",
+            "parameterId": 291
+          },
+          {
+            "name": "RAM Size",
+            "value": "4K x 8",
+            "parameterId": 156
+          },
+          {
+            "name": "Voltage - Supply (Vcc/Vdd)",
+            "value": "2.4V ~ 5.5V",
+            "parameterId": 1112
+          },
+          {
+            "name": "Data Converters",
+            "value": "A/D 12x8/10b",
+            "parameterId": 519
+          },
+          {
+            "name": "Oscillator Type",
+            "value": "Internal",
+            "parameterId": 283
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 105°C (TA)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "64-LQFP (12x12)",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "64-LQFP",
+            "parameterId": 16
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "559-R5F100LEGFB#10-ND",
+        "manufacturerProductNumber": "R5F100LEGFB#10",
+        "manufacturerName": "Renesas Electronics Corporation",
+        "description": "IC MCU 16BIT 64KB FLASH 64LFQFP",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/R5F100LEGFB-10/13162272",
+        "unitPrice": "1.69671",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Parametric Equivalent",
+        "detailedDescription": "RL78 RL78/G13 Microcontroller IC 16-Bit 32MHz 64KB (64K x 8) FLASH 64-LFQFP (10x10)",
+        "datasheetUrl": "https://www.renesas.com/en/document/dst/rl78g13-data-sheet",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5489/559%7EPLQP0064KF-A%7EFB%7E64.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "RL78/G13",
+        "manufacturerLeadWeeks": "14",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "3A991A2"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "559-R5F100LEGFB#10-ND",
+            "packageType": "Tray",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1280,
+                "unitPrice": 1.69671
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Core Processor",
+            "value": "RL78",
+            "parameterId": 506
+          },
+          {
+            "name": "Core Size",
+            "value": "16-Bit",
+            "parameterId": 689
+          },
+          {
+            "name": "Speed",
+            "value": "32MHz",
+            "parameterId": 143
+          },
+          {
+            "name": "Connectivity",
+            "value": "CSI, I2C, LINbus, UART/USART",
+            "parameterId": 1113
+          },
+          {
+            "name": "Peripherals",
+            "value": "DMA, LVD, POR, PWM, WDT",
+            "parameterId": 1114
+          },
+          {
+            "name": "Number of I/O",
+            "value": "48",
+            "parameterId": 2208
+          },
+          {
+            "name": "Program Memory Size",
+            "value": "64KB (64K x 8)",
+            "parameterId": 155
+          },
+          {
+            "name": "Program Memory Type",
+            "value": "FLASH",
+            "parameterId": 290
+          },
+          {
+            "name": "EEPROM Size",
+            "value": "4K x 8",
+            "parameterId": 291
+          },
+          {
+            "name": "RAM Size",
+            "value": "4K x 8",
+            "parameterId": 156
+          },
+          {
+            "name": "Voltage - Supply (Vcc/Vdd)",
+            "value": "2.4V ~ 5.5V",
+            "parameterId": 1112
+          },
+          {
+            "name": "Data Converters",
+            "value": "A/D 12x8/10b",
+            "parameterId": 519
+          },
+          {
+            "name": "Oscillator Type",
+            "value": "Internal",
+            "parameterId": 283
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 105°C (TA)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "64-LFQFP (10x10)",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "64-LQFP",
+            "parameterId": 16
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-09T08:23:32.868Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 3
+      }
+    }
+  }
+}

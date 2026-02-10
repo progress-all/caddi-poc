@@ -1,0 +1,67 @@
+param_id,description,value
+Part_Number,型名,"AD620ANZ (8-Lead PDIP, -40°C to +85°C, RoHS Compliant)"
+Package,パッケージ,8-Lead PDIP (N-8)
+Body_Size_PDIP,外形寸法 (PDIP),"0.400 in × 0.210 in (10.16 mm × 5.33 mm)"
+Product_Type,製品種別,Low Cost Low Power Instrumentation Amplifier
+Gain_Equation,利得式,G = 1 + (49.4 kΩ/RG)
+Gain_Range,利得範囲,"1 to 10,000"
+Gain_Error_G1,利得誤差 (G=1 VOUT=±10V),0.03 typ / 0.10 max %
+Gain_Error_G10,利得誤差 (G=10 VOUT=±10V),0.15 typ / 0.30 max %
+Gain_Error_G100,利得誤差 (G=100 VOUT=±10V),0.15 typ / 0.30 max %
+Gain_Error_G1000,利得誤差 (G=1000 VOUT=±10V),0.40 typ / 0.70 max %
+Supply_Voltage,電源電圧,±2.3 V to ±18 V
+Operating_Temperature,動作温度範囲 (A grade),-40 to +85 °C
+Storage_Temperature,保存温度範囲 (N package),-65 to +125 °C
+Input_Offset_Voltage,入力オフセット電圧 (AD620A VS=±5V to ±15V),30 μV typ / 125 μV max
+Input_Offset_Voltage_Overtemp,入力オフセット電圧 全温度 (AD620A),185 μV max
+Input_Offset_Voltage_TC,入力オフセット電圧 TC (AD620A),0.3 typ / 1.0 max μV/°C
+Output_Offset_Voltage_15V,出力オフセット電圧 (VS=±15V),400 typ / 1000 max μV
+Output_Offset_Voltage_5V,出力オフセット電圧 (VS=±5V),1500 max μV
+Output_Offset_Voltage_TC,出力オフセット電圧 TC (AD620A),5.0 typ / 15 max μV/°C
+Input_Bias_Current,入力バイアス電流 (AD620A),0.5 typ / 2.0 max nA
+Input_Bias_Current_Overtemp,入力バイアス電流 全温度 (AD620A),2.5 max nA
+Input_Offset_Current,入力オフセット電流 (AD620A),0.3 typ / 1.0 max nA
+Input_Offset_Current_Overtemp,入力オフセット電流 全温度 (AD620A),1.5 max nA
+Input_Impedance_Differential,差動入力インピーダンス,10 GΩ || 2 pF
+Input_Impedance_CommonMode,同相入力インピーダンス,10 GΩ || 2 pF
+Input_Voltage_Range_LowVS,入力電圧範囲 (VS=±2.3V to ±5V G=1),−VS + 1.9 V to +VS − 1.2 V
+Input_Voltage_Range_HighVS,入力電圧範囲 (VS=±5V to ±18V),−VS + 1.9 V to +VS − 1.4 V
+CMRR_G1,同相除去比 (G=1 DC to 60Hz),73 min / 90 typ dB
+CMRR_G10,同相除去比 (G=10 DC to 60Hz),93 min / 110 typ dB
+CMRR_G100,同相除去比 (G=100 DC to 60Hz),110 min / 130 typ dB
+CMRR_G1000,同相除去比 (G=1000 DC to 60Hz),110 min / 130 typ dB
+PSR_G1,電源除去比 (G=1),80 min / 100 typ dB
+PSR_G10,電源除去比 (G=10),95 min / 120 typ dB
+PSR_G100,電源除去比 (G=100),110 min / 140 typ dB
+PSR_G1000,電源除去比 (G=1000),110 min / 140 typ dB
+Output_Swing_LowVS,出力スイング (RL=10kΩ VS=±2.3V to ±5V),−VS + 1.1 V to +VS − 1.2 V
+Output_Swing_HighVS,出力スイング (RL=10kΩ VS=±5V to ±18V),−VS + 1.2 V to +VS − 1.4 V
+Short_Circuit_Current,短絡電流,±18 mA
+Bandwidth_G1,小信号 -3dB 帯域幅 (G=1),1000 kHz
+Bandwidth_G10,小信号 -3dB 帯域幅 (G=10),800 kHz
+Bandwidth_G100,小信号 -3dB 帯域幅 (G=100),120 kHz
+Bandwidth_G1000,小信号 -3dB 帯域幅 (G=1000),12 kHz
+Slew_Rate,スルー・レート,0.75 min / 1.2 typ V/μs
+Settling_Time_G1_100,セトリング時間 0.01% (G=1–100 10V Step),15 μs
+Settling_Time_G1000,セトリング時間 0.01% (G=1000 10V Step),150 μs
+Voltage_Noise_Input_1kHz,入力電圧ノイズ eni @ 1 kHz,9 typ / 13 max nV/√Hz
+Voltage_Noise_Output_1kHz,出力電圧ノイズ eno @ 1 kHz,72 typ / 100 max nV/√Hz
+RTI_Noise_G1_0.1_10Hz,RTI ノイズ 0.1 Hz to 10 Hz (G=1),3.0 typ μV p-p
+RTI_Noise_G10_0.1_10Hz,RTI ノイズ 0.1 Hz to 10 Hz (G=10),0.55 typ μV p-p
+RTI_Noise_G100_1000_0.1_10Hz,RTI ノイズ 0.1 Hz to 10 Hz (G=100–1000),0.28 typ μV p-p
+Current_Noise_1kHz,電流ノイズ @ 1 kHz,100 fA/√Hz
+Current_Noise_0.1_10Hz,電流ノイズ 0.1 Hz to 10 Hz,10 pA p-p
+Quiescent_Current,消費電流 (無負荷),0.9 typ / 1.3 max mA
+Reference_Input_RIN,参照入力抵抗,20 kΩ
+Reference_Input_IIN,参照入力電流,50 typ / 60 max μA
+Reference_Voltage_Range,参照端子電圧範囲,−VS + 1.6 V to +VS − 1.6 V
+Reference_Gain_to_Output,参照端子利得,1 ± 0.0001
+Nonlinearity_10k,非線形性 (G=1–1000 RL=10kΩ),10 typ / 40 max ppm
+Nonlinearity_2k,非線形性 (G=1–100 RL=2kΩ),10 typ / 95 max ppm
+Gain_vs_Temperature_G1,利得 対 温度特性 (G=1),10 ppm/°C
+Gain_vs_Temperature_G_gt_1,利得 対 温度特性 (G>1),-50 ppm/°C
+Differential_Input_Voltage_Max,差動入力電圧 最大,25 V
+Power_Dissipation_Max,最大消費電力,650 mW
+Thermal_Resistance_PDIP,熱抵抗 θJA (8-Lead PDIP),95 °C/W
+Lead_Temperature_Soldering,リード温度 (はんだ付け10秒),300 °C
+RoHS_Compliant,RoHS対応,Yes (Z suffix)

@@ -1,0 +1,275 @@
+{
+  "datasheet_id": "MACOM_Technology_Solutions_MAAP-011232-TR0500_011232",
+  "version": "1.0",
+  "source": "MACOM_Technology_Solutions_MAAP-011232-TR0500_011232.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "MAAP-011232-TR0500 (500 Piece Reel)"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "1 W Driver Amplifier with VG Enable"
+    },
+    "Technology": {
+      "description": "プロセス技術",
+      "value": "GaAs D-mode high breakdown process, full passivation"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "Lead-Free 3 mm 16-Lead PQFN"
+    },
+    "Ordering_Quantity": {
+      "description": "梱包数量",
+      "value": "500 (reel)"
+    },
+    "Operating_Frequency_Range": {
+      "description": "動作周波数範囲",
+      "value": "0.1 to 3.0 GHz"
+    },
+    "RoHS_Compliant": {
+      "description": "RoHS対応",
+      "value": "Yes"
+    },
+    "MSL_Rating": {
+      "description": "湿度感度レベル",
+      "value": "MSL-1 (JEDEC)"
+    },
+    "Plating": {
+      "description": "めっき",
+      "value": "100% matte tin over copper"
+    },
+    "ESD_Rating": {
+      "description": "ESD耐性 (HBM)",
+      "value": "Class 1A"
+    },
+    "Bias_Conditions": {
+      "description": "バイアス条件 (標準)",
+      "value": "VD1 = VD2 = 9 V, IDQ2 = 200 mA, IDQ1 = 65 mA"
+    },
+    "SSG_1GHz": {
+      "description": "小信号利得 @ 1 GHz (-10 dBm入力)",
+      "value": "23 min / 24.5 typ dB"
+    },
+    "P1dB_1GHz": {
+      "description": "1dB利得圧縮点出力 @ 1 GHz",
+      "value": "29 typ dBm"
+    },
+    "PSAT_1GHz": {
+      "description": "飽和出力電力 @ 1 GHz (3 dB Gain compression)",
+      "value": "28.5 min / 30 typ dBm"
+    },
+    "PAE_1GHz": {
+      "description": "電力付加効率 @ 1 GHz (3 dB Gain compression)",
+      "value": "35 min / 40 typ %"
+    },
+    "S12_1GHz": {
+      "description": "逆方向アイソレーション @ 1 GHz (-10 dBm入力)",
+      "value": "50 typ dB"
+    },
+    "IRL_1GHz": {
+      "description": "入力リターンロス @ 1 GHz (-10 dBm入力)",
+      "value": "8 typ dB"
+    },
+    "ORL_1GHz": {
+      "description": "出力リターンロス @ 1 GHz (-10 dBm入力)",
+      "value": "12 typ dB"
+    },
+    "OIP3_1GHz": {
+      "description": "出力3次インターセプトポイント @ 1 GHz (-13 dBm/tone, F1-F2=6 MHz)",
+      "value": "40 typ dBm"
+    },
+    "VG_Bias": {
+      "description": "ゲートバイアス電圧 (3 dB Gain compression)",
+      "value": "-0.75 min / -0.55 typ / -0.30 max V"
+    },
+    "IDQ1": {
+      "description": "静止ドレイン電流 (Stage 1)",
+      "value": "65 typ mA"
+    },
+    "SSG_BoardA_100MHz": {
+      "description": "小信号利得 @ 100 MHz (Board A)",
+      "value": "16 typ dB"
+    },
+    "SSG_BoardA_700MHz": {
+      "description": "小信号利得 @ 700 MHz (Board A)",
+      "value": "26 typ dB"
+    },
+    "SSG_BoardA_1100MHz": {
+      "description": "小信号利得 @ 1100 MHz (Board A)",
+      "value": "25 typ dB"
+    },
+    "SSG_BoardA_1600MHz": {
+      "description": "小信号利得 @ 1600 MHz (Board A)",
+      "value": "21 typ dB"
+    },
+    "P1dB_BoardA_100MHz": {
+      "description": "1dB利得圧縮点出力 @ 100 MHz (Board A)",
+      "value": "29 typ dBm"
+    },
+    "P1dB_BoardA_700MHz": {
+      "description": "1dB利得圧縮点出力 @ 700 MHz (Board A)",
+      "value": "29 typ dBm"
+    },
+    "P1dB_BoardA_1100MHz": {
+      "description": "1dB利得圧縮点出力 @ 1100 MHz (Board A)",
+      "value": "30 typ dBm"
+    },
+    "P1dB_BoardA_1600MHz": {
+      "description": "1dB利得圧縮点出力 @ 1600 MHz (Board A)",
+      "value": "29 typ dBm"
+    },
+    "PSAT_BoardA_100MHz": {
+      "description": "飽和出力電力 @ 100 MHz (Board A)",
+      "value": "30 typ dBm"
+    },
+    "PSAT_BoardA_700MHz": {
+      "description": "飽和出力電力 @ 700 MHz (Board A)",
+      "value": "30 typ dBm"
+    },
+    "PSAT_BoardA_1100MHz": {
+      "description": "飽和出力電力 @ 1100 MHz (Board A)",
+      "value": "30.5 typ dBm"
+    },
+    "PSAT_BoardA_1600MHz": {
+      "description": "飽和出力電力 @ 1600 MHz (Board A)",
+      "value": "30 typ dBm"
+    },
+    "PAE_BoardA_100MHz": {
+      "description": "電力付加効率 @ 100 MHz (Board A)",
+      "value": "32 typ %"
+    },
+    "PAE_BoardA_700MHz": {
+      "description": "電力付加効率 @ 700 MHz (Board A)",
+      "value": "40 typ %"
+    },
+    "PAE_BoardA_1100MHz": {
+      "description": "電力付加効率 @ 1100 MHz (Board A)",
+      "value": "45 typ %"
+    },
+    "PAE_BoardA_1600MHz": {
+      "description": "電力付加効率 @ 1600 MHz (Board A)",
+      "value": "37 typ %"
+    },
+    "OIP3_BoardA_100MHz": {
+      "description": "出力IP3 @ 100 MHz (Board A)",
+      "value": "41 typ dBm"
+    },
+    "OIP3_BoardA_700MHz": {
+      "description": "出力IP3 @ 700 MHz (Board A)",
+      "value": "44 typ dBm"
+    },
+    "OIP3_BoardA_1100MHz": {
+      "description": "出力IP3 @ 1100 MHz (Board A)",
+      "value": "43 typ dBm"
+    },
+    "OIP3_BoardA_1600MHz": {
+      "description": "出力IP3 @ 1600 MHz (Board A)",
+      "value": "40 typ dBm"
+    },
+    "SSG_BoardB_2000MHz": {
+      "description": "小信号利得 @ 2000 MHz (Board B)",
+      "value": "24 typ dB"
+    },
+    "SSG_BoardB_2500MHz": {
+      "description": "小信号利得 @ 2500 MHz (Board B)",
+      "value": "24 typ dB"
+    },
+    "SSG_BoardB_3000MHz": {
+      "description": "小信号利得 @ 3000 MHz (Board B)",
+      "value": "17 typ dB"
+    },
+    "P1dB_BoardB_2000MHz": {
+      "description": "1dB利得圧縮点出力 @ 2000 MHz (Board B)",
+      "value": "29 typ dBm"
+    },
+    "P1dB_BoardB_2500MHz": {
+      "description": "1dB利得圧縮点出力 @ 2500 MHz (Board B)",
+      "value": "29 typ dBm"
+    },
+    "P1dB_BoardB_3000MHz": {
+      "description": "1dB利得圧縮点出力 @ 3000 MHz (Board B)",
+      "value": "30 typ dBm"
+    },
+    "PSAT_BoardB_2000MHz": {
+      "description": "飽和出力電力 @ 2000 MHz (Board B)",
+      "value": "30 typ dBm"
+    },
+    "PSAT_BoardB_2500MHz": {
+      "description": "飽和出力電力 @ 2500 MHz (Board B)",
+      "value": "30 typ dBm"
+    },
+    "PSAT_BoardB_3000MHz": {
+      "description": "飽和出力電力 @ 3000 MHz (Board B)",
+      "value": "30.5 typ dBm"
+    },
+    "PAE_BoardB_2000MHz": {
+      "description": "電力付加効率 @ 2000 MHz (Board B)",
+      "value": "37 typ %"
+    },
+    "PAE_BoardB_2500MHz": {
+      "description": "電力付加効率 @ 2500 MHz (Board B)",
+      "value": "40.5 typ %"
+    },
+    "PAE_BoardB_3000MHz": {
+      "description": "電力付加効率 @ 3000 MHz (Board B)",
+      "value": "37 typ %"
+    },
+    "OIP3_BoardB_2000MHz": {
+      "description": "出力IP3 @ 2000 MHz (Board B)",
+      "value": "40 typ dBm"
+    },
+    "OIP3_BoardB_2500MHz": {
+      "description": "出力IP3 @ 2500 MHz (Board B)",
+      "value": "42 typ dBm"
+    },
+    "OIP3_BoardB_3000MHz": {
+      "description": "出力IP3 @ 3000 MHz (Board B)",
+      "value": "40 typ dBm"
+    },
+    "RF_Input_Power_Max": {
+      "description": "最大RF入力電力",
+      "value": "20 dBm"
+    },
+    "Gate_Voltage_Max": {
+      "description": "最大ゲート電圧範囲",
+      "value": "-4 V to 0 V"
+    },
+    "Drain_Voltage_VD1_Max": {
+      "description": "最大ドレイン電圧 VD1",
+      "value": "10 V"
+    },
+    "Drain_Voltage_VD2_Max": {
+      "description": "最大ドレイン電圧 VD2",
+      "value": "10 V"
+    },
+    "Junction_Temperature_Max": {
+      "description": "最大ジャンクション温度",
+      "value": "+150 °C"
+    },
+    "Operating_Temperature": {
+      "description": "動作温度範囲",
+      "value": "-40 to +85 °C"
+    },
+    "Storage_Temperature": {
+      "description": "保存温度範囲",
+      "value": "-55 to +150 °C"
+    },
+    "Thermal_Resistance_JC": {
+      "description": "熱抵抗 ΘJC (ジャンクション-ケース間)",
+      "value": "29 typ °C/W"
+    },
+    "MTTF": {
+      "description": "平均故障時間",
+      "value": "> 1 × 10^6 hours (at TJ ≤ +150 °C)"
+    },
+    "Gain_Control_Range": {
+      "description": "利得制御範囲 (VG: -0.4 V to -1.4 V)",
+      "value": "~40 dB (see performance curves)"
+    },
+    "Current_at_Max_Power": {
+      "description": "最大出力電力時の電流消費",
+      "value": "< 300 mA"
+    }
+  }
+}

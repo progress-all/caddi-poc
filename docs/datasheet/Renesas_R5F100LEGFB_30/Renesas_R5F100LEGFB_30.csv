@@ -1,0 +1,83 @@
+param_id,description,value
+Part_Number,型名,R5F100LEGFB#30
+Product_Type,製品種別,RL78/G13 16-bit Microcontroller
+Product_Family,製品ファミリー,RL78/G13
+CPU_Core,CPUコア,"RL78 (CISC architecture, 3-stage pipeline)"
+Package,パッケージ,"64-pin LFQFP (10 x 10 mm, 0.5-mm pitch)"
+Package_Code,パッケージコード,P-LFQFP64-10x10-0.50 (PLQP0064KF-A)
+Package_Mass,パッケージ質量,0.35 g typ
+Package_Body_D,パッケージ寸法 D (本体),10.00 ± 0.20 mm
+Package_Body_E,パッケージ寸法 E (本体),10.00 ± 0.20 mm
+Package_Height_A,パッケージ高さ A,1.60 mm max
+Package_Lead_Pitch,リードピッチ,0.50 mm
+Application_Grade,アプリケーショングレード,"G: Industrial applications (TA = -40 to +105°C)"
+Flash_Memory,コードフラッシュメモリ,64 KB
+Flash_Block_Size,フラッシュブロックサイズ,1 KB
+Data_Flash,データフラッシュメモリ,4 KB
+Data_Flash_Rewrites,データフラッシュ書き換え回数,"1,000,000 times typ"
+Data_Flash_Rewrite_Voltage,データフラッシュ書き換え電圧,VDD = 1.8 to 5.5 V
+RAM,RAM,4 KB
+Address_Space,アドレス空間,1 MB
+General_Purpose_Registers,汎用レジスタ,(8-bit register x 8) x 4 banks
+Max_CPU_Frequency,最大CPU動作周波数,32 MHz (HS mode)
+Min_Instruction_Execution_Time,最小命令実行時間,"0.03125 µs (fIH = 32 MHz)"
+DMIPS,DMIPS,41 DMIPS @ 32 MHz
+VDD_Min,電源電圧 VDD 最小 (G品種),2.4 V
+VDD_Max,電源電圧 VDD 最大,5.5 V
+VDD_Abs_Max,電源電圧 VDD 絶対最大定格,"-0.5 to +6.5 V"
+Operating_Temp_Range,動作温度範囲,-40 to +105 °C
+Storage_Temp_Range,保存温度範囲,-65 to +150 °C
+HS_Mode_Voltage_Range,HS (高速メイン) モード動作電圧,"2.7 V to 5.5 V @ 1 to 32 MHz, 2.4 V to 5.5 V @ 1 to 16 MHz"
+High_Speed_OnChip_Osc_Freq,高速オンチップオシレータ周波数,"1 to 32 MHz (選択: 32/24/16/12/8/6/4/3/2/1 MHz)"
+High_Speed_OnChip_Osc_Accuracy_Normal,高速オンチップオシレータ精度 (-20 to +85°C),± 1.0% (VDD = 2.4 to 5.5 V)
+High_Speed_OnChip_Osc_Accuracy_Cold,高速オンチップオシレータ精度 (-40 to -20°C),± 1.5% (VDD = 2.4 to 5.5 V)
+High_Speed_OnChip_Osc_Accuracy_Hot,高速オンチップオシレータ精度 (+85 to +105°C),± 2.0% (VDD = 2.4 to 5.5 V)
+X1_Osc_Freq_Range,X1発振周波数範囲,"1.0 to 20.0 MHz (VDD = 2.7 to 5.5 V), 1.0 to 16.0 MHz (VDD = 2.4 to 2.7 V)"
+XT1_Osc_Freq,XT1発振周波数,32.768 kHz
+Low_Speed_OnChip_Osc_Freq,低速オンチップオシレータ周波数,15 kHz typ (± 15%)
+IDD_Active_HS_32MHz_5V,供給電流 Active HS 32MHz VDD=5.0V,"4.6 mA typ, 7.0 mA max"
+IDD_Active_HS_32MHz_3V,供給電流 Active HS 32MHz VDD=3.0V,"4.6 mA typ, 7.0 mA max"
+IDD_Active_HS_24MHz,供給電流 Active HS 24MHz,"3.7 mA typ, 5.5 mA max"
+IDD_Active_HS_16MHz,供給電流 Active HS 16MHz,"2.7 mA typ, 4.0 mA max"
+IDD_HALT_HS_32MHz,供給電流 HALT HS 32MHz,"0.54 mA typ, 1.63 mA max"
+IDD_HALT_HS_16MHz,供給電流 HALT HS 16MHz,"0.40 mA typ, 1.00 mA max"
+IDD_Subsystem_Clock_25C,供給電流 サブシステムクロック動作 (25°C),"4.1 µA typ, 4.9 µA max"
+IDD_HALT_Subsystem_25C,供給電流 HALT サブシステムクロック (25°C),"0.30 µA typ, 0.57 µA max"
+IDD_STOP_25C,供給電流 STOPモード (25°C),"0.23 µA typ, 0.50 µA max"
+Power_Consumption_Per_MHz,消費電力/MHz,66 µA/MHz
+Power_Consumption_RTC_LVD,RTC+LVD動作時消費電力,0.57 µA
+IO_Port_Total,I/Oポート合計,58
+IO_CMOS_IO,CMOS I/O,"48 (N-ch O.D. I/O [VDD withstand]: 15)"
+IO_CMOS_Input,CMOSインプット,5
+IO_CMOS_Output,CMOS出力,1
+IO_Nch_OD_6V,N-ch O.D. I/O (耐圧6V),4
+IOH_Per_Pin,出力電流 High (ピンあたり),-10.0 mA max
+IOL_Per_Pin,出力電流 Low (ピンあたり),20.0 mA max
+IOH_Total_All,出力電流 High 全ピン合計,-100.0 mA (G品種)
+IOL_Total_All,出力電流 Low 全ピン合計,150.0 mA
+VIH_Normal,HIGH入力電圧 (通常入力バッファ),0.8 x EVDD0
+VIL_Normal,LOW入力電圧 (通常入力バッファ),0.2 x EVDD0
+VOH,HIGH出力電圧 (EVDD0=4.0-5.5V IOH=-10mA),EVDD0 - 1.5 V min
+VOL,LOW出力電圧 (EVDD0=4.0-5.5V IOL=20mA),1.3 V max
+ADC_Resolution,A/D変換器分解能,8/10-bit
+ADC_Channels,A/Dコンバータチャネル数,12
+ADC_Internal_Ref,内部参照電圧,1.45 V
+Timer_16bit,16ビットタイマー,8 channels
+Timer_12bit_Interval,12ビットインターバルタイマー,1 channel
+Watchdog_Timer,ウォッチドッグタイマー,1 channel
+RTC,リアルタイムクロック,"1 channel (calendar 99 years, alarm, clock correction)"
+DMA_Channels,DMAチャネル数,2
+Serial_CSI,簡易SPI (CSI),4 channels
+Serial_UART,UART (LIN-bus対応含む),2 channels
+Serial_I2C,I2C / 簡易I2C,6 channels
+Serial_IICA,IICA,"Normal mode, Fast mode"
+Multiplier,乗除算器,"16x16=32bit, 32÷32=32bit, 16x16+32=32bit"
+Clock_Output,クロック出力/ブザー出力,2 channels
+Key_Interrupt,キー割り込み,on-chip
+On_Chip_Debug,オンチップデバッグ,yes
+Self_Programming,セルフプログラミング,"yes (boot swap, flash shield window)"
+POR,パワーオンリセット,on-chip
+LVD,電圧検出器,"Rise: 2.61 to 4.06 V (8 levels), Fall: 2.55 to 3.98 V (8 levels) (G品種)"
+Power_Modes,電力モード,"HALT, STOP, SNOOZE"
+Different_Potential_Interface,異電位インターフェース,"1.8/2.5/3 V device connectable"
+Mounting_Type,実装タイプ,Surface Mount

@@ -1,0 +1,68 @@
+param_id,description,value
+Part_Number,型名,MAAP-011232-TR0500 (500 Piece Reel)
+Product_Type,製品種別,1 W Driver Amplifier with VG Enable
+Technology,プロセス技術,GaAs D-mode high breakdown process / full passivation
+Package,パッケージ,Lead-Free 3 mm 16-Lead PQFN
+Ordering_Quantity,梱包数量,500 (reel)
+Operating_Frequency_Range,動作周波数範囲,0.1 to 3.0 GHz
+RoHS_Compliant,RoHS対応,Yes
+MSL_Rating,湿度感度レベル,MSL-1 (JEDEC)
+Plating,めっき,100% matte tin over copper
+ESD_Rating,ESD耐性 (HBM),Class 1A
+Bias_Conditions,バイアス条件 (標準),VD1 = VD2 = 9 V / IDQ2 = 200 mA / IDQ1 = 65 mA
+SSG_1GHz,小信号利得 @ 1 GHz (-10 dBm入力),23 min / 24.5 typ dB
+P1dB_1GHz,1dB利得圧縮点出力 @ 1 GHz,29 typ dBm
+PSAT_1GHz,飽和出力電力 @ 1 GHz (3 dB Gain compression),28.5 min / 30 typ dBm
+PAE_1GHz,電力付加効率 @ 1 GHz (3 dB Gain compression),35 min / 40 typ %
+S12_1GHz,逆方向アイソレーション @ 1 GHz (-10 dBm入力),50 typ dB
+IRL_1GHz,入力リターンロス @ 1 GHz (-10 dBm入力),8 typ dB
+ORL_1GHz,出力リターンロス @ 1 GHz (-10 dBm入力),12 typ dB
+OIP3_1GHz,出力3次インターセプトポイント @ 1 GHz (-13 dBm/tone / F1-F2=6 MHz),40 typ dBm
+VG_Bias,ゲートバイアス電圧 (3 dB Gain compression),-0.75 min / -0.55 typ / -0.30 max V
+IDQ1,静止ドレイン電流 (Stage 1),65 typ mA
+SSG_BoardA_100MHz,小信号利得 @ 100 MHz (Board A),16 typ dB
+SSG_BoardA_700MHz,小信号利得 @ 700 MHz (Board A),26 typ dB
+SSG_BoardA_1100MHz,小信号利得 @ 1100 MHz (Board A),25 typ dB
+SSG_BoardA_1600MHz,小信号利得 @ 1600 MHz (Board A),21 typ dB
+P1dB_BoardA_100MHz,1dB利得圧縮点出力 @ 100 MHz (Board A),29 typ dBm
+P1dB_BoardA_700MHz,1dB利得圧縮点出力 @ 700 MHz (Board A),29 typ dBm
+P1dB_BoardA_1100MHz,1dB利得圧縮点出力 @ 1100 MHz (Board A),30 typ dBm
+P1dB_BoardA_1600MHz,1dB利得圧縮点出力 @ 1600 MHz (Board A),29 typ dBm
+PSAT_BoardA_100MHz,飽和出力電力 @ 100 MHz (Board A),30 typ dBm
+PSAT_BoardA_700MHz,飽和出力電力 @ 700 MHz (Board A),30 typ dBm
+PSAT_BoardA_1100MHz,飽和出力電力 @ 1100 MHz (Board A),30.5 typ dBm
+PSAT_BoardA_1600MHz,飽和出力電力 @ 1600 MHz (Board A),30 typ dBm
+PAE_BoardA_100MHz,電力付加効率 @ 100 MHz (Board A),32 typ %
+PAE_BoardA_700MHz,電力付加効率 @ 700 MHz (Board A),40 typ %
+PAE_BoardA_1100MHz,電力付加効率 @ 1100 MHz (Board A),45 typ %
+PAE_BoardA_1600MHz,電力付加効率 @ 1600 MHz (Board A),37 typ %
+OIP3_BoardA_100MHz,出力IP3 @ 100 MHz (Board A),41 typ dBm
+OIP3_BoardA_700MHz,出力IP3 @ 700 MHz (Board A),44 typ dBm
+OIP3_BoardA_1100MHz,出力IP3 @ 1100 MHz (Board A),43 typ dBm
+OIP3_BoardA_1600MHz,出力IP3 @ 1600 MHz (Board A),40 typ dBm
+SSG_BoardB_2000MHz,小信号利得 @ 2000 MHz (Board B),24 typ dB
+SSG_BoardB_2500MHz,小信号利得 @ 2500 MHz (Board B),24 typ dB
+SSG_BoardB_3000MHz,小信号利得 @ 3000 MHz (Board B),17 typ dB
+P1dB_BoardB_2000MHz,1dB利得圧縮点出力 @ 2000 MHz (Board B),29 typ dBm
+P1dB_BoardB_2500MHz,1dB利得圧縮点出力 @ 2500 MHz (Board B),29 typ dBm
+P1dB_BoardB_3000MHz,1dB利得圧縮点出力 @ 3000 MHz (Board B),30 typ dBm
+PSAT_BoardB_2000MHz,飽和出力電力 @ 2000 MHz (Board B),30 typ dBm
+PSAT_BoardB_2500MHz,飽和出力電力 @ 2500 MHz (Board B),30 typ dBm
+PSAT_BoardB_3000MHz,飽和出力電力 @ 3000 MHz (Board B),30.5 typ dBm
+PAE_BoardB_2000MHz,電力付加効率 @ 2000 MHz (Board B),37 typ %
+PAE_BoardB_2500MHz,電力付加効率 @ 2500 MHz (Board B),40.5 typ %
+PAE_BoardB_3000MHz,電力付加効率 @ 3000 MHz (Board B),37 typ %
+OIP3_BoardB_2000MHz,出力IP3 @ 2000 MHz (Board B),40 typ dBm
+OIP3_BoardB_2500MHz,出力IP3 @ 2500 MHz (Board B),42 typ dBm
+OIP3_BoardB_3000MHz,出力IP3 @ 3000 MHz (Board B),40 typ dBm
+RF_Input_Power_Max,最大RF入力電力,20 dBm
+Gate_Voltage_Max,最大ゲート電圧範囲,-4 V to 0 V
+Drain_Voltage_VD1_Max,最大ドレイン電圧 VD1,10 V
+Drain_Voltage_VD2_Max,最大ドレイン電圧 VD2,10 V
+Junction_Temperature_Max,最大ジャンクション温度,+150 °C
+Operating_Temperature,動作温度範囲,-40 to +85 °C
+Storage_Temperature,保存温度範囲,-55 to +150 °C
+Thermal_Resistance_JC,熱抵抗 ΘJC (ジャンクション-ケース間),29 typ °C/W
+MTTF,平均故障時間,> 1 × 10^6 hours (at TJ ≤ +150 °C)
+Gain_Control_Range,利得制御範囲 (VG: -0.4 V to -1.4 V),~40 dB (see performance curves)
+Current_at_Max_Power,最大出力電力時の電流消費,< 300 mA

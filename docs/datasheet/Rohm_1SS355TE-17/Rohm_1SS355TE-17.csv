@@ -1,0 +1,21 @@
+param_id,description,value
+Part_Number,型名,1SS355
+Product_Type,製品種別,Switching Diode
+Package,パッケージ,UMD2 (SC-76 / SOD-323)
+Package_Dimensions,パッケージ寸法,2.5 ± 0.2 x 1.25 ± 0.1 x 0.7 mm
+Construction,構造,Silicon epitaxial planar
+Application,用途,High speed switching
+VRM,ピーク逆電圧,90 V
+VR,DC逆電圧,80 V
+IFM,ピーク順電流,225 mA
+IO,平均整流電流,100 mA
+Isurge,サージ電流 (1s),500 mA
+Tj_Max,最大接合温度,125 °C
+Tstg,保存温度範囲,-55 to +125 °C
+VF,順方向電圧 (IF=100mA),1.2 V max
+IR,逆電流 (VR=80V),0.1 µA max
+CT,端子間容量 (VR=0.5V f=1MHz),3.0 pF max
+trr,逆回復時間 (VR=6V IF=10mA RL=100Ω),4 ns max
+trr_typ,逆回復時間 (typ),1.2 ns typ
+Mounting_Type,実装タイプ,Surface Mount
+Diode_Type,ダイオードタイプ,Switching

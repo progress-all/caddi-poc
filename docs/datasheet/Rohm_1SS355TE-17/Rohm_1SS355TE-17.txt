@@ -1,0 +1,218 @@
+# PDF Text Extraction
+# Source: Rohm_1SS355TE-17.pdf
+# Pages: 2
+
+
+============================================================
+PAGE 1
+============================================================
+
+1SS355
+Diodes
+Switching diode
+1SS355
+zApplications
+High speed switching
+zFeatures
+1) Small surface mounting type.(UMD2)
+2) High Speed.(trr=1.2ns Typ.)
+3) High reliability with high surge current handling
+  capability.
+zConstruction
+Silicon epitaxial planar
+zExternal dimensions (Units : mm)
+2.5±0.2
+1.7±0.1
+1.25±0.1
+CATHODE MARK
+−0.1
++0.2
+0.7
+ROHM : UMD2
+EIAJ : SC-76
+JEDEC : SOD-323
+0.3±0.05
+A
++0.1
+0.1−0.05
+zAbsolute maximum ratings (Ta=25°C)
+Parameter
+Symbol
+Limits
+Unit
+VRM
+90
+V
+VR
+80
+V
+IFM
+225
+mA
+IO
+100
+mA
+500
+mA
+125
+°C
+Tstg
+−55~+125
+°C
+Isurge
+Tj
+Peak reverse voltage
+DC reverse voltage
+Peak forward current
+Surge current (1s)
+Junction temperature
+Mean rectifying current
+Storage temperature
+zElectrical characteristics (Ta=25°C)
+Parameter
+Symbol
+Min.
+Typ.
+Max.
+Unit
+Conditons
+VF
+−
+−
+1.2
+V
+IF=100mA
+IR
+−
+−
+0.1
+µA
+VR=80V
+−
+−
+3.0
+pF
+VR=0.5V,  f=1MHz
+trr
+−
+−
+4
+ns
+VR=6V, IF=10mA, RL=100Ω
+CT
+Forward voltage
+Reverse current
+Capacitance between terminals
+Reverse recovery time
+
+
+============================================================
+PAGE 2
+============================================================
+
+1SS355
+Diodes
+zElectrical characteristic curves (Ta=25°C)
+Ta=125°C
+75°C
+25°C
+−25°C
+Fig.1  Forward characteristics
+FORWARD  VOLTAGE : VF (V)
+10µ0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+100µ
+1m
+10m
+100m
+1
+FORWARD  CURRENT : IF (A)
+ 
+0
+20
+40
+60
+80
+100
+120
+1n
+10n
+100n
+1µ
+10µ
+0.1m
+1m
+Ta=125°C
+Ta=75°C
+Ta=25°C
+Fig.2  Reverse characteristics
+REVERSE  VOLTAGE : VR (V)
+REVERSE  CURRENT : IR (A)
+ 
+Fig.3  Capacitance between
+          terminals characteristics
+REVERSE  VOLTAGE : VR (V)
+CAPACITANCE  BETWEEN  TERMINALS : CT (pF)
+0
+2
+4
+6
+8
+10
+12
+14
+0.1
+0.2
+0.5
+1
+2
+5
+10
+VR=6V
+Irr=1/10IR
+Fig.4  Reverse  recovery time
+          characteristics
+FORWARD  CURRENT : IF (mA)
+REVERSE  RECOVERY  TIME : trr (ns)
+0
+10
+20
+30
+0
+1
+2
+3
+     
+Fig.5  Surge current characteristics
+PULSE  WIDTH : TW (ms)
+SURGE  CURRENT : Isurge (A)
+0.1
+1
+10
+100
+1000
+10000
+1
+5
+10
+2
+20
+50
+PULSE
+Single pulse
+100
+Fig.6  Reverse recovery time (trr) measurement circuit
+SAMPLING
+OSCILLOSCOPE
+PULSE GENERATOR
+OUTPUT 50Ω
+5kΩ
+50Ω
+0.01µF
+D.U.T.

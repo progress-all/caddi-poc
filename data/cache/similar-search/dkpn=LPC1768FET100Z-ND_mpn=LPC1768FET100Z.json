@@ -1,0 +1,349 @@
+{
+  "generatedAt": "2026-02-09T08:22:05.863Z",
+  "key": "dkpn=LPC1768FET100Z-ND_mpn=LPC1768FET100Z",
+  "data": {
+    "targetMpn": "LPC1768FET100Z",
+    "targetProduct": {
+      "digiKeyProductNumber": "LPC1768FET100Z-ND",
+      "manufacturerProductNumber": "LPC1768FET100Z",
+      "manufacturerName": "NXP USA Inc.",
+      "description": "IC MCU 32BIT 512KB FLSH 100TFBGA",
+      "quantityAvailable": 0,
+      "productUrl": "https://www.digikey.com/en/products/detail/nxp-usa-inc/LPC1768FET100Z/7929175",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/568%7ESOT926-1%7EET%7E100.jpg",
+      "unitPrice": "6.78835",
+      "sources": [],
+      "detailedDescription": "ARM® Cortex®-M3 LPC17xx Microcontroller IC 32-Bit 100MHz 512KB (512K x 8) FLASH 100-TFBGA (9x9)",
+      "datasheetUrl": "http://www.nxp.com/docs/en/data-sheet/LPC1769_68_67_66_65_64_63.pdf",
+      "partStatus": "Obsolete",
+      "backOrderNotAllowed": false,
+      "normallyStocking": false,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Integrated Circuits (ICs)",
+        "categoryId": 32
+      },
+      "series": "LPC17xx",
+      "manufacturerLeadWeeks": "16",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "OBSOLETE"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "LPC1768FET100Z-ND",
+          "packageType": "Tray",
+          "quantityAvailable": 0,
+          "pricing": [
+            {
+              "breakQuantity": 260,
+              "unitPrice": 6.78835
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "DigiKey Programmable",
+          "value": "Not Verified",
+          "parameterId": 2697
+        },
+        {
+          "name": "Core Processor",
+          "value": "ARM® Cortex®-M3",
+          "parameterId": 506
+        },
+        {
+          "name": "Core Size",
+          "value": "32-Bit",
+          "parameterId": 689
+        },
+        {
+          "name": "Speed",
+          "value": "100MHz",
+          "parameterId": 143
+        },
+        {
+          "name": "Connectivity",
+          "value": "CANbus, Ethernet, I2C, IrDA, Microwire, SPI, SSI, UART/USART, USB OTG",
+          "parameterId": 1113
+        },
+        {
+          "name": "Peripherals",
+          "value": "Brown-out Detect/Reset, DMA, I2S, Motor Control PWM, POR, PWM, WDT",
+          "parameterId": 1114
+        },
+        {
+          "name": "Number of I/O",
+          "value": "70",
+          "parameterId": 2208
+        },
+        {
+          "name": "Program Memory Size",
+          "value": "512KB (512K x 8)",
+          "parameterId": 155
+        },
+        {
+          "name": "Program Memory Type",
+          "value": "FLASH",
+          "parameterId": 290
+        },
+        {
+          "name": "EEPROM Size",
+          "value": "-",
+          "parameterId": 291
+        },
+        {
+          "name": "RAM Size",
+          "value": "64K x 8",
+          "parameterId": 156
+        },
+        {
+          "name": "Voltage - Supply (Vcc/Vdd)",
+          "value": "2.4V ~ 3.6V",
+          "parameterId": 1112
+        },
+        {
+          "name": "Data Converters",
+          "value": "A/D 8x12b; D/A 1x10b",
+          "parameterId": 519
+        },
+        {
+          "name": "Oscillator Type",
+          "value": "Internal",
+          "parameterId": 283
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-40°C ~ 85°C (TA)",
+          "parameterId": 252
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount",
+          "parameterId": 69
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "100-TFBGA (9x9)",
+          "parameterId": 1291
+        },
+        {
+          "name": "Package / Case",
+          "value": "100-TFBGA",
+          "parameterId": 16
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "568-LPC1768FET100YCT-ND",
+        "manufacturerProductNumber": "LPC1768FET100Y",
+        "manufacturerName": "NXP USA Inc.",
+        "description": "IC MCU 32BIT 512KB FLSH 100TFBGA",
+        "quantityAvailable": 230,
+        "productUrl": "https://www.digikey.com/en/products/detail/nxp-usa-inc/LPC1768FET100Y/5980964",
+        "unitPrice": "15.1",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "ARM® Cortex®-M3 LPC17xx Microcontroller IC 32-Bit 100MHz 512KB (512K x 8) FLASH 100-TFBGA (9x9)",
+        "datasheetUrl": "http://www.nxp.com/docs/en/data-sheet/LPC1769_68_67_66_65_64_63.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/568%7ESOT926-1%7EET%7E100.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "LPC17xx",
+        "manufacturerLeadWeeks": "16",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "3A991A2"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "568-LPC1768FET100YTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 9.38146
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "568-LPC1768FET100YCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 230,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 15.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 11.92
+              },
+              {
+                "breakQuantity": 25,
+                "unitPrice": 11.1264
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 10.2541
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 10.06052
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "568-LPC1768FET100YDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 230,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 15.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 11.92
+              },
+              {
+                "breakQuantity": 25,
+                "unitPrice": 11.1264
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 10.2541
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 10.06052
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Core Processor",
+            "value": "ARM® Cortex®-M3",
+            "parameterId": 506
+          },
+          {
+            "name": "Core Size",
+            "value": "32-Bit",
+            "parameterId": 689
+          },
+          {
+            "name": "Speed",
+            "value": "100MHz",
+            "parameterId": 143
+          },
+          {
+            "name": "Connectivity",
+            "value": "CANbus, Ethernet, I2C, IrDA, Microwire, SPI, SSI, UART/USART, USB OTG",
+            "parameterId": 1113
+          },
+          {
+            "name": "Peripherals",
+            "value": "Brown-out Detect/Reset, DMA, I2S, Motor Control PWM, POR, PWM, WDT",
+            "parameterId": 1114
+          },
+          {
+            "name": "Number of I/O",
+            "value": "70",
+            "parameterId": 2208
+          },
+          {
+            "name": "Program Memory Size",
+            "value": "512KB (512K x 8)",
+            "parameterId": 155
+          },
+          {
+            "name": "Program Memory Type",
+            "value": "FLASH",
+            "parameterId": 290
+          },
+          {
+            "name": "EEPROM Size",
+            "value": "-",
+            "parameterId": 291
+          },
+          {
+            "name": "RAM Size",
+            "value": "64K x 8",
+            "parameterId": 156
+          },
+          {
+            "name": "Voltage - Supply (Vcc/Vdd)",
+            "value": "2.4V ~ 3.6V",
+            "parameterId": 1112
+          },
+          {
+            "name": "Data Converters",
+            "value": "A/D 8x12b; D/A 1x10b",
+            "parameterId": 519
+          },
+          {
+            "name": "Oscillator Type",
+            "value": "Internal",
+            "parameterId": 283
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C (TA)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "100-TFBGA (9x9)",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "100-TFBGA",
+            "parameterId": 16
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-09T08:22:05.862Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 1
+      }
+    }
+  }
+}

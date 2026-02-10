@@ -1,0 +1,26 @@
+param_id,description,value
+Part_Number,型名,LM358-N (LM358M/NOPB: SOIC-8)
+Package,パッケージ,SOIC (8)
+Body_Size,外形寸法,4.90 mm × 3.91 mm
+Supply_Voltage_Single,電源電圧（単電源）,3 V to 32 V
+Supply_Voltage_Dual,電源電圧（双電源）,±1.5 V to ±16 V
+Operating_Temperature,動作温度範囲 (LM358),0 to 70 °C
+Storage_Temperature,保存温度範囲,-65 to 150 °C
+Input_Offset_Voltage,入力オフセット電圧 (TA=25°C),2 mV typ / 7 mV max
+Input_Bias_Current,入力バイアス電流 (TA=25°C),45 nA typ / 250 nA max
+Input_Offset_Current,入力オフセット電流 (TA=25°C),5 nA typ / 50 nA max
+Input_CommonMode_Range,入力同相電圧範囲,0 to V+−1.5 V
+Supply_Current,消費電流 (V+=5V, RL=∞),0.5 to 1.2 mA
+Supply_Current_Max,消費電流 (V+=30V, 全温度),1 to 2 mA
+Large_Signal_Voltage_Gain,大信号電圧利得 (RL≥2kΩ, VO=1V to 11V),25 to 100 V/mV
+Unity_Gain_Bandwidth,unity gain 帯域幅,1 MHz
+CMRR,同相除去比,65 to 85 dB
+PSRR,電源除去比,65 to 100 dB
+Output_Current_Source,出力電流 (ソース),20 to 40 mA
+Output_Current_Sink,出力電流 (シンク),10 to 20 mA
+Output_ShortCircuit_Current,短絡電流 (GND側),40 to 60 mA
+Output_Voltage_High,VOH (V+=30V, RL=2kΩ),26 V min
+Output_Voltage_Low,VOL (V+=5V, RL=10kΩ),5 to 20 mV
+ESD_HBM,ESD (HBM),±250 V
+Thermal_Resistance_JA,熱抵抗 RθJA (SOIC 8-pin),189 °C/W
+Power_Dissipation,最大消費電力 (SOIC),530 mW

@@ -1,0 +1,386 @@
+# PDF Text Extraction
+# Source: Rohm_1SS355VMTE-17.pdf
+# Pages: 7
+
+
+============================================================
+PAGE 1
+============================================================
+
+1SS355VM
+Switching Diode (High speed switching)
+Data sheet
+　　　　　　　　　　　　　　　　　　　　　　　　　●Outline
+VRM
+90
+V
+　　　
+　
+IFM
+225
+mA
+　
+　
+Io
+100
+mA
+　
+　
+IFSM
+500
+mA
+　
+　
+　
+　　　
+●Features
+●Inner Circuit
+High reliability
+Small mold type
+High Speed switching
+●Application
+●Packaging Specifications
+High speed switching
+Packing
+Embossed Tape
+Reel Size(mm)
+180
+ Taping Width(mm)
+8
+●Structure
+ Basic Ordering Unit(pcs)
+3000
+Epitaxial planar
+Taping Code
+TE-17
+Marking
+A
+●Absolute Maximum Ratings (Ta = 25ºC)
+　　　　　　　　　
+Parameter
+Symbol
+Conditions
+Limits
+Unit
+Reverse voltage
+VR
+-
+80
+V
+Repetitive peak reverse voltage
+VRM
+-
+90
+V
+Average rectified forward current
+Io
+-
+100
+mA
+Forward current
+IFM
+-
+225
+mA
+Peak forward surge current
+IFSM
+t=1s
+500
+mA
+Junction temperature
+Tj
+-
+150
+℃
+Storage temperature
+Tstg
+-
+-55 ～ 150
+℃
+●Characteristics (Ta = 25ºC)
+　　　
+Parameter
+Symbol
+Conditions
+Min.
+Typ. Max.
+Unit
+Forward voltage
+VF
+IF=100mA
+-
+-
+1.2
+V
+Reverse current
+IR
+VR=80V
+-
+-
+100
+nA
+Capacitance between terminals
+Ct
+VR=0.5V f=1.0MHz
+-
+-
+3.0
+pF
+Reverse recovery time
+trr
+VR=6.0V IF=10mA RL=100Ω
+-
+-
+4.0
+ns
+※Caution：static electricity
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+www.rohm.com
+© 2016 ROHM Co., Ltd. All rights reserved.
+1/4
+　
+2016/03/17_Rev.003
+
+
+============================================================
+PAGE 2
+============================================================
+
+1SS355VM
+　　　　　　　　　　　　　　　　　　　　　　Data sheet
+●Characteristic Curves
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+www.rohm.com
+© 2016 ROHM Co., Ltd. All rights reserved.
+2/4
+2016/03/17_Rev.003
+
+
+============================================================
+PAGE 3
+============================================================
+
+1SS355VM
+　　　　　　　　　　　　　　　　　　　　　　Data sheet
+●Characteristic Curves
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+www.rohm.com
+© 2016 ROHM Co., Ltd. All rights reserved.
+3/4
+2016/03/17_Rev.003
+
+
+============================================================
+PAGE 4
+============================================================
+
+1SS355VM
+　　　　　　　　　　　　　　　　　　　　　　Data sheet
+●Dimensions (SOD-323FL SC-90A UMD2)
+●Taping (Unit:mm)
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+www.rohm.com
+© 2016 ROHM Co., Ltd. All rights reserved.
+4/4
+2016/03/17_Rev.003
+
+
+============================================================
+PAGE 5
+============================================================
+
+ 
+ Notice-PGA-E 
+Rev.003
+© 2015 ROHM Co., Ltd. All rights reserved. 
+Notice 
+ 
+Precaution on using ROHM Products 
+1. 
+Our Products are designed and manufactured for application in ordinary electronic equipments (such as AV equipment, 
+OA equipment, telecommunication equipment, home electronic appliances, amusement equipment, etc.).  If you 
+intend to use our Products in devices requiring extremely high reliability (such as medical equipment (Note 1), transport 
+equipment, traffic equipment, aircraft/spacecraft, nuclear power controllers, fuel controllers, car equipment including car 
+accessories, safety devices, etc.) and whose malfunction or failure may cause loss of human life, bodily injury or 
+serious damage to property (“Specific Applications”), please consult with the ROHM sales representative in advance. 
+Unless otherwise agreed in writing by ROHM in advance, ROHM shall not be in any way responsible or liable for any 
+damages, expenses or losses incurred by you or third parties arising from the use of any ROHM’s Products for Specific 
+Applications. 
+(Note1) Medical Equipment Classification of the Specific Applications 
+JAPAN 
+USA 
+EU 
+CHINA 
+CLASSⅢ 
+CLASSⅢ 
+CLASSⅡb 
+CLASSⅢ 
+CLASSⅣ 
+CLASSⅢ 
+ 
+2.  ROHM designs and manufactures its Products subject to strict quality control system. However, semiconductor 
+products can fail or malfunction at a certain rate. Please be sure to implement, at your own responsibilities, adequate 
+safety measures including but not limited to fail-safe design against the physical injury, damage to any property, which 
+a failure or malfunction of our Products may cause. The following are examples of safety measures: 
+[a] Installation of protection circuits or other protective devices to improve system safety 
+[b] Installation of redundant circuits to reduce the impact of single or multiple circuit failure 
+ 
+3. 
+Our Products are designed and manufactured for use under standard conditions and not under any special or 
+extraordinary environments or conditions, as exemplified below. Accordingly, ROHM shall not be in any way 
+responsible or liable for any damages, expenses or losses arising from the use of any ROHM’s Products under any 
+special or extraordinary environments or conditions.  If you intend to use our Products under any special or 
+extraordinary environments or conditions (as exemplified below), your independent verification and confirmation of 
+product performance, reliability, etc, prior to use, must be necessary: 
+[a] Use of our Products in any types of liquid, including water, oils, chemicals, and organic solvents 
+[b] Use of our Products outdoors or in places where the Products are exposed to direct sunlight or dust 
+[c] Use of our Products in places where the Products are exposed to sea wind or corrosive gases, including Cl2, 
+H2S, NH3, SO2, and NO2 
+[d] Use of our Products in places where the Products are exposed to static electricity or electromagnetic waves 
+[e] Use of our Products in proximity to heat-producing components, plastic cords, or other flammable items 
+[f] Sealing or coating our Products with resin or other coating materials 
+[g] Use of our Products without cleaning residue of flux (even if you use no-clean type fluxes, cleaning residue of 
+flux is recommended); or Washing our Products by using water or water-soluble cleaning agents for cleaning 
+residue after soldering 
+[h] Use of the Products in places subject to dew condensation 
+ 
+4. 
+The Products are not subject to radiation-proof design. 
+ 
+5. 
+Please verify and confirm characteristics of the final or mounted products in using the Products. 
+ 
+6.  In particular, if a transient load (a large amount of load applied in a short period of time, such as pulse. is applied, 
+confirmation of performance characteristics after on-board mounting is strongly recommended. Avoid applying power 
+exceeding normal rated power; exceeding the power rating under steady-state loading condition may negatively affect 
+product performance and reliability. 
+ 
+7.  De-rate Power Dissipation depending on ambient temperature. When used in sealed area, confirm that it is the use in 
+the range that does not exceed the maximum junction temperature. 
+ 
+8.  Confirm that operation temperature is within the specified range described in the product specification. 
+ 
+9.  ROHM shall not be in any way responsible or liable for failure induced under deviant condition from what is defined in 
+this document. 
+ 
+Precaution for Mounting / Circuit board design 
+1. 
+When a highly active halogenous (chlorine, bromine, etc.) flux is used, the residue of flux may negatively affect product 
+performance and reliability. 
+2.  In principle, the reflow soldering method must be used on a surface-mount products, the flow soldering method must 
+be used on a through hole mount products. If the flow soldering method is preferred on a surface-mount products, 
+please consult with the ROHM representative in advance. 
+For details, please refer to ROHM Mounting specification 
+
+
+============================================================
+PAGE 6
+============================================================
+
+ 
+ Notice-PGA-E 
+Rev.003
+© 2015 ROHM Co., Ltd. All rights reserved. 
+Precautions Regarding Application Examples and External Circuits 
+1. 
+If change is made to the constant of an external circuit, please allow a sufficient margin considering variations of the 
+characteristics of the Products and external components, including transient characteristics, as well as static 
+characteristics. 
+ 
+2. 
+You agree that application notes, reference designs, and associated data and information contained in this document 
+are presented only as guidance for Products use.  Therefore, in case you use such information, you are solely 
+responsible for it and you must exercise your own independent verification and judgment in the use of such information 
+contained in this document.  ROHM shall not be in any way responsible or liable for any damages, expenses or losses 
+incurred by you or third parties arising from the use of such information. 
+ 
+Precaution for Electrostatic 
+This Product is electrostatic sensitive product, which may be damaged due to electrostatic discharge. Please take proper 
+caution in your manufacturing process and storage so that voltage exceeding the Products maximum rating will not be 
+applied to Products. Please take special care under dry condition (e.g. Grounding of human body / equipment / solder iron, 
+isolation from charged objects, setting of Ionizer, friction prevention and temperature / humidity control). 
+ 
+Precaution for Storage / Transportation 
+1. 
+Product performance and soldered connections may deteriorate if the Products are stored in the places where: 
+[a] the Products are exposed to sea winds or corrosive gases, including Cl2, H2S, NH3, SO2, and NO2 
+[b] the temperature or humidity exceeds those recommended by ROHM 
+[c] the Products are exposed to direct sunshine or condensation 
+[d] the Products are exposed to high Electrostatic 
+ 
+2. 
+Even under ROHM recommended storage condition, solderability of products out of recommended storage time period 
+may be degraded. It is strongly recommended to confirm solderability before using Products of which storage time is 
+exceeding the recommended storage time period. 
+ 
+3.  Store / transport cartons in the correct direction, which is indicated on a carton with a symbol. Otherwise bent leads 
+may occur due to excessive stress applied when dropping of a carton. 
+ 
+4.  Use Products within the specified time after opening a humidity barrier bag. Baking is required before using Products of 
+which storage time is exceeding the recommended storage time period. 
+ 
+Precaution for Product Label 
+A two-dimensional barcode printed on ROHM Products label is for ROHM’s internal use only. 
+ 
+Precaution for Disposition 
+When disposing Products please dispose them properly using an authorized industry waste company. 
+ 
+Precaution for Foreign Exchange and Foreign Trade act 
+Since concerned goods might be fallen under listed items of export control prescribed by Foreign exchange and Foreign 
+trade act, please consult with ROHM in case of export. 
+ 
+Precaution Regarding Intellectual Property Rights 
+1. 
+All information and data including but not limited to application example contained in this document is for reference 
+only. ROHM does not warrant that foregoing information or data will not infringe any intellectual property rights or any 
+other rights of any third party regarding such information or data. 
+2. 
+ROHM shall not have any obligations where the claims, actions or demands arising from the combination of the 
+Products with other articles such as components, circuits, systems or external equipment (including software). 
+3. 
+No license, expressly or implied, is granted hereby under any intellectual property rights or other rights of ROHM or any 
+third parties with respect to the Products or the information contained in this document. Provided, however, that ROHM 
+will not assert its intellectual property rights or other rights against you or your customers to the extent necessary to 
+manufacture or sell products containing the Products, subject to the terms and conditions herein. 
+Other Precaution 
+1. 
+This document may not be reprinted or reproduced, in whole or in part, without prior written consent of ROHM.  
+2. 
+The Products may not be disassembled, converted, modified, reproduced or otherwise changed without prior written 
+consent of ROHM. 
+3. 
+In no event shall you use in any way whatsoever the Products and the related technical information contained in the 
+Products or this document for any military purposes, including but not limited to, the development of mass-destruction 
+weapons. 
+4. 
+The proper names of companies or products described in this document are trademarks or registered trademarks of 
+ROHM, its affiliated companies or third parties. 
+ 
+
+
+============================================================
+PAGE 7
+============================================================
+
+Datasheet
+Datasheet
+ 
+  Notice – WE 
+Rev.001
+© 2015 ROHM Co., Ltd. All rights reserved. 
+General Precaution 
+1. Before you use our Products, you are requested to carefully read this document and fully understand its contents. 
+ROHM shall not be in any way responsible or liable for failure, malfunction or accident arising from the use of any 
+ROHM’s Products against warning, caution or note contained in this document.  
+  
+2. All information contained in this document is current as of the issuing date and subject to change without any prior 
+notice. Before purchasing or using ROHM’s Products, please confirm the latest information with a ROHM sales 
+representative. 
+ 
+3. 
+The information contained in this document is provided on an “as is” basis and ROHM does not warrant that all 
+information contained in this  document is accurate and/or error-free. ROHM shall not be in any way responsible or 
+liable for any damages, expenses or losses incurred by you or third parties resulting from inaccuracy or errors of or  
+concerning such information. 
+ 
+ 

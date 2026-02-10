@@ -1,0 +1,104 @@
+# TI_LM358M 用パラメータスキーマ（本PDF専用）
+# parse-datasheet Step 3 で使用。generic-schema.template.yaml に準拠。
+
+schema_version: "1.0"
+schema_id: "TI_LM358M"
+inferred_category: "operational_amplifier"
+
+parameters:
+  - id: "Product_Title"
+    label: "製品名"
+    description: "データシート表題・型名"
+    unit: ""
+    extraction_hint: "Page 1 冒頭の製品名。LMx58-N Low-Power, Dual-Operational Amplifiers 等"
+    required: false
+  - id: "Package_Options"
+    label: "パッケージ"
+    description: "利用可能なパッケージ一覧"
+    unit: ""
+    extraction_hint: "Page 1 Device Information 表の PACKAGE 列。LM358-N の行"
+    required: false
+  - id: "Rated_SupplyVoltage_Min"
+    label: "定格電源電圧 最小"
+    description: "推奨動作電源電圧（最小）"
+    unit: "V"
+    extraction_hint: "6.3 Recommended Operating Conditions の Supply Voltage (V+ - V-): LM158, LM258, LM358 行の MIN"
+    required: false
+  - id: "Rated_SupplyVoltage_Max"
+    label: "定格電源電圧 最大"
+    description: "推奨動作電源電圧（最大）"
+    unit: "V"
+    extraction_hint: "6.3 Recommended Operating Conditions の Supply Voltage: LM358 の MAX (32 (±16))"
+    required: false
+  - id: "OperatingTemp_Min"
+    label: "動作温度 最小"
+    description: "動作周囲温度範囲（最小）"
+    unit: "°C"
+    extraction_hint: "6.3 Recommended Operating Conditions の Operating Temperature: LM358 の MIN"
+    required: false
+  - id: "OperatingTemp_Max"
+    label: "動作温度 最大"
+    description: "動作周囲温度範囲（最大）"
+    unit: "°C"
+    extraction_hint: "6.3 Recommended Operating Conditions の Operating Temperature: LM358 の MAX"
+    required: false
+  - id: "InputOffsetVoltage_Typ"
+    label: "入力オフセット電圧 典型"
+    description: "Input Offset Voltage (TA=25°C) 典型値"
+    unit: "mV"
+    extraction_hint: "6.6 Electrical Characteristics: LM358, LM2904 の Input Offset Voltage 行、LM358 列の TYP"
+    required: false
+  - id: "InputOffsetVoltage_Max"
+    label: "入力オフセット電圧 最大"
+    description: "Input Offset Voltage (TA=25°C) 最大値"
+    unit: "mV"
+    extraction_hint: "6.6 Electrical Characteristics: LM358 の Input Offset Voltage の MAX"
+    required: false
+  - id: "InputBiasCurrent_Max"
+    label: "入力バイアス電流 最大"
+    description: "Input Bias Current (TA=25°C) 最大値"
+    unit: "nA"
+    extraction_hint: "6.6 Electrical Characteristics: LM358 の Input Bias Current の MAX"
+    required: false
+  - id: "InputOffsetCurrent_Max"
+    label: "入力オフセット電流 最大"
+    description: "Input Offset Current (TA=25°C) 最大値"
+    unit: "nA"
+    extraction_hint: "6.6 Electrical Characteristics: LM358 の Input Offset Current の MAX"
+    required: false
+  - id: "SupplyCurrent_Typ"
+    label: "電源電流 典型"
+    description: "Supply Current (V+=5V, RL=∞) 典型値"
+    unit: "mA"
+    extraction_hint: "6.6 Supply Current, V+ = 5 V の行で LM358 の TYP"
+    required: false
+  - id: "LargeSignalVoltageGain_Min"
+    label: "大信号電圧利得 最小"
+    description: "Large Signal Voltage Gain (V+=15V, RL≥2kΩ) 最小"
+    unit: "V/mV"
+    extraction_hint: "6.6 Large Signal Voltage Gain の LM358 MIN"
+    required: false
+  - id: "CMRR_Min"
+    label: "同相除去比 最小"
+    description: "Common-Mode Rejection Ratio 最小"
+    unit: "dB"
+    extraction_hint: "6.6 Common-Mode Rejection Ratio の LM358 MIN"
+    required: false
+  - id: "PSRR_Min"
+    label: "電源除去比 最小"
+    description: "Power Supply Rejection Ratio 最小"
+    unit: "dB"
+    extraction_hint: "6.6 Power Supply Rejection Ratio の LM358 MIN"
+    required: false
+  - id: "StorageTemp_Min"
+    label: "保存温度 最小"
+    description: "Storage temperature 最小"
+    unit: "°C"
+    extraction_hint: "6.1 Absolute Maximum Ratings の Temperature / Storage temperature の MIN"
+    required: false
+  - id: "StorageTemp_Max"
+    label: "保存温度 最大"
+    description: "Storage temperature 最大"
+    unit: "°C"
+    extraction_hint: "6.1 Absolute Maximum Ratings の Storage temperature, Tstg の MAX"
+    required: false
