@@ -1,0 +1,163 @@
+{
+  "datasheet_id": "Infineon_IRLZ44NSTRR",
+  "version": "1.0",
+  "source": "Infineon_IRLZ44NSTRR.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "IRLZ44N / IRLZ44NSTRR (D2PAK Tape & Reel)"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "N-Channel Logic Level Power MOSFET (HEXFET)"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "D2PAK (TO-263)"
+    },
+    "VDSS": {
+      "description": "ドレイン-ソース間耐圧",
+      "value": "55 V"
+    },
+    "VGS_Max": {
+      "description": "ゲート-ソース間最大電圧",
+      "value": "±16 V"
+    },
+    "ID_TC25": {
+      "description": "連続ドレイン電流 (TC=25°C, VGS=10V)",
+      "value": "47 A"
+    },
+    "ID_TC100": {
+      "description": "連続ドレイン電流 (TC=100°C, VGS=10V)",
+      "value": "33 A"
+    },
+    "IDM": {
+      "description": "パルスドレイン電流",
+      "value": "160 A"
+    },
+    "PD_TA25": {
+      "description": "最大消費電力 (TA=25°C)",
+      "value": "3.8 W"
+    },
+    "PD_TC25": {
+      "description": "最大消費電力 (TC=25°C)",
+      "value": "110 W"
+    },
+    "Linear_Derating_Factor": {
+      "description": "リニアディレーティングファクタ",
+      "value": "0.71 W/°C"
+    },
+    "TJ_TSTG_Range": {
+      "description": "接合温度・保存温度範囲",
+      "value": "-55 to 175 °C"
+    },
+    "Thermal_Resistance_JC": {
+      "description": "熱抵抗 θJC (ジャンクション-ケース間)",
+      "value": "1.4 °C/W"
+    },
+    "Thermal_Resistance_JA": {
+      "description": "熱抵抗 θJA (ジャンクション-周囲間)",
+      "value": "40 °C/W"
+    },
+    "BVDSS": {
+      "description": "ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)",
+      "value": "55 V min"
+    },
+    "BVDSS_TempCoeff": {
+      "description": "ドレイン-ソース間降伏電圧温度係数",
+      "value": "0.070 V/°C"
+    },
+    "RDS_on_VGS10V": {
+      "description": "オン抵抗 (VGS=10V, ID=25A)",
+      "value": "0.022 Ω max"
+    },
+    "RDS_on_VGS5V": {
+      "description": "オン抵抗 (VGS=5V, ID=25A)",
+      "value": "0.025 Ω"
+    },
+    "RDS_on_VGS4V": {
+      "description": "オン抵抗 (VGS=4V, ID=21A)",
+      "value": "0.035 Ω"
+    },
+    "VGS_th": {
+      "description": "ゲートしきい値電圧 (VDS=VGS, ID=250µA)",
+      "value": "1.0 V min / 2.0 V max"
+    },
+    "gfs": {
+      "description": "順方向相互コンダクタンス (VDS=25V, ID=25A)",
+      "value": "21 S min"
+    },
+    "IDSS_25C": {
+      "description": "ドレイン-ソース間漏れ電流 (VDS=55V, VGS=0V, TJ=25°C)",
+      "value": "25 µA max"
+    },
+    "IDSS_150C": {
+      "description": "ドレイン-ソース間漏れ電流 (VDS=44V, VGS=0V, TJ=150°C)",
+      "value": "250 µA max"
+    },
+    "IGSS": {
+      "description": "ゲート-ソース間漏れ電流 (VGS=±16V)",
+      "value": "±100 nA"
+    },
+    "Ciss": {
+      "description": "入力容量 (VGS=0V, VDS=25V, f=1MHz)",
+      "value": "1700 pF"
+    },
+    "Coss": {
+      "description": "出力容量 (VGS=0V, VDS=25V, f=1MHz)",
+      "value": "400 pF"
+    },
+    "Crss": {
+      "description": "帰還容量 (VGS=0V, VDS=25V, f=1MHz)",
+      "value": "150 pF"
+    },
+    "QG_Total": {
+      "description": "総ゲート電荷量 (VDS=44V, ID=25A)",
+      "value": "48 nC"
+    },
+    "td_on": {
+      "description": "ターンオン遅延時間 (VDD=28V, ID=25A, RG=4.7Ω)",
+      "value": "11 ns"
+    },
+    "tr": {
+      "description": "立ち上がり時間",
+      "value": "84 ns"
+    },
+    "td_off": {
+      "description": "ターンオフ遅延時間",
+      "value": "26 ns"
+    },
+    "tf": {
+      "description": "立ち下がり時間",
+      "value": "15 ns"
+    },
+    "VSD": {
+      "description": "ボディダイオード順方向電圧 (IS=25A, VGS=0V)",
+      "value": "1.3 V typ"
+    },
+    "trr": {
+      "description": "逆回復時間 (IS=25A)",
+      "value": "80 ns typ / 120 ns max"
+    },
+    "Qrr": {
+      "description": "逆回復電荷量 (IS=25A)",
+      "value": "210 nC typ / 320 nC max"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Surface Mount"
+    },
+    "FET_Type": {
+      "description": "FETタイプ",
+      "value": "N-Channel"
+    },
+    "Technology": {
+      "description": "技術",
+      "value": "MOSFET (Metal Oxide)"
+    },
+    "Series": {
+      "description": "シリーズ",
+      "value": "HEXFET"
+    }
+  }
+}

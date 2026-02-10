@@ -109,11 +109,14 @@ export async function fetchDatasheetParameters(
  * @returns candidateIdをキーとしたSimilarityResultのレコード
  */
 export async function fetchSimilarityResults(
-  targetId: string
+  targetId: string,
+  manufacturer?: string
 ): Promise<Record<string, SimilarityResult>> {
   try {
+    const params = new URLSearchParams({ targetId });
+    if (manufacturer) params.set("manufacturer", manufacturer);
     const response = await fetch(
-      `/api/similarity-results?targetId=${encodeURIComponent(targetId)}`
+      `/api/similarity-results?${params.toString()}`
     );
 
     if (!response.ok) {

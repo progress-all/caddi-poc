@@ -1,0 +1,1765 @@
+{
+  "generatedAt": "2026-02-06T04:40:36.236Z",
+  "key": "dkpn=497-11370-1-ND_mpn=1N5822",
+  "data": {
+    "targetMpn": "1N5822",
+    "targetProduct": {
+      "digiKeyProductNumber": "497-11370-1-ND",
+      "manufacturerProductNumber": "1N5822",
+      "manufacturerName": "STMicroelectronics",
+      "description": "DIODE SCHOTTKY 40V 3A DO201AD",
+      "quantityAvailable": 19943,
+      "productUrl": "https://www.digikey.com/en/products/detail/stmicroelectronics/1N5822/1037332",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/392/DO-201AD.jpg",
+      "unitPrice": "0.2828",
+      "sources": [],
+      "detailedDescription": "Diode 40 V 3A Through Hole DO-201AD",
+      "datasheetUrl": "https://www.st.com/content/ccc/resource/technical/document/datasheet/d8/3f/72/85/bc/90/4e/f7/CD00001626.pdf/files/CD00001626.pdf/jcr:content/translations/en.CD00001626.pdf",
+      "partStatus": "Last Time Buy",
+      "backOrderNotAllowed": false,
+      "normallyStocking": true,
+      "discontinued": false,
+      "endOfLife": true,
+      "ncnr": false,
+      "category": {
+        "name": "Discrete Semiconductor Products",
+        "categoryId": 19
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "15",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "497-11370-1-ND",
+          "packageType": "Cut Tape (CT)",
+          "quantityAvailable": 1343,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.2828
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.205
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "497-11370-3-ND",
+          "packageType": "Tape & Box (TB)",
+          "quantityAvailable": 18600,
+          "pricing": [
+            {
+              "breakQuantity": 600,
+              "unitPrice": 0.13231
+            },
+            {
+              "breakQuantity": 1200,
+              "unitPrice": 0.09025
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Technology",
+          "value": "Schottky",
+          "parameterId": 570
+        },
+        {
+          "name": "Voltage - DC Reverse (Vr) (Max)",
+          "value": "40 V",
+          "parameterId": 2071
+        },
+        {
+          "name": "Current - Average Rectified (Io)",
+          "value": "3A",
+          "parameterId": 914
+        },
+        {
+          "name": "Voltage - Forward (Vf) (Max) @ If",
+          "value": "525 mV @ 3 A",
+          "parameterId": 2261
+        },
+        {
+          "name": "Speed",
+          "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+          "parameterId": 143
+        },
+        {
+          "name": "Current - Reverse Leakage @ Vr",
+          "value": "2 mA @ 40 V",
+          "parameterId": 2269
+        },
+        {
+          "name": "Capacitance @ Vr, F",
+          "value": "-",
+          "parameterId": 718
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Through Hole",
+          "parameterId": 69
+        },
+        {
+          "name": "Package / Case",
+          "value": "DO-201AD, Axial",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "DO-201AD",
+          "parameterId": 1291
+        },
+        {
+          "name": "Operating Temperature - Junction",
+          "value": "150°C (Max)",
+          "parameterId": 1686
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "497-14268-1-ND",
+        "manufacturerProductNumber": "STPS3L45AF",
+        "manufacturerName": "STMicroelectronics",
+        "description": "DIODE SCHOTTKY 45V 3A SMAFLAT",
+        "quantityAvailable": 38727,
+        "productUrl": "https://www.digikey.com/en/products/detail/stmicroelectronics/STPS3L45AF/4515900",
+        "unitPrice": "0.4",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "MFR Recommended",
+        "detailedDescription": "Diode 45 V 3A Surface Mount SMAflat",
+        "datasheetUrl": "https://www.st.com/content/ccc/resource/technical/document/datasheet/a0/90/ab/62/a0/d0/4f/02/DM00089408.pdf/files/DM00089408.pdf/jcr:content/translations/en.DM00089408.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/707/STPS3L45AF.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "15",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "497-14268-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 30000,
+            "pricing": [
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.08282
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.079
+              },
+              {
+                "breakQuantity": 30000,
+                "unitPrice": 0.07863
+              },
+              {
+                "breakQuantity": 50000,
+                "unitPrice": 0.07641
+              },
+              {
+                "breakQuantity": 70000,
+                "unitPrice": 0.076
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "497-14268-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 38727,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.4
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.1397
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.12304
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.11209
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.11043
+              },
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.10311
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "497-14268-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 38727,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.4
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.1397
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.12304
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.11209
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.11043
+              },
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.10311
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "45 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "570 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "300 µA @ 45 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "-",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-221AC, SMA Flat Leads",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "SMAflat",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "150°C (Max)",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1N5822MS-ND",
+        "manufacturerProductNumber": "1N5822",
+        "manufacturerName": "Microchip Technology",
+        "description": "DIODE SCHOTTKY 40V 3A B AXIAL",
+        "quantityAvailable": 81,
+        "productUrl": "https://www.digikey.com/en/products/detail/microchip-technology/1N5822/4899008",
+        "unitPrice": "14.04",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole B, Axial",
+        "datasheetUrl": "https://ww1.microchip.com/downloads/aemDocuments/documents/HRDS/ProductDocuments/DataSheets/1N5820-1N5822%2C1N6864.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6285/150%7EB%28AXIAL%29%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "20",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "RoHS non-compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1N5822MS-ND",
+            "packageType": "Bulk",
+            "quantityAvailable": 81,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 14.04
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 13.04
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "500 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "100 µA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "-",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "B, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "B, Axial",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-65°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "353-1N5822-AP-ND",
+        "manufacturerProductNumber": "1N5822-AP",
+        "manufacturerName": "MCC (Micro Commercial Components)",
+        "description": "DIODE SCHOTTKY 40V 3A DO201AD",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/mcc-micro-commercial-components/1N5822-AP/17950455",
+        "unitPrice": "0.09841",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole DO-201AD",
+        "datasheetUrl": "https://www.mccsemi.com/pdf/Products/1N5820-1N5822(DO-201AD).pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6795/MFG_353%7EDO201AD%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "16",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "Unknown",
+          "reach": "REACH Unaffected",
+          "moisture": null,
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "353-1N5822-AP-ND",
+            "packageType": "Bulk",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.09841
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "525 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "500 µA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "200pF @ 4V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AD, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "DO-201AD",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-55°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1N5822-E3/73GICT-ND",
+        "manufacturerProductNumber": "1N5822-E3/73",
+        "manufacturerName": "Vishay General Semiconductor - Diodes Division",
+        "description": "DIODE SCHOTTKY 40V 3A DO201AD",
+        "quantityAvailable": 4369,
+        "productUrl": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5822-E3-73/2139982",
+        "unitPrice": "0.75",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole DO-201AD",
+        "datasheetUrl": "https://www.vishay.com/docs/88526/1n5820.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/636/VS-MBR360.JPG",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "7",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1N5822-E3/73GICT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 369,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.75
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.455
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.4073
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.3139
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1N5822-E3/73GITB-ND",
+            "packageType": "Tape & Box (TB)",
+            "quantityAvailable": 4000,
+            "pricing": [
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.23432
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.224
+              },
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.22311
+              },
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.22194
+              },
+              {
+                "breakQuantity": 7000,
+                "unitPrice": 0.22123
+              },
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.20816
+              },
+              {
+                "breakQuantity": 25000,
+                "unitPrice": 0.20062
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "525 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "2 mA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "-",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AD, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "DO-201AD",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-65°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1N5822-TPMSCT-ND",
+        "manufacturerProductNumber": "1N5822-TP",
+        "manufacturerName": "MCC (Micro Commercial Components)",
+        "description": "DIODE SCHOTTKY 40V 3A DO201AD",
+        "quantityAvailable": 5909,
+        "productUrl": "https://www.digikey.com/en/products/detail/mcc-micro-commercial-components/1N5822-TP/1793163",
+        "unitPrice": "0.35",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole DO-201AD",
+        "datasheetUrl": "https://www.mccsemi.com/pdf/Products/1N5820-1N5822(DO-201AD).pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6795/MFG_353%7EDO201AD%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "16",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1N5822-TPMSTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 4800,
+            "pricing": [
+              {
+                "breakQuantity": 1200,
+                "unitPrice": 0.11009
+              },
+              {
+                "breakQuantity": 2400,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 3600,
+                "unitPrice": 0.09974
+              },
+              {
+                "breakQuantity": 6000,
+                "unitPrice": 0.09867
+              },
+              {
+                "breakQuantity": 8400,
+                "unitPrice": 0.09145
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1N5822-TPMSCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 5909,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.35
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.229
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.2056
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.15612
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "525 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "500 µA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "200pF @ 4V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AD, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "DO-201AD",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-55°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1N5822GOS-ND",
+        "manufacturerProductNumber": "1N5822G",
+        "manufacturerName": "onsemi",
+        "description": "DIODE SCHOTTKY 40V 3A AXIAL",
+        "quantityAvailable": 4870,
+        "productUrl": "https://www.digikey.com/en/products/detail/onsemi/1N5822G/1474217",
+        "unitPrice": "0.38",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole Axial",
+        "datasheetUrl": "https://www.onsemi.com/pdf/datasheet/1n5820-d.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6474/488%7E267-05%7EA%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "24",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1N5822GOS-ND",
+            "packageType": "Bulk",
+            "quantityAvailable": 4870,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.38
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.314
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.2623
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.244
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.2351
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.21921
+              },
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.20746
+              },
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.1885
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "525 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "2 mA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "-",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AA, DO-27, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "Axial",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-65°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1N5822RLGOSCT-ND",
+        "manufacturerProductNumber": "1N5822RLG",
+        "manufacturerName": "onsemi",
+        "description": "DIODE SCHOTTKY 40V 3A AXIAL",
+        "quantityAvailable": 6075,
+        "productUrl": "https://www.digikey.com/en/products/detail/onsemi/1N5822RLG/807334",
+        "unitPrice": "0.68",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole Axial",
+        "datasheetUrl": "https://www.onsemi.com/pdf/datasheet/1n5820-d.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6474/488%7E267-05%7EA%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "24",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1N5822RLGOSTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 6000,
+            "pricing": [
+              {
+                "breakQuantity": 1500,
+                "unitPrice": 0.20503
+              },
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.203
+              },
+              {
+                "breakQuantity": 4500,
+                "unitPrice": 0.19904
+              },
+              {
+                "breakQuantity": 7500,
+                "unitPrice": 0.19495
+              },
+              {
+                "breakQuantity": 10500,
+                "unitPrice": 0.17762
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1N5822RLGOSCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 6075,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.68
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.466
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.371
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.28492
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "525 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "2 mA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "-",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AA, DO-27, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "Axial",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-65°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "BAT165E6327HTSA1CT-ND",
+        "manufacturerProductNumber": "BAT165E6327HTSA1",
+        "manufacturerName": "Infineon Technologies",
+        "description": "DIODE SCHOT 40V 750MA PGSOD3233D",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/infineon-technologies/BAT165E6327HTSA1/1280923",
+        "unitPrice": "0.47",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 750mA Surface Mount PG-SOD323-3D",
+        "datasheetUrl": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-bat165-datasheet-en.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6209/448%7EPPG-SOD323-3D%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "26",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "BAT165E6327HTSA1TR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.10407
+              },
+              {
+                "breakQuantity": 6000,
+                "unitPrice": 0.09447
+              },
+              {
+                "breakQuantity": 9000,
+                "unitPrice": 0.08957
+              },
+              {
+                "breakQuantity": 15000,
+                "unitPrice": 0.08407
+              },
+              {
+                "breakQuantity": 21000,
+                "unitPrice": 0.08081
+              },
+              {
+                "breakQuantity": 30000,
+                "unitPrice": 0.07764
+              },
+              {
+                "breakQuantity": 75000,
+                "unitPrice": 0.07069
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "BAT165E6327HTSA1CT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.47
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.291
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.1844
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.13806
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.12311
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "BAT165E6327HTSA1DKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.47
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.291
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.1844
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.13806
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.12311
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "750mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "740 mV @ 750 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "50 µA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "12pF @ 10V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "SC-76, SOD-323",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "PG-SOD323-3D",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "150°C (Max)",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "4878-SB340CT-ND",
+        "manufacturerProductNumber": "SB340",
+        "manufacturerName": "Diotec Semiconductor",
+        "description": "DIODE SCHOTTKY 40V 3A DO201",
+        "quantityAvailable": 588,
+        "productUrl": "https://www.digikey.com/en/products/detail/diotec-semiconductor/SB340/13163952",
+        "unitPrice": "0.43",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole DO-201",
+        "datasheetUrl": "https://diotec.com/request/datasheet/sb320.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7962/MFG_4878%7EDO201%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "4878-SB340CT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 588,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.43
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.34
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.2461
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.1934
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "4878-SB340TR-ND",
+            "packageType": "Tape & Box (TB)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1700,
+                "unitPrice": 0.14847
+              },
+              {
+                "breakQuantity": 3400,
+                "unitPrice": 0.125
+              },
+              {
+                "breakQuantity": 5100,
+                "unitPrice": 0.1227
+              },
+              {
+                "breakQuantity": 8500,
+                "unitPrice": 0.11322
+              },
+              {
+                "breakQuantity": 11900,
+                "unitPrice": 0.11182
+              },
+              {
+                "breakQuantity": 17000,
+                "unitPrice": 0.11146
+              },
+              {
+                "breakQuantity": 42500,
+                "unitPrice": 0.10895
+              },
+              {
+                "breakQuantity": 85000,
+                "unitPrice": 0.10862
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "490 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "500 µA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "-",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AA, DO-27, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "DO-201",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-50°C ~ 150°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1655-SB340TB-ND",
+        "manufacturerProductNumber": "SB340",
+        "manufacturerName": "SMC Diode Solutions",
+        "description": "DIODE SCHOTTKY 40V 3A DO201AD",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/smc-diode-solutions/SB340/5992792",
+        "unitPrice": "0.1269",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 3A Through Hole DO-201AD",
+        "datasheetUrl": "https://www.smc-diodes.com/propdf/SB340%20N0085%20REV.A.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5871/1655%7EDO201AD%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "16",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Affected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1655-SB340TB-ND",
+            "packageType": "Tape & Box (TB)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1250,
+                "unitPrice": 0.1269
+              },
+              {
+                "breakQuantity": 2500,
+                "unitPrice": 0.11428
+              },
+              {
+                "breakQuantity": 3750,
+                "unitPrice": 0.10785
+              },
+              {
+                "breakQuantity": 6250,
+                "unitPrice": 0.10062
+              },
+              {
+                "breakQuantity": 8750,
+                "unitPrice": 0.09633
+              },
+              {
+                "breakQuantity": 12500,
+                "unitPrice": 0.09216
+              },
+              {
+                "breakQuantity": 31250,
+                "unitPrice": 0.08302
+              },
+              {
+                "breakQuantity": 62500,
+                "unitPrice": 0.07736
+              },
+              {
+                "breakQuantity": 125000,
+                "unitPrice": 0.0765
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "3A",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "520 mV @ 3 A",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "1 mA @ 40 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "200pF @ 5V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "DO-201AD, Axial",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "DO-201AD",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-55°C ~ 125°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "ZHCS750CT-ND",
+        "manufacturerProductNumber": "ZHCS750TA",
+        "manufacturerName": "Diodes Incorporated",
+        "description": "DIODE SCHOTTKY 40V 750MA SOT233",
+        "quantityAvailable": 6170,
+        "productUrl": "https://www.digikey.com/en/products/detail/diodes-incorporated/ZHCS750TA/260748",
+        "unitPrice": "0.68",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 40 V 750mA Surface Mount SOT-23-3",
+        "datasheetUrl": "https://www.diodes.com/assets/Datasheets/ZHCS750.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4806/31%7ESOT23-3%7EF%2CN%2CSA%7E3.JPG",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "24",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "ZHCS750TR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 6000,
+            "pricing": [
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.21412
+              },
+              {
+                "breakQuantity": 6000,
+                "unitPrice": 0.20376
+              },
+              {
+                "breakQuantity": 9000,
+                "unitPrice": 0.20147
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "ZHCS750CT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 6170,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.68
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.42
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.3808
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.2927
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.26431
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "ZHCS750DKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 6170,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.68
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.42
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.3808
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.2927
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.26431
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Schottky",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "40 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "750mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "490 mV @ 750 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "12 ns",
+            "parameterId": 552
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "100 µA @ 30 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "25pF @ 25V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "TO-236-3, SC-59, SOT-23-3",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "SOT-23-3",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "125°C (Max)",
+            "parameterId": 1686
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-06T04:40:36.235Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 11
+      }
+    }
+  }
+}

@@ -1,0 +1,3355 @@
+# PDF Text Extraction
+# Source: Broadcom_ATF-511P8-BLK.pdf
+# Pages: 15
+
+
+============================================================
+PAGE 1
+============================================================
+
+ATF-511P8 
+High Linearity Enhancement Mode[1]  Pseudomorphic HEMT 
+in 2x2 mm2 LPCC[3]  Package
+Data Sheet
+Pin Connections and Package Marking
+Note:  
+Package marking provides orientation and identifi cation:
+“1P”  = Device Code
+“x”    = Date code indicates the month of manufacture. 
+Pin 1 (Source)
+Pin 2 (Gate)
+Pin 3
+Pin 4 (Source)
+Pin 8
+Pin 7 (Drain)
+Pin 6
+Pin 5
+1Px
+Top View
+Pin 8
+Source 
+(Thermal/RF Gnd)
+Pin 7 (Drain)
+Pin 6
+Pin 5
+Pin 1 (Source)
+Pin 2 (Gate)
+Pin 3
+Pin 4 (Source)
+Bottom View
+Features
+ Single voltage operation
+ High linearity and P1dB
+ Low noise fi gure
+ Excellent uniformity in product specifi cations
+ Small package size:
+ 2.0 x 2.0 x 0.75 mm
+ Point MTTF > 300 years[2]
+ MSL-1 and lead-free
+ Tape-and-reel packaging option available
+Specifi cations 
+2 GHz; 4.5V, 200 mA (Typ.)
+ 41.7 dBm output IP3
+ 30 dBm output power at 1 dB gain compression
+ 1.4 dB noise fi gure
+ 14.8 dB gain
+ 12.1 dB LFOM[4]
+ 69% PAE
+Applications
+ Front-end LNA Q2 and Q3 driver or pre-driver amplifi er 
+for Cellular/PCS and WCDMA wireless infrastructure
+ Driver amplifi er for WLAN, WLL/RLL and MMDS 
+applications
+ General purpose discrete E-pHEMT for other high 
+linearity applications
+Description
+Avago Technologies’s  ATF-511P8 is a single-voltage high 
+linearity, low noise E-pHEMT housed in an 8-lead JEDEC-
+standard leadless plastic chip carrier (LPCC[3]) package. 
+The device is ideal as a high  linearity, low-noise, medium-
+power amplifi er. Its  operating frequency range is from 50 
+MHz to 6 GHz. 
+The thermally effi  cient package measures only 2 mm 
+x 2 mm x 0.75 mm. Its backside metalization provides 
+excellent thermal dissipation as well as visual evidence 
+of solder refl ow. The device has a Point MTTF of over 300 
+years at a mounting temperature of +85°C. All devices 
+are 100% RF & DC tested.
+Notes:
+1. Enhancement mode technology employs a single positive Vgs, 
+eliminating the need of negative gate voltage associated with 
+conventional depletion mode devices.
+2.  Refer to reliability datasheet for detailed MTTF data.
+3.  Conforms to JEDEC reference outline MO229 for DRP-N.
+4.  Linearity Figure of Merit (LFOM) is essentially OIP3 divided by DC 
+bias power. 
+
+
+============================================================
+PAGE 2
+============================================================
+
+2
+ATF-511P8 Absolute Maximum Ratings[1]  
+  
+ 
+ 
+Absolute
+ Symbol 
+Parameter 
+Units 
+Maximum
+ VDS 
+Drain–Source Voltage[2] 
+V 
+7 
+ VGS  
+Gate –Source Voltage[2] 
+V 
+-5 to 1 
+ VGD 
+Gate Drain Voltage[2] 
+V 
+-5 to 1 
+IDS 
+Drain Current[2] 
+A 
+1 
+IGS 
+Gate Current 
+mA 
+46 
+Pdiss 
+Total Power Dissipation[3] 
+W 
+3 
+Pin max. 
+RF Input Power[4] 
+dBm 
++30 
+TCH 
+Channel Temperature 
+°C 
+150 
+TSTG 
+Storage Temperature 
+°C 
+-65 to 150
+ch_b 
+Thermal Resistance[5] 
+°C/W 
+33
+Notes:
+1. Operation of this device in excess of any one 
+of these parameters may cause permanent 
+damage.
+2. Assumes DC quiescent conditions.
+3. Board (package belly) temperatureTB is 
+25°C. Derate 30 mW/°C for TB > 50°C.
+4. With 10 Ohm series resistor in gate supply 
+and 3:1 VSWR. 
+5. Channel-to-board 
+thermal 
+resistance 
+measured using 150°C Liquid Crystal 
+Measurement method.
+6.  Device can safely handle +30dBm RF Input 
+Power provided IGS limited to 46mA. IGS at 
+P1dB drive level is bias circuit dependent.
+Product Consistency Distribution Charts at 2 GHz, 4.5V, 200 mA[6,7]
+OIP3 (dBm)
+Figure 2.  OIP3 LSL = 38.5, Nominal = 41.7.
+35
+41
+38
+44
+47
+240
+200
+160
+120
+80
+40
+0
+Cpk = 1.66
+Stdev = 0.6
+-3 Std
++3 Std
+P1dB (dBm)
+Figure 3.  P1dB LSL = 28.5, Nominal = 30.
+28
+30
+29
+31
+200
+160
+120
+80
+40
+0
+Cpk = 3.24
+Stdev = 0.15
+-3 Std
++3 Std
+GAIN (dB)
+Figure 4.  Gain LSL = 13.5, 
+Nominal = 14.8, USL = 16.5.
+13
+15
+14
+16
+17
+150
+120
+90
+60
+30
+0
+Cpk = 1.4
+Stdev = 0.31
+-3 Std
++3 Std
+Notes:
+6. Distribution data sample size is 400 samples taken from 4 diff erent 
+wafers and 3 diff erent lots. Future wafers allocated to this product 
+may have nominal values anywhere between the upper and lower 
+limits.
+Figure 1.  Typical I-V Curves (Vgs = 0.1 per step). 
+VDS (V)
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+0
+2
+4
+6
+8
+IDS
+ (mA)
+0.8 V
+0.7 V
+0.5 V
+0.6 V
+PAE (%)
+Figure 5.  PAE LSL = 52, Nominal = 68.9.
+52
+62
+57
+67
+72
+77
+82
+160
+120
+80
+40
+0
+Cpk = 3.03
+Stdev = 1.85
+-3 Std
++3 Std
+7. Measurements are made on production test board, which represents 
+a trade-off  between optimal OIP3, P1dB and VSWR. Circuit losses 
+have been de-embedded from actual measurements. 
+
+
+============================================================
+PAGE 3
+============================================================
+
+3
+ATF-511P8 Electrical Specifi cations
+TA = 25°C, DC bias for RF parameters is Vds = 4.5V and Ids = 200 mA unless otherwise specifi ed.
+Symbol 
+Parameter and Test Condition 
+ 
+ 
+Units 
+Min. 
+Typ. 
+Max.
+Vgs 
+Operational Gate Voltage 
+ Vds = 4.5V, Ids = 200 mA 
+V 
+0.25 
+0.51 
+0.8
+Vth 
+Threshold Voltage 
+ Vds = 4.5V, Ids = 32 mA 
+V 
+— 
+0.28 
+—
+Idss 
+Saturated Drain Current 
+ Vds = 4.5V, Vgs = 0V 
+μA 
+— 
+16.4 
+— 
+Gm 
+Transconductance 
+ Vds = 4.5V, Gm = Idss/Vgs; 
+mmho 
+— 
+2178 
+—
+ 
+ 
+Vgs = Vgs1 – Vgs2
+ 
+ 
+ Vgs1 = 0.55V, Vgs2 = 0.5V 
+Igss 
+Gate Leakage Current 
+ Vds = 0V, Vgs = -4.5V 
+μA 
+-27 
+-2 
+— 
+NF 
+Noise Figure[1] 
+ f = 2 GHz 
+dB 
+ — 
+1.4 
+— 
+ 
+ 
+ f = 900 MHz 
+dB 
+— 
+1.2 
+—
+G 
+Gain[1] 
+ f = 2 GHz 
+dB 
+13.5 
+14.8 
+16.5
+ 
+ 
+ f = 900 MHz 
+dB 
+— 
+17.8 
+—
+OIP3 
+Output 3rd Order Intercept Point[1,2] 
+ f = 2 GHz 
+dBm 
+38.5 
+41.7 
+—
+ 
+ 
+ f = 900 MHz 
+dBm 
+— 
+43 
+—
+P1dB 
+Output 1dB Compressed[1]  
+ f = 2 GHz 
+dBm 
+28.5 
+30 
+— 
+ 
+ 
+ f = 900 MHz 
+dBm 
+— 
+29.6 
+—
+PAE 
+Power Added Effi  ciency 
+ f = 2 GHz 
+% 
+52 
+68.9 
+—
+ 
+ 
+ f = 900 MHz 
+% 
+— 
+68.6 
+—
+ACLR 
+Adjacent Channel Leakage 
+ Off set BW = 5 MHz 
+dBc 
+— 
+-58.9 
+—
+ 
+Power Ratio[1,3] 
+ Off set BW = 10 MHz 
+dBc 
+— 
+-62.7 
+—
+Notes: 
+1. Measurements obtained using production test board described in Figure 6 and PAE tested at P1dB condition.
+2. I ) 2 GHz OIP3 test condition: F1 = 2.0 GHz, F2 = 2.01 GHz and Pin = -5 dBm per tone.
+     II ) 900 MHz OIP3 test condition: F1 = 900 MHz, F2 = 910 MHz and Pin = -5 dBm per tone.
+3. ACLR test spec is based on 3GPP TS 25.141 V5.3.1 (2002-06)
+ 
+- Test Model 1
+ 
+- Active Channels: PCCPCH + SCH + CPICH + PICH + SCCPCH + 64 DPCH (SF=128)
+ 
+- Freq = 2140 MHz
+ 
+- Pin = -5 dBm
+ 
+- Channel Integrate Bandwidth = 3.84 MHz
+4. Use proper bias, board, heatsink and derating designs to ensure maximum channel temperature is not exceeded. See absolute maximum 
+ratings and application note for more details.
+Input
+50 Ohm
+Transmission
+Line and
+Gate Bias T
+(0.3 dB loss)
+Input
+Matching Circuit
+Γ_mag = 0.69
+Γ_ang = -164°
+(1.1 dB loss)
+Output
+Matching Circuit
+Γ_mag = 0.65
+Γ_ang = -163°
+(0.9 dB loss)
+DUT
+50 Ohm
+Transmission
+Line and
+Drain Bias T
+(0.3 dB loss)
+Output
+Figure 6.  Block diagram of the 2 GHz production test board used for NF, Gain, OIP3 , P1dB and PAE and ACLR measurements. This circuit achieves a trade-
+off  between optimal OIP3, P1dB and VSWR. Circuit losses have been de-embedded from actual measurements.
+
+
+============================================================
+PAGE 4
+============================================================
+
+4
+Gamma Load and Source at Optimum OIP3 and P1dB Tuning Conditions
+The device’s optimum OIP3 and P1dB measurements were determined using a load pull system at 4.5V, 200 mA quiesent bias:
+Figure 7.  Simplifi ed schematic of production test board. Primary purpose is to show 15 Ohm series resistor placement in gate 
+supply. Transmission line tapers, tee intersections, bias lines and parasitic values are not shown.
+RF Input
+1.2 pF
+1.2 pF
+2.7 nH
+1.8 nH
+RF Output
+50 Ohm
+.02 λ
+110 Ohm
+.03 λ
+110 Ohm
+.03 λ
+50 Ohm
+.02 λ
+DUT
+15 nH
+15 Ohm
+2.2 μF
+Gate
+DC Supply
+47 nH
+2.2 μF
+Drain
+DC Supply
+Optimum OIP3
+Freq 
+ Gamma Source 
+   Gamma Load 
+OIP3 
+Gain 
+P1dB 
+PAE
+(GHz) 
+Mag 
+Ang  
+Mag 
+Ang 
+(dBm) 
+(dB) 
+(dBm) 
+(%)
+0.9 
+0.776 
+152 
+0.549 
+-178 
+43.3 
+17.94 
+29.63 
+63.8 
+2.0 
+0.872 
+-171 
+0.683 
+-179 
+43.1 
+15.06 
+30.12 
+66.8
+2.4 
+0.893 
+-162 
+0.715 
+-174 
+42.8 
+14.03 
+29.90 
+64.5
+3.9 
+0.765 
+-132 
+0.574 
+-144 
+41.7 
+9.47 
+29.02 
+52
+Optimum P1dB
+Freq 
+ Gamma Source 
+   Gamma Load 
+OIP3 
+Gain 
+P1dB 
+PAE
+(GHz) 
+Mag 
+Ang  
+Mag 
+Ang 
+(dBm) 
+(dB) 
+(dBm) 
+(%)
+0.9 
+0.773 
+153 
+0.784 
+-173 
+38.0 
+19.28 
+31.9 
+54.23 
+2.0 
+0.691 
+147 
+0.841 
+-166 
+36.4 
+10.34 
+31.4 
+38.15
+2.4 
+0.797 
+164 
+0.827 
+-166 
+36.2 
+8.43 
+31.2 
+37.38
+3.9 
+0.602 
+-163 
+0.794 
+-155 
+35.4 
+7.03 
+31 
+32.72
+
+
+============================================================
+PAGE 5
+============================================================
+
+5
+ATF-511P8 Typical Performance Curves (at 25°C unless specifi ed otherwise)
+Tuned for Optimal OIP3 at 4.5V 200 mA
+Note:
+Bias current for the above charts are quiescent conditions. Actual level 
+may increase or decrease depending on amount of RF drive.
+IDS (mA)
+Figure 8.  OIP3 vs. IDS and VDS at 2 GHz.
+OIP3 (dBm)
+50
+50
+45
+40
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 9.  OIP3 vs. IDS and VDS at 900 MHz.
+OIP3 (dBm)
+50
+50
+45
+40
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 10.  P1dB vs. IDS and VDS at 2 GHz.
+P1dB (dBm)
+50
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 11.  P1dB vs. IDS and VDS at 900 MHz.
+P1dB (dBm)
+50
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 12.  Gain vs. IDS and VDS at 2 GHz.
+GAIN (dB)
+50
+17
+16
+15
+14
+13
+12
+11
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 13.  Gain vs. IDS and VDS at 900 MHz.
+GAIN (dB)
+50
+20
+19
+18
+17
+16
+15
+14
+13
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 14.  PAE vs. IDS and VDS at 2 GHz.
+PAE (%)
+50
+80
+70
+60
+50
+40
+30
+20
+10
+0
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 15.  PAE vs. IDS and VDS at 900 MHz.
+PAE (%)
+50
+80
+70
+60
+50
+40
+30
+20
+10
+0
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+FREQUENCY (GHz)
+Figure 16.  OIP3 vs. Temp and Freq.
+OIP3 (dBm)
+0.5
+50
+45
+40
+35
+30
+25
+20
+4
+1
+2
+2.5
+1.5
+3
+3.5
+-40 C
+25 C
+85 C
+
+
+============================================================
+PAGE 6
+============================================================
+
+6
+ATF-511P8 Typical Performance Curves, continued (at 25°C unless specifi ed otherwise)
+Tuned for Optimal OIP3 at 4.5V, 200 mA
+Note:
+Bias current for the above charts are quiescent conditions. Actual level 
+may increase or decrease depending on amount of RF drive.
+FREQUENCY (GHz)
+Figure 17.  P1dB vs. Temp and Freq.
+P1dB (dBm)
+0.5
+35
+30
+25
+20
+15
+10
+4
+1
+2
+2.5
+1.5
+3
+3.5
+FREQUENCY (GHz)
+Figure 18.  Gain vs. Temp and Freq.
+GAIN (dB)
+0.5
+20
+15
+10
+5
+0
+4
+1
+2
+2.5
+1.5
+3
+3.5
+FREQUENCY (GHz)
+Figure 19.  PAE vs. Temp and Freq.
+PAE (%)
+0.5
+80
+70
+60
+50
+40
+30
+20
+10
+0
+4
+1
+2
+2.5
+1.5
+3
+3.5
+-40 C
+25 C
+85 C
+-40 C
+25 C
+85 C
+-40 C
+25 C
+85 C
+IDS (mA)
+Figure 20.  OIP3 vs. IDS and VDS at 2 GHz.
+OIP3 (dBm)
+50
+50
+45
+40
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 21.  OIP3 vs. IDS and VDS at 900 MHz.
+OIP3 (dBm)
+50
+50
+45
+40
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 22.  P1dB vs. IDS and VDS at 2 GHz.
+P1dB (dBm)
+50
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 23.  P1dB vs. IDS and VDS at 900 MHz.
+P1dB (dBm)
+50
+35
+30
+25
+20
+15
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 24.  Gain vs. IDS and VDS at 2 GHz.
+GAIN (dB)
+50
+12
+10
+8
+6
+4
+2
+0
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 25.  Gain vs. IDS and VDS at 900 MHz.
+GAIN (dB)
+50
+22
+20
+18
+16
+14
+12
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+ATF-511P8 Typical Performance Curves (at 25°C unless specifi ed otherwise)
+Tuned for Optimal P1dB at 4.5 V, 200 mA
+
+
+============================================================
+PAGE 7
+============================================================
+
+7
+ATF-511P8 Typical Performance Curves, continued (at 25°C unless specifi ed otherwise)
+Tuned for Optimal P1dB at 4.5V, 200 mA
+Note:
+Bias current for the above charts are quiescent conditions. Actual level 
+may increase or decrease depending on amount of RF drive.
+IDS (mA)
+Figure 26.  PAE vs. IDS and VDS at 2 GHz.
+PAE (%)
+50
+50
+40
+30
+20
+10
+0
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+IDS (mA)
+Figure 27.  PAE vs. IDS and VDS at 900 MHz.
+PAE (%)
+50
+70
+60
+50
+40
+30
+20
+10
+550
+150
+350
+450
+250
+4.5 V
+4 V
+3 V
+FREQUENCY (GHz)
+Figure 28.  OIP3 vs. Temp and Freq.
+OIP3 (dBm)
+0.5
+45
+40
+35
+30
+25
+20
+4
+1
+2
+2.5
+1.5
+3
+3.5
+FREQUENCY (GHz)
+Figure 29.  P1dB vs. Temp and Freq.
+P1dB (dBm)
+0.5
+40
+35
+30
+25
+20
+15
+10
+4
+1
+2
+2.5
+1.5
+3
+3.5
+FREQUENCY (GHz)
+Figure 30.  Gain vs. Temp and Freq.
+GAIN (dB)
+0.5
+20
+15
+10
+5
+0
+4
+1
+2
+2.5
+1.5
+3
+3.5
+FREQUENCY (GHz)
+Figure 31.  PAE vs. Temp and Freq.
+PAE (%)
+0.5
+70
+60
+50
+40
+30
+20
+10
+0
+4
+1
+2
+2.5
+1.5
+3
+3.5
+-40 C
+25 C
+85 C
+-40 C
+25 C
+85 C
+-40 C
+25 C
+85 C
+-40 C
+25 C
+85 C
+
+
+============================================================
+PAGE 8
+============================================================
+
+8
+Notes:  
+1. S parameter is measured on a microstrip 
+line made on 0.025 inch thick alumina 
+carrier.  The input reference plane is at the 
+end of the gate lead.  The output reference 
+plane is at the end of the drain lead.
+Figure 32.  MSG/MAG & |S21|2 (dB) @ 
+4.5V, 300 mA.
+FREQUENCY (GHz)
+40
+30
+20
+10
+0
+-10
+-20
+0
+5
+10
+15
+20
+MSG/MAG & |S21|2 (dB)
+S21
+MAG
+MSG
+ATF-511P8 Typical Scattering Parameters, VDS = 4.5V, IDS = 300 mA
+Freq. 
+ 
+ 
+ S11  
+ 
+  S21 
+ 
+   
+ S12 
+ 
+            S22  
+MSG/MAG
+GHz 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+Mag. 
+Ang. 
+dB
+0.1 
+0.94 
+-134.9 
+31.16 
+36.15 
+111.2 
+-38.53 
+0.01 
+29.7 
+0.73 
+-164.5 
+34.79 
+0.2 
+0.93 
+-157.7 
+25.64 
+19.14 
+99.2 
+-37.87 
+0.01 
+21.8 
+0.76 
+-173.7 
+31.68 
+0.3 
+0.93 
+-166.6 
+22.26 
+12.97 
+94.2 
+-37.61 
+0.01 
+21.1 
+0.78 
+-176.8 
+29.99 
+0.4 
+0.93 
+-171.8 
+19.78 
+9.74 
+90.9 
+-37.09 
+0.01 
+23.4 
+0.78 
+-179.9 
+28.43 
+0.5 
+0.92 
+-173.9 
+18.70 
+8.60 
+88.9 
+-36.15 
+0.01 
+25.4 
+0.75 
+178.9 
+27.31 
+0.6 
+0.93 
+-176.9 
+17.12 
+7.18 
+86.1 
+-35.80 
+0.01 
+27.0 
+0.75 
+176.9 
+26.52 
+0.7 
+0.92 
+-178.8 
+15.78 
+6.15 
+84.3 
+-35.41 
+0.01 
+29.5 
+0.75 
+175.5 
+25.59 
+0.8 
+0.93 
+178.7 
+14.61 
+5.37 
+82.3 
+-35.11 
+0.01 
+32.5 
+0.76 
+174.0 
+24.75 
+0.9 
+0.92 
+177.1 
+13.58 
+4.77 
+80.6 
+-35.00 
+0.01 
+33.1 
+0.75 
+172.8 
+24.24 
+1 
+0.93 
+175.7 
+12.64 
+4.28 
+79.1 
+-34.46 
+0.01 
+35.0 
+0.76 
+171.6 
+23.53 
+1.5 
+0.93 
+168.7 
+8.99 
+2.81 
+71.4 
+-32.70 
+0.02 
+40.0 
+0.76 
+166.0 
+20.88 
+2 
+0.93 
+163.0 
+6.36 
+2.08 
+64.2 
+-31.27 
+0.02 
+42.3 
+0.76 
+160.6 
+17.20 
+2.5 
+0.92 
+157.8 
+4.40 
+1.66 
+57.2 
+-29.90 
+0.03 
+42.5 
+0.76 
+155.5 
+14.71 
+3 
+0.92 
+152.5 
+2.73 
+1.36 
+50.4 
+-28.59 
+0.03 
+41.6 
+0.75 
+149.7 
+12.65 
+4 
+0.92 
+142.8 
+0.03 
+1.00 
+37.6 
+-26.69 
+0.04 
+35.7 
+0.74 
+138.6 
+9.96 
+5 
+0.91 
+133.2 
+-2.17 
+0.77 
+24.2 
+-25.30 
+0.05 
+29.8 
+0.71 
+127.2 
+7.23 
+6 
+0.91 
+124.6 
+-4.21 
+0.61 
+14.1 
+-24.32 
+0.06 
+23.7 
+0.65 
+117.2 
+4.97 
+7 
+0.91 
+115.7 
+-5.80 
+0.51 
+5.6 
+-23.48 
+0.06 
+19.5 
+0.59 
+111.3 
+3.02 
+8 
+0.91 
+106.0 
+-6.82 
+0.45 
+-2.6 
+-22.49 
+0.07 
+14.1 
+0.56 
+108.2 
+1.86 
+9 
+0.91 
+95.5 
+-7.36 
+0.42 
+-10.2 
+-21.39 
+0.08 
+8.5 
+0.58 
+103.7 
+1.19 
+10 
+0.90 
+85.2 
+-7.98 
+0.40 
+-22.2 
+-20.50 
+0.09 
+0.4 
+0.60 
+96.0 
+0.53 
+11 
+0.89 
+74.3 
+-8.69 
+0.38 
+-29.1 
+-19.72 
+0.10 
+-8.4 
+0.63 
+87.2 
+-0.04 
+12 
+0.89 
+63.0 
+-9.25 
+0.35 
+-40.1 
+-19.42 
+0.10 
+-17.1 
+0.65 
+77.6 
+-0.61 
+13 
+0.89 
+54.1 
+-9.80 
+0.32 
+-51.7 
+-19.12 
+0.11 
+-23.9 
+0.67 
+68.2 
+-1.04 
+14 
+0.90 
+46.3 
+-10.25 0.31 
+-55.2 
+-18.65 
+0.11 
+-29.7 
+0.69 
+58.7 
+-1.13 
+15 
+0.90 
+40.6 
+-10.86 0.30 
+-57.3 
+-18.57 
+0.11 
+-35.8 
+0.69 
+50.1 
+-1.88 
+16 
+0.89 
+33.3 
+-11.16 0.32 
+-71.1 
+-18.02 
+0.12 
+-42.3 
+0.71 
+41.8 
+-2.26 
+17 
+0.83 
+25.4 
+-11.81 0.24 
+-75.3 
+-17.65 
+0.13 
+-47.1 
+0.73 
+35.1 
+-3.17 
+18 
+0.86 
+20.0 
+-12.07 0.24 
+-90.5 
+-17.43 
+0.13 
+-53.1 
+0.76 
+27.7 
+-3.76 
+
+
+============================================================
+PAGE 9
+============================================================
+
+9
+Figure 33.  MSG/MAG & |S21|2 (dB) @ 
+4.5V, 200 mA.
+FREQUENCY (GHz)
+40
+30
+20
+10
+0
+-10
+-20
+0
+5
+10
+15
+20
+MSG/MAG & |S21|2 (dB)
+S21
+MAG
+MSG
+ATF-511P8 Typical Scattering Parameters, VDS = 4.5V, IDS = 200 mA
+Freq. 
+ 
+ 
+ S11  
+ 
+  S21 
+ 
+   
+ S12 
+ 
+         S22  
+MSG/MAG
+GHz 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+Mag. 
+Ang. 
+dB
+0.1 
+0.94 
+-132.6 
+31.26 
+36.54 
+112.1 
+-37.40 
+0.01 
+27.2 
+0.70 
+-161.0 
+34.49 
+0.2 
+0.93 
+-156.3 
+25.79 
+19.47 
+99.6 
+-36.68 
+0.01 
+19.2 
+0.74 
+-171.6 
+31.13 
+0.3 
+0.94 
+-165.6 
+22.40 
+13.18 
+94.4 
+-36.47 
+0.01 
+19.9 
+0.76 
+-175.6 
+29.44 
+0.4 
+0.93 
+-170.8 
+19.93 
+9.92 
+91.1 
+-36.17 
+0.01 
+19.9 
+0.76 
+-178.8 
+27.93 
+0.5 
+0.92 
+-173.1 
+18.84 
+8.75 
+89.0 
+-35.11 
+0.01 
+24.6 
+0.73 
+179.9 
+26.87 
+0.6 
+0.92 
+-176.2 
+17.26 
+7.29 
+86.2 
+-34.84 
+0.01 
+23.9 
+0.73 
+177.8 
+26.08 
+0.7 
+0.92 
+-178.2 
+15.92 
+6.25 
+84.3 
+-34.72 
+0.01 
+25.6 
+0.73 
+176.2 
+25.41 
+0.8 
+0.92 
+179.4 
+14.76 
+5.47 
+82.3 
+-34.37 
+0.01 
+27.6 
+0.74 
+174.7 
+24.59 
+0.9 
+0.93 
+177.4 
+13.72 
+4.85 
+80.4 
+-34.02 
+0.02 
+28.6 
+0.74 
+173.4 
+23.85 
+1 
+0.92 
+176.0 
+12.77 
+4.34 
+79.1 
+-33.71 
+0.02 
+30.8 
+0.74 
+172.2 
+23.16 
+1.5 
+0.93 
+168.9 
+9.13 
+2.86 
+70.9 
+-32.20 
+0.02 
+35.0 
+0.74 
+166.5 
+20.59 
+2 
+0.93 
+163.6 
+6.49 
+2.11 
+63.7 
+-30.97 
+0.02 
+38.2 
+0.74 
+161.1 
+17.50 
+2.5 
+0.92 
+157.9 
+4.50 
+1.67 
+56.8 
+-29.65 
+0.03 
+39.1 
+0.74 
+155.9 
+14.78 
+3 
+0.93 
+152.6 
+2.81 
+1.38 
+49.3 
+-28.54 
+0.03 
+38.1 
+0.74 
+150.2 
+13.16 
+4 
+0.91 
+143.1 
+0.16 
+1.01 
+35.8 
+-26.68 
+0.04 
+33.9 
+0.73 
+139.0 
+9.84 
+5 
+0.91 
+133.7 
+-2.08 
+0.78 
+22.7 
+-25.40 
+0.05 
+28.0 
+0.70 
+127.4 
+7.34 
+6 
+0.91 
+124.7 
+-4.02 
+0.62 
+12.0 
+-24.42 
+0.06 
+22.3 
+0.65 
+117.0 
+5.01 
+7 
+0.90 
+115.7 
+-5.75 
+0.51 
+3.3 
+-23.61 
+0.06 
+18.2 
+0.58 
+110.2 
+2.77 
+8 
+0.90 
+105.6 
+-6.77 
+0.45 
+-3.9 
+-22.73 
+0.07 
+14.4 
+0.54 
+107.5 
+1.56 
+9 
+0.91 
+95.7 
+-7.45 
+0.42 
+-12.1 
+-21.60 
+0.08 
+8.4 
+0.55 
+103.9 
+1.13 
+10 
+0.91 
+84.9 
+-7.95 
+0.40 
+-22.4 
+-20.76 
+0.09 
+0.9 
+0.58 
+97.0 
+0.82 
+11 
+0.89 
+74.0 
+-8.29 
+0.38 
+-32.0 
+-19.93 
+0.10 
+-8.6 
+0.61 
+88.4 
+-0.05 
+12 
+0.89 
+63.1 
+-9.19 
+0.34 
+-39.5 
+-19.45 
+0.10 
+-16.8 
+0.64 
+78.9 
+-0.82 
+13 
+0.89 
+54.0 
+-9.74 
+0.326 
+-51.1 
+-19.03 
+0.11 
+-24.1 
+0.67 
+69.1 
+-1.38 
+14 
+0.90 
+46.4 
+-10.17 0.31 
+-58.1 
+-18.78 
+0.11 
+-30.7 
+0.68 
+59.6 
+-1.33 
+15 
+0.90 
+38.8 
+-10.85 0.28 
+-67.8 
+-18.47 
+0.11 
+-36.1 
+0.68 
+50.9 
+-1.80 
+16 
+0.91 
+33.1 
+-10.77 0.28 
+-73.7 
+-18.19 
+0.12 
+-42.9 
+0.71 
+42.0 
+-2.11 
+17 
+0.85 
+26.8 
+-11.05 0.28 
+-83.3 
+-17.88 
+0.12 
+-47.5 
+0.73 
+35.3 
+-2.60 
+18 
+0.87 
+19.3 
+-11.53 0.26 
+-100.4 
+-17.54 
+0.13 
+-53.8 
+0.75 
+27.3 
+-2.83 
+Notes:  
+1. S parameter is measured on a microstrip 
+line made on 0.025 inch thick alumina 
+carrier. The input reference plane is at the 
+end of the gate lead. The output reference 
+plane is at the end of the drain lead.
+
+
+============================================================
+PAGE 10
+============================================================
+
+10
+Figure 34.  MSG/MAG & |S21|2 (dB) @ 
+4.5V, 100 mA.
+FREQUENCY (GHz)
+40
+30
+20
+10
+0
+-10
+-20
+0
+5
+10
+15
+20
+MSG/MAG & |S21|2 (dB)
+S21
+MAG
+MSG
+ATF-511P8 Typical Scattering Parameters, VDS = 4.5V, IDS = 100 mA
+Freq. 
+ 
+ 
+ S11  
+ 
+  S21 
+ 
+   
+ S12 
+ 
+         S22  
+MSG/MAG
+GHz 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+Mag. 
+Ang. 
+dB
+0.1 
+0.93 
+-125.4 
+30.99 
+35.43 
+115.3 
+-34.72 
+0.01 
+28.6 
+0.65 
+-151.1 
+32.94 
+0.2 
+0.93 
+-152.1 
+25.70 
+19.27 
+101.4 
+-33.88 
+0.02 
+18.9 
+0.70 
+-166.3 
+29.84 
+0.3 
+0.93 
+-162.8 
+22.34 
+13.09 
+95.5 
+-33.70 
+0.02 
+15.5 
+0.72 
+-172.2 
+27.95 
+0.4 
+0.92 
+-168.7 
+19.90 
+9.88 
+91.8 
+-33.49 
+0.02 
+16.5 
+0.72 
+-176.0 
+26.73 
+0.5 
+0.91 
+-170.8 
+18.78 
+8.68 
+89.5 
+-32.50 
+0.02 
+17.7 
+0.69 
+-177.2 
+25.59 
+0.6 
+0.91 
+-174.4 
+17.21 
+7.25 
+86.6 
+-32.42 
+0.02 
+17.6 
+0.7 
+-179.7 
+24.80 
+0.7 
+0.92 
+-176.8 
+15.88 
+6.22 
+84.4 
+-32.20 
+0.02 
+19.1 
+0.7 
+178.3 
+23.96 
+0.8 
+0.92 
+-179.0 
+14.72 
+5.44 
+82.3 
+-32.13 
+0.02 
+18.8 
+0.70 
+176.6 
+23.38 
+0.9 
+0.92 
+178.7 
+13.69 
+4.83 
+80.4 
+-32.02 
+0.02 
+18.9 
+0.70 
+175.2 
+22.86 
+1 
+0.91 
+177.0 
+12.73 
+4.33 
+78.8 
+-31.85 
+0.02 
+20.6 
+0.70 
+173.8 
+22.22 
+1.5 
+0.92 
+169.8 
+9.11 
+2.85 
+70.2 
+-30.95 
+0.02 
+24.8 
+0.70 
+167.8 
+20.08 
+2 
+0.91 
+163.9 
+6.49 
+2.11 
+62.8 
+-30.00 
+0.03 
+27.8 
+0.71 
+162.3 
+18.19 
+2.5 
+0.91 
+158.8 
+4.52 
+1.68 
+55.2 
+-29.22 
+0.03 
+29.0 
+0.71 
+157.2 
+14.84 
+3 
+0.91 
+153.0 
+2.89 
+1.39 
+47.7 
+-28.39 
+0.03 
+29.0 
+0.71 
+151.6 
+12.76 
+4 
+0.91 
+143.7 
+0.20 
+1.02 
+33.1 
+-26.77 
+0.04 
+27.2 
+0.70 
+140.4 
+9.92 
+5 
+0.91 
+134.0 
+-2.08 
+0.78 
+19.2 
+-25.62 
+0.05 
+22.2 
+0.68 
+128.7 
+7.42 
+6 
+0.90 
+125.0 
+-4.20 
+0.61 
+7.3 
+-24.73 
+0.05 
+17.3 
+0.64 
+117.4 
+4.79 
+7 
+0.90 
+115.7 
+-6.04 
+0.49 
+-1.6 
+-23.99 
+0.06 
+14.3 
+0.56 
+109.1 
+2.45 
+8 
+0.90 
+106.4 
+-7.35 
+0.42 
+-7.7 
+-23.23 
+0.06 
+11.2 
+0.51 
+106.4 
+0.71 
+9 
+0.90 
+96.5 
+-8.14 
+0.39 
+-16.4 
+-22.04 
+0.07 
+7.2 
+0.51 
+105.0 
+0.01 
+10 
+0.9 
+86.1 
+-8.45 
+0.37 
+-25.3 
+-20.89 
+0.09 
+0.5 
+0.54 
+99.3 
+-0.37 
+11 
+0.89 
+75.4 
+-9.46 
+0.33 
+-35.2 
+-20.08 
+0.09 
+-7.5 
+0.58 
+90.9 
+-1.33 
+12 
+0.90 
+63.8 
+-9.59 
+0.33 
+-46.1 
+-19.41 
+0.10 
+-16.7 
+0.62 
+81.3 
+-1.60 
+13 
+0.89 
+54.7 
+-10.42 0.30 
+-52.9 
+-19.02 
+0.11 
+-25.1 
+0.65 
+71.3 
+-1.93 
+14 
+0.90 
+46.5 
+-10.99 0.28 
+-59.8 
+-18.87 
+0.11 
+-31.7 
+0.67 
+61.4 
+-2.12 
+15 
+0.88 
+40.2 
+-11.15 0.27 
+-70.6 
+-18.71 
+0.11 
+-38.2 
+0.68 
+52.4 
+-2.66 
+16 
+0.90 
+33.5 
+-11.50 0.26 
+-71.7 
+-18.22 
+0.12 
+-45.5 
+0.70 
+43.3 
+-2.83 
+17 
+0.86 
+26.4 
+-11.50 0.26 
+-80.8 
+-18.28 
+0.12 
+-49.0 
+0.72 
+35.9 
+-3.33 
+18 
+0.86 
+19.3 
+-11.51 0.26 
+-92.6 
+-17.88 
+0.12 
+-54.8 
+0.74 
+27.9 
+-3.69 
+Notes:  
+1. S parameter is measured on a microstrip 
+line made on 0.025 inch thick alumina 
+carrier. The input reference plane is at the 
+end of the gate lead. The output reference 
+plane is at the end of the drain lead.
+
+
+============================================================
+PAGE 11
+============================================================
+
+11
+Figure 35.  MSG/MAG & |S21|2 (dB) @ 4V, 200 mA.
+FREQUENCY (GHz)
+40
+30
+20
+10
+0
+-10
+-20
+0
+5
+10
+15
+20
+MSG/MAG & |S21|2 (dB)
+S21
+MAG
+MSG
+ATF-511P8 Typical Scattering Parameters, VDS = 4V, IDS = 200 mA
+Freq. 
+ 
+ 
+ S11  
+ 
+  S21 
+ 
+   
+ S12 
+ 
+            S22  
+MSG/MAG
+GHz 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+Mag. 
+Ang. 
+dB
+0.1 
+0.94 
+-133.7 
+30.85 
+34.87 
+111.4 
+-37.28 
+0.01 
+28.2 
+0.73 
+-162.5 
+33.96 
+0.2 
+0.93 
+-156.9 
+25.31 
+18.41 
+99.5 
+-36.61 
+0.01 
+20.4 
+0.76 
+-172.6 
+30.89 
+0.3 
+0.93 
+-165.9 
+21.89 
+12.43 
+94.2 
+-36.19 
+0.01 
+20.2 
+0.78 
+-176.3 
+28.90 
+0.4 
+0.94 
+-170.9 
+19.48 
+9.42 
+90.9 
+-35.98 
+0.01 
+20.4 
+0.78 
+-179.5 
+27.70 
+0.5 
+0.93 
+-174.5 
+17.53 
+7.52 
+88.8 
+-35.84 
+0.01 
+23.0 
+0.78 
+178.5 
+26.73 
+0.6 
+0.93 
+-175.8 
+16.77 
+6.89 
+86.0 
+-34.69 
+0.01 
+23.5 
+0.76 
+177.3 
+25.83 
+0.7 
+0.93 
+-178.2 
+15.53 
+5.97 
+84.2 
+-34.42 
+0.01 
+25.0 
+0.75 
+175.5 
+24.98 
+0.8 
+0.92 
+179.7 
+14.28 
+5.17 
+82.5 
+-34.11 
+0.02 
+27.1 
+0.76 
+173.9 
+24.13 
+0.9 
+0.92 
+178.0 
+13.21 
+4.57 
+80.5 
+-33.77 
+0.02 
+29.2 
+0.76 
+172.5 
+23.60 
+1 
+0.93 
+176.3 
+12.34 
+4.13 
+78.6 
+-33.66 
+0.02 
+29.6 
+0.76 
+171.4 
+22.95 
+1.5 
+0.92 
+169.6 
+8.63 
+2.70 
+71.0 
+-32.21 
+0.02 
+34.5 
+0.76 
+165.3 
+20.34 
+2 
+0.93 
+164.4 
+6.12 
+2.02 
+63.5 
+-30.69 
+0.02 
+38.0 
+0.76 
+159.2 
+17.32 
+2.5 
+0.92 
+159.6 
+4.07 
+1.59 
+57.0 
+-29.46 
+0.03 
+39.4 
+0.76 
+154.1 
+14.52 
+3 
+0.92 
+154.2 
+2.30 
+1.30 
+50.3 
+-28.47 
+0.03 
+37.7 
+0.75 
+148.6 
+12.34 
+4 
+0.92 
+144.9 
+-0.31 
+0.96 
+37.4 
+-26.48 
+0.04 
+33.8 
+0.73 
+137.1 
+9.75 
+5 
+0.91 
+135.5 
+-2.55 
+0.74 
+25.4 
+-25.14 
+0.05 
+28.4 
+0.69 
+127.3 
+6.74 
+6 
+0.92 
+126.6 
+-4.30 
+0.60 
+15.1 
+-24.15 
+0.06 
+23.4 
+0.64 
+119.4 
+5.17 
+7 
+0.91 
+117.1 
+-5.64 
+0.52 
+6.50 
+-23.20 
+0.06 
+18.3 
+0.62 
+114.5 
+3.27 
+8 
+0.91 
+108.2 
+-6.81 
+0.45 
+-2.8 
+-22.06 
+0.07 
+12.3 
+0.62 
+108.5 
+2.03 
+9 
+0.90 
+99.1 
+-7.13 
+0.44 
+-13.7 
+-21.10 
+0.08 
+5.2 
+0.62 
+100.8 
+1.60 
+10 
+0.92 
+89.2 
+-7.76 
+0.40 
+-21.2 
+-20.40 
+0.09 
+-2.7 
+0.64 
+90.4 
+1.40 
+11 
+0.90 
+79.6 
+-8.39 
+0.38 
+-30.0 
+-19.67 
+0.10 
+-11.0 
+0.65 
+79.3 
+0.26 
+12 
+0.91 
+70.9 
+-8.92 
+0.35 
+-42.9 
+-19.28 
+0.10 
+-19.9 
+0.66 
+67.0 
+0.15 
+13 
+0.90 
+62.2 
+-9.42 
+0.33 
+-48.9 
+-19.11 
+0.11 
+-27.2 
+0.67 
+57.1 
+-0.69 
+14 
+0.94 
+53.8 
+-9.84 
+0.32 
+-60.1 
+-18.86 
+0.11 
+-33.1 
+0.68 
+48.7 
+-1.20 
+15 
+0.87 
+45.0 
+-10.51 0.29 
+-68.5 
+-18.58 
+0.11 
+-38.4 
+0.7 
+40.0 
+-1.56 
+16 
+0.89 
+37.7 
+-10.74 0.29 
+-72.4 
+-18.59 
+0.11 
+-43.7 
+0.71 
+36.3 
+-1.97 
+17 
+0.89 
+30.5 
+-10.03 0.31 
+-85.1 
+-17.88 
+0.12 
+-48.3 
+0.73 
+28.8 
+-2.50 
+18 
+0.88 
+25.4 
+-11.77 0.25 
+-91.8 
+-17.72 
+0.13 
+-59.0 
+0.74 
+19.5 
+-2.82 
+Notes:  
+1. S parameter is measured on a microstrip 
+line made on 0.025 inch thick alumina 
+carrier. The input reference plane is at the 
+end of the gate lead. The output reference 
+plane is at the end of the drain lead.
+
+
+============================================================
+PAGE 12
+============================================================
+
+12
+ATF-511P8 Typical Scattering Parameters, VDS = 3V, IDS =  200 mA
+Freq. 
+ 
+ 
+ S11  
+ 
+  S21 
+ 
+   
+ S12 
+ 
+         S22  
+MSG/MAG
+GHz 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+dB 
+Mag. 
+Ang. 
+Mag. 
+Ang. 
+dB
+0.1 
+0.95 
+-137.1 
+29.51 
+29.89 
+109.9 
+-36.88 
+0.01 
+25.2 
+0.78 
+-166.0 
+33.29 
+0.2 
+0.94 
+-159.0 
+23.89 
+15.65 
+98.7 
+-36.27 
+0.01 
+19.8 
+0.81 
+-174.5 
+30.18 
+0.3 
+0.94 
+-167.3 
+20.46 
+10.54 
+93.8 
+-36.20 
+0.01 
+18.0 
+0.82 
+-177.6 
+28.47 
+0.4 
+0.94 
+-172.0 
+18.04 
+7.98 
+90.7 
+-35.82 
+0.01 
+20.5 
+0.83 
+179.4 
+26.98 
+0.5 
+0.93 
+-175.3 
+16.10 
+6.38 
+88.7 
+-35.59 
+0.01 
+22.4 
+0.83 
+177.6 
+25.75 
+0.6 
+0.93 
+-176.8 
+15.36 
+5.86 
+85.9 
+-34.34 
+0.01 
+24.0 
+0.81 
+176.3 
+24.89 
+0.7 
+0.93 
+-178.7 
+14.14 
+5.09 
+84.2 
+-34.27 
+0.01 
+24.8 
+0.81 
+174.6 
+24.28 
+0.8 
+0.93 
+179.1 
+12.87 
+4.4 
+82.6 
+-34.12 
+0.02 
+27.1 
+0.81 
+173.1 
+23.42 
+0.9 
+0.93 
+177.3 
+11.82 
+3.89 
+80.6 
+-33.66 
+0.02 
+29.1 
+0.81 
+171.7 
+22.69 
+1 
+0.93 
+176.1 
+10.91 
+3.51 
+78.9 
+-33.55 
+0.02 
+29.3 
+0.81 
+170.7 
+22.23 
+1.5 
+0.93 
+169.4 
+7.24 
+2.30 
+71.8 
+-31.97 
+0.02 
+35.4 
+0.81 
+164.6 
+19.64 
+2 
+0.93 
+164.0 
+4.75 
+1.72 
+64.7 
+-30.60 
+0.03 
+38.5 
+0.81 
+158.5 
+16.34 
+2.5 
+0.93 
+159.1 
+2.73 
+1.36 
+58.5 
+-29.39 
+0.03 
+38.5 
+0.81 
+153.4 
+14.08 
+3 
+0.92 
+154.0 
+0.93 
+1.11 
+51.6 
+-28.15 
+0.03 
+37.4 
+0.80 
+147.6 
+11.72 
+4 
+0.93 
+144.8 
+-1.58 
+0.83 
+38.7 
+-26.26 
+0.04 
+33.1 
+0.78 
+135.8 
+9.24 
+5 
+0.92 
+135.2 
+-3.78 
+0.64 
+27.3 
+-24.91 
+0.05 
+27.7 
+0.74 
+125.0 
+6.28 
+6 
+0.93 
+126.0 
+-5.54 
+0.52 
+17.2 
+-24.05 
+0.06 
+22.1 
+0.68 
+115.6 
+4.39 
+7 
+0.91 
+116.6 
+-7.07 
+0.44 
+10.5 
+-23.11 
+0.07 
+17.2 
+0.63 
+110.7 
+1.96 
+8 
+0.91 
+107.4 
+-7.66 
+0.41 
+2.06 
+-22.08 
+0.07 
+12.1 
+0.62 
+106.3 
+1.32 
+9 
+0.90 
+98.4 
+-8.06 
+0.39 
+-5.6 
+-21.04 
+0.08 
+5.0 
+0.63 
+99.5 
+0.60 
+10 
+0.92 
+89.0 
+-8.99 
+0.35 
+-15.9 
+-20.23 
+0.09 
+-2.7 
+0.64 
+89.8 
+0.49 
+11 
+0.92 
+79.5 
+-9.12 
+0.35 
+-25.8 
+-19.45 
+0.10 
+-12.4 
+0.66 
+78.7 
+0.19 
+12 
+0.91 
+70.1 
+-9.28 
+0.34 
+-35.9 
+-19.08 
+0.11 
+-21.4 
+0.68 
+66.3 
+-0.19 
+13 
+0.91 
+61.9 
+-9.71 
+0.32 
+-39.9 
+-18.93 
+0.11 
+-29.2 
+0.69 
+56.4 
+-0.68 
+14 
+0.92 
+51.8 
+-10.04 0.31 
+-54.7 
+-18.89 
+0.11 
+-35.6 
+0.70 
+47.9 
+-0.40 
+15 
+0.88 
+44.1 
+-10.01 0.31 
+-59.8 
+-18.63 
+0.11 
+-40.7 
+0.72 
+39.0 
+-1.57 
+16 
+0.87 
+36.4 
+-10.16 0.31 
+-77.5 
+-18.83 
+0.11 
+-44.7 
+0.73 
+35.3 
+-1.85
+17 
+0.83 
+30.1 
+-10.61 0.31 
+-87.2 
+-18.17 
+0.12 
+-51.2 
+0.74 
+27.7 
+-2.42 
+18 
+0.85 
+24.0 
+-11.96 0.25 
+-97.4 
+-17.69 
+0.13 
+-58.3 
+0.75 
+18.3 
+-3.71 
+Figure 36.  MSG/MAG & |S21|2 (dB) @ 3V, 200 mA.
+FREQUENCY (GHz)
+40
+30
+20
+10
+0
+-10
+-20
+0
+5
+10
+15
+20
+MSG/MAG & |S21|2 (dB)
+S21
+MAG
+MSG
+Notes:  
+1. S parameter is measured on a microstrip 
+line made on 0.025 inch thick alumina 
+carrier. The input reference plane is at the 
+end of the gate lead. The output reference 
+plane is at the end of the drain lead.
+
+
+============================================================
+PAGE 13
+============================================================
+
+13
+2x 2 LPCC (JEDEC DFP-N) Package Dimensions
+Ordering Information
+Part Number 
+No. of Devices 
+Container
+ATF-511P8-TR1 
+3000 
+7” Reel
+ATF-511P8-TR2 
+10000 
+13”Reel
+ATF-511P8-BLK 
+100 
+antistatic bag
+Device Models
+Refer to Avago’s Web Site
+www.Avagotech.com/view/rf
+D
+E
+8
+7
+6
+5
+A
+D1
+E1
+P
+e
+pin1
+R
+L
+b
+DIMENSIONS ARE IN MILLIMETERS
+DIMENSIONS
+MIN.
+0.70
+0
+0.203 REF
+0.225
+1.9
+0.65
+1.9
+1.45
+0.50 BSC
+0.20
+0.35
+NOM.
+0.75
+0.02
+0.203 REF
+0.25
+2.0
+0.80
+2.0
+1.6
+0.50 BSC
+0.25
+0.40
+MAX.
+0.80
+0.05
+0.203 REF
+0.275
+2.1
+0.95
+2.1
+1.75
+0.50 BSC
+0.30
+0.45
+SYMBOL
+A
+A1
+A2
+b
+D
+D1
+E
+E1
+e
+P
+L
+1
+pin1
+2
+3
+4
+1PX
+Top View
+End View
+Side View
+Bottom View
+A2
+A
+A1
+
+
+============================================================
+PAGE 14
+============================================================
+
+14
+Device Orientation
+PCB Land Pattern and Stencil Design
+2.80 (110.24)
+0.70 (27.56)
+0.25 (9.84)
+0.25 (9.84)
+0.50 (19.68)
+0.28 (10.83)
+0.60 (23.62)
+φ0.20 (7.87)
+PIN 1
+Solder
+mask
+RF
+transmission
+line
+0.80 (31.50)
+0.15 (5.91)
+0.55 (21.65)
+1.60 (62.99)
++
+2.72 (107.09)
+0.63 (24.80)
+0.22 (8.86)
+0.32 (12.79)
+0.50 (19.68)
+0.25 (9.74)
+0.63 (24.80)
+Stencil Layout (top view)
+PCB Land Pattern (top view)
+Notes: 
+Typical stencil thickness is 5 mils. 
+Measurements are in millimeters (mils).
+0.72 (28.35)
+PIN 1
+1.54 (60.61)
+USER
+FEED 
+DIRECTION
+COVER TAPE 
+CARRIER
+TAPE 
+REEL 
+8 mm
+4 mm
+1PX
+1PX
+1PX
+1PX
+
+
+============================================================
+PAGE 15
+============================================================
+
+For product information and a complete list of distributors, please go to our web site:     www.avagotech.com
+Avago, Avago Technologies, and the A logo are trademarks of Avago Technologies in the United States and other countries.
+Data subject to change. Copyright © 2012 Avago Technologies.  All rights reserved.  Obsoletes 5989-0003EN
+AV02-3620EN  - June 14, 2012
+Tape Dimensions
+P0
+P
+F
+W
+D1
+E
+P2
+A0
+10° Max
+t1
+K0
+DESCRIPTION
+SYMBOL
+SIZE (mm)
+SIZE (inches)
+LENGTH
+WIDTH
+DEPTH
+PITCH
+BOTTOM HOLE DIAMETER
+A0
+B0
+K0
+P
+D1
+2.30 ± 0.05
+2.30 ± 0.05
+1.00 ± 0.05
+4.00 ± 0.10
+1.00 + 0.25
+0.091 ± 0.004
+0.091 ± 0.004
+0.039 ± 0.002
+0.157 ± 0.004
+0.039 + 0.002
+CAVITY
+DIAMETER
+PITCH
+POSITION
+D
+P0
+E
+1.50 ± 0.10
+4.00 ± 0.10
+1.75 ± 0.10
+0.060 ± 0.004
+0.157 ± 0.004
+0.069 ± 0.004
+PERFORATION
+WIDTH
+THICKNESS
+W
+t1
+8.00 + 0.30
+0.254 ± 0.02
+0.315 ± 0.012
+8.00 – 0.10
+0.315 ± 0.004
+0.010 ± 0.0008
+CARRIER TAPE
+CAVITY TO PERFORATION
+(WIDTH DIRECTION)
+CAVITY TO PERFORATION
+(LENGTH DIRECTION)
+F
+P2
+3.50 ± 0.05
+2.00 ± 0.05
+0.138 ± 0.002
+0.079 ± 0.002
+DISTANCE
+WIDTH
+TAPE THICKNESS
+C
+Tt
+5.4 ± 0.10
+0.062 ± 0.001
+0.205 ± 0.004
+0.0025 ± 0.0004
+COVER TAPE
+D
++
++
+Tt
+10° Max
+B0

@@ -1,0 +1,123 @@
+{
+  "datasheet_id": "ST_1N5822",
+  "version": "1.0",
+  "source": "ST_1N5822.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "1N5822 (1N582x series)"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "Low Drop Power Schottky Rectifier"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "DO-201AD"
+    },
+    "VRRM": {
+      "description": "繰り返しピーク逆電圧",
+      "value": "40 V"
+    },
+    "IF_RMS": {
+      "description": "RMS順方向電流",
+      "value": "10 A"
+    },
+    "IF_AV_TL100": {
+      "description": "平均順方向電流 (TL=100°C, δ=0.5)",
+      "value": "3 A"
+    },
+    "IF_AV_TL110": {
+      "description": "平均順方向電流 (TL=110°C, δ=0.5)",
+      "value": "3 A"
+    },
+    "IFSM": {
+      "description": "サージ非繰り返し順方向電流 (tp=10ms, 正弦波)",
+      "value": "80 A"
+    },
+    "PARM": {
+      "description": "繰り返しピークアバランシェ電力 (tp=1µs, Tj=25°C)",
+      "value": "1700 W"
+    },
+    "Tstg_Range": {
+      "description": "保存温度範囲",
+      "value": "-65 to +150 °C"
+    },
+    "Tj_Max": {
+      "description": "最大接合温度",
+      "value": "150 °C"
+    },
+    "dVdt": {
+      "description": "逆電圧臨界上昇率",
+      "value": "10000 V/µs"
+    },
+    "IR_25C": {
+      "description": "逆漏れ電流 (Tj=25°C, VR=VRRM)",
+      "value": "2 mA"
+    },
+    "IR_100C": {
+      "description": "逆漏れ電流 (Tj=100°C)",
+      "value": "20 mA"
+    },
+    "VF_3A": {
+      "description": "順方向電圧降下 (Tj=25°C, IF=3A)",
+      "value": "0.525 V"
+    },
+    "VF_9_4A": {
+      "description": "順方向電圧降下 (Tj=25°C, IF=9.4A)",
+      "value": "0.95 V"
+    },
+    "Conduction_Loss_Formula": {
+      "description": "導通損失の計算式",
+      "value": "P = 0.33 x IF(AV) + 0.060 x IF²(RMS)"
+    },
+    "Rth_JA": {
+      "description": "熱抵抗 (ジャンクション-周囲間, リード長10mm)",
+      "value": "80 °C/W"
+    },
+    "Rth_JL": {
+      "description": "熱抵抗 (ジャンクション-リード間, リード長10mm)",
+      "value": "25 °C/W"
+    },
+    "Dim_A": {
+      "description": "パッケージ寸法 A (本体長さ)",
+      "value": "9.50 mm min"
+    },
+    "Dim_B": {
+      "description": "パッケージ寸法 B (リード長さ)",
+      "value": "25.40 mm min"
+    },
+    "Dim_C": {
+      "description": "パッケージ寸法 ΦC (本体直径)",
+      "value": "5.30 mm min"
+    },
+    "Dim_D": {
+      "description": "パッケージ寸法 ΦD (リード直径)",
+      "value": "1.30 mm min"
+    },
+    "Dim_E": {
+      "description": "パッケージ寸法 E",
+      "value": "1.25 mm min"
+    },
+    "Weight": {
+      "description": "重量",
+      "value": "1.12 g"
+    },
+    "Ordering_Standard": {
+      "description": "梱包 (標準)",
+      "value": "Ammopack, 600 pcs"
+    },
+    "Ordering_TapeReel": {
+      "description": "梱包 (テープ&リール)",
+      "value": "1N5822RL, Tape & reel, 1900 pcs"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Through Hole"
+    },
+    "Diode_Type": {
+      "description": "ダイオードタイプ",
+      "value": "Schottky"
+    }
+  }
+}

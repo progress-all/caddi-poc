@@ -1,0 +1,188 @@
+{
+  "targetId": "Broadcom_ATF-511P8-BLK",
+  "candidateId": "MACOM_Technology_Solutions_MAAP-011232-TR0500",
+  "evaluatedAt": "2026-02-09T14:33:00.000Z",
+  "summary": "・製品種別：離散E-pHEMTトランジスタ → 2段集積パワーアンプMMIC\n・パッケージ：8-Lead LPCC 2×2mm → 16-Lead PQFN 3mm\n・動作周波数範囲：50 MHz to 6 GHz → 0.1 to 3.0 GHz（Candidate側が狭い）\n・最大RF入力電力：+30 dBm → 20 dBm\n・利得 @ 2 GHz：14.8 typ dB → 24 typ dB（Candidate側が約9dB高い、2段構成のため）\n・電力付加効率 @ 2 GHz：68.9 typ % → 37 typ %\n・保存温度下限：-65°C → -55°C\n・熱抵抗：33°C/W (ch-board) → 29°C/W (jc)、測定基準が異なる\n・雑音指数：1.4 typ dB → データなし（Candidate側はNF未規定）",
+  "parameters": [
+    {
+      "parameterId": "Part_Number",
+      "description": "型名",
+      "targetValue": "ATF-511P8-BLK",
+      "candidateValue": "MAAP-011232-TR0500 (500 Piece Reel)",
+      "score": 0,
+      "reason": "製品固有の型名、比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Product_Type",
+      "description": "製品種別",
+      "targetValue": "High Linearity Enhancement Mode Pseudomorphic HEMT (E-pHEMT)",
+      "candidateValue": "1 W Driver Amplifier with VG Enable",
+      "score": 30,
+      "reason": "離散トランジスタ vs 集積アンプ",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Package",
+      "description": "パッケージ",
+      "targetValue": "8-Lead LPCC (JEDEC DFP-N, MO229 DRP-N)",
+      "candidateValue": "Lead-Free 3 mm 16-Lead PQFN",
+      "score": 25,
+      "reason": "形状・ピン数・寸法が全て異なる",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Package_Size",
+      "description": "パッケージ寸法",
+      "targetValue": "2.0 x 2.0 x 0.75 mm",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "候補側データなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Ordering_Quantity",
+      "description": "梱包数量",
+      "targetValue": "100 (antistatic bag)",
+      "candidateValue": "500 (reel)",
+      "score": 0,
+      "reason": "梱包形態は製品バリアント依存",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Operating_Frequency_Range",
+      "description": "動作周波数範囲",
+      "targetValue": "50 MHz to 6 GHz",
+      "candidateValue": "0.1 to 3.0 GHz",
+      "score": 60,
+      "reason": "Target側が広い(6GHz vs 3GHz)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "MSL_Rating",
+      "description": "湿度感度レベル",
+      "targetValue": "MSL-1, lead-free",
+      "candidateValue": "MSL-1 (JEDEC)",
+      "score": 100,
+      "reason": "同一 (MSL-1)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Pin_Max_RF",
+      "description": "最大RF入力電力",
+      "targetValue": "+30 dBm",
+      "candidateValue": "20 dBm",
+      "score": 40,
+      "reason": "+30 vs 20 dBm、10dB差",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Channel_Temperature_Max",
+      "description": "最大チャネル/ジャンクション温度",
+      "targetValue": "150 °C",
+      "candidateValue": "+150 °C",
+      "score": 100,
+      "reason": "同一 (150°C)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Storage_Temperature",
+      "description": "保存温度範囲",
+      "targetValue": "-65 to 150 °C",
+      "candidateValue": "-55 to +150 °C",
+      "score": 90,
+      "reason": "下限差: -65 vs -55°C",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "MTTF",
+      "description": "平均故障時間",
+      "targetValue": "> 300 years (at +85 °C mounting temperature)",
+      "candidateValue": "> 1 × 10^6 hours (at TJ ≤ +150 °C)",
+      "score": 0,
+      "reason": "測定条件が異なり直接比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Thermal_Resistance",
+      "description": "熱抵抗",
+      "targetValue": "33 °C/W (channel-to-board)",
+      "candidateValue": "29 typ °C/W (junction-to-case)",
+      "score": 70,
+      "reason": "33 vs 29°C/W、測定基準が異なる",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Gain_2GHz",
+      "description": "利得 @ 2 GHz",
+      "targetValue": "13.5 min / 14.8 typ / 16.5 max dB",
+      "candidateValue": "24 typ dB",
+      "score": 30,
+      "reason": "14.8 vs 24 dB、約9dB差(2段構成)",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "P1dB_2GHz",
+      "description": "1dB利得圧縮点出力 @ 2 GHz",
+      "targetValue": "28.5 min / 30 typ dBm",
+      "candidateValue": "29 typ dBm",
+      "score": 90,
+      "reason": "30 vs 29 dBm、同等レベル",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "OIP3_2GHz",
+      "description": "出力3次インターセプトポイント @ 2 GHz",
+      "targetValue": "38.5 min / 41.7 typ dBm",
+      "candidateValue": "40 typ dBm",
+      "score": 90,
+      "reason": "41.7 vs 40 dBm、同等レベル",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "PAE_2GHz",
+      "description": "電力付加効率 @ 2 GHz",
+      "targetValue": "52 min / 68.9 typ %",
+      "candidateValue": "37 typ %",
+      "score": 30,
+      "reason": "68.9 vs 37%、大幅に異なる",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "NF_2GHz",
+      "description": "雑音指数 @ 2 GHz",
+      "targetValue": "1.4 typ dB",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "候補側データなし(NF未規定)",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Pdiss_Max",
+      "description": "最大消費電力",
+      "targetValue": "3 W (derate 30 mW/°C for TB > 50 °C)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "候補側データなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Operating_Temperature",
+      "description": "動作温度範囲",
+      "targetValue": null,
+      "candidateValue": "-40 to +85 °C",
+      "score": 0,
+      "reason": "Target側データなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VDS_Max",
+      "description": "最大ドレイン-ソース間電圧 / 最大ドレイン電圧",
+      "targetValue": "7 V",
+      "candidateValue": "10 V (VD1, VD2)",
+      "score": 65,
+      "reason": "7V vs 10V、動作電圧帯が異なる",
+      "is_comparable": true
+    }
+  ]
+}

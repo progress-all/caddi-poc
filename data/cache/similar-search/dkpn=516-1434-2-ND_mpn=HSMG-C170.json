@@ -1,0 +1,1145 @@
+{
+  "generatedAt": "2026-02-06T04:12:17.935Z",
+  "key": "dkpn=516-1434-2-ND_mpn=HSMG-C170",
+  "data": {
+    "targetMpn": "HSMG-C170",
+    "targetProduct": {
+      "digiKeyProductNumber": "516-1434-2-ND",
+      "manufacturerProductNumber": "HSMG-C170",
+      "manufacturerName": "Broadcom Limited",
+      "description": "LED GREEN DIFFUSED CHIP SMD",
+      "quantityAvailable": 223349,
+      "productUrl": "https://www.digikey.com/en/products/detail/broadcom-limited/HSMG-C170/637695",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2523/FIG%2021%20HIGHLIGHTED%20%20PINK%20T052%201579.jpg",
+      "unitPrice": "0.28",
+      "sources": [],
+      "detailedDescription": "Green 572nm LED Indication - Discrete 2.2V 0805 (2012 Metric)",
+      "datasheetUrl": "https://docs.broadcom.com/docs/AV02-0551EN",
+      "partStatus": "Active",
+      "backOrderNotAllowed": false,
+      "normallyStocking": true,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Optoelectronics",
+        "categoryId": 7
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "15",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "2A  (4 Weeks)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "516-1434-2-ND",
+          "packageType": "Tape & Reel (TR)",
+          "quantityAvailable": 223000,
+          "pricing": [
+            {
+              "breakQuantity": 4000,
+              "unitPrice": 0.08783
+            },
+            {
+              "breakQuantity": 8000,
+              "unitPrice": 0.08248
+            },
+            {
+              "breakQuantity": 12000,
+              "unitPrice": 0.07973
+            },
+            {
+              "breakQuantity": 20000,
+              "unitPrice": 0.07663
+            },
+            {
+              "breakQuantity": 28000,
+              "unitPrice": 0.07478
+            },
+            {
+              "breakQuantity": 40000,
+              "unitPrice": 0.07298
+            },
+            {
+              "breakQuantity": 100000,
+              "unitPrice": 0.069
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "516-1434-1-ND",
+          "packageType": "Cut Tape (CT)",
+          "quantityAvailable": 223349,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.28
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.194
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 0.1365
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 0.1102
+            },
+            {
+              "breakQuantity": 1000,
+              "unitPrice": 0.10152
+            },
+            {
+              "breakQuantity": 2000,
+              "unitPrice": 0.09413
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "516-1434-6-ND",
+          "packageType": "Digi-Reel®",
+          "quantityAvailable": 223349,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.28
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.194
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 0.1365
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 0.1102
+            },
+            {
+              "breakQuantity": 1000,
+              "unitPrice": 0.10152
+            },
+            {
+              "breakQuantity": 2000,
+              "unitPrice": 0.09413
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Color",
+          "value": "Green",
+          "parameterId": 37
+        },
+        {
+          "name": "Configuration",
+          "value": "Standard",
+          "parameterId": 207
+        },
+        {
+          "name": "Lens Color",
+          "value": "White",
+          "parameterId": 525
+        },
+        {
+          "name": "Lens Transparency",
+          "value": "Diffused",
+          "parameterId": 1843
+        },
+        {
+          "name": "Millicandela Rating",
+          "value": "15mcd",
+          "parameterId": 206
+        },
+        {
+          "name": "Lens Style",
+          "value": "Rectangle with Flat Top",
+          "parameterId": 2028
+        },
+        {
+          "name": "Lens Size",
+          "value": "1.40mm x 1.25mm",
+          "parameterId": 2029
+        },
+        {
+          "name": "Voltage - Forward (Vf) (Typ)",
+          "value": "2.2V",
+          "parameterId": 319
+        },
+        {
+          "name": "Current - Test",
+          "value": "20mA",
+          "parameterId": 543
+        },
+        {
+          "name": "Viewing Angle",
+          "value": "170°",
+          "parameterId": 551
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount",
+          "parameterId": 69
+        },
+        {
+          "name": "Wavelength - Dominant",
+          "value": "572nm",
+          "parameterId": 969
+        },
+        {
+          "name": "Wavelength - Peak",
+          "value": "570nm",
+          "parameterId": 968
+        },
+        {
+          "name": "Features",
+          "value": "-",
+          "parameterId": 5
+        },
+        {
+          "name": "Package / Case",
+          "value": "0805 (2012 Metric)",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "Chip LED",
+          "parameterId": 1291
+        },
+        {
+          "name": "Size / Dimension",
+          "value": "2.00mm L x 1.25mm W",
+          "parameterId": 46
+        },
+        {
+          "name": "Height (Max)",
+          "value": "0.80mm",
+          "parameterId": 966
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "L61105CT-ND",
+        "manufacturerProductNumber": "7012X5",
+        "manufacturerName": "Visual Communications Company - VCC",
+        "description": "LED GREEN CLEAR 0805 SMD",
+        "quantityAvailable": 41944,
+        "productUrl": "https://www.digikey.com/en/products/detail/visual-communications-company-vcc/7012X5/248979",
+        "unitPrice": "0.83",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Green LED Indication - Discrete 2.1V 0805 (2012 Metric)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6910/7012X.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/13/7012X-Series.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Optoelectronics",
+          "categoryId": 7
+        },
+        "series": "BrightChips™",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "L61105TR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 40000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.29443
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.2807
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.27366
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.26572
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.261
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "L61105CT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 41944,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.83
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.575
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.4209
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.35228
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.32976
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.31065
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "L61105DKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 41944,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.83
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.575
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.4209
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.35228
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.32976
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.31065
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Color",
+            "value": "Green",
+            "parameterId": 37
+          },
+          {
+            "name": "Configuration",
+            "value": "Standard",
+            "parameterId": 207
+          },
+          {
+            "name": "Lens Color",
+            "value": "-",
+            "parameterId": 525
+          },
+          {
+            "name": "Lens Transparency",
+            "value": "Clear",
+            "parameterId": 1843
+          },
+          {
+            "name": "Millicandela Rating",
+            "value": "6.4mcd",
+            "parameterId": 206
+          },
+          {
+            "name": "Lens Style",
+            "value": "Rectangle with Flat Top",
+            "parameterId": 2028
+          },
+          {
+            "name": "Lens Size",
+            "value": "1.19mm x 1.25mm",
+            "parameterId": 2029
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Typ)",
+            "value": "2.1V",
+            "parameterId": 319
+          },
+          {
+            "name": "Current - Test",
+            "value": "20mA",
+            "parameterId": 543
+          },
+          {
+            "name": "Viewing Angle",
+            "value": "-",
+            "parameterId": 551
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Wavelength - Dominant",
+            "value": "-",
+            "parameterId": 969
+          },
+          {
+            "name": "Wavelength - Peak",
+            "value": "560nm",
+            "parameterId": 968
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Package / Case",
+            "value": "0805 (2012 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "0805",
+            "parameterId": 1291
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "2.00mm L x 1.25mm W",
+            "parameterId": 46
+          },
+          {
+            "name": "Height (Max)",
+            "value": "0.79mm",
+            "parameterId": 966
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "160-LTST-C190GKTCT-ND",
+        "manufacturerProductNumber": "LTST-C190GKT",
+        "manufacturerName": "LITEON",
+        "description": "LED GREEN CLEAR CHIP SMD",
+        "quantityAvailable": 1837368,
+        "productUrl": "https://www.digikey.com/en/products/detail/liteon/LTST-C190GKT/269230",
+        "unitPrice": "0.14",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Green 569nm LED Indication - Discrete 2.1V 0603 (1608 Metric)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/858/LTST-C190GKT.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7211/%7E160%7E0603-%281608-Metric%29%7E.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Optoelectronics",
+          "categoryId": 7
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "20",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "160-LTST-C190GKTTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 1837068,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.03964
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.03683
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.03538
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.03374
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.03276
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.03181
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.0297
+              },
+              {
+                "breakQuantity": 200000,
+                "unitPrice": 0.02839
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "160-LTST-C190GKTCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 1837368,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.094
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0649
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.05134
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.04682
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.04295
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "160-LTST-C190GKTDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 1837368,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.094
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0649
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.05134
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.04682
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.04295
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Color",
+            "value": "Green",
+            "parameterId": 37
+          },
+          {
+            "name": "Configuration",
+            "value": "Standard",
+            "parameterId": 207
+          },
+          {
+            "name": "Lens Color",
+            "value": "Colorless",
+            "parameterId": 525
+          },
+          {
+            "name": "Lens Transparency",
+            "value": "Clear",
+            "parameterId": 1843
+          },
+          {
+            "name": "Millicandela Rating",
+            "value": "6mcd",
+            "parameterId": 206
+          },
+          {
+            "name": "Lens Style",
+            "value": "Rectangle with Flat Top",
+            "parameterId": 2028
+          },
+          {
+            "name": "Lens Size",
+            "value": "1.10mm x 0.80mm",
+            "parameterId": 2029
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Typ)",
+            "value": "2.1V",
+            "parameterId": 319
+          },
+          {
+            "name": "Current - Test",
+            "value": "10mA",
+            "parameterId": 543
+          },
+          {
+            "name": "Viewing Angle",
+            "value": "130°",
+            "parameterId": 551
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Wavelength - Dominant",
+            "value": "569nm",
+            "parameterId": 969
+          },
+          {
+            "name": "Wavelength - Peak",
+            "value": "565nm",
+            "parameterId": 968
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "Chip LED",
+            "parameterId": 1291
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "1.60mm L x 0.80mm W",
+            "parameterId": 46
+          },
+          {
+            "name": "Height (Max)",
+            "value": "0.90mm",
+            "parameterId": 966
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "160-1443-1-ND",
+        "manufacturerProductNumber": "LTST-C191GKT",
+        "manufacturerName": "LITEON",
+        "description": "LED GREEN CLEAR CHIP SMD",
+        "quantityAvailable": 179895,
+        "productUrl": "https://www.digikey.com/en/products/detail/liteon/LTST-C191GKT/386829",
+        "unitPrice": "0.17",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Green 569nm LED Indication - Discrete 2.1V 0603 (1608 Metric)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/1294/LTST-C191GKT.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7211/%7E160%7E0603-%281608-Metric%29%7E.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": true,
+        "category": {
+          "name": "Optoelectronics",
+          "categoryId": 7
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "20",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "2A  (4 Weeks)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "160-1443-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 179895,
+            "pricing": [
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.04812
+              },
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.04493
+              },
+              {
+                "breakQuantity": 15000,
+                "unitPrice": 0.04329
+              },
+              {
+                "breakQuantity": 25000,
+                "unitPrice": 0.04144
+              },
+              {
+                "breakQuantity": 35000,
+                "unitPrice": 0.04034
+              },
+              {
+                "breakQuantity": 50000,
+                "unitPrice": 0.03926
+              },
+              {
+                "breakQuantity": 125000,
+                "unitPrice": 0.03688
+              },
+              {
+                "breakQuantity": 250000,
+                "unitPrice": 0.03539
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "160-1443-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 179895,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.17
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.115
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0796
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.06326
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.05785
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.05322
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "160-1443-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 179895,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.17
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.115
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0796
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.06326
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.05785
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.05322
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Color",
+            "value": "Green",
+            "parameterId": 37
+          },
+          {
+            "name": "Configuration",
+            "value": "Standard",
+            "parameterId": 207
+          },
+          {
+            "name": "Lens Color",
+            "value": "Colorless",
+            "parameterId": 525
+          },
+          {
+            "name": "Lens Transparency",
+            "value": "Clear",
+            "parameterId": 1843
+          },
+          {
+            "name": "Millicandela Rating",
+            "value": "12mcd",
+            "parameterId": 206
+          },
+          {
+            "name": "Lens Style",
+            "value": "Rectangle with Flat Top",
+            "parameterId": 2028
+          },
+          {
+            "name": "Lens Size",
+            "value": "1.10mm x 0.80mm",
+            "parameterId": 2029
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Typ)",
+            "value": "2.1V",
+            "parameterId": 319
+          },
+          {
+            "name": "Current - Test",
+            "value": "20mA",
+            "parameterId": 543
+          },
+          {
+            "name": "Viewing Angle",
+            "value": "130°",
+            "parameterId": 551
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Wavelength - Dominant",
+            "value": "569nm",
+            "parameterId": 969
+          },
+          {
+            "name": "Wavelength - Peak",
+            "value": "565nm",
+            "parameterId": 968
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Package / Case",
+            "value": "0603 (1608 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "Chip LED",
+            "parameterId": 1291
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "1.60mm L x 0.80mm W",
+            "parameterId": 46
+          },
+          {
+            "name": "Height (Max)",
+            "value": "0.55mm",
+            "parameterId": 966
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "67-1553-1-ND",
+        "manufacturerProductNumber": "SML-LXT0805GW-TR",
+        "manufacturerName": "Lumex Opto/Components Inc.",
+        "description": "LED GREEN DIFFUSED SMD",
+        "quantityAvailable": 106080,
+        "productUrl": "https://www.digikey.com/en/products/detail/lumex-opto-components-inc/SML-LXT0805GW-TR/304367",
+        "unitPrice": "0.24",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Green LED Indication - Discrete 2V 0805 (2012 Metric)",
+        "datasheetUrl": "https://www.lumex.com/datasheet/files/SML-LXT0805GW-TR.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7165/%7E67%7E0805-%282012-Metric%29%7E.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Optoelectronics",
+          "categoryId": 7
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "14",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "2A  (4 Weeks)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "67-1553-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 96000,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.07291
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.0683
+              },
+              {
+                "breakQuantity": 12000,
+                "unitPrice": 0.06593
+              },
+              {
+                "breakQuantity": 20000,
+                "unitPrice": 0.06325
+              },
+              {
+                "breakQuantity": 28000,
+                "unitPrice": 0.06166
+              },
+              {
+                "breakQuantity": 40000,
+                "unitPrice": 0.0601
+              },
+              {
+                "breakQuantity": 100000,
+                "unitPrice": 0.05667
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "67-1553-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 106080,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.24
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.164
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.1147
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.09218
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.0847
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.07834
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "67-1553-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 106080,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.24
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.164
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.1147
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.09218
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.0847
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.07834
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Color",
+            "value": "Green",
+            "parameterId": 37
+          },
+          {
+            "name": "Configuration",
+            "value": "Standard",
+            "parameterId": 207
+          },
+          {
+            "name": "Lens Color",
+            "value": "White",
+            "parameterId": 525
+          },
+          {
+            "name": "Lens Transparency",
+            "value": "Diffused",
+            "parameterId": 1843
+          },
+          {
+            "name": "Millicandela Rating",
+            "value": "11mcd",
+            "parameterId": 206
+          },
+          {
+            "name": "Lens Style",
+            "value": "Rectangle with Flat Top",
+            "parameterId": 2028
+          },
+          {
+            "name": "Lens Size",
+            "value": "1.30mm x 1.25mm",
+            "parameterId": 2029
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Typ)",
+            "value": "2V",
+            "parameterId": 319
+          },
+          {
+            "name": "Current - Test",
+            "value": "20mA",
+            "parameterId": 543
+          },
+          {
+            "name": "Viewing Angle",
+            "value": "140°",
+            "parameterId": 551
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Wavelength - Dominant",
+            "value": "-",
+            "parameterId": 969
+          },
+          {
+            "name": "Wavelength - Peak",
+            "value": "565nm",
+            "parameterId": 968
+          },
+          {
+            "name": "Features",
+            "value": "-",
+            "parameterId": 5
+          },
+          {
+            "name": "Package / Case",
+            "value": "0805 (2012 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "-",
+            "parameterId": 1291
+          },
+          {
+            "name": "Size / Dimension",
+            "value": "2.00mm L x 1.25mm W",
+            "parameterId": 46
+          },
+          {
+            "name": "Height (Max)",
+            "value": "0.80mm",
+            "parameterId": 966
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-06T04:12:17.933Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 4
+      }
+    }
+  }
+}

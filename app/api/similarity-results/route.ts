@@ -3,8 +3,14 @@ import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { SimilarityResultSchema, type SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
 import { computeAverageScore, computeConfidence } from "@/app/_lib/datasheet/similarity-score";
+import { getMfgMpnDatasheetId, MANUFACTURER_SHORT_NAMES } from "@/app/_lib/datasheet/manufacturer-short-names";
 
 const SIMILARITY_RESULTS_DIR = join(process.cwd(), "app/_lib/datasheet/similarity-results");
+
+/** 既知メーカー短縮名のユニーク一覧（長い順にソートし、最長一致で prefix を剥がす） */
+const KNOWN_MFG_PREFIXES = [...new Set(Object.values(MANUFACTURER_SHORT_NAMES))]
+  .sort((a, b) => b.length - a.length)
+  .map((s) => s + "_");
 
 /**
  * APIレスポンス用の型（totalScore・confidenceを含む）
@@ -60,13 +66,23 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const targetDirCandidates = [targetId, toDatasheetTargetId(targetId)].filter(
+    const manufacturer = searchParams.get("manufacturer") || undefined;
+
+    // ディレクトリ名の候補を優先度順に組み立て
+    const baseCandidates = [targetId, toDatasheetTargetId(targetId)].filter(
       (v, i, a) => a.indexOf(v) === i
     );
+    // manufacturer 指定時は Manufacturer_MPN 形式を最優先
+    const mfgMpnId = getMfgMpnDatasheetId(manufacturer, targetId);
+    const targetDirCandidates = [
+      ...(mfgMpnId ? [mfgMpnId] : []),
+      ...baseCandidates,
+    ].filter((v, i, a) => a.indexOf(v) === i);
 
     let targetDir: string = "";
     let candidateFiles: string[] = [];
 
+    // 1) 完全一致で探す（Manufacturer_MPN → MPN → -01 の順）
     for (const dirId of targetDirCandidates) {
       const candidateDir = join(SIMILARITY_RESULTS_DIR, dirId);
       try {
@@ -75,6 +91,29 @@ export async function GET(request: NextRequest) {
         break;
       } catch {
         continue;
+      }
+    }
+
+    // 2) 見つからなければ、ディレクトリ一覧から *_<targetId> にマッチするものを探す
+    if (!targetDir) {
+      try {
+        const allDirs = await readdir(SIMILARITY_RESULTS_DIR);
+        for (const tId of baseCandidates) {
+          const suffix = `_${tId}`;
+          const match = allDirs.find((d) => d.endsWith(suffix) && d.length > suffix.length);
+          if (match) {
+            const candidateDir = join(SIMILARITY_RESULTS_DIR, match);
+            try {
+              candidateFiles = await readdir(candidateDir);
+              targetDir = candidateDir;
+              break;
+            } catch {
+              continue;
+            }
+          }
+        }
+      } catch {
+        // SIMILARITY_RESULTS_DIR itself doesn't exist
       }
     }
 
@@ -99,6 +138,14 @@ export async function GET(request: NextRequest) {
 
           const candidateIdFromFile = file.replace(/\.json$/, "");
           const responseKeys = toResponseCandidateKeys(candidateIdFromFile);
+          // 候補ファイル名から既知メーカー prefix を剥がし、MPN 部分のキーも追加（UI は MPN で引くため）
+          const candidateMfgPrefix = KNOWN_MFG_PREFIXES.find((p) => candidateIdFromFile.startsWith(p));
+          if (candidateMfgPrefix) {
+            const mpnPart = candidateIdFromFile.slice(candidateMfgPrefix.length);
+            for (const k of toResponseCandidateKeys(mpnPart)) {
+              if (!responseKeys.includes(k)) responseKeys.push(k);
+            }
+          }
 
           const parametersWithPrefix = validatedData.parameters.map((p) => ({
             ...p,

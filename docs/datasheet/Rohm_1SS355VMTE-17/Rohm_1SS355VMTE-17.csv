@@ -1,0 +1,26 @@
+param_id,description,value
+Part_Number,型名,1SS355VM
+Ordering_Part_Number,注文型名,1SS355VMTE-17
+Product_Type,製品種別,Switching Diode (High speed switching)
+Manufacturer,メーカー,ROHM Co. Ltd.
+Structure,構造,Epitaxial planar
+Package,パッケージ,SOD-323FL (SC-90A / UMD2)
+Marking,マーキング,A
+Packing,梱包,Embossed Tape
+Reel_Size,リールサイズ,180 mm
+Taping_Width,テーピング幅,8 mm
+Basic_Ordering_Unit,基本発注単位,3000 pcs
+Taping_Code,テーピングコード,TE-17
+VR,逆電圧,80 V
+VRM,繰り返しピーク逆電圧,90 V
+Io,平均整流順方向電流,100 mA
+IFM,順方向電流,225 mA
+IFSM,ピーク順方向サージ電流 (t=1s),500 mA
+Tj,接合温度,150 °C
+Tstg,保存温度,-55 to 150 °C
+VF,順方向電圧 (IF=100mA),1.2 V max
+IR,逆電流 (VR=80V),100 nA max
+Ct,端子間容量 (VR=0.5V f=1.0MHz),3.0 pF max
+trr,逆回復時間 (VR=6.0V IF=10mA RL=100Ω),4.0 ns max
+Diode_Type,ダイオードタイプ,Switching (High speed)
+Mounting_Type,実装タイプ,Surface Mount

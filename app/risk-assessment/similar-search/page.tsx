@@ -14,6 +14,19 @@ import { computeAverageScore, computeConfidenceWithFixedDenominator, getTargetTo
 import type { DatasheetData, UnifiedProduct } from "@/app/_lib/datasheet/types";
 import type { SimilarityResult } from "@/app/_lib/datasheet/similarity-schema";
 
+/** MPN をデータシート ID の命名規則に合わせてサニタイズ（/, #, :, スペース等 → _） */
+function sanitizeForLookup(s: string): string {
+  return s.replaceAll(/[\s/\\:*?"<>|#]+/g, "_").replace(/_+$/, "");
+}
+
+/** similarity results から candidateId でルックアップ。元の MPN で見つからなければ sanitize 版でも探す */
+function lookupSimilarityResult<T>(
+  results: Record<string, T>,
+  candidateId: string,
+): T | undefined {
+  return results[candidateId] ?? results[sanitizeForLookup(candidateId)];
+}
+
 function SimilarSearchContent() {
   const searchParams = useSearchParams();
   const mpn = searchParams.get("mpn");
@@ -183,7 +196,7 @@ function SimilarSearchContent() {
       return;
     }
 
-    fetchSimilarityResults(targetId)
+    fetchSimilarityResults(targetId, enrichedTargetProduct.manufacturerName)
       .then((results) => {
         setSimilarityResultsCombined(results);
       })
@@ -206,10 +219,10 @@ function SimilarSearchContent() {
         const candidateId =
           candidate.manufacturerProductNumber || candidate.digiKeyProductNumber || "";
         const llmResultDigiKey = candidateId
-          ? similarityResultsDigiKey[candidateId]
+          ? lookupSimilarityResult(similarityResultsDigiKey, candidateId)
           : undefined;
         const llmResultCombined = candidateId
-          ? similarityResultsCombined[candidateId]
+          ? lookupSimilarityResult(similarityResultsCombined, candidateId)
           : undefined;
         if (llmResultDigiKey && llmResultDigiKey.parameters.length > 0) {
           digiKeyParamArrays.push(llmResultDigiKey.parameters);
@@ -253,7 +266,7 @@ function SimilarSearchContent() {
       if (enrichedTargetProduct) {
         // DigiKeyのみ: LLM結果があれば表示、なければ "-"（ルールベースフォールバックなし）
         const llmResultDigiKey = candidateId
-          ? similarityResultsDigiKey[candidateId]
+          ? lookupSimilarityResult(similarityResultsDigiKey, candidateId)
           : undefined;
         if (llmResultDigiKey && llmResultDigiKey.parameters.length > 0) {
           const totalScoreDigiKey = computeAverageScore(llmResultDigiKey.parameters);
@@ -282,7 +295,7 @@ function SimilarSearchContent() {
         }
         // データシート類似度: similarity-results（API で -01⇔D マッピング済み、parameterId は datasheet: 付与済み）
         const llmResultCombined = candidateId
-          ? similarityResultsCombined[candidateId]
+          ? lookupSimilarityResult(similarityResultsCombined, candidateId)
           : undefined;
         if (llmResultCombined && llmResultCombined.parameters.length > 0) {
           const totalScore = computeAverageScore(llmResultCombined.parameters);

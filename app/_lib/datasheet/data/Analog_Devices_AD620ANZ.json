@@ -1,0 +1,271 @@
+{
+  "datasheet_id": "Analog_Devices_AD620ANZ",
+  "version": "1.0",
+  "source": "Analog_Devices_AD620ANZ.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "AD620ANZ (8-Lead PDIP, -40°C to +85°C, RoHS Compliant)"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "8-Lead PDIP (N-8)"
+    },
+    "Body_Size_PDIP": {
+      "description": "外形寸法 (PDIP)",
+      "value": "0.400 in × 0.210 in (10.16 mm × 5.33 mm)"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "Low Cost Low Power Instrumentation Amplifier"
+    },
+    "Gain_Equation": {
+      "description": "利得式",
+      "value": "G = 1 + (49.4 kΩ/RG)"
+    },
+    "Gain_Range": {
+      "description": "利得範囲",
+      "value": "1 to 10,000"
+    },
+    "Gain_Error_G1": {
+      "description": "利得誤差 (G=1, VOUT=±10V)",
+      "value": "0.03 typ / 0.10 max %"
+    },
+    "Gain_Error_G10": {
+      "description": "利得誤差 (G=10, VOUT=±10V)",
+      "value": "0.15 typ / 0.30 max %"
+    },
+    "Gain_Error_G100": {
+      "description": "利得誤差 (G=100, VOUT=±10V)",
+      "value": "0.15 typ / 0.30 max %"
+    },
+    "Gain_Error_G1000": {
+      "description": "利得誤差 (G=1000, VOUT=±10V)",
+      "value": "0.40 typ / 0.70 max %"
+    },
+    "Supply_Voltage": {
+      "description": "電源電圧",
+      "value": "±2.3 V to ±18 V"
+    },
+    "Operating_Temperature": {
+      "description": "動作温度範囲 (A grade)",
+      "value": "-40 to +85 °C"
+    },
+    "Storage_Temperature": {
+      "description": "保存温度範囲 (N package)",
+      "value": "-65 to +125 °C"
+    },
+    "Input_Offset_Voltage": {
+      "description": "入力オフセット電圧 (AD620A, VS=±5V to ±15V)",
+      "value": "30 μV typ / 125 μV max"
+    },
+    "Input_Offset_Voltage_Overtemp": {
+      "description": "入力オフセット電圧 全温度 (AD620A)",
+      "value": "185 μV max"
+    },
+    "Input_Offset_Voltage_TC": {
+      "description": "入力オフセット電圧 TC (AD620A)",
+      "value": "0.3 typ / 1.0 max μV/°C"
+    },
+    "Output_Offset_Voltage_15V": {
+      "description": "出力オフセット電圧 (VS=±15V)",
+      "value": "400 typ / 1000 max μV"
+    },
+    "Output_Offset_Voltage_5V": {
+      "description": "出力オフセット電圧 (VS=±5V)",
+      "value": "1500 max μV"
+    },
+    "Output_Offset_Voltage_TC": {
+      "description": "出力オフセット電圧 TC (AD620A)",
+      "value": "5.0 typ / 15 max μV/°C"
+    },
+    "Input_Bias_Current": {
+      "description": "入力バイアス電流 (AD620A)",
+      "value": "0.5 typ / 2.0 max nA"
+    },
+    "Input_Bias_Current_Overtemp": {
+      "description": "入力バイアス電流 全温度 (AD620A)",
+      "value": "2.5 max nA"
+    },
+    "Input_Offset_Current": {
+      "description": "入力オフセット電流 (AD620A)",
+      "value": "0.3 typ / 1.0 max nA"
+    },
+    "Input_Offset_Current_Overtemp": {
+      "description": "入力オフセット電流 全温度 (AD620A)",
+      "value": "1.5 max nA"
+    },
+    "Input_Impedance_Differential": {
+      "description": "差動入力インピーダンス",
+      "value": "10 GΩ || 2 pF"
+    },
+    "Input_Impedance_CommonMode": {
+      "description": "同相入力インピーダンス",
+      "value": "10 GΩ || 2 pF"
+    },
+    "Input_Voltage_Range_LowVS": {
+      "description": "入力電圧範囲 (VS=±2.3V to ±5V, G=1)",
+      "value": "−VS + 1.9 V to +VS − 1.2 V"
+    },
+    "Input_Voltage_Range_HighVS": {
+      "description": "入力電圧範囲 (VS=±5V to ±18V)",
+      "value": "−VS + 1.9 V to +VS − 1.4 V"
+    },
+    "CMRR_G1": {
+      "description": "同相除去比 (G=1, DC to 60Hz)",
+      "value": "73 min / 90 typ dB"
+    },
+    "CMRR_G10": {
+      "description": "同相除去比 (G=10, DC to 60Hz)",
+      "value": "93 min / 110 typ dB"
+    },
+    "CMRR_G100": {
+      "description": "同相除去比 (G=100, DC to 60Hz)",
+      "value": "110 min / 130 typ dB"
+    },
+    "CMRR_G1000": {
+      "description": "同相除去比 (G=1000, DC to 60Hz)",
+      "value": "110 min / 130 typ dB"
+    },
+    "PSR_G1": {
+      "description": "電源除去比 (G=1)",
+      "value": "80 min / 100 typ dB"
+    },
+    "PSR_G10": {
+      "description": "電源除去比 (G=10)",
+      "value": "95 min / 120 typ dB"
+    },
+    "PSR_G100": {
+      "description": "電源除去比 (G=100)",
+      "value": "110 min / 140 typ dB"
+    },
+    "PSR_G1000": {
+      "description": "電源除去比 (G=1000)",
+      "value": "110 min / 140 typ dB"
+    },
+    "Output_Swing_LowVS": {
+      "description": "出力スイング (RL=10kΩ, VS=±2.3V to ±5V)",
+      "value": "−VS + 1.1 V to +VS − 1.2 V"
+    },
+    "Output_Swing_HighVS": {
+      "description": "出力スイング (RL=10kΩ, VS=±5V to ±18V)",
+      "value": "−VS + 1.2 V to +VS − 1.4 V"
+    },
+    "Short_Circuit_Current": {
+      "description": "短絡電流",
+      "value": "±18 mA"
+    },
+    "Bandwidth_G1": {
+      "description": "小信号 -3dB 帯域幅 (G=1)",
+      "value": "1000 kHz"
+    },
+    "Bandwidth_G10": {
+      "description": "小信号 -3dB 帯域幅 (G=10)",
+      "value": "800 kHz"
+    },
+    "Bandwidth_G100": {
+      "description": "小信号 -3dB 帯域幅 (G=100)",
+      "value": "120 kHz"
+    },
+    "Bandwidth_G1000": {
+      "description": "小信号 -3dB 帯域幅 (G=1000)",
+      "value": "12 kHz"
+    },
+    "Slew_Rate": {
+      "description": "スルー・レート",
+      "value": "0.75 min / 1.2 typ V/μs"
+    },
+    "Settling_Time_G1_100": {
+      "description": "セトリング時間 0.01% (G=1–100, 10V Step)",
+      "value": "15 μs"
+    },
+    "Settling_Time_G1000": {
+      "description": "セトリング時間 0.01% (G=1000, 10V Step)",
+      "value": "150 μs"
+    },
+    "Voltage_Noise_Input_1kHz": {
+      "description": "入力電圧ノイズ eni @ 1 kHz",
+      "value": "9 typ / 13 max nV/√Hz"
+    },
+    "Voltage_Noise_Output_1kHz": {
+      "description": "出力電圧ノイズ eno @ 1 kHz",
+      "value": "72 typ / 100 max nV/√Hz"
+    },
+    "RTI_Noise_G1_0.1_10Hz": {
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=1)",
+      "value": "3.0 typ μV p-p"
+    },
+    "RTI_Noise_G10_0.1_10Hz": {
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=10)",
+      "value": "0.55 typ μV p-p"
+    },
+    "RTI_Noise_G100_1000_0.1_10Hz": {
+      "description": "RTI ノイズ 0.1 Hz to 10 Hz (G=100–1000)",
+      "value": "0.28 typ μV p-p"
+    },
+    "Current_Noise_1kHz": {
+      "description": "電流ノイズ @ 1 kHz",
+      "value": "100 fA/√Hz"
+    },
+    "Current_Noise_0.1_10Hz": {
+      "description": "電流ノイズ 0.1 Hz to 10 Hz",
+      "value": "10 pA p-p"
+    },
+    "Quiescent_Current": {
+      "description": "消費電流 (無負荷)",
+      "value": "0.9 typ / 1.3 max mA"
+    },
+    "Reference_Input_RIN": {
+      "description": "参照入力抵抗",
+      "value": "20 kΩ"
+    },
+    "Reference_Input_IIN": {
+      "description": "参照入力電流",
+      "value": "50 typ / 60 max μA"
+    },
+    "Reference_Voltage_Range": {
+      "description": "参照端子電圧範囲",
+      "value": "−VS + 1.6 V to +VS − 1.6 V"
+    },
+    "Reference_Gain_to_Output": {
+      "description": "参照端子利得",
+      "value": "1 ± 0.0001"
+    },
+    "Nonlinearity_10k": {
+      "description": "非線形性 (G=1–1000, RL=10kΩ)",
+      "value": "10 typ / 40 max ppm"
+    },
+    "Nonlinearity_2k": {
+      "description": "非線形性 (G=1–100, RL=2kΩ)",
+      "value": "10 typ / 95 max ppm"
+    },
+    "Gain_vs_Temperature_G1": {
+      "description": "利得 対 温度特性 (G=1)",
+      "value": "10 ppm/°C"
+    },
+    "Gain_vs_Temperature_G_gt_1": {
+      "description": "利得 対 温度特性 (G>1)",
+      "value": "-50 ppm/°C"
+    },
+    "Differential_Input_Voltage_Max": {
+      "description": "差動入力電圧 最大",
+      "value": "25 V"
+    },
+    "Power_Dissipation_Max": {
+      "description": "最大消費電力",
+      "value": "650 mW"
+    },
+    "Thermal_Resistance_PDIP": {
+      "description": "熱抵抗 θJA (8-Lead PDIP)",
+      "value": "95 °C/W"
+    },
+    "Lead_Temperature_Soldering": {
+      "description": "リード温度 (はんだ付け10秒)",
+      "value": "300 °C"
+    },
+    "RoHS_Compliant": {
+      "description": "RoHS対応",
+      "value": "Yes (Z suffix)"
+    }
+  }
+}

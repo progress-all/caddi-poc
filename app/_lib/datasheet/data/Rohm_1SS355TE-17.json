@@ -1,0 +1,87 @@
+{
+  "datasheet_id": "Rohm_1SS355TE-17",
+  "version": "1.0",
+  "source": "Rohm_1SS355TE-17.pdf",
+  "parameters": {
+    "Part_Number": {
+      "description": "型名",
+      "value": "1SS355"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "Switching Diode"
+    },
+    "Package": {
+      "description": "パッケージ",
+      "value": "UMD2 (SC-76 / SOD-323)"
+    },
+    "Package_Dimensions": {
+      "description": "パッケージ寸法",
+      "value": "2.5 ± 0.2 x 1.25 ± 0.1 x 0.7 mm"
+    },
+    "Construction": {
+      "description": "構造",
+      "value": "Silicon epitaxial planar"
+    },
+    "Application": {
+      "description": "用途",
+      "value": "High speed switching"
+    },
+    "VRM": {
+      "description": "ピーク逆電圧",
+      "value": "90 V"
+    },
+    "VR": {
+      "description": "DC逆電圧",
+      "value": "80 V"
+    },
+    "IFM": {
+      "description": "ピーク順電流",
+      "value": "225 mA"
+    },
+    "IO": {
+      "description": "平均整流電流",
+      "value": "100 mA"
+    },
+    "Isurge": {
+      "description": "サージ電流 (1s)",
+      "value": "500 mA"
+    },
+    "Tj_Max": {
+      "description": "最大接合温度",
+      "value": "125 °C"
+    },
+    "Tstg": {
+      "description": "保存温度範囲",
+      "value": "-55 to +125 °C"
+    },
+    "VF": {
+      "description": "順方向電圧 (IF=100mA)",
+      "value": "1.2 V max"
+    },
+    "IR": {
+      "description": "逆電流 (VR=80V)",
+      "value": "0.1 µA max"
+    },
+    "CT": {
+      "description": "端子間容量 (VR=0.5V, f=1MHz)",
+      "value": "3.0 pF max"
+    },
+    "trr": {
+      "description": "逆回復時間 (VR=6V, IF=10mA, RL=100Ω)",
+      "value": "4 ns max"
+    },
+    "trr_typ": {
+      "description": "逆回復時間 (typ)",
+      "value": "1.2 ns typ"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Surface Mount"
+    },
+    "Diode_Type": {
+      "description": "ダイオードタイプ",
+      "value": "Switching"
+    }
+  }
+}

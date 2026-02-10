@@ -1,0 +1,1479 @@
+# PDF Text Extraction
+# Source: MACOM_Technology_Solutions_MAAP-011232-TR0500_011232.pdf
+# Pages: 15
+
+
+============================================================
+PAGE 1
+============================================================
+
+1 
+1 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+1 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Ordering Information1,2 
+1. Reference Application Note M513 for reel size information. 
+2. All sample boards include 5 loose parts. 
+MAAP-011232 
+Bulk 
+MAAP-011232-TR0500 
+500 Piece Reel 
+MAAP-011232-TR1000 
+1000 Piece Reel 
+MAAP-011232-001SMB 
+Sample Board Type A 
+MAAP-011232-002SMB 
+Sample Board Type B 
+Functional Schematic 
+Pin Configuration3,4 
+1 - 4, 9 - 12 
+No Connection 
+5 
+Drain Voltage VD1 
+6, 8, 13, 15 
+Ground 
+7 
+RF Input 
+14 
+RF Output &  
+Drain Voltage VD2 
+16 
+Shut Off Voltage VG 
+3. MACOM recommends connecting unused package pins to 
+ground. 
+4. The exposed pad centered on the package bottom must be 
+connected to RF, DC and thermal ground. 
+1
+16
+15
+14
+13
+5
+6
+7
+8
+9
+10
+11
+12
+4
+3
+2
+N/C
+N/C
+N/C
+N/C
+N/C
+N/C
+N/C
+N/C
+VD1
+GND
+RFIN
+GND
+VG1
+GND
+RFOUT / 
+VD2
+GND
+Features 
+• Gain: 24.5 dB 
+• P-1dB: 29 dBm 
+• PSAT: 30 dBm 
+• PAE at PSAT: 40% 
+• OIP3: 40 dBm 
+• Bias Conditions: 9 V, 265 mA 
+• Fully Matched Output 
+• Lead-Free 3 mm 16-LD PQFN package 
+• RoHS* Compliant  
+ 
+Applications 
+• 
+LMR 
+• 
+MILCOM 
+• 
+SATCOM 
+• 
+Sensors & Telemetry 
+• 
+Test & Measurement 
+ 
+Description 
+The MAAP-011232 is a 2-stage power amplifier with 
+gain shut off, operating from 100 MHz to 3 GHz. For 
+operation in the 100 MHz to 1 GHz frequency range 
+no I/O matching is required. Internal DC blocking is 
+provided at the input, while the RF output port is DC 
+coupled through an external bias-tee. Bias current, 
+RF gain and output power are controlled with a gate 
+bias voltage (VG). Typical current consumption is      
+<300 mA at maximum output power. 
+ 
+The MAAP-011232 is well suited to both power and 
+driver requirements for multiple applications. 
+ 
+The MAAP-011232 is fabricated using a GaAs        
+D-mode high breakdown process which features full 
+passivation for increased performance and reliability. 
+* Restrictions on Hazardous Substances, compliant to current RoHS EU directive. 
+
+
+============================================================
+PAGE 2
+============================================================
+
+2 
+2 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+2 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Electrical Specifications:  
+Freq. = 1 GHz, TA = +25°C, VD1 = VD2 = 9 V, IDQ2 = 200 mA, Z0 = 50 Ω, 
+VG pulsed with 1 ms pulse width and 10% duty cycle 
+Symbol 
+Small-Signal Gain 
+SSG 
+-10 dBm input drive level 
+dB 
+23 
+24.5 
+— 
+Output Power at 1dB compression 
+P-1dB 
+— 
+dBm 
+— 
+29 
+— 
+Saturated Output Power 
+PSAT 
+3 dB Gain compression 
+dBm 
+28.5 
+30 
+— 
+Power Added Efficiency 
+PAE 
+3 dB Gain compression 
+% 
+35 
+40 
+— 
+Reverse Isolation 
+S12 
+-10 dBm input drive level 
+dB 
+— 
+50 
+— 
+Input Return Loss 
+IRL 
+-10 dBm input drive level 
+dB 
+— 
+8 
+— 
+Output Return Loss 
+ORL 
+-10 dBm input drive level 
+dB 
+— 
+12 
+— 
+Output Third Order Intercept 
+OIP3 
+-13 dBm/tone, F1-F2 = 6 MHz 
+dBm 
+— 
+40 
+— 
+Gate Bias Voltage 
+VG 
+3 dB Gain compression 
+V 
+-0.75 
+-0.55 
+-0.30 
+Quiescent Drain Current 
+IDQ1 
+— 
+mA 
+— 
+65 
+— 
+Schematic of the Production Test Board 
+Pin 1
+2
+3
+4
+12
+11
+10
+9
+5
+6
+7
+8
+16
+15
+14
+13
+RF IN
+RF OUT
+VD1
+VG
+L2
+L3
+VD2
+C4
+C5
+C2
+C3
+
+
+============================================================
+PAGE 3
+============================================================
+
+3 
+3 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+3 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Absolute Maximum Ratings5,6 
+5. Exceeding any one or combination of these limits may cause     
+permanent damage to this device. 
+6. MACOM does not recommend sustained operation near these 
+survivability limits. 
+7. Operating at nominal conditions with TJ ≤ +150°C will ensure 
+MTTF > 1 x 106 hours. 
+8. Junction Temperature (TJ) = TC + ӨJC * [(V * I) - (POUT - PIN)] 
+    Typical thermal resistance (Өjc) = 29°C/W. 
+RF Input Power 
+ 20 dBm 
+Gate Voltage 
+-4 V to 0 V 
+Drain Voltage VD1 
+10 V 
+Drain Voltage VD2 
+10 V 
+Junction Temperature7,8 
++150°C 
+Operating Temperature 
+-40°C to +85°C 
+Storage Temperature 
+-55°C to +150°C 
+Operating the MAAP-011232 
+To operate the device, follow these steps: 
+ 
+1. Set VG to -2 V. 
+2. Turn on VD1 and VD2 to 5-9 V. 
+3. Adjust VG to set IDQ2 (IDQ1 varies). 
+4. Turn off in reverse order with VG last. 
+Handling Procedures 
+Please observe the following precautions to avoid 
+damage: 
+ 
+Static Sensitivity 
+These 
+electronic 
+devices 
+are 
+sensitive 
+to 
+electrostatic discharge (ESD) and can be damaged 
+by static electricity.  Proper ESD control techniques 
+should be used when handling these (HBM) Class 
+1A devices. 
+
+
+============================================================
+PAGE 4
+============================================================
+
+4 
+4 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+4 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Typical Electrical Specifications: Test Board A: 100 - 1600 MHz Input Tuning 
+TA = +25°C, VD1 = VD2 = 9 V, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+Schematic of the Test Board Type A: 100-1600 MHz Input Tuning 
+Symbol 
+Frequency 
+F 
+— 
+MHz 
+100 
+700 
+1100 
+1600 
+Small-Signal Gain 
+SSG 
+-10 dBm input drive level 
+dB 
+16 
+26 
+25 
+21 
+Output Power at 1dB compression 
+P-1dB 
+1 dB Gain compression 
+dBm 
+29 
+29 
+30 
+29 
+Saturated Output Power 
+PSAT 
+3 dB Gain compression 
+dBm 
+30 
+30 
+30.5 
+30 
+Power Added Efficiency 
+PAE 
+3 dB Gain compression 
+% 
+32 
+40 
+45 
+37 
+Reverse Isolation 
+S12 
+-10 dBm input drive level 
+dB 
+79 
+56 
+55 
+53 
+Input Return Loss 
+IRL 
+-10 dBm input drive level 
+dB 
+4 
+17 
+28 
+7 
+Output Return Loss 
+ORL 
+-10 dBm input drive level 
+dB 
+17 
+16 
+15 
+14 
+Output Third Order Intercept 
+OIP3 
+-13 dBm/tone, F1-F2 = 6 MHz 
+dBm 
+41 
+44 
+43 
+40 
+Gate Bias Voltage 
+VG 
+— 
+V 
+-0.55  
+Quiescent Drain Current 
+IDQ1 
+— 
+mA 
+65 
+Pin 1
+2
+3
+4
+12
+11
+10
+9
+5
+6
+7
+8
+16
+15
+14
+13
+RF IN
+RF OUT
+VD1
+VG
+L1
+L2
+L3
+VD2
+C1
+C4
+C5
+C2
+C3
+
+
+============================================================
+PAGE 5
+============================================================
+
+5 
+5 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+5 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Test Board Type A: 100 - 1600 MHz Input Tuning 
+Parts List 
+C1 
+Capacitor 
+0.6 pF 
+0402 
+   Murata 
+C2, C4 
+Capacitor 
+0.1 µF 
+0402 
+   Murata 
+C3 
+Capacitor 
+100 pF 
+0402 
+   Murata 
+C5 
+Capacitor 
+10 nF 
+0402 
+   Murata 
+L1 
+Inductor 
+7.5 nH 
+0402 
+   0402CS, Coilcraft 
+L2 
+Inductor 
+560 nH 
+0402 
+   0402AF, Coilcraft 
+L3 
+Inductor 
+110 nH 
+0603 
+   0603HP, Coilcraft 
+J1, J2 
+SMA Connector 
+— 
+— 
+   142-0701-881 Emerson 
+PCB Material: R4003C LoPro, 0.008” THICK, Solid Copper filled vias 
+
+
+============================================================
+PAGE 6
+============================================================
+
+6 
+6 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+6 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Isolation vs. Frequency 
+Input Return Loss vs. Frequency 
+Insertion Gain vs. Frequency 
+Test Board Type A: S-parameters over Temperature 
+Test Conditions: TA = +25°C, VD1 = VD2 = 9 V, IDQ1 = 65 mA, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+Output Return Loss vs. Frequency 
+0
+5
+10
+15
+20
+25
+30
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S21 (dB)
+Frequency (GHz)
+-30
+-25
+-20
+-15
+-10
+-5
+0
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S11 (dB)
+Frequency (GHz)
+-80
+-70
+-60
+-50
+-40
+-30
+-20
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S12 (dB)
+Frequency (GHz)
+-30
+-25
+-20
+-15
+-10
+-5
+0
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S22 (dB)
+Frequency (GHz)
+
+
+============================================================
+PAGE 7
+============================================================
+
+7 
+7 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+7 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Test Board Type A - Power Performance @ Room Temperature 
+Test Conditions: TA = +25°C, VD1 = VD2 = 9 V, IDQ1 = 65 mA, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+POUT, Gain and Efficiency vs. PIN @ 700 MHz 
+Bias Current vs. PIN @ 700 MHz 
+Pout, Gain and Efficiency vs. PIN @ 1100 MHz 
+Bias Current vs. PIN @ 1100 MHz 
+Pout, Gain and Efficiency vs. PIN @ 1600 MHz 
+Bias Current vs. PIN @ 1600 MHz 
+0
+10
+20
+30
+40
+50
+60
+-15
+-10
+-5
+0
+5
+10
+15
+Pout
+Gain
+Efficiency
+Pout & Gain (dBm), Efficiency (%)
+Input Power (dBm)
+0
+10
+20
+30
+40
+50
+60
+-15
+-10
+-5
+0
+5
+10
+15
+Pout
+Gain
+Efficiency
+Pout & Gain (dBm), Efficiency (%)
+Input Power (dBm)
+0
+10
+20
+30
+40
+50
+60
+-15
+-10
+-5
+0
+5
+10
+15
+Pout
+Gain
+Efficiency
+Pout & Gain (dBm), Efficiency (%)
+Input Power (dBm)
+0
+50
+100
+150
+200
+250
+-15
+-10
+-5
+0
+5
+10
+15
+ID1
+ID2
+ID1 & ID2 (mA)
+Input Power (dBm)
+0
+50
+100
+150
+200
+250
+-15
+-10
+-5
+0
+5
+10
+15
+ID1
+ID2
+ID1 & ID2 (mA)
+Input Power (dBm)
+0
+50
+100
+150
+200
+250
+-15
+-10
+-5
+0
+5
+10
+15
+ID1
+ID2
+ID1 & ID2 (mA)
+Input Power (dBm)
+
+
+============================================================
+PAGE 8
+============================================================
+
+8 
+8 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+8 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+P1dB vs. Frequency 
+PAE vs. Frequency 
+Saturated Power vs. Frequency 
+Test Board Type A - Power Performance over Temperature 
+Test Conditions: TA = +25°C, VD1 = VD2 = 9 V, IDQ1 = 65 mA, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+PIN = -13 dBm/tone, tone separation = 6 MHz 
+Gain Control Range vs. Frequency 
+Measured for VG between -0.4 V and -1.4 V 
+25
+27
+29
+31
+33
+35
+0.0
+0.5
+1.0
+1.5
+2.0
++25°C
+-40°C
++85°C
+PSAT (dBm)
+Frequency (GHz)
+0
+10
+20
+30
+40
+50
+0.0
+0.5
+1.0
+1.5
+2.0
++25°C
+-40°C
++85°C
+PAE (%)
+Frequency (GHz)
+25
+27
+29
+31
+33
+35
+0.0
+0.5
+1.0
+1.5
+2.0
++25°C
+-40°C
++85°C
+P1dB (dBm)
+Frequency (GHz)
+0
+10
+20
+30
+40
+50
+0.0
+0.5
+1.0
+1.5
+2.0
+Gain Control Range (dB)
+Frequency (GHz)
+Output IP3 vs. Frequency 
+0
+10
+20
+30
+40
+50
+0.0
+0.5
+1.0
+1.5
+2.0
++25°C
+-40°C
++85°C
+OIP3 (dBm)
+Frequency (GHz)
+
+
+============================================================
+PAGE 9
+============================================================
+
+9 
+9 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+9 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Symbol 
+Frequency 
+F 
+— 
+MHz 
+2000 
+2500 
+3000 
+Small-Signal Gain 
+SSG 
+-10 dBm input drive level 
+dB 
+24 
+24 
+17 
+Output Power @ 1dB compression 
+P-1dB 
+1 dB Gain compression 
+dBm 
+29 
+29 
+30 
+Saturated Output Power 
+PSAT 
+3 dB Gain compression 
+dBm 
+30 
+30 
+30.5 
+Power Added Efficiency 
+PAE 
+3 dB Gain compression 
+% 
+37 
+40.5 
+37 
+Reverse Isolation 
+S12 
+-10 dBm input drive level 
+dB 
+51 
+52 
+54 
+Input Return Loss 
+IRL 
+-10 dBm input drive level 
+dB 
+9 
+11 
+2 
+Output Return Loss 
+ORL 
+-10 dBm input drive level 
+dB 
+10 
+9 
+9 
+Output Third Order Intercept 
+OIP3 
+-13 dBm/tone, F1-F2 = 6 MHz 
+dBm 
+40 
+42 
+40 
+Gate Bias Voltage 
+VG 
+— 
+V 
+-0.55  
+Quiescent Drain Current 
+IDQ1 
+— 
+mA 
+65 
+Typical Electrical Specifications: Test Board B: 1600 - 3000 MHz Input Tuning 
+TA = +25°C, VD1 = VD2 = 9 V, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+Schematic of the Test Board Type B: 1600-3000 MHz Input Tuning 
+Pin 1
+2
+3
+4
+12
+11
+10
+9
+5
+6
+7
+8
+16
+15
+14
+13
+RF IN
+RF OUT
+VD1
+VG
+L2
+L4
+L5
+VD2
+C2
+C6
+C5
+C4
+C3
+L1
+C1
+L3
+C8
+C7
+
+
+============================================================
+PAGE 10
+============================================================
+
+10 
+10 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+10 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Test Board Type B: 1600 - 3000 MHz Input Tuning 
+Parts List 
+C1 
+Capacitor 
+1.2 pF 
+0402 
+   PPI 
+C4, C5 
+Capacitor 
+10 nF 
+0402 
+   Murata 
+C2, C6 
+Capacitor 
+0.1 µF 
+0402 
+   Murata 
+C3 
+Capacitor 
+100 pF 
+0402 
+   Murata 
+L1 
+Inductor 
+5.6 nH 
+0402 
+   0402HP, Coilcraft 
+L2 
+Inductor 
+560 nH 
+0402 
+   0402AF, Coilcraft 
+L3 
+Inductor 
+110 nH 
+0603 
+   0603HP, Coilcraft 
+L4 
+Inductor 
+10 nH 
+0402 
+   0402HP, Coilcraft 
+L5 
+Inductor 
+3.3 nH 
+0402 
+   0402HP, Coilcraft 
+J1, J2 
+SMA Connector 
+— 
+— 
+   142-0701-881 Emerson 
+PCB Material: R4003C LoPro, 0.008” THICK, Solid Copper filled vias 
+
+
+============================================================
+PAGE 11
+============================================================
+
+11 
+11 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+11 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Isolation vs. Frequency 
+Input Return Loss vs. Frequency 
+Insertion Gain vs. Frequency 
+Test Board Type B: S-parameters over Temperature 
+Test Conditions: TA = +25°C, VD1 = VD2 = 9 V, IDQ1 = 65 mA, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+Output Return Loss vs. Frequency 
+0
+5
+10
+15
+20
+25
+30
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S21 (dB)
+Frequency (GHz)
+-80
+-70
+-60
+-50
+-40
+-30
+-20
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S12 (dB)
+Frequency (GHz)
+-30
+-25
+-20
+-15
+-10
+-5
+0
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S11 (dB)
+Frequency (GHz)
+-30
+-25
+-20
+-15
+-10
+-5
+0
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
++25°C
+-40°C
++85°C
+S22 (dB)
+Frequency (GHz)
+
+
+============================================================
+PAGE 12
+============================================================
+
+12 
+12 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+12 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+Test Board Type B - Power Performance @ Room Temperature 
+Test Conditions: TA = +25°C, VD1 = VD2 = 9 V, IDQ1 = 65 mA, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+POUT, Gain and Efficiency vs. PIN @ 2 GHz 
+Bias Current vs. PIN @ 2 GHz 
+Pout, Gain and Efficiency vs. PIN @ 2.5 GHz 
+Bias Current vs. PIN @ 2.5 GHz 
+Pout, Gain and Efficiency vs. PIN @ 3 GHz 
+Bias Current vs. PIN @ 3 GHz 
+0
+10
+20
+30
+40
+50
+60
+-15
+-10
+-5
+0
+5
+10
+15
+Pout
+Gain
+Efficiency
+Pout & Gain (dBm), Efficiency (%)
+Input Power (dBm)
+0
+10
+20
+30
+40
+50
+60
+-15
+-10
+-5
+0
+5
+10
+15
+Pout
+Gain
+Efficiency
+Pout & Gain (dBm), Efficiency (%)
+Input Power (dBm)
+0
+10
+20
+30
+40
+50
+60
+-15
+-10
+-5
+0
+5
+10
+15
+Pout
+Gain
+Efficiency
+Pout & Gain (dBm), Efficiency (%)
+Input Power (dBm)
+0
+50
+100
+150
+200
+250
+-15
+-10
+-5
+0
+5
+10
+15
+ID1
+ID2
+ID1 & ID2 (mA)
+Input Power (dBm)
+0
+50
+100
+150
+200
+250
+-15
+-10
+-5
+0
+5
+10
+15
+ID1
+ID2
+ID1 & ID2 (mA)
+Input Power (dBm)
+0
+50
+100
+150
+200
+250
+-15
+-10
+-5
+0
+5
+10
+15
+ID1
+ID2
+ID1 & ID2 (mA)
+Input Power (dBm)
+
+
+============================================================
+PAGE 13
+============================================================
+
+13 
+13 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+13 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+P1dB vs. Frequency 
+PAE vs. Frequency 
+Saturated Power vs. Frequency 
+Test Board Type B - Power Performance over Temperature 
+Test Conditions: TA = +25°C, VD1 = VD2 = 9 V, IDQ1 = 65 mA, IDQ2 = 200 mA, Z0 = 50 Ω, CW 
+PIN = -13 dBm/tone, tone separation = 6 MHz 
+Gain Control Range vs. Frequency 
+Measured for VG between -0.4 V and -1.4 V 
+Output IP3 vs. Frequency 
+25
+27
+29
+31
+33
+35
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
++25°C
+-40°C
++85°C
+PSAT (dBm)
+Frequency (GHz)
+25
+27
+29
+31
+33
+35
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
++25°C
+-40°C
++85°C
+P1dB (dBm)
+Frequency (GHz)
+0
+10
+20
+30
+40
+50
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
++25°C
+-40°C
++85°C
+PAE (%)
+Frequency (GHz)
+0
+10
+20
+30
+40
+50
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
++25°C
+-40°C
++85°C
+OIP3 (dBm)
+Frequency (GHz)
+0
+10
+20
+30
+40
+50
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+Gain Control Range (dB)
+Frequency (GHz)
+
+
+============================================================
+PAGE 14
+============================================================
+
+14 
+14 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+14 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+† Reference Application Note M538 for lead-free solder reflow recommendations. 
+   Meets JEDEC moisture sensitivity level 1 requirements. 
+   Plating is 100% matte tin over copper. 
+Lead-Free 3 mm 16-Lead PQFN† 
+9. 
+All dimensions are in inches. 
+10. Landing pattern indicates solder mask opening. Cu-filled via-holes under the ground  are used for optimal thermal performance.                   
+Recommended pattern: 8-mil diameter, 8-mil spacing. 
+Recommended Landing Pattern 
+9,10 
+All dimensions shown as inches/mm 
+
+
+============================================================
+PAGE 15
+============================================================
+
+15 
+15 
+MACOM Technology Solutions Inc. (MACOM) and its affiliates reserve the right to make changes to the product(s) or information contained herein without notice.  
+Visit www.macom.com for additional data sheets and product information. 
+ 
+ 
+For further information and support please visit: 
+https://www.macom.com/support 
+DC-0011105 
+15 
+MAAP-011232 
+Rev.  V3 
+1 W Driver Amplifier with VG Enable 
+0.1 - 3.0 GHz 
+MACOM Technology Solutions Inc. (“MACOM”). All rights reserved.  
+These materials are provided in connection with MACOM’s products as a service to its customers and may be 
+used for informational purposes only. Except as provided in its Terms and Conditions of Sale or any separate 
+agreement, MACOM assumes no liability or responsibility whatsoever, including for (i) errors or omissions in these 
+materials; (ii) failure to update these materials; or (iii) conflicts or incompatibilities arising from future changes to 
+specifications and product descriptions, which MACOM may make at any time, without notice. These materials 
+grant no license, express or implied, to any intellectual property rights.  
+  
+THESE MATERIALS ARE PROVIDED "AS IS" WITH NO WARRANTY OR LIABILITY, EXPRESS OR IMPLIED, 
+RELATING TO SALE AND/OR USE OF MACOM PRODUCTS INCLUDING FITNESS FOR A PARTICULAR          
+PURPOSE, MERCHANTABILITY, INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHT, ACCURACY OR 
+COMPLETENESS, OR SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES WHICH MAY 
+RESULT FROM USE OF THESE MATERIALS.  
+ 
+MACOM products are not intended for use in medical, lifesaving or life sustaining applications. MACOM             
+customers using or selling MACOM products for use in such applications do so at their own risk and agree to fully 
+indemnify MACOM for any damages resulting from such improper use or sale. 

@@ -1,0 +1,615 @@
+# PDF Text Extraction
+# Source: ST_1N5822.pdf
+# Pages: 5
+
+
+============================================================
+PAGE 1
+============================================================
+
+1/5
+1N582x
+July 2003 - Ed: 3A
+LOW DROP POWER SCHOTTKY RECTIFIER
+®
+Axial Power Schottky rectifier suited for Switch
+Mode Power Supplies and high frequency DC to
+DC converters. Packaged in DO-201AD these
+devices are intended for use in low voltage, high
+frequency
+inverters,
+free
+wheeling,
+polarity
+protection and small battery chargers.
+DESCRIPTION
+n VERY SMALL CONDUCTION LOSSES
+n NEGLIGIBLE SWITCHING LOSSES
+n EXTREMELY FAST SWITCHING
+n LOW FORWARD VOLTAGE DROP
+n AVALANCHE CAPABILITY SPECIFIED
+FEATURES AND BENEFITS
+Symbol
+Parameter
+Value
+Unit
+1N5820 1N5821 1N5822
+VRRM
+Repetitive peak reverse voltage
+20
+30
+40
+V
+IF(RMS)
+RMS forward current
+10
+A
+IF(AV)
+Average forward current
+TL = 100°C
+δ = 0.5
+3
+A
+TL = 110°C
+δ = 0.5
+3
+3
+A
+IFSM
+Surge non repetitive forward
+current
+tp = 10 ms
+Sinusoidal
+80
+A
+PARM
+Repetitive peak avalanche
+power
+tp = 1µs
+Tj = 25°C
+1700
+W
+Tstg
+Storage temperature range
+- 65 to + 150
+°C
+Tj
+Maximum operating junction temperature *
+150
+°C
+dV/dt
+Critical rate of rise of reverse voltage
+10000
+V/µs
+ABSOLUTE RATINGS (limiting values)
+IF(AV)
+3 A
+VRRM
+40 V
+Tj
+150°C
+VF (max)
+0.475 V
+MAIN PRODUCTS CHARACTERISTICS
+DO-201AD
+* : dPtot
+dTj
+Rth j
+a
+<
+−
+1
+(
+)
+thermal runaway condition for a diode on its own heatsink
+
+
+============================================================
+PAGE 2
+============================================================
+
+1N582x
+2/5
+Symbol
+Parameter
+Tests Conditions
+1N5820 1N5821 1N5822
+Unit
+IR *
+Reverse leakage
+current
+Tj = 25°C
+VR = VRRM
+2
+2
+2
+mA
+Tj = 100°C
+20
+20
+20
+mA
+VF *
+Forward voltage drop
+Tj = 25°C
+IF = 3 A
+0.475
+0.5
+0.525
+V
+Tj = 25°C
+IF = 9.4 A
+0.85
+0.9
+0.95
+V
+Pulse test : * tp = 380 µs, δ < 2%
+To evaluate the conduction losses use the following equations :
+P = 0.33 x IF(AV) + 0.035 IF2(RMS ) for 1N5820 / 1N5821
+P = 0.33 x IF(AV) + 0.060 IF2(RMS ) for 1N5822
+STATIC ELECTRICAL CHARACTERISTICS
+Symbol
+Parameter
+Value
+Unit
+Rth (j-a)
+Junction to ambient
+Lead length = 10 mm
+80
+°C/W
+Rth (j-l)
+Junction to lead
+Lead length = 10 mm
+25
+°C/W
+THERMAL RESISTANCES
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+1.6
+1.8
+PF(av)(W)
+IF(av) (A)
+T
+δ=tp/T
+tp
+δ = 0.2
+δ = 0.5
+δ = 1
+δ = 0.05
+δ = 0.1
+Fig. 1: Average forward power dissipation versus
+average forward current (1N5820/1N5821).
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+1.6
+1.8
+2.0
+PF(av)(W)
+IF(av) (A)
+T
+δ=tp/T
+tp
+δ = 0.2
+δ = 0.5
+δ = 1
+δ = 0.05
+δ = 0.1
+Fig. 2: Average forward power dissipation versus
+average forward current (1N5822).
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0
+25
+50
+75
+100
+125
+150
+T (°C)
+j
+P
+(t )
+P
+(25°C)
+ARM p
+ARM
+Fig. 4: Normalized avalanche power derating
+versus junction temperature.
+0.001
+0.01
+0.1
+0.01
+1
+0.1
+10
+100
+1000
+1
+t (µs)
+p
+P
+(t )
+P
+(1µs)
+ARM p
+ARM
+Fig. 3: Normalized avalanche power derating
+versus pulse duration.
+
+
+============================================================
+PAGE 3
+============================================================
+
+1N582x
+3/5
+0
+25
+50
+75
+100
+125
+150
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+IF(av)(A)
+Tamb(°C)
+T
+δ=tp/T
+tp
+Rth(j-a)=80°C/W
+Rth(j-a)=Rth(j-l)=25°C/W
+Fig. 5-1: Average forward current versus ambient
+temperature (δ=0.5) (1N5820/1N5821).
+1E-3
+1E-2
+1E-1
+1E+0
+0
+2
+4
+6
+8
+10
+12
+14
+16
+IM(A)
+t(s)
+Ta=100°C
+Ta=75°C
+Ta=25°C
+IM
+t
+δ=0.5
+Fig. 6-1:
+Non repetitive surge peak forward
+current
+versus
+overload
+duration
+(maximum
+values) (1N5820/1N5821).
+1E-1
+1E+0
+1E+1
+1E+2
+1E+3
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Zth(j-a)/Rth(j-a)
+T
+δ=tp/T
+tp
+tp(s)
+δ = 0.1
+δ = 0.2
+δ = 0.5
+Single pulse
+Fig. 7: Relative variation of thermal impedance
+junction to ambient versus pulse duration (epoxy
+printed circuit board, e(Cu)=35mm, recommended
+pad layout).
+0
+25
+50
+75
+100
+125
+150
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+IF(av)(A)
+Tamb(°C)
+T
+δ=tp/T
+tp
+Rth(j-a)=80°C/W
+Rth(j-a)=Rth(j-l)=25°C/W
+Fig. 5-2: Average forward current versus ambient
+temperature (δ=0.5) (1N5822).
+1E-3
+1E-2
+1E-1
+1E+0
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+IM(A)
+t(s)
+Ta=100°C
+Ta=75°C
+Ta=25°C
+IM
+t
+δ=0.5
+Fig. 6-2:
+Non repetitive surge peak forward
+current
+versus
+overload
+duration
+(maximum
+values) (1N5822).
+1
+2
+5
+10
+20
+40
+10
+100
+600
+C(pF)
+VR(V)
+1N5822
+1N5820
+1N5821
+F=1MHz
+Tj=25°C
+Fig. 8: Junction capacitance versus reverse
+voltage applied (typical values).
+
+
+============================================================
+PAGE 4
+============================================================
+
+1N582x
+4/5
+0
+5
+10
+15
+20
+25
+30
+1E-3
+1E-2
+1E-1
+1E+0
+1E+1
+1E+2
+IR(mA)
+VR(V)
+Tj=100°C
+Tj=25°C
+1N5820
+1N5821
+Tj=125°C
+Fig. 9-1: Reverse leakage current versus reverse
+voltage applied (typical values) (1N5820/1N5821).
+0
+5
+10
+15
+20
+25
+30
+35
+40
+1E-3
+1E-2
+1E-1
+1E+0
+1E+1
+5E+1
+IR(mA)
+VR(V)
+Tj=100°C
+Tj=25°C
+Tj=125°C
+Fig. 9-2: Reverse leakage current versus reverse
+voltage applied (typical values) (1N5822).
+0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1
+0.01
+0.10
+1.00
+10.00
+50.00
+IFM(A)
+VFM(V)
+Tj=25°C
+Tj=100°C
+Tj=125°C
+Fig. 10-1: Forward voltage drop versus forward
+current (typical values) (1N5820/1N5821).
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+1.6
+0.01
+0.10
+1.00
+10.00
+50.00
+IFM(A)
+VFM(V)
+Tj=25°C
+Tj=100°C
+Tj=125°C
+Fig. 10-2: Forward voltage drop versus forward
+current (typical values) (1N5822).
+1
+10
+100
+1000
+0
+20
+40
+60
+80
+100
+IFSM(A)
+Number of cycles
+F=50Hz
+Tj initial=25°C
+Fig. 11: Non repetitive surge peak forward current
+versus number of cycles.
+
+
+============================================================
+PAGE 5
+============================================================
+
+1N582x
+5/5
+Information furnished is believed to be accurate and reliable. However, STMicroelectronics assumes no responsibility for the consequences of
+use of such information nor for any infringement of patents or other rights of third parties which may result from its use. No license is granted by
+implication or otherwise under any patent or patent rights of STMicroelectronics. Specifications mentioned in this publication are subject to
+change without notice. This publication supersedes and replaces all information previously supplied.
+STMicroelectronics products are not authorized for use as critical components in life support devices or systems without express written
+approval of STMicroelectronics.
+The ST logo is a registered trademark of STMicroelectronics
+© 2003 STMicroelectronics - Printed in Italy - All rights reserved.
+STMicroelectronics GROUP OF COMPANIES
+Australia - Brazil - Canada - China - Finland - France - Germany
+Hong Kong - India - Israel - Italy - Japan - Malaysia - Malta - Morocco - Singapore
+Spain - Sweden - Switzerland - United Kingdom - United States.
+http://www.st.com
+Ordering type
+Marking
+Package
+Weight
+Base qty
+Delivery mode
+1N582x
+Part number
+cathode ring
+DO-201AD
+1.12g
+600
+Ammopack
+1N582xRL
+Part number
+cathode ring
+DO-201AD
+1.12g
+1900
+Tape & reel
+n EPOXY MEETS UL94,V0
+PACKAGE MECHANICAL DATA
+DO-201AD plastic
+B
+A
+E
+E
+ØD
+ØD
+ØC
+B
+note 2
+note 1
+note 1
+REF.
+DIMENSIONS
+NOTES
+Millimeters
+Inches
+Min.
+Max.
+Min.
+Max.
+A
+9.50
+0.374
+1 - The lead diameter ♠D is not controlled over zone E
+2 - The minimum axial length within which the device may be
+placed with its leads bent at right angles is 0.59"(15 mm)
+B
+25.40
+1.000
+♠C
+5.30
+0.209
+♠D
+1.30
+0.051
+E
+1.25
+0.049

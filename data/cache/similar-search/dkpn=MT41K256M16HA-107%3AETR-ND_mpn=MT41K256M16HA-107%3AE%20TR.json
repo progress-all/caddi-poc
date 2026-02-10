@@ -1,0 +1,529 @@
+{
+  "generatedAt": "2026-02-06T04:40:22.985Z",
+  "key": "dkpn=MT41K256M16HA-107%3AETR-ND_mpn=MT41K256M16HA-107%3AE%20TR",
+  "data": {
+    "targetMpn": "MT41K256M16HA-107:E TR",
+    "targetProduct": {
+      "digiKeyProductNumber": "MT41K256M16HA-107:ETR-ND",
+      "manufacturerProductNumber": "MT41K256M16HA-107:E TR",
+      "manufacturerName": "Micron Technology Inc.",
+      "description": "IC DRAM 4GBIT PAR 96FBGA",
+      "quantityAvailable": 0,
+      "productUrl": "https://www.digikey.com/en/products/detail/micron-technology-inc/MT41K256M16HA-107-E-TR/4315246",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2089/557%3B96FBGA-1.2-9x14%3BGE%3B96.jpg",
+      "unitPrice": "4.72983",
+      "sources": [],
+      "detailedDescription": "SDRAM - DDR3L Memory IC 4Gbit Parallel 933 MHz 20 ns 96-FBGA (9x14)",
+      "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/374/MT41K256M16_MT41K1G4_MT41K512M8_DS.pdf",
+      "partStatus": "Obsolete",
+      "backOrderNotAllowed": false,
+      "normallyStocking": false,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Integrated Circuits (ICs)",
+        "categoryId": 32
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "12",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "3  (168 Hours)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "MT41K256M16HA-107:ETR-ND",
+          "packageType": "Tape & Reel (TR)",
+          "quantityAvailable": 0,
+          "pricing": [
+            {
+              "breakQuantity": 2000,
+              "unitPrice": 4.72983
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "DigiKey Programmable",
+          "value": "Not Verified",
+          "parameterId": 2697
+        },
+        {
+          "name": "Memory Type",
+          "value": "Volatile",
+          "parameterId": 149
+        },
+        {
+          "name": "Memory Format",
+          "value": "DRAM",
+          "parameterId": 961
+        },
+        {
+          "name": "Technology",
+          "value": "SDRAM - DDR3L",
+          "parameterId": 570
+        },
+        {
+          "name": "Memory Size",
+          "value": "4Gbit",
+          "parameterId": 142
+        },
+        {
+          "name": "Memory Organization",
+          "value": "256M x 16",
+          "parameterId": 2689
+        },
+        {
+          "name": "Memory Interface",
+          "value": "Parallel",
+          "parameterId": 2043
+        },
+        {
+          "name": "Clock Frequency",
+          "value": "933 MHz",
+          "parameterId": 800
+        },
+        {
+          "name": "Write Cycle Time - Word, Page",
+          "value": "-",
+          "parameterId": 2042
+        },
+        {
+          "name": "Access Time",
+          "value": "20 ns",
+          "parameterId": 2192
+        },
+        {
+          "name": "Voltage - Supply",
+          "value": "1.283V ~ 1.45V",
+          "parameterId": 276
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "0°C ~ 95°C (TC)",
+          "parameterId": 252
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount",
+          "parameterId": 69
+        },
+        {
+          "name": "Package / Case",
+          "value": "96-TFBGA",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "96-FBGA (9x14)",
+          "parameterId": 1291
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "557-1792-ND",
+        "manufacturerProductNumber": "MT41K256M16TW-107:P",
+        "manufacturerName": "Micron Technology Inc.",
+        "description": "IC DRAM 4GBIT PAR 96FBGA",
+        "quantityAvailable": 8446,
+        "productUrl": "https://www.digikey.com/en/products/detail/micron-technology-inc/MT41K256M16TW-107-P/5956623",
+        "unitPrice": "11.95",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Direct",
+        "detailedDescription": "SDRAM - DDR3L Memory IC 4Gbit Parallel 933 MHz 20 ns 96-FBGA (8x14)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6128/MT41K1G4_MT41K512M8_MT41K256M16_RevR_Sep2018.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/557%7E96FBGA-1.2-8X14%7ETW%7E96.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": true,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "26",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "557-1792-ND",
+            "packageType": "Tray",
+            "quantityAvailable": 8446,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 11.95
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 11.102
+              },
+              {
+                "breakQuantity": 25,
+                "unitPrice": 10.7608
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 10.503
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 10.2467
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 9.91176
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 9.66232
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Memory Type",
+            "value": "Volatile",
+            "parameterId": 149
+          },
+          {
+            "name": "Memory Format",
+            "value": "DRAM",
+            "parameterId": 961
+          },
+          {
+            "name": "Technology",
+            "value": "SDRAM - DDR3L",
+            "parameterId": 570
+          },
+          {
+            "name": "Memory Size",
+            "value": "4Gbit",
+            "parameterId": 142
+          },
+          {
+            "name": "Memory Organization",
+            "value": "256M x 16",
+            "parameterId": 2689
+          },
+          {
+            "name": "Memory Interface",
+            "value": "Parallel",
+            "parameterId": 2043
+          },
+          {
+            "name": "Clock Frequency",
+            "value": "933 MHz",
+            "parameterId": 800
+          },
+          {
+            "name": "Write Cycle Time - Word, Page",
+            "value": "-",
+            "parameterId": 2042
+          },
+          {
+            "name": "Access Time",
+            "value": "20 ns",
+            "parameterId": 2192
+          },
+          {
+            "name": "Voltage - Supply",
+            "value": "1.283V ~ 1.45V",
+            "parameterId": 276
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "0°C ~ 95°C (TC)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "96-TFBGA",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "96-FBGA (8x14)",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "IS46TR16256AL-15HBLA1-ND",
+        "manufacturerProductNumber": "IS46TR16256AL-15HBLA1",
+        "manufacturerName": "ISSI, Integrated Silicon Solution Inc",
+        "description": "IC DRAM 4GBIT PAR 96TWBGA",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/issi-integrated-silicon-solution-inc/IS46TR16256AL-15HBLA1/4861637",
+        "unitPrice": "0",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "SDRAM - DDR3L Memory IC 4Gbit Parallel 667 MHz 20 ns 96-TWBGA (9x13)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/408/IS43_46TR16256A_85120AL.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6649/706%7E96TWBGA-1.2-9X13%7E%7E96.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": true,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "14",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "IS46TR16256AL-15HBLA1-ND",
+            "packageType": "Tray",
+            "quantityAvailable": 0,
+            "pricing": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Memory Type",
+            "value": "Volatile",
+            "parameterId": 149
+          },
+          {
+            "name": "Memory Format",
+            "value": "DRAM",
+            "parameterId": 961
+          },
+          {
+            "name": "Technology",
+            "value": "SDRAM - DDR3L",
+            "parameterId": 570
+          },
+          {
+            "name": "Memory Size",
+            "value": "4Gbit",
+            "parameterId": 142
+          },
+          {
+            "name": "Memory Organization",
+            "value": "256M x 16",
+            "parameterId": 2689
+          },
+          {
+            "name": "Memory Interface",
+            "value": "Parallel",
+            "parameterId": 2043
+          },
+          {
+            "name": "Clock Frequency",
+            "value": "667 MHz",
+            "parameterId": 800
+          },
+          {
+            "name": "Write Cycle Time - Word, Page",
+            "value": "15ns",
+            "parameterId": 2042
+          },
+          {
+            "name": "Access Time",
+            "value": "20 ns",
+            "parameterId": 2192
+          },
+          {
+            "name": "Voltage - Supply",
+            "value": "1.283V ~ 1.45V",
+            "parameterId": 276
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 95°C (TC)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "96-TFBGA",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "96-TWBGA (9x13)",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "IS46TR16256AL-15HBLA1-TR-ND",
+        "manufacturerProductNumber": "IS46TR16256AL-15HBLA1-TR",
+        "manufacturerName": "ISSI, Integrated Silicon Solution Inc",
+        "description": "IC DRAM 4GBIT PAR 96TWBGA",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/issi-integrated-silicon-solution-inc/IS46TR16256AL-15HBLA1-TR/4861638",
+        "unitPrice": "0",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "SDRAM - DDR3L Memory IC 4Gbit Parallel 667 MHz 20 ns 96-TWBGA (9x13)",
+        "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/408/IS43_46TR16256A_85120AL.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6649/706%7E96TWBGA-1.2-9X13%7E%7E96.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": true,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "8",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "3  (168 Hours)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "IS46TR16256AL-15HBLA1-TR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "DigiKey Programmable",
+            "value": "Not Verified",
+            "parameterId": 2697
+          },
+          {
+            "name": "Memory Type",
+            "value": "Volatile",
+            "parameterId": 149
+          },
+          {
+            "name": "Memory Format",
+            "value": "DRAM",
+            "parameterId": 961
+          },
+          {
+            "name": "Technology",
+            "value": "SDRAM - DDR3L",
+            "parameterId": 570
+          },
+          {
+            "name": "Memory Size",
+            "value": "4Gbit",
+            "parameterId": 142
+          },
+          {
+            "name": "Memory Organization",
+            "value": "256M x 16",
+            "parameterId": 2689
+          },
+          {
+            "name": "Memory Interface",
+            "value": "Parallel",
+            "parameterId": 2043
+          },
+          {
+            "name": "Clock Frequency",
+            "value": "667 MHz",
+            "parameterId": 800
+          },
+          {
+            "name": "Write Cycle Time - Word, Page",
+            "value": "15ns",
+            "parameterId": 2042
+          },
+          {
+            "name": "Access Time",
+            "value": "20 ns",
+            "parameterId": 2192
+          },
+          {
+            "name": "Voltage - Supply",
+            "value": "1.283V ~ 1.45V",
+            "parameterId": 276
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 95°C (TC)",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "96-TFBGA",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "96-TWBGA (9x13)",
+            "parameterId": 1291
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-06T04:40:22.933Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 3
+      }
+    }
+  }
+}

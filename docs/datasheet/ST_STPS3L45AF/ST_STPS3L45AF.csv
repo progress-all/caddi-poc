@@ -1,0 +1,36 @@
+param_id,description,value
+Part_Number,型名,STPS3L45AF
+Product_Type,製品種別,Power Schottky Rectifier
+Package,パッケージ,SMAflat (non-exposed pad)
+Marking,マーキング,F3L45
+VRRM,繰り返しピーク逆電圧,45 V
+IF_AV,平均順方向電流 (TL=120°C δ=0.5),3 A
+IFSM,サージ非繰り返し順方向電流 (tp=10ms 正弦波),75 A
+PARM,繰り返しピークアバランシェ電力 (tp=10µs Tj=125°C),70 W
+VARM,最大繰り返しピークアバランシェ電圧 (tp<10µs Tj<125°C IAR<1.4A),50 V
+VASM,最大単パルスピークアバランシェ電圧 (tp<10µs Tj<125°C IAR<1.4A),50 V
+Tstg_Range,保存温度範囲,-65 to +175 °C
+Tj_Max,最大接合温度,150 °C
+IR_25C_Typ,逆漏れ電流 Typ (Tj=25°C VR=VRRM),80 µA
+IR_25C_Max,逆漏れ電流 Max (Tj=25°C VR=VRRM),300 µA
+IR_125C_Typ,逆漏れ電流 Typ (Tj=125°C),66 mA
+IR_125C_Max,逆漏れ電流 Max (Tj=125°C),135 mA
+VF_25C_Typ,順方向電圧降下 Typ (Tj=25°C IF=3A),0.462 V
+VF_25C_Max,順方向電圧降下 Max (Tj=25°C IF=3A),0.57 V
+VF_125C_Typ,順方向電圧降下 Typ (Tj=125°C IF=3A),0.41 V
+VF_125C_Max,順方向電圧降下 Max (Tj=125°C IF=3A),0.51 V
+Conduction_Loss_Formula,導通損失の計算式,P = 0.36 x IF(AV) + 0.05 x IF²(RMS)
+Rth_JL,熱抵抗 (ジャンクション-リード間),15 °C/W
+Dim_A,パッケージ寸法 A (高さ),0.90 to 1.10 mm
+Dim_b,パッケージ寸法 b (リード幅),1.25 to 1.65 mm
+Dim_c,パッケージ寸法 c (リード厚),0.15 to 0.40 mm
+Dim_D,パッケージ寸法 D (本体長さ),2.25 to 2.95 mm
+Dim_E,パッケージ寸法 E (全長),4.80 to 5.60 mm
+Dim_E1,パッケージ寸法 E1 (本体幅),3.95 to 4.60 mm
+Dim_L,パッケージ寸法 L (リード長),0.75 to 1.50 mm
+Dim_L1,パッケージ寸法 L1,0.50 mm typ
+Dim_L2,パッケージ寸法 L2,0.50 mm typ
+Weight,重量,0.035 g
+Ordering_Info,梱包,"Tape and reel, 10000 pcs"
+Mounting_Type,実装タイプ,Surface Mount
+Diode_Type,ダイオードタイプ,Schottky

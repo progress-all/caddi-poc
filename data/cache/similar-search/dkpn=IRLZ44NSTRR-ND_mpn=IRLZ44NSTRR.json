@@ -1,0 +1,884 @@
+{
+  "generatedAt": "2026-02-06T04:40:30.781Z",
+  "key": "dkpn=IRLZ44NSTRR-ND_mpn=IRLZ44NSTRR",
+  "data": {
+    "targetMpn": "IRLZ44NSTRR",
+    "targetProduct": {
+      "digiKeyProductNumber": "IRLZ44NSTRR-ND",
+      "manufacturerProductNumber": "IRLZ44NSTRR",
+      "manufacturerName": "Infineon Technologies",
+      "description": "MOSFET N-CH 55V 47A D2PAK",
+      "quantityAvailable": 0,
+      "productUrl": "https://www.digikey.com/en/products/detail/infineon-technologies/IRLZ44NSTRR/352676",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/901/21-D2PAK%2CSMD-220.jpg",
+      "unitPrice": "0",
+      "sources": [],
+      "detailedDescription": "N-Channel 55 V 47A (Tc) 3.8W (Ta), 110W (Tc) Surface Mount D2PAK",
+      "datasheetUrl": "https://www.infineon.com/dgdl/irlz44nspbf.pdf?fileId=5546d462533600a40153567221272727",
+      "partStatus": "Obsolete",
+      "backOrderNotAllowed": false,
+      "normallyStocking": false,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Discrete Semiconductor Products",
+        "categoryId": 19
+      },
+      "series": "HEXFET®",
+      "manufacturerLeadWeeks": null,
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "RoHS non-compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "IRLZ44NSTRR-ND",
+          "packageType": "Tape & Reel (TR)",
+          "quantityAvailable": 0,
+          "pricing": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "FET Type",
+          "value": "N-Channel",
+          "parameterId": 606
+        },
+        {
+          "name": "Technology",
+          "value": "MOSFET (Metal Oxide)",
+          "parameterId": 570
+        },
+        {
+          "name": "Drain to Source Voltage (Vdss)",
+          "value": "55 V",
+          "parameterId": 2068
+        },
+        {
+          "name": "Current - Continuous Drain (Id) @ 25°C",
+          "value": "47A (Tc)",
+          "parameterId": 608
+        },
+        {
+          "name": "Drive Voltage (Max Rds On, Min Rds On)",
+          "value": "4V, 10V",
+          "parameterId": 1993
+        },
+        {
+          "name": "Rds On (Max) @ Id, Vgs",
+          "value": "22mOhm @ 25A, 10V",
+          "parameterId": 612
+        },
+        {
+          "name": "Vgs(th) (Max) @ Id",
+          "value": "2V @ 250µA",
+          "parameterId": 1236
+        },
+        {
+          "name": "Gate Charge (Qg) (Max) @ Vgs",
+          "value": "48 nC @ 5 V",
+          "parameterId": 2262
+        },
+        {
+          "name": "Vgs (Max)",
+          "value": "±16V",
+          "parameterId": 1994
+        },
+        {
+          "name": "Input Capacitance (Ciss) (Max) @ Vds",
+          "value": "1700 pF @ 25 V",
+          "parameterId": 2263
+        },
+        {
+          "name": "FET Feature",
+          "value": "-",
+          "parameterId": 959
+        },
+        {
+          "name": "Power Dissipation (Max)",
+          "value": "3.8W (Ta), 110W (Tc)",
+          "parameterId": 1174
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-55°C ~ 175°C (TJ)",
+          "parameterId": 252
+        },
+        {
+          "name": "Grade",
+          "value": "-",
+          "parameterId": 1977
+        },
+        {
+          "name": "Qualification",
+          "value": "-",
+          "parameterId": 2700
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount",
+          "parameterId": 69
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "D2PAK",
+          "parameterId": 1291
+        },
+        {
+          "name": "Package / Case",
+          "value": "TO-263-3, D2PAK (2 Leads + Tab), TO-263AB",
+          "parameterId": 16
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "IRLZ44SPBF-ND",
+        "manufacturerProductNumber": "IRLZ44SPBF",
+        "manufacturerName": "Vishay Siliconix",
+        "description": "MOSFET N-CH 60V 50A D2PAK",
+        "quantityAvailable": 118,
+        "productUrl": "https://www.digikey.com/en/products/detail/vishay-siliconix/IRLZ44SPBF/812153",
+        "unitPrice": "4.04",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "N-Channel 60 V 50A (Tc) 3.7W (Ta), 150W (Tc) Surface Mount TO-263 (D2PAK)",
+        "datasheetUrl": "https://www.waldom.com/upload/parts/datasheets/mf-tf/tf-irlz44spbf.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6462/742%7E5970%7EA%2CB%2CR%2CS%2CT%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "70",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unknown",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "IRLZ44SPBF-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 118,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 4.04
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 2.06
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 1.868
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 1.5317
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 1.42369
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 1.37375
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "FET Type",
+            "value": "N-Channel",
+            "parameterId": 606
+          },
+          {
+            "name": "Technology",
+            "value": "MOSFET (Metal Oxide)",
+            "parameterId": 570
+          },
+          {
+            "name": "Drain to Source Voltage (Vdss)",
+            "value": "60 V",
+            "parameterId": 2068
+          },
+          {
+            "name": "Current - Continuous Drain (Id) @ 25°C",
+            "value": "50A (Tc)",
+            "parameterId": 608
+          },
+          {
+            "name": "Drive Voltage (Max Rds On, Min Rds On)",
+            "value": "4V, 5V",
+            "parameterId": 1993
+          },
+          {
+            "name": "Rds On (Max) @ Id, Vgs",
+            "value": "28mOhm @ 31A, 5V",
+            "parameterId": 612
+          },
+          {
+            "name": "Vgs(th) (Max) @ Id",
+            "value": "2V @ 250µA",
+            "parameterId": 1236
+          },
+          {
+            "name": "Gate Charge (Qg) (Max) @ Vgs",
+            "value": "66 nC @ 5 V",
+            "parameterId": 2262
+          },
+          {
+            "name": "Vgs (Max)",
+            "value": "±10V",
+            "parameterId": 1994
+          },
+          {
+            "name": "Input Capacitance (Ciss) (Max) @ Vds",
+            "value": "3300 pF @ 25 V",
+            "parameterId": 2263
+          },
+          {
+            "name": "FET Feature",
+            "value": "-",
+            "parameterId": 959
+          },
+          {
+            "name": "Power Dissipation (Max)",
+            "value": "3.7W (Ta), 150W (Tc)",
+            "parameterId": 1174
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 175°C (TJ)",
+            "parameterId": 252
+          },
+          {
+            "name": "Grade",
+            "value": "-",
+            "parameterId": 1977
+          },
+          {
+            "name": "Qualification",
+            "value": "-",
+            "parameterId": 2700
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "TO-263 (D2PAK)",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "TO-263-3, D2PAK (2 Leads + Tab), TO-263AB",
+            "parameterId": 16
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "742-IRLZ44STRRPBFCT-ND",
+        "manufacturerProductNumber": "IRLZ44STRRPBF",
+        "manufacturerName": "Vishay Siliconix",
+        "description": "MOSFET N-CH 60V 50A D2PAK",
+        "quantityAvailable": 923,
+        "productUrl": "https://www.digikey.com/en/products/detail/vishay-siliconix/IRLZ44STRRPBF/856860",
+        "unitPrice": "4.04",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "N-Channel 60 V 50A (Tc) 3.7W (Ta), 150W (Tc) Surface Mount TO-263 (D2PAK)",
+        "datasheetUrl": "https://www.vishay.com/docs/91329/sihlz44s.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6462/742%7E5970%7EA%2CB%2CR%2CS%2CT%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "70",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unknown",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "742-IRLZ44STRRPBFTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 800,
+            "pricing": [
+              {
+                "breakQuantity": 800,
+                "unitPrice": 1.45644
+              },
+              {
+                "breakQuantity": 1600,
+                "unitPrice": 1.37375
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "742-IRLZ44STRRPBFCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 923,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 4.04
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 2.656
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 1.868
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "742-IRLZ44STRRPBFDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 923,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 4.04
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 2.656
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 1.868
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "FET Type",
+            "value": "N-Channel",
+            "parameterId": 606
+          },
+          {
+            "name": "Technology",
+            "value": "MOSFET (Metal Oxide)",
+            "parameterId": 570
+          },
+          {
+            "name": "Drain to Source Voltage (Vdss)",
+            "value": "60 V",
+            "parameterId": 2068
+          },
+          {
+            "name": "Current - Continuous Drain (Id) @ 25°C",
+            "value": "50A (Tc)",
+            "parameterId": 608
+          },
+          {
+            "name": "Drive Voltage (Max Rds On, Min Rds On)",
+            "value": "4V, 5V",
+            "parameterId": 1993
+          },
+          {
+            "name": "Rds On (Max) @ Id, Vgs",
+            "value": "28mOhm @ 31A, 5V",
+            "parameterId": 612
+          },
+          {
+            "name": "Vgs(th) (Max) @ Id",
+            "value": "2V @ 250µA",
+            "parameterId": 1236
+          },
+          {
+            "name": "Gate Charge (Qg) (Max) @ Vgs",
+            "value": "66 nC @ 5 V",
+            "parameterId": 2262
+          },
+          {
+            "name": "Vgs (Max)",
+            "value": "±10V",
+            "parameterId": 1994
+          },
+          {
+            "name": "Input Capacitance (Ciss) (Max) @ Vds",
+            "value": "3300 pF @ 25 V",
+            "parameterId": 2263
+          },
+          {
+            "name": "FET Feature",
+            "value": "-",
+            "parameterId": 959
+          },
+          {
+            "name": "Power Dissipation (Max)",
+            "value": "3.7W (Ta), 150W (Tc)",
+            "parameterId": 1174
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 175°C (TJ)",
+            "parameterId": 252
+          },
+          {
+            "name": "Grade",
+            "value": "-",
+            "parameterId": 1977
+          },
+          {
+            "name": "Qualification",
+            "value": "-",
+            "parameterId": 2700
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "TO-263 (D2PAK)",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "TO-263-3, D2PAK (2 Leads + Tab), TO-263AB",
+            "parameterId": 16
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "1727-7207-1-ND",
+        "manufacturerProductNumber": "PSMN015-60BS,118",
+        "manufacturerName": "Nexperia USA Inc.",
+        "description": "MOSFET N-CH 60V 50A D2PAK",
+        "quantityAvailable": 8448,
+        "productUrl": "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PSMN015-60BS-118/3431090",
+        "unitPrice": "2.04",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "N-Channel 60 V 50A (Tc) 86W (Tc) Surface Mount D2PAK",
+        "datasheetUrl": "https://assets.nexperia.com/documents/data-sheet/PSMN015-60BS.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6162/1727%7ESOT404%7EB%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "26",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1727-7207-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 7200,
+            "pricing": [
+              {
+                "breakQuantity": 800,
+                "unitPrice": 0.6592
+              },
+              {
+                "breakQuantity": 1600,
+                "unitPrice": 0.60756
+              },
+              {
+                "breakQuantity": 2400,
+                "unitPrice": 0.58125
+              },
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.55169
+              },
+              {
+                "breakQuantity": 5600,
+                "unitPrice": 0.53913
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1727-7207-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 8448,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 2.04
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 1.302
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.8802
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1727-7207-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 8448,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 2.04
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 1.302
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.8802
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "FET Type",
+            "value": "N-Channel",
+            "parameterId": 606
+          },
+          {
+            "name": "Technology",
+            "value": "MOSFET (Metal Oxide)",
+            "parameterId": 570
+          },
+          {
+            "name": "Drain to Source Voltage (Vdss)",
+            "value": "60 V",
+            "parameterId": 2068
+          },
+          {
+            "name": "Current - Continuous Drain (Id) @ 25°C",
+            "value": "50A (Tc)",
+            "parameterId": 608
+          },
+          {
+            "name": "Drive Voltage (Max Rds On, Min Rds On)",
+            "value": "10V",
+            "parameterId": 1993
+          },
+          {
+            "name": "Rds On (Max) @ Id, Vgs",
+            "value": "14.8mOhm @ 15A, 10V",
+            "parameterId": 612
+          },
+          {
+            "name": "Vgs(th) (Max) @ Id",
+            "value": "4V @ 1mA",
+            "parameterId": 1236
+          },
+          {
+            "name": "Gate Charge (Qg) (Max) @ Vgs",
+            "value": "20.9 nC @ 10 V",
+            "parameterId": 2262
+          },
+          {
+            "name": "Vgs (Max)",
+            "value": "±20V",
+            "parameterId": 1994
+          },
+          {
+            "name": "Input Capacitance (Ciss) (Max) @ Vds",
+            "value": "1220 pF @ 30 V",
+            "parameterId": 2263
+          },
+          {
+            "name": "FET Feature",
+            "value": "-",
+            "parameterId": 959
+          },
+          {
+            "name": "Power Dissipation (Max)",
+            "value": "86W (Tc)",
+            "parameterId": 1174
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 175°C (TJ)",
+            "parameterId": 252
+          },
+          {
+            "name": "Grade",
+            "value": "-",
+            "parameterId": 1977
+          },
+          {
+            "name": "Qualification",
+            "value": "-",
+            "parameterId": 2700
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "D2PAK",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "TO-263-3, D2PAK (2 Leads + Tab), TO-263AB",
+            "parameterId": 16
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "497-7462-1-ND",
+        "manufacturerProductNumber": "STB55NF06LT4",
+        "manufacturerName": "STMicroelectronics",
+        "description": "MOSFET N-CH 60V 55A D2PAK",
+        "quantityAvailable": 2618,
+        "productUrl": "https://www.digikey.com/en/products/detail/stmicroelectronics/STB55NF06LT4/1039320",
+        "unitPrice": "2.16",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "N-Channel 60 V 55A (Tc) 95W (Tc) Surface Mount D2PAK",
+        "datasheetUrl": "https://www.st.com/content/ccc/resource/technical/document/datasheet/49/c5/a8/71/93/60/4f/86/CD00002690.pdf/files/CD00002690.pdf/jcr:content/translations/en.CD00002690.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2527/D2Pak%20TO-263.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "STripFET™ II",
+        "manufacturerLeadWeeks": "13",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "497-7462-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 2000,
+            "pricing": [
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.68749
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.63591
+              },
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.60964
+              },
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.58534
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "497-7462-1-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 2618,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 2.16
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 1.385
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.9396
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.74882
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "497-7462-6-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 2618,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 2.16
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 1.385
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.9396
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.74882
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "FET Type",
+            "value": "N-Channel",
+            "parameterId": 606
+          },
+          {
+            "name": "Technology",
+            "value": "MOSFET (Metal Oxide)",
+            "parameterId": 570
+          },
+          {
+            "name": "Drain to Source Voltage (Vdss)",
+            "value": "60 V",
+            "parameterId": 2068
+          },
+          {
+            "name": "Current - Continuous Drain (Id) @ 25°C",
+            "value": "55A (Tc)",
+            "parameterId": 608
+          },
+          {
+            "name": "Drive Voltage (Max Rds On, Min Rds On)",
+            "value": "5V, 10V",
+            "parameterId": 1993
+          },
+          {
+            "name": "Rds On (Max) @ Id, Vgs",
+            "value": "18mOhm @ 27.5A, 10V",
+            "parameterId": 612
+          },
+          {
+            "name": "Vgs(th) (Max) @ Id",
+            "value": "4.7V @ 250µA",
+            "parameterId": 1236
+          },
+          {
+            "name": "Gate Charge (Qg) (Max) @ Vgs",
+            "value": "37 nC @ 4.5 V",
+            "parameterId": 2262
+          },
+          {
+            "name": "Vgs (Max)",
+            "value": "±16V",
+            "parameterId": 1994
+          },
+          {
+            "name": "Input Capacitance (Ciss) (Max) @ Vds",
+            "value": "1700 pF @ 25 V",
+            "parameterId": 2263
+          },
+          {
+            "name": "FET Feature",
+            "value": "-",
+            "parameterId": 959
+          },
+          {
+            "name": "Power Dissipation (Max)",
+            "value": "95W (Tc)",
+            "parameterId": 1174
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-55°C ~ 175°C (TJ)",
+            "parameterId": 252
+          },
+          {
+            "name": "Grade",
+            "value": "-",
+            "parameterId": 1977
+          },
+          {
+            "name": "Qualification",
+            "value": "-",
+            "parameterId": 2700
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "D2PAK",
+            "parameterId": 1291
+          },
+          {
+            "name": "Package / Case",
+            "value": "TO-263-3, D2PAK (2 Leads + Tab), TO-263AB",
+            "parameterId": 16
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-06T04:40:30.778Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,3043 @@
+{
+  "generatedAt": "2026-02-06T04:40:34.976Z",
+  "key": "dkpn=AD620AN-ND_mpn=AD620AN",
+  "data": {
+    "targetMpn": "AD620AN",
+    "targetProduct": {
+      "digiKeyProductNumber": "AD620AN-ND",
+      "manufacturerProductNumber": "AD620AN",
+      "manufacturerName": "Analog Devices Inc.",
+      "description": "IC INST AMP 1 CIRCUIT 8DIP",
+      "quantityAvailable": 0,
+      "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/AD620AN/612051",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4360/505%7EN-8%7EN%7E8-Top.jpg",
+      "unitPrice": "0",
+      "sources": [],
+      "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+      "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/AD620.pdf",
+      "partStatus": "Obsolete",
+      "backOrderNotAllowed": false,
+      "normallyStocking": false,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Integrated Circuits (ICs)",
+        "categoryId": 32
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "7",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "Unknown",
+        "reach": "REACH Unknown",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "AD620AN-ND",
+          "packageType": "Tube",
+          "quantityAvailable": 0,
+          "pricing": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Amplifier Type",
+          "value": "Instrumentation",
+          "parameterId": 161
+        },
+        {
+          "name": "Number of Circuits",
+          "value": "1",
+          "parameterId": 2094
+        },
+        {
+          "name": "Output Type",
+          "value": "-",
+          "parameterId": 41
+        },
+        {
+          "name": "Slew Rate",
+          "value": "1.2V/µs",
+          "parameterId": 511
+        },
+        {
+          "name": "-3db Bandwidth",
+          "value": "1 MHz",
+          "parameterId": 2153
+        },
+        {
+          "name": "Current - Input Bias",
+          "value": "500 pA",
+          "parameterId": 974
+        },
+        {
+          "name": "Voltage - Input Offset",
+          "value": "30 µV",
+          "parameterId": 975
+        },
+        {
+          "name": "Current - Supply",
+          "value": "900µA",
+          "parameterId": 449
+        },
+        {
+          "name": "Current - Output / Channel",
+          "value": "18 mA",
+          "parameterId": 2115
+        },
+        {
+          "name": "Voltage - Supply Span (Min)",
+          "value": "4.6 V",
+          "parameterId": 2609
+        },
+        {
+          "name": "Voltage - Supply Span (Max)",
+          "value": "36 V",
+          "parameterId": 2610
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-40°C ~ 85°C",
+          "parameterId": 252
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Through Hole",
+          "parameterId": 69
+        },
+        {
+          "name": "Package / Case",
+          "value": "8-DIP (0.300\", 7.62mm)",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "8-PDIP",
+          "parameterId": 1291
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "505-AD620ANZ-ND",
+        "manufacturerProductNumber": "AD620ANZ",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 3863,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/AD620ANZ/750967",
+        "unitPrice": "17.31",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Direct",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/AD620.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4360/505%7EN-8%7EN%7E8-Top.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "505-AD620ANZ-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 3863,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 17.31
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 13.751
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 12.3258
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 11.8845
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 11.4186
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 11.13788
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "1.2V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "500 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "30 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "900µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "18 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "505-AD8422BRZ-ND",
+        "manufacturerProductNumber": "AD8422BRZ",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8SOIC",
+        "quantityAvailable": 288,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/AD8422BRZ/4250210",
+        "unitPrice": "11.78",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit Rail-to-Rail 8-SOIC",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad8422.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7041/MFG_505%7ER-8%7ER%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "505-AD8422BRZ-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 288,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 11.78
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 9.237
+              },
+              {
+                "breakQuantity": 98,
+                "unitPrice": 7.91347
+              },
+              {
+                "breakQuantity": 196,
+                "unitPrice": 7.65291
+              },
+              {
+                "breakQuantity": 294,
+                "unitPrice": 7.52235
+              },
+              {
+                "breakQuantity": 588,
+                "unitPrice": 7.33097
+              },
+              {
+                "breakQuantity": 1078,
+                "unitPrice": 7.19157
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "Rail-to-Rail",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.8V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "2.2 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "200 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "25 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "300µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "20 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-SOIC (0.154\", 3.90mm Width)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-SOIC",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "505-LT1167ACN8#PBF-ND",
+        "manufacturerProductNumber": "LT1167ACN8#PBF",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 94,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT1167ACN8-PBF/894346",
+        "unitPrice": "19.2",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/1167fc.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6257/505%7E05-08-1510%7EN%2CN8%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "505-LT1167ACN8#PBF-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 94,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 19.2
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 15.306
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 13.7458
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 13.2626
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 12.75252
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 12.44514
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "1.2V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "Gain Bandwidth Product",
+            "value": "1 MHz",
+            "parameterId": 658
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "50 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "15 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "900µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "0°C ~ 70°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "505-LT1168CN8#PBF-ND",
+        "manufacturerProductNumber": "LT1168CN8#PBF",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 96,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT1168CN8-PBF/961108",
+        "unitPrice": "11.69",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/1168fa.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6257/505%7E05-08-1510%7EN%2CN8%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "505-LT1168CN8#PBF-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 96,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 11.69
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 9.171
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 8.1604
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 7.8475
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 7.51716
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 7.31802
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 7.15417
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.5V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "Gain Bandwidth Product",
+            "value": "400 kHz",
+            "parameterId": 658
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "80 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "20 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "350µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "32 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "0°C ~ 70°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "LT1168IN8#PBF-ND",
+        "manufacturerProductNumber": "LT1168IN8#PBF",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT1168IN8-PBF/963402",
+        "unitPrice": "8.1456",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/1168fa.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6257/505%7E05-08-1510%7EN%2CN8%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "LT1168IN8#PBF-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 50,
+                "unitPrice": 8.1456
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.5V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "Gain Bandwidth Product",
+            "value": "400 kHz",
+            "parameterId": 658
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "80 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "20 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "350µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "32 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "LT1920CN8#PBF-ND",
+        "manufacturerProductNumber": "LT1920CN8#PBF",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 182,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT1920CN8-PBF/891763",
+        "unitPrice": "11.15",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/1920f.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6257/505%7E05-08-1510%7EN%2CN8%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "LT1920CN8#PBF-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 182,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 11.15
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 8.727
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 7.758
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 7.4579
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 7.14124
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 6.9504
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 6.79329
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "1.2V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "Gain Bandwidth Product",
+            "value": "1 MHz",
+            "parameterId": 658
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "500 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "30 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "900µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "0°C ~ 70°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "LT1920IN8#PBF-ND",
+        "manufacturerProductNumber": "LT1920IN8#PBF",
+        "manufacturerName": "Analog Devices Inc.",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT1920IN8-PBF/961063",
+        "unitPrice": "6.923",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/1920f.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6257/505%7E05-08-1510%7EN%2CN8%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "LT1920IN8#PBF-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 100,
+                "unitPrice": 6.923
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "1.2V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "Gain Bandwidth Product",
+            "value": "1 MHz",
+            "parameterId": 658
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "500 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "30 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "900µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "27 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.6 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA111AP-ND",
+        "manufacturerProductNumber": "INA111AP",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 151,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA111AP/300962",
+        "unitPrice": "18.01",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina111",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA111AP-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 151,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 18.01
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 14.321
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 12.846
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 12.3894
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 11.90724
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 11.61658
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "17V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "2 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "2 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "200 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "3.3mA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "30 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "12 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA111BP-ND",
+        "manufacturerProductNumber": "INA111BP",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 96,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA111BP/300965",
+        "unitPrice": "26.44",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina111",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA111BP-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 96,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 26.44
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 21.292
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 19.2288
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 18.5903
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 17.91612
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 17.50982
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "17V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "2 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "2 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "100 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "3.3mA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "30 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "12 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA114AP-ND",
+        "manufacturerProductNumber": "INA114AP",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 1163,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA114AP/251078",
+        "unitPrice": "12.96",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina114",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA114AP-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 1163,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 12.96
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 10.195
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 9.0892
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 8.7469
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 8.38544
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 8.1676
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 7.98831
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.6V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "500 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "25 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "2.2mA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "20 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA114BP-ND",
+        "manufacturerProductNumber": "INA114BP",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 952,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA114BP/251080",
+        "unitPrice": "16.71",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina114",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA114BP-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 952,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 16.71
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 13.255
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 11.8736
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 11.4459
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 10.99436
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 10.72218
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.6V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "500 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "10 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "2.2mA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "20 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA118PB-ND",
+        "manufacturerProductNumber": "INA118PB",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 214,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA118PB/300978",
+        "unitPrice": "31.18",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina118",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Last Time Buy",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": true,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA118PB-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 214,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 31.18
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 25.235
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 22.855
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 22.1181
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.9V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "800 kHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "1 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "10 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "350µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "12 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "2.7 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA121P-ND",
+        "manufacturerProductNumber": "INA121P",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 340,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA121P/272053",
+        "unitPrice": "10.75",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina121",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA121P-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 340,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 10.75
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 8.41
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 7.4712
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 7.1805
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 6.87364
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 6.68868
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 6.53645
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.7V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "600 kHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "4 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "200 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "450µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "14 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA121PA-ND",
+        "manufacturerProductNumber": "INA121PA",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 2285,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA121PA/272054",
+        "unitPrice": "8.24",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina121",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA121PA-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 2285,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 8.24
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 6.387
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 5.6446
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 5.4146
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 5.17188
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 5.02556
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 4.90516
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.7V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "600 kHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "4 pA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "300 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "450µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "14 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA122P-ND",
+        "manufacturerProductNumber": "INA122P",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 203,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA122P/266168",
+        "unitPrice": "12",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina122",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA122P-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 203,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 12
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 9.421
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 8.3866
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 8.0665
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 7.72852
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 7.5248
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 7.35717
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.16V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "120 kHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "10 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "100 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "60µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "30 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "2.2 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "2156-INA122PA-ND",
+        "manufacturerProductNumber": "INA122PA",
+        "manufacturerName": "Rochester Electronics, LLC",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 13530,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA122PA/300981",
+        "unitPrice": "10.21",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina122",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "2156-INA122PA-ND",
+            "packageType": "Bulk",
+            "quantityAvailable": 13198,
+            "pricing": [
+              {
+                "breakQuantity": 40,
+                "unitPrice": 7.43
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "INA122PA-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 332,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 10.21
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 7.97
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 7.0732
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 6.7956
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 6.50248
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 6.32578
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 6.18036
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "0.16V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "120 kHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "10 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "150 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "60µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "30 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "2.2 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA128P-ND",
+        "manufacturerProductNumber": "INA128P",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 272,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA128P/251085",
+        "unitPrice": "19.88142",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina128",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA128P-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 272,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 19.88142
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 15.86411
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 14.25552
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 13.75749
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 13.23161
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 12.91479
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "4V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1.3 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "2 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "10 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "700µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "15 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "2156-INA128PA-ND",
+        "manufacturerProductNumber": "INA128PA",
+        "manufacturerName": "Rochester Electronics, LLC",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 6490,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA128PA/300996",
+        "unitPrice": "13.73",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina128",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "6",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "2156-INA128PA-ND",
+            "packageType": "Bulk",
+            "quantityAvailable": 4506,
+            "pricing": [
+              {
+                "breakQuantity": 29,
+                "unitPrice": 10.29
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "INA128PA-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 1984,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 13.73
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 10.826
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 9.6626
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 9.3023
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 8.92192
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 8.69272
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 8.50403
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "4V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1.3 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "2 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "25 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "700µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "15 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA129P-ND",
+        "manufacturerProductNumber": "INA129P",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 246,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA129P/254674",
+        "unitPrice": "12.21",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina128",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "12",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA129P-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 246,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 12.21
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 9.588
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 8.5384
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 8.2134
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 7.87032
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 7.66352
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 7.49338
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "4V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1.3 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "2 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "10 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "700µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "15 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "INA129PA-ND",
+        "manufacturerProductNumber": "INA129PA",
+        "manufacturerName": "Texas Instruments",
+        "description": "IC INST AMP 1 CIRCUIT 8DIP",
+        "quantityAvailable": 902,
+        "productUrl": "https://www.digikey.com/en/products/detail/texas-instruments/INA129PA/301000",
+        "unitPrice": "11.5",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+        "datasheetUrl": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fina128",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6222/296%7E4040082%7EP%7E8.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Integrated Circuits (ICs)",
+          "categoryId": 32
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "6",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "INA129PA-ND",
+            "packageType": "Tube",
+            "quantityAvailable": 902,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 11.5
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 9.013
+              },
+              {
+                "breakQuantity": 50,
+                "unitPrice": 8.0174
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 7.7091
+              },
+              {
+                "breakQuantity": 250,
+                "unitPrice": 7.38356
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 7.18736
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 7.02588
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Amplifier Type",
+            "value": "Instrumentation",
+            "parameterId": 161
+          },
+          {
+            "name": "Number of Circuits",
+            "value": "1",
+            "parameterId": 2094
+          },
+          {
+            "name": "Output Type",
+            "value": "-",
+            "parameterId": 41
+          },
+          {
+            "name": "Slew Rate",
+            "value": "4V/µs",
+            "parameterId": 511
+          },
+          {
+            "name": "-3db Bandwidth",
+            "value": "1.3 MHz",
+            "parameterId": 2153
+          },
+          {
+            "name": "Current - Input Bias",
+            "value": "2 nA",
+            "parameterId": 974
+          },
+          {
+            "name": "Voltage - Input Offset",
+            "value": "25 µV",
+            "parameterId": 975
+          },
+          {
+            "name": "Current - Supply",
+            "value": "700µA",
+            "parameterId": 449
+          },
+          {
+            "name": "Current - Output / Channel",
+            "value": "15 mA",
+            "parameterId": 2115
+          },
+          {
+            "name": "Voltage - Supply Span (Min)",
+            "value": "4.5 V",
+            "parameterId": 2609
+          },
+          {
+            "name": "Voltage - Supply Span (Max)",
+            "value": "36 V",
+            "parameterId": 2610
+          },
+          {
+            "name": "Operating Temperature",
+            "value": "-40°C ~ 85°C",
+            "parameterId": 252
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Through Hole",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "8-DIP (0.300\", 7.62mm)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "8-PDIP",
+            "parameterId": 1291
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-06T04:40:34.975Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 20
+      }
+    }
+  }
+}

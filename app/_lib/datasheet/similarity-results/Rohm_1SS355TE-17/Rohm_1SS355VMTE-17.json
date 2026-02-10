@@ -1,0 +1,168 @@
+{
+  "targetId": "Rohm_1SS355TE-17",
+  "candidateId": "Rohm_1SS355VMTE-17",
+  "evaluatedAt": "2026-02-09T19:30:00.000Z",
+  "summary": "・パッケージ規格名：SOD-323 (SC-76) → SOD-323FL (SC-90A)",
+  "parameters": [
+    {
+      "parameterId": "Part_Number",
+      "description": "型名",
+      "targetValue": "1SS355",
+      "candidateValue": "1SS355VM",
+      "score": 85,
+      "reason": "同シリーズのVM品種"
+    },
+    {
+      "parameterId": "Product_Type",
+      "description": "製品種別",
+      "targetValue": "Switching Diode",
+      "candidateValue": "Switching Diode (High speed switching)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Construction",
+      "description": "構造",
+      "targetValue": "Silicon epitaxial planar",
+      "candidateValue": "Epitaxial planar",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Package",
+      "description": "パッケージ",
+      "targetValue": "UMD2 (SC-76 / SOD-323)",
+      "candidateValue": "SOD-323FL (SC-90A / UMD2)",
+      "score": 80,
+      "reason": "SOD-323とSOD-323FLで異なる"
+    },
+    {
+      "parameterId": "VRM",
+      "description": "ピーク逆電圧",
+      "targetValue": "90 V",
+      "candidateValue": "90 V",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VR",
+      "description": "DC逆電圧",
+      "targetValue": "80 V",
+      "candidateValue": "80 V",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IFM",
+      "description": "ピーク順電流",
+      "targetValue": "225 mA",
+      "candidateValue": "225 mA",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IO",
+      "description": "平均整流電流",
+      "targetValue": "100 mA",
+      "candidateValue": "100 mA",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Isurge",
+      "description": "サージ電流 (1s)",
+      "targetValue": "500 mA",
+      "candidateValue": "500 mA",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Tj_Max",
+      "description": "最大接合温度",
+      "targetValue": "125 °C",
+      "candidateValue": "150 °C",
+      "score": 90,
+      "reason": "125→150°Cで上位互換"
+    },
+    {
+      "parameterId": "Tstg",
+      "description": "保存温度範囲",
+      "targetValue": "-55 to +125 °C",
+      "candidateValue": "-55 to 150 °C",
+      "score": 90,
+      "reason": "上限125→150°Cで上位互換"
+    },
+    {
+      "parameterId": "VF",
+      "description": "順方向電圧 (IF=100mA)",
+      "targetValue": "1.2 V max",
+      "candidateValue": "1.2 V max",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IR",
+      "description": "逆電流 (VR=80V)",
+      "targetValue": "0.1 µA max",
+      "candidateValue": "100 nA max",
+      "score": 100,
+      "reason": "0.1µA=100nAで同値"
+    },
+    {
+      "parameterId": "CT",
+      "description": "端子間容量 (VR=0.5V, f=1MHz)",
+      "targetValue": "3.0 pF max",
+      "candidateValue": "3.0 pF max",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "trr",
+      "description": "逆回復時間 (VR=6V, IF=10mA, RL=100Ω)",
+      "targetValue": "4 ns max",
+      "candidateValue": "4.0 ns max",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "trr_typ",
+      "description": "逆回復時間 (typ)",
+      "targetValue": "1.2 ns typ",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に値なし"
+    },
+    {
+      "parameterId": "Package_Dimensions",
+      "description": "パッケージ寸法",
+      "targetValue": "2.5 ± 0.2 x 1.25 ± 0.1 x 0.7 mm",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に値なし"
+    },
+    {
+      "parameterId": "Application",
+      "description": "用途",
+      "targetValue": "High speed switching",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に値なし"
+    },
+    {
+      "parameterId": "Mounting_Type",
+      "description": "実装タイプ",
+      "targetValue": "Surface Mount",
+      "candidateValue": "Surface Mount",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Diode_Type",
+      "description": "ダイオードタイプ",
+      "targetValue": "Switching",
+      "candidateValue": "Switching (High speed)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    }
+  ]
+}

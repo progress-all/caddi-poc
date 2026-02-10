@@ -1,0 +1,448 @@
+{
+  "targetId": "Renesas_R5F100LEGFB_30",
+  "candidateId": "Renesas_R5F100LEGFA_10",
+  "evaluatedAt": "2026-02-09T19:21:00.000Z",
+  "summary": "・パッケージ：LFQFP 10×10mm 0.5mmピッチ → LQFP 12×12mm 0.65mmピッチ\n・パッケージ質量：0.35g → 0.51g\n・CSI/SPIチャネル数：4ch → 6ch\n・UARTチャネル数：2ch → 3ch\n・供給電流 HALT 32MHz max：1.63mA → 2.90mA\n・供給電流 HALT 16MHz max：1.00mA → 1.70mA",
+  "parameters": [
+    {
+      "parameterId": "Part_Number",
+      "description": "型名",
+      "targetValue": "R5F100LEGFB#30",
+      "candidateValue": "R5F100LEGFA#10",
+      "score": 70,
+      "reason": "パッケージ違いの同ファミリ品"
+    },
+    {
+      "parameterId": "Product_Type",
+      "description": "製品種別",
+      "targetValue": "RL78/G13 16-bit Microcontroller",
+      "candidateValue": "16-bit RL78/G13 Microcontroller",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "CPU_Core",
+      "description": "CPUコア",
+      "targetValue": "RL78 (CISC architecture, 3-stage pipeline)",
+      "candidateValue": "RL78 CPU (CISC 3-stage pipeline)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Package",
+      "description": "パッケージ",
+      "targetValue": "64-pin LFQFP (10 x 10 mm, 0.5-mm pitch)",
+      "candidateValue": "64-pin plastic LQFP (PLQP0064JA-A)",
+      "score": 55,
+      "reason": "LFQFP 10×10→LQFP 12×12"
+    },
+    {
+      "parameterId": "Package_Mass",
+      "description": "パッケージ質量",
+      "targetValue": "0.35 g typ",
+      "candidateValue": "0.51 g typ",
+      "score": 70,
+      "reason": "0.35gと0.51gで異なる"
+    },
+    {
+      "parameterId": "Package_Height_A",
+      "description": "パッケージ高さ",
+      "targetValue": "1.60 mm max",
+      "candidateValue": "1.60 mm max",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Application_Grade",
+      "description": "アプリケーショングレード",
+      "targetValue": "G: Industrial applications (TA = -40 to +105°C)",
+      "candidateValue": "-40 to +105 °C (G: Industrial)",
+      "score": 100,
+      "reason": "同一グレード"
+    },
+    {
+      "parameterId": "Flash_Memory",
+      "description": "コードフラッシュメモリ",
+      "targetValue": "64 KB",
+      "candidateValue": "64 KB (block size: 1 KB)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Data_Flash",
+      "description": "データフラッシュメモリ",
+      "targetValue": "4 KB",
+      "candidateValue": "4 KB",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Data_Flash_Rewrites",
+      "description": "データフラッシュ書き換え回数",
+      "targetValue": "1,000,000 times typ",
+      "candidateValue": "1,000,000 times typ (retained 1 year, TA=25°C)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Data_Flash_Rewrite_Voltage",
+      "description": "データフラッシュ書き換え電圧",
+      "targetValue": "VDD = 1.8 to 5.5 V",
+      "candidateValue": "1.8 to 5.5 V",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "RAM",
+      "description": "RAM",
+      "targetValue": "4 KB",
+      "candidateValue": "4 KB",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Address_Space",
+      "description": "アドレス空間",
+      "targetValue": "1 MB",
+      "candidateValue": "1 MB",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Max_CPU_Frequency",
+      "description": "最大CPU動作周波数",
+      "targetValue": "32 MHz (HS mode)",
+      "candidateValue": "32 MHz (HS mode)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Min_Instruction_Execution_Time",
+      "description": "最小命令実行時間",
+      "targetValue": "0.03125 µs (fIH = 32 MHz)",
+      "candidateValue": "0.03125 µs (fIH = 32 MHz)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VDD_Abs_Max",
+      "description": "電源電圧絶対最大定格",
+      "targetValue": "-0.5 to +6.5 V",
+      "candidateValue": "-0.5 to +6.5 V",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "HS_Mode_Voltage_Range",
+      "description": "HS (高速メイン) モード動作電圧",
+      "targetValue": "2.7 V to 5.5 V @ 1 to 32 MHz, 2.4 V to 5.5 V @ 1 to 16 MHz",
+      "candidateValue": "2.4 to 5.5 V (G-grade, TA=-40 to +105°C, HS mode)",
+      "score": 100,
+      "reason": "同一仕様（表記範囲の違い）"
+    },
+    {
+      "parameterId": "Operating_Temp_Range",
+      "description": "動作温度範囲",
+      "targetValue": "-40 to +105 °C",
+      "candidateValue": "-40 to +105 °C (G: Industrial)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Storage_Temp_Range",
+      "description": "保存温度範囲",
+      "targetValue": "-65 to +150 °C",
+      "candidateValue": "-65 to +150 °C",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "High_Speed_OnChip_Osc_Freq",
+      "description": "高速オンチップオシレータ周波数",
+      "targetValue": "1 to 32 MHz (選択: 32/24/16/12/8/6/4/3/2/1 MHz)",
+      "candidateValue": "1 to 32 MHz (selectable: 32, 24, 16, 12, 8, 6, 4, 3, 2, 1 MHz)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "High_Speed_OnChip_Osc_Accuracy_Hot",
+      "description": "高速オンチップオシレータ精度 (+85 to +105°C)",
+      "targetValue": "± 2.0% (VDD = 2.4 to 5.5 V)",
+      "candidateValue": "±1.0% (VDD=1.8-5.5V, TA=-20 to +85°C), ±2.0% (VDD=2.4-5.5V, TA=+85 to +105°C), ±1.5% (TA=-40 to -20°C)",
+      "score": 100,
+      "reason": "G品種+105°C時±2.0%で同値"
+    },
+    {
+      "parameterId": "X1_Osc_Freq_Range",
+      "description": "X1発振周波数範囲",
+      "targetValue": "1.0 to 20.0 MHz (VDD = 2.7 to 5.5 V), 1.0 to 16.0 MHz (VDD = 2.4 to 2.7 V)",
+      "candidateValue": "20 MHz (VDD=2.7-5.5V), 16 MHz (VDD=2.4-5.5V)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "XT1_Osc_Freq",
+      "description": "XT1発振周波数",
+      "targetValue": "32.768 kHz",
+      "candidateValue": "32.768 kHz (XT1 crystal)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Low_Speed_OnChip_Osc_Freq",
+      "description": "低速オンチップオシレータ周波数",
+      "targetValue": "15 kHz typ (± 15%)",
+      "candidateValue": "15 kHz typ (±15%)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "IDD_Active_HS_32MHz_5V",
+      "description": "供給電流 Active HS 32MHz VDD=5.0V",
+      "targetValue": "4.6 mA typ, 7.0 mA max",
+      "candidateValue": "4.6 mA typ / 7.5 mA max",
+      "score": 90,
+      "reason": "typ同一、max 7.0→7.5mA"
+    },
+    {
+      "parameterId": "IDD_Active_HS_16MHz",
+      "description": "供給電流 Active HS 16MHz",
+      "targetValue": "2.7 mA typ, 4.0 mA max",
+      "candidateValue": "2.7 mA typ / 4.2 mA max",
+      "score": 90,
+      "reason": "typ同一、max 4.0→4.2mA"
+    },
+    {
+      "parameterId": "IDD_HALT_HS_32MHz",
+      "description": "供給電流 HALT HS 32MHz",
+      "targetValue": "0.54 mA typ, 1.63 mA max",
+      "candidateValue": "0.54 mA typ / 2.90 mA max",
+      "score": 70,
+      "reason": "typ同一、max 1.63→2.90mA"
+    },
+    {
+      "parameterId": "IDD_HALT_HS_16MHz",
+      "description": "供給電流 HALT HS 16MHz",
+      "targetValue": "0.40 mA typ, 1.00 mA max",
+      "candidateValue": "0.40 mA typ / 1.70 mA max",
+      "score": 70,
+      "reason": "typ同一、max 1.00→1.70mA"
+    },
+    {
+      "parameterId": "IDD_Subsystem_Clock_25C",
+      "description": "供給電流 サブシステムクロック動作 (25°C)",
+      "targetValue": "4.1 µA typ, 4.9 µA max",
+      "candidateValue": "4.1 µA typ / 4.9 µA max",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "IDD_HALT_Subsystem_25C",
+      "description": "供給電流 HALT サブシステムクロック (25°C)",
+      "targetValue": "0.30 µA typ, 0.57 µA max",
+      "candidateValue": "0.30 µA typ / 0.57 µA max",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "IDD_STOP_25C",
+      "description": "供給電流 STOPモード (25°C)",
+      "targetValue": "0.23 µA typ, 0.50 µA max",
+      "candidateValue": "0.23 µA typ / 0.50 µA max",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "IO_Port_Total",
+      "description": "I/Oポート合計",
+      "targetValue": "58",
+      "candidateValue": "58",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IO_CMOS_IO",
+      "description": "CMOS I/O",
+      "targetValue": "48 (N-ch O.D. I/O [VDD withstand]: 15)",
+      "candidateValue": "48 (N-ch O.D. I/O [VDD withstand]: 15)",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IO_CMOS_Input",
+      "description": "CMOSインプット",
+      "targetValue": "5",
+      "candidateValue": "5",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IO_CMOS_Output",
+      "description": "CMOS出力",
+      "targetValue": "1",
+      "candidateValue": "1",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IO_Nch_OD_6V",
+      "description": "N-ch O.D. I/O (耐圧6V)",
+      "targetValue": "4",
+      "candidateValue": "4",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "VIH_Normal",
+      "description": "HIGH入力電圧 (通常入力バッファ)",
+      "targetValue": "0.8 x EVDD0",
+      "candidateValue": "0.8 × EVDD0 min",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "VIL_Normal",
+      "description": "LOW入力電圧 (通常入力バッファ)",
+      "targetValue": "0.2 x EVDD0",
+      "candidateValue": "0.2 × EVDD0 max",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "VOH",
+      "description": "HIGH出力電圧 (EVDD0=4.0-5.5V, IOH=-10mA)",
+      "targetValue": "EVDD0 - 1.5 V min",
+      "candidateValue": "EVDD0 – 1.5 V min",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "VOL",
+      "description": "LOW出力電圧 (EVDD0=4.0-5.5V, IOL=20mA)",
+      "targetValue": "1.3 V max",
+      "candidateValue": "1.3 V max",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ADC_Resolution",
+      "description": "A/D変換器分解能",
+      "targetValue": "8/10-bit",
+      "candidateValue": "8/10-bit",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "ADC_Channels",
+      "description": "A/Dコンバータチャネル数",
+      "targetValue": "12",
+      "candidateValue": "12",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Timer_16bit",
+      "description": "16ビットタイマー",
+      "targetValue": "8 channels",
+      "candidateValue": "8 channels",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Timer_12bit_Interval",
+      "description": "12ビットインターバルタイマー",
+      "targetValue": "1 channel",
+      "candidateValue": "1 channel",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Watchdog_Timer",
+      "description": "ウォッチドッグタイマー",
+      "targetValue": "1 channel",
+      "candidateValue": "1 channel",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "RTC",
+      "description": "リアルタイムクロック",
+      "targetValue": "1 channel (calendar 99 years, alarm, clock correction)",
+      "candidateValue": "1 channel (calendar 99 years + alarm)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "DMA_Channels",
+      "description": "DMAチャネル数",
+      "targetValue": "2",
+      "candidateValue": "2 channels",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Serial_CSI",
+      "description": "簡易SPI (CSI)",
+      "targetValue": "4 channels",
+      "candidateValue": "6 channels",
+      "score": 80,
+      "reason": "4chと6chで異なる（上位互換）"
+    },
+    {
+      "parameterId": "Serial_UART",
+      "description": "UART (LIN-bus対応含む)",
+      "targetValue": "2 channels",
+      "candidateValue": "3 channels (incl. LIN-bus support)",
+      "score": 80,
+      "reason": "2chと3chで異なる（上位互換）"
+    },
+    {
+      "parameterId": "Serial_I2C",
+      "description": "I2C / 簡易I2C",
+      "targetValue": "6 channels",
+      "candidateValue": "6 channels (simplified I2C) + 1 I2C bus",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Multiplier",
+      "description": "乗除算器",
+      "targetValue": "16x16=32bit, 32÷32=32bit, 16x16+32=32bit",
+      "candidateValue": "16×16=32 bit, 32÷32=32 bit, 16×16+32=32 bit",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Clock_Output",
+      "description": "クロック出力/ブザー出力",
+      "targetValue": "2 channels",
+      "candidateValue": "2",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "LVD",
+      "description": "電圧検出器",
+      "targetValue": "Rise: 2.61 to 4.06 V (8 levels), Fall: 2.55 to 3.98 V (8 levels) (G品種)",
+      "candidateValue": "2.61 to 4.06 V (G-grade, 8 levels)",
+      "score": 100,
+      "reason": "同一仕様（G品種）"
+    },
+    {
+      "parameterId": "On_Chip_Debug",
+      "description": "オンチップデバッグ",
+      "targetValue": "yes",
+      "candidateValue": "On-chip debug function",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    },
+    {
+      "parameterId": "Mounting_Type",
+      "description": "実装タイプ",
+      "targetValue": "Surface Mount",
+      "candidateValue": "Surface Mount (LQFP)",
+      "score": 100,
+      "reason": "表記揺れで同値"
+    }
+  ]
+}

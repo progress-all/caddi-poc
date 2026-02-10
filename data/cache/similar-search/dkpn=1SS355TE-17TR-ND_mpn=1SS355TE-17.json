@@ -1,0 +1,1089 @@
+{
+  "generatedAt": "2026-02-09T08:24:19.177Z",
+  "key": "dkpn=1SS355TE-17TR-ND_mpn=1SS355TE-17",
+  "data": {
+    "targetMpn": "1SS355TE-17",
+    "targetProduct": {
+      "digiKeyProductNumber": "1SS355TE-17TR-ND",
+      "manufacturerProductNumber": "1SS355TE-17",
+      "manufacturerName": "Rohm Semiconductor",
+      "description": "DIODE STANDARD 80V 100MA UMD2",
+      "quantityAvailable": 129389,
+      "productUrl": "https://www.digikey.com/en/products/detail/rohm-semiconductor/1SS355TE-17/650436",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6347/846%7EUMD2%7E%7E2.jpg",
+      "unitPrice": "0.21",
+      "sources": [],
+      "detailedDescription": "Diode 80 V 100mA Surface Mount UMD2",
+      "datasheetUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/9/1ss355.pdf",
+      "partStatus": "Last Time Buy",
+      "backOrderNotAllowed": false,
+      "normallyStocking": true,
+      "discontinued": false,
+      "endOfLife": true,
+      "ncnr": false,
+      "category": {
+        "name": "Discrete Semiconductor Products",
+        "categoryId": 19
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "17",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "1SS355TE-17TR-ND",
+          "packageType": "Tape & Reel (TR)",
+          "quantityAvailable": 129000,
+          "pricing": [
+            {
+              "breakQuantity": 3000,
+              "unitPrice": 0.04154
+            },
+            {
+              "breakQuantity": 6000,
+              "unitPrice": 0.03712
+            },
+            {
+              "breakQuantity": 9000,
+              "unitPrice": 0.03486
+            },
+            {
+              "breakQuantity": 15000,
+              "unitPrice": 0.03232
+            },
+            {
+              "breakQuantity": 21000,
+              "unitPrice": 0.03082
+            },
+            {
+              "breakQuantity": 30000,
+              "unitPrice": 0.02936
+            },
+            {
+              "breakQuantity": 75000,
+              "unitPrice": 0.02614
+            },
+            {
+              "breakQuantity": 150000,
+              "unitPrice": 0.02415
+            },
+            {
+              "breakQuantity": 300000,
+              "unitPrice": 0.02248
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "1SS355TE-17CT-ND",
+          "packageType": "Cut Tape (CT)",
+          "quantityAvailable": 129389,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.21
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.126
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 0.0783
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 0.05714
+            },
+            {
+              "breakQuantity": 1000,
+              "unitPrice": 0.05029
+            }
+          ]
+        },
+        {
+          "digiKeyProductNumber": "1SS355TE-17DKR-ND",
+          "packageType": "Digi-Reel®",
+          "quantityAvailable": 129389,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 0.21
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 0.126
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 0.0783
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 0.05714
+            },
+            {
+              "breakQuantity": 1000,
+              "unitPrice": 0.05029
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Technology",
+          "value": "Standard",
+          "parameterId": 570
+        },
+        {
+          "name": "Voltage - DC Reverse (Vr) (Max)",
+          "value": "80 V",
+          "parameterId": 2071
+        },
+        {
+          "name": "Current - Average Rectified (Io)",
+          "value": "100mA",
+          "parameterId": 914
+        },
+        {
+          "name": "Voltage - Forward (Vf) (Max) @ If",
+          "value": "1.2 V @ 100 mA",
+          "parameterId": 2261
+        },
+        {
+          "name": "Speed",
+          "value": "Small Signal =< 200mA (Io), Any Speed",
+          "parameterId": 143
+        },
+        {
+          "name": "Reverse Recovery Time (trr)",
+          "value": "4 ns",
+          "parameterId": 552
+        },
+        {
+          "name": "Current - Reverse Leakage @ Vr",
+          "value": "100 nA @ 80 V",
+          "parameterId": 2269
+        },
+        {
+          "name": "Capacitance @ Vr, F",
+          "value": "3pF @ 0.5V, 1MHz",
+          "parameterId": 718
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Surface Mount",
+          "parameterId": 69
+        },
+        {
+          "name": "Package / Case",
+          "value": "SC-90, SOD-323F",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "UMD2",
+          "parameterId": 1291
+        },
+        {
+          "name": "Operating Temperature - Junction",
+          "value": "150°C (Max)",
+          "parameterId": 1686
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "digiKeyProductNumber": "1SS355VMTE-17CT-ND",
+        "manufacturerProductNumber": "1SS355VMTE-17",
+        "manufacturerName": "Rohm Semiconductor",
+        "description": "DIODE STANDARD 80V 100MA UMD2",
+        "quantityAvailable": 677269,
+        "productUrl": "https://www.digikey.com/en/products/detail/rohm-semiconductor/1SS355VMTE-17/2673502",
+        "unitPrice": "0.13",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Direct",
+        "detailedDescription": "Diode 80 V 100mA Surface Mount UMD2",
+        "datasheetUrl": "https://www.rohm.com/datasheet?p=1SS355VM&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6347/846%7EUMD2%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "17",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "1SS355VMTE-17TR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 675000,
+            "pricing": [
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.02222
+              },
+              {
+                "breakQuantity": 6000,
+                "unitPrice": 0.022
+              },
+              {
+                "breakQuantity": 9000,
+                "unitPrice": 0.02108
+              },
+              {
+                "breakQuantity": 15000,
+                "unitPrice": 0.01958
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1SS355VMTE-17CT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 677269,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.13
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.084
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0697
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.04942
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.04457
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "1SS355VMTE-17DKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 677269,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.13
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.084
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0697
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.04942
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.04457
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Standard",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "80 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "100mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "1.2 V @ 100 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Small Signal =< 200mA (Io), Any Speed",
+            "parameterId": 143
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "4 ns",
+            "parameterId": 552
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "100 nA @ 80 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "3pF @ 0.5V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "SC-90, SOD-323F",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "UMD2",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "150°C (Max)",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "353-1SS355-TPCT-ND",
+        "manufacturerProductNumber": "1SS355-TP",
+        "manufacturerName": "MCC (Micro Commercial Components)",
+        "description": "DIODE STANDARD 80V 100MA SOD323",
+        "quantityAvailable": 1565,
+        "productUrl": "https://www.digikey.com/en/products/detail/mcc-micro-commercial-components/1SS355-TP/3774962",
+        "unitPrice": "0.18",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 80 V 100mA Surface Mount SOD-323",
+        "datasheetUrl": "https://www.mccsemi.com/pdf/Products/1SS355(SOD-323).pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6153/353%7ESOD323%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "22",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "353-1SS355-TPTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.04653
+              },
+              {
+                "breakQuantity": 6000,
+                "unitPrice": 0.038
+              },
+              {
+                "breakQuantity": 9000,
+                "unitPrice": 0.03549
+              },
+              {
+                "breakQuantity": 15000,
+                "unitPrice": 0.03291
+              },
+              {
+                "breakQuantity": 21000,
+                "unitPrice": 0.03139
+              },
+              {
+                "breakQuantity": 30000,
+                "unitPrice": 0.02938
+              },
+              {
+                "breakQuantity": 75000,
+                "unitPrice": 0.02689
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "353-1SS355-TPCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 1565,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.18
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.116
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0796
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.05812
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.05115
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "353-1SS355-TPDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 1565,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.18
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.116
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0796
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.05812
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.05115
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Standard",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "80 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "100mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "1.2 V @ 100 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Small Signal =< 200mA (Io), Any Speed",
+            "parameterId": 143
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "4 ns",
+            "parameterId": 552
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "100 nA @ 80 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "3pF @ 6V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "SC-76, SOD-323",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "SOD-323",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-55°C ~ 150°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "3757-BAS316_R1_00001CT-ND",
+        "manufacturerProductNumber": "BAS316_R1_00001",
+        "manufacturerName": "Panjit International Inc.",
+        "description": "DIODE STANDARD 100V 250MA SOD323",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/panjit-international-inc/BAS316-R1-00001/14660679",
+        "unitPrice": "0.1",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 100 V 250mA Surface Mount SOD-323",
+        "datasheetUrl": "https://www.panjit.com.tw/upload/datasheet/BAS316.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4430/MFG_SZMM3Z33VT1G.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "10",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "3757-BAS316_R1_00001TR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 5000,
+                "unitPrice": 0.0198
+              },
+              {
+                "breakQuantity": 10000,
+                "unitPrice": 0.01476
+              },
+              {
+                "breakQuantity": 15000,
+                "unitPrice": 0.01379
+              },
+              {
+                "breakQuantity": 25000,
+                "unitPrice": 0.0132
+              },
+              {
+                "breakQuantity": 35000,
+                "unitPrice": 0.01205
+              },
+              {
+                "breakQuantity": 50000,
+                "unitPrice": 0.01142
+              },
+              {
+                "breakQuantity": 125000,
+                "unitPrice": 0.01004
+              },
+              {
+                "breakQuantity": 250000,
+                "unitPrice": 0.00918
+              },
+              {
+                "breakQuantity": 500000,
+                "unitPrice": 0.00846
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "3757-BAS316_R1_00001CT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.059
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.036
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.02584
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.02252
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.01971
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "3757-BAS316_R1_00001DKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.1
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.059
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.036
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.02584
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.02252
+              },
+              {
+                "breakQuantity": 2000,
+                "unitPrice": 0.01971
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Standard",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "100 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "250mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "1.25 V @ 150 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "4 ns",
+            "parameterId": 552
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "500 nA @ 100 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "1.5pF @ 0V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "SC-90, SOD-323F",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "SOD-323",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-55°C ~ 150°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "4878-BAS316WSCT-ND",
+        "manufacturerProductNumber": "BAS316WS",
+        "manufacturerName": "Diotec Semiconductor",
+        "description": "DIODE STANDARD 100V 250MA SOD323",
+        "quantityAvailable": 902,
+        "productUrl": "https://www.digikey.com/en/products/detail/diotec-semiconductor/BAS316WS/13163534",
+        "unitPrice": "0.14",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 100 V 250mA Surface Mount SOD-323",
+        "datasheetUrl": "https://diotec.com/request/datasheet/bas316ws.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/7962/MFG_2796%7ESOD323%7E%7E2.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": true,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "7",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "Not Applicable",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "4878-BAS316WSTR-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 3000,
+                "unitPrice": 0.02649
+              },
+              {
+                "breakQuantity": 6000,
+                "unitPrice": 0.0235
+              },
+              {
+                "breakQuantity": 9000,
+                "unitPrice": 0.02197
+              },
+              {
+                "breakQuantity": 15000,
+                "unitPrice": 0.02026
+              },
+              {
+                "breakQuantity": 21000,
+                "unitPrice": 0.01924
+              },
+              {
+                "breakQuantity": 30000,
+                "unitPrice": 0.01825
+              },
+              {
+                "breakQuantity": 75000,
+                "unitPrice": 0.01607
+              },
+              {
+                "breakQuantity": 150000,
+                "unitPrice": 0.01472
+              },
+              {
+                "breakQuantity": 300000,
+                "unitPrice": 0.01359
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "4878-BAS316WSCT-ND",
+            "packageType": "Cut Tape (CT)",
+            "quantityAvailable": 902,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.083
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0512
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.03702
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.0324
+              }
+            ]
+          },
+          {
+            "digiKeyProductNumber": "4878-BAS316WSDKR-ND",
+            "packageType": "Digi-Reel®",
+            "quantityAvailable": 902,
+            "pricing": [
+              {
+                "breakQuantity": 1,
+                "unitPrice": 0.14
+              },
+              {
+                "breakQuantity": 10,
+                "unitPrice": 0.083
+              },
+              {
+                "breakQuantity": 100,
+                "unitPrice": 0.0512
+              },
+              {
+                "breakQuantity": 500,
+                "unitPrice": 0.03702
+              },
+              {
+                "breakQuantity": 1000,
+                "unitPrice": 0.0324
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Standard",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "100 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "250mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "1.25 V @ 150 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Fast Recovery =< 500ns, > 200mA (Io)",
+            "parameterId": 143
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "4 ns",
+            "parameterId": 552
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "1 µA @ 75 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "1.5pF @ 0V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "SC-90, SOD-323F",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "SOD-323",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "-55°C ~ 150°C",
+            "parameterId": 1686
+          }
+        ]
+      },
+      {
+        "digiKeyProductNumber": "641-1005-2-ND",
+        "manufacturerProductNumber": "CDSF355B",
+        "manufacturerName": "Comchip Technology",
+        "description": "DIODE STANDARD 80V 100MA 1005",
+        "quantityAvailable": 0,
+        "productUrl": "https://www.digikey.com/en/products/detail/comchip-technology/CDSF355B/1121037",
+        "unitPrice": "0.03535",
+        "sources": [
+          "substitutions"
+        ],
+        "substituteType": "Similar",
+        "detailedDescription": "Diode 80 V 100mA Surface Mount 1005/SOD-323F",
+        "datasheetUrl": "https://www.comchiptech.com/admin/files/product/CDSF355B-HF-RevB214322.pdf",
+        "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/2603/MFG_1005%20%282512%20metric%29%20Pkg.jpg",
+        "partStatus": "Active",
+        "backOrderNotAllowed": false,
+        "normallyStocking": false,
+        "discontinued": false,
+        "endOfLife": false,
+        "ncnr": false,
+        "category": {
+          "name": "Discrete Semiconductor Products",
+          "categoryId": 19
+        },
+        "series": "-",
+        "manufacturerLeadWeeks": "8",
+        "manufacturerPublicQuantity": 0,
+        "classifications": {
+          "rohs": "ROHS3 Compliant",
+          "reach": "REACH Unaffected",
+          "moisture": "1  (Unlimited)",
+          "exportControl": "EAR99"
+        },
+        "variations": [
+          {
+            "digiKeyProductNumber": "641-1005-2-ND",
+            "packageType": "Tape & Reel (TR)",
+            "quantityAvailable": 0,
+            "pricing": [
+              {
+                "breakQuantity": 4000,
+                "unitPrice": 0.03535
+              },
+              {
+                "breakQuantity": 8000,
+                "unitPrice": 0.033
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Technology",
+            "value": "Standard",
+            "parameterId": 570
+          },
+          {
+            "name": "Voltage - DC Reverse (Vr) (Max)",
+            "value": "80 V",
+            "parameterId": 2071
+          },
+          {
+            "name": "Current - Average Rectified (Io)",
+            "value": "100mA",
+            "parameterId": 914
+          },
+          {
+            "name": "Voltage - Forward (Vf) (Max) @ If",
+            "value": "1 V @ 100 mA",
+            "parameterId": 2261
+          },
+          {
+            "name": "Speed",
+            "value": "Small Signal =< 200mA (Io), Any Speed",
+            "parameterId": 143
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "4 ns",
+            "parameterId": 552
+          },
+          {
+            "name": "Current - Reverse Leakage @ Vr",
+            "value": "100 nA @ 80 V",
+            "parameterId": 2269
+          },
+          {
+            "name": "Capacitance @ Vr, F",
+            "value": "3pF @ 0.5V, 1MHz",
+            "parameterId": 718
+          },
+          {
+            "name": "Mounting Type",
+            "value": "Surface Mount",
+            "parameterId": 69
+          },
+          {
+            "name": "Package / Case",
+            "value": "1005 (2512 Metric)",
+            "parameterId": 16
+          },
+          {
+            "name": "Supplier Device Package",
+            "value": "1005/SOD-323F",
+            "parameterId": 1291
+          },
+          {
+            "name": "Operating Temperature - Junction",
+            "value": "125°C (Max)",
+            "parameterId": 1686
+          }
+        ]
+      }
+    ],
+    "searchedAt": "2026-02-09T08:24:19.161Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 5
+      }
+    }
+  }
+}

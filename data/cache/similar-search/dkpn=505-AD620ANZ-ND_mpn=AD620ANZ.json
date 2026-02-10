@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-02-10T01:18:39.653Z",
+  "key": "dkpn=505-AD620ANZ-ND_mpn=AD620ANZ",
+  "data": {
+    "targetMpn": "AD620ANZ",
+    "targetProduct": {
+      "digiKeyProductNumber": "505-AD620ANZ-ND",
+      "manufacturerProductNumber": "AD620ANZ",
+      "manufacturerName": "Analog Devices Inc.",
+      "description": "IC INST AMP 1 CIRCUIT 8DIP",
+      "quantityAvailable": 3822,
+      "productUrl": "https://www.digikey.com/en/products/detail/analog-devices-inc/AD620ANZ/750967",
+      "photoUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4360/505%7EN-8%7EN%7E8-Top.jpg",
+      "unitPrice": "17.31",
+      "sources": [],
+      "detailedDescription": "Instrumentation Amplifier 1 Circuit 8-PDIP",
+      "datasheetUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/AD620.pdf",
+      "partStatus": "Active",
+      "backOrderNotAllowed": false,
+      "normallyStocking": true,
+      "discontinued": false,
+      "endOfLife": false,
+      "ncnr": false,
+      "category": {
+        "name": "Integrated Circuits (ICs)",
+        "categoryId": 32
+      },
+      "series": "-",
+      "manufacturerLeadWeeks": "10",
+      "manufacturerPublicQuantity": 0,
+      "classifications": {
+        "rohs": "ROHS3 Compliant",
+        "reach": "REACH Unaffected",
+        "moisture": "1  (Unlimited)",
+        "exportControl": "EAR99"
+      },
+      "variations": [
+        {
+          "digiKeyProductNumber": "505-AD620ANZ-ND",
+          "packageType": "Tube",
+          "quantityAvailable": 3822,
+          "pricing": [
+            {
+              "breakQuantity": 1,
+              "unitPrice": 17.31
+            },
+            {
+              "breakQuantity": 10,
+              "unitPrice": 13.751
+            },
+            {
+              "breakQuantity": 50,
+              "unitPrice": 12.3258
+            },
+            {
+              "breakQuantity": 100,
+              "unitPrice": 11.8845
+            },
+            {
+              "breakQuantity": 250,
+              "unitPrice": 11.4186
+            },
+            {
+              "breakQuantity": 500,
+              "unitPrice": 11.13788
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Amplifier Type",
+          "value": "Instrumentation",
+          "parameterId": 161
+        },
+        {
+          "name": "Number of Circuits",
+          "value": "1",
+          "parameterId": 2094
+        },
+        {
+          "name": "Output Type",
+          "value": "-",
+          "parameterId": 41
+        },
+        {
+          "name": "Slew Rate",
+          "value": "1.2V/µs",
+          "parameterId": 511
+        },
+        {
+          "name": "-3db Bandwidth",
+          "value": "1 MHz",
+          "parameterId": 2153
+        },
+        {
+          "name": "Current - Input Bias",
+          "value": "500 pA",
+          "parameterId": 974
+        },
+        {
+          "name": "Voltage - Input Offset",
+          "value": "30 µV",
+          "parameterId": 975
+        },
+        {
+          "name": "Current - Supply",
+          "value": "900µA",
+          "parameterId": 449
+        },
+        {
+          "name": "Current - Output / Channel",
+          "value": "18 mA",
+          "parameterId": 2115
+        },
+        {
+          "name": "Voltage - Supply Span (Min)",
+          "value": "4.6 V",
+          "parameterId": 2609
+        },
+        {
+          "name": "Voltage - Supply Span (Max)",
+          "value": "36 V",
+          "parameterId": 2610
+        },
+        {
+          "name": "Operating Temperature",
+          "value": "-40°C ~ 85°C",
+          "parameterId": 252
+        },
+        {
+          "name": "Mounting Type",
+          "value": "Through Hole",
+          "parameterId": 69
+        },
+        {
+          "name": "Package / Case",
+          "value": "8-DIP (0.300\", 7.62mm)",
+          "parameterId": 16
+        },
+        {
+          "name": "Supplier Device Package",
+          "value": "8-PDIP",
+          "parameterId": 1291
+        }
+      ]
+    },
+    "candidates": [],
+    "searchedAt": "2026-02-10T01:18:39.652Z",
+    "sourceSummary": {
+      "custom": {
+        "count": 0
+      },
+      "substitutions": {
+        "count": 0
+      }
+    }
+  }
+}
