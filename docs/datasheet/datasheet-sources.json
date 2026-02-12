@@ -1,0 +1,31 @@
+{
+  "manufacturerShortNames": {
+    "Murata": "Murata",
+    "Murata Manufacturing": "Murata",
+    "Texas Instruments": "TI",
+    "TI": "TI",
+    "Vishay": "Vishay",
+    "Vishay Siliconix": "Vishay",
+    "Vishay Intertechnology": "Vishay",
+    "KEMET": "KEMET",
+    "TDK": "TDK",
+    "Samsung": "Samsung",
+    "Yageo": "Yageo",
+    "Analog Devices": "Analog_Devices",
+    "Analog Devices Inc.": "Analog_Devices",
+    "Analog Devices Inc": "Analog_Devices",
+    "Broadcom": "Broadcom",
+    "Broadcom Limited": "Broadcom",
+    "MACOM Technology Solutions": "MACOM_Technology_Solutions",
+    "MACOM Technology Solutions Inc.": "MACOM_Technology_Solutions",
+    "Micron": "Micron",
+    "Micron Technology": "Micron",
+    "Micron Technology, Inc.": "Micron",
+    "Infineon": "Infineon",
+    "Infineon Technologies": "Infineon",
+    "Infineon Technologies AG": "Infineon",
+    "STMicroelectronics": "ST",
+    "STMicroelectronics N.V.": "ST",
+    "ST": "ST"
+  }
+}

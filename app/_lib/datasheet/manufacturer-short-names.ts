@@ -1,7 +1,7 @@
 /**
  * メーカー名 → 短縮名（datasheet-id 命名の唯一の情報源）
  *
- * Download API / datasheet-url API / Publish で使用。
+ * Download API / datasheet-url API で使用。
  * 新しいメーカーを追加する場合はここに追加するだけで OK。
  */
 export const MANUFACTURER_SHORT_NAMES: Record<string, string> = {
@@ -58,7 +58,7 @@ function sanitizeForId(s: string): string {
 }
 
 /**
- * メーカー名と MPN から Publish で使う datasheet-id 候補を返す。
+ * メーカー名と MPN から datasheet-id 候補を返す。
  * 例: ("Texas Instruments", "LM358M") → "TI_LM358M"
  * メーカーがマップに無い場合は null（フォールバックしない）
  */
