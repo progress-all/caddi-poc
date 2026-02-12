@@ -1,107 +1,258 @@
 {
   "datasheet_id": "TI_LM358M",
   "version": "1.0",
-  "source": "TI_LM358M.pdf",
+  "schema_id": "TI_LM358M",
+  "inferred_category": "operational_amplifier",
   "parameters": {
     "Part_Number": {
       "description": "型名",
-      "value": "LM358-N (LM358M: SOIC-8)"
+      "value": "LM358M/NOPB (LMx58-N ファミリ)",
+      "status": "extracted"
+    },
+    "Product_Type": {
+      "description": "製品種別",
+      "value": "Low-Power, Dual-Operational Amplifier",
+      "status": "extracted"
     },
     "Package": {
       "description": "パッケージ",
-      "value": "SOIC (8)"
+      "value": "SOIC (D) 8-Pin",
+      "status": "extracted"
     },
-    "Body_Size": {
-      "description": "外形寸法",
-      "value": "4.90 mm × 3.91 mm"
+    "Package_Body_Size": {
+      "description": "パッケージサイズ",
+      "value": "4.90 mm × 3.91 mm",
+      "status": "extracted"
     },
-    "Supply_Voltage_Single": {
-      "description": "電源電圧（単電源）",
-      "value": "3 V to 32 V"
+    "Pin_Count": {
+      "description": "ピン数",
+      "value": "8",
+      "status": "extracted"
+    },
+    "Number_Of_Channels": {
+      "description": "チャンネル数",
+      "value": "2",
+      "status": "extracted"
+    },
+    "Document_Number": {
+      "description": "ドキュメント番号",
+      "value": "SNOSBT3J (January 2000, Revised March 2022)",
+      "status": "extracted"
+    },
+    "Supply_Voltage_Max": {
+      "description": "電源電圧 (最大定格)",
+      "value": "32 V",
+      "status": "extracted"
+    },
+    "Differential_Input_Voltage_Max": {
+      "description": "差動入力電圧 (最大定格)",
+      "value": "32 V",
+      "status": "extracted"
+    },
+    "Input_Voltage_Range_Abs": {
+      "description": "入力電圧範囲 (最大定格)",
+      "value": "-0.3 to 32 V",
+      "status": "extracted"
+    },
+    "Power_Dissipation_SOIC": {
+      "description": "許容損失 (SOIC)",
+      "value": "530 mW",
+      "status": "extracted"
+    },
+    "Input_Current_Max": {
+      "description": "入力電流 (最大定格)",
+      "value": "50 mA",
+      "status": "extracted"
+    },
+    "Storage_Temperature_Range": {
+      "description": "保存温度範囲",
+      "value": "-65 to 150 °C",
+      "status": "extracted"
+    },
+    "Lead_Temperature_Soldering": {
+      "description": "リード温度 (はんだ付け)",
+      "value": "Vapor Phase 215 °C (60s) / Infrared 220 °C (15s)",
+      "status": "extracted"
+    },
+    "ESD_HBM": {
+      "description": "ESD耐性 (HBM)",
+      "value": "±250 V",
+      "status": "extracted"
+    },
+    "Supply_Voltage_Range": {
+      "description": "推奨電源電圧範囲",
+      "value": "3 to 32 V (single supply)",
+      "status": "extracted"
     },
     "Supply_Voltage_Dual": {
-      "description": "電源電圧（双電源）",
-      "value": "±1.5 V to ±16 V"
+      "description": "デュアル電源電圧範囲",
+      "value": "±1.5 to ±16 V",
+      "status": "extracted"
     },
-    "Operating_Temperature": {
-      "description": "動作温度範囲 (LM358)",
-      "value": "0 to 70 °C"
+    "Operating_Temperature_Range": {
+      "description": "動作温度範囲",
+      "value": "0 to 70 °C",
+      "status": "extracted"
     },
-    "Storage_Temperature": {
-      "description": "保存温度範囲",
-      "value": "-65 to 150 °C"
+    "Theta_JA_SOIC": {
+      "description": "熱抵抗 θJA (SOIC)",
+      "value": "189 °C/W",
+      "status": "extracted"
+    },
+    "Theta_JA_PDIP": {
+      "description": "熱抵抗 θJA (PDIP)",
+      "value": "120 °C/W",
+      "status": "extracted"
+    },
+    "Theta_JA_DSBGA": {
+      "description": "熱抵抗 θJA (DSBGA)",
+      "value": "230 °C/W",
+      "status": "extracted"
     },
     "Input_Offset_Voltage": {
-      "description": "入力オフセット電圧 (TA=25°C)",
-      "value": "2 mV typ / 7 mV max"
+      "description": "入力オフセット電圧",
+      "value": "2 typ / 7 max mV",
+      "status": "extracted"
+    },
+    "Input_Offset_Voltage_Drift": {
+      "description": "入力オフセット電圧ドリフト",
+      "value": "7 max μV/°C",
+      "status": "extracted"
     },
     "Input_Bias_Current": {
-      "description": "入力バイアス電流 (TA=25°C)",
-      "value": "45 nA typ / 250 nA max"
+      "description": "入力バイアス電流",
+      "value": "45 typ / 250 max nA",
+      "status": "extracted"
     },
     "Input_Offset_Current": {
-      "description": "入力オフセット電流 (TA=25°C)",
-      "value": "5 nA typ / 50 nA max"
+      "description": "入力オフセット電流",
+      "value": "5 typ / 50 max nA",
+      "status": "extracted"
     },
-    "Input_CommonMode_Range": {
+    "Input_Offset_Current_Drift": {
+      "description": "入力オフセット電流ドリフト",
+      "value": "10 max pA/°C",
+      "status": "extracted"
+    },
+    "Input_Common_Mode_Voltage_Range": {
       "description": "入力同相電圧範囲",
-      "value": "0 to V+−1.5 V"
+      "value": "0 to V+−1.5 V",
+      "status": "extracted"
     },
-    "Supply_Current": {
-      "description": "消費電流 (V+=5V, RL=∞)",
-      "value": "0.5 to 1.2 mA"
+    "Supply_Current_30V": {
+      "description": "消費電流 (V+=30V)",
+      "value": "1 typ / 2 max mA",
+      "status": "extracted"
     },
-    "Supply_Current_Max": {
-      "description": "消費電流 (V+=30V, 全温度)",
-      "value": "1 to 2 mA"
+    "Supply_Current_5V": {
+      "description": "消費電流 (V+=5V)",
+      "value": "0.5 typ / 1.2 max mA",
+      "status": "extracted"
     },
     "Large_Signal_Voltage_Gain": {
-      "description": "大信号電圧利得 (RL≥2kΩ, VO=1V to 11V)",
-      "value": "25 to 100 V/mV"
+      "description": "大信号電圧利得",
+      "value": "25 min / 100 typ V/mV",
+      "status": "extracted"
+    },
+    "DC_Voltage_Gain": {
+      "description": "DC電圧利得",
+      "value": "100 dB",
+      "status": "extracted"
     },
     "Unity_Gain_Bandwidth": {
-      "description": "unity gain 帯域幅",
-      "value": "1 MHz"
+      "description": "ユニティゲイン帯域幅",
+      "value": "1 MHz",
+      "status": "extracted"
     },
     "CMRR": {
       "description": "同相除去比",
-      "value": "65 to 85 dB"
+      "value": "65 min / 85 typ dB",
+      "status": "extracted"
     },
     "PSRR": {
-      "description": "電源除去比",
-      "value": "65 to 100 dB"
+      "description": "電源変動除去比",
+      "value": "65 min / 100 typ dB",
+      "status": "extracted"
+    },
+    "Amplifier_Coupling": {
+      "description": "アンプ間結合",
+      "value": "-120 typ dB",
+      "status": "extracted"
     },
     "Output_Current_Source": {
       "description": "出力電流 (ソース)",
-      "value": "20 to 40 mA"
+      "value": "20 min / 40 typ mA",
+      "status": "extracted"
     },
     "Output_Current_Sink": {
       "description": "出力電流 (シンク)",
-      "value": "10 to 20 mA"
+      "value": "10 min / 20 typ mA",
+      "status": "extracted"
     },
-    "Output_ShortCircuit_Current": {
-      "description": "短絡電流 (GND側)",
-      "value": "40 to 60 mA"
+    "Output_Short_Circuit_Current": {
+      "description": "出力短絡電流",
+      "value": "40 min / 60 typ mA",
+      "status": "extracted"
     },
     "Output_Voltage_High": {
-      "description": "VOH (V+=30V, RL=2kΩ)",
-      "value": "26 V min"
+      "description": "出力電圧 (High)",
+      "value": "RL=2kΩ: 26 min V / RL=10kΩ: 27 min, 28 typ V (at V+=30V)",
+      "status": "extracted"
     },
     "Output_Voltage_Low": {
-      "description": "VOL (V+=5V, RL=10kΩ)",
-      "value": "5 to 20 mV"
+      "description": "出力電圧 (Low)",
+      "value": "5 typ / 20 max mV",
+      "status": "extracted"
     },
-    "ESD_HBM": {
-      "description": "ESD (HBM)",
-      "value": "±250 V"
+    "Input_Offset_Voltage_OverTemp": {
+      "description": "入力オフセット電圧 (温度範囲)",
+      "value": "9 max mV",
+      "status": "extracted"
     },
-    "Thermal_Resistance_JA": {
-      "description": "熱抵抗 RθJA (SOIC 8-pin)",
-      "value": "189 °C/W"
+    "Input_Bias_Current_OverTemp": {
+      "description": "入力バイアス電流 (温度範囲)",
+      "value": "40 typ / 500 max nA",
+      "status": "extracted"
     },
-    "Power_Dissipation": {
-      "description": "最大消費電力 (SOIC)",
-      "value": "530 mW"
+    "Large_Signal_Voltage_Gain_OverTemp": {
+      "description": "大信号電圧利得 (温度範囲)",
+      "value": "15 min V/mV",
+      "status": "extracted"
+    },
+    "Orderable_Part_Number": {
+      "description": "注文型番",
+      "value": "LM358M/NOPB",
+      "status": "extracted"
+    },
+    "Package_Qty_Tube": {
+      "description": "梱包数量 (チューブ)",
+      "value": "95",
+      "status": "extracted"
+    },
+    "Package_Qty_Reel": {
+      "description": "梱包数量 (リール)",
+      "value": "2500",
+      "status": "extracted"
+    },
+    "RoHS_Compliant": {
+      "description": "RoHS対応",
+      "value": "Yes",
+      "status": "extracted"
+    },
+    "Lead_Finish": {
+      "description": "リード仕上げ",
+      "value": "SN",
+      "status": "extracted"
+    },
+    "MSL_Rating": {
+      "description": "MSLレーティング",
+      "value": "Level-1-260C-UNLIM",
+      "status": "extracted"
+    },
+    "Supply_Current_Drain": {
+      "description": "電源電流ドレイン",
+      "value": "500 μA",
+      "status": "extracted"
     }
   }
 }

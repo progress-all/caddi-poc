@@ -1,26 +1,60 @@
-param_id,description,value
-Part_Number,型名,LM358-N (LM358M/NOPB: SOIC-8)
-Package,パッケージ,SOIC (8)
-Body_Size,外形寸法,4.90 mm × 3.91 mm
-Supply_Voltage_Single,電源電圧（単電源）,3 V to 32 V
-Supply_Voltage_Dual,電源電圧（双電源）,±1.5 V to ±16 V
-Operating_Temperature,動作温度範囲 (LM358),0 to 70 °C
-Storage_Temperature,保存温度範囲,-65 to 150 °C
-Input_Offset_Voltage,入力オフセット電圧 (TA=25°C),2 mV typ / 7 mV max
-Input_Bias_Current,入力バイアス電流 (TA=25°C),45 nA typ / 250 nA max
-Input_Offset_Current,入力オフセット電流 (TA=25°C),5 nA typ / 50 nA max
-Input_CommonMode_Range,入力同相電圧範囲,0 to V+−1.5 V
-Supply_Current,消費電流 (V+=5V, RL=∞),0.5 to 1.2 mA
-Supply_Current_Max,消費電流 (V+=30V, 全温度),1 to 2 mA
-Large_Signal_Voltage_Gain,大信号電圧利得 (RL≥2kΩ, VO=1V to 11V),25 to 100 V/mV
-Unity_Gain_Bandwidth,unity gain 帯域幅,1 MHz
-CMRR,同相除去比,65 to 85 dB
-PSRR,電源除去比,65 to 100 dB
-Output_Current_Source,出力電流 (ソース),20 to 40 mA
-Output_Current_Sink,出力電流 (シンク),10 to 20 mA
-Output_ShortCircuit_Current,短絡電流 (GND側),40 to 60 mA
-Output_Voltage_High,VOH (V+=30V, RL=2kΩ),26 V min
-Output_Voltage_Low,VOL (V+=5V, RL=10kΩ),5 to 20 mV
-ESD_HBM,ESD (HBM),±250 V
-Thermal_Resistance_JA,熱抵抗 RθJA (SOIC 8-pin),189 °C/W
-Power_Dissipation,最大消費電力 (SOIC),530 mW
+param_id,description,value,status
+Part_Number,型名,LM358M/NOPB (LMx58-N ファミリ),extracted
+Product_Type,製品種別,"Low-Power, Dual-Operational Amplifier",extracted
+Package,パッケージ,SOIC (D) 8-Pin,extracted
+Package_Body_Size,パッケージサイズ,4.90 mm × 3.91 mm,extracted
+Pin_Count,ピン数,8,extracted
+Number_Of_Channels,チャンネル数,2,extracted
+Document_Number,ドキュメント番号,"SNOSBT3J (January 2000, Revised March 2022)",extracted
+Supply_Voltage_Max,電源電圧 (最大定格),32 V,extracted
+Differential_Input_Voltage_Max,差動入力電圧 (最大定格),32 V,extracted
+Input_Voltage_Range_Abs,入力電圧範囲 (最大定格),-0.3 to 32 V,extracted
+Power_Dissipation_SOIC,許容損失 (SOIC),530 mW,extracted
+Input_Current_Max,入力電流 (最大定格),50 mA,extracted
+Output_Short_Circuit_GND,出力短絡 (対GND),"Continuous (V+ ≤ 15 V, TA = 25°C)",extracted
+Storage_Temperature_Range,保存温度範囲,-65 to 150 °C,extracted
+Lead_Temperature_Soldering,リード温度 (はんだ付け),Vapor Phase 215 °C (60s) / Infrared 220 °C (15s),extracted
+ESD_HBM,ESD耐性 (HBM),±250 V,extracted
+Supply_Voltage_Range,推奨電源電圧範囲 (単電源),3 to 32 V,extracted
+Supply_Voltage_Dual,推奨電源電圧範囲 (デュアル),±1.5 to ±16 V,extracted
+Operating_Temperature_Range,動作温度範囲,0 to 70 °C,extracted
+Theta_JA_SOIC,熱抵抗 θJA (SOIC),189 °C/W,extracted
+Theta_JA_PDIP,熱抵抗 θJA (PDIP),120 °C/W,extracted
+Theta_JA_DSBGA,熱抵抗 θJA (DSBGA),230 °C/W,extracted
+Theta_JA_TO99,熱抵抗 θJA (TO-99),155 °C/W,extracted
+Input_Offset_Voltage,入力オフセット電圧,2 typ / 7 max mV,extracted
+Input_Bias_Current,入力バイアス電流,45 typ / 250 max nA,extracted
+Input_Offset_Current,入力オフセット電流,5 typ / 50 max nA,extracted
+Input_Common_Mode_Voltage_Range,入力同相電圧範囲,0 to V+−1.5 V,extracted
+Supply_Current_30V,消費電流 (V+=30V),1 typ / 2 max mA,extracted
+Supply_Current_5V,消費電流 (V+=5V),0.5 typ / 1.2 max mA,extracted
+Large_Signal_Voltage_Gain,大信号電圧利得,25 min / 100 typ V/mV,extracted
+DC_Voltage_Gain,DC電圧利得,100 dB,extracted
+Unity_Gain_Bandwidth,ユニティゲイン帯域幅,1 MHz,extracted
+CMRR,同相除去比,65 min / 85 typ dB,extracted
+PSRR,電源変動除去比,65 min / 100 typ dB,extracted
+Amplifier_Coupling,アンプ間結合,-120 typ dB,extracted
+Output_Current_Source_25C,出力電流 ソース (TA=25°C),20 min / 40 typ mA,extracted
+Output_Current_Sink_25C,出力電流 シンク (TA=25°C),10 min / 20 typ mA,extracted
+Output_Current_Sink_LowVo,出力電流 シンク (低VO),12 typ / 50 max μA,extracted
+Output_Short_Circuit_Current,出力短絡電流,40 min / 60 typ mA,extracted
+Output_Voltage_High,出力電圧 (VOH),"RL=2kΩ: 26 min V / RL=10kΩ: 27 min, 28 typ V (at V+=30V)",extracted
+Output_Voltage_Low,出力電圧 (VOL),5 typ / 20 max mV,extracted
+Input_Offset_Voltage_OverTemp,入力オフセット電圧 (全温度範囲),9 max mV,extracted
+Input_Offset_Voltage_Drift,入力オフセット電圧ドリフト,7 max μV/°C,extracted
+Input_Offset_Current_OverTemp,入力オフセット電流 (全温度範囲),150 max nA,extracted
+Input_Offset_Current_Drift,入力オフセット電流ドリフト,10 max pA/°C,extracted
+Input_Bias_Current_OverTemp,入力バイアス電流 (全温度範囲),40 typ / 500 max nA,extracted
+Input_Common_Mode_Voltage_Range_OverTemp,入力同相電圧範囲 (全温度範囲),0 to V+−2 V,extracted
+Large_Signal_Voltage_Gain_OverTemp,大信号電圧利得 (全温度範囲),15 min V/mV,extracted
+Output_Current_Source_OverTemp,出力電流 ソース (全温度範囲),10 min / 20 typ mA,extracted
+Output_Current_Sink_OverTemp,出力電流 シンク (全温度範囲),5 min / 8 typ mA,extracted
+Supply_Current_Drain_Typ,電源電流ドレイン (typ),500 μA,extracted
+Input_Offset_Voltage_Low,入力オフセット電圧 (Feature),2 mV,extracted
+Orderable_Part_Number,注文型番,LM358M/NOPB,extracted
+Package_Qty_Tube,梱包数量 (チューブ),95,extracted
+Package_Qty_Reel,梱包数量 (リール),2500,extracted
+RoHS_Compliant,RoHS対応,Yes,extracted
+Lead_Finish,リード仕上げ,SN,extracted
+MSL_Rating,MSLレーティング,Level-1-260C-UNLIM,extracted
+Part_Marking,パートマーキング,LM 358M,extracted
