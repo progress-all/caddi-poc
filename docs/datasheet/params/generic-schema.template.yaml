@@ -1,0 +1,77 @@
+# =============================================================================
+# 汎用スキーマテンプレート (generic-schema.template.yaml)
+# =============================================================================
+# LLMが対象PDFごとにスキーマを生成する際に準拠すべきフォーマット定義。
+# このファイル自体はテンプレートであり、実データは含まない。
+#
+# 使い方:
+#   parse-datasheet スキルの Step 2 (スキーマ生成) で、LLMにこのファイルの
+#   フォーマットを提示し、対象データシートに最適なスキーマを生成させる。
+# =============================================================================
+
+# --- メタデータ ---
+schema_version: "1.0"
+schema_id: "<datasheet-id>"                 # 対象部品の datasheet-id (例: "ST_1N5822")
+inferred_category: "<component_category>"   # LLMが推定した部品カテゴリ
+                                            # 例: "mlcc", "operational_amplifier",
+                                            #      "schottky_diode", "power_mosfet",
+                                            #      "microcontroller", "dram",
+                                            #      "rf_transistor", "voltage_regulator" 等
+
+# --- パラメータ定義 ---
+# 各パラメータは以下のフィールドを持つ:
+#
+#   id:               パラメータID (PascalCase_Snake形式, スキーマ内で一意)
+#   label:            日本語ラベル (UI表示用)
+#   description:      パラメータの説明
+#   unit:             単位 (該当なしは空文字 "")
+#                     例: "V", "A", "°C", "Ω", "mm", "pF", "ns", "mW", "dB" 等
+#   extraction_hint:  データシート中の抽出場所・方法のヒント
+#                     具体的なセクション名・表名・行の位置を記載すること
+#   required:         true  = データシートに記載があるはず (必須)
+#                     false = 記載がある可能性が低い、または条件次第 (任意)
+#
+parameters:
+  # --- 基本情報 (必須) ---
+  - id: "Part_Number"
+    label: "型名"
+    description: "データシート記載の製品型名"
+    unit: ""
+    extraction_hint: "Page 1 冒頭またはタイトルの型名を抽出"
+    required: true
+
+  - id: "Product_Type"
+    label: "製品種別"
+    description: "製品の種別・カテゴリ (例: Schottky Diode, N-Channel MOSFET)"
+    unit: ""
+    extraction_hint: "Page 1 の製品概要・サブタイトルから抽出"
+    required: true
+
+  - id: "Package"
+    label: "パッケージ"
+    description: "パッケージ形状 (例: SOT-23, SOIC-8, DO-201AD)"
+    unit: ""
+    extraction_hint: "Page 1 の Package / Ordering Information から抽出"
+    required: true
+
+  # --- 以下、部品に応じてLLMが追加するパラメータ ---
+  # カテゴリに応じて以下のセクションから網羅的に選定すること:
+  #
+  # 1. Absolute Maximum Ratings (最大定格)
+  #    - 電圧、電流、温度、消費電力の上限値
+  #
+  # 2. Electrical Characteristics (電気的特性)
+  #    - その部品固有の主要電気パラメータ
+  #    - typ/min/max が存在する場合は適宜分割
+  #
+  # 3. Thermal Characteristics (熱特性)
+  #    - 熱抵抗 (θJA, θJC 等)
+  #    - 動作温度範囲、保存温度範囲
+  #
+  # 4. Package / Dimensions (パッケージ寸法)
+  #    - 主要寸法 (L, W, H 等)
+  #
+  # 5. Ordering Information (発注情報)
+  #    - 梱包形態、数量
+  #
+  # パラメータ数の目安: 15〜50項目

@@ -1,208 +1,566 @@
 {
   "targetId": "TI_LM358M",
   "candidateId": "TI_LM358M_NOPB",
-  "evaluatedAt": "2026-02-06T00:00:00.000Z",
+  "evaluatedAt": "2026-02-12T12:00:00.000Z",
   "summary": "・差分なし（比較可能な範囲では全項目一致）",
   "parameters": [
     {
       "parameterId": "Part_Number",
       "description": "型名",
-      "targetValue": "LM358-N (LM358M: SOIC-8)",
-      "candidateValue": "LM358-N (LM358M/NOPB: SOIC-8)",
+      "targetValue": "LM358M/NOPB (LMx58-N ファミリ)",
+      "candidateValue": "LM358M/NOPB (LMx58-N ファミリ)",
       "score": 100,
-      "reason": "NOPBは無鉛表記で同一品"
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Product_Type",
+      "description": "製品種別",
+      "targetValue": "Low-Power, Dual-Operational Amplifier",
+      "candidateValue": "Low-Power, Dual-Operational Amplifier",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Package",
       "description": "パッケージ",
-      "targetValue": "SOIC (8)",
-      "candidateValue": "SOIC (8)",
+      "targetValue": "SOIC (D) 8-Pin",
+      "candidateValue": "SOIC (D) 8-Pin",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Body_Size",
-      "description": "外形寸法",
+      "parameterId": "Package_Body_Size",
+      "description": "パッケージサイズ",
       "targetValue": "4.90 mm × 3.91 mm",
       "candidateValue": "4.90 mm × 3.91 mm",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Supply_Voltage_Single",
-      "description": "電源電圧（単電源）",
-      "targetValue": "3 V to 32 V",
-      "candidateValue": "3 V to 32 V",
+      "parameterId": "Pin_Count",
+      "description": "ピン数",
+      "targetValue": "8",
+      "candidateValue": "8",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Supply_Voltage_Dual",
-      "description": "電源電圧（双電源）",
-      "targetValue": "±1.5 V to ±16 V",
-      "candidateValue": "±1.5 V to ±16 V",
+      "parameterId": "Number_Of_Channels",
+      "description": "チャンネル数",
+      "targetValue": "2",
+      "candidateValue": "2",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Operating_Temperature",
-      "description": "動作温度範囲 (LM358)",
-      "targetValue": "0 to 70 °C",
-      "candidateValue": "0 to 70 °C",
+      "parameterId": "Document_Number",
+      "description": "ドキュメント番号",
+      "targetValue": "SNOSBT3J (January 2000, Revised March 2022)",
+      "candidateValue": "SNOSBT3J (January 2000, Revised March 2022)",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Storage_Temperature",
+      "parameterId": "Supply_Voltage_Max",
+      "description": "電源電圧 (最大定格)",
+      "targetValue": "32 V",
+      "candidateValue": "32 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Differential_Input_Voltage_Max",
+      "description": "差動入力電圧 (最大定格)",
+      "targetValue": "32 V",
+      "candidateValue": "32 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Voltage_Range_Abs",
+      "description": "入力電圧範囲 (最大定格)",
+      "targetValue": "-0.3 to 32 V",
+      "candidateValue": "-0.3 to 32 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Power_Dissipation_SOIC",
+      "description": "許容損失 (SOIC)",
+      "targetValue": "530 mW",
+      "candidateValue": "530 mW",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Current_Max",
+      "description": "入力電流 (最大定格)",
+      "targetValue": "50 mA",
+      "candidateValue": "50 mA",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Storage_Temperature_Range",
       "description": "保存温度範囲",
       "targetValue": "-65 to 150 °C",
       "candidateValue": "-65 to 150 °C",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Lead_Temperature_Soldering",
+      "description": "リード温度 (はんだ付け)",
+      "targetValue": "Vapor Phase 215 °C (60s) / Infrared 220 °C (15s)",
+      "candidateValue": "Vapor Phase 215 °C (60s) / Infrared 220 °C (15s)",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "ESD_HBM",
+      "description": "ESD耐性 (HBM)",
+      "targetValue": "±250 V",
+      "candidateValue": "±250 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Supply_Voltage_Range",
+      "description": "推奨電源電圧範囲",
+      "targetValue": "3 to 32 V (single supply)",
+      "candidateValue": "3 to 32 V",
+      "score": 100,
+      "reason": "表記揺れで同値",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Supply_Voltage_Dual",
+      "description": "デュアル電源電圧範囲",
+      "targetValue": "±1.5 to ±16 V",
+      "candidateValue": "±1.5 to ±16 V",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Operating_Temperature_Range",
+      "description": "動作温度範囲",
+      "targetValue": "0 to 70 °C",
+      "candidateValue": "0 to 70 °C",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Theta_JA_SOIC",
+      "description": "熱抵抗 θJA (SOIC)",
+      "targetValue": "189 °C/W",
+      "candidateValue": "189 °C/W",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Theta_JA_PDIP",
+      "description": "熱抵抗 θJA (PDIP)",
+      "targetValue": "120 °C/W",
+      "candidateValue": "120 °C/W",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Theta_JA_DSBGA",
+      "description": "熱抵抗 θJA (DSBGA)",
+      "targetValue": "230 °C/W",
+      "candidateValue": "230 °C/W",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Input_Offset_Voltage",
-      "description": "入力オフセット電圧 (TA=25°C)",
-      "targetValue": "2 mV typ / 7 mV max",
-      "candidateValue": "2 mV typ / 7 mV max",
+      "description": "入力オフセット電圧",
+      "targetValue": "2 typ / 7 max mV",
+      "candidateValue": "2 typ / 7 max mV",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_Drift",
+      "description": "入力オフセット電圧ドリフト",
+      "targetValue": "7 max μV/°C",
+      "candidateValue": "7 max μV/°C",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Input_Bias_Current",
-      "description": "入力バイアス電流 (TA=25°C)",
-      "targetValue": "45 nA typ / 250 nA max",
-      "candidateValue": "45 nA typ / 250 nA max",
+      "description": "入力バイアス電流",
+      "targetValue": "45 typ / 250 max nA",
+      "candidateValue": "45 typ / 250 max nA",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Input_Offset_Current",
-      "description": "入力オフセット電流 (TA=25°C)",
-      "targetValue": "5 nA typ / 50 nA max",
-      "candidateValue": "5 nA typ / 50 nA max",
+      "description": "入力オフセット電流",
+      "targetValue": "5 typ / 50 max nA",
+      "candidateValue": "5 typ / 50 max nA",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Input_CommonMode_Range",
+      "parameterId": "Input_Offset_Current_Drift",
+      "description": "入力オフセット電流ドリフト",
+      "targetValue": "10 max pA/°C",
+      "candidateValue": "10 max pA/°C",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Input_Common_Mode_Voltage_Range",
       "description": "入力同相電圧範囲",
       "targetValue": "0 to V+−1.5 V",
       "candidateValue": "0 to V+−1.5 V",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Supply_Current",
-      "description": "消費電流 (V+=5V, RL=∞)",
-      "targetValue": "0.5 to 1.2 mA",
-      "candidateValue": "0.5 to 1.2 mA",
+      "parameterId": "Supply_Current_30V",
+      "description": "消費電流 (V+=30V)",
+      "targetValue": "1 typ / 2 max mA",
+      "candidateValue": "1 typ / 2 max mA",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Supply_Current_Max",
-      "description": "消費電流 (V+=30V, 全温度)",
-      "targetValue": "1 to 2 mA",
-      "candidateValue": "1 to 2 mA",
+      "parameterId": "Supply_Current_5V",
+      "description": "消費電流 (V+=5V)",
+      "targetValue": "0.5 typ / 1.2 max mA",
+      "candidateValue": "0.5 typ / 1.2 max mA",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Large_Signal_Voltage_Gain",
-      "description": "大信号電圧利得 (RL≥2kΩ, VO=1V to 11V)",
-      "targetValue": "25 to 100 V/mV",
-      "candidateValue": "25 to 100 V/mV",
+      "description": "大信号電圧利得",
+      "targetValue": "25 min / 100 typ V/mV",
+      "candidateValue": "25 min / 100 typ V/mV",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "DC_Voltage_Gain",
+      "description": "DC電圧利得",
+      "targetValue": "100 dB",
+      "candidateValue": "100 dB",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Unity_Gain_Bandwidth",
-      "description": "unity gain 帯域幅",
+      "description": "ユニティゲイン帯域幅",
       "targetValue": "1 MHz",
       "candidateValue": "1 MHz",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "CMRR",
       "description": "同相除去比",
-      "targetValue": "65 to 85 dB",
-      "candidateValue": "65 to 85 dB",
+      "targetValue": "65 min / 85 typ dB",
+      "candidateValue": "65 min / 85 typ dB",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "PSRR",
-      "description": "電源除去比",
-      "targetValue": "65 to 100 dB",
-      "candidateValue": "65 to 100 dB",
+      "description": "電源変動除去比",
+      "targetValue": "65 min / 100 typ dB",
+      "candidateValue": "65 min / 100 typ dB",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Amplifier_Coupling",
+      "description": "アンプ間結合",
+      "targetValue": "-120 typ dB",
+      "candidateValue": "-120 typ dB",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Output_Current_Source",
       "description": "出力電流 (ソース)",
-      "targetValue": "20 to 40 mA",
-      "candidateValue": "20 to 40 mA",
-      "score": 100,
-      "reason": "同一"
+      "targetValue": "20 min / 40 typ mA",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にパラメータなし",
+      "is_comparable": false
     },
     {
       "parameterId": "Output_Current_Sink",
       "description": "出力電流 (シンク)",
-      "targetValue": "10 to 20 mA",
-      "candidateValue": "10 to 20 mA",
-      "score": 100,
-      "reason": "同一"
+      "targetValue": "10 min / 20 typ mA",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にパラメータなし",
+      "is_comparable": false
     },
     {
-      "parameterId": "Output_ShortCircuit_Current",
-      "description": "短絡電流 (GND側)",
-      "targetValue": "40 to 60 mA",
-      "candidateValue": "40 to 60 mA",
+      "parameterId": "Output_Short_Circuit_Current",
+      "description": "出力短絡電流",
+      "targetValue": "40 min / 60 typ mA",
+      "candidateValue": "40 min / 60 typ mA",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Output_Voltage_High",
-      "description": "VOH (V+=30V, RL=2kΩ)",
-      "targetValue": "26 V min",
-      "candidateValue": "26 V min",
+      "description": "出力電圧 (High/VOH)",
+      "targetValue": "RL=2kΩ: 26 min V / RL=10kΩ: 27 min, 28 typ V (at V+=30V)",
+      "candidateValue": "RL=2kΩ: 26 min V / RL=10kΩ: 27 min, 28 typ V (at V+=30V)",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
       "parameterId": "Output_Voltage_Low",
-      "description": "VOL (V+=5V, RL=10kΩ)",
-      "targetValue": "5 to 20 mV",
-      "candidateValue": "5 to 20 mV",
+      "description": "出力電圧 (Low/VOL)",
+      "targetValue": "5 typ / 20 max mV",
+      "candidateValue": "5 typ / 20 max mV",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "ESD_HBM",
-      "description": "ESD (HBM)",
-      "targetValue": "±250 V",
-      "candidateValue": "±250 V",
+      "parameterId": "Input_Offset_Voltage_OverTemp",
+      "description": "入力オフセット電圧 (温度範囲)",
+      "targetValue": "9 max mV",
+      "candidateValue": "9 max mV",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Thermal_Resistance_JA",
-      "description": "熱抵抗 RθJA (SOIC 8-pin)",
-      "targetValue": "189 °C/W",
-      "candidateValue": "189 °C/W",
+      "parameterId": "Input_Bias_Current_OverTemp",
+      "description": "入力バイアス電流 (温度範囲)",
+      "targetValue": "40 typ / 500 max nA",
+      "candidateValue": "40 typ / 500 max nA",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
     },
     {
-      "parameterId": "Power_Dissipation",
-      "description": "最大消費電力 (SOIC)",
-      "targetValue": "530 mW",
-      "candidateValue": "530 mW",
+      "parameterId": "Large_Signal_Voltage_Gain_OverTemp",
+      "description": "大信号電圧利得 (温度範囲)",
+      "targetValue": "15 min V/mV",
+      "candidateValue": "15 min V/mV",
       "score": 100,
-      "reason": "同一"
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Orderable_Part_Number",
+      "description": "注文型番",
+      "targetValue": "LM358M/NOPB",
+      "candidateValue": "LM358M/NOPB",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Package_Qty_Tube",
+      "description": "梱包数量 (チューブ)",
+      "targetValue": "95",
+      "candidateValue": "95",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Package_Qty_Reel",
+      "description": "梱包数量 (リール)",
+      "targetValue": "2500",
+      "candidateValue": "2500",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "RoHS_Compliant",
+      "description": "RoHS対応",
+      "targetValue": "Yes",
+      "candidateValue": "Yes",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Lead_Finish",
+      "description": "リード仕上げ",
+      "targetValue": "SN",
+      "candidateValue": "SN",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "MSL_Rating",
+      "description": "MSLレーティング",
+      "targetValue": "Level-1-260C-UNLIM",
+      "candidateValue": "Level-1-260C-UNLIM",
+      "score": 100,
+      "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Supply_Current_Drain",
+      "description": "電源電流ドレイン",
+      "targetValue": "500 μA",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Short_Circuit_GND",
+      "description": "出力短絡 (対GND)",
+      "targetValue": null,
+      "candidateValue": "Continuous (V+ ≤ 15 V, TA = 25°C)",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Theta_JA_TO99",
+      "description": "熱抵抗 θJA (TO-99)",
+      "targetValue": null,
+      "candidateValue": "155 °C/W",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Current_Source_25C",
+      "description": "出力電流 ソース (TA=25°C)",
+      "targetValue": null,
+      "candidateValue": "20 min / 40 typ mA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Current_Sink_25C",
+      "description": "出力電流 シンク (TA=25°C)",
+      "targetValue": null,
+      "candidateValue": "10 min / 20 typ mA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Current_Sink_LowVo",
+      "description": "出力電流 シンク (低VO)",
+      "targetValue": null,
+      "candidateValue": "12 typ / 50 max μA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Current_OverTemp",
+      "description": "入力オフセット電流 (全温度範囲)",
+      "targetValue": null,
+      "candidateValue": "150 max nA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Common_Mode_Voltage_Range_OverTemp",
+      "description": "入力同相電圧範囲 (全温度範囲)",
+      "targetValue": null,
+      "candidateValue": "0 to V+−2 V",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Current_Source_OverTemp",
+      "description": "出力電流 ソース (全温度範囲)",
+      "targetValue": null,
+      "candidateValue": "10 min / 20 typ mA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Output_Current_Sink_OverTemp",
+      "description": "出力電流 シンク (全温度範囲)",
+      "targetValue": null,
+      "candidateValue": "5 min / 8 typ mA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Supply_Current_Drain_Typ",
+      "description": "電源電流ドレイン (typ)",
+      "targetValue": null,
+      "candidateValue": "500 μA",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Input_Offset_Voltage_Low",
+      "description": "入力オフセット電圧 (Feature)",
+      "targetValue": null,
+      "candidateValue": "2 mV",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Part_Marking",
+      "description": "パートマーキング",
+      "targetValue": null,
+      "candidateValue": "LM 358M",
+      "score": 0,
+      "reason": "Target側にパラメータなし",
+      "is_comparable": false
     }
   ]
 }

@@ -1,0 +1,433 @@
+# =============================================================================
+# パラメータスキーマ: TI_LM358M_NOPB
+# =============================================================================
+# LMx58-N Low-Power, Dual-Operational Amplifiers (LM358M/NOPB / SOIC-8)
+# データシート: SNOSBT3J – JANUARY 2000 – REVISED MARCH 2022
+# =============================================================================
+
+schema_version: "1.0"
+schema_id: "TI_LM358M_NOPB"
+inferred_category: "operational_amplifier"
+
+parameters:
+  # --- 基本情報 ---
+  - id: "Part_Number"
+    label: "型名"
+    description: "データシート記載の製品型名"
+    unit: ""
+    extraction_hint: "Page 1 タイトル 'LMx58-N Low-Power, Dual-Operational Amplifiers' および注文型番 LM358M/NOPB"
+    required: true
+
+  - id: "Product_Type"
+    label: "製品種別"
+    description: "製品の種別・カテゴリ"
+    unit: ""
+    extraction_hint: "Page 1 タイトル 'Low-Power, Dual-Operational Amplifiers'"
+    required: true
+
+  - id: "Package"
+    label: "パッケージ"
+    description: "パッケージ形状 (LM358M は SOIC-8)"
+    unit: ""
+    extraction_hint: "Page 1 Device Information テーブル LM358-N / SOIC (8)"
+    required: true
+
+  - id: "Package_Body_Size"
+    label: "パッケージサイズ"
+    description: "パッケージのボディサイズ (NOM)"
+    unit: "mm"
+    extraction_hint: "Page 1 Device Information テーブル SOIC (8): 4.90 mm × 3.91 mm"
+    required: true
+
+  - id: "Pin_Count"
+    label: "ピン数"
+    description: "パッケージのピン数"
+    unit: ""
+    extraction_hint: "Page 1 Device Information テーブル SOIC (8) の 8ピン"
+    required: true
+
+  - id: "Number_Of_Channels"
+    label: "チャンネル数"
+    description: "内蔵オペアンプの数"
+    unit: ""
+    extraction_hint: "Page 1 Description 'two independent...operational amplifiers'"
+    required: true
+
+  - id: "Document_Number"
+    label: "ドキュメント番号"
+    description: "データシートのドキュメント番号"
+    unit: ""
+    extraction_hint: "Page 1 フッタ 'SNOSBT3J – JANUARY 2000 – REVISED MARCH 2022'"
+    required: true
+
+  # --- Absolute Maximum Ratings ---
+  - id: "Supply_Voltage_Max"
+    label: "電源電圧 (最大定格)"
+    description: "電源電圧V+の最大定格値"
+    unit: "V"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Supply Voltage, V+' LM358列 MAX=32"
+    required: true
+
+  - id: "Differential_Input_Voltage_Max"
+    label: "差動入力電圧 (最大定格)"
+    description: "差動入力電圧の最大定格値"
+    unit: "V"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Differential Input Voltage' LM358列 MAX=32"
+    required: true
+
+  - id: "Input_Voltage_Range_Abs"
+    label: "入力電圧範囲 (最大定格)"
+    description: "入力端子に印加可能な電圧範囲"
+    unit: "V"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Input Voltage' LM358列 MIN=-0.3, MAX=32"
+    required: true
+
+  - id: "Power_Dissipation_SOIC"
+    label: "許容損失 (SOIC)"
+    description: "SOICパッケージの最大許容消費電力"
+    unit: "mW"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Power Dissipation SOIC (D)' MAX=530"
+    required: true
+
+  - id: "Input_Current_Max"
+    label: "入力電流 (最大定格)"
+    description: "VIN < -0.3V 時の入力電流最大定格"
+    unit: "mA"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Input Current (VIN < −0.3V)' MAX=50"
+    required: true
+
+  - id: "Output_Short_Circuit_GND"
+    label: "出力短絡 (対GND)"
+    description: "V+≤15V, TA=25°C 時の出力対GND短絡条件"
+    unit: ""
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Output Short-Circuit to GND' Continuous"
+    required: true
+
+  - id: "Storage_Temperature_Range"
+    label: "保存温度範囲"
+    description: "デバイスの保存温度範囲"
+    unit: "°C"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル 'Storage temperature, Tstg' MIN=-65, MAX=150"
+    required: true
+
+  - id: "Lead_Temperature_Soldering"
+    label: "リード温度 (はんだ付け)"
+    description: "SOICパッケージのはんだ付け時のリード温度上限"
+    unit: "°C"
+    extraction_hint: "Page 4 Absolute Maximum Ratings テーブル SOIC Package (D) Vapor Phase 215°C / Infrared 220°C"
+    required: true
+
+  # --- ESD Ratings ---
+  - id: "ESD_HBM"
+    label: "ESD耐性 (HBM)"
+    description: "Human-Body Model ESD耐性電圧"
+    unit: "V"
+    extraction_hint: "Page 4 ESD Ratings テーブル 'Human-body model (HBM)' ±250 V"
+    required: true
+
+  # --- Recommended Operating Conditions ---
+  - id: "Supply_Voltage_Range"
+    label: "推奨電源電圧範囲 (単電源)"
+    description: "LM358の推奨動作電源電圧範囲 (V+ - V-)"
+    unit: "V"
+    extraction_hint: "Page 5 Recommended Operating Conditions 'Supply Voltage (V+ - V-): LM358' MIN=3, MAX=32"
+    required: true
+
+  - id: "Supply_Voltage_Dual"
+    label: "推奨電源電圧範囲 (デュアル)"
+    description: "デュアル電源構成の推奨電源電圧範囲"
+    unit: "V"
+    extraction_hint: "Page 5 Recommended Operating Conditions '±1.5 to ±16'"
+    required: true
+
+  - id: "Operating_Temperature_Range"
+    label: "動作温度範囲"
+    description: "LM358の動作温度範囲"
+    unit: "°C"
+    extraction_hint: "Page 5 Recommended Operating Conditions 'Operating Temperature: LM358' MIN=0, MAX=70"
+    required: true
+
+  # --- Thermal Information ---
+  - id: "Theta_JA_SOIC"
+    label: "熱抵抗 θJA (SOIC)"
+    description: "SOICパッケージのジャンクション-周囲間熱抵抗"
+    unit: "°C/W"
+    extraction_hint: "Page 5 Thermal Information テーブル RθJA D列: 189"
+    required: true
+
+  - id: "Theta_JA_PDIP"
+    label: "熱抵抗 θJA (PDIP)"
+    description: "PDIPパッケージのジャンクション-周囲間熱抵抗"
+    unit: "°C/W"
+    extraction_hint: "Page 5 Thermal Information テーブル RθJA P列: 120"
+    required: false
+
+  - id: "Theta_JA_DSBGA"
+    label: "熱抵抗 θJA (DSBGA)"
+    description: "DSBGAパッケージのジャンクション-周囲間熱抵抗"
+    unit: "°C/W"
+    extraction_hint: "Page 5 Thermal Information テーブル RθJA YPB列: 230"
+    required: false
+
+  - id: "Theta_JA_TO99"
+    label: "熱抵抗 θJA (TO-99)"
+    description: "TO-99パッケージのジャンクション-周囲間熱抵抗"
+    unit: "°C/W"
+    extraction_hint: "Page 5 Thermal Information テーブル RθJA LMC列: 155"
+    required: false
+
+  # --- Electrical Characteristics (LM358, Section 6.6) @ 25°C ---
+  - id: "Input_Offset_Voltage"
+    label: "入力オフセット電圧"
+    description: "TA=25°C における入力オフセット電圧"
+    unit: "mV"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Offset Voltage' TA=25°C TYP=2, MAX=7"
+    required: true
+
+  - id: "Input_Bias_Current"
+    label: "入力バイアス電流"
+    description: "TA=25°C, VCM=0V における入力バイアス電流"
+    unit: "nA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Bias Current' TA=25°C TYP=45, MAX=250"
+    required: true
+
+  - id: "Input_Offset_Current"
+    label: "入力オフセット電流"
+    description: "TA=25°C における入力オフセット電流"
+    unit: "nA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Offset Current' TA=25°C TYP=5, MAX=50"
+    required: true
+
+  - id: "Input_Common_Mode_Voltage_Range"
+    label: "入力同相電圧範囲"
+    description: "入力同相電圧範囲 (TA=25°C)"
+    unit: "V"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Common-Mode Voltage Range' 0 to V+−1.5"
+    required: true
+
+  - id: "Supply_Current_30V"
+    label: "消費電流 (V+=30V)"
+    description: "V+=30V, RL=∞ 時の消費電流 (全温度範囲)"
+    unit: "mA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Supply Current' V+=30V TYP=1, MAX=2"
+    required: true
+
+  - id: "Supply_Current_5V"
+    label: "消費電流 (V+=5V)"
+    description: "V+=5V, RL=∞ 時の消費電流 (全温度範囲)"
+    unit: "mA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Supply Current' V+=5V TYP=0.5, MAX=1.2"
+    required: true
+
+  - id: "Large_Signal_Voltage_Gain"
+    label: "大信号電圧利得"
+    description: "V+=15V, RL≥2kΩ, VO=1V to 11V, TA=25°C 時の大信号電圧利得"
+    unit: "V/mV"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Large Signal Voltage Gain' MIN=25, TYP=100"
+    required: true
+
+  - id: "DC_Voltage_Gain"
+    label: "DC電圧利得"
+    description: "Features 記載の DC 電圧利得"
+    unit: "dB"
+    extraction_hint: "Page 1 Features 'Large DC voltage gain: 100 dB'"
+    required: true
+
+  - id: "Unity_Gain_Bandwidth"
+    label: "ユニティゲイン帯域幅"
+    description: "ユニティゲイン時の帯域幅 (温度補償済み)"
+    unit: "MHz"
+    extraction_hint: "Page 1 Features 'Wide bandwidth (unity gain): 1 MHz'"
+    required: true
+
+  - id: "CMRR"
+    label: "同相除去比"
+    description: "TA=25°C, VCM=0V to V+−1.5V 時のCMRR"
+    unit: "dB"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Common-Mode Rejection Ratio' MIN=65, TYP=85"
+    required: true
+
+  - id: "PSRR"
+    label: "電源変動除去比"
+    description: "V+=5V to 30V, TA=25°C 時のPSRR"
+    unit: "dB"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Power Supply Rejection Ratio' MIN=65, TYP=100"
+    required: true
+
+  - id: "Amplifier_Coupling"
+    label: "アンプ間結合"
+    description: "f=1kHz to 20kHz, TA=25°C 時のアンプ間結合 (入力換算)"
+    unit: "dB"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Amplifier-to-Amplifier Coupling' TYP=-120"
+    required: true
+
+  - id: "Output_Current_Source_25C"
+    label: "出力電流 ソース (TA=25°C)"
+    description: "VIN+=1V, VIN-=0V, V+=15V, VO=2V, TA=25°C 時の出力ソース電流"
+    unit: "mA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Output Current Source' MIN=20, TYP=40"
+    required: true
+
+  - id: "Output_Current_Sink_25C"
+    label: "出力電流 シンク (TA=25°C)"
+    description: "VIN-=1V, VIN+=0V, V+=15V, VO=2V, TA=25°C 時の出力シンク電流"
+    unit: "mA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Output Current Sink' MIN=10, TYP=20"
+    required: true
+
+  - id: "Output_Current_Sink_LowVo"
+    label: "出力電流 シンク (低VO)"
+    description: "VIN-=1V, VIN+=0V, TA=25°C, VO=200mV, V+=15V 時の出力シンク電流"
+    unit: "μA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Output Current Sink' VO=200mV TYP=12, MAX=50"
+    required: true
+
+  - id: "Output_Short_Circuit_Current"
+    label: "出力短絡電流"
+    description: "出力GNDへの短絡電流 (TA=25°C, V+=15V)"
+    unit: "mA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Short Circuit to Ground' MIN=40, TYP=60"
+    required: true
+
+  - id: "Output_Voltage_High"
+    label: "出力電圧 (VOH)"
+    description: "V+=30V 時の出力High電圧"
+    unit: "V"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Output Voltage VOH' RL=2kΩ MIN=26, RL=10kΩ TYP=27/28"
+    required: true
+
+  - id: "Output_Voltage_Low"
+    label: "出力電圧 (VOL)"
+    description: "V+=5V, RL=10kΩ 時の出力Low電圧"
+    unit: "mV"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Output Voltage VOL' TYP=5, MAX=20"
+    required: true
+
+  # --- Over Temperature Range (Section 6.6 continued) ---
+  - id: "Input_Offset_Voltage_OverTemp"
+    label: "入力オフセット電圧 (全温度範囲)"
+    description: "全動作温度範囲における入力オフセット電圧"
+    unit: "mV"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Offset Voltage' (over temp) MAX=9"
+    required: true
+
+  - id: "Input_Offset_Voltage_Drift"
+    label: "入力オフセット電圧ドリフト"
+    description: "温度に対する入力オフセット電圧のドリフト"
+    unit: "μV/°C"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Offset Voltage Drift' RS=0Ω, MAX=7"
+    required: true
+
+  - id: "Input_Offset_Current_OverTemp"
+    label: "入力オフセット電流 (全温度範囲)"
+    description: "全動作温度範囲における入力オフセット電流"
+    unit: "nA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Offset Current' (over temp) MAX=150"
+    required: true
+
+  - id: "Input_Offset_Current_Drift"
+    label: "入力オフセット電流ドリフト"
+    description: "温度に対する入力オフセット電流のドリフト"
+    unit: "pA/°C"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Offset Current Drift' RS=0Ω, MAX=10"
+    required: true
+
+  - id: "Input_Bias_Current_OverTemp"
+    label: "入力バイアス電流 (全温度範囲)"
+    description: "全動作温度範囲における入力バイアス電流"
+    unit: "nA"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Bias Current' (over temp) TYP=40, MAX=500"
+    required: true
+
+  - id: "Input_Common_Mode_Voltage_Range_OverTemp"
+    label: "入力同相電圧範囲 (全温度範囲)"
+    description: "全動作温度範囲における入力同相電圧範囲"
+    unit: "V"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Input Common-Mode Voltage Range' (over temp) 0 to V+−2"
+    required: true
+
+  - id: "Large_Signal_Voltage_Gain_OverTemp"
+    label: "大信号電圧利得 (全温度範囲)"
+    description: "全動作温度範囲における大信号電圧利得"
+    unit: "V/mV"
+    extraction_hint: "Page 7 Section 6.6 LM358列 'Large Signal Voltage Gain' (over temp) MIN=15"
+    required: true
+
+  - id: "Output_Current_Source_OverTemp"
+    label: "出力電流 ソース (全温度範囲)"
+    description: "全動作温度範囲における出力ソース電流"
+    unit: "mA"
+    extraction_hint: "Page 8 Section 6.6 LM358列 'Output Current Source' (over temp) MIN=10, TYP=20"
+    required: true
+
+  - id: "Output_Current_Sink_OverTemp"
+    label: "出力電流 シンク (全温度範囲)"
+    description: "全動作温度範囲における出力シンク電流"
+    unit: "mA"
+    extraction_hint: "Page 8 Section 6.6 LM358列 'Output Current Sink' (over temp) MIN=5, TYP=8"
+    required: true
+
+  # --- Features ---
+  - id: "Supply_Current_Drain_Typ"
+    label: "電源電流ドレイン (typ)"
+    description: "Features記載の低消費電流 (typ)"
+    unit: "μA"
+    extraction_hint: "Page 1 Features 'Very low supply current drain (500 μA)'"
+    required: true
+
+  - id: "Input_Offset_Voltage_Low"
+    label: "入力オフセット電圧 (Feature)"
+    description: "Features記載の低入力オフセット電圧"
+    unit: "mV"
+    extraction_hint: "Page 1 Features 'Low input offset voltage: 2 mV'"
+    required: true
+
+  # --- Package / Ordering ---
+  - id: "Orderable_Part_Number"
+    label: "注文型番"
+    description: "SOICパッケージのLM358M/NOPB注文型番"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum 'LM358M/NOPB'"
+    required: true
+
+  - id: "Package_Qty_Tube"
+    label: "梱包数量 (チューブ)"
+    description: "チューブ梱包時の数量"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum LM358M/NOPB '95 | TUBE'"
+    required: true
+
+  - id: "Package_Qty_Reel"
+    label: "梱包数量 (リール)"
+    description: "テープ&リール梱包時の数量"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum LM358MX/NOPB '2500 | LARGE T&R'"
+    required: true
+
+  - id: "RoHS_Compliant"
+    label: "RoHS対応"
+    description: "RoHS指令への対応状況"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum LM358M/NOPB RoHS列 'Yes'"
+    required: true
+
+  - id: "Lead_Finish"
+    label: "リード仕上げ"
+    description: "リードの仕上げ材質"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum LM358M/NOPB Lead finish列 'SN'"
+    required: true
+
+  - id: "MSL_Rating"
+    label: "MSLレーティング"
+    description: "耐湿性レベルとピークリフロー温度"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum LM358M/NOPB MSL列 'Level-1-260C-UNLIM'"
+    required: true
+
+  - id: "Part_Marking"
+    label: "パートマーキング"
+    description: "パッケージ上の印字"
+    unit: ""
+    extraction_hint: "Page 24 Package Option Addendum LM358M/NOPB Part marking列 'LM 358M'"
+    required: true
