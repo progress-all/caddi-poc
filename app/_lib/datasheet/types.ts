@@ -1,12 +1,17 @@
 /**
  * データシートパラメーターの型定義
- * 
- * このファイルは `docs/datasheet/params/params-schema.yaml` に対応するTypeScript型定義です。
- * バックエンドAPIとフロントエンドの両方で型安全にデータシートデータを扱うために使用します。
+ *
+ * あらゆる部品種別のデータシートに対応する汎用型定義。
+ * 各部品ごとに生成されるスキーマ (<datasheet-id>.schema.yaml) と
+ * 抽出結果JSON (<datasheet-id>.json) の両方に対応します。
  */
 
+// ============================================================================
+// MLCC 後方互換用 (レガシー)
+// ============================================================================
+
 /**
- * パラメーターカテゴリ
+ * MLCC 用パラメーターカテゴリ（後方互換のため残置）
  */
 export type DatasheetParameterCategory =
   | "dimensions"
@@ -15,10 +20,11 @@ export type DatasheetParameterCategory =
   | "test_specs";
 
 /**
- * パラメーターID（リテラル型でオートコンプリート対応）
- * params-schema.yaml の全64パラメーターに対応
+ * MLCC 用パラメーターID（後方互換のため残置）
+ * 新規コードでは使用せず、string 型を使用してください。
+ * @deprecated 新規コードでは string を使用
  */
-export type DatasheetParameterId =
+export type MlccParameterId =
   | "L_Dimensions"
   | "W_Dimensions"
   | "T_Dimensions"
@@ -85,41 +91,75 @@ export type DatasheetParameterId =
   | "Durability_TestTime";
 
 /**
+ * @deprecated MlccParameterId のエイリアス（後方互換のため残置）
+ */
+export type DatasheetParameterId = MlccParameterId;
+
+// ============================================================================
+// 汎用型定義 (全部品種別対応)
+// ============================================================================
+
+/**
+ * パラメータの抽出ステータス
+ * - "extracted": データシートから値を抽出できた
+ * - "not_available": データシートに記載がなかった (value は "N/A")
+ */
+export type DatasheetParameterStatus = "extracted" | "not_available";
+
+/**
  * 個別パラメーターの値
  * JSONファイル内の各パラメーターの構造
  */
 export interface DatasheetParameterValue {
   description: string;
   value: string | null;
+  /** 抽出ステータス（optional: 既存JSONとの後方互換のため） */
+  status?: DatasheetParameterStatus;
 }
 
 /**
  * データシートJSONファイル全体の型
  * `<datasheet-id>.json` ファイルの構造に対応
+ *
+ * parameters のキーは部品ごとに異なる任意の文字列ID。
  */
 export interface DatasheetData {
   datasheet_id: string;
   version: string;
-  parameters: Record<DatasheetParameterId, DatasheetParameterValue>;
+  /** 使用したスキーマID（= datasheet-id。optional: 既存JSONとの後方互換のため） */
+  schema_id?: string;
+  /** LLMが推定した部品カテゴリ（optional: 既存JSONとの後方互換のため） */
+  inferred_category?: string;
+  parameters: Record<string, DatasheetParameterValue>;
 }
 
 /**
- * パラメータースキーマ定義（YAMLに対応）
- * params-schema.yaml の構造に対応
+ * パラメータースキーマ定義（<datasheet-id>.schema.yaml の各パラメータに対応）
+ * generic-schema.template.yaml のフォーマットに準拠
  */
 export interface DatasheetParameterSchema {
-  id: DatasheetParameterId;
+  /** パラメータID (PascalCase_Snake形式) */
+  id: string;
+  /** 日本語ラベル */
+  label: string;
+  /** パラメータの説明 */
   description: string;
-  category: DatasheetParameterCategory;
+  /** 単位 (該当なしは空文字) */
+  unit: string;
+  /** データシート内の抽出場所・方法のヒント */
   extraction_hint: string;
+  /** true=必須, false=任意 */
+  required: boolean;
 }
 
 /**
  * データシートスキーマ全体の型
- * params-schema.yaml ファイルの構造に対応
+ * <datasheet-id>.schema.yaml ファイルの構造に対応
  */
 export interface DatasheetSchema {
-  version: string;
+  schema_version: string;
+  schema_id: string;
+  inferred_category: string;
   parameters: DatasheetParameterSchema[];
 }
 
