@@ -190,10 +190,12 @@ export default function DatasheetToolsPage() {
                 <h3 className="font-semibold mb-2">前提条件</h3>
                 <ul className="list-disc list-inside space-y-1 ml-1 text-muted-foreground">
                   <li>
-                    開発サーバーを <code className="text-xs bg-muted px-1 py-0.5 rounded">ENABLE_DATASHEET_TOOLS=1 npm run dev</code> で起動していること
+                    <code className="text-xs bg-muted px-1 py-0.5 rounded">.env.local</code>{" "}
+                    に以下を設定していること:
+                    <code className="block text-xs bg-muted px-3 py-2 rounded mt-1 ml-5 whitespace-pre">{`ENABLE_DATASHEET_TOOLS=1\nDIGIKEY_CLIENT_ID=<your-client-id>\nDIGIKEY_CLIENT_SECRET=<your-client-secret>`}</code>
                   </li>
                   <li>
-                    DigiKey API の認証情報（<code className="text-xs bg-muted px-1 py-0.5 rounded">DIGIKEY_CLIENT_ID</code> / <code className="text-xs bg-muted px-1 py-0.5 rounded">DIGIKEY_CLIENT_SECRET</code>）が .env に設定されていること
+                    開発サーバーを <code className="text-xs bg-muted px-1 py-0.5 rounded">npm run dev</code> で起動していること
                   </li>
                 </ul>
               </section>

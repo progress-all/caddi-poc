@@ -219,7 +219,6 @@ docs/datasheet/output/<datasheet-id>/<datasheet-id>.json
 #### フロントエンド参照ディレクトリへの自動コピー
 
 JSON出力後、同じJSONファイルをフロントエンド参照ディレクトリにもコピーする。
-これにより、別途 Publish 操作は不要となる。
 
 ```bash
 mkdir -p app/_lib/datasheet/data
