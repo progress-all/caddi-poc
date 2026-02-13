@@ -1,0 +1,25 @@
+{
+  "pdf_path": "docs/datasheet/output/Vishay_IRLZ44SPBF/Vishay_IRLZ44SPBF.pdf",
+  "method": "pymupdf",
+  "page_count": 10,
+  "quality_score": 0.9901,
+  "quality_details": {
+    "score": 0.9901,
+    "total_chars": 14545,
+    "control_char_ratio": 0.0,
+    "printable_ratio": 0.9986,
+    "alnum_ratio": 0.9212,
+    "replacement_char_count": 0,
+    "cid_reference_count": 0,
+    "empty_pages": 0,
+    "total_pages": 10
+  },
+  "warnings": [],
+  "elapsed_ms": 77,
+  "total_elapsed_ms": 207,
+  "strategies_tried": [
+    "pymupdf",
+    "pdfminer",
+    "ocr"
+  ]
+}

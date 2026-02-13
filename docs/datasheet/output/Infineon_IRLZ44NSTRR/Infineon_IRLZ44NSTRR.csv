@@ -1,40 +1,52 @@
-param_id,description,value
-Part_Number,型名,IRLZ44N / IRLZ44NSTRR (D2PAK Tape & Reel)
-Product_Type,製品種別,N-Channel Logic Level Power MOSFET (HEXFET)
-Package,パッケージ,D2PAK (TO-263)
-VDSS,ドレイン-ソース間耐圧,55 V
-VGS_Max,ゲート-ソース間最大電圧,±16 V
-ID_TC25,連続ドレイン電流 (TC=25°C VGS=10V),47 A
-ID_TC100,連続ドレイン電流 (TC=100°C VGS=10V),33 A
-IDM,パルスドレイン電流,160 A
-PD_TA25,最大消費電力 (TA=25°C),3.8 W
-PD_TC25,最大消費電力 (TC=25°C),110 W
-Linear_Derating_Factor,リニアディレーティングファクタ,0.71 W/°C
-TJ_TSTG_Range,接合温度・保存温度範囲,-55 to 175 °C
-Thermal_Resistance_JC,熱抵抗 θJC (ジャンクション-ケース間),1.4 °C/W
-Thermal_Resistance_JA,熱抵抗 θJA (ジャンクション-周囲間),40 °C/W
-BVDSS,ドレイン-ソース間降伏電圧 (VGS=0V ID=250µA),55 V min
-BVDSS_TempCoeff,ドレイン-ソース間降伏電圧温度係数,0.070 V/°C
-RDS_on_VGS10V,オン抵抗 (VGS=10V ID=25A),0.022 Ω max
-RDS_on_VGS5V,オン抵抗 (VGS=5V ID=25A),0.025 Ω
-RDS_on_VGS4V,オン抵抗 (VGS=4V ID=21A),0.035 Ω
-VGS_th,ゲートしきい値電圧 (VDS=VGS ID=250µA),1.0 V min / 2.0 V max
-gfs,順方向相互コンダクタンス (VDS=25V ID=25A),21 S min
-IDSS_25C,ドレイン-ソース間漏れ電流 (VDS=55V VGS=0V TJ=25°C),25 µA max
-IDSS_150C,ドレイン-ソース間漏れ電流 (VDS=44V VGS=0V TJ=150°C),250 µA max
-IGSS,ゲート-ソース間漏れ電流 (VGS=±16V),±100 nA
-Ciss,入力容量 (VGS=0V VDS=25V f=1MHz),1700 pF
-Coss,出力容量 (VGS=0V VDS=25V f=1MHz),400 pF
-Crss,帰還容量 (VGS=0V VDS=25V f=1MHz),150 pF
-QG_Total,総ゲート電荷量 (VDS=44V ID=25A),48 nC
-td_on,ターンオン遅延時間 (VDD=28V ID=25A),11 ns
-tr,立ち上がり時間,84 ns
-td_off,ターンオフ遅延時間,26 ns
-tf,立ち下がり時間,15 ns
-VSD,ボディダイオード順方向電圧 (IS=25A VGS=0V),1.3 V typ
-trr,逆回復時間 (IS=25A),80 ns typ / 120 ns max
-Qrr,逆回復電荷量 (IS=25A),210 nC typ / 320 nC max
-Mounting_Type,実装タイプ,Surface Mount
-FET_Type,FETタイプ,N-Channel
-Technology,技術,MOSFET (Metal Oxide)
-Series,シリーズ,HEXFET
+param_id,description,value,status
+Part_Number,型名,"IRLZ44NS/LPbF (D2PAK) / IRLZ44NL (TO-262)",extracted
+Product_Type,製品種別,N-Channel Logic Level Power MOSFET (HEXFET),extracted
+Package,パッケージ,D2PAK (TO-263) / TO-262,extracted
+Manufacturer,メーカー,International Rectifier (Infineon Technologies),extracted
+Series,シリーズ,HEXFET (Fifth Generation),extracted
+FET_Type,FETタイプ,N-Channel,extracted
+Technology,技術,MOSFET (Metal Oxide),extracted
+Mounting_Type,実装タイプ,Surface Mount (IRLZ44NS) / Through-hole (IRLZ44NL),extracted
+VDSS,ドレイン-ソース間耐圧,55 V,extracted
+VGS_Max,ゲート-ソース間最大電圧,±16 V,extracted
+ID_TC25,"連続ドレイン電流 (TC=25°C, VGS=10V)",47 A,extracted
+ID_TC100,"連続ドレイン電流 (TC=100°C, VGS=10V)",33 A,extracted
+IDM,パルスドレイン電流,160 A,extracted
+PD_TA25,最大消費電力 (TA=25°C),3.8 W,extracted
+PD_TC25,最大消費電力 (TC=25°C),110 W,extracted
+Linear_Derating_Factor,リニアディレーティングファクタ,0.71 W/°C,extracted
+EAS,単パルスアバランシェエネルギー,210 mJ,extracted
+IAR,アバランシェ電流,25 A,extracted
+EAR,繰り返しアバランシェエネルギー,11 mJ,extracted
+dv_dt,ピークダイオード回復 dv/dt,5.0 V/ns,extracted
+TJ_TSTG_Range,接合温度・保存温度範囲,-55 to 175 °C,extracted
+Soldering_Temp,"はんだ付け温度 (10秒間, ケースから1.6mm)",300 °C,extracted
+Thermal_Resistance_JC,熱抵抗 θJC (ジャンクション-ケース間),1.4 °C/W max,extracted
+Thermal_Resistance_JA,"熱抵抗 θJA (ジャンクション-周囲間, PCB実装定常状態)",40 °C/W max,extracted
+BVDSS,"ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)",55 V min,extracted
+BVDSS_TempCoeff,"ドレイン-ソース間降伏電圧温度係数 (Reference to 25°C, ID=1mA)",0.070 V/°C,extracted
+RDS_on_VGS10V,"オン抵抗 (VGS=10V, ID=25A)",0.022 Ω max,extracted
+RDS_on_VGS5V,"オン抵抗 (VGS=5V, ID=25A)",0.025 Ω max,extracted
+RDS_on_VGS4V,"オン抵抗 (VGS=4V, ID=21A)",0.035 Ω max,extracted
+VGS_th,"ゲートしきい値電圧 (VDS=VGS, ID=250µA)",1.0 V min / 2.0 V max,extracted
+gfs,"順方向相互コンダクタンス (VDS=25V, ID=25A)",21 S min,extracted
+IDSS_25C,"ドレイン-ソース間漏れ電流 (VDS=55V, VGS=0V, TJ=25°C)",25 µA max,extracted
+IDSS_150C,"ドレイン-ソース間漏れ電流 (VDS=44V, VGS=0V, TJ=150°C)",250 µA max,extracted
+IGSS_Forward,ゲート-ソース間順方向漏れ電流 (VGS=16V),100 nA max,extracted
+IGSS_Reverse,ゲート-ソース間逆方向漏れ電流 (VGS=-16V),-100 nA max,extracted
+Qg_Total,"総ゲート電荷量 (ID=25A, VDS=44V, VGS=5.0V)",48 nC max,extracted
+Qgs,ゲート-ソース間電荷量 (VDS=44V),8.6 nC max,extracted
+Qgd,"ゲート-ドレイン間 (ミラー) 電荷量 (VDS=44V, VGS=5.0V)",25 nC max,extracted
+td_on,"ターンオン遅延時間 (VDD=28V, ID=25A, RG=3.4Ω, VGS=5.0V)",11 ns typ,extracted
+tr,立ち上がり時間,84 ns typ,extracted
+td_off,ターンオフ遅延時間,26 ns typ,extracted
+tf,立ち下がり時間,15 ns typ,extracted
+Ciss,"入力容量 (VGS=0V, VDS=25V, f=1MHz)",1700 pF typ,extracted
+Coss,"出力容量 (VGS=0V, VDS=25V, f=1MHz)",400 pF typ,extracted
+Crss,"帰還容量 (VGS=0V, VDS=25V, f=1MHz)",150 pF typ,extracted
+Ls,内部ソースインダクタンス (リード-ダイ接触点中心間),7.5 nH typ,extracted
+IS,連続ソース電流 (ボディダイオード),47 A,extracted
+ISM,パルスソース電流 (ボディダイオード),160 A,extracted
+VSD,"ボディダイオード順方向電圧 (TJ=25°C, IS=25A, VGS=0V)",1.3 V max,extracted
+trr,"逆回復時間 (TJ=25°C, IF=25A, di/dt=100A/µs)",80 ns typ / 120 ns max,extracted
+Qrr,"逆回復電荷量 (TJ=25°C, IF=25A, di/dt=100A/µs)",210 nC typ / 320 nC max,extracted

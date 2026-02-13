@@ -1,0 +1,373 @@
+# =============================================================================
+# パラメータスキーマ: Vishay_IRLZ44SPBF
+# 部品: IRLZ44S / SiHLZ44S (N-Channel Logic Level Power MOSFET)
+# 生成元: Vishay_IRLZ44SPBF.txt (pymupdf抽出テキスト, score=0.9901)
+# =============================================================================
+
+schema_version: "1.0"
+schema_id: "Vishay_IRLZ44SPBF"
+inferred_category: "power_mosfet"
+
+parameters:
+  # --- 基本情報 ---
+  - id: "Part_Number"
+    label: "型名"
+    description: "データシート記載の製品型名"
+    unit: ""
+    extraction_hint: "Page 1 タイトル 'IRLZ44S, SiHLZ44S'"
+    required: true
+
+  - id: "Product_Type"
+    label: "製品種別"
+    description: "製品の種別・カテゴリ"
+    unit: ""
+    extraction_hint: "Page 1 'Power MOSFET', 'N-Channel MOSFET', 'Logic-level gate drive'"
+    required: true
+
+  - id: "Package"
+    label: "パッケージ"
+    description: "パッケージ形状"
+    unit: ""
+    extraction_hint: "Page 1 'D2PAK (TO-263)'"
+    required: true
+
+  - id: "Manufacturer"
+    label: "メーカー"
+    description: "製造元メーカー名"
+    unit: ""
+    extraction_hint: "Page 1 'Vishay Siliconix'"
+    required: true
+
+  - id: "FET_Type"
+    label: "FETタイプ"
+    description: "N-Channel / P-Channel"
+    unit: ""
+    extraction_hint: "Page 1 'N-Channel MOSFET'"
+    required: true
+
+  - id: "Technology"
+    label: "技術"
+    description: "トランジスタ技術"
+    unit: ""
+    extraction_hint: "Page 1 'Power MOSFET', 'Third generation Power MOSFETs'"
+    required: true
+
+  - id: "Mounting_Type"
+    label: "実装タイプ"
+    description: "表面実装 / スルーホール"
+    unit: ""
+    extraction_hint: "Page 1 FEATURES 'Surface-mount'"
+    required: true
+
+  - id: "Configuration"
+    label: "構成"
+    description: "Single / Dual 等"
+    unit: ""
+    extraction_hint: "Page 1 PRODUCT SUMMARY 'Configuration: Single'"
+    required: true
+
+  - id: "Ordering_Info"
+    label: "発注型名"
+    description: "発注用型名 (Lead-free版)"
+    unit: ""
+    extraction_hint: "Page 1 ORDERING INFORMATION 'IRLZ44SPbF', 'IRLZ44STRRPbFa'"
+    required: true
+
+  # --- Absolute Maximum Ratings (最大定格) ---
+  - id: "VDS"
+    label: "ドレイン-ソース間耐圧"
+    description: "ドレイン-ソース間最大電圧"
+    unit: "V"
+    extraction_hint: "Page 1 ABSOLUTE MAXIMUM RATINGS 'VDS 60 V'"
+    required: true
+
+  - id: "VGS_Max"
+    label: "ゲート-ソース間最大電圧"
+    description: "ゲート-ソース間最大電圧"
+    unit: "V"
+    extraction_hint: "Page 1 'VGS ±10 V'"
+    required: true
+
+  - id: "ID_TC25"
+    label: "連続ドレイン電流 (TC=25°C)"
+    description: "連続ドレイン電流 (ケース温度25°C, VGS=5.0V)"
+    unit: "A"
+    extraction_hint: "Page 1 'Continuous Drain Current, TC=25°C, ID 50 A'"
+    required: true
+
+  - id: "ID_TC100"
+    label: "連続ドレイン電流 (TC=100°C)"
+    description: "連続ドレイン電流 (ケース温度100°C)"
+    unit: "A"
+    extraction_hint: "Page 1 'Continuous Drain Current, TC=100°C, 36 A'"
+    required: true
+
+  - id: "IDM"
+    label: "パルスドレイン電流"
+    description: "パルスドレイン電流 (最大)"
+    unit: "A"
+    extraction_hint: "Page 1 'Pulsed Drain Current IDM 200 A'"
+    required: true
+
+  - id: "PD_TC25"
+    label: "最大消費電力 (TC=25°C)"
+    description: "最大消費電力 (ケース温度25°C)"
+    unit: "W"
+    extraction_hint: "Page 1 'Maximum Power Dissipation, TC=25°C, PD 150 W'"
+    required: true
+
+  - id: "PD_TA25_PCB"
+    label: "最大消費電力 (PCB実装, TA=25°C)"
+    description: "最大消費電力 (PCB実装, 周囲温度25°C)"
+    unit: "W"
+    extraction_hint: "Page 1 'Maximum Power Dissipation (PCB Mount), TA=25°C, 3.7 W'"
+    required: true
+
+  - id: "Linear_Derating_Factor"
+    label: "リニアディレーティングファクタ"
+    description: "電力ディレーティングファクタ"
+    unit: "W/°C"
+    extraction_hint: "Page 1 'Linear Derating Factor 1.0 W/°C'"
+    required: true
+
+  - id: "Linear_Derating_Factor_PCB"
+    label: "リニアディレーティングファクタ (PCB実装)"
+    description: "PCB実装時の電力ディレーティングファクタ"
+    unit: "W/°C"
+    extraction_hint: "Page 1 'Linear Derating Factor (PCB Mount) 0.025 W/°C'"
+    required: true
+
+  - id: "EAS"
+    label: "単パルスアバランシェエネルギー"
+    description: "単パルスアバランシェエネルギー"
+    unit: "mJ"
+    extraction_hint: "Page 1 'Single Pulse Avalanche Energy EAS 400 mJ'"
+    required: true
+
+  - id: "dv_dt"
+    label: "ピークダイオード回復 dV/dt"
+    description: "ピークダイオード回復 dV/dt"
+    unit: "V/ns"
+    extraction_hint: "Page 1 'Peak Diode Recovery dV/dt 4.5 V/ns'"
+    required: true
+
+  - id: "TJ_TSTG_Range"
+    label: "接合温度・保存温度範囲"
+    description: "動作接合温度および保存温度範囲"
+    unit: "°C"
+    extraction_hint: "Page 1 'TJ, Tstg -55 to +175 °C'"
+    required: true
+
+  - id: "Soldering_Temp"
+    label: "はんだ付け温度"
+    description: "はんだ付けピーク温度 (10秒間)"
+    unit: "°C"
+    extraction_hint: "Page 1 'Soldering Recommendations (Peak Temperature) For 10s 300 °C'"
+    required: true
+
+  # --- Thermal Resistance (熱特性) ---
+  - id: "Thermal_Resistance_JA"
+    label: "熱抵抗 θJA"
+    description: "熱抵抗 (ジャンクション-周囲間)"
+    unit: "°C/W"
+    extraction_hint: "Page 2 THERMAL RESISTANCE 'RthJA 62 °C/W max'"
+    required: true
+
+  - id: "Thermal_Resistance_JA_PCB"
+    label: "熱抵抗 θJA (PCB実装)"
+    description: "熱抵抗 (ジャンクション-周囲間, PCB実装)"
+    unit: "°C/W"
+    extraction_hint: "Page 2 'RthJA (PCB Mount) 40 °C/W max'"
+    required: true
+
+  - id: "Thermal_Resistance_JC"
+    label: "熱抵抗 θJC"
+    description: "熱抵抗 (ジャンクション-ケース間, ドレイン)"
+    unit: "°C/W"
+    extraction_hint: "Page 2 'RthJC (Drain) 1.0 °C/W max'"
+    required: true
+
+  # --- Electrical Characteristics (電気的特性) ---
+  - id: "BVDSS"
+    label: "ドレイン-ソース間降伏電圧"
+    description: "ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)"
+    unit: "V"
+    extraction_hint: "Page 2 SPECIFICATIONS 'VDS = 60 V min'"
+    required: true
+
+  - id: "BVDSS_TempCoeff"
+    label: "降伏電圧温度係数"
+    description: "VDS温度係数 (Reference to 25°C, ID=1mA)"
+    unit: "V/°C"
+    extraction_hint: "Page 2 'VDS/TJ 0.070 V/°C typ'"
+    required: true
+
+  - id: "VGS_th"
+    label: "ゲートしきい値電圧"
+    description: "ゲートしきい値電圧 (VDS=VGS, ID=250µA)"
+    unit: "V"
+    extraction_hint: "Page 2 'VGS(th) 1.0 V min / 2.0 V max'"
+    required: true
+
+  - id: "IGSS"
+    label: "ゲート-ソース間漏れ電流"
+    description: "ゲート-ソース間漏れ電流 (VGS=±10V)"
+    unit: "nA"
+    extraction_hint: "Page 2 'IGSS ±100 nA max'"
+    required: true
+
+  - id: "IDSS_25C"
+    label: "ゼロゲート電圧ドレイン電流 (25°C)"
+    description: "ゼロゲート電圧ドレイン電流 (VDS=60V, VGS=0V)"
+    unit: "µA"
+    extraction_hint: "Page 2 'IDSS 25 µA max, VDS=60V'"
+    required: true
+
+  - id: "IDSS_150C"
+    label: "ゼロゲート電圧ドレイン電流 (150°C)"
+    description: "ゼロゲート電圧ドレイン電流 (VDS=48V, VGS=0V, TJ=150°C)"
+    unit: "µA"
+    extraction_hint: "Page 2 'IDSS 250 µA max, VDS=48V, TJ=150°C'"
+    required: true
+
+  - id: "RDS_on_VGS5V"
+    label: "オン抵抗 (VGS=5V)"
+    description: "ドレイン-ソース間オン抵抗 (VGS=5.0V, ID=31A)"
+    unit: "Ω"
+    extraction_hint: "Page 2 'RDS(on) 0.028 Ω max, VGS=5.0V, ID=31A'"
+    required: true
+
+  - id: "RDS_on_VGS4V"
+    label: "オン抵抗 (VGS=4V)"
+    description: "ドレイン-ソース間オン抵抗 (VGS=4.0V, ID=25A)"
+    unit: "Ω"
+    extraction_hint: "Page 2 'RDS(on) 0.039 Ω max, VGS=4.0V, ID=25A'"
+    required: true
+
+  - id: "gfs"
+    label: "順方向相互コンダクタンス"
+    description: "順方向相互コンダクタンス (VDS=25V, ID=31A)"
+    unit: "S"
+    extraction_hint: "Page 2 'gfs 23 S min'"
+    required: true
+
+  # --- Dynamic Characteristics (動的特性) ---
+  - id: "Ciss"
+    label: "入力容量"
+    description: "入力容量 (VGS=0V, VDS=25V, f=1MHz)"
+    unit: "pF"
+    extraction_hint: "Page 2 'Ciss 3300 pF typ'"
+    required: true
+
+  - id: "Coss"
+    label: "出力容量"
+    description: "出力容量 (VGS=0V, VDS=25V, f=1MHz)"
+    unit: "pF"
+    extraction_hint: "Page 2 'Coss 1200 pF typ'"
+    required: true
+
+  - id: "Crss"
+    label: "帰還容量"
+    description: "帰還容量 (VGS=0V, VDS=25V, f=1MHz)"
+    unit: "pF"
+    extraction_hint: "Page 2 'Crss 200 pF typ'"
+    required: true
+
+  - id: "Qg_Total"
+    label: "総ゲート電荷量"
+    description: "総ゲート電荷量 (VGS=5.0V, ID=51A, VDS=48V)"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qg 66 nC max'"
+    required: true
+
+  - id: "Qgs"
+    label: "ゲート-ソース間電荷量"
+    description: "ゲート-ソース間電荷量"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qgs 12 nC max'"
+    required: true
+
+  - id: "Qgd"
+    label: "ゲート-ドレイン間電荷量"
+    description: "ゲート-ドレイン間電荷量"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qgd 43 nC max'"
+    required: true
+
+  - id: "td_on"
+    label: "ターンオン遅延時間"
+    description: "ターンオン遅延時間 (VDD=30V, ID=51A, Rg=4.6Ω, RD=0.56Ω)"
+    unit: "ns"
+    extraction_hint: "Page 2 'td(on) 17 ns typ'"
+    required: true
+
+  - id: "tr"
+    label: "立ち上がり時間"
+    description: "立ち上がり時間"
+    unit: "ns"
+    extraction_hint: "Page 2 'tr 230 ns typ'"
+    required: true
+
+  - id: "td_off"
+    label: "ターンオフ遅延時間"
+    description: "ターンオフ遅延時間"
+    unit: "ns"
+    extraction_hint: "Page 2 'td(off) 42 ns typ'"
+    required: true
+
+  - id: "tf"
+    label: "立ち下がり時間"
+    description: "立ち下がり時間"
+    unit: "ns"
+    extraction_hint: "Page 2 'tf 110 ns typ'"
+    required: true
+
+  - id: "LD"
+    label: "内部ドレインインダクタンス"
+    description: "内部ドレインインダクタンス (リード6mm-ダイ接触点中心間)"
+    unit: "nH"
+    extraction_hint: "Page 2 'LD 4.5 nH typ'"
+    required: false
+
+  - id: "LS"
+    label: "内部ソースインダクタンス"
+    description: "内部ソースインダクタンス"
+    unit: "nH"
+    extraction_hint: "Page 2 'LS 7.5 nH typ'"
+    required: false
+
+  # --- Source-Drain Body Diode (ボディダイオード特性) ---
+  - id: "IS"
+    label: "連続ソース-ドレインダイオード電流"
+    description: "連続ソース-ドレインダイオード電流"
+    unit: "A"
+    extraction_hint: "Page 2 'IS 50 A max'"
+    required: true
+
+  - id: "ISM"
+    label: "パルスダイオード順方向電流"
+    description: "パルスダイオード順方向電流"
+    unit: "A"
+    extraction_hint: "Page 2 'ISM 200 A max'"
+    required: true
+
+  - id: "VSD"
+    label: "ボディダイオード順方向電圧"
+    description: "ボディダイオード順方向電圧 (TJ=25°C, IS=51A, VGS=0V)"
+    unit: "V"
+    extraction_hint: "Page 2 'VSD 2.5 V max'"
+    required: true
+
+  - id: "trr"
+    label: "逆回復時間"
+    description: "ボディダイオード逆回復時間 (TJ=25°C, IF=51A, dI/dt=100A/µs)"
+    unit: "ns"
+    extraction_hint: "Page 2 'trr 130 typ / 180 max ns'"
+    required: true
+
+  - id: "Qrr"
+    label: "逆回復電荷量"
+    description: "ボディダイオード逆回復電荷量 (TJ=25°C, IF=51A, dI/dt=100A/µs)"
+    unit: "µC"
+    extraction_hint: "Page 2 'Qrr 0.84 typ / 1.3 max µC'"
+    required: true

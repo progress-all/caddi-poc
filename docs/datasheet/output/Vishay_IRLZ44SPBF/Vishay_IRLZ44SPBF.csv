@@ -1,55 +1,52 @@
-param_id,description,value
-Part_Number,型名,"IRLZ44S / IRLZ44SPbF (Lead-free), SiHLZ44S-GE3 (Halogen-free)"
-Product_Type,製品種別,N-Channel Logic Level Power MOSFET (Third Generation)
-Package,パッケージ,D2PAK (TO-263)
-Configuration,構成,Single
-VDSS,ドレイン-ソース間耐圧,60 V
-VGS_Max,ゲート-ソース間最大電圧,±10 V
-ID_TC25,連続ドレイン電流 (TC=25°C VGS=5.0V),50 A
-ID_TC100,連続ドレイン電流 (TC=100°C),36 A
-IDM,パルスドレイン電流,200 A
-PD_TC25,最大消費電力 (TC=25°C),150 W
-PD_TA25_PCB,最大消費電力 PCBマウント (TA=25°C),3.7 W
-Linear_Derating_Factor,リニアディレーティングファクタ,1.0 W/°C
-Linear_Derating_Factor_PCB,リニアディレーティングファクタ (PCBマウント),0.025 W/°C
-EAS,単パルスアバランシェエネルギー,400 mJ
-dVdt,ピークダイオードリカバリ dV/dt,4.5 V/ns
-TJ_TSTG_Range,接合温度・保存温度範囲,-55 to +175 °C
-Soldering_Temp,はんだ付け推奨温度 (ピーク 10s),300 °C
-Thermal_Resistance_JA,熱抵抗 RθJA (ジャンクション-周囲間),62 °C/W max
-Thermal_Resistance_JA_PCB,熱抵抗 RθJA PCBマウント (1" sq PCB),40 °C/W max
-Thermal_Resistance_JC,熱抵抗 RθJC (ジャンクション-ケース間 ドレイン),1.0 °C/W max
-BVDSS,ドレイン-ソース間降伏電圧 (VGS=0V ID=250µA),60 V min
-BVDSS_TempCoeff,ドレイン-ソース間降伏電圧温度係数 (ID=1mA),0.070 V/°C typ
-VGS_th,ゲートしきい値電圧 (VDS=VGS ID=250µA),1.0 V min / 2.0 V max
-IGSS,ゲート-ソース間漏れ電流 (VGS=±10V),±100 nA max
-IDSS_25C,ゼロゲート電圧ドレイン電流 (VDS=60V VGS=0V TJ=25°C),25 µA max
-IDSS_150C,ゼロゲート電圧ドレイン電流 (VDS=48V VGS=0V TJ=150°C),250 µA max
-RDS_on_VGS5V,オン抵抗 (VGS=5.0V ID=31A),0.028 Ω max
-RDS_on_VGS4V,オン抵抗 (VGS=4.0V ID=25A),0.039 Ω max
-gfs,順方向相互コンダクタンス (VDS=25V ID=31A),23 S min
-Ciss,入力容量 (VGS=0V VDS=25V f=1MHz),3300 pF typ
-Coss,出力容量 (VGS=0V VDS=25V f=1MHz),1200 pF typ
-Crss,帰還容量 (VGS=0V VDS=25V f=1MHz),200 pF typ
-QG_Total,総ゲート電荷量 (VGS=5.0V ID=51A VDS=48V),66 nC max
-QGS,ゲート-ソース間電荷量,12 nC max
-QGD,ゲート-ドレイン間電荷量,43 nC max
-td_on,ターンオン遅延時間 (VDD=30V ID=51A Rg=4.6Ω RD=0.56Ω),17 ns typ
-tr,立ち上がり時間,230 ns typ
-td_off,ターンオフ遅延時間,42 ns typ
-tf,立ち下がり時間,110 ns typ
-LD,内部ドレインインダクタンス (パッケージ中心から6mm),4.5 nH typ
-LS,内部ソースインダクタンス,7.5 nH typ
-IS_Continuous,連続ソース-ドレインダイオード電流,50 A max
-ISM_Pulsed,パルスダイオード順方向電流,200 A max
-VSD,ボディダイオード順方向電圧 (IS=51A VGS=0V TJ=25°C),2.5 V max
-trr,逆回復時間 (IF=51A dI/dt=100A/µs TJ=25°C),130 ns typ / 180 ns max
-Qrr,逆回復電荷量 (IF=51A dI/dt=100A/µs TJ=25°C),0.84 µC typ / 1.3 µC max
-Dim_A,パッケージ寸法 A (高さ),4.06 min / 4.83 max mm
-Dim_D,パッケージ寸法 D (本体長さ),8.38 min / 9.65 max mm
-Dim_E,パッケージ寸法 E (本体幅),9.65 min / 10.67 max mm
-Dim_e,パッケージ寸法 e (リードピッチ),2.54 BSC mm
-Dim_H,パッケージ寸法 H (全高),14.61 min / 15.88 max mm
-Mounting_Type,実装タイプ,Surface Mount
-FET_Type,FETタイプ,N-Channel
-Technology,技術,MOSFET (Metal Oxide)
+param_id,description,value,status
+Part_Number,型名,IRLZ44S / SiHLZ44S,extracted
+Product_Type,製品種別,N-Channel Logic Level Power MOSFET,extracted
+Package,パッケージ,D2PAK (TO-263),extracted
+Manufacturer,メーカー,Vishay Siliconix,extracted
+FET_Type,FETタイプ,N-Channel,extracted
+Technology,技術,MOSFET (Third Generation Power MOSFET),extracted
+Mounting_Type,実装タイプ,Surface Mount,extracted
+Configuration,構成,Single,extracted
+Ordering_Info,発注型名 (Lead-free版),"IRLZ44SPbF (単品) / IRLZ44STRRPbF (テープ&リール)",extracted
+VDS,ドレイン-ソース間耐圧,60 V,extracted
+VGS_Max,ゲート-ソース間最大電圧,±10 V,extracted
+ID_TC25,"連続ドレイン電流 (TC=25°C, VGS=5.0V)",50 A,extracted
+ID_TC100,連続ドレイン電流 (TC=100°C),36 A,extracted
+IDM,パルスドレイン電流,200 A,extracted
+PD_TC25,最大消費電力 (TC=25°C),150 W,extracted
+PD_TA25_PCB,"最大消費電力 (PCB実装, TA=25°C)",3.7 W,extracted
+Linear_Derating_Factor,リニアディレーティングファクタ,1.0 W/°C,extracted
+Linear_Derating_Factor_PCB,リニアディレーティングファクタ (PCB実装),0.025 W/°C,extracted
+EAS,単パルスアバランシェエネルギー,400 mJ,extracted
+dv_dt,ピークダイオード回復 dV/dt,4.5 V/ns,extracted
+TJ_TSTG_Range,接合温度・保存温度範囲,-55 to +175 °C,extracted
+Soldering_Temp,はんだ付けピーク温度 (10秒間),300 °C,extracted
+Thermal_Resistance_JA,熱抵抗 θJA (ジャンクション-周囲間),62 °C/W max,extracted
+Thermal_Resistance_JA_PCB,"熱抵抗 θJA (ジャンクション-周囲間, PCB実装)",40 °C/W max,extracted
+Thermal_Resistance_JC,"熱抵抗 θJC (ジャンクション-ケース間, ドレイン)",1.0 °C/W max,extracted
+BVDSS,"ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)",60 V min,extracted
+BVDSS_TempCoeff,"VDS温度係数 (Reference to 25°C, ID=1mA)",0.070 V/°C typ,extracted
+VGS_th,"ゲートしきい値電圧 (VDS=VGS, ID=250µA)",1.0 V min / 2.0 V max,extracted
+IGSS,ゲート-ソース間漏れ電流 (VGS=±10V),±100 nA max,extracted
+IDSS_25C,"ゼロゲート電圧ドレイン電流 (VDS=60V, VGS=0V)",25 µA max,extracted
+IDSS_150C,"ゼロゲート電圧ドレイン電流 (VDS=48V, VGS=0V, TJ=150°C)",250 µA max,extracted
+RDS_on_VGS5V,"オン抵抗 (VGS=5.0V, ID=31A)",0.028 Ω max,extracted
+RDS_on_VGS4V,"オン抵抗 (VGS=4.0V, ID=25A)",0.039 Ω max,extracted
+gfs,"順方向相互コンダクタンス (VDS=25V, ID=31A)",23 S min,extracted
+Ciss,"入力容量 (VGS=0V, VDS=25V, f=1MHz)",3300 pF typ,extracted
+Coss,"出力容量 (VGS=0V, VDS=25V, f=1MHz)",1200 pF typ,extracted
+Crss,"帰還容量 (VGS=0V, VDS=25V, f=1MHz)",200 pF typ,extracted
+Qg_Total,"総ゲート電荷量 (VGS=5.0V, ID=51A, VDS=48V)",66 nC max,extracted
+Qgs,ゲート-ソース間電荷量,12 nC max,extracted
+Qgd,ゲート-ドレイン間電荷量,43 nC max,extracted
+td_on,"ターンオン遅延時間 (VDD=30V, ID=51A, Rg=4.6Ω, RD=0.56Ω)",17 ns typ,extracted
+tr,立ち上がり時間,230 ns typ,extracted
+td_off,ターンオフ遅延時間,42 ns typ,extracted
+tf,立ち下がり時間,110 ns typ,extracted
+LD,内部ドレインインダクタンス (リード6mm-ダイ接触点中心間),4.5 nH typ,extracted
+LS,内部ソースインダクタンス,7.5 nH typ,extracted
+IS,連続ソース-ドレインダイオード電流,50 A,extracted
+ISM,パルスダイオード順方向電流,200 A,extracted
+VSD,"ボディダイオード順方向電圧 (TJ=25°C, IS=51A, VGS=0V)",2.5 V max,extracted
+trr,"逆回復時間 (TJ=25°C, IF=51A, dI/dt=100A/µs)",130 ns typ / 180 ns max,extracted
+Qrr,"逆回復電荷量 (TJ=25°C, IF=51A, dI/dt=100A/µs)",0.84 µC typ / 1.3 µC max,extracted
