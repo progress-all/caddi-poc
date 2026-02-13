@@ -1,13 +1,15 @@
 # PDF Text Extraction
 # Source: ST_STPS3L45AF.pdf
 # Pages: 8
+# Method: pymupdf
+# Quality: 0.9897
 
 
 ============================================================
 PAGE 1
 ============================================================
 
-This is information on a product in full production. 
+This is information on a product in full production.
 February 2014
 DocID024949 Rev 2
 1/8
@@ -24,21 +26,21 @@ Low forward voltage drop
 •
 Avalanche capability specified
 Description
-Schottky rectifier suited for switched mode power 
-supplies and high frequency DC to DC 
-converters. Packaged in a tiny SMAflat package, 
-this device has been optimized for use in compact 
+Schottky rectifier suited for switched mode power
+supplies and high frequency DC to DC
+converters. Packaged in a tiny SMAflat package,
+this device has been optimized for use in compact
 chargers.
 Figure 1. Electrical characteristics(a)
-         
+
 SMAflat (non exposed pad)
 STPS3L45AF
 K
 A
 a.
-VARM and IARM must respect the reverse safe 
-operating area defined in Figure 11. VAR and IAR are 
-pulse measurements (tp < 10 µs). VR, IR, VRRM and 
+VARM and IARM must respect the reverse safe
+operating area defined in Figure 11. VAR and IAR are
+pulse measurements (tp < 10 μs). VR, IR, VRRM and
 VF, are static characteristics
 Table 1. Device summary
 Symbol
@@ -73,7 +75,6 @@ X
 X
 www.st.com
 
-
 ============================================================
 PAGE 2
 ============================================================
@@ -82,12 +83,11 @@ Characteristics
 STPS3L45AF
 2/8
 DocID024949 Rev 2
-1 
+1
 Characteristics
-         
-         
-         
-To evaluate the conduction losses use the following equation: 
+
+
+To evaluate the conduction losses use the following equation:
 P = 0.36 x IF(AV) + 0.05 IF
 2
 (RMS)
@@ -107,7 +107,7 @@ TL = 120 °C δ = 0.5
 3
 A
 IFSM
-Surge non repetitive forward 
+Surge non repetitive forward
 current
 tp = 10 ms sinusoidal
 75
@@ -115,28 +115,28 @@ A
 PARM
 (1)
 1.
-For pulse time duration deratings, please refer to Figure 4. More details regarding the avalanche energy 
-measurements and diode validation in the avalanche are provided in the STMicroelectronics Application 
-notes AN1768, “Admissible avalanche power of Schottky diodes” and AN2025, “Converter improvement 
+For pulse time duration deratings, please refer to Figure 4. More details regarding the avalanche energy
+measurements and diode validation in the avalanche are provided in the STMicroelectronics Application
+notes AN1768, “Admissible avalanche power of Schottky diodes” and AN2025, “Converter improvement
 using Schottky rectifier avalanche specification”.
 Repetitive peak avalanche power
-tp = 10 µs   Tj = 125 °C
+tp = 10 μs Tj = 125 °C
 70
 W
 VARM
 (2)
 2.
 Refer to Figure 11
-Maximum repetitive peak 
+Maximum repetitive peak
 avalanche voltage
-tp < 10 µs, Tj < 125 °C, IAR < 1.4 A
+tp < 10 μs, Tj < 125 °C, IAR < 1.4 A
 50
 V
 VASM
 (2)
-Maximum single pulse peak 
+Maximum single pulse peak
 avalanche voltage
-tp < 10 µs, Tj < 125 °C, IAR < 1.4 A
+tp < 10 μs, Tj < 125 °C, IAR < 1.4 A
 50
 V
 Tstg
@@ -146,8 +146,8 @@ Storage temperature range
 Tj
 Operating junction temperature (3)
 3.
- 
- condition to avoid thermal runaway for a diode on its own heatsink
+
+condition to avoid thermal runaway for a diode on its own heatsink
 150
 °C
 Table 3. Thermal resistance
@@ -169,13 +169,13 @@ Unit
 IR
 (1)
 1.
-Pulse test: tp = 380 µs, δ < 2%
+Pulse test: tp = 380 μs, δ < 2%
 Reverse leakage current
 Tj = 25 °C
 VR = VRRM
 80
 300
-µA
+μA
 Tj = 125 °C
 66
 135
@@ -203,7 +203,6 @@ a
 -------------------------
 <
 
-
 ============================================================
 PAGE 3
 ============================================================
@@ -213,12 +212,11 @@ DocID024949 Rev 2
 STPS3L45AF
 Characteristics
 8
-         
-         
-         
-Figure 2. Average forward power dissipation 
+
+
+Figure 2. Average forward power dissipation
 versus average forward current
-Figure 3. Average forward current versus 
+Figure 3. Average forward current versus
 ambient temperature (δ = 0.5)
 PF(AV)(W)
 0.0
@@ -238,13 +236,13 @@ PF(AV)(W)
 3.5
 4.0
 T
-=tp/T
+=tp/T
 tp
- = 0.05
- = 1
- = 0.5
- = 0.2
- = 0.1
+= 0.05
+= 1
+= 0.5
+= 0.2
+= 0.1
 IF(AV)(A)
 IF(AV)(A)
 0.0
@@ -265,12 +263,12 @@ IF(AV)(A)
 Tamb(°C)
 Rth(j-a) = Rth(j-l)
 T
-=tp/T
+=tp/T
 tp
-Figure 4. Normalized avalanche power derating 
+Figure 4. Normalized avalanche power derating
 versus pulse duration
-Figure 5. Relative variation of thermal 
-impedance junction to lead versus pulse 
+Figure 5. Relative variation of thermal
+impedance junction to lead versus pulse
 duration
 0,001
 0,01
@@ -280,10 +278,10 @@ duration
 10
 100
 1000
-tP µs
+tP μs
 (
 )
-Parm tp /Parm 10µs
+Parm tp /Parm 10μs
 (
 )
 (
@@ -310,9 +308,9 @@ Zth(j- )/Rth(j- )
 l
 l
 tp(s)
-Figure 6. Reverse leakage current versus 
+Figure 6. Reverse leakage current versus
 reverse voltage applied (typical values)
-Figure 7. Junction capacitance versus reverse 
+Figure 7. Junction capacitance versus reverse
 voltage applied (typical values)
 IR(mA)
 1.E-03
@@ -352,7 +350,6 @@ F = 1MHz
 VOSC = 30mVRMS
 Tj = 25°C
 
-
 ============================================================
 PAGE 4
 ============================================================
@@ -361,11 +358,11 @@ Characteristics
 STPS3L45AF
 4/8
 DocID024949 Rev 2
-         
-         
-Figure 8. Forward voltage drop versus forward 
+
+
+Figure 8. Forward voltage drop versus forward
 current (typical values)
-Figure 9. Forward voltage drop versus forward 
+Figure 9. Forward voltage drop versus forward
 current (maximum values)
 IF(A)
 0.1
@@ -399,11 +396,11 @@ j
 T = 125°C
 j
 IF(A)
-Figure 10. Thermal resistance junction to 
-ambient versus copper surface under each lead 
+Figure 10. Thermal resistance junction to
+ambient versus copper surface under each lead
 (typical values)
-Figure 11. Reverse safe operating area 
-(tp < 10 µs and Tj < 125 °C)
+Figure 11. Reverse safe operating area
+(tp < 10 μs and Tj < 125 °C)
 Rth(j-a)(°C/W)
 0
 50
@@ -416,8 +413,8 @@ Rth(j-a)(°C/W)
 3
 4
 5
-SCU(cm²)
-Epoxy printed board FR4, copper thickness Cu = 35 µm
+SCU(cm2)
+Epoxy printed board FR4, copper thickness Cu = 35 μm
 0,6
 0,8
 1,0
@@ -433,7 +430,6 @@ Epoxy printed board FR4, copper thickness Cu = 35 µm
 Varm (V)
 Iarm (V)
 
-
 ============================================================
 PAGE 5
 ============================================================
@@ -443,18 +439,18 @@ DocID024949 Rev 2
 STPS3L45AF
 Package information
 8
-2 
+2
 Package information
 •
 Epoxy meets UL94,V0
 •
 Lead-free packages
-In order to meet environmental requirements, ST offers these devices in different grades of 
-ECOPACK® packages, depending on their level of environmental compliance. ECOPACK® 
-specifications, grade definitions and product status are available at: www.st.com. 
+In order to meet environmental requirements, ST offers these devices in different grades of
+ECOPACK® packages, depending on their level of environmental compliance. ECOPACK®
+specifications, grade definitions and product status are available at: www.st.com.
 ECOPACK® is an ST trademark.
 Figure 12. SMAflat (non-exposed pad) dimension definitions
-         
+
 Table 5. SMAflat (non-exposed pad) dimension values
 Ref.
 Dimensions
@@ -517,7 +513,6 @@ b
 E
 E1
 
-
 ============================================================
 PAGE 6
 ============================================================
@@ -538,7 +533,6 @@ Figure 13. SMAflat (non-exposed pad) footprint dimensions in mm (inches)
 2.07
 (0.082)
 
-
 ============================================================
 PAGE 7
 ============================================================
@@ -548,12 +542,12 @@ DocID024949 Rev 2
 STPS3L45AF
 Ordering information
 8
-3 
+3
 Ordering information
-         
-4 
+
+4
 Revision history
-         
+
 Table 6. Ordering information
 Order code
 Marking
@@ -577,7 +571,6 @@ First release.
 03-Feb-2014
 2
 Updated Table 5, Figure 12 and Figure 13.
-
 
 ============================================================
 PAGE 8
@@ -617,6 +610,6 @@ Information in this document supersedes and replaces all information previously 
 The ST logo is a registered trademark of STMicroelectronics. All other names are the property of their respective owners.
 © 2014 STMicroelectronics - All rights reserved
 STMicroelectronics group of companies
-Australia - Belgium - Brazil - Canada - China - Czech Republic - Finland - France - Germany - Hong Kong - India - Israel - Italy - Japan - 
+Australia - Belgium - Brazil - Canada - China - Czech Republic - Finland - France - Germany - Hong Kong - India - Israel - Italy - Japan -
 Malaysia - Malta - Morocco - Philippines - Singapore - Spain - Sweden - Switzerland - United Kingdom - United States of America
 www.st.com

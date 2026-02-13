@@ -1,0 +1,288 @@
+# =============================================================================
+# ST_STPS3L45AF パラメータスキーマ
+# =============================================================================
+schema_version: "1.0"
+schema_id: "ST_STPS3L45AF"
+inferred_category: "schottky_diode"
+
+parameters:
+  # --- 基本情報 ---
+  - id: "Part_Number"
+    label: "型名"
+    description: "データシート記載の製品型名"
+    unit: ""
+    extraction_hint: "Page 1 タイトル 'STPS3L45AF'"
+    required: true
+
+  - id: "Product_Type"
+    label: "製品種別"
+    description: "製品の種別・カテゴリ"
+    unit: ""
+    extraction_hint: "Page 1 サブタイトル 'Power Schottky rectifier'"
+    required: true
+
+  - id: "Package"
+    label: "パッケージ"
+    description: "パッケージ形状"
+    unit: ""
+    extraction_hint: "Page 1 'SMAflat (non exposed pad)' / Page 7 Table 6"
+    required: true
+
+  - id: "Manufacturer"
+    label: "メーカー"
+    description: "製造元"
+    unit: ""
+    extraction_hint: "Page 8 'STMicroelectronics'"
+    required: true
+
+  - id: "Description"
+    label: "概要説明"
+    description: "製品概要"
+    unit: ""
+    extraction_hint: "Page 1 Description セクション"
+    required: true
+
+  # --- Absolute Maximum Ratings (Table 2, p.2, score=0.850) ---
+  - id: "VRRM"
+    label: "繰り返しピーク逆電圧"
+    description: "Repetitive peak reverse voltage"
+    unit: "V"
+    extraction_hint: "tables.json Table 2 (p.2): Value列 → 45"
+    required: true
+
+  - id: "IF_AV"
+    label: "平均順方向電流"
+    description: "Average forward current (TL=120°C, δ=0.5)"
+    unit: "A"
+    extraction_hint: "tables.json Table 2 (p.2): Value列 → 3"
+    required: true
+
+  - id: "IFSM"
+    label: "サージ非繰り返し順方向電流"
+    description: "Surge non repetitive forward current (tp=10ms, sinusoidal)"
+    unit: "A"
+    extraction_hint: "tables.json Table 2 (p.2): Value列 → 75"
+    required: true
+
+  - id: "PARM"
+    label: "繰り返しピークアバランシェ電力"
+    description: "Repetitive peak avalanche power (tp=10μs, Tj=125°C)"
+    unit: "W"
+    extraction_hint: "tables.json Table 2 (p.2): PARM行, Value列 → 70"
+    required: true
+
+  - id: "VARM"
+    label: "最大繰り返しピークアバランシェ電圧"
+    description: "Maximum repetitive peak avalanche voltage (tp<10μs, Tj<125°C, IAR<1.4A)"
+    unit: "V"
+    extraction_hint: "tables.json Table 2 (p.2): VARM行, Value列 → 50"
+    required: true
+
+  - id: "VASM"
+    label: "最大単発ピークアバランシェ電圧"
+    description: "Maximum single pulse peak avalanche voltage (tp<10μs, Tj<125°C, IAR<1.4A)"
+    unit: "V"
+    extraction_hint: "tables.json Table 2 (p.2): VASM行, Value列 → 50"
+    required: true
+
+  - id: "Tstg"
+    label: "保存温度範囲"
+    description: "Storage temperature range"
+    unit: "°C"
+    extraction_hint: "tables.json Table 2 (p.2): Tstg行, Value列 → -65 to +175"
+    required: true
+
+  - id: "Tj_Max"
+    label: "最大接合温度"
+    description: "Operating junction temperature (max)"
+    unit: "°C"
+    extraction_hint: "tables.json Table 2 (p.2): Tj行, Value列 → 150"
+    required: true
+
+  # --- Static Electrical Characteristics (Table 3, p.2, score=0.862) ---
+  - id: "IR_25C"
+    label: "逆漏れ電流 (Tj=25°C)"
+    description: "Reverse leakage current at Tj=25°C, VR=VRRM"
+    unit: "μA"
+    extraction_hint: "tables.json Table 3 (p.2): ヘッダ 'Typ. 80' → Typ=80, 'Max. 300' → Max=300 μA"
+    required: true
+
+  - id: "IR_125C"
+    label: "逆漏れ電流 (Tj=125°C)"
+    description: "Reverse leakage current at Tj=125°C"
+    unit: "mA"
+    extraction_hint: "tables.json Table 3 (p.2): row[0], Typ.列=66, Max.列=135 mA"
+    required: true
+
+  - id: "VF_3A_25C"
+    label: "順方向電圧降下 (IF=3A, Tj=25°C)"
+    description: "Forward voltage drop at IF=3A, Tj=25°C"
+    unit: "V"
+    extraction_hint: "tables.json Table 3 (p.2): VF行, Typ.列=0.462, Max.列=0.57 V"
+    required: true
+
+  - id: "VF_3A_125C"
+    label: "順方向電圧降下 (IF=3A, Tj=125°C)"
+    description: "Forward voltage drop at IF=3A, Tj=125°C"
+    unit: "V"
+    extraction_hint: "tables.json Table 3 (p.2): row[2], Typ.列=0.41, Max.列=0.51 V"
+    required: true
+
+  - id: "Conduction_Loss_Equation"
+    label: "導通損失計算式"
+    description: "伝導損失の計算式"
+    unit: ""
+    extraction_hint: "Page 2 'P = 0.36 x IF(AV) + 0.05 IF²(RMS)'"
+    required: true
+
+  - id: "Pulse_Test_Condition"
+    label: "パルス試験条件"
+    description: "静的電気特性のパルス試験条件"
+    unit: ""
+    extraction_hint: "Page 2 注釈 'Pulse test: tp = 380 μs, δ < 2%'"
+    required: true
+
+  # --- Thermal Characteristics ---
+  - id: "Rth_JL"
+    label: "熱抵抗 (ジャンクション-リード間)"
+    description: "Thermal resistance junction to lead"
+    unit: "°C/W"
+    extraction_hint: "Page 2 Table 3: Rth(j-l) = 15"
+    required: true
+
+  # --- Package / Dimensions (Page 5, Table 5 - フラットテキストから) ---
+  - id: "Dim_A"
+    label: "寸法 A (全高)"
+    description: "Package dimension A"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: A, mm Min=0.90, mm Max=1.10, inch Min=0.035, inch Max=0.043"
+    required: true
+
+  - id: "Dim_b"
+    label: "寸法 b (リード幅)"
+    description: "Package dimension b (lead width)"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: b, mm Min=1.25, mm Max=1.65, inch Min=0.049, inch Max=0.065"
+    required: true
+
+  - id: "Dim_c"
+    label: "寸法 c (リード厚)"
+    description: "Package dimension c (lead thickness)"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: c, mm Min=0.15, mm Max=0.40, inch Min=0.006, inch Max=0.016"
+    required: true
+
+  - id: "Dim_D"
+    label: "寸法 D (本体長さ)"
+    description: "Package dimension D (body length)"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: D, mm Min=2.25, mm Max=2.95, inch Min=0.088, inch Max=0.116"
+    required: true
+
+  - id: "Dim_E"
+    label: "寸法 E (全長)"
+    description: "Package dimension E (overall length)"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: E, mm Min=4.80, mm Max=5.60, inch Min=0.189, inch Max=0.220"
+    required: true
+
+  - id: "Dim_E1"
+    label: "寸法 E1 (本体幅)"
+    description: "Package dimension E1 (body width)"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: E1, mm Min=3.95, mm Max=4.60, inch Min=0.155, inch Max=0.181"
+    required: true
+
+  - id: "Dim_L"
+    label: "寸法 L (リード長)"
+    description: "Package dimension L (lead length)"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: L, mm Min=0.75, mm Max=1.50, inch Min=0.029, inch Max=0.059"
+    required: true
+
+  - id: "Dim_L1"
+    label: "寸法 L1"
+    description: "Package dimension L1"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: L1, mm Typ=0.50, inch Typ=0.020"
+    required: true
+
+  - id: "Dim_L2"
+    label: "寸法 L2"
+    description: "Package dimension L2"
+    unit: "mm"
+    extraction_hint: "Page 5 Table 5: L2, mm Typ=0.50, inch Typ=0.020"
+    required: true
+
+  # --- Package Information ---
+  - id: "Package_Material"
+    label: "パッケージ材質"
+    description: "パッケージのエポキシ規格"
+    unit: ""
+    extraction_hint: "Page 5 'Epoxy meets UL94, V0'"
+    required: true
+
+  - id: "Lead_Free"
+    label: "鉛フリー"
+    description: "鉛フリーパッケージ対応"
+    unit: ""
+    extraction_hint: "Page 5 'Lead-free packages'"
+    required: true
+
+  # --- Ordering Information (Table 6, p.7) ---
+  - id: "Order_Code"
+    label: "注文コード"
+    description: "発注型名"
+    unit: ""
+    extraction_hint: "Page 7 Table 6: STPS3L45AF"
+    required: true
+
+  - id: "Marking"
+    label: "マーキング"
+    description: "部品マーキング"
+    unit: ""
+    extraction_hint: "Page 7 Table 6: F3L45"
+    required: true
+
+  - id: "Weight"
+    label: "重量"
+    description: "部品重量"
+    unit: "g"
+    extraction_hint: "Page 7 Table 6: 0.035 g"
+    required: true
+
+  - id: "Base_Qty"
+    label: "梱包数量"
+    description: "基本梱包数量"
+    unit: ""
+    extraction_hint: "Page 7 Table 6: 10000"
+    required: true
+
+  - id: "Delivery_Mode"
+    label: "梱包形態"
+    description: "梱包・出荷形態"
+    unit: ""
+    extraction_hint: "Page 7 Table 6: Tape and reel"
+    required: true
+
+  # --- 追加特性 ---
+  - id: "VF_Typ_Highlight"
+    label: "VF(typ) ハイライト値"
+    description: "Page 1 Device summary の VF(typ) 値"
+    unit: "V"
+    extraction_hint: "tables.json Table 1 (p.1): VF(typ) → 0.462"
+    required: true
+
+  - id: "Diode_Type"
+    label: "ダイオードタイプ"
+    description: "ダイオードの種類"
+    unit: ""
+    extraction_hint: "Page 1 Description 'Schottky rectifier'"
+    required: true
+
+  - id: "Mounting_Type"
+    label: "実装タイプ"
+    description: "実装方法"
+    unit: ""
+    extraction_hint: "SMAflat → Surface Mount (表面実装)"
+    required: true

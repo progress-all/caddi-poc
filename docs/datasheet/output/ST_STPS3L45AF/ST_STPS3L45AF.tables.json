@@ -1,0 +1,1069 @@
+{
+  "pdf_path": "ST_STPS3L45AF.pdf",
+  "method": "pdfplumber",
+  "page_count": 8,
+  "total_tables": 5,
+  "elapsed_ms": 1201,
+  "quality_threshold": 0.6,
+  "quality_summary": {
+    "avg_score": 0.793,
+    "min_score": 0.6653,
+    "max_score": 0.8617,
+    "tables_above_threshold": 5,
+    "total_tables": 5,
+    "column_alignment_issues": []
+  },
+  "tables": [
+    {
+      "page": 1,
+      "title": "Table 1. Device summary",
+      "headers": [
+        "Symbol I F(AV) V RRM T (max) j",
+        "value 3 A 45 V 150 °C"
+      ],
+      "rows": [
+        {
+          "Symbol I F(AV) V RRM T (max) j": "V (typ) F",
+          "value 3 A 45 V 150 °C": "0.462 V"
+        }
+      ],
+      "raw_rows": [
+        [
+          "V (typ) F",
+          "0.462 V"
+        ]
+      ],
+      "quality_score": 0.832,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.832,
+        "column_count_consistency": 1.0,
+        "header_quality": 1.0,
+        "numeric_pattern_ratio": 0.5,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 1.0,
+        "row_count_score": 0.4,
+        "num_headers": 2,
+        "num_rows": 1,
+        "headers": [
+          "Symbol I F(AV) V RRM T (max) j",
+          "value 3 A 45 V 150 °C"
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "title": "Table 4. Static electrical characteristics",
+      "headers": [
+        "Symbol V RRM I F(AV) I FSM",
+        "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current",
+        "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p",
+        "Value 45 3 75",
+        "Unit V A"
+      ],
+      "rows": [
+        {
+          "Symbol V RRM I F(AV) I FSM": "P (1) ARM",
+          "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current": "Repetitive peak avalanche power",
+          "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p": "t = 10 µs Tj = 125 °C p",
+          "Value 45 3 75": "70",
+          "Unit V A": "W"
+        },
+        {
+          "Symbol V RRM I F(AV) I FSM": "V (2) ARM",
+          "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current": "Maximum repetitive peak avalanche voltage",
+          "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p": "t < 10 µs, Tj < 125 °C, I < 1.4 A p AR",
+          "Value 45 3 75": "50",
+          "Unit V A": "V"
+        },
+        {
+          "Symbol V RRM I F(AV) I FSM": "V (2) ASM",
+          "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current": "Maximum single pulse peak avalanche voltage",
+          "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p": "t < 10 µs, Tj < 125 °C, I < 1.4 A p AR",
+          "Value 45 3 75": "50",
+          "Unit V A": "V"
+        },
+        {
+          "Symbol V RRM I F(AV) I FSM": "T stg",
+          "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current": "Storage temperature range",
+          "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p": "",
+          "Value 45 3 75": "-65 to + 175",
+          "Unit V A": "°C"
+        },
+        {
+          "Symbol V RRM I F(AV) I FSM": "T j",
+          "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current": "Operating junction temperature (3)",
+          "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p": "",
+          "Value 45 3 75": "150",
+          "Unit V A": "°C"
+        }
+      ],
+      "raw_rows": [
+        [
+          "P (1) ARM",
+          "Repetitive peak avalanche power",
+          "t = 10 µs Tj = 125 °C p",
+          "70",
+          "W"
+        ],
+        [
+          "V (2) ARM",
+          "Maximum repetitive peak avalanche voltage",
+          "t < 10 µs, Tj < 125 °C, I < 1.4 A p AR",
+          "50",
+          "V"
+        ],
+        [
+          "V (2) ASM",
+          "Maximum single pulse peak avalanche voltage",
+          "t < 10 µs, Tj < 125 °C, I < 1.4 A p AR",
+          "50",
+          "V"
+        ],
+        [
+          "T stg",
+          "Storage temperature range",
+          "",
+          "-65 to + 175",
+          "°C"
+        ],
+        [
+          "T j",
+          "Operating junction temperature (3)",
+          "",
+          "150",
+          "°C"
+        ]
+      ],
+      "quality_score": 0.8499,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.8499,
+        "column_count_consistency": 1.0,
+        "header_quality": 1.0,
+        "numeric_pattern_ratio": 0.5217,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.88,
+        "row_count_score": 1.0,
+        "num_headers": 5,
+        "num_rows": 5,
+        "headers": [
+          "Symbol V RRM I F(AV) I FSM",
+          "Parameter Repetitive peak reverse voltage Average forward current Surge non repetitive forward current",
+          "Test conditions Repetitive peak reverse voltage T = 120 °C δ = 0.5 L t = 10 ms sinusoidal p",
+          "Value 45 3 75",
+          "Unit V A"
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "title": "Table 4. Static electrical characteristics",
+      "headers": [
+        "Symbol I (1) R",
+        "Parameter Reverse leakage current",
+        "Test conditions T = 25 °C j",
+        "Test conditions V = V R RRM",
+        "Typ. 80",
+        "Max. 300",
+        "Unit µA"
+      ],
+      "rows": [
+        {
+          "Symbol I (1) R": "",
+          "Parameter Reverse leakage current": "",
+          "Test conditions T = 25 °C j": "T = 125 °C j",
+          "Test conditions V = V R RRM": "",
+          "Typ. 80": "66",
+          "Max. 300": "135",
+          "Unit µA": "mA"
+        },
+        {
+          "Symbol I (1) R": "V (1) F",
+          "Parameter Reverse leakage current": "Forward voltage drop",
+          "Test conditions T = 25 °C j": "T = 25 °C j",
+          "Test conditions V = V R RRM": "I = 3 A F",
+          "Typ. 80": "0.462",
+          "Max. 300": "0.57",
+          "Unit µA": "V"
+        },
+        {
+          "Symbol I (1) R": "",
+          "Parameter Reverse leakage current": "",
+          "Test conditions T = 25 °C j": "T = 125 °C j",
+          "Test conditions V = V R RRM": "",
+          "Typ. 80": "0.41",
+          "Max. 300": "0.51",
+          "Unit µA": ""
+        }
+      ],
+      "raw_rows": [
+        [
+          "",
+          "",
+          "T = 125 °C j",
+          "",
+          "66",
+          "135",
+          "mA"
+        ],
+        [
+          "V (1) F",
+          "Forward voltage drop",
+          "T = 25 °C j",
+          "I = 3 A F",
+          "0.462",
+          "0.57",
+          "V"
+        ],
+        [
+          "",
+          "",
+          "T = 125 °C j",
+          "",
+          "0.41",
+          "0.51",
+          ""
+        ]
+      ],
+      "quality_score": 0.8617,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.8617,
+        "column_count_consistency": 1.0,
+        "header_quality": 1.0,
+        "numeric_pattern_ratio": 0.7857,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.5,
+        "row_count_score": 1.0,
+        "num_headers": 7,
+        "num_rows": 3,
+        "headers": [
+          "Symbol I (1) R",
+          "Parameter Reverse leakage current",
+          "Test conditions T = 25 °C j",
+          "Test conditions V = V R RRM",
+          "Typ. 80",
+          "Max. 300",
+          "Unit µA"
+        ]
+      }
+    },
+    {
+      "page": 3,
+      "title": "",
+      "headers": [
+        "Col_1",
+        "Col_2",
+        "= 0.",
+        "05",
+        "Col_3",
+        "=0",
+        ".1",
+        "Col_4",
+        "=0.",
+        "2",
+        "=",
+        "0.5",
+        "Col_5",
+        "=_2",
+        "1"
+      ],
+      "rows": [
+        {
+          "Col_1": "",
+          "Col_2": "",
+          "= 0.": "",
+          "05": "",
+          "Col_3": "",
+          "=0": "",
+          ".1": "",
+          "Col_4": "",
+          "=0.": "",
+          "2": "",
+          "=": "",
+          "0.5": "",
+          "Col_5": "",
+          "=_2": "T",
+          "1": ""
+        },
+        {
+          "Col_1": "",
+          "Col_2": "",
+          "= 0.": "",
+          "05": "",
+          "Col_3": "",
+          "=0": "IF",
+          ".1": "(A",
+          "Col_4": "V)(A",
+          "=0.": ")",
+          "2": "",
+          "=": "",
+          "0.5": "",
+          "Col_5": "",
+          "=_2": "",
+          "1": ""
+        }
+      ],
+      "raw_rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "T",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "IF",
+          "(A",
+          "V)(A",
+          ")",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "quality_score": 0.6653,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.6653,
+        "column_count_consistency": 1.0,
+        "header_quality": 0.8333,
+        "numeric_pattern_ratio": 0.0,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.1,
+        "row_count_score": 0.7,
+        "num_headers": 15,
+        "num_rows": 2,
+        "headers": [
+          "Col_1",
+          "Col_2",
+          "= 0.",
+          "05",
+          "Col_3",
+          "=0",
+          ".1",
+          "Col_4",
+          "=0.",
+          "2",
+          "=",
+          "0.5",
+          "Col_5",
+          "=_2",
+          "1"
+        ]
+      }
+    },
+    {
+      "page": 8,
+      "title": "",
+      "headers": [
+        "Information in this doc right to make changes",
+        "ument is pr , correction",
+        "ovided solely in c s, modifications",
+        "Pl onnection or improv",
+        "ease Read Carefully: with ST products. STMicroel ements, to this document, and",
+        "ease Read Carefully: ectronics NV and its the products and s",
+        "ease Read Carefully: subsidiaries ervices desc",
+        "ease Read Carefully: (“ST”) reserve the ribed herein at any"
+      ],
+      "rows": [
+        {
+          "Information in this doc right to make changes": "time, without notice.",
+          "ument is pr , correction": "",
+          "ovided solely in c s, modifications": "",
+          "Pl onnection or improv": "",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "All ST products are s",
+          "ument is pr , correction": "old pursuant",
+          "ovided solely in c s, modifications": "to ST’s terms a",
+          "Pl onnection or improv": "nd conditi",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ons of sale.",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "Purchasers are solely",
+          "ument is pr , correction": "responsible",
+          "ovided solely in c s, modifications": "for the choice,",
+          "Pl onnection or improv": "selection",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "and use of the ST products a",
+          "ease Read Carefully: ectronics NV and its the products and s": "nd services describ",
+          "ease Read Carefully: subsidiaries ervices desc": "ed herein, a",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "nd ST assumes no"
+        },
+        {
+          "Information in this doc right to make changes": "liability whatsoever re",
+          "ument is pr , correction": "lating to the",
+          "ovided solely in c s, modifications": "choice, selectio",
+          "Pl onnection or improv": "n or use o",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "f the ST products and service",
+          "ease Read Carefully: ectronics NV and its the products and s": "s described herein.",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "No license, express o",
+          "ument is pr , correction": "r implied, by",
+          "ovided solely in c s, modifications": "estoppel or oth",
+          "Pl onnection or improv": "erwise, to",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "any intellectual property rights",
+          "ease Read Carefully: ectronics NV and its the products and s": "is granted under t",
+          "ease Read Carefully: subsidiaries ervices desc": "his documen",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "t. If any part of this"
+        },
+        {
+          "Information in this doc right to make changes": "document refers to an",
+          "ument is pr , correction": "y third party",
+          "ovided solely in c s, modifications": "products or ser",
+          "Pl onnection or improv": "vices it sh",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "all not be deemed a license g",
+          "ease Read Carefully: ectronics NV and its the products and s": "rant by ST for the",
+          "ease Read Carefully: subsidiaries ervices desc": "use of such t",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "hird party products"
+        },
+        {
+          "Information in this doc right to make changes": "or services, or any int",
+          "ument is pr , correction": "ellectual pro",
+          "ovided solely in c s, modifications": "perty contained",
+          "Pl onnection or improv": "therein o",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "r considered as a warranty co",
+          "ease Read Carefully: ectronics NV and its the products and s": "vering the use in a",
+          "ease Read Carefully: subsidiaries ervices desc": "ny manner w",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "hatsoever of such"
+        },
+        {
+          "Information in this doc right to make changes": "third party products o",
+          "ument is pr , correction": "r services or",
+          "ovided solely in c s, modifications": "any intellectual",
+          "Pl onnection or improv": "property c",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ontained therein.",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "UNLESS OTHERWI",
+          "ument is pr , correction": "SE SET FO",
+          "ovided solely in c s, modifications": "RTH IN ST’S T",
+          "Pl onnection or improv": "ERMS A",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ND CONDITIONS OF SALE",
+          "ease Read Carefully: ectronics NV and its the products and s": "ST DISCLAIMS",
+          "ease Read Carefully: subsidiaries ervices desc": "ANY EXPR",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "ESS OR IMPLIED"
+        },
+        {
+          "Information in this doc right to make changes": "WARRANTY WITH",
+          "ument is pr , correction": "RESPECT",
+          "ovided solely in c s, modifications": "TO THE USE",
+          "Pl onnection or improv": "AND/OR",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "SALE OF ST PRODUCTS",
+          "ease Read Carefully: ectronics NV and its the products and s": "INCLUDING WIT",
+          "ease Read Carefully: subsidiaries ervices desc": "HOUT LIMI",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "TATION IMPLIED"
+        },
+        {
+          "Information in this doc right to make changes": "WARRANTIES OF M",
+          "ument is pr , correction": "ERCHANT",
+          "ovided solely in c s, modifications": "ABILITY, FITNE",
+          "Pl onnection or improv": "SS FOR",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "A PARTICULAR PURPOSE (",
+          "ease Read Carefully: ectronics NV and its the products and s": "AND THEIR EQUI",
+          "ease Read Carefully: subsidiaries ervices desc": "VALENTS U",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "NDER THE LAWS"
+        },
+        {
+          "Information in this doc right to make changes": "OF ANY JURISDICTI",
+          "ument is pr , correction": "ON), OR IN",
+          "ovided solely in c s, modifications": "FRINGEMENT",
+          "Pl onnection or improv": "OF ANY P",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ATENT, COPYRIGHT OR O",
+          "ease Read Carefully: ectronics NV and its the products and s": "THER INTELLECT",
+          "ease Read Carefully: subsidiaries ervices desc": "UAL PROPE",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "RTY RIGHT."
+        },
+        {
+          "Information in this doc right to make changes": "ST PRODUCTS AR",
+          "ument is pr , correction": "E NOT DES",
+          "ovided solely in c s, modifications": "IGNED OR AU",
+          "Pl onnection or improv": "THORIZ",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ED FOR USE IN: (A) SAFE",
+          "ease Read Carefully: ectronics NV and its the products and s": "TY CRITICAL AP",
+          "ease Read Carefully: subsidiaries ervices desc": "PLICATION",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "S SUCH AS LIFE"
+        },
+        {
+          "Information in this doc right to make changes": "SUPPORTING, ACT",
+          "ument is pr , correction": "IVE IMPLA",
+          "ovided solely in c s, modifications": "NTED DEVICE",
+          "Pl onnection or improv": "S OR S",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "YSTEMS WITH PRODUCT",
+          "ease Read Carefully: ectronics NV and its the products and s": "FUNCTIONAL SA",
+          "ease Read Carefully: subsidiaries ervices desc": "FETY REQ",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "UIREMENTS; (B)"
+        },
+        {
+          "Information in this doc right to make changes": "AERONAUTIC APPL",
+          "ument is pr , correction": "ICATIONS;",
+          "ovided solely in c s, modifications": "(C) AUTOMOTI",
+          "Pl onnection or improv": "VE APPL",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ICATIONS OR ENVIRONME",
+          "ease Read Carefully: ectronics NV and its the products and s": "NTS, AND/OR (D)",
+          "ease Read Carefully: subsidiaries ervices desc": "AEROSPAC",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "E APPLICATIONS"
+        },
+        {
+          "Information in this doc right to make changes": "OR ENVIRONMENTS",
+          "ument is pr , correction": ". WHERE S",
+          "ovided solely in c s, modifications": "T PRODUCTS A",
+          "Pl onnection or improv": "RE NOT",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "DESIGNED FOR SUCH USE,",
+          "ease Read Carefully: ectronics NV and its the products and s": "THE PURCHASE",
+          "ease Read Carefully: subsidiaries ervices desc": "R SHALL US",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "E PRODUCTS AT"
+        },
+        {
+          "Information in this doc right to make changes": "PURCHASER’S SO",
+          "ument is pr , correction": "LE RISK, E",
+          "ovided solely in c s, modifications": "VEN IF ST H",
+          "Pl onnection or improv": "AS BEEN",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "INFORMED IN WRITING",
+          "ease Read Carefully: ectronics NV and its the products and s": "OF SUCH USAG",
+          "ease Read Carefully: subsidiaries ervices desc": "E, UNLESS",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "A PRODUCT IS"
+        },
+        {
+          "Information in this doc right to make changes": "EXPRESSLY DESIG",
+          "ument is pr , correction": "NATED BY",
+          "ovided solely in c s, modifications": "ST AS BEING",
+          "Pl onnection or improv": "INTENDE",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "D FOR “AUTOMOTIVE, AU",
+          "ease Read Carefully: ectronics NV and its the products and s": "TOMOTIVE SAFE",
+          "ease Read Carefully: subsidiaries ervices desc": "TY OR MED",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "ICAL” INDUSTRY"
+        },
+        {
+          "Information in this doc right to make changes": "DOMAINS ACCORDI",
+          "ument is pr , correction": "NG TO ST P",
+          "ovided solely in c s, modifications": "RODUCT DESI",
+          "Pl onnection or improv": "GN SPEC",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "IFICATIONS. PRODUCTS F",
+          "ease Read Carefully: ectronics NV and its the products and s": "ORMALLY ESCC,",
+          "ease Read Carefully: subsidiaries ervices desc": "QML OR JA",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "N QUALIFIED ARE"
+        },
+        {
+          "Information in this doc right to make changes": "DEEMED SUITABLE",
+          "ument is pr , correction": "FOR USE I",
+          "ovided solely in c s, modifications": "N AEROSPACE",
+          "Pl onnection or improv": "BY THE",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "CORRESPONDING GOVER",
+          "ease Read Carefully: ectronics NV and its the products and s": "NMENTAL AGEN",
+          "ease Read Carefully: subsidiaries ervices desc": "CY.",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "Resale of ST products",
+          "ument is pr , correction": "with provisi",
+          "ovided solely in c s, modifications": "ons different fro",
+          "Pl onnection or improv": "m the stat",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ements and/or technical featur",
+          "ease Read Carefully: ectronics NV and its the products and s": "es set forth in this d",
+          "ease Read Carefully: subsidiaries ervices desc": "ocument sha",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "ll immediately void"
+        },
+        {
+          "Information in this doc right to make changes": "any warranty granted",
+          "ument is pr , correction": "by ST for th",
+          "ovided solely in c s, modifications": "e ST product or",
+          "Pl onnection or improv": "service d",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "escribed herein and shall not",
+          "ease Read Carefully: ectronics NV and its the products and s": "create or extend i",
+          "ease Read Carefully: subsidiaries ervices desc": "n any mann",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "er whatsoever, any"
+        },
+        {
+          "Information in this doc right to make changes": "liability of ST.",
+          "ument is pr , correction": "",
+          "ovided solely in c s, modifications": "",
+          "Pl onnection or improv": "",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "",
+          "ument is pr , correction": "ST and",
+          "ovided solely in c s, modifications": "the ST logo are",
+          "Pl onnection or improv": "trademar",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ks or registered trademarks of",
+          "ease Read Carefully: ectronics NV and its the products and s": "ST in various coun",
+          "ease Read Carefully: subsidiaries ervices desc": "tries.",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "",
+          "ument is pr , correction": "Informati",
+          "ovided solely in c s, modifications": "on in this docum",
+          "Pl onnection or improv": "ent super",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "sedes and replaces all inform",
+          "ease Read Carefully: ectronics NV and its the products and s": "ation previously su",
+          "ease Read Carefully: subsidiaries ervices desc": "pplied.",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "The ST logo",
+          "ument is pr , correction": "is a register",
+          "ovided solely in c s, modifications": "ed trademark of",
+          "Pl onnection or improv": "STMicroe",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "lectronics. All other names ar",
+          "ease Read Carefully: ectronics NV and its the products and s": "e the property of th",
+          "ease Read Carefully: subsidiaries ervices desc": "eir respectiv",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "e owners."
+        },
+        {
+          "Information in this doc right to make changes": "",
+          "ument is pr , correction": "",
+          "ovided solely in c s, modifications": "© 2",
+          "Pl onnection or improv": "014 STMi",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "croelectronics - All rights rese",
+          "ease Read Carefully: ectronics NV and its the products and s": "rved",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "",
+          "ument is pr , correction": "",
+          "ovided solely in c s, modifications": "",
+          "Pl onnection or improv": "STMicroe",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "lectronics group of companies",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "Australia - Belgium",
+          "ument is pr , correction": "- Brazil - Ca",
+          "ovided solely in c s, modifications": "nada - China - C",
+          "Pl onnection or improv": "zech Rep",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ublic - Finland - France - Ger",
+          "ease Read Carefully: ectronics NV and its the products and s": "many - Hong Kong",
+          "ease Read Carefully: subsidiaries ervices desc": "- India - Isra",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "el - Italy - Japan -"
+        },
+        {
+          "Information in this doc right to make changes": "Malaysia - Malta",
+          "ument is pr , correction": "- Morocco -",
+          "ovided solely in c s, modifications": "Philippines - Sin",
+          "Pl onnection or improv": "gapore -",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "Spain - Sweden - Switzerland",
+          "ease Read Carefully: ectronics NV and its the products and s": "- United Kingdom",
+          "ease Read Carefully: subsidiaries ervices desc": "- United Stat",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": "es of America"
+        },
+        {
+          "Information in this doc right to make changes": "",
+          "ument is pr , correction": "",
+          "ovided solely in c s, modifications": "",
+          "Pl onnection or improv": "",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "www.st.com",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        },
+        {
+          "Information in this doc right to make changes": "8/8",
+          "ument is pr , correction": "",
+          "ovided solely in c s, modifications": "",
+          "Pl onnection or improv": "D",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and": "ocID024949 Rev 2",
+          "ease Read Carefully: ectronics NV and its the products and s": "",
+          "ease Read Carefully: subsidiaries ervices desc": "",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any": ""
+        }
+      ],
+      "raw_rows": [
+        [
+          "time, without notice.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "All ST products are s",
+          "old pursuant",
+          "to ST’s terms a",
+          "nd conditi",
+          "ons of sale.",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Purchasers are solely",
+          "responsible",
+          "for the choice,",
+          "selection",
+          "and use of the ST products a",
+          "nd services describ",
+          "ed herein, a",
+          "nd ST assumes no"
+        ],
+        [
+          "liability whatsoever re",
+          "lating to the",
+          "choice, selectio",
+          "n or use o",
+          "f the ST products and service",
+          "s described herein.",
+          "",
+          ""
+        ],
+        [
+          "No license, express o",
+          "r implied, by",
+          "estoppel or oth",
+          "erwise, to",
+          "any intellectual property rights",
+          "is granted under t",
+          "his documen",
+          "t. If any part of this"
+        ],
+        [
+          "document refers to an",
+          "y third party",
+          "products or ser",
+          "vices it sh",
+          "all not be deemed a license g",
+          "rant by ST for the",
+          "use of such t",
+          "hird party products"
+        ],
+        [
+          "or services, or any int",
+          "ellectual pro",
+          "perty contained",
+          "therein o",
+          "r considered as a warranty co",
+          "vering the use in a",
+          "ny manner w",
+          "hatsoever of such"
+        ],
+        [
+          "third party products o",
+          "r services or",
+          "any intellectual",
+          "property c",
+          "ontained therein.",
+          "",
+          "",
+          ""
+        ],
+        [
+          "UNLESS OTHERWI",
+          "SE SET FO",
+          "RTH IN ST’S T",
+          "ERMS A",
+          "ND CONDITIONS OF SALE",
+          "ST DISCLAIMS",
+          "ANY EXPR",
+          "ESS OR IMPLIED"
+        ],
+        [
+          "WARRANTY WITH",
+          "RESPECT",
+          "TO THE USE",
+          "AND/OR",
+          "SALE OF ST PRODUCTS",
+          "INCLUDING WIT",
+          "HOUT LIMI",
+          "TATION IMPLIED"
+        ],
+        [
+          "WARRANTIES OF M",
+          "ERCHANT",
+          "ABILITY, FITNE",
+          "SS FOR",
+          "A PARTICULAR PURPOSE (",
+          "AND THEIR EQUI",
+          "VALENTS U",
+          "NDER THE LAWS"
+        ],
+        [
+          "OF ANY JURISDICTI",
+          "ON), OR IN",
+          "FRINGEMENT",
+          "OF ANY P",
+          "ATENT, COPYRIGHT OR O",
+          "THER INTELLECT",
+          "UAL PROPE",
+          "RTY RIGHT."
+        ],
+        [
+          "ST PRODUCTS AR",
+          "E NOT DES",
+          "IGNED OR AU",
+          "THORIZ",
+          "ED FOR USE IN: (A) SAFE",
+          "TY CRITICAL AP",
+          "PLICATION",
+          "S SUCH AS LIFE"
+        ],
+        [
+          "SUPPORTING, ACT",
+          "IVE IMPLA",
+          "NTED DEVICE",
+          "S OR S",
+          "YSTEMS WITH PRODUCT",
+          "FUNCTIONAL SA",
+          "FETY REQ",
+          "UIREMENTS; (B)"
+        ],
+        [
+          "AERONAUTIC APPL",
+          "ICATIONS;",
+          "(C) AUTOMOTI",
+          "VE APPL",
+          "ICATIONS OR ENVIRONME",
+          "NTS, AND/OR (D)",
+          "AEROSPAC",
+          "E APPLICATIONS"
+        ],
+        [
+          "OR ENVIRONMENTS",
+          ". WHERE S",
+          "T PRODUCTS A",
+          "RE NOT",
+          "DESIGNED FOR SUCH USE,",
+          "THE PURCHASE",
+          "R SHALL US",
+          "E PRODUCTS AT"
+        ],
+        [
+          "PURCHASER’S SO",
+          "LE RISK, E",
+          "VEN IF ST H",
+          "AS BEEN",
+          "INFORMED IN WRITING",
+          "OF SUCH USAG",
+          "E, UNLESS",
+          "A PRODUCT IS"
+        ],
+        [
+          "EXPRESSLY DESIG",
+          "NATED BY",
+          "ST AS BEING",
+          "INTENDE",
+          "D FOR “AUTOMOTIVE, AU",
+          "TOMOTIVE SAFE",
+          "TY OR MED",
+          "ICAL” INDUSTRY"
+        ],
+        [
+          "DOMAINS ACCORDI",
+          "NG TO ST P",
+          "RODUCT DESI",
+          "GN SPEC",
+          "IFICATIONS. PRODUCTS F",
+          "ORMALLY ESCC,",
+          "QML OR JA",
+          "N QUALIFIED ARE"
+        ],
+        [
+          "DEEMED SUITABLE",
+          "FOR USE I",
+          "N AEROSPACE",
+          "BY THE",
+          "CORRESPONDING GOVER",
+          "NMENTAL AGEN",
+          "CY.",
+          ""
+        ],
+        [
+          "Resale of ST products",
+          "with provisi",
+          "ons different fro",
+          "m the stat",
+          "ements and/or technical featur",
+          "es set forth in this d",
+          "ocument sha",
+          "ll immediately void"
+        ],
+        [
+          "any warranty granted",
+          "by ST for th",
+          "e ST product or",
+          "service d",
+          "escribed herein and shall not",
+          "create or extend i",
+          "n any mann",
+          "er whatsoever, any"
+        ],
+        [
+          "liability of ST.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "ST and",
+          "the ST logo are",
+          "trademar",
+          "ks or registered trademarks of",
+          "ST in various coun",
+          "tries.",
+          ""
+        ],
+        [
+          "",
+          "Informati",
+          "on in this docum",
+          "ent super",
+          "sedes and replaces all inform",
+          "ation previously su",
+          "pplied.",
+          ""
+        ],
+        [
+          "The ST logo",
+          "is a register",
+          "ed trademark of",
+          "STMicroe",
+          "lectronics. All other names ar",
+          "e the property of th",
+          "eir respectiv",
+          "e owners."
+        ],
+        [
+          "",
+          "",
+          "© 2",
+          "014 STMi",
+          "croelectronics - All rights rese",
+          "rved",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "STMicroe",
+          "lectronics group of companies",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Australia - Belgium",
+          "- Brazil - Ca",
+          "nada - China - C",
+          "zech Rep",
+          "ublic - Finland - France - Ger",
+          "many - Hong Kong",
+          "- India - Isra",
+          "el - Italy - Japan -"
+        ],
+        [
+          "Malaysia - Malta",
+          "- Morocco -",
+          "Philippines - Sin",
+          "gapore -",
+          "Spain - Sweden - Switzerland",
+          "- United Kingdom",
+          "- United Stat",
+          "es of America"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "www.st.com",
+          "",
+          "",
+          ""
+        ],
+        [
+          "8/8",
+          "",
+          "",
+          "D",
+          "ocID024949 Rev 2",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "quality_score": 0.7561,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.7561,
+        "column_count_consistency": 1.0,
+        "header_quality": 1.0,
+        "numeric_pattern_ratio": 0.0193,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.7129,
+        "row_count_score": 1.0,
+        "num_headers": 8,
+        "num_rows": 32,
+        "headers": [
+          "Information in this doc right to make changes",
+          "ument is pr , correction",
+          "ovided solely in c s, modifications",
+          "Pl onnection or improv",
+          "ease Read Carefully: with ST products. STMicroel ements, to this document, and",
+          "ease Read Carefully: ectronics NV and its the products and s",
+          "ease Read Carefully: subsidiaries ervices desc",
+          "ease Read Carefully: (“ST”) reserve the ribed herein at any"
+        ]
+      }
+    }
+  ],
+  "warnings": [],
+  "total_elapsed_ms": 1384
+}
