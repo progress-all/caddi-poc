@@ -1,1100 +1,754 @@
 # PDF Text Extraction
 # Source: Infineon_IRLZ44NSTRR.pdf
 # Pages: 12
+# Method: ocr
+# Quality: 0.9884
 
 
 ============================================================
 PAGE 1
 ============================================================
 
-	
-
-	
-
-
- 	
-
- 
-
-  !
-"
- 
- #$%&'(!
-")!
-
-
- *""
- *
-
-	
-
-
-θ
-		
-
-
-
-θ
-		
-	
-
-
-	
-
-
- 
-!"
-
-
-
-#$%&'( 
+International
+TER Rectitier
 
-)*
-**+$+
-,
-#$%& 
+Logic-Level Gate Drive
 
-)*
-**+$+
---
-
-#
-.)*
-**
-/
-$%&'( 
-0* )1
--2
-"
-$%&'( 
-0* )1
-
-"
-3*)*45*
-,
-"! 
-+
-6		7* +.4
-8/
-+
-9
-74..:.;9*4
-'
-
-#	
-:.; 
-**
-'(
-
-9	
-1::.;9*4
-
-
-:!
-<):*:!
-(
-+!
-%
-=1*4
-	((>,(
-%
-
-7*4%1**4
-7.*4%1**?*
--/?*
- 
-
-	
- 	
-	  
- 	
-		 
- 	 
-	 	  
-
-    	!
-	 
- 	 
-"  
-#	$ #	      	  	
+Advanced Process Technology
+Surface Mount (IRLZ44NS)
+Low-profile through-hole (IRLZ44NL)
+175°C Operating Temperature
 
-	% 
-&'(
-
- )	 	
-$
-	
- 	
-
-		
-#
-	 
-
-	"
-*%)
-	 
-)#
-	!+"
-
-  
- # 	    # 	!
+Fast Switching
 
-				
-	)"
-*%)#
-
+Fully Avalanche Rated
+e Lead-Free
 
-		#
- 	
-				
-			
-,"-.	
-		"
-
-!
-	/01++203#
- !
-
-	"
-
-
-
-Ω
-
-2 
-   D   Pak
-   
-TO-262
-S
-D
-G
-!'!
- " +,
-"
-  *
-
+Description
 
+Fifth Generation HEXFETs from International Rectifier
+utilize advanced processing techniques to achieve
+extremely low on-resistance per silicon area. This
+benefit, combined with the fast switching speed and
+ruggedized device design that HEXFET Power MOSFETs
+are well known for, provides the designer with an extremely
+efficient and reliable device for use in a wide variety of
+applications.
+
+The D2Pak is a surface mount power package capable of
+accommodating die sizes up to HEX-4. It provides the
+highest power capability and the lowest possible on-
+resistance in any existing surface mount package. The
+D2Pak is suitable for high current applications because of
+its low internal connection resistance and can dissipate
+up to 2.0W in a typical surface mount application.
+
+The through-hole version (IRLZ44NL) is available for low-
+profile applications.
+
+Absolute Maximum Ratings
+
+PD - 95156
+
+IRLZ44NS/LPbF
+
+HEXFET® Power MOSFET
+
+Voss = 55V
+
+Rpsvon) = 0.0220
+
+IDp=47A
+
+Parameter Max. Units
+Ip @ Te = 25°C Continuous Drain Current, Veg @ 10V® 47
+Ip @ Tc = 100°C Continuous Drain Current, Veg @ 10V® 33 A
+low Pulsed Drain Current O© 160
+Pp @Ta = 25°C Power Dissipation 3.8 Ww
+Pp @Tc = 25°C Power Dissipation 110 Ww
+Linear Derating Factor 0.71 WIC
+Ves Gate-to-Source Voltage +16 V
+Ens Single Pulse Avalanche Energy®® 210 mJ
+lar Avalanche Current® 25 A
+Ear Repetitive Avalanche Energy® 11 mJ
+dv/dt Peak Diode Recovery dv/dt ©@©® 5.0 V/ns
+Ty Operating Junction and -55 to+175
+Tste Storage Temperature Range °C
+Soldering Temperature, for 10 seconds 300 (1.6mm from case )
+Thermal Resistance
+Parameter Typ. Max. Units
+Resc Junction-to-Case — 1.4 3
+Roa Junction-to-Ambient ( PCB Mounted,steady-state)** — 40 CAV
+
+4/21/04
 
 ============================================================
 PAGE 2
 ============================================================
 
-	
-
-
-	
- 
- 
- 	
-		
-+	
-)*		7* *<0 +.4
-((
-
-
-+
-+&+#&'(@
-∆∆ *<0+.4%1
-??
-
-, 
-+! 
-?*'( 
-#&
-
- ''
-+&+#&'(
-
- '(
-Ω
-+&(+#&'(
-
- -(
-+&+#&'
-+
-6%;*;.+.4
-
-
-'
-+
-+&+#&'(@
-4
-5*0* %*
-'
-
-
-7
-+&'(+#&'(
-
-
-'(
-+&((++&+
-
-
-'(
-+&++&+%&( 
-6		7* 5*0* 3<4
-
-
-
-
-+&/+
-6		7* :* 3<4
-
-
-	
-+&	/+
-A
-%.6
-;*4
-
-
-2
-#&'(
-A
-6		7* 
-;*4
-
-
-2/
-
-+&+
-A
-6		)*B..*B
-;*4
-
-
-'(
-+&(+754/-
-
-%*	=).%
-
-
-
-+&'2+
-
-%
-
-2
-
-#&'(
-
-%*	=??).%
-
-'/
-
-&-Ω, +&(+
-
-5..%
-
-(
-
-&Ω, 754
-0 .
-
-
-*?
+IRLZ44NS/LPbF International
 
-
-#1
-1
-
-,
-
-+&+
+Te@R Rectifier
+Electrical Characteristics @ Ty = 25°C (unless otherwise specified)
+Parameter Min. | Typ. | Max. | Units Conditions
+V(BR)DSss Drain-to-Source Breakdown Voltage 55 —— | V Ves = OV, Ip = 250UA
+AVerypss/AT,| Breakdown Voltage Temp. Coefficient} ——- |0.070} -—— | V/°C | Reference to 25°C, Ip = 1mA®
+—- | —— |0.022 Vos = 10V, Ip = 25A ©
+Rpscon) Static Drain-to-Source On-Resistance — | — |0.025] Q Vas = 5.0V, Ip = 25A @
+—- | —— |0.035 Vos = 4.0V, Ip = 21A ®
+Vestth) Gate Threshold Voltage 1.0 | ——| 2.0 V_ | Vos = Ves, Ip = 250A
+Dis Forward Transconductance 21 —-|—-—- S) Vos = 25V, Ip = 25A@
+. —_— | 25 Vps = 55V, Ves = OV
+loss Drain-to-Source Leakage Current __ |__| 250 HA Vos = 44V, Vos = OV, Ty = 150°C
+less Gate-to-Source Forward Leakage —- | —-| 100 nA Ves = 16V
+Gate-to-Source Reverse Leakage ——- | -—— | -100 Ves = -16V
+Qg Total Gate Charge —- |---| 48 Ip = 25A
+Qgs Gate-to-Source Charge —- | -—-| 86 nC | Vps = 44V
+Qga Gate-to-Drain ("Miller") Charge ——— |---|] 25 Ves = 5.0V, See Fig. 6 and 13 ©©
+taon) Turn-On Delay Time —- | 11 | -—- Vpp = 28V
+tr Rise Time —- | 84 | —- ns Ip = 25A
+ta(off) Turn-Off Delay Time —- | 26 | -—- Re = 3.4Q, Ves = 5.0V
+ty Fall Time 15 Rp = 1.19, See Fig. 10 ©©
+Ls Internal Source Inductance — | 75 | — nH Between lead, ;
+and center of die contact
+Ciss Input Capacitance ——— |1700} —— Ves = OV
+Coss Output Capacitance ——— | 400} —- pF | Vps = 25V
+Criss Reverse Transfer Capacitance ——— | 150) —— f =1.0MHz, See Fig. 5©
+Source-Drain Ratings and Characteristics
+Parameter Min.| Typ.| Max. | Units Conditions
+ls Continuous Source Current MOSFET symbol ®
+(Body Diode) —}—| 47 showing the aD
+A kK ~&
+Ism Pulsed Source Current integral reverse 6
+(Body Diode) © — | —| 160 p-n junction diode. s
+Vsp Diode Forward Voltage —— |---| 1.3 V Ty = 25°C, Is = 25A, Veg = OV ©
+ter Reverse Recovery Time ——| 80 | 120 ns | Ty= 25°C, Ip = 25A
+Qi Reverse Recovery Charge ——— | 210) 320 | nc | di/dt = 100A/us ©©
+ton Forward Turn-On Time Intrinsic turn-on time is negligible (turn-on is dominated by Ls+Lp)
+Notes:
+® Repetitive rating; pulse width limited by ® Isp < 25A, di/dt < 270A/Us, Vpp < VBR)Dss:
+max. junction temperature. ( See fig. 11 ) Ty< 175°C
+@ Vop = 25V, starting Ty = 25°C, L =470uH ® Pulse width < 300us; duty cycle < 2%.
 
-
-=1
-1
-
-
-
-15
-+&'(+
+Rg = 25Q, las = 25A. (See Figure 12)
+® Uses IRLZ44N data and test conditions
 
-
-:* %*?* 
-1
-
-(
-
-C&DE754(
-
-
-
-
- 
-
-!"#
-D
-#
-
-7 )*		7* =	
-3
-#*.7*#
-,(
-
-#
-)*		7*3<4
-**
-@
- 
-	
- 
- 
- 	
-		
-#
-
-7*
-**
-=759%.
-)
-
-
-;04  ;
-
-.7*
-**
-4*. *:*
-)
-
-
-1	F
-+
-) 5*0* +.4
-
-
--
-+
-%&'( 
-#&'(+&+
-
-:*:*%
-
-2
-'
-
-%&'( 
-#&'(
-A
-:* :* 
-;*4
-
-'
--'
-
-!&!@
-
-5*0*%*	=%
-#**	4.4.*	3>3
-$%	
-"
-
-S
-D
-G
-
-,
-/
- .0;≤ -@G. ≤'H
-
- Uses IRLZ44N data and test conditions
-";BI*
-5	*6	*.
-5**?1*.*4;I*?*11.JK	LL
- ISD ≤'(!≤',!@+≤+	
-%≤,( 
- +&'(+*4%&'( 
-3&,@D
-&'(Ω#&'(754*'
-1:*4G1.0;.
-MF1**7?4
-
+** When mounted on 1" square PCB ( FR-4 or G-10 Material ).
+For recommended footprint and soldering techniques refer to application note #AN-994.
 
 ============================================================
 PAGE 3
 ============================================================
 
-	
-
-	
-
-	
-	
-
- !	
-		
-
-1
-10
-100
-1000
-0.1
-1
-10
-100
-I   , Drain-to-Source Current (A)
-D
-V     , Drain-to-Source Voltage (V)
-DS
-A
- 20µs PULSE WIDTH
- T   = 25°C
-J
-                   VGS
- TOP           15V
-                   12V
-                   10V
-                   8.0V
-                   6.0V
-                   4.0V
-                   3.0V
- BOTTOM   2.5V
-2.5V
-1
-10
-100
-1000
-0.1
-1
-10
-100
-I   , Drain-to-Source Current (A)
-D
-V     , Drain-to-Source Voltage (V)
-DS
-A
- 20µs PULSE WIDTH
- T   = 175°C
-                   VGS
- TOP           15V
-                   12V
-                   10V
-                   8.0V
-                   6.0V
-                   4.0V
-                   3.0V
- BOTTOM   2.5V
-2.5V
-J
-1
-10
-100
-1000
-2.0
-3.0
-4.0
-5.0
-6.0
-7.0
-8.0
-9.0
-T  = 25°C
-J
-GS
-V     , Gate-to-Source Voltage (V)
-D
-I   , Drain-to-Source Current (A)
-T  = 175°C
-J
-A
- V     = 25V
- 20µs PULSE WIDTH
-DS
-0.0
-0.5
-1.0
-1.5
-2.0
-2.5
-3.0
--60
--40
--20
-0
-20
-40
-60
-80
-100 120 140 160 180
-J
-T   , Junction Temperature (°C)
-R           ,  Drain-to-Source On Resistance
-DS(on)
-(Normalized)
- V      = 10V
-GS
-A
-I    = 41A
-D
+International IRLZ44NS/LPbF
 
+TR Rectifier
+
+1000 VGsi 1000 Vasu
+TOP 15V TOP 15V
+12V 12V
+10V 10V
+~ 8.0V ~ 8.0V
+< re < a
+e 3.0V e 3.0V
+© BOTTOM 2.5V © BOTTOM 2.5V
+5 100 5 100
+(6) (6)
+8 8
+Fas Sa
+8 8
+2 2
+< 10 <1
+© 'S ° 2.5V'
+ra ra
+2.5V
+a a
+20us PULSE WIDTH 20us PULSE WIDTH
+' Ty = 25°C ' Ty =175°C
+0.1 1 10 100 0.1 1 10 100
+Vps » Drain-to-Source Voltage (V) Vps » Drain-to-Source Voltage (V)
+Fig 1. Typical Output Characteristics Fig 2. Typical Output Characteristics
+1000 0 3.0 Ip 241A
+Oo
+Cc
+= £
+<x a7) 25
+= 8
+Cc
+od Ty= 25°C c
+5 100 fo) 2.0
+O om
+® ° £3
+Oo Ty= 175°C ON
+B oF
+2 eZ
+T 10 © — 1.0
+& ©
+a =
+5 {e) 0.5
+2 a
+V pg= 25V ios
+1 20s PULSE WIDTHI 00 Vas = 10Vi
+2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 -60 -40 -20 0 20 40 60 80 100 120 140 160 180
+Ves , Gate-to-Source Voltage (V) T, , Junction Temperature (°C)
+Fig 3. Typical Transfer Characteristics Fig 4. Normalized On-Resistance
+
+Vs. Temperature
 
 ============================================================
 PAGE 4
 ============================================================
 
-	
-
-
-	
-"
-#$ %
-	
- !
-" %
-&'"%(
-	
-)% !
-)" %
-0
-400
-800
-1200
-1600
-2000
-2400
-2800
-1
-10
-100
-C, Capacitance (pF)
-DS
-V     , Drain-to-Source Voltage (V)
-A
-V      = 0V,         f = 1MHz
-C      = C     + C     ,   C     SHORTED
-C      = C
-C      = C     + C
-GS
-iss         gs         gd         ds
-rss         gd
-oss        ds         gd
-Ciss
-Coss
-Crss
-0
-3
-6
-9
-12
-15
-0
-10
-20
-30
-40
-50
-60
-70
-Q   , Total Gate Charge (nC)
-G
-V     , Gate-to-Source Voltage (V)
-GS
-A
- FOR TEST CIRCUIT 
-    SEE FIGURE 13
-V      = 44V
-V      = 28V
-I    = 25A
-DS
-DS
-D
-10
-100
-1000
-0.4
-0.8
-1.2
-1.6
-2.0
-2.4
-T  = 25°C
-J
-V      = 0V
-GS
-V     , Source-to-Drain Voltage (V)
-I     , Reverse Drain Current (A)
-SD
-SD
-A
-T  = 175°C
-J
-1
-10
-100
-1000
-1
-10
-100
-V     , Drain-to-Source Voltage (V)
-DS
-I   , Drain Current (A)
- OPERATION IN THIS AREA LIMITED
-                       BY R
-D
-DS(on)
-10µs
-100µs
-1ms
-10ms
-A
-T     = 25°C
-T     = 175°C
- Single Pulse
-C
-J
+IRLZ44NS/LPbF International
 
+T@R Rectifier
+
+2800
+
+Veg =0V, f= 1MHz
+
+2400
+
+2000
+
+1600
+
+1200
+
+C, Capacitance (pF)
+
+800
+
+Vag Gate-to-Source Voltage (V)
+
+400
+
+FOR TEST CIRCUI
+SEE FIGURE 13
+
+0 10 20 30 40 50 60 70
+Vps Drain-to-Source Voltage (V) Qg, Total Gate Charge (nC)
+Fig 5. Typical Capacitance Vs. Fig 6. Typical Gate Charge Vs.
+Drain-to-Source Voltage Gate-to-Source Voltage
+
+1000
+
+IN THIS AREA LI
+BY RDS(on)
+
+cL
+
+=
+fo}
+Oo
+
+Ip, Drain Current (A)
+
+Isp , Reverse Drain Current (A)
+
+SG
+v,
+Vas = Ova
+
+co = 25°C
+= 175°C
+10 Single Pulse
+0.4 0.8 1.2 1.6 2.0 2.4 1 10 100
+Vgp , Source-to-Drain Voltage (V) Vps » Drain-to-Source Voltage (V)
+Fig 7. Typical Source-Drain Diode Fig 8. Maximum Safe Operating Area
+
+Forward Voltage
 
 ============================================================
 PAGE 5
 ============================================================
 
-	
-
-&' !
-	
-"$%		
-VDS
-90%
-10%
-VGS
-td(on)
-tr
-td(off)
-tf
-"$%	*+
-&',+		-./
-+
-≤ 1 
- !≤ 0.1 %
-
-+
-
-)N%
-(+
-+
--+
-0.01
-0.1
- 1
- 10
-0.00001
-0.0001
-0.001
-0.01
-0.1
-Notes:
-1. Duty factor D = t   / t
-2. Peak T =P
-x  Z
-+ T
-1
-2
-J
-DM
-thJC
-C
-P
-t
-t
-DM
-1
-2
-t  , Rectangular Pulse Duration (sec)
-Thermal Response (Z        )
-1
-thJC
-0.01
-0.02
-0.05
-0.10
-0.20
-D = 0.50
-SINGLE PULSE
-(THERMAL RESPONSE)
-25
-50
-75
-100
-125
-150
-175
-0
-10
-20
-30
-40
-50
-T   , Case Temperature
-(  C)
-I   , Drain Current (A)
-°
-C
-D
+International
+TOR Rectifier
 
+Ip, Drain Current (A)
+
+Thermal Response (Z thyc )
+
+50
+
+IRLZ44NS/LPbF
+
+40
+
+30
+
+) + 5.0V
+
+20
+
+Pulse Width < 1 us
+Duty Factor < 0.1 %
+
+10
+
+r
+
+0
+
+25 50 75 100 125
+
+Tc, Case Temperature
+
+150
+(°C)
+
+Fig 9. Maximum Drain Current Vs.
+Case Temperature
+
+175
+
+Fig 10b. Switching Time Waveforms
+
+10
+D = 0.50;
+0.20;
+1
+0.10: Pom
+04 0.05
+| tH
+0.02 SINGLE PULSE
+0.01 (THERMAL RESPONSE) te
+Notes:
+1. Duty factor D = t1 /to
+2. Peak Ty=P pmxX Zthuc + Tc
+0.01
+0.00001 0.0001 0.001 0.01
+
+0.1
+
+ty, Rectangular Pulse Duration (sec)
+
+Fig 11. Maximum Effective Transient Thermal Impedance, Junction-to-Case
 
 ============================================================
 PAGE 6
 ============================================================
 
-	
-
-	0-+	
-	0-+*+
-VDS
-L
+IRLZ44NS/LPbF
+
+Vos >
+
+Ra
+VV
+
+tb
+
+@E 5.0V : L
+
 D.U.T.
-VDD
-IAS
-tp
-0.01Ω
-RG
 +
--
-tp
-VDS
-IAS
-VDD
++. VDD
+
+las
+
+0.012
+
+Fig 12a. Unclamped Inductive Test Circuit
+
 V(BR)DSS
-"#$%
-QG
-QGS
-QGD
+
+Fig 12b. Unclamped Inductive Waveforms
+
+Qqg ——_ +
+
+5.0 V
+
 VG
-Charge
-1)%*+
-D.U.T.
-VDS
-ID
-IG
-3mA
-VGS
-.3µF
-50KΩ
-.2µF
-12V
+
+« Qcs a Qcep —
+
+Charge ——+>
+
+Fig 13a. Basic Gate Charge Waveform
+
+Eag, Single Pulse Avalanche Energy (mJ)
+
+International
+T@R Rectifier
+
+Starting T, , Junction Temperature (°C)
+
+Fig 12c. Maximum Avalanche Energy
+Vs. Drain Current
+
 Current Regulator
 Same Type as D.U.T.
-Current Sampling Resistors
-+
--
-	&'(+,%
- !
-)%	
-!2 
-0
-100
-200
-300
-400
-500
-25
-50
-75
-100
-125
-150
-175
-J
-E     ,   Single Pulse Avalanche Energy (mJ)
-AS
-A
-Starting T  , Junction Temperature (°C)
-                    I
-TOP            10A
-                   17A
-BOTTOM    25A
- V      = 25V
-D
-DD
 
+50KQ
+
+12V 0 -2uF
+
+| | i .
+
+but. 7.¥Ds
+Vas :
+
+(+) ama t | |
+
+\WA-
+Iq Ip
+
+Current Sampling Resistors
+
+Fig 13b. Gate Charge Test Circuit
 
 ============================================================
 PAGE 7
 ============================================================
 
-	
-
-	
-		
-P.W.
-Period
+International IRLZ44NS/LPbF
+
+TeR Rectitier
+Peak Diode Recovery dv/dt Test Circuit
+
+Circuit Layout Considerations
+e Low Stray Inductance
+@ e Ground Plane
+e Low Leakage Inductance
+Current Transformer
+
+D.U.T
+
+e dv/dt controlled by Rg
+
+e Driver same type as D.U.T. Vop
+e Isp controlled by Duty Factor "D" °
+e D.U.T. - Device Under Test
+oO) . .
+Driver Gate Drive Period 4 pe PW.
+P.w-——| Period
+t
+Vgg=10V *
+OG Ly
+
+@ |D.U.T. lgp Waveform
+
+Reverse
+
+Recovery Body Diode Forward
+
+Current) |* Current /
 di/dt
+
 Diode Recovery
-dv/dt
-Ripple ≤5%
-Body Diode 
-Forward Drop
+dv/dt \ /
+
+¢
+Body Diode ) Forward Drop
+
+© |D.UT. Vpg Waveform
+
+<-+|
+
+DD
+
 Re-Applied
 Voltage
-Reverse
-Recovery
-Current
-Body Diode Forward
-Current
-VGS=10V
-VDD
-ISD
-Driver Gate Drive
-D.U.T. ISD Waveform
-D.U.T. VDS Waveform
-Inductor Curent
-D = 
-P.W.
-Period
-+
--
-+
-+
-+
--
--
--
-#3,4#,	"
-5+&(+?*343:.):
-
-
-
-
-+
-•  :!*..
-•  )*:*1)N%
-•  #*..)5*B)B
-•  )N%	):N*%
-
-
-
 
-*3
-*
-   • 307*#
- •  6*.
- •  303<4#
-
-**%*?**
-
-5
+® Inductor Curent
 
+(
+o
+
+Ripple < 5%
+
+* Veg = 5V for Logic Level Devices
+
+Fig 14. ForN-Channel HEXFETS
 
 ============================================================
 PAGE 8
 ============================================================
 
-	
-
-N ote: "P " in as s embly line
-pos ition indicates  "L ead-F ree"
-F 53 0 S
-T H IS  IS  AN  IR F 5 30 S  W IT H
-L OT  COD E  8 02 4
-AS S E M B L E D  O N  W W  0 2, 2 00 0
-IN  T H E  AS S E M B L Y L IN E  "L "
-AS S E M B L Y
-L OT  COD E
-IN T E R N AT ION AL
-R E CT IF IE R
-L OGO
-P AR T  N U M B E R
-D AT E  CO D E
-Y E AR  0 =  2 00 0
-W E E K  02
-L IN E  L
-
-F 530S
-A =  AS S E MB L Y  S IT E  CO D E
-W E E K  02
-P  =  D E S IGN AT E S  L E AD -F R E E
-P R O D U CT  (O P T ION AL )
-R E CT IF IE R
-IN T E R N AT ION AL
-L OGO
-L OT  COD E
-AS S E MB L Y
-Y E AR  0 =  2000
-D AT E  CO D E
-P AR T  N U MB E R
-	
-
-	
-
-	
-
+IRLZ44NS/LPbF
+
+D*Pak Package Outline
+
 Dimensions are shown in millimeters (inches)
 
+International
+T@R Rectifier
+
+_f- A y DIMENSIONS N
+\ M 9
+_ \ 8 MILLIMETERS. INCHES T
+ore \ ° E
+GAUGE PLANE feeb Saeed lA L__t Docume PLANE Lf MIN. | Max. MIN. MAX. Ss
+_ Ld “t A 4.06 4.83 160 190
+ego Al 0.127 .005
+ROTATED 90° A b 0.51 0.99 .020 | .039
+SCALE 8:1 oo bt 0.51 0.89 -020 -035 4
+b2 | 1.14 1.40 .045 | .055
+! § c | 043 | 063 .017 | .025
+Lo ct | 0.38 | 0.74 .015 | .029 4
+t—_©——4j .__-| o2 | 1.14 1.40 .045 | .055
+TON B= do | asi | 9.65 .335 | .380 3
+ir wT SCALE: NONE bo: | 5.33 oho
+AI o1 € | 9.65 | 10.67 || .380 | .420 3
+Pad | re e1 | 6.22 1245
+a | e 2.54 BSC 100 BSC
+i I uc | 14.61 | 15.88 || .675 | .625
+r r fi | ut | 1.78 | 2.79 .070 | .110
+a id L2 1.65 -065
+TON Ana nel Le L3 | 1.27 1.78 .050 | .070
+L4 0.25 BSC .010 BSC
+Tee m | 17.78 -700
+mt | 8.89 350
+/ - as n | 11.43 -450
+4 [oo TT ° 2.08 .082
+fey 3 ; ~~ p | 3.81 .150
+in : ) 90° es 90" es
+DETAIL A mon, 1
+[).o. 1) 74
+£ : we 2 AD ASSIGNMENT:
+° | 1- GATE 1. GATE 1.— ANODE *
+|| 2x b2 2.— DRAIN 2.— COLLECTOR 2.— CATHODE
+E 3.— SOURCE 3.-— EMITTER 3.— ANODE
+ihe 2x b Z1£0.004@)
+SOOO AGE
+
+* PART DEPENDENT.
+
+NOTES:
+
+1, DIMENSIONING AND TOLERANCING PER ASME Y14,5M-1994.
+2. DIMENSIONS ARE SHOWN IN MILLIMETERS [INCHES].
+
+3. DIMENSION D & E DO NOT INCLUDE MOLD FLASH. MOLD FLASH SHALL NOT EXCEED 0.127 [.005"]
+PER SIDE. THESE DIMENSIONS ARE MEASURED AT THE OUTMOST EXTREMES OF THE PLASTIC BODY.
+
+ZAXQIMENSION b1 AND cf APPLY TO BASE METAL ONLY.
+5. CONTROLLING DIMENSION: INCH.
+
+D2Pak Part Marking Information (Lead-Free)
+
+EXAMPLE:
+
+THIS IS AN IRF530S WITH
+
+LOT CODE 8024 PART NUMBER
+
+INTERNATIONAL
+RECTIFIER
+
+ASSEMBLED ON WW 02, 2000 F530S
+IN THE ASSEMBLY LINE "L" LOGO TOR 002
+DATE CODE
+Note: "P" in assembly line =
+position indicates "Lead-F ree" ASSEMBLY YEAR 0 = 2000
+LOT CODE WEEK 02
+LINE L
+
+OR
+
+PART NUMBER
+INTERNATIONAL
+
+RECTIFIER
+
+F530S
+LOGO TeaRP002A
+
+80 24 Pn DESIGNATES LEAD-FREE
+ASSEMBLY PRODUCT (OPTIONAL)
+LOT CODE YEAR 0 = 2000
+
+WEEK 02
+A= ASSEMBLY SITE CODE
 
 ============================================================
 PAGE 9
 ============================================================
 
-	
-
-ASSEMBLY
-LOT CODE
-RECTIFIER
-INTERNATIONAL
-ASSEMBLED ON WW 19, 1997
-Note: "P" in assembly line
-position indicates "Lead-Free"
-IN THE ASSEMBLY LINE "C"
-LOGO
-THIS IS AN IRL3103L
-LOT CODE 1789
-EXAMPLE:
-LINE C
-DATE CODE
-WEEK 19
-YEAR 7 =  1997
-PART NUMBER
-PART NUMBER
-LOGO
-LOT CODE
-ASSEMBLY
-INTERNATIONAL
-RECTIFIER
-PRODUCT (OPTIONAL)
-P =  DESIGNATES LEAD-FREE
-A =  ASSEMBLY SITE CODE
-WEEK 19
-YEAR 7 =  1997
-DATE CODE
-OR
-TO-262 Part Marking Information
-TO-262 Package Outline
-IGBT
-1- GATE
-2- COLLECTOR
-3- EMITTER
+Internationa IRLZ44NS/LPbF
 
+TOR Rectifier
+
+TO-262 Package Outline
+
+(©) Ss
+Y DIMENSIONS N
+fa qq M 0
+a | MILUMETERS INCHES T
+| i] 2 Pawn. Pax. | in, wax | §
+a | 406 | 483 || 160 | .190
+at | 2.03 | 292 |} .o80 | .115
+» | 051 | 099 || .020 | .039
+v1 | 0.51 | 089 || 020 | .o35 | 4
+v2} 114 | 140 || .045 | .055
+c | 038 | 063 || 015 | 025 | 4
+— at} 114 | 1.40 || .045 | .055
+_A 2 | 0.43 | .063 || 017 | .029
+am o | ast | 965 || 335 | 380 | 3
+qT 7 a, ot | 5.33 210
+i i e | 9.65 | 10.67 || .380 | .420 | 3
+L._ e1 | 6.22 245
+Senna ea 2.54 BSC 100 BSC
+SCALE: NONE maeo u | 13.46 | 14.09 || 530 | .555
+oot fe ut | ase | 3.71 |} 140 | 146
+a a ; l2 1.65 065
+
+LEAD ASSIGNMENTS
+
+| | IGBT
+LA HEXFET 1- GATE
+1.— GATE
+\> GATE 2. COLLECTOR
+wed 3.- SOURCE 3. EMITTER
+4 LL sco ne 4. DRAIN
+3x D tA ee
+(S1oOTROE) NOTES:
+2x 1, DIMENSIONING AND TOLERANCING PER ASME Y14.5M-1994
+2 DIMENSIONS ARE SHOWN IN MILLIMETERS [INCHES],
+3. DIMENSION D & E DO NOT INCLUDE MOLD FLASH. MOLD FLASH SHALL NOT EXCEED 0.127 [.005"]
+rorrr PER SIDE, THESE DIMENSIONS ARE MEASURED AT THE OUTMOST EXTREMES OF THE PLASTIC BODY.
+
+74XDIMENSION bt AND cl APPLY TO BASE METAL ONLY.
+5. CONTROLLING DIMENSION: INCH.
+
+TO-262 Part Marking Information
+
+EXAMPLE: THIS IS ANIRL3103L
+
+LOT CODE 1789 INTERNAT! PART NUMBER
+ASSEMBLED ON WW 19, 1997 ONAL
+oe RECTIFIER
+INTHE ASSEMBLY LINE "C" [loco OU
+Note: "P" in ossembly line DATE CODE
+position indicates "LeactF ree" ASSEMBLY YEAR 7 = 1997
+LOT CODE WEEK 19
+LINE C
+PART NUMBER
+INTERNATIONAL
+RECTIFIER
+LOGO
+DATE CODE
+P = DESIGNATES LEAD-FREE
+ASSEMBLY PRODUCT (OPTIONAL)
+LOT CODE YEAR 7 = 1997
+
+WEEK 19
+A= ASSEMBLY SITE CODE
 
 ============================================================
 PAGE 10
 ============================================================
 
-	
-
-3
-4
-4
-TRR
-FEED DIRECTION
-1.85 (.073)
-1.65 (.065)
-1.60 (.063)
-1.50 (.059)
-4.10 (.161)
-3.90 (.153)
-TRL
-FEED DIRECTION
-10.90 (.429)
-10.70 (.421)
-16.10 (.634)
-15.90 (.626)
-1.75 (.069)
-1.25 (.049)
-11.60 (.457)
-11.40 (.449)
-15.42 (.609)
-15.22 (.601)
-4.72 (.136)
-4.52 (.178)
-24.30 (.957)
-23.90 (.941)
-0.368 (.0145)
-0.342 (.0135)
-1.60 (.063)
-1.50 (.059)
-13.50 (.532)
-12.80 (.504)
-330.00
-(14.173)
-  MAX.
-27.40 (1.079)
-23.90 (.941)
-60.00 (2.362)
-      MIN.
-30.40 (1.197)
-      MAX.
-26.40 (1.039)
-24.40 (.961)
-NOTES :
-1.   COMFORMS TO EIA-418.
-2.   CONTROLLING DIMENSION: MILLIMETER.
-3.   DIMENSION MEASURED @ HUB.
-4.   INCLUDES FLANGE DISTORTION @ OUTER EDGE.
-D2Pak Tape & Reel Infomation
+IRLZ44NS/LPbF International
+TOR Rectifier
+
+D?Pak Tape & Reel Infomation
 Dimensions are shown in millimeters (inches)
+
+TRR
+00°0
+1.60 (.063)__
+
+1.50 (.059)
+1.60 (.063)
+300 tev 50 (058) 0.368 (.0145)
+fi “—* T f i 0.342 (.0135)
+
+o_____ eee eo alee
+FEED DIRECTION 1.85 (.073)_| 11.60 (.457) {ot
+TT 1.65 (.065) 11.40 (.449) 24.30 (.957)
+15.42 (.609) eas
+co) % 45.22 (601) 23.90 (.941)
+1-75 (.069)
+10.90 (.429) 1.25 (.049)
+10.70 (.421) 4.72 (.136)
+|_ 16.10 (.634) 4.52 (178)
+15.90 (.626)
+FEED DIRECTION
+13.50 (.532) 27.40 (1.079)
+B 12.80 (.504) 23.90 (.941)
+[|
+% 60.00 (2.362)
+MIN.
+jf
+_]| |. 30.40 (1.197)
+NOTES: TM MAX.
+1. COMFORMS TO EIA-418. 26.40 (1.039) (a)
+2. CONTROLLING DIMENSION: MILLIMETER. 24.40(.961) 7 7
+DIMENSION MEASURED @ HUB.
+3}
+
+@ INCLUDES FLANGE DISTORTION @ OUTER EDGE.
+
 Data and specifications subject to change without notice.
+
+International
+TER Rectifier
+
 IR WORLD HEADQUARTERS: 233 Kansas St., El Segundo, California 90245, USA Tel: (310) 252-7105
 TAC Fax: (310) 252-7903
-Visit us at www.irf.com for sales contact information.04/04
 
+Visit us at www.irf.com for sales contact information.04/04
 
 ============================================================
 PAGE 11
 ============================================================
 
-Note:  For the most current drawings please refer to the IR website at: 
-http://www.irf.com/package/ 
- 
- 
-
+Note: For the most current drawings please refer to the IR website at:
+http://www.irf.com/package/
 
 ============================================================
 PAGE 12
 ============================================================
 
 IMPORTANT NOTICE
-The information given in this document shall in no 
-event be regarded as a guarantee of conditions or 
-characteristics (“Beschaffenheitsgarantie”) . 
-With respect to any examples, hints or any typical 
-values stated herein and/or any information 
-regarding the application of the product, Infineon 
-Technologies 
-hereby 
-disclaims 
-any 
-and 
-all 
-warranties and liabilities of any kind, including 
-without limitation warranties of non-infringement 
-of intellectual property rights of any third party. 
-In addition, any information given in this document 
-is subject to customer’s compliance with its 
-obligations stated in this document and any 
-applicable 
-legal 
-requirements, 
-norms 
-and 
-standards concerning customer’s products and any 
-use of the product of Infineon Technologies in 
-customer’s applications. 
-The data contained in this document is exclusively 
-intended for technically trained staff. It is the 
-responsibility of customer’s technical departments 
-to evaluate the suitability of the product for the 
-intended application and the completeness of the 
-product information given in this document with 
-respect to such application. 
-For further information on the product, technology, 
-delivery terms and conditions and prices please 
-contact your nearest Infineon Technologies office 
+
+The information given in this document shall in no
+event be regarded as a guarantee of conditions or
+characteristics (“Beschaffenheitsgarantie”) .
+
+With respect to any examples, hints or any typical
+values stated herein and/or any_ information
+regarding the application of the product, Infineon
+Technologies hereby disclaims any and_ all
+warranties and liabilities of any kind, including
+without limitation warranties of non-infringement
+of intellectual property rights of any third party.
+
+In addition, any information given in this document
+is subject to customer’s compliance with its
+obligations stated in this document and any
+applicable legal requirements, norms and
+standards concerning customer’s products and any
+use of the product of Infineon Technologies in
+customer’s applications.
+
+The data contained in this document is exclusively
+intended for technically trained staff. It is the
+responsibility of customer’s technical departments
+to evaluate the suitability of the product for the
+intended application and the completeness of the
+product information given in this document with
+respect to such application.
+
+For further information on the product, technology,
+delivery terms and conditions and prices please
+contact your nearest Infineon Technologies office
 (www.infineon.com).
+
 WARNINGS
-Due to technical requirements products may 
-contain dangerous substances. For information on 
-the types in question please contact your nearest 
+
+Due to technical requirements products may
+contain dangerous substances. For information on
+the types in question please contact your nearest
 Infineon Technologies office.
-Except as otherwise explicitly approved by Infineon 
-Technologies in a written document signed by 
-authorized 
-representatives 
-of 
-Infineon 
-Technologies, Infineon Technologies’ products may 
-not be used in any applications where a failure of 
-the product or any consequences of the use thereof 
-can reasonably be expected to result in personal 
+
+Except as otherwise explicitly approved by Infineon
+Technologies in a written document signed by
+authorized representatives of Infineon
+Technologies, Infineon Technologies’ products may
+not be used in any applications where a failure of
+the product or any consequences of the use thereof
+can reasonably be expected to result in personal
 injury.

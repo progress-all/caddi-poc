@@ -1,6 +1,8 @@
 # PDF Text Extraction
 # Source: ST_1N5822.pdf
 # Pages: 5
+# Method: pymupdf
+# Quality: 0.9910
 
 
 ============================================================
@@ -65,7 +67,7 @@ A
 PARM
 Repetitive peak avalanche
 power
-tp = 1µs
+tp = 1μs
 Tj = 25°C
 1700
 W
@@ -80,7 +82,7 @@ Maximum operating junction temperature *
 dV/dt
 Critical rate of rise of reverse voltage
 10000
-V/µs
+V/μs
 ABSOLUTE RATINGS (limiting values)
 IF(AV)
 3 A
@@ -102,7 +104,6 @@ a
 (
 )
 thermal runaway condition for a diode on its own heatsink
-
 
 ============================================================
 PAGE 2
@@ -143,7 +144,7 @@ IF = 9.4 A
 0.9
 0.95
 V
-Pulse test : * tp = 380 µs, δ < 2%
+Pulse test : * tp = 380 μs, δ < 2%
 To evaluate the conduction losses use the following equations :
 P = 0.33 x IF(AV) + 0.035 IF2(RMS ) for 1N5820 / 1N5821
 P = 0.33 x IF(AV) + 0.060 IF2(RMS ) for 1N5822
@@ -259,17 +260,16 @@ versus junction temperature.
 100
 1000
 1
-t (µs)
+t (μs)
 p
 P
 (t )
 P
-(1µs)
+(1μs)
 ARM p
 ARM
 Fig. 3: Normalized avalanche power derating
 versus pulse duration.
-
 
 ============================================================
 PAGE 3
@@ -430,7 +430,6 @@ Tj=25°C
 Fig. 8: Junction capacitance versus reverse
 voltage applied (typical values).
 
-
 ============================================================
 PAGE 4
 ============================================================
@@ -531,7 +530,6 @@ F=50Hz
 Tj initial=25°C
 Fig. 11: Non repetitive surge peak forward current
 versus number of cycles.
-
 
 ============================================================
 PAGE 5
