@@ -1,0 +1,218 @@
+# =============================================================================
+# ST_1N5822 パラメータスキーマ
+# =============================================================================
+schema_version: "1.0"
+schema_id: "ST_1N5822"
+inferred_category: "schottky_diode"
+
+parameters:
+  # --- 基本情報 ---
+  - id: "Part_Number"
+    label: "型名"
+    description: "データシート記載の製品型名"
+    unit: ""
+    extraction_hint: "Page 1 タイトル '1N582x' → 1N5822 として抽出"
+    required: true
+
+  - id: "Product_Type"
+    label: "製品種別"
+    description: "製品の種別・カテゴリ"
+    unit: ""
+    extraction_hint: "Page 1 サブタイトル 'LOW DROP POWER SCHOTTKY RECTIFIER'"
+    required: true
+
+  - id: "Package"
+    label: "パッケージ"
+    description: "パッケージ形状"
+    unit: ""
+    extraction_hint: "Page 1 'DO-201AD' / Page 5 Ordering Information"
+    required: true
+
+  - id: "Manufacturer"
+    label: "メーカー"
+    description: "製造元"
+    unit: ""
+    extraction_hint: "Page 5 'STMicroelectronics'"
+    required: true
+
+  # --- Absolute Maximum Ratings ---
+  - id: "VRRM"
+    label: "繰り返しピーク逆電圧"
+    description: "Repetitive peak reverse voltage"
+    unit: "V"
+    extraction_hint: "tables.json Table 1 (p.1): '1N5822' 列, 'Repetitive peak reverse voltage' 行 → 40"
+    required: true
+
+  - id: "IF_RMS"
+    label: "RMS順方向電流"
+    description: "RMS forward current"
+    unit: "A"
+    extraction_hint: "tables.json Table 1 (p.1): '1N5820' 列 (ファミリ共通値) → 10"
+    required: true
+
+  - id: "IF_AV"
+    label: "平均順方向電流"
+    description: "Average forward current (δ=0.5)"
+    unit: "A"
+    extraction_hint: "tables.json Table 1 (p.1): '1N5822' 列, TL=100°C δ=0.5 → 3. TL=110°C は 1N5820/1N5821 のみ"
+    required: true
+
+  - id: "IFSM"
+    label: "サージ非繰り返し順方向電流"
+    description: "Surge non repetitive forward current (tp=10ms, Sinusoidal)"
+    unit: "A"
+    extraction_hint: "tables.json Table 1 (p.1): '1N5820' 列 (ファミリ共通値) → 80"
+    required: true
+
+  - id: "PARM"
+    label: "繰り返しピークアバランシェ電力"
+    description: "Repetitive peak avalanche power (tp=1μs, Tj=25°C)"
+    unit: "W"
+    extraction_hint: "tables.json Table 1 (p.1): '1N5820' 列 (ファミリ共通値) → 1700"
+    required: true
+
+  - id: "Tstg"
+    label: "保存温度範囲"
+    description: "Storage temperature range"
+    unit: "°C"
+    extraction_hint: "tables.json Table 1 (p.1): 'Storage temperature range' 行 → -65 to +150"
+    required: true
+
+  - id: "Tj_Max"
+    label: "最大接合温度"
+    description: "Maximum operating junction temperature"
+    unit: "°C"
+    extraction_hint: "tables.json Table 1 (p.1): 'Maximum operating junction temperature' 行 → 150"
+    required: true
+
+  - id: "dV_dt"
+    label: "逆電圧臨界上昇率"
+    description: "Critical rate of rise of reverse voltage"
+    unit: "V/μs"
+    extraction_hint: "Page 1 フラットテキスト 'dV/dt Critical rate of rise of reverse voltage 10000 V/μs'"
+    required: true
+
+  # --- Static Electrical Characteristics ---
+  - id: "IR_25C"
+    label: "逆漏れ電流 (Tj=25°C)"
+    description: "Reverse leakage current at Tj=25°C, VR=VRRM"
+    unit: "mA"
+    extraction_hint: "tables.json Table 2 (p.2): 1N5822相当列, Tj=25°C 行 → 2"
+    required: true
+
+  - id: "IR_100C"
+    label: "逆漏れ電流 (Tj=100°C)"
+    description: "Reverse leakage current at Tj=100°C"
+    unit: "mA"
+    extraction_hint: "tables.json Table 2 (p.2): 1N5822相当列, Tj=100°C 行 → 20"
+    required: true
+
+  - id: "VF_3A_25C"
+    label: "順方向電圧降下 (IF=3A, Tj=25°C)"
+    description: "Forward voltage drop at IF=3A, Tj=25°C"
+    unit: "V"
+    extraction_hint: "tables.json Table 2 (p.2): 1N5822相当列 (3列目), Tj=25°C IF=3A 行 → 0.525"
+    required: true
+
+  - id: "VF_9_4A_25C"
+    label: "順方向電圧降下 (IF=9.4A, Tj=25°C)"
+    description: "Forward voltage drop at IF=9.4A, Tj=25°C"
+    unit: "V"
+    extraction_hint: "Page 2 フラットテキスト: IF=9.4A の 1N5822 値 → 0.95"
+    required: true
+
+  - id: "Conduction_Loss_Formula"
+    label: "導通損失計算式"
+    description: "伝導損失の計算式 (1N5822用)"
+    unit: ""
+    extraction_hint: "Page 2 'P = 0.33 x IF(AV) + 0.060 IF²(RMS) for 1N5822'"
+    required: true
+
+  # --- Thermal Resistances ---
+  - id: "Rth_JA"
+    label: "熱抵抗 (ジャンクション-周囲間)"
+    description: "Thermal resistance junction to ambient (Lead length=10mm)"
+    unit: "°C/W"
+    extraction_hint: "Page 2 THERMAL RESISTANCES: Rth(j-a) Junction to ambient → 80"
+    required: true
+
+  - id: "Rth_JL"
+    label: "熱抵抗 (ジャンクション-リード間)"
+    description: "Thermal resistance junction to lead (Lead length=10mm)"
+    unit: "°C/W"
+    extraction_hint: "Page 2 THERMAL RESISTANCES: Rth(j-l) Junction to lead → 25"
+    required: true
+
+  # --- Package / Dimensions ---
+  # tables.json Table 5 (p.5, score=0.876) の列構造:
+  #   Millimeters Min. | Millimeters Max. | Inches Min. | Inches Max.
+  - id: "Dim_A"
+    label: "パッケージ寸法 A (本体長さ)"
+    description: "Dimension A - body length"
+    unit: "mm"
+    extraction_hint: "tables.json Table 5 (p.5): REF=A 行, Millimeters Max.=9.50, Inches Max.=0.374。Min. は空欄"
+    required: true
+
+  - id: "Dim_B"
+    label: "パッケージ寸法 B (リード長さ)"
+    description: "Dimension B - lead length"
+    unit: "mm"
+    extraction_hint: "tables.json Table 5 (p.5): REF=B 行, Millimeters Min.=25.40, Inches Min.=1.000。Max. は空欄"
+    required: true
+
+  - id: "Dim_C"
+    label: "パッケージ寸法 ΦC (本体直径)"
+    description: "Dimension ΦC - body diameter"
+    unit: "mm"
+    extraction_hint: "tables.json Table 5 (p.5): REF=ΦC 行, Millimeters Max.=5.30, Inches Max.=0.209。Min. は空欄"
+    required: true
+
+  - id: "Dim_D"
+    label: "パッケージ寸法 ΦD (リード直径)"
+    description: "Dimension ΦD - lead diameter"
+    unit: "mm"
+    extraction_hint: "tables.json Table 5 (p.5): REF=ΦD 行, Millimeters Max.=1.30, Inches Max.=0.051。Min. は空欄"
+    required: true
+
+  - id: "Dim_E"
+    label: "パッケージ寸法 E"
+    description: "Dimension E"
+    unit: "mm"
+    extraction_hint: "Page 5 フラットテキスト: E 1.25 0.049 (tables.json には欠損)"
+    required: true
+
+  # --- Ordering Information ---
+  - id: "Weight"
+    label: "重量"
+    description: "部品重量"
+    unit: "g"
+    extraction_hint: "Page 5 Ordering Information: Weight → 1.12g"
+    required: true
+
+  - id: "Ordering_Standard"
+    label: "梱包 (標準)"
+    description: "標準梱包形態・数量"
+    unit: ""
+    extraction_hint: "Page 5: 1N582x / Ammopack / 600"
+    required: true
+
+  - id: "Ordering_TapeReel"
+    label: "梱包 (テープ&リール)"
+    description: "テープ&リール梱包形態・数量"
+    unit: ""
+    extraction_hint: "Page 5: 1N582xRL / Tape & reel / 1900"
+    required: true
+
+  - id: "Diode_Type"
+    label: "ダイオードタイプ"
+    description: "ダイオードの種類"
+    unit: ""
+    extraction_hint: "Page 1 Description から 'Schottky'"
+    required: true
+
+  - id: "Mounting_Type"
+    label: "実装タイプ"
+    description: "実装方法"
+    unit: ""
+    extraction_hint: "DO-201AD → Through Hole (スルーホール)"
+    required: true

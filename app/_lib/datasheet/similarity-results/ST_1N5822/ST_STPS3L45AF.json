@@ -1,16 +1,16 @@
 {
   "targetId": "ST_1N5822",
   "candidateId": "ST_STPS3L45AF",
-  "evaluatedAt": "2026-02-09T17:32:00.000Z",
-  "summary": "・パッケージ：DO-201AD（スルーホール）→ SMAflat（表面実装）\n・実装タイプ：Through Hole → Surface Mount\n・サージ電流（IFSM）：80A → 75A\n・アバランシェ電力（PARM）：1700W（1µs, 25°C）→ 70W（10µs, 125°C）、測定条件が大きく異なる\n・順方向電圧降下 Max（25°C, 3A）：0.525V → 0.57V\n・導通損失の計算式：係数が異なる（VTo: 0.33→0.36、Rd: 0.060→0.05）\n・重量：1.12g → 0.035g",
+  "evaluatedAt": "2026-02-13T15:10:00.000Z",
+  "summary": "・パッケージ：DO-201AD → SMAflat（スルーホール→表面実装）\n・サージ電流(IFSM)：80 A → 75 A\n・アバランシェ電力(PARM)：1700 W(1μs) → 70 W(10μs)\n・逆漏れ電流(IR@25°C)：2 mA → 300 max μA\n・導通損失計算式：係数が異なる(0.33/0.060 → 0.36/0.05)\n・熱抵抗(Rth_JL)：25 °C/W → 15 °C/W\n・重量：1.12 g → 0.035 g",
   "parameters": [
     {
       "parameterId": "Part_Number",
       "description": "型名",
-      "targetValue": "1N5822 (1N582x series)",
+      "targetValue": "1N5822",
       "candidateValue": "STPS3L45AF",
       "score": 0,
-      "reason": "型名識別用、比較不能",
+      "reason": "異なる部品の固有情報",
       "is_comparable": false
     },
     {
@@ -18,72 +18,72 @@
       "description": "製品種別",
       "targetValue": "Low Drop Power Schottky Rectifier",
       "candidateValue": "Power Schottky Rectifier",
-      "score": 100,
-      "reason": "同種ショットキーダイオード",
-      "is_comparable": true
+      "score": 90,
+      "reason": "同種ショットキー整流器"
     },
     {
       "parameterId": "Package",
       "description": "パッケージ",
       "targetValue": "DO-201AD",
       "candidateValue": "SMAflat (non-exposed pad)",
-      "score": 20,
-      "reason": "スルーホール vs 表面実装",
-      "is_comparable": true
+      "score": 5,
+      "reason": "スルーホールと表面実装で異なる"
     },
     {
-      "parameterId": "Diode_Type",
-      "description": "ダイオードタイプ",
-      "targetValue": "Schottky",
-      "candidateValue": "Schottky",
+      "parameterId": "Manufacturer",
+      "description": "メーカー",
+      "targetValue": "STMicroelectronics",
+      "candidateValue": "STMicroelectronics",
       "score": 100,
-      "reason": "同一",
-      "is_comparable": true
+      "reason": "同一"
+    },
+    {
+      "parameterId": "Description",
+      "description": "概要説明",
+      "targetValue": "Axial Power Schottky rectifier suited for Switch Mode Power Supplies and high frequency DC to DC converters. Intended for use in low voltage, high frequency inverters, free wheeling, polarity protection and small battery chargers.",
+      "candidateValue": "Schottky rectifier suited for switched mode power supplies and high frequency DC to DC converters. Packaged in a tiny SMAflat package, this device has been optimized for use in compact chargers.",
+      "score": 85,
+      "reason": "同種SMPS用途、表現差のみ"
     },
     {
       "parameterId": "VRRM",
-      "description": "繰り返しピーク逆電圧",
+      "description": "繰り返しピーク逆電圧 (Repetitive peak reverse voltage)",
       "targetValue": "40 V",
       "candidateValue": "45 V",
       "score": 90,
-      "reason": "45V≧40Vで上位互換",
-      "is_comparable": true
+      "reason": "45Vは40Vの上位互換"
     },
     {
       "parameterId": "IF_AV",
-      "description": "平均順方向電流",
-      "targetValue": "3 A (TL=100°C, δ=0.5)",
-      "candidateValue": "3 A (TL=120°C, δ=0.5)",
-      "score": 95,
-      "reason": "同一電流、高温規定で上位",
-      "is_comparable": true
+      "description": "平均順電流",
+      "targetValue": "3 A",
+      "candidateValue": "3 A",
+      "score": 100,
+      "reason": "同一"
     },
     {
       "parameterId": "IFSM",
-      "description": "サージ非繰り返し順方向電流 (tp=10ms, 正弦波)",
+      "description": "サージ非反復順電流",
       "targetValue": "80 A",
       "candidateValue": "75 A",
-      "score": 75,
-      "reason": "80A→75Aでやや低い",
-      "is_comparable": true
+      "score": 80,
+      "reason": "75Aと80Aで6%差"
     },
     {
       "parameterId": "PARM",
       "description": "繰り返しピークアバランシェ電力",
-      "targetValue": "1700 W (tp=1µs, Tj=25°C)",
-      "candidateValue": "70 W (tp=10µs, Tj=125°C)",
-      "score": 30,
-      "reason": "測定条件が大きく異なり直接比較困難",
-      "is_comparable": false
+      "targetValue": "1700 W",
+      "candidateValue": "70 W",
+      "score": 15,
+      "reason": "1700Wと70W、試験条件も異なる"
     },
     {
-      "parameterId": "Tstg_Range",
+      "parameterId": "Tstg",
       "description": "保存温度範囲",
       "targetValue": "-65 to +150 °C",
       "candidateValue": "-65 to +175 °C",
-      "score": 95,
-      "reason": "上限+175°Cで上位互換",
-      "is_comparable": true
+      "score": 90,
+      "reason": "+175°Cは+150°Cの上位互換"
     },
     {
       "parameterId": "Tj_Max",
@@ -91,89 +91,298 @@
       "targetValue": "150 °C",
       "candidateValue": "150 °C",
       "score": 100,
-      "reason": "同一",
-      "is_comparable": true
+      "reason": "同一"
     },
     {
       "parameterId": "IR_25C",
-      "description": "逆漏れ電流 Max (Tj=25°C, VR=VRRM)",
+      "description": "逆漏れ電流 (Tj=25°C, VR=VRRM)",
       "targetValue": "2 mA",
-      "candidateValue": "300 µA",
-      "score": 90,
-      "reason": "300µA<2mAで漏れ電流上位",
-      "is_comparable": true
+      "candidateValue": "80 typ / 300 max μA",
+      "score": 60,
+      "reason": "2mAと300μA(max)で約7倍差"
     },
     {
-      "parameterId": "VF_25C_3A",
-      "description": "順方向電圧降下 Max (Tj=25°C, IF=3A)",
-      "targetValue": "0.525 V",
-      "candidateValue": "0.57 V",
-      "score": 75,
-      "reason": "0.525V→0.57Vでやや高い",
-      "is_comparable": true
-    },
-    {
-      "parameterId": "Conduction_Loss_Formula",
-      "description": "導通損失の計算式",
-      "targetValue": "P = 0.33 x IF(AV) + 0.060 x IF²(RMS)",
-      "candidateValue": "P = 0.36 x IF(AV) + 0.05 x IF²(RMS)",
+      "parameterId": "Conduction_Loss_Equation",
+      "description": "導通損失計算式",
+      "targetValue": "P = 0.33 × IF(AV) + 0.060 × IF²(RMS)",
+      "candidateValue": "P = 0.36 × IF(AV) + 0.05 × IF²(RMS)",
       "score": 70,
-      "reason": "VTo・Rd係数が異なる",
-      "is_comparable": true
+      "reason": "係数が異なる"
     },
     {
       "parameterId": "Rth_JL",
-      "description": "熱抵抗 (ジャンクション-リード間)",
+      "description": "熱抵抗 接合-リード間",
       "targetValue": "25 °C/W",
       "candidateValue": "15 °C/W",
-      "score": 90,
-      "reason": "15°C/W<25°C/Wで放熱性上位",
-      "is_comparable": true
+      "score": 80,
+      "reason": "15°C/Wは25°C/Wより低く良好"
     },
     {
-      "parameterId": "Rth_JA",
-      "description": "熱抵抗 (ジャンクション-周囲間)",
-      "targetValue": "80 °C/W",
-      "candidateValue": null,
-      "score": 0,
-      "reason": "Candidate側データなし",
-      "is_comparable": false
-    },
-    {
-      "parameterId": "IF_RMS",
-      "description": "RMS順方向電流",
-      "targetValue": "10 A",
-      "candidateValue": null,
-      "score": 0,
-      "reason": "Candidate側データなし",
-      "is_comparable": false
-    },
-    {
-      "parameterId": "dVdt",
-      "description": "逆電圧臨界上昇率",
-      "targetValue": "10000 V/µs",
-      "candidateValue": null,
-      "score": 0,
-      "reason": "Candidate側データなし",
-      "is_comparable": false
+      "parameterId": "Package_Material",
+      "description": "パッケージ材質",
+      "targetValue": "Epoxy meets UL94, V0",
+      "candidateValue": "Epoxy meets UL94, V0",
+      "score": 100,
+      "reason": "同一"
     },
     {
       "parameterId": "Weight",
-      "description": "重量",
+      "description": "パッケージ重量",
       "targetValue": "1.12 g",
       "candidateValue": "0.035 g",
-      "score": 30,
-      "reason": "パッケージ差により大きく異なる",
+      "score": 5,
+      "reason": "1.12gと0.035gで約32倍差"
+    },
+    {
+      "parameterId": "Marking",
+      "description": "部品マーキング",
+      "targetValue": "Part number, cathode ring",
+      "candidateValue": "F3L45",
+      "score": 0,
+      "reason": "固有マーキングで比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Pulse_Test_Condition",
+      "description": "パルス試験条件",
+      "targetValue": "tp = 380 μs, δ < 2%",
+      "candidateValue": "tp = 380 μs, δ < 2%",
+      "score": 100,
+      "reason": "同一"
+    },
+    {
+      "parameterId": "IF_RMS",
+      "description": "RMS順電流 (RMS forward current)",
+      "targetValue": "10 A",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "dV_dt",
+      "description": "逆電圧臨界上昇率",
+      "targetValue": "10000 V/μs",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "IR_100C",
+      "description": "逆漏れ電流 (Tj=100°C)",
+      "targetValue": "20 mA",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VF_3A",
+      "description": "順電圧降下 (Tj=25°C, IF=3A)",
+      "targetValue": "0.525 V",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VF_9_4A",
+      "description": "順電圧降下 (Tj=25°C, IF=9.4A)",
+      "targetValue": "0.95 V",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Rth_JA",
+      "description": "熱抵抗 接合-周囲間",
+      "targetValue": "80 °C/W",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Dimension_A",
+      "description": "DO-201AD 寸法 A 本体長さ",
+      "targetValue": "9.50 mm max (0.374 inch max)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "異なるパッケージで比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Dimension_B",
+      "description": "DO-201AD 寸法 B リード間距離",
+      "targetValue": "25.40 mm min (1.000 inch min)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "異なるパッケージで比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Dimension_C",
+      "description": "DO-201AD 寸法 ΦC 本体直径",
+      "targetValue": "5.30 mm max (0.209 inch max)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "異なるパッケージで比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Dimension_D",
+      "description": "DO-201AD 寸法 ΦD リード直径",
+      "targetValue": "1.30 mm max (0.051 inch max)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "異なるパッケージで比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Dimension_E",
+      "description": "DO-201AD 寸法 E",
+      "targetValue": "1.25 mm (0.049 inch)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "異なるパッケージで比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Ordering_Type_Standard",
+      "description": "発注型名 (標準)",
+      "targetValue": "1N5822",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "固有発注情報で比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Ordering_Type_TapeReel",
+      "description": "発注型名 (テープ＆リール)",
+      "targetValue": "1N5822RL",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "固有発注情報で比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VF_Max_Highlight",
+      "description": "VF(max) ハイライト値",
+      "targetValue": "0.475 V",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VARM",
+      "description": "最大繰り返しピークアバランシェ電圧",
+      "targetValue": null,
+      "candidateValue": "50 V",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VASM",
+      "description": "最大単発ピークアバランシェ電圧",
+      "targetValue": null,
+      "candidateValue": "50 V",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "IR_125C",
+      "description": "逆漏れ電流 (Tj=125°C)",
+      "targetValue": null,
+      "candidateValue": "66 typ / 135 max mA",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VF_3A_25C",
+      "description": "順方向電圧降下 (IF=3A, Tj=25°C)",
+      "targetValue": null,
+      "candidateValue": "0.462 typ / 0.57 max V",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VF_3A_125C",
+      "description": "順方向電圧降下 (IF=3A, Tj=125°C)",
+      "targetValue": null,
+      "candidateValue": "0.41 typ / 0.51 max V",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Diode_Type",
+      "description": "ダイオードタイプ",
+      "targetValue": null,
+      "candidateValue": "Schottky",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
       "is_comparable": false
     },
     {
       "parameterId": "Mounting_Type",
       "description": "実装タイプ",
-      "targetValue": "Through Hole",
+      "targetValue": null,
       "candidateValue": "Surface Mount",
-      "score": 20,
-      "reason": "実装タイプが異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "VF_Typ_Highlight",
+      "description": "VF(typ) ハイライト値",
+      "targetValue": null,
+      "candidateValue": "0.462 V",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Lead_Free",
+      "description": "鉛フリー",
+      "targetValue": null,
+      "candidateValue": "Yes (Lead-free packages)",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Order_Code",
+      "description": "注文コード",
+      "targetValue": null,
+      "candidateValue": "STPS3L45AF",
+      "score": 0,
+      "reason": "固有発注情報で比較不能",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Base_Qty",
+      "description": "梱包数量",
+      "targetValue": null,
+      "candidateValue": "10000",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "Delivery_Mode",
+      "description": "梱包形態",
+      "targetValue": null,
+      "candidateValue": "Tape and reel",
+      "score": 0,
+      "reason": "Target側に該当パラメータなし",
+      "is_comparable": false
     }
   ]
 }

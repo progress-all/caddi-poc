@@ -1,147 +1,203 @@
 {
   "datasheet_id": "ST_STPS3L45AF",
   "version": "1.0",
-  "source": "ST_STPS3L45AF.pdf",
+  "schema_id": "ST_STPS3L45AF",
+  "inferred_category": "schottky_diode",
   "parameters": {
     "Part_Number": {
       "description": "型名",
-      "value": "STPS3L45AF"
+      "value": "STPS3L45AF",
+      "status": "extracted"
     },
     "Product_Type": {
       "description": "製品種別",
-      "value": "Power Schottky Rectifier"
+      "value": "Power Schottky Rectifier",
+      "status": "extracted"
     },
     "Package": {
       "description": "パッケージ",
-      "value": "SMAflat (non-exposed pad)"
+      "value": "SMAflat (non-exposed pad)",
+      "status": "extracted"
     },
-    "Marking": {
-      "description": "マーキング",
-      "value": "F3L45"
+    "Manufacturer": {
+      "description": "メーカー",
+      "value": "STMicroelectronics",
+      "status": "extracted"
+    },
+    "Description": {
+      "description": "概要説明",
+      "value": "Schottky rectifier suited for switched mode power supplies and high frequency DC to DC converters. Packaged in a tiny SMAflat package, this device has been optimized for use in compact chargers.",
+      "status": "extracted"
     },
     "VRRM": {
-      "description": "繰り返しピーク逆電圧",
-      "value": "45 V"
+      "description": "繰り返しピーク逆電圧 (Repetitive peak reverse voltage)",
+      "value": "45 V",
+      "status": "extracted"
     },
     "IF_AV": {
       "description": "平均順方向電流 (TL=120°C, δ=0.5)",
-      "value": "3 A"
+      "value": "3 A",
+      "status": "extracted"
     },
     "IFSM": {
-      "description": "サージ非繰り返し順方向電流 (tp=10ms, 正弦波)",
-      "value": "75 A"
+      "description": "サージ非繰り返し順方向電流 (tp=10ms, sinusoidal)",
+      "value": "75 A",
+      "status": "extracted"
     },
     "PARM": {
-      "description": "繰り返しピークアバランシェ電力 (tp=10µs, Tj=125°C)",
-      "value": "70 W"
+      "description": "繰り返しピークアバランシェ電力 (tp=10μs, Tj=125°C)",
+      "value": "70 W",
+      "status": "extracted"
     },
     "VARM": {
-      "description": "最大繰り返しピークアバランシェ電圧 (tp<10µs, Tj<125°C, IAR<1.4A)",
-      "value": "50 V"
+      "description": "最大繰り返しピークアバランシェ電圧 (tp<10μs, Tj<125°C, IAR<1.4A)",
+      "value": "50 V",
+      "status": "extracted"
     },
     "VASM": {
-      "description": "最大単パルスピークアバランシェ電圧 (tp<10µs, Tj<125°C, IAR<1.4A)",
-      "value": "50 V"
+      "description": "最大単発ピークアバランシェ電圧 (tp<10μs, Tj<125°C, IAR<1.4A)",
+      "value": "50 V",
+      "status": "extracted"
     },
-    "Tstg_Range": {
+    "Tstg": {
       "description": "保存温度範囲",
-      "value": "-65 to +175 °C"
+      "value": "-65 to +175 °C",
+      "status": "extracted"
     },
     "Tj_Max": {
       "description": "最大接合温度",
-      "value": "150 °C"
+      "value": "150 °C",
+      "status": "extracted"
     },
-    "IR_25C_Typ": {
-      "description": "逆漏れ電流 Typ (Tj=25°C, VR=VRRM)",
-      "value": "80 µA"
+    "IR_25C": {
+      "description": "逆漏れ電流 (Tj=25°C, VR=VRRM)",
+      "value": "80 typ / 300 max μA",
+      "status": "extracted"
     },
-    "IR_25C_Max": {
-      "description": "逆漏れ電流 Max (Tj=25°C, VR=VRRM)",
-      "value": "300 µA"
+    "IR_125C": {
+      "description": "逆漏れ電流 (Tj=125°C)",
+      "value": "66 typ / 135 max mA",
+      "status": "extracted"
     },
-    "IR_125C_Typ": {
-      "description": "逆漏れ電流 Typ (Tj=125°C)",
-      "value": "66 mA"
+    "VF_3A_25C": {
+      "description": "順方向電圧降下 (IF=3A, Tj=25°C)",
+      "value": "0.462 typ / 0.57 max V",
+      "status": "extracted"
     },
-    "IR_125C_Max": {
-      "description": "逆漏れ電流 Max (Tj=125°C)",
-      "value": "135 mA"
+    "VF_3A_125C": {
+      "description": "順方向電圧降下 (IF=3A, Tj=125°C)",
+      "value": "0.41 typ / 0.51 max V",
+      "status": "extracted"
     },
-    "VF_25C_Typ": {
-      "description": "順方向電圧降下 Typ (Tj=25°C, IF=3A)",
-      "value": "0.462 V"
+    "Conduction_Loss_Equation": {
+      "description": "導通損失計算式",
+      "value": "P = 0.36 × IF(AV) + 0.05 × IF²(RMS)",
+      "status": "extracted"
     },
-    "VF_25C_Max": {
-      "description": "順方向電圧降下 Max (Tj=25°C, IF=3A)",
-      "value": "0.57 V"
-    },
-    "VF_125C_Typ": {
-      "description": "順方向電圧降下 Typ (Tj=125°C, IF=3A)",
-      "value": "0.41 V"
-    },
-    "VF_125C_Max": {
-      "description": "順方向電圧降下 Max (Tj=125°C, IF=3A)",
-      "value": "0.51 V"
-    },
-    "Conduction_Loss_Formula": {
-      "description": "導通損失の計算式",
-      "value": "P = 0.36 x IF(AV) + 0.05 x IF²(RMS)"
+    "Pulse_Test_Condition": {
+      "description": "パルス試験条件",
+      "value": "tp = 380 μs, δ < 2%",
+      "status": "extracted"
     },
     "Rth_JL": {
-      "description": "熱抵抗 (ジャンクション-リード間)",
-      "value": "15 °C/W"
+      "description": "熱抵抗 ジャンクション-リード間",
+      "value": "15 °C/W",
+      "status": "extracted"
     },
     "Dim_A": {
-      "description": "パッケージ寸法 A (高さ)",
-      "value": "0.90 to 1.10 mm"
+      "description": "SMAflat 寸法 A 全高",
+      "value": "0.90 min / 1.10 max mm (0.035 min / 0.043 max inch)",
+      "status": "extracted"
     },
     "Dim_b": {
-      "description": "パッケージ寸法 b (リード幅)",
-      "value": "1.25 to 1.65 mm"
+      "description": "SMAflat 寸法 b リード幅",
+      "value": "1.25 min / 1.65 max mm (0.049 min / 0.065 max inch)",
+      "status": "extracted"
     },
     "Dim_c": {
-      "description": "パッケージ寸法 c (リード厚)",
-      "value": "0.15 to 0.40 mm"
+      "description": "SMAflat 寸法 c リード厚",
+      "value": "0.15 min / 0.40 max mm (0.006 min / 0.016 max inch)",
+      "status": "extracted"
     },
     "Dim_D": {
-      "description": "パッケージ寸法 D (本体長さ)",
-      "value": "2.25 to 2.95 mm"
+      "description": "SMAflat 寸法 D 本体長さ",
+      "value": "2.25 min / 2.95 max mm (0.088 min / 0.116 max inch)",
+      "status": "extracted"
     },
     "Dim_E": {
-      "description": "パッケージ寸法 E (全長)",
-      "value": "4.80 to 5.60 mm"
+      "description": "SMAflat 寸法 E 全長",
+      "value": "4.80 min / 5.60 max mm (0.189 min / 0.220 max inch)",
+      "status": "extracted"
     },
     "Dim_E1": {
-      "description": "パッケージ寸法 E1 (本体幅)",
-      "value": "3.95 to 4.60 mm"
+      "description": "SMAflat 寸法 E1 本体幅",
+      "value": "3.95 min / 4.60 max mm (0.155 min / 0.181 max inch)",
+      "status": "extracted"
     },
     "Dim_L": {
-      "description": "パッケージ寸法 L (リード長)",
-      "value": "0.75 to 1.50 mm"
+      "description": "SMAflat 寸法 L リード長",
+      "value": "0.75 min / 1.50 max mm (0.029 min / 0.059 max inch)",
+      "status": "extracted"
     },
     "Dim_L1": {
-      "description": "パッケージ寸法 L1",
-      "value": "0.50 mm typ"
+      "description": "SMAflat 寸法 L1",
+      "value": "0.50 typ mm (0.020 typ inch)",
+      "status": "extracted"
     },
     "Dim_L2": {
-      "description": "パッケージ寸法 L2",
-      "value": "0.50 mm typ"
+      "description": "SMAflat 寸法 L2",
+      "value": "0.50 typ mm (0.020 typ inch)",
+      "status": "extracted"
+    },
+    "Package_Material": {
+      "description": "パッケージ材質",
+      "value": "Epoxy meets UL94, V0",
+      "status": "extracted"
+    },
+    "Lead_Free": {
+      "description": "鉛フリー",
+      "value": "Yes (Lead-free packages)",
+      "status": "extracted"
+    },
+    "Order_Code": {
+      "description": "注文コード",
+      "value": "STPS3L45AF",
+      "status": "extracted"
+    },
+    "Marking": {
+      "description": "マーキング",
+      "value": "F3L45",
+      "status": "extracted"
     },
     "Weight": {
       "description": "重量",
-      "value": "0.035 g"
+      "value": "0.035 g",
+      "status": "extracted"
     },
-    "Ordering_Info": {
-      "description": "梱包",
-      "value": "Tape and reel, 10000 pcs"
+    "Base_Qty": {
+      "description": "梱包数量",
+      "value": "10000",
+      "status": "extracted"
     },
-    "Mounting_Type": {
-      "description": "実装タイプ",
-      "value": "Surface Mount"
+    "Delivery_Mode": {
+      "description": "梱包形態",
+      "value": "Tape and reel",
+      "status": "extracted"
+    },
+    "VF_Typ_Highlight": {
+      "description": "VF(typ) ハイライト値",
+      "value": "0.462 V",
+      "status": "extracted"
     },
     "Diode_Type": {
       "description": "ダイオードタイプ",
-      "value": "Schottky"
+      "value": "Schottky",
+      "status": "extracted"
+    },
+    "Mounting_Type": {
+      "description": "実装タイプ",
+      "value": "Surface Mount",
+      "status": "extracted"
     }
   }
 }

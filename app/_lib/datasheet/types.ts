@@ -118,6 +118,25 @@ export interface DatasheetParameterValue {
 }
 
 /**
+ * 表抽出結果（表構造保持）
+ * extract_tables.py が出力する tables.json 内の各テーブルに対応
+ */
+export interface ExtractedTableData {
+  /** ページ番号 (1-indexed) */
+  page: number;
+  /** テーブルタイトル（検出できた場合） */
+  title?: string;
+  /** ヘッダー行（正規化済み） */
+  headers: string[];
+  /** 各行のデータ（{ヘッダー名: 値} の配列） */
+  rows: Array<Record<string, string>>;
+  /** 品質スコア (0.0〜1.0) */
+  quality_score: number;
+  /** 使用した抽出方式 ("pdfplumber" | "pymupdf") */
+  method: string;
+}
+
+/**
  * データシートJSONファイル全体の型
  * `<datasheet-id>.json` ファイルの構造に対応
  *
@@ -131,6 +150,8 @@ export interface DatasheetData {
   /** LLMが推定した部品カテゴリ（optional: 既存JSONとの後方互換のため） */
   inferred_category?: string;
   parameters: Record<string, DatasheetParameterValue>;
+  /** 表抽出結果（optional: 表抽出モジュール導入後に追加。後方互換のためoptional） */
+  tables?: ExtractedTableData[];
 }
 
 /**

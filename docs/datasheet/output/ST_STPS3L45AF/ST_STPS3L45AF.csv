@@ -1,36 +1,40 @@
-param_id,description,value
-Part_Number,型名,STPS3L45AF
-Product_Type,製品種別,Power Schottky Rectifier
-Package,パッケージ,SMAflat (non-exposed pad)
-Marking,マーキング,F3L45
-VRRM,繰り返しピーク逆電圧,45 V
-IF_AV,平均順方向電流 (TL=120°C δ=0.5),3 A
-IFSM,サージ非繰り返し順方向電流 (tp=10ms 正弦波),75 A
-PARM,繰り返しピークアバランシェ電力 (tp=10µs Tj=125°C),70 W
-VARM,最大繰り返しピークアバランシェ電圧 (tp<10µs Tj<125°C IAR<1.4A),50 V
-VASM,最大単パルスピークアバランシェ電圧 (tp<10µs Tj<125°C IAR<1.4A),50 V
-Tstg_Range,保存温度範囲,-65 to +175 °C
-Tj_Max,最大接合温度,150 °C
-IR_25C_Typ,逆漏れ電流 Typ (Tj=25°C VR=VRRM),80 µA
-IR_25C_Max,逆漏れ電流 Max (Tj=25°C VR=VRRM),300 µA
-IR_125C_Typ,逆漏れ電流 Typ (Tj=125°C),66 mA
-IR_125C_Max,逆漏れ電流 Max (Tj=125°C),135 mA
-VF_25C_Typ,順方向電圧降下 Typ (Tj=25°C IF=3A),0.462 V
-VF_25C_Max,順方向電圧降下 Max (Tj=25°C IF=3A),0.57 V
-VF_125C_Typ,順方向電圧降下 Typ (Tj=125°C IF=3A),0.41 V
-VF_125C_Max,順方向電圧降下 Max (Tj=125°C IF=3A),0.51 V
-Conduction_Loss_Formula,導通損失の計算式,P = 0.36 x IF(AV) + 0.05 x IF²(RMS)
-Rth_JL,熱抵抗 (ジャンクション-リード間),15 °C/W
-Dim_A,パッケージ寸法 A (高さ),0.90 to 1.10 mm
-Dim_b,パッケージ寸法 b (リード幅),1.25 to 1.65 mm
-Dim_c,パッケージ寸法 c (リード厚),0.15 to 0.40 mm
-Dim_D,パッケージ寸法 D (本体長さ),2.25 to 2.95 mm
-Dim_E,パッケージ寸法 E (全長),4.80 to 5.60 mm
-Dim_E1,パッケージ寸法 E1 (本体幅),3.95 to 4.60 mm
-Dim_L,パッケージ寸法 L (リード長),0.75 to 1.50 mm
-Dim_L1,パッケージ寸法 L1,0.50 mm typ
-Dim_L2,パッケージ寸法 L2,0.50 mm typ
-Weight,重量,0.035 g
-Ordering_Info,梱包,"Tape and reel, 10000 pcs"
-Mounting_Type,実装タイプ,Surface Mount
-Diode_Type,ダイオードタイプ,Schottky
+parameter_id,description,value,status
+Part_Number,型名,STPS3L45AF,extracted
+Product_Type,製品種別,Power Schottky Rectifier,extracted
+Package,パッケージ,SMAflat (non-exposed pad),extracted
+Manufacturer,メーカー,STMicroelectronics,extracted
+Description,概要説明,"Schottky rectifier suited for switched mode power supplies and high frequency DC to DC converters. Packaged in a tiny SMAflat package, this device has been optimized for use in compact chargers.",extracted
+VRRM,繰り返しピーク逆電圧 (Repetitive peak reverse voltage),45 V,extracted
+IF_AV,平均順方向電流 (TL=120°C δ=0.5),3 A,extracted
+IFSM,サージ非繰り返し順方向電流 (tp=10ms sinusoidal),75 A,extracted
+PARM,繰り返しピークアバランシェ電力 (tp=10μs Tj=125°C),70 W,extracted
+VARM,最大繰り返しピークアバランシェ電圧 (tp<10μs Tj<125°C IAR<1.4A),50 V,extracted
+VASM,最大単発ピークアバランシェ電圧 (tp<10μs Tj<125°C IAR<1.4A),50 V,extracted
+Tstg,保存温度範囲,-65 to +175 °C,extracted
+Tj_Max,最大接合温度,150 °C,extracted
+IR_25C,逆漏れ電流 (Tj=25°C VR=VRRM),80 typ / 300 max μA,extracted
+IR_125C,逆漏れ電流 (Tj=125°C),66 typ / 135 max mA,extracted
+VF_3A_25C,順方向電圧降下 (IF=3A Tj=25°C),0.462 typ / 0.57 max V,extracted
+VF_3A_125C,順方向電圧降下 (IF=3A Tj=125°C),0.41 typ / 0.51 max V,extracted
+Conduction_Loss_Equation,導通損失計算式,P = 0.36 × IF(AV) + 0.05 × IF²(RMS),extracted
+Pulse_Test_Condition,パルス試験条件,"tp = 380 μs, δ < 2%",extracted
+Rth_JL,熱抵抗 ジャンクション-リード間,15 °C/W,extracted
+Dim_A,SMAflat 寸法 A 全高,0.90 min / 1.10 max mm (0.035 min / 0.043 max inch),extracted
+Dim_b,SMAflat 寸法 b リード幅,1.25 min / 1.65 max mm (0.049 min / 0.065 max inch),extracted
+Dim_c,SMAflat 寸法 c リード厚,0.15 min / 0.40 max mm (0.006 min / 0.016 max inch),extracted
+Dim_D,SMAflat 寸法 D 本体長さ,2.25 min / 2.95 max mm (0.088 min / 0.116 max inch),extracted
+Dim_E,SMAflat 寸法 E 全長,4.80 min / 5.60 max mm (0.189 min / 0.220 max inch),extracted
+Dim_E1,SMAflat 寸法 E1 本体幅,3.95 min / 4.60 max mm (0.155 min / 0.181 max inch),extracted
+Dim_L,SMAflat 寸法 L リード長,0.75 min / 1.50 max mm (0.029 min / 0.059 max inch),extracted
+Dim_L1,SMAflat 寸法 L1,0.50 typ mm (0.020 typ inch),extracted
+Dim_L2,SMAflat 寸法 L2,0.50 typ mm (0.020 typ inch),extracted
+Package_Material,パッケージ材質,"Epoxy meets UL94, V0",extracted
+Lead_Free,鉛フリー,Yes (Lead-free packages),extracted
+Order_Code,注文コード,STPS3L45AF,extracted
+Marking,マーキング,F3L45,extracted
+Weight,重量,0.035 g,extracted
+Base_Qty,梱包数量,10000,extracted
+Delivery_Mode,梱包形態,Tape and reel,extracted
+VF_Typ_Highlight,VF(typ) ハイライト値,0.462 V,extracted
+Diode_Type,ダイオードタイプ,Schottky,extracted
+Mounting_Type,実装タイプ,Surface Mount,extracted

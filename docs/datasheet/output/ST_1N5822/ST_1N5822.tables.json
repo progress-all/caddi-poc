@@ -1,0 +1,465 @@
+{
+  "pdf_path": "ST_1N5822.pdf",
+  "method": "pdfplumber",
+  "page_count": 5,
+  "total_tables": 5,
+  "elapsed_ms": 1242,
+  "quality_threshold": 0.6,
+  "quality_summary": {
+    "avg_score": 0.8026,
+    "min_score": 0.702,
+    "max_score": 0.894,
+    "tables_above_threshold": 5,
+    "total_tables": 5,
+    "column_alignment_issues": []
+  },
+  "tables": [
+    {
+      "page": 1,
+      "title": "",
+      "headers": [
+        "Col_1",
+        "Col_2",
+        "1N5820",
+        "1N5821",
+        "1N5822"
+      ],
+      "rows": [
+        {
+          "Col_1": "Repetitivepeakreversevoltage",
+          "Col_2": "",
+          "1N5820": "20",
+          "1N5821": "30",
+          "1N5822": "40"
+        },
+        {
+          "Col_1": "RMSforwardcurrent",
+          "Col_2": "",
+          "1N5820": "10",
+          "1N5821": "",
+          "1N5822": ""
+        },
+        {
+          "Col_1": "Averageforwardcurrent",
+          "Col_2": "T =100 C d =0.5 L",
+          "1N5820": "",
+          "1N5821": "",
+          "1N5822": "3"
+        },
+        {
+          "Col_1": "",
+          "Col_2": "T =110 C d =0.5 L",
+          "1N5820": "3",
+          "1N5821": "3",
+          "1N5822": ""
+        },
+        {
+          "Col_1": "Surgenonrepetitiveforward current",
+          "Col_2": "tp=10ms Sinusoidal",
+          "1N5820": "80",
+          "1N5821": "",
+          "1N5822": ""
+        },
+        {
+          "Col_1": "Repetitivepeakavalanche power",
+          "Col_2": "tp=1µs Tj=25°C",
+          "1N5820": "1700",
+          "1N5821": "",
+          "1N5822": ""
+        },
+        {
+          "Col_1": "Storagetemperaturerange",
+          "Col_2": "",
+          "1N5820": "-65 to+150",
+          "1N5821": "",
+          "1N5822": ""
+        },
+        {
+          "Col_1": "Maximumoperatingjunctiontemperature*",
+          "Col_2": "",
+          "1N5820": "150",
+          "1N5821": "",
+          "1N5822": ""
+        }
+      ],
+      "raw_rows": [
+        [
+          "Repetitivepeakreversevoltage",
+          "",
+          "20",
+          "30",
+          "40"
+        ],
+        [
+          "RMSforwardcurrent",
+          "",
+          "10",
+          "",
+          ""
+        ],
+        [
+          "Averageforwardcurrent",
+          "T =100 C d =0.5 L",
+          "",
+          "",
+          "3"
+        ],
+        [
+          "",
+          "T =110 C d =0.5 L",
+          "3",
+          "3",
+          ""
+        ],
+        [
+          "Surgenonrepetitiveforward current",
+          "tp=10ms Sinusoidal",
+          "80",
+          "",
+          ""
+        ],
+        [
+          "Repetitivepeakavalanche power",
+          "tp=1µs Tj=25°C",
+          "1700",
+          "",
+          ""
+        ],
+        [
+          "Storagetemperaturerange",
+          "",
+          "-65 to+150",
+          "",
+          ""
+        ],
+        [
+          "Maximumoperatingjunctiontemperature*",
+          "",
+          "150",
+          "",
+          ""
+        ]
+      ],
+      "quality_score": 0.7991,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.7991,
+        "column_count_consistency": 1.0,
+        "header_quality": 0.8,
+        "numeric_pattern_ratio": 0.6818,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.325,
+        "row_count_score": 1.0,
+        "num_headers": 5,
+        "num_rows": 8,
+        "headers": [
+          "Col_1",
+          "Col_2",
+          "1N5820",
+          "1N5821",
+          "1N5822"
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "title": "",
+      "headers": [
+        "Reverseleakage current",
+        "Tj=25 C",
+        "V =V R RRM C",
+        "2",
+        "2_2",
+        "2_3"
+      ],
+      "rows": [
+        {
+          "Reverseleakage current": "",
+          "Tj=25 C": "Tj=100",
+          "V =V R RRM C": "",
+          "2": "20",
+          "2_2": "20",
+          "2_3": "20"
+        },
+        {
+          "Reverseleakage current": "",
+          "Tj=25 C": "Tj=25 C",
+          "V =V R RRM C": "I = 3A F",
+          "2": "0.475",
+          "2_2": "0.5",
+          "2_3": "0.525"
+        }
+      ],
+      "raw_rows": [
+        [
+          "",
+          "Tj=100",
+          "",
+          "20",
+          "20",
+          "20"
+        ],
+        [
+          "",
+          "Tj=25 C",
+          "I = 3A F",
+          "0.475",
+          "0.5",
+          "0.525"
+        ]
+      ],
+      "quality_score": 0.894,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.894,
+        "column_count_consistency": 1.0,
+        "header_quality": 1.0,
+        "numeric_pattern_ratio": 1.0,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.625,
+        "row_count_score": 0.7,
+        "num_headers": 6,
+        "num_rows": 2,
+        "headers": [
+          "Reverseleakage current",
+          "Tj=25 C",
+          "V =V R RRM C",
+          "2",
+          "2_2",
+          "2_3"
+        ]
+      }
+    },
+    {
+      "page": 3,
+      "title": "",
+      "headers": [
+        "Col_1",
+        "Rth(j-a) Rth(j-a)=80°",
+        "=Rth(j-l)=25°C/W C/W",
+        "=Rth(j-l)=25°C/W C/W_2"
+      ],
+      "rows": [
+        {
+          "Col_1": "=tp/T",
+          "Rth(j-a) Rth(j-a)=80°": "tp Ta",
+          "=Rth(j-l)=25°C/W C/W": "mb(°C)",
+          "=Rth(j-l)=25°C/W C/W_2": ""
+        }
+      ],
+      "raw_rows": [
+        [
+          "=tp/T",
+          "tp Ta",
+          "mb(°C)",
+          ""
+        ]
+      ],
+      "quality_score": 0.702,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.702,
+        "column_count_consistency": 1.0,
+        "header_quality": 0.875,
+        "numeric_pattern_ratio": 0.0,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.625,
+        "row_count_score": 0.4,
+        "num_headers": 4,
+        "num_rows": 1,
+        "headers": [
+          "Col_1",
+          "Rth(j-a) Rth(j-a)=80°",
+          "=Rth(j-l)=25°C/W C/W",
+          "=Rth(j-l)=25°C/W C/W_2"
+        ]
+      }
+    },
+    {
+      "page": 3,
+      "title": "",
+      "headers": [
+        "Col_1",
+        "Col_2",
+        "Col_3",
+        "Col_4",
+        "Col_5",
+        "Col_6",
+        "F=1MH Tj=25°"
+      ],
+      "rows": [
+        {
+          "Col_1": "",
+          "Col_2": "",
+          "Col_3": "",
+          "Col_4": "",
+          "Col_5": "1N5",
+          "Col_6": "820",
+          "F=1MH Tj=25°": ""
+        },
+        {
+          "Col_1": "",
+          "Col_2": "",
+          "Col_3": "",
+          "Col_4": "",
+          "Col_5": "1N5822",
+          "Col_6": "",
+          "F=1MH Tj=25°": "1N5821"
+        },
+        {
+          "Col_1": "",
+          "Col_2": "",
+          "Col_3": "",
+          "Col_4": "",
+          "Col_5": "VR(V",
+          "Col_6": ")",
+          "F=1MH Tj=25°": ""
+        }
+      ],
+      "raw_rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "1N5",
+          "820",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "1N5822",
+          "",
+          "1N5821"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "VR(V",
+          ")",
+          ""
+        ]
+      ],
+      "quality_score": 0.7421,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.7421,
+        "column_count_consistency": 1.0,
+        "header_quality": 0.5714,
+        "numeric_pattern_ratio": 0.6667,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.1,
+        "row_count_score": 1.0,
+        "num_headers": 7,
+        "num_rows": 3,
+        "headers": [
+          "Col_1",
+          "Col_2",
+          "Col_3",
+          "Col_4",
+          "Col_5",
+          "Col_6",
+          "F=1MH Tj=25°"
+        ]
+      }
+    },
+    {
+      "page": 5,
+      "title": "",
+      "headers": [
+        "Millimeters Min.",
+        "Millimeters Max.",
+        "Inches Min.",
+        "Inches Max."
+      ],
+      "rows": [
+        {
+          "Millimeters Min.": "",
+          "Millimeters Max.": "9.50",
+          "Inches Min.": "",
+          "Inches Max.": "0.374"
+        },
+        {
+          "Millimeters Min.": "25.40",
+          "Millimeters Max.": "",
+          "Inches Min.": "1.000",
+          "Inches Max.": ""
+        },
+        {
+          "Millimeters Min.": "",
+          "Millimeters Max.": "5.30",
+          "Inches Min.": "",
+          "Inches Max.": "0.209"
+        },
+        {
+          "Millimeters Min.": "",
+          "Millimeters Max.": "1.30",
+          "Inches Min.": "",
+          "Inches Max.": "0.051"
+        }
+      ],
+      "raw_rows": [
+        [
+          "",
+          "9.50",
+          "",
+          "0.374"
+        ],
+        [
+          "25.40",
+          "",
+          "1.000",
+          ""
+        ],
+        [
+          "",
+          "5.30",
+          "",
+          "0.209"
+        ],
+        [
+          "",
+          "1.30",
+          "",
+          "0.051"
+        ]
+      ],
+      "quality_score": 0.876,
+      "method": "pdfplumber",
+      "warnings": [],
+      "quality_details": {
+        "score": 0.876,
+        "column_count_consistency": 1.0,
+        "header_quality": 1.0,
+        "numeric_pattern_ratio": 1.0,
+        "unit_validity": 0.8,
+        "min_max_alignment": 0.8,
+        "empty_cell_ratio": 0.25,
+        "row_count_score": 1.0,
+        "num_headers": 4,
+        "num_rows": 4,
+        "headers": [
+          "Millimeters Min.",
+          "Millimeters Max.",
+          "Inches Min.",
+          "Inches Max."
+        ]
+      }
+    }
+  ],
+  "warnings": [],
+  "total_elapsed_ms": 1441
+}

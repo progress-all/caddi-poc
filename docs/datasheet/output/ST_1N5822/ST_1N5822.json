@@ -1,123 +1,168 @@
 {
   "datasheet_id": "ST_1N5822",
   "version": "1.0",
-  "source": "ST_1N5822.pdf",
+  "schema_id": "ST_1N5822",
+  "inferred_category": "schottky_diode",
   "parameters": {
     "Part_Number": {
       "description": "型名",
-      "value": "1N5822 (1N582x series)"
+      "value": "1N5822",
+      "status": "extracted"
     },
     "Product_Type": {
       "description": "製品種別",
-      "value": "Low Drop Power Schottky Rectifier"
+      "value": "Low Drop Power Schottky Rectifier",
+      "status": "extracted"
     },
     "Package": {
       "description": "パッケージ",
-      "value": "DO-201AD"
+      "value": "DO-201AD",
+      "status": "extracted"
+    },
+    "Manufacturer": {
+      "description": "メーカー",
+      "value": "STMicroelectronics",
+      "status": "extracted"
+    },
+    "Description": {
+      "description": "概要説明",
+      "value": "Axial Power Schottky rectifier suited for Switch Mode Power Supplies and high frequency DC to DC converters. Intended for use in low voltage, high frequency inverters, free wheeling, polarity protection and small battery chargers.",
+      "status": "extracted"
     },
     "VRRM": {
-      "description": "繰り返しピーク逆電圧",
-      "value": "40 V"
+      "description": "繰り返しピーク逆電圧 (Repetitive peak reverse voltage)",
+      "value": "40 V",
+      "status": "extracted"
     },
     "IF_RMS": {
-      "description": "RMS順方向電流",
-      "value": "10 A"
+      "description": "RMS順電流 (RMS forward current)",
+      "value": "10 A",
+      "status": "extracted"
     },
-    "IF_AV_TL100": {
-      "description": "平均順方向電流 (TL=100°C, δ=0.5)",
-      "value": "3 A"
-    },
-    "IF_AV_TL110": {
-      "description": "平均順方向電流 (TL=110°C, δ=0.5)",
-      "value": "3 A"
+    "IF_AV": {
+      "description": "平均順電流 (TL=100°C, δ=0.5)",
+      "value": "3 A",
+      "status": "extracted"
     },
     "IFSM": {
-      "description": "サージ非繰り返し順方向電流 (tp=10ms, 正弦波)",
-      "value": "80 A"
+      "description": "サージ非反復順電流 (tp=10ms, Sinusoidal)",
+      "value": "80 A",
+      "status": "extracted"
     },
     "PARM": {
-      "description": "繰り返しピークアバランシェ電力 (tp=1µs, Tj=25°C)",
-      "value": "1700 W"
+      "description": "繰り返しピークアバランシェ電力 (tp=1μs, Tj=25°C)",
+      "value": "1700 W",
+      "status": "extracted"
     },
-    "Tstg_Range": {
+    "Tstg": {
       "description": "保存温度範囲",
-      "value": "-65 to +150 °C"
+      "value": "-65 to +150 °C",
+      "status": "extracted"
     },
     "Tj_Max": {
       "description": "最大接合温度",
-      "value": "150 °C"
+      "value": "150 °C",
+      "status": "extracted"
     },
-    "dVdt": {
-      "description": "逆電圧臨界上昇率",
-      "value": "10000 V/µs"
+    "dV_dt": {
+      "description": "逆電圧臨界上昇率 (Critical rate of rise of reverse voltage)",
+      "value": "10000 V/μs",
+      "status": "extracted"
     },
     "IR_25C": {
       "description": "逆漏れ電流 (Tj=25°C, VR=VRRM)",
-      "value": "2 mA"
+      "value": "2 mA",
+      "status": "extracted"
     },
     "IR_100C": {
       "description": "逆漏れ電流 (Tj=100°C)",
-      "value": "20 mA"
+      "value": "20 mA",
+      "status": "extracted"
     },
     "VF_3A": {
-      "description": "順方向電圧降下 (Tj=25°C, IF=3A)",
-      "value": "0.525 V"
+      "description": "順電圧降下 (Tj=25°C, IF=3A)",
+      "value": "0.525 V",
+      "status": "extracted"
     },
     "VF_9_4A": {
-      "description": "順方向電圧降下 (Tj=25°C, IF=9.4A)",
-      "value": "0.95 V"
+      "description": "順電圧降下 (Tj=25°C, IF=9.4A)",
+      "value": "0.95 V",
+      "status": "extracted"
     },
-    "Conduction_Loss_Formula": {
-      "description": "導通損失の計算式",
-      "value": "P = 0.33 x IF(AV) + 0.060 x IF²(RMS)"
+    "Conduction_Loss_Equation": {
+      "description": "伝導損失計算式 (1N5822用)",
+      "value": "P = 0.33 × IF(AV) + 0.060 × IF²(RMS)",
+      "status": "extracted"
     },
     "Rth_JA": {
-      "description": "熱抵抗 (ジャンクション-周囲間, リード長10mm)",
-      "value": "80 °C/W"
+      "description": "熱抵抗 接合-周囲間 (Lead length = 10mm)",
+      "value": "80 °C/W",
+      "status": "extracted"
     },
     "Rth_JL": {
-      "description": "熱抵抗 (ジャンクション-リード間, リード長10mm)",
-      "value": "25 °C/W"
+      "description": "熱抵抗 接合-リード間 (Lead length = 10mm)",
+      "value": "25 °C/W",
+      "status": "extracted"
     },
-    "Dim_A": {
-      "description": "パッケージ寸法 A (本体長さ)",
-      "value": "9.50 mm min"
+    "Package_Material": {
+      "description": "パッケージ材質",
+      "value": "Epoxy meets UL94, V0",
+      "status": "extracted"
     },
-    "Dim_B": {
-      "description": "パッケージ寸法 B (リード長さ)",
-      "value": "25.40 mm min"
+    "Dimension_A": {
+      "description": "DO-201AD 寸法 A 本体長さ (max)",
+      "value": "9.50 mm max (0.374 inch max)",
+      "status": "extracted"
     },
-    "Dim_C": {
-      "description": "パッケージ寸法 ΦC (本体直径)",
-      "value": "5.30 mm min"
+    "Dimension_B": {
+      "description": "DO-201AD 寸法 B リード間距離 (min)",
+      "value": "25.40 mm min (1.000 inch min)",
+      "status": "extracted"
     },
-    "Dim_D": {
-      "description": "パッケージ寸法 ΦD (リード直径)",
-      "value": "1.30 mm min"
+    "Dimension_C": {
+      "description": "DO-201AD 寸法 ΦC 本体直径 (max)",
+      "value": "5.30 mm max (0.209 inch max)",
+      "status": "extracted"
     },
-    "Dim_E": {
-      "description": "パッケージ寸法 E",
-      "value": "1.25 mm min"
+    "Dimension_D": {
+      "description": "DO-201AD 寸法 ΦD リード直径 (max)",
+      "value": "1.30 mm max (0.051 inch max)",
+      "status": "extracted"
+    },
+    "Dimension_E": {
+      "description": "DO-201AD 寸法 E",
+      "value": "1.25 mm (0.049 inch)",
+      "status": "extracted"
     },
     "Weight": {
-      "description": "重量",
-      "value": "1.12 g"
+      "description": "パッケージ重量",
+      "value": "1.12 g",
+      "status": "extracted"
     },
-    "Ordering_Standard": {
-      "description": "梱包 (標準)",
-      "value": "Ammopack, 600 pcs"
+    "Ordering_Type_Standard": {
+      "description": "発注型名 (標準: Ammopack, 600個入)",
+      "value": "1N5822",
+      "status": "extracted"
     },
-    "Ordering_TapeReel": {
-      "description": "梱包 (テープ&リール)",
-      "value": "1N5822RL, Tape & reel, 1900 pcs"
+    "Ordering_Type_TapeReel": {
+      "description": "発注型名 (テープ＆リール: 1900個入)",
+      "value": "1N5822RL",
+      "status": "extracted"
     },
-    "Mounting_Type": {
-      "description": "実装タイプ",
-      "value": "Through Hole"
+    "Marking": {
+      "description": "部品マーキング方式",
+      "value": "Part number, cathode ring",
+      "status": "extracted"
     },
-    "Diode_Type": {
-      "description": "ダイオードタイプ",
-      "value": "Schottky"
+    "VF_Max_Highlight": {
+      "description": "Page 1 主要特性 VF(max) — ファミリ共通ハイライト値 (1N5820相当)",
+      "value": "0.475 V",
+      "status": "extracted"
+    },
+    "Pulse_Test_Condition": {
+      "description": "静的電気特性のパルス試験条件",
+      "value": "tp = 380 μs, δ < 2%",
+      "status": "extracted"
     }
   }
 }
