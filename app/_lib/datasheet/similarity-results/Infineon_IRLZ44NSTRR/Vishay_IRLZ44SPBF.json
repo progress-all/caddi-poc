@@ -1,34 +1,70 @@
 {
   "targetId": "Infineon_IRLZ44NSTRR",
   "candidateId": "Vishay_IRLZ44SPBF",
-  "evaluatedAt": "2026-02-09T16:47:00.000Z",
-  "summary": "・ゲート-ソース間最大電圧：±16V → ±10V\n・オン抵抗（VGS=4V）：0.035Ω → 0.039Ω\n・入力容量：1700pF → 3300pF\n・出力容量：400pF → 1200pF\n・帰還容量：150pF → 200pF\n・総ゲート電荷量：48nC → 66nC\n・熱抵抗θJA：40°C/W → 62°C/W\n・スイッチング時間：試験条件が異なり直接比較困難\n・ボディダイオード逆回復電荷量：210nC → 840nC（試験電流が異なる）",
+  "evaluatedAt": "2026-02-13T03:10:00.000Z",
+  "summary": "・ゲート-ソース間最大電圧：±16 V → ±10 V\n・入力容量(Ciss)：1700 pF → 3300 pF\n・出力容量(Coss)：400 pF → 1200 pF\n・ゲート-ドレイン間電荷量(Qgd)：25 nC → 43 nC\n・総ゲート電荷量(Qg)：48 nC → 66 nC\n・ゲート-ソース間電荷量(Qgs)：8.6 nC → 12 nC\n・帰還容量(Crss)：150 pF → 200 pF\n・リニアディレーティングファクタ：0.71 W/°C → 1.0 W/°C",
   "parameters": [
     {
       "parameterId": "Part_Number",
       "description": "型名",
-      "targetValue": "IRLZ44N / IRLZ44NSTRR (D2PAK Tape & Reel)",
-      "candidateValue": "IRLZ44S / IRLZ44SPbF (Lead-free), SiHLZ44S-GE3 (Halogen-free)",
-      "score": 0,
-      "reason": "型名は比較対象外",
+      "targetValue": "IRLZ44NS/LPbF (D2PAK) / IRLZ44NL (TO-262)",
+      "candidateValue": "IRLZ44S / SiHLZ44S",
+      "score": 70,
+      "reason": "同系IRLZ44ファミリー",
       "is_comparable": false
     },
     {
       "parameterId": "Product_Type",
       "description": "製品種別",
       "targetValue": "N-Channel Logic Level Power MOSFET (HEXFET)",
-      "candidateValue": "N-Channel Logic Level Power MOSFET (Third Generation)",
+      "candidateValue": "N-Channel Logic Level Power MOSFET",
       "score": 100,
-      "reason": "同タイプ、ブランド名のみ異なる",
+      "reason": "同一（HEXFET商標差のみ）",
       "is_comparable": true
     },
     {
       "parameterId": "Package",
       "description": "パッケージ",
-      "targetValue": "D2PAK (TO-263)",
+      "targetValue": "D2PAK (TO-263) / TO-262",
       "candidateValue": "D2PAK (TO-263)",
+      "score": 95,
+      "reason": "D2PAK共通",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Manufacturer",
+      "description": "メーカー",
+      "targetValue": "International Rectifier (Infineon Technologies)",
+      "candidateValue": "Vishay Siliconix",
+      "score": 0,
+      "reason": "メーカー異なる",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "FET_Type",
+      "description": "FETタイプ",
+      "targetValue": "N-Channel",
+      "candidateValue": "N-Channel",
       "score": 100,
       "reason": "同一",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Technology",
+      "description": "技術",
+      "targetValue": "MOSFET (Metal Oxide)",
+      "candidateValue": "MOSFET (Third Generation Power MOSFET)",
+      "score": 100,
+      "reason": "同一（世代表記差のみ）",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Mounting_Type",
+      "description": "実装タイプ",
+      "targetValue": "Surface Mount (IRLZ44NS) / Through-hole (IRLZ44NL)",
+      "candidateValue": "Surface Mount",
+      "score": 90,
+      "reason": "SMD共通、Target追加TH",
       "is_comparable": true
     },
     {
@@ -37,7 +73,7 @@
       "targetValue": "55 V",
       "candidateValue": "60 V",
       "score": 90,
-      "reason": "55V→60V、上位互換",
+      "reason": "60V>55V 上位互換",
       "is_comparable": true
     },
     {
@@ -45,8 +81,8 @@
       "description": "ゲート-ソース間最大電圧",
       "targetValue": "±16 V",
       "candidateValue": "±10 V",
-      "score": 60,
-      "reason": "±16V→±10V、ゲート耐圧低下",
+      "score": 55,
+      "reason": "±10V<±16V ゲート制限厳",
       "is_comparable": true
     },
     {
@@ -54,8 +90,8 @@
       "description": "連続ドレイン電流 (TC=25°C)",
       "targetValue": "47 A",
       "candidateValue": "50 A",
-      "score": 90,
-      "reason": "47A→50A、上位互換",
+      "score": 92,
+      "reason": "50A>47A 上位互換",
       "is_comparable": true
     },
     {
@@ -63,8 +99,8 @@
       "description": "連続ドレイン電流 (TC=100°C)",
       "targetValue": "33 A",
       "candidateValue": "36 A",
-      "score": 90,
-      "reason": "33A→36A、上位互換",
+      "score": 92,
+      "reason": "36A>33A 上位互換",
       "is_comparable": true
     },
     {
@@ -73,7 +109,7 @@
       "targetValue": "160 A",
       "candidateValue": "200 A",
       "score": 90,
-      "reason": "160A→200A、上位互換",
+      "reason": "200A>160A 上位互換",
       "is_comparable": true
     },
     {
@@ -82,7 +118,7 @@
       "targetValue": "110 W",
       "candidateValue": "150 W",
       "score": 90,
-      "reason": "110W→150W、上位互換",
+      "reason": "150W>110W 上位互換",
       "is_comparable": true
     },
     {
@@ -90,8 +126,26 @@
       "description": "リニアディレーティングファクタ",
       "targetValue": "0.71 W/°C",
       "candidateValue": "1.0 W/°C",
-      "score": 85,
-      "reason": "0.71→1.0W/°C、上位互換",
+      "score": 75,
+      "reason": "0.71→1.0で差あり",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "EAS",
+      "description": "単パルスアバランシェエネルギー",
+      "targetValue": "210 mJ",
+      "candidateValue": "400 mJ",
+      "score": 88,
+      "reason": "400>210 上位互換",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "dv_dt",
+      "description": "ピークダイオード回復 dV/dt",
+      "targetValue": "5.0 V/ns",
+      "candidateValue": "4.5 V/ns",
+      "score": 90,
+      "reason": "近い値",
       "is_comparable": true
     },
     {
@@ -104,35 +158,44 @@
       "is_comparable": true
     },
     {
-      "parameterId": "Thermal_Resistance_JA",
-      "description": "熱抵抗 θJA (ジャンクション-周囲間)",
-      "targetValue": "40 °C/W",
-      "candidateValue": "62 °C/W max",
-      "score": 55,
-      "reason": "40→62°C/W、測定条件が異なる",
+      "parameterId": "Soldering_Temp",
+      "description": "はんだ付け温度",
+      "targetValue": "300 °C",
+      "candidateValue": "300 °C",
+      "score": 100,
+      "reason": "同一",
       "is_comparable": true
     },
     {
       "parameterId": "Thermal_Resistance_JC",
       "description": "熱抵抗 θJC (ジャンクション-ケース間)",
-      "targetValue": "1.4 °C/W",
+      "targetValue": "1.4 °C/W max",
       "candidateValue": "1.0 °C/W max",
-      "score": 90,
-      "reason": "1.4→1.0°C/W、上位互換",
+      "score": 88,
+      "reason": "1.0<1.4 Candidate良好",
       "is_comparable": true
     },
     {
+      "parameterId": "Thermal_Resistance_JA",
+      "description": "熱抵抗 θJA (ジャンクション-周囲間)",
+      "targetValue": "40 °C/W max",
+      "candidateValue": "62 °C/W max",
+      "score": 0,
+      "reason": "測定条件異なる(PCB有無)",
+      "is_comparable": false
+    },
+    {
       "parameterId": "BVDSS",
-      "description": "ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)",
+      "description": "ドレイン-ソース間降伏電圧",
       "targetValue": "55 V min",
       "candidateValue": "60 V min",
       "score": 90,
-      "reason": "55V→60V、上位互換",
+      "reason": "60V>55V 上位互換",
       "is_comparable": true
     },
     {
       "parameterId": "BVDSS_TempCoeff",
-      "description": "ドレイン-ソース間降伏電圧温度係数",
+      "description": "降伏電圧温度係数",
       "targetValue": "0.070 V/°C",
       "candidateValue": "0.070 V/°C typ",
       "score": 100,
@@ -149,181 +212,253 @@
       "is_comparable": true
     },
     {
-      "parameterId": "IGSS",
-      "description": "ゲート-ソース間漏れ電流",
-      "targetValue": "±100 nA",
-      "candidateValue": "±100 nA max",
-      "score": 100,
-      "reason": "表記揺れで同値",
-      "is_comparable": true
-    },
-    {
       "parameterId": "IDSS_25C",
-      "description": "ドレイン-ソース間漏れ電流 (TJ=25°C)",
+      "description": "ドレイン-ソース間漏れ電流 (25°C)",
       "targetValue": "25 µA max",
       "candidateValue": "25 µA max",
       "score": 95,
-      "reason": "同値、試験VDSが55V vs 60V",
+      "reason": "同値（試験電圧55V/60V差）",
       "is_comparable": true
     },
     {
       "parameterId": "IDSS_150C",
-      "description": "ドレイン-ソース間漏れ電流 (TJ=150°C)",
+      "description": "ドレイン-ソース間漏れ電流 (150°C)",
       "targetValue": "250 µA max",
       "candidateValue": "250 µA max",
       "score": 95,
-      "reason": "同値、試験VDSが44V vs 48V",
+      "reason": "同値（試験電圧44V/48V差）",
       "is_comparable": true
     },
     {
       "parameterId": "RDS_on_VGS5V",
       "description": "オン抵抗 (VGS=5V)",
-      "targetValue": "0.025 Ω",
+      "targetValue": "0.025 Ω max",
       "candidateValue": "0.028 Ω max",
-      "score": 85,
-      "reason": "0.025→0.028Ω、測定電流も異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験電流異なる(25A/31A)",
+      "is_comparable": false
     },
     {
       "parameterId": "RDS_on_VGS4V",
       "description": "オン抵抗 (VGS=4V)",
-      "targetValue": "0.035 Ω",
+      "targetValue": "0.035 Ω max",
       "candidateValue": "0.039 Ω max",
-      "score": 80,
-      "reason": "0.035→0.039Ω、測定電流も異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験電流異なる(21A/25A)",
+      "is_comparable": false
     },
     {
       "parameterId": "gfs",
       "description": "順方向相互コンダクタンス",
       "targetValue": "21 S min",
       "candidateValue": "23 S min",
-      "score": 90,
-      "reason": "21→23S、上位互換",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験電流異なる(25A/31A)",
+      "is_comparable": false
     },
     {
       "parameterId": "Ciss",
       "description": "入力容量 (VGS=0V, VDS=25V, f=1MHz)",
-      "targetValue": "1700 pF",
+      "targetValue": "1700 pF typ",
       "candidateValue": "3300 pF typ",
-      "score": 40,
-      "reason": "1700→3300pF、約2倍の差",
+      "score": 35,
+      "reason": "1700→3300 約2倍",
       "is_comparable": true
     },
     {
       "parameterId": "Coss",
       "description": "出力容量 (VGS=0V, VDS=25V, f=1MHz)",
-      "targetValue": "400 pF",
+      "targetValue": "400 pF typ",
       "candidateValue": "1200 pF typ",
-      "score": 30,
-      "reason": "400→1200pF、3倍の差",
+      "score": 20,
+      "reason": "400→1200 3倍",
       "is_comparable": true
     },
     {
       "parameterId": "Crss",
       "description": "帰還容量 (VGS=0V, VDS=25V, f=1MHz)",
-      "targetValue": "150 pF",
+      "targetValue": "150 pF typ",
       "candidateValue": "200 pF typ",
       "score": 70,
-      "reason": "150→200pF、33%増",
+      "reason": "150→200 差あり",
       "is_comparable": true
     },
     {
-      "parameterId": "QG_Total",
+      "parameterId": "Qg_Total",
       "description": "総ゲート電荷量",
-      "targetValue": "48 nC",
+      "targetValue": "48 nC max",
       "candidateValue": "66 nC max",
+      "score": 55,
+      "reason": "48→66 差あり",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Qgs",
+      "description": "ゲート-ソース間電荷量",
+      "targetValue": "8.6 nC max",
+      "candidateValue": "12 nC max",
       "score": 65,
-      "reason": "48→66nC、38%増",
+      "reason": "8.6→12 差あり",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "Qgd",
+      "description": "ゲート-ドレイン間電荷量",
+      "targetValue": "25 nC max",
+      "candidateValue": "43 nC max",
+      "score": 40,
+      "reason": "25→43 大幅に増加",
       "is_comparable": true
     },
     {
       "parameterId": "td_on",
       "description": "ターンオン遅延時間",
-      "targetValue": "11 ns",
+      "targetValue": "11 ns typ",
       "candidateValue": "17 ns typ",
-      "score": 75,
-      "reason": "11→17ns、試験条件が異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験条件異なる",
+      "is_comparable": false
     },
     {
       "parameterId": "tr",
       "description": "立ち上がり時間",
-      "targetValue": "84 ns",
+      "targetValue": "84 ns typ",
       "candidateValue": "230 ns typ",
-      "score": 50,
-      "reason": "84→230ns、試験条件が異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験条件異なる",
+      "is_comparable": false
     },
     {
       "parameterId": "td_off",
       "description": "ターンオフ遅延時間",
-      "targetValue": "26 ns",
+      "targetValue": "26 ns typ",
       "candidateValue": "42 ns typ",
-      "score": 65,
-      "reason": "26→42ns、試験条件が異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験条件異なる",
+      "is_comparable": false
     },
     {
       "parameterId": "tf",
       "description": "立ち下がり時間",
-      "targetValue": "15 ns",
+      "targetValue": "15 ns typ",
       "candidateValue": "110 ns typ",
-      "score": 35,
-      "reason": "15→110ns、試験条件が異なる",
+      "score": 0,
+      "reason": "試験条件異なる",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "IS",
+      "description": "連続ソース電流 (ボディダイオード)",
+      "targetValue": "47 A",
+      "candidateValue": "50 A",
+      "score": 92,
+      "reason": "50A>47A 上位互換",
+      "is_comparable": true
+    },
+    {
+      "parameterId": "ISM",
+      "description": "パルスソース電流 (ボディダイオード)",
+      "targetValue": "160 A",
+      "candidateValue": "200 A",
+      "score": 90,
+      "reason": "200A>160A 上位互換",
       "is_comparable": true
     },
     {
       "parameterId": "VSD",
       "description": "ボディダイオード順方向電圧",
-      "targetValue": "1.3 V typ",
+      "targetValue": "1.3 V max",
       "candidateValue": "2.5 V max",
-      "score": 70,
-      "reason": "typ vs max、試験電流も異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験電流異なる(25A/51A)",
+      "is_comparable": false
     },
     {
       "parameterId": "trr",
       "description": "逆回復時間",
       "targetValue": "80 ns typ / 120 ns max",
       "candidateValue": "130 ns typ / 180 ns max",
-      "score": 60,
-      "reason": "80/120→130/180ns、試験電流異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験電流異なる(25A/51A)",
+      "is_comparable": false
     },
     {
       "parameterId": "Qrr",
       "description": "逆回復電荷量",
       "targetValue": "210 nC typ / 320 nC max",
       "candidateValue": "0.84 µC typ / 1.3 µC max",
-      "score": 40,
-      "reason": "210nC→840nC、試験電流異なる",
-      "is_comparable": true
+      "score": 0,
+      "reason": "試験電流異なる(25A/51A)",
+      "is_comparable": false
     },
     {
-      "parameterId": "Mounting_Type",
-      "description": "実装タイプ",
-      "targetValue": "Surface Mount",
-      "candidateValue": "Surface Mount",
-      "score": 100,
-      "reason": "同一",
-      "is_comparable": true
+      "parameterId": "Series",
+      "description": "シリーズ",
+      "targetValue": "HEXFET (Fifth Generation)",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate未記載",
+      "is_comparable": false
     },
     {
-      "parameterId": "FET_Type",
-      "description": "FETタイプ",
-      "targetValue": "N-Channel",
-      "candidateValue": "N-Channel",
-      "score": 100,
-      "reason": "同一",
-      "is_comparable": true
+      "parameterId": "RDS_on_VGS10V",
+      "description": "オン抵抗 (VGS=10V, ID=25A)",
+      "targetValue": "0.022 Ω max",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate未記載",
+      "is_comparable": false
     },
     {
-      "parameterId": "Technology",
-      "description": "技術",
-      "targetValue": "MOSFET (Metal Oxide)",
-      "candidateValue": "MOSFET (Metal Oxide)",
+      "parameterId": "IAR",
+      "description": "アバランシェ電流",
+      "targetValue": "25 A",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate未記載",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "EAR",
+      "description": "繰り返しアバランシェエネルギー",
+      "targetValue": "11 mJ",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate未記載",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "IGSS_Forward",
+      "description": "ゲート-ソース間順方向漏れ電流 (VGS=16V)",
+      "targetValue": "100 nA max",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate別ID(IGSS)",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "IGSS_Reverse",
+      "description": "ゲート-ソース間逆方向漏れ電流 (VGS=-16V)",
+      "targetValue": "-100 nA max",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate別ID(IGSS)",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "PD_TA25",
+      "description": "最大消費電力 (TA=25°C)",
+      "targetValue": "3.8 W",
+      "candidateValue": null,
+      "score": 0,
+      "reason": "Candidate別ID(PD_TA25_PCB)",
+      "is_comparable": false
+    },
+    {
+      "parameterId": "LS",
+      "description": "内部ソースインダクタンス",
+      "targetValue": "7.5 nH typ",
+      "candidateValue": "7.5 nH typ",
       "score": 100,
       "reason": "同一",
       "is_comparable": true

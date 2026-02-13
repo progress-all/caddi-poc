@@ -1,6 +1,8 @@
 # PDF Text Extraction
 # Source: Vishay_IRLZ44SPBF.pdf
 # Pages: 10
+# Method: pymupdf
+# Quality: 0.9901
 
 
 ============================================================
@@ -10,7 +12,7 @@ PAGE 1
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 1
 Document Number: 91329
@@ -20,36 +22,36 @@ ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
 Power MOSFET
 FEATURES
 • Surface-mount
-• Available in tape and reel 
+• Available in tape and reel
 • Dynamic dV/dt rating
 • Logic-level gate drive
 • RDS(on) specified at VGS = 4 V and 5 V
 • 175 °C operating temperature
 • Fast switching
-• Material categorization: for definitions of compliance 
+• Material categorization: for definitions of compliance
 please see www.vishay.com/doc?99912
 Note
-* This    datasheet    provides    information    about    parts    that    are
-RoHS-compliant and / or parts that are non RoHS-compliant.  For
+* This datasheet provides information about parts that are
+RoHS-compliant and / or parts that are non RoHS-compliant. For
 example, parts with lead (Pb) terminations are not RoHS-compliant.
 Please see the information / tables in this datasheet for details
 DESCRIPTION
-Third generation Power MOSFETs from Vishay provide the 
-designer with the best combination of fast switching, 
-ruggedized 
-device 
-design, 
-low 
-on-resistance 
-and 
+Third generation Power MOSFETs from Vishay provide the
+designer with the best combination of fast switching,
+ruggedized
+device
+design,
+low
+on-resistance
+and
 cost-effectiveness.
-The D2PAK (TO-263) is a surface-mount power package 
-capable of accommodating die sizes up to HEX-4. It 
-provides the highest power capability and the lowest 
-possible on-resistance in any existing surface-mount 
-package. The D2PAK (TO-263) is suitable for high current 
-applications because of its low internal connection 
-resistance and can dissipate up to 2.0 W in a typical surface 
+The D2PAK (TO-263) is a surface-mount power package
+capable of accommodating die sizes up to HEX-4. It
+provides the highest power capability and the lowest
+possible on-resistance in any existing surface-mount
+package. The D2PAK (TO-263) is suitable for high current
+applications because of its low internal connection
+resistance and can dissipate up to 2.0 W in a typical surface
 mount application.
 Note
 a. See device orientation
@@ -65,7 +67,7 @@ PRODUCT SUMMARY
 VDS (V)
 60
 RDS(on) ()
-VGS = 5.0 V 
+VGS = 5.0 V
 0.028
 Qg (Max.) (nC)
 66
@@ -95,58 +97,57 @@ Lead (Pb)-free
 IRLZ44SPbF
 IRLZ44STRRPbFa
 ABSOLUTE MAXIMUM RATINGS (TC = 25 °C, unless otherwise noted)
-PARAMETER 
+PARAMETER
 SYMBOL
 LIMIT
 UNIT
-Drain-Source Voltage 
+Drain-Source Voltage
 VDS
 60
-V 
+V
 Gate-Source Voltage
-VGS 
+VGS
 ± 10
 Continuous Drain Currentf
 VGS at 5.0 V
-TC = 25 °C 
+TC = 25 °C
 ID
 50
 A
 Continuous Drain Current
-TC = 100 °C 
+TC = 100 °C
 36
 Pulsed Drain Currenta
-IDM 
+IDM
 200
 Linear Derating Factor
 1.0
-W/°C 
+W/°C
 Linear Derating Factor (PCB Mount)e
 0.025
 Single Pulse Avalanche Energyb
-EAS 
+EAS
 400
-mJ 
+mJ
 Maximum Power Dissipation
-TC = 25 °C 
+TC = 25 °C
 PD
 150
-W 
+W
 Maximum Power Dissipation (PCB Mount)e
-TA = 25 °C 
+TA = 25 °C
 3.7
 Peak Diode Recovery dV/dtc
-dV/dt 
+dV/dt
 4.5
-V/ns 
+V/ns
 Operating Junction and Storage Temperature Range
 TJ, Tstg
 - 55 to + 175
-°C 
+°C
 Soldering Recommendations (Peak Temperature)d
 For 10 s
 300d
-
 
 ============================================================
 PAGE 2
@@ -155,7 +156,7 @@ PAGE 2
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 2
 Document Number: 91329
@@ -169,7 +170,7 @@ a. Repetitive rating; pulse width limited by maximum junction temperature (see f
 b. Pulse width  300 μs; duty cycle  2 %
 c. Current limited by the package, (Die Current = 51 A)
 THERMAL RESISTANCE RATINGS
-PARAMETER 
+PARAMETER
 SYMBOL
 TYP.
 MAX.
@@ -189,55 +190,55 @@ RthJC
 -
 1.0
 SPECIFICATIONS (TJ = 25 °C, unless otherwise noted)
-PARAMETER 
+PARAMETER
 SYMBOL
-TEST CONDITIONS 
+TEST CONDITIONS
 MIN.
 TYP.
 MAX.
 UNIT
 Static
-Drain-Source Breakdown Voltage 
-VDS 
-VGS = 0, ID = 250 μA 
+Drain-Source Breakdown Voltage
+VDS
+VGS = 0, ID = 250 μA
 60
 -
 -
-V 
-VDS Temperature Coefficient 
-VDS/TJ 
-Reference to 25 °C, ID = 1 mA 
+V
+VDS Temperature Coefficient
+VDS/TJ
+Reference to 25 °C, ID = 1 mA
 -
 0.070
 -
-V/°C 
-Gate-Source Threshold Voltage 
+V/°C
+Gate-Source Threshold Voltage
 VGS(th)
-VDS = VGS, ID = 250 μA 
+VDS = VGS, ID = 250 μA
 1.0
 -
 2.0
-V 
-Gate-Source Leakage 
-IGSS 
+V
+Gate-Source Leakage
+IGSS
 VGS = ± 10 V
 -
 -
 ± 100
-nA 
-Zero Gate Voltage Drain Current 
-IDSS 
-VDS = 60 V, VGS = 0 V 
+nA
+Zero Gate Voltage Drain Current
+IDSS
+VDS = 60 V, VGS = 0 V
 -
 -
 25
-μA 
-VDS = 48 V, VGS = 0 V, TJ = 150 °C 
+μA
+VDS = 48 V, VGS = 0 V, TJ = 150 °C
 -
 -
 250
-Drain-Source On-State Resistance 
-RDS(on) 
+Drain-Source On-State Resistance
+RDS(on)
 VGS = 5.0 V
 ID = 31 Ab
 -
@@ -249,94 +250,94 @@ ID = 25 Ab
 -
 -
 0.039
-Forward Transconductance 
-gfs 
+Forward Transconductance
+gfs
 VDS = 25 V, ID = 31 Ab
 23
 -
 -
-S 
+S
 Dynamic
-Input Capacitance 
-Ciss 
-VGS = 0 V, 
-VDS = 25 V, 
-f = 1.0 MHz, see fig. 5 
+Input Capacitance
+Ciss
+VGS = 0 V,
+VDS = 25 V,
+f = 1.0 MHz, see fig. 5
 -
 3300
 -
 pF
-Output Capacitance 
-Coss 
+Output Capacitance
+Coss
 -
 1200
 -
-Reverse Transfer Capacitance 
-Crss 
+Reverse Transfer Capacitance
+Crss
 -
 200
 -
-Total Gate Charge 
-Qg 
-VGS = 5.0 V 
-ID = 51 A, VDS = 48 V, 
+Total Gate Charge
+Qg
+VGS = 5.0 V
+ID = 51 A, VDS = 48 V,
 see fig. 6 and 13b
 -
 -
 66
-nC 
-Gate-Source Charge 
-Qgs 
+nC
+Gate-Source Charge
+Qgs
 -
 -
 12
 Gate-Drain Charge
-Qgd 
+Qgd
 -
 -
 43
-Turn-On Delay Time 
-td(on) 
-VDD = 30 V, ID = 51 A, 
+Turn-On Delay Time
+td(on)
+VDD = 30 V, ID = 51 A,
 Rg = 4.6 , RD = 0.56 , see fig. 10b
 -
 17
 -
 ns
 Rise Time
-tr 
+tr
 -
 230
 -
-Turn-Off Delay Time 
-td(off) 
+Turn-Off Delay Time
+td(off)
 -
 42
 -
-Fall Time 
-tf 
+Fall Time
+tf
 -
 110
 -
-Internal Drain Inductance 
-LD 
+Internal Drain Inductance
+LD
 Between lead,
-6 mm (0.25") from 
-package and center of 
-die contact 
+6 mm (0.25") from
+package and center of
+die contact
 -
 4.5
 -
-nH 
+nH
 Internal Source Inductance
 LS
 -
 7.5
 -
 Drain-Source Body Diode Characteristics
-Continuous Source-Drain Diode Current 
+Continuous Source-Drain Diode Current
 IS
-MOSFET symbol 
+MOSFET symbol
 showing the 
 integral reverse
 p - n junction diode
@@ -379,7 +380,6 @@ S
 D
 G
 
-
 ============================================================
 PAGE 3
 ============================================================
@@ -387,7 +387,7 @@ PAGE 3
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 3
 Document Number: 91329
@@ -396,10 +396,9 @@ THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN
 ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
 TYPICAL CHARACTERISTICS (25 °C, unless otherwise noted)
 Fig. 1 - Typical Output Characteristics, TC = 25 °C
- Fig. 1 - Typical Output Characteristics, TC = 150 °C
- Fig. 2 - Typical Transfer Characteristics
- Fig. 3 - Normalized On-Resistance vs. Temperature
-
+Fig. 1 - Typical Output Characteristics, TC = 150 °C
+Fig. 2 - Typical Transfer Characteristics
+Fig. 3 - Normalized On-Resistance vs. Temperature
 
 ============================================================
 PAGE 4
@@ -408,18 +407,17 @@ PAGE 4
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 4
 Document Number: 91329
 For technical questions, contact: hvm@vishay.com
 THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
 ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
- Fig. 4 - Typical Capacitance vs. Drain-to-Source Voltage
- Fig. 5 - Typical Gate Charge vs. Gate-to-Source Voltage
- Fig. 6 - Typical Source-Drain Diode Forward Voltage
- Fig. 7 - Maximum Safe Operating Area
-
+Fig. 4 - Typical Capacitance vs. Drain-to-Source Voltage
+Fig. 5 - Typical Gate Charge vs. Gate-to-Source Voltage
+Fig. 6 - Typical Source-Drain Diode Forward Voltage
+Fig. 7 - Maximum Safe Operating Area
 
 ============================================================
 PAGE 5
@@ -428,19 +426,19 @@ PAGE 5
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 5
 Document Number: 91329
 For technical questions, contact: hvm@vishay.com
 THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
 ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
- Fig. 8 - Maximum Drain Current vs. Case Temperature
+Fig. 8 - Maximum Drain Current vs. Case Temperature
 Fig. 10a - Switching Time Test Circuit
 Fig. 10b - Switching Time Waveforms
- Fig. 9 - Maximum Effective Transient Thermal Impedance, Junction-to-Case
-Pulse width ≤ 1 µs
-Duty factor ≤ 0.1 % 
+Fig. 9 - Maximum Effective Transient Thermal Impedance, Junction-to-Case
+Pulse width ≤ 1 μs
+Duty factor ≤ 0.1 %
 RD
 VGS
 Rg
@@ -459,7 +457,6 @@ tr
 td(off)
 tf
 
-
 ============================================================
 PAGE 6
 ============================================================
@@ -467,7 +464,7 @@ PAGE 6
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 6
 Document Number: 91329
@@ -488,7 +485,7 @@ L
 VDS
 +
 - V DD
- 5 V
+5 V
 Vary tp to obtain
 required IAS
 IAS
@@ -501,15 +498,15 @@ QGD
 QG
 VG
 Charge
- 5 V
+5 V
 D.U.T.
 3 mA
 VGS
 VDS
 IG
 ID
-0.3 µF
-0.2 µF
+0.3 μF
+0.2 μF
 50 kΩ
 12 V
 Current regulator
@@ -518,7 +515,6 @@ Same type as D.U.T.
 +
 -
 
-
 ============================================================
 PAGE 7
 ============================================================
@@ -526,16 +522,16 @@ PAGE 7
 IRLZ44S, SiHLZ44S
 www.vishay.com
 Vishay Siliconix
- 
+
 S21-0932-Rev. D, 13-Sep-2021
 7
 Document Number: 91329
 For technical questions, contact: hvm@vishay.com
 THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
 ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
- Fig. 10 - For N-Channel
-Vishay Siliconix maintains worldwide manufacturing capability. Products may be manufactured at one of several qualified locations. Reliability data for Silicon 
-Technology and Package Reliability represent a composite of all qualified locations. For related documents such as package/tape drawings, part marking, and 
+Fig. 10 - For N-Channel
+Vishay Siliconix maintains worldwide manufacturing capability. Products may be manufactured at one of several qualified locations. Reliability data for Silicon
+Technology and Package Reliability represent a composite of all qualified locations. For related documents such as package/tape drawings, part marking, and
 reliability data, see www.vishay.com/ppg?91329.
 P.W.
 Period
@@ -551,13 +547,13 @@ recovery
 current
 Body diode forward
 current
-VGS = 10 Va  
+VGS = 10 Va
 ISD
 Driver gate drive
 D.U.T. lSD waveform
 D.U.T. VDS waveform
 Inductor current
-D = 
+D =
 P.W.
 Period
 +
@@ -570,40 +566,38 @@ Period
 -
 Peak Diode Recovery dV/dt Test Circuit
 VDD
-•  dV/dt controlled by Rg
-•  Driver same type as D.U.T.
-•  ISD controlled by duty factor “D”
-•  D.U.T. - device under test
+• dV/dt controlled by Rg
+• Driver same type as D.U.T.
+• ISD controlled by duty factor “D”
+• D.U.T. - device under test
 D.U.T.
 Circuit layout considerations
-•  Low stray inductance
-•  Ground plane
-•  Low leakage inductance
+• Low stray inductance
+• Ground plane
+• Low leakage inductance
 current transformer
 Rg
 Note
 a. VGS = 5 V for logic level devices
 VDD
 
-
 ============================================================
 PAGE 8
 ============================================================
 
- 
 Document Number: 91364
 www.vishay.com
 Revision: 15-Sep-08
 1
 Package Information
 Vishay Siliconix
- 
+
 TO-263AB (HIGH VOLTAGE)
 Notes
 1. Dimensioning and tolerancing per ASME Y14.5M-1994.
 2. Dimensions are shown in millimeters (inches).
 3. Dimension D and E do not include mold flash. Mold flash shall not exceed 0.127 mm (0.005") per side. These dimensions are measured at the
-outmost extremes of the plastic body at datum A. 
+outmost extremes of the plastic body at datum A.
 4. Thermal PAD contour optional within dimension E, L1, D1 and E1.
 5. Dimension b1 and c1 apply to base metal only.
 6. Datum A and B to be determined at datum plane H.
@@ -672,7 +666,7 @@ plane
 0° to 8°
 Detail “A”
 Rotated 90° CW
-    scale 8:1
+scale 8:1
 L3
 A1
 L4
@@ -790,18 +784,17 @@ L4
 ECN: S-82110-Rev. A, 15-Sep-08
 DWG: 5970
 
-
 ============================================================
 PAGE 9
 ============================================================
 
 AN826
 Vishay Siliconix
-Document Number:   73397
+Document Number: 73397
 11-Apr-05
 www.vishay.com
 1
-RECOMMENDED MINIMUM PADS FOR D2PAK:  3-Lead
+RECOMMENDED MINIMUM PADS FOR D2PAK: 3-Lead
 0.635
 (16.129)
 Recommended Minimum Pads
@@ -820,7 +813,6 @@ Dimensions in Inches/(mm)
 (1.257)
 Return to Index
 
-
 ============================================================
 PAGE 10
 ============================================================
@@ -828,40 +820,40 @@ PAGE 10
 Legal Disclaimer Notice
 www.vishay.com
 Vishay
-  
- 
+
+
 Revision: 09-Jul-2021
 1
 Document Number: 91000
 Disclaimer
- 
-ALL PRODUCT, PRODUCT SPECIFICATIONS AND DATA ARE SUBJECT TO CHANGE WITHOUT NOTICE TO IMPROVE 
-RELIABILITY, FUNCTION OR DESIGN OR OTHERWISE. 
-Vishay Intertechnology, Inc., its affiliates, agents, and employees, and all persons acting on its or their behalf (collectively, 
-“Vishay”), disclaim any and all liability for any errors, inaccuracies or incompleteness contained in any datasheet or in any other 
+
+ALL PRODUCT, PRODUCT SPECIFICATIONS AND DATA ARE SUBJECT TO CHANGE WITHOUT NOTICE TO IMPROVE
+RELIABILITY, FUNCTION OR DESIGN OR OTHERWISE.
+Vishay Intertechnology, Inc., its affiliates, agents, and employees, and all persons acting on its or their behalf (collectively,
+“Vishay”), disclaim any and all liability for any errors, inaccuracies or incompleteness contained in any datasheet or in any other
 disclosure relating to any product.
-Vishay makes no warranty, representation or guarantee regarding the suitability of the products for any particular purpose or 
-the continuing production of any product. To the maximum extent permitted by applicable law, Vishay disclaims (i) any and all 
-liability arising out of the application or use of any product, (ii) any and all liability, including without limitation special, 
-consequential or incidental damages, and (iii) any and all implied warranties, including warranties of fitness for particular 
+Vishay makes no warranty, representation or guarantee regarding the suitability of the products for any particular purpose or
+the continuing production of any product. To the maximum extent permitted by applicable law, Vishay disclaims (i) any and all
+liability arising out of the application or use of any product, (ii) any and all liability, including without limitation special,
+consequential or incidental damages, and (iii) any and all implied warranties, including warranties of fitness for particular
 purpose, non-infringement and merchantability.
-Statements regarding the suitability of products for certain types of applications are based on Vishay's knowledge of typical 
-requirements that are often placed on Vishay products in generic applications. Such statements are not binding statements 
-about the suitability of products for a particular application. It is the customer's responsibility to validate that a particular product 
-with the properties described in the product specification is suitable for use in a particular application. Parameters provided in 
-datasheets and / or specifications may vary in different applications and performance may vary over time. All operating 
-parameters, including typical parameters, must be validated for each customer application by the customer's technical experts. 
-Product specifications do not expand or otherwise modify Vishay's terms and conditions of purchase, including but not limited 
+Statements regarding the suitability of products for certain types of applications are based on Vishay's knowledge of typical
+requirements that are often placed on Vishay products in generic applications. Such statements are not binding statements
+about the suitability of products for a particular application. It is the customer's responsibility to validate that a particular product
+with the properties described in the product specification is suitable for use in a particular application. Parameters provided in
+datasheets and / or specifications may vary in different applications and performance may vary over time. All operating
+parameters, including typical parameters, must be validated for each customer application by the customer's technical experts.
+Product specifications do not expand or otherwise modify Vishay's terms and conditions of purchase, including but not limited
 to the warranty expressed therein.
-Hyperlinks included in this datasheet may direct users to third-party websites. These links are provided as a convenience and 
-for informational purposes only. Inclusion of these hyperlinks does not constitute an endorsement or an approval by Vishay of 
-any of the products, services or opinions of the corporation, organization or individual associated with the third-party website. 
-Vishay disclaims any and all liability and bears no responsibility for the accuracy, legality or content of the third-party website 
+Hyperlinks included in this datasheet may direct users to third-party websites. These links are provided as a convenience and
+for informational purposes only. Inclusion of these hyperlinks does not constitute an endorsement or an approval by Vishay of
+any of the products, services or opinions of the corporation, organization or individual associated with the third-party website.
+Vishay disclaims any and all liability and bears no responsibility for the accuracy, legality or content of the third-party website
 or for that of subsequent links.
-Except as expressly indicated in writing, Vishay products are not designed for use in medical, life-saving, or life-sustaining 
-applications or for any other application in which the failure of the Vishay product could result in personal injury or death. 
-Customers using or selling Vishay products not expressly indicated for use in such applications do so at their own risk. Please 
+Except as expressly indicated in writing, Vishay products are not designed for use in medical, life-saving, or life-sustaining
+applications or for any other application in which the failure of the Vishay product could result in personal injury or death.
+Customers using or selling Vishay products not expressly indicated for use in such applications do so at their own risk. Please
 contact authorized Vishay personnel to obtain written terms and conditions regarding products designed for such applications.
-No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted by this document or by 
+No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted by this document or by
 any conduct of Vishay. Product names and markings noted herein may be trademarks of their respective owners.
 © 2021 VISHAY INTERTECHNOLOGY, INC. ALL RIGHTS RESERVED

@@ -1,0 +1,373 @@
+# =============================================================================
+# パラメータスキーマ: Infineon_IRLZ44NSTRR
+# 部品: IRLZ44NS/LPbF (N-Channel Logic Level Power MOSFET)
+# 生成元: Infineon_IRLZ44NSTRR.txt (OCR抽出テキスト)
+# =============================================================================
+
+schema_version: "1.0"
+schema_id: "Infineon_IRLZ44NSTRR"
+inferred_category: "power_mosfet"
+
+parameters:
+  # --- 基本情報 ---
+  - id: "Part_Number"
+    label: "型名"
+    description: "データシート記載の製品型名"
+    unit: ""
+    extraction_hint: "Page 1 タイトル 'IRLZ44NS/LPbF' および HEXFET Power MOSFET"
+    required: true
+
+  - id: "Product_Type"
+    label: "製品種別"
+    description: "製品の種別・カテゴリ"
+    unit: ""
+    extraction_hint: "Page 1 'HEXFET® Power MOSFET', 'Logic-Level Gate Drive'"
+    required: true
+
+  - id: "Package"
+    label: "パッケージ"
+    description: "パッケージ形状"
+    unit: ""
+    extraction_hint: "Page 1 'Surface Mount (IRLZ44NS)' → D2PAK (TO-263), Page 9 TO-262"
+    required: true
+
+  - id: "Manufacturer"
+    label: "メーカー"
+    description: "製造元メーカー名"
+    unit: ""
+    extraction_hint: "Page 1 'International Rectifier' (現Infineon Technologies)"
+    required: true
+
+  - id: "Series"
+    label: "シリーズ"
+    description: "製品シリーズ名"
+    unit: ""
+    extraction_hint: "Page 1 'HEXFET' / 'Fifth Generation HEXFETs'"
+    required: true
+
+  - id: "FET_Type"
+    label: "FETタイプ"
+    description: "N-Channel / P-Channel"
+    unit: ""
+    extraction_hint: "Page 1 description, N-Channel MOSFET"
+    required: true
+
+  - id: "Technology"
+    label: "技術"
+    description: "トランジスタ技術"
+    unit: ""
+    extraction_hint: "Page 1 'MOSFET', 'HEXFET Power MOSFET'"
+    required: true
+
+  - id: "Mounting_Type"
+    label: "実装タイプ"
+    description: "表面実装 / スルーホール"
+    unit: ""
+    extraction_hint: "Page 1 'Surface Mount (IRLZ44NS)', 'Low-profile through-hole (IRLZ44NL)'"
+    required: true
+
+  # --- Absolute Maximum Ratings (最大定格) ---
+  - id: "VDSS"
+    label: "ドレイン-ソース間耐圧"
+    description: "ドレイン-ソース間最大電圧"
+    unit: "V"
+    extraction_hint: "Page 1 'Voss = 55V'"
+    required: true
+
+  - id: "VGS_Max"
+    label: "ゲート-ソース間最大電圧"
+    description: "ゲート-ソース間最大電圧"
+    unit: "V"
+    extraction_hint: "Page 1 Absolute Maximum Ratings 'Ves Gate-to-Source Voltage ±16 V'"
+    required: true
+
+  - id: "ID_TC25"
+    label: "連続ドレイン電流 (TC=25°C)"
+    description: "連続ドレイン電流 (ケース温度25°C, VGS=10V)"
+    unit: "A"
+    extraction_hint: "Page 1 'Ip @ Tc = 25°C Continuous Drain Current, Vgs @ 10V = 47 A'"
+    required: true
+
+  - id: "ID_TC100"
+    label: "連続ドレイン電流 (TC=100°C)"
+    description: "連続ドレイン電流 (ケース温度100°C, VGS=10V)"
+    unit: "A"
+    extraction_hint: "Page 1 'Ip @ Tc = 100°C Continuous Drain Current, Vgs @ 10V = 33 A'"
+    required: true
+
+  - id: "IDM"
+    label: "パルスドレイン電流"
+    description: "パルスドレイン電流 (最大)"
+    unit: "A"
+    extraction_hint: "Page 1 'Pulsed Drain Current = 160 A'"
+    required: true
+
+  - id: "PD_TA25"
+    label: "最大消費電力 (TA=25°C)"
+    description: "最大消費電力 (周囲温度25°C)"
+    unit: "W"
+    extraction_hint: "Page 1 'Pp @Ta = 25°C Power Dissipation 3.8 W'"
+    required: true
+
+  - id: "PD_TC25"
+    label: "最大消費電力 (TC=25°C)"
+    description: "最大消費電力 (ケース温度25°C)"
+    unit: "W"
+    extraction_hint: "Page 1 'Pp @Tc = 25°C Power Dissipation 110 W'"
+    required: true
+
+  - id: "Linear_Derating_Factor"
+    label: "リニアディレーティングファクタ"
+    description: "電力ディレーティングファクタ"
+    unit: "W/°C"
+    extraction_hint: "Page 1 'Linear Derating Factor 0.71 W/°C'"
+    required: true
+
+  - id: "EAS"
+    label: "単パルスアバランシェエネルギー"
+    description: "単パルスアバランシェエネルギー"
+    unit: "mJ"
+    extraction_hint: "Page 1 'Ens Single Pulse Avalanche Energy = 210 mJ'"
+    required: true
+
+  - id: "IAR"
+    label: "アバランシェ電流"
+    description: "アバランシェ電流"
+    unit: "A"
+    extraction_hint: "Page 1 'lar Avalanche Current = 25 A'"
+    required: true
+
+  - id: "EAR"
+    label: "繰り返しアバランシェエネルギー"
+    description: "繰り返しアバランシェエネルギー"
+    unit: "mJ"
+    extraction_hint: "Page 1 'Ear Repetitive Avalanche Energy = 11 mJ'"
+    required: true
+
+  - id: "dv_dt"
+    label: "ピークダイオード回復 dv/dt"
+    description: "ピークダイオード回復 dv/dt"
+    unit: "V/ns"
+    extraction_hint: "Page 1 'dv/dt Peak Diode Recovery dv/dt = 5.0 V/ns'"
+    required: true
+
+  - id: "TJ_TSTG_Range"
+    label: "接合温度・保存温度範囲"
+    description: "動作接合温度および保存温度範囲"
+    unit: "°C"
+    extraction_hint: "Page 1 'Operating Junction and Storage Temperature Range -55 to +175 °C'"
+    required: true
+
+  - id: "Soldering_Temp"
+    label: "はんだ付け温度"
+    description: "はんだ付け温度 (10秒間)"
+    unit: "°C"
+    extraction_hint: "Page 1 'Soldering Temperature, for 10 seconds 300 (1.6mm from case)'"
+    required: true
+
+  # --- Thermal Characteristics (熱特性) ---
+  - id: "Thermal_Resistance_JC"
+    label: "熱抵抗 θJC"
+    description: "熱抵抗 (ジャンクション-ケース間)"
+    unit: "°C/W"
+    extraction_hint: "Page 1 Thermal Resistance 'Rθjc Junction-to-Case = 1.4 °C/W max'"
+    required: true
+
+  - id: "Thermal_Resistance_JA"
+    label: "熱抵抗 θJA"
+    description: "熱抵抗 (ジャンクション-周囲間, PCB実装定常状態)"
+    unit: "°C/W"
+    extraction_hint: "Page 1 Thermal Resistance 'Rθja Junction-to-Ambient = 40 °C/W max'"
+    required: true
+
+  # --- Electrical Characteristics (電気的特性) ---
+  - id: "BVDSS"
+    label: "ドレイン-ソース間降伏電圧"
+    description: "ドレイン-ソース間降伏電圧 (VGS=0V, ID=250µA)"
+    unit: "V"
+    extraction_hint: "Page 2 'V(BR)DSS Drain-to-Source Breakdown Voltage 55 V min'"
+    required: true
+
+  - id: "BVDSS_TempCoeff"
+    label: "降伏電圧温度係数"
+    description: "ドレイン-ソース間降伏電圧温度係数"
+    unit: "V/°C"
+    extraction_hint: "Page 2 'Breakdown Voltage Temp. Coefficient 0.070 V/°C'"
+    required: true
+
+  - id: "RDS_on_VGS10V"
+    label: "オン抵抗 (VGS=10V)"
+    description: "静的ドレイン-ソース間オン抵抗 (VGS=10V, ID=25A)"
+    unit: "Ω"
+    extraction_hint: "Page 2 'RDS(on) Static Drain-to-Source On-Resistance 0.022 Ω max, VGS=10V, ID=25A'"
+    required: true
+
+  - id: "RDS_on_VGS5V"
+    label: "オン抵抗 (VGS=5V)"
+    description: "静的ドレイン-ソース間オン抵抗 (VGS=5V, ID=25A)"
+    unit: "Ω"
+    extraction_hint: "Page 2 'RDS(on) 0.025 Ω max, VGS=5.0V, ID=25A'"
+    required: true
+
+  - id: "RDS_on_VGS4V"
+    label: "オン抵抗 (VGS=4V)"
+    description: "静的ドレイン-ソース間オン抵抗 (VGS=4V, ID=21A)"
+    unit: "Ω"
+    extraction_hint: "Page 2 'RDS(on) 0.035 Ω max, VGS=4.0V, ID=21A'"
+    required: true
+
+  - id: "VGS_th"
+    label: "ゲートしきい値電圧"
+    description: "ゲートしきい値電圧 (VDS=VGS, ID=250µA)"
+    unit: "V"
+    extraction_hint: "Page 2 'VGS(th) Gate Threshold Voltage 1.0 V min / 2.0 V max'"
+    required: true
+
+  - id: "gfs"
+    label: "順方向相互コンダクタンス"
+    description: "順方向相互コンダクタンス (VDS=25V, ID=25A)"
+    unit: "S"
+    extraction_hint: "Page 2 'gfs Forward Transconductance 21 S min'"
+    required: true
+
+  - id: "IDSS_25C"
+    label: "ドレイン-ソース間漏れ電流 (25°C)"
+    description: "ドレイン-ソース間漏れ電流 (VDS=55V, VGS=0V, TJ=25°C)"
+    unit: "µA"
+    extraction_hint: "Page 2 'IDSS Drain-to-Source Leakage Current 25 µA max, VDS=55V, VGS=0V'"
+    required: true
+
+  - id: "IDSS_150C"
+    label: "ドレイン-ソース間漏れ電流 (150°C)"
+    description: "ドレイン-ソース間漏れ電流 (VDS=44V, VGS=0V, TJ=150°C)"
+    unit: "µA"
+    extraction_hint: "Page 2 'IDSS 250 µA max, VDS=44V, VGS=0V, TJ=150°C'"
+    required: true
+
+  - id: "IGSS_Forward"
+    label: "ゲート-ソース間順方向漏れ電流"
+    description: "ゲート-ソース間順方向漏れ電流 (VGS=16V)"
+    unit: "nA"
+    extraction_hint: "Page 2 'IGSS Gate-to-Source Forward Leakage 100 nA max, VGS=16V'"
+    required: true
+
+  - id: "IGSS_Reverse"
+    label: "ゲート-ソース間逆方向漏れ電流"
+    description: "ゲート-ソース間逆方向漏れ電流 (VGS=-16V)"
+    unit: "nA"
+    extraction_hint: "Page 2 'Gate-to-Source Reverse Leakage -100 nA, VGS=-16V'"
+    required: true
+
+  # --- Dynamic Characteristics (動的特性) ---
+  - id: "Qg_Total"
+    label: "総ゲート電荷量"
+    description: "総ゲート電荷量 (ID=25A, VDS=44V, VGS=5.0V)"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qg Total Gate Charge 48 nC max'"
+    required: true
+
+  - id: "Qgs"
+    label: "ゲート-ソース間電荷量"
+    description: "ゲート-ソース間電荷量 (VDS=44V)"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qgs Gate-to-Source Charge 8.6 nC max'"
+    required: true
+
+  - id: "Qgd"
+    label: "ゲート-ドレイン間電荷量"
+    description: "ゲート-ドレイン間 (ミラー) 電荷量"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qgd Gate-to-Drain (Miller) Charge 25 nC max'"
+    required: true
+
+  - id: "td_on"
+    label: "ターンオン遅延時間"
+    description: "ターンオン遅延時間 (VDD=28V, ID=25A, RG=3.4Ω, VGS=5.0V)"
+    unit: "ns"
+    extraction_hint: "Page 2 'td(on) Turn-On Delay Time 11 ns typ'"
+    required: true
+
+  - id: "tr"
+    label: "立ち上がり時間"
+    description: "立ち上がり時間"
+    unit: "ns"
+    extraction_hint: "Page 2 'tr Rise Time 84 ns typ'"
+    required: true
+
+  - id: "td_off"
+    label: "ターンオフ遅延時間"
+    description: "ターンオフ遅延時間"
+    unit: "ns"
+    extraction_hint: "Page 2 'td(off) Turn-Off Delay Time 26 ns typ'"
+    required: true
+
+  - id: "tf"
+    label: "立ち下がり時間"
+    description: "立ち下がり時間"
+    unit: "ns"
+    extraction_hint: "Page 2 'tf Fall Time 15 ns typ'"
+    required: true
+
+  - id: "Ciss"
+    label: "入力容量"
+    description: "入力容量 (VGS=0V, VDS=25V, f=1MHz)"
+    unit: "pF"
+    extraction_hint: "Page 2 'Ciss Input Capacitance 1700 pF typ'"
+    required: true
+
+  - id: "Coss"
+    label: "出力容量"
+    description: "出力容量 (VGS=0V, VDS=25V, f=1MHz)"
+    unit: "pF"
+    extraction_hint: "Page 2 'Coss Output Capacitance 400 pF typ'"
+    required: true
+
+  - id: "Crss"
+    label: "帰還容量"
+    description: "帰還容量 (VGS=0V, VDS=25V, f=1MHz)"
+    unit: "pF"
+    extraction_hint: "Page 2 'Crss Reverse Transfer Capacitance 150 pF typ'"
+    required: true
+
+  - id: "Ls"
+    label: "内部ソースインダクタンス"
+    description: "内部ソースインダクタンス (リード-ダイ接触点中心間)"
+    unit: "nH"
+    extraction_hint: "Page 2 'Ls Internal Source Inductance 7.5 nH typ'"
+    required: false
+
+  # --- Source-Drain Ratings (ソース-ドレイン特性) ---
+  - id: "IS"
+    label: "連続ソース電流 (ボディダイオード)"
+    description: "連続ソース電流 (ボディダイオード)"
+    unit: "A"
+    extraction_hint: "Page 2 'Is Continuous Source Current (Body Diode) 47 A'"
+    required: true
+
+  - id: "ISM"
+    label: "パルスソース電流 (ボディダイオード)"
+    description: "パルスソース電流 (ボディダイオード)"
+    unit: "A"
+    extraction_hint: "Page 2 'Ism Pulsed Source Current (Body Diode) 160 A'"
+    required: true
+
+  - id: "VSD"
+    label: "ボディダイオード順方向電圧"
+    description: "ダイオード順方向電圧 (TJ=25°C, IS=25A, VGS=0V)"
+    unit: "V"
+    extraction_hint: "Page 2 'Vsd Diode Forward Voltage 1.3 V max'"
+    required: true
+
+  - id: "trr"
+    label: "逆回復時間"
+    description: "逆回復時間 (TJ=25°C, IF=25A, di/dt=100A/µs)"
+    unit: "ns"
+    extraction_hint: "Page 2 'trr Reverse Recovery Time 80 typ / 120 max ns'"
+    required: true
+
+  - id: "Qrr"
+    label: "逆回復電荷量"
+    description: "逆回復電荷量 (TJ=25°C, IF=25A, di/dt=100A/µs)"
+    unit: "nC"
+    extraction_hint: "Page 2 'Qrr Reverse Recovery Charge 210 typ / 320 max nC'"
+    required: true

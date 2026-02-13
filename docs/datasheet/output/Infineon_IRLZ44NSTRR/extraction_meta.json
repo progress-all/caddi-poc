@@ -1,0 +1,25 @@
+{
+  "pdf_path": "docs/datasheet/output/Infineon_IRLZ44NSTRR/Infineon_IRLZ44NSTRR.pdf",
+  "method": "ocr",
+  "page_count": 12,
+  "quality_score": 0.9884,
+  "quality_details": {
+    "score": 0.9884,
+    "total_chars": 14621,
+    "control_char_ratio": 0.0,
+    "printable_ratio": 1.0,
+    "alnum_ratio": 0.8785,
+    "replacement_char_count": 0,
+    "cid_reference_count": 0,
+    "empty_pages": 0,
+    "total_pages": 12
+  },
+  "warnings": [],
+  "elapsed_ms": 20221,
+  "total_elapsed_ms": 22992,
+  "strategies_tried": [
+    "pymupdf",
+    "pdfminer",
+    "ocr"
+  ]
+}
