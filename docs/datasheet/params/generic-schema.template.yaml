@@ -5,8 +5,10 @@
 # このファイル自体はテンプレートであり、実データは含まない。
 #
 # 使い方:
-#   parse-datasheet スキルの Step 2 (スキーマ生成) で、LLMにこのファイルの
+#   parse-datasheet スキルの Step 3 (スキーマ生成) で、LLMにこのファイルの
 #   フォーマットを提示し、対象データシートに最適なスキーマを生成させる。
+#
+# 参照: docs/datasheet/parse-datasheet-spec.md
 # =============================================================================
 
 # --- メタデータ ---
@@ -16,20 +18,23 @@ inferred_category: "<component_category>"   # LLMが推定した部品カテゴ�
                                             # 例: "mlcc", "operational_amplifier",
                                             #      "schottky_diode", "power_mosfet",
                                             #      "microcontroller", "dram",
-                                            #      "rf_transistor", "voltage_regulator" 等
+                                            #      "rf_transistor", "voltage_regulator"
+                                            # 不明な場合は "unknown"
 
 # --- パラメータ定義 ---
 # 各パラメータは以下のフィールドを持つ:
 #
-#   id:               パラメータID (PascalCase_Snake形式, スキーマ内で一意)
+#   id:               パラメータID (英数字とアンダースコアのみ, スキーマ内で一意)
+#                     推奨命名: PascalCase_Snake形式, Section_SubSection_ParamName
 #   label:            日本語ラベル (UI表示用)
 #   description:      パラメータの説明
-#   unit:             単位 (該当なしは空文字 "")
+#   unit:             単位 (該当なしは空文字 "", 省略可)
 #                     例: "V", "A", "°C", "Ω", "mm", "pF", "ns", "mW", "dB" 等
 #   extraction_hint:  データシート中の抽出場所・方法のヒント
 #                     具体的なセクション名・表名・行の位置を記載すること
+#                     詳細は docs/datasheet/params/extraction-hint-guide.md 参照
 #   required:         true  = データシートに記載があるはず (必須)
-#                     false = 記載がある可能性が低い、または条件次第 (任意)
+#                     false = 記載がある可能性が低い、または条件次第 (任意, 省略時は false)
 #
 parameters:
   # --- 基本情報 (必須) ---

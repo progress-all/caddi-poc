@@ -165,9 +165,9 @@ docs/datasheet/output/<datasheet-id>/<datasheet-id>.validation.md
 - (もしあれば)
 ```
 
-### Step 6: CSV/JSON出力
+### Step 6: CSV/JSON出力 & フロントエンド配置
 
-バリデーション通過後、抽出結果を以下の2形式で保存:
+バリデーション通過後、抽出結果を以下の2形式で保存し、フロントエンド参照ディレクトリにも自動配置する:
 
 #### CSV出力
 
@@ -216,16 +216,31 @@ docs/datasheet/output/<datasheet-id>/<datasheet-id>.json
 }
 ```
 
+#### フロントエンド参照ディレクトリへの自動コピー
+
+JSON出力後、同じJSONファイルをフロントエンド参照ディレクトリにもコピーする。
+
+```bash
+mkdir -p app/_lib/datasheet/data
+cp docs/datasheet/output/<datasheet-id>/<datasheet-id>.json app/_lib/datasheet/data/<datasheet-id>.json
+```
+
+> **注意**: Vercel Blob（ファイルストレージ）を未導入のため、LLMで生成したJSONをバックエンドに動的に保存できない。
+> そのため `app/_lib/datasheet/data/` (Git管理下) に直接配置し、コミット・デプロイに含める運用とする。
+
 ## 出力ファイル構造
 
 ```
 docs/datasheet/output/<datasheet-id>/
 ├── <datasheet-id>.pdf             # 元PDF
 ├── <datasheet-id>.txt             # 抽出テキスト (Step 2)
-├── <datasheet-id>.schema.yaml     # 生成スキーマ (Step 3) ★新規
+├── <datasheet-id>.schema.yaml     # 生成スキーマ (Step 3)
 ├── <datasheet-id>.csv             # パラメータCSV (Step 6)
 ├── <datasheet-id>.json            # パラメータJSON (Step 6)
-└── <datasheet-id>.validation.md   # バリデーション結果 (Step 5) ★新規
+└── <datasheet-id>.validation.md   # バリデーション結果 (Step 5)
+
+app/_lib/datasheet/data/
+└── <datasheet-id>.json            # フロントエンド参照用 (Step 6 で自動コピー)
 ```
 
 ## 参考ファイル
